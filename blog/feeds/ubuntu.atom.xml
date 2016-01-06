@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/ubuntu.atom.xml" rel="self"></link><id>./</id><updated>2016-01-06T11:39:48+08:00</updated><entry><title>About 17.101 server</title><link href="./posts/2016/01/06/about-17101-server/index.html" rel="alternate"></link><updated>2016-01-06T11:39:48+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/about-17101-server/index.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+
+
+&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;</summary><category term="Linux"></category><category term="設定"></category></entry></feed>

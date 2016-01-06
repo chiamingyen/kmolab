@@ -2,7 +2,7 @@ Title: About
 
 #KMOL 實驗室
 
-KMOL Lab 為國立虎尾科技大學, 機械設計工程系, 知識管理與最佳化應用實驗室, 全稱為 Knowledge Management and Optimal Utilization Laboratory (縮寫為 KMOUL 或 KMOL, 音同 CAMEL), Department of Mechanical Design Engineering, National Formosa University, Taiwan.
+KMOL Lab 為台灣國立虎尾科技大學, 機械設計工程系, 知識管理與最佳化應用實驗室, 全稱為 Knowledge Management and Optimal Utilization Laboratory (縮寫為 KMOUL 或 KMOL, 音同 CAMEL), Department of Mechanical Design Engineering, National Formosa University, Taiwan.
 
 #KMOL信念
 

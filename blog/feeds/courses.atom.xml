@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/courses.atom.xml" rel="self"></link><id>./</id><updated>2016-01-06T11:59:07+08:00</updated><entry><title>2016 WCM course</title><link href="./posts/2016/01/06/2016-wcm-course/index.html" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-wcm-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+
+
+&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
+&lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="./posts/2016/01/06/2016-cd-course/index.html" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-cd-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+
+
+&lt;p&gt;Onshape&lt;/p&gt;
+&lt;p&gt;Solvespace&lt;/p&gt;
+&lt;p&gt;PTC Creo Parametric&lt;/p&gt;
+&lt;p&gt;rattleCAD&lt;/p&gt;
+&lt;p&gt;自行車設計與 3D 模型組裝&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry></feed>

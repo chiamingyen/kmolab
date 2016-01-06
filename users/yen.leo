@@ -21,7 +21,7 @@
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
@@ -36,7 +36,7 @@
 <v t="leo.20151213085752.1"><vh>@edit local_publishconf.py</vh></v>
 <v t="amd.20151215121740.1" a="E"><vh>@path theme</vh>
 <v t="amd.20151215121758.1" a="E"><vh>@path pelican-bootstrap3</vh>
-<v t="amd.20151215121816.1"><vh>@path templates</vh>
+<v t="amd.20151215121816.1" a="E"><vh>@path templates</vh>
 <v t="amd.20151215121827.1"><vh>@edit base.html</vh></v>
 <v t="amd.20151215121849.1"><vh>@edit search.html</vh></v>
 <v t="amd.20151215152634.1"><vh>@edit tags.html</vh></v>
@@ -83,6 +83,12 @@
 <v t="amd.20160106093510.1" a="E"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
+<v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
+<v t="amd.20160106113823.1"><vh>@edit yen_20160106-2.md</vh></v>
+<v t="amd.20160106114051.1"><vh>@edit yen_20160106-3.md</vh></v>
+<v t="amd.20160106114450.1"><vh>@edit yen_20160106-4.md</vh></v>
+<v t="amd.20160106114934.1"><vh>@edit yen_20160106-5.md</vh></v>
+<v t="amd.20160106115205.1"><vh>@edit yen_20160106-6.md</vh></v>
 </v>
 </v>
 </v>
