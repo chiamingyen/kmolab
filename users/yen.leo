@@ -21,7 +21,7 @@
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>

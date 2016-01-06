@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-01-06T11:59:07+08:00</updated><entry><title>2016 WCM course</title><link href="./posts/2016/01/06/2016-wcm-course/index.html" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-wcm-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T11:59:07+08:00</updated><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 
 
 &lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
-&lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="./posts/2016/01/06/2016-cd-course/index.html" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-cd-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cd-course/" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 
 
 &lt;p&gt;Onshape&lt;/p&gt;
 &lt;p&gt;Solvespace&lt;/p&gt;
 &lt;p&gt;PTC Creo Parametric&lt;/p&gt;
 &lt;p&gt;rattleCAD&lt;/p&gt;
-&lt;p&gt;自行車設計與 3D 模型組裝&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>Kmolab initialized</title><link href="./posts/2016/01/06/kmolab-initialized/index.html" rel="alternate"></link><updated>2016-01-06T11:55:37+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/kmolab-initialized/index.html</id><summary type="html">&lt;p&gt;KMOL Lab 再次啟動&lt;/p&gt;
+&lt;p&gt;自行車設計與 3D 模型組裝&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/kmolab-initialized/" rel="alternate"></link><updated>2016-01-06T11:55:37+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 再次啟動&lt;/p&gt;
 
 
 &lt;h1&gt;Ubuntu 伺服器設定&lt;/h1&gt;
@@ -27,19 +27,19 @@
 &lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Jupyter 與 Jupyterhub&lt;/h1&gt;
 &lt;p&gt;近端的 Jupyter&lt;/p&gt;
-&lt;p&gt;Ubuntu 伺服器上的 Jupyterhub&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Alumni interaction</title><link href="./posts/2016/01/06/alumni-interaction/index.html" rel="alternate"></link><updated>2016-01-06T11:54:32+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/alumni-interaction/index.html</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
+&lt;p&gt;Ubuntu 伺服器上的 Jupyterhub&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Alumni interaction</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/alumni-interaction/" rel="alternate"></link><updated>2016-01-06T11:54:32+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/alumni-interaction/</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
 
 
 &lt;p&gt;如何尋找校友?&lt;/p&gt;
 &lt;p&gt;如何互動&lt;/p&gt;
-&lt;p&gt;如何延續價值?&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 CAD Lab</title><link href="./posts/2016/01/06/2016-cad-lab/index.html" rel="alternate"></link><updated>2016-01-06T11:51:53+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-cad-lab/index.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+&lt;p&gt;如何延續價值?&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cad-lab/" rel="alternate"></link><updated>2016-01-06T11:51:53+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 
 
 &lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
-&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>About 17.101 server</title><link href="./posts/2016/01/06/about-17101-server/index.html" rel="alternate"></link><updated>2016-01-06T11:39:48+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/about-17101-server/index.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/about-17101-server/" rel="alternate"></link><updated>2016-01-06T11:39:48+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
 
 
-&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Pelican setup</title><link href="./posts/2016/01/06/pelican-setup/index.html" rel="alternate"></link><updated>2016-01-06T11:35:12+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/pelican-setup/index.html</id><summary type="html">&lt;p&gt;Pelican 設定&lt;/p&gt;
+&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/pelican-setup/" rel="alternate"></link><updated>2016-01-06T11:35:12+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/pelican-setup/</id><summary type="html">&lt;p&gt;Pelican 設定&lt;/p&gt;
 
 
 &lt;p&gt;Set SHOW_ARTICLE_AUTHOR to True to show the author of the article at the top of the article and in the index of articles. Set SHOW_ARTICLE_CATEGORY to show the Category of each article. Set SHOW_DATE_MODIFIED to True to show the article modified date next to the published date.&lt;/p&gt;
