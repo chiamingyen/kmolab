@@ -269,7 +269,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-06T11:39:48.785113+08:00"> 三 06 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-01-06T16:42:34.516940+08:00"> 三 06 一月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -287,6 +287,148 @@ Kmolab            </a>
 
 
 <p>介紹 17.101 機器的設定與使用</p>
+<h1>ubuntu-desktop</h1>
+<p>這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:</p>
+<p>sudo apt-get install ubuntu-desktop</p>
+<h1>nginx 與 uwsgi</h1>
+<p>之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.</p>
+<p>目前 17.101 總計啟動 IPV4 與 IPV6 網路設定, 安裝了 Nginx 與 uwsgi, 分別在 port 80 與 88 執行 CMSimply, 並在 <a href="https://140.130.17.101:9443">https://140.130.17.101:9443</a> 安裝 Jupyterhub, 只是 IPv6 模式下的 Jupyterhub 還無法使用.</p>
+<h1>squid proxy 伺服器</h1>
+<p>利用 sudo apt-get install squid, 安裝 squid proxy server.</p>
+<p>設定檔案位於 /etc/squid3/squid.conf</p>
+<p>每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.</p>
+<p>參考的設定檔案:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre></div></td><td class="code"><div class="codehilite"><pre>acl cad_lab src 140.130.17.0/24
+acl cad_lab src 2001:288:6004:17::/64
+
+acl SSL_ports port 443
+acl Safe_ports port 80 # http
+acl Safe_ports port 88
+
+#acl Safe_ports port 21 # ftp
+acl SSL_ports port 8443
+acl Safe_ports port 8443
+
+acl SSL_ports port 9443
+acl Safe_ports port 9443
+
+acl SSL_ports port 22
+acl Safe_ports port 22
+
+acl Safe_ports port 443 # https
+acl Safe_ports port 1025-65535 # unregistered ports
+acl Safe_ports port 280 # http-mgmt
+acl Safe_ports port 488 # gss-http
+acl Safe_ports port 591 # filemaker
+acl Safe_ports port 777 # multiling http
+acl CONNECT method CONNECT
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+http_access allow cad_lab
+http_access deny all
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+
+#http_access allow localnet
+http_access allow localhost
+
+# And finally deny all other access to this proxy
+http_access deny all
+
+# Squid normally listens to port 3128
+http_port 3128
+
+#cache_dir ufs /var/spool/squid3 100 16 256
+icp_port 3130
+icp_access allow all
+
+cache_dir ufs /var/spool/squid3 2000 16 256
+cache_peer 140.130.17.2 sibling 3128 3130
+cache_peer 140.130.17.4 sibling 3128 3130
+cache_peer 140.130.17.9 sibling 3128 3130
+cache_peer 140.130.17.22 sibling 3128 3130
+cache_peer 140.130.17.23 sibling 3128 3130
+
+#
+# Add any of your own refresh_pattern entries above these.
+#
+refresh_pattern ^ftp: 1440 20% 10080
+refresh_pattern ^gopher: 1440 0% 1440
+refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
+refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
+refresh_pattern . 0 20% 4320
+</pre></div>
+</td></tr></table>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -332,6 +474,16 @@ Kmolab            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/alumni-interaction/">
+                            Alumni interaction
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cad-lab/">
+                            2016 CAD Lab
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/">
                             2016 WCM course
                         </a>
@@ -342,18 +494,8 @@ Kmolab            </a>
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/kmolab-initialized/">
-                            Kmolab initialized
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/alumni-interaction/">
-                            Alumni interaction
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cad-lab/">
-                            2016 CAD Lab
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/about-17101-server/">
+                            About 17.101 server
                         </a>
                     </li>
                 </ul>

@@ -21,100 +21,23 @@
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
-<v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
-<v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
-<v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
-<v t="leo.20151213230957.1"><vh>文章 Date 設定</vh></v>
-<v t="leo.20151213230729.1"><vh>使用 summary plugin</vh></v>
-</v>
-<v t="amd.20151215170117.1"><vh>以下 pellicanconf.py 為近端與遠端的共同設定</vh></v>
-<v t="leo.20151212173725.1"><vh>@edit pelicanconf.py</vh></v>
-<v t="amd.20151215170142.1"><vh>以下 publishconf.py 為遠端所使用的設定</vh></v>
-<v t="leo.20151212173803.1"><vh>@edit publishconf.py</vh></v>
-<v t="amd.20151215170221.1"><vh>以下 local_publishconf.py 為近端所使用的設定</vh></v>
-<v t="leo.20151213085752.1"><vh>@edit local_publishconf.py</vh></v>
-<v t="amd.20151215121740.1" a="E"><vh>@path theme</vh>
-<v t="amd.20151215121758.1" a="E"><vh>@path pelican-bootstrap3</vh>
-<v t="amd.20151215121816.1" a="E"><vh>@path templates</vh>
-<v t="amd.20151215121827.1"><vh>@edit base.html</vh></v>
-<v t="amd.20151215121849.1"><vh>@edit search.html</vh></v>
-<v t="amd.20151215152634.1"><vh>@edit tags.html</vh></v>
-</v>
-<v t="amd.20151216181314.1" a="E"><vh>@path static</vh>
-<v t="amd.20151216181314.2" a="E"><vh>@path css</vh>
-<v t="amd.20151216181314.3" a="E"><vh>@path pygments</vh>
-<v t="amd.20151216181314.4"><vh>@edit fruity.css</vh></v>
-</v>
-</v>
-</v>
-</v>
-<v t="amd.20151215154950.1" a="E"><vh>@path pelican-bootstrap3_local</vh>
-<v t="amd.20151215154950.2"><vh>@path templates</vh>
-<v t="amd.20151215154950.3"><vh>@edit base.html</vh></v>
-<v t="amd.20151215154950.4"><vh>@edit search.html</vh></v>
-<v t="amd.20151215162536.1" a="E"><vh>@path includes</vh>
-<v t="amd.20151215162510.1"><vh>@edit sidebar.html</vh></v>
-</v>
-<v t="amd.20151215154950.5"><vh>@edit tags.html</vh></v>
-</v>
-<v t="amd.20151216173334.1" a="E"><vh>@path static</vh>
-<v t="amd.20151216173344.1" a="E"><vh>@path css</vh>
-<v t="amd.20151216173352.1" a="E"><vh>@path pygments</vh>
-<v t="amd.20151216173409.1"><vh>@edit fruity.css</vh></v>
-</v>
-</v>
-</v>
-</v>
-</v>
-<v t="amd.20151215170326.1"><vh>以下在修改或查驗 plugin 目錄下的檔案</vh></v>
-<v t="amd.20151215154225.1"><vh>@path plugin</vh>
-<v t="amd.20151215154238.1" a="E"><vh>@path tipue_search</vh>
-<v t="amd.20151215154248.1"><vh>@edit tipue_search.py</vh></v>
-</v>
-</v>
-</v>
 </v>
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20160106093610.1"><vh>協同網誌編寫規範</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
-<v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
+<v t="amd.20160106093454.1" a="E"><vh>user 網誌文章</vh>
 <v t="amd.20160106093510.1" a="E"><vh>201601</vh>
-<v t="amd.20160106093531.1" a="E"><vh>w1</vh>
-<v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
-<v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
-<v t="amd.20160106113823.1"><vh>@edit yen_20160106-2.md</vh></v>
-<v t="amd.20160106114051.1"><vh>@edit yen_20160106-3.md</vh></v>
-<v t="amd.20160106114450.1"><vh>@edit yen_20160106-4.md</vh></v>
-<v t="amd.20160106114934.1"><vh>@edit yen_20160106-5.md</vh></v>
-<v t="amd.20160106115205.1"><vh>@edit yen_20160106-6.md</vh></v>
+<v t="amd.20160106093531.1" a="E"><vh>w1 - 文章務必要冠上用戶名稱</vh>
+<v t="amd.20160106093542.1"><vh>@edit user_20160106.md</vh></v>
 </v>
 </v>
-</v>
-</v>
-<v t="amd.20160106094754.1" a="E"><vh>@path ./../content/pages</vh>
-<v t="amd.20160106094829.1" a="E"><vh>yen pages 文章</vh>
-<v t="amd.20160106094844.1"><vh>@edit yen_pages_1.md</vh></v>
 </v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="amd.20151215121740.1"></t>
-<t tx="amd.20151215121758.1"></t>
-<t tx="amd.20151215121816.1"></t>
-<t tx="amd.20151215154225.1"></t>
-<t tx="amd.20151215154238.1"></t>
-<t tx="amd.20151215154950.1"></t>
-<t tx="amd.20151215154950.2"></t>
-<t tx="amd.20151215162536.1"></t>
 <t tx="amd.20151215170031.1"></t>
-<t tx="amd.20151215170117.1"></t>
-<t tx="amd.20151215170142.1"></t>
-<t tx="amd.20151215170221.1"></t>
-<t tx="amd.20151215170326.1"></t>
 <t tx="amd.20151215170350.1"></t>
-<t tx="amd.20151215180106.1"></t>
 <t tx="amd.20151216001126.1">@language md
 Title: 文章標題
 Category: 類別
@@ -126,12 +49,6 @@ Author: kmol
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 這裡為文章主要內容</t>
-<t tx="amd.20151216173334.1"></t>
-<t tx="amd.20151216173344.1"></t>
-<t tx="amd.20151216173352.1"></t>
-<t tx="amd.20151216181314.1"></t>
-<t tx="amd.20151216181314.2"></t>
-<t tx="amd.20151216181314.3"></t>
 <t tx="amd.20160106093454.1"></t>
 <t tx="amd.20160106093510.1"></t>
 <t tx="amd.20160106093531.1"></t>
@@ -154,8 +71,6 @@ pages 文章
     寫在 content/pages 目錄中的 .md 檔案, 將會被轉為網誌 pages 內容
 
 </t>
-<t tx="amd.20160106094754.1"></t>
-<t tx="amd.20160106094829.1"></t>
 <t tx="amd.20160106095324.1"></t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
@@ -250,26 +165,5 @@ g.es("admin pelican 近端執行完畢")
 </t>
 <t tx="leo.20151213173811.1"></t>
 <t tx="leo.20151213173830.1"></t>
-<t tx="leo.20151213230723.1"></t>
-<t tx="leo.20151213230729.1">利用
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-來界定 Summary 摘要內容
-
-前提, 必須設定 
-
-PLUGIN_PATHS = ['plugin']
-
-與
-
-PLUGINS = ['liquid_tags.notebook', 'summary']
-
-並且從 https://github.com/getpelican/pelican-plugins
-
-取得 summary plugin</t>
-<t tx="leo.20151213230957.1"># 設定網誌以 md 檔案建立的 file system date 為準, 無需自行設定
-
-DEFAULT_DATE = 'fs'</t>
 </tnodes>
 </leo_file>

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T11:59:07+08:00</updated><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T16:45:47+08:00</updated><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T16:45:47+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 
 
+&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
 &lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
-&lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cd-course/" rel="alternate"></link><updated>2016-01-06T11:59:07+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
+&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
+&lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cd-course/" rel="alternate"></link><updated>2016-01-06T16:45:47+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 
 
+&lt;h1&gt;MCAD 套件&lt;/h1&gt;
+&lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
 &lt;p&gt;Onshape&lt;/p&gt;
 &lt;p&gt;Solvespace&lt;/p&gt;
 &lt;p&gt;PTC Creo Parametric&lt;/p&gt;
 &lt;p&gt;rattleCAD&lt;/p&gt;
-&lt;p&gt;自行車設計與 3D 模型組裝&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry></feed>
+&lt;h1&gt;零組件繪圖與設計&lt;/h1&gt;
+&lt;p&gt;將以自行車設計與 3D 模型組裝作為主題&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry></feed>

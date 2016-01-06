@@ -1,19 +1,732 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T11:55:37+08:00</updated><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/kmolab-initialized/" rel="alternate"></link><updated>2016-01-06T11:55:37+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 再次啟動&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T14:40:59+08:00</updated><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/kmolab-initialized/" rel="alternate"></link><updated>2016-01-06T14:40:59+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 再次啟動&lt;/p&gt;
 
 
-&lt;h1&gt;Ubuntu 伺服器設定&lt;/h1&gt;
-&lt;h2&gt;操作系統安裝&lt;/h2&gt;
+&lt;h1&gt;安裝 Ubuntu Server&lt;/h1&gt;
+&lt;h2&gt;基本系統安裝&lt;/h2&gt;
+&lt;p&gt;從 &lt;a href="https://wiki.ubuntu.com/LTS"&gt;https://wiki.ubuntu.com/LTS&lt;/a&gt;, 可以了解各 Ubuntu 版次的產品生命週期, 就現在這個時間點來說, Ubuntu 14.04 的生命週期最長, 因此選擇安裝 14.04 的 Server 版本.&lt;/p&gt;
+&lt;p&gt;步驟一, 就是從 &lt;a href="http://www.ubuntu.com/download/server"&gt;http://www.ubuntu.com/download/server&lt;/a&gt; 下載 Ubuntu Server 14.04 版本的 iso 檔案 (或者從近端 &lt;a href="http://140.130.17.17/public/ubuntu-14.04.3-server-amd64.iso"&gt;http://140.130.17.17/public/ubuntu-14.04.3-server-amd64.iso&lt;/a&gt; 下載), 然後燒錄到 DVD 光碟上, 然後用此光碟開機執行安裝.&lt;/p&gt;
+&lt;p&gt;假如電腦並沒有 DVD 光碟機, 而只有早期的 CD Rom 光碟機, 可以下載 &lt;a href="https://help.ubuntu.com/community/Installation/MinimalCD"&gt;https://help.ubuntu.com/community/Installation/MinimalCD&lt;/a&gt;, 然後燒錄到 CD 片, 並且將網路線接上電腦的網路插槽, Ubuntu 就會透過網路線取得大部分的安裝資料, 順利完成安裝, 唯一必須注意的則是, 若此電腦位於內部網路, 通常必須要設定 proxy Server 才能順利從外部電腦取回安裝所需的資料.&lt;/p&gt;
+&lt;p&gt;步驟二, 一旦電腦接受 Ubuntu 14.04 的光碟開機之後, 隨後的安裝必須設定網路連線與管理者帳號密碼, 並且通常直接選擇安裝 OpenSSL 套件, 以便讓電腦可以透過 ssh 進行連線.&lt;/p&gt;
+&lt;p&gt;步驟三, IPV4 與與 IPV6 網路設定, /etc/network/interfaces 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet static
+address 140.130.17.17
+netmask 255.255.255.0
+network 140.130.17.0
+broadcast 140.130.17.255
+gateway 140.130.17.254
+# dns-* options are implemented by the resolvconf package, if installed
+dns-nameservers 140.130.1.2 140.130.17.3 168.95.1.1
+dns-search mde.nfu.edu.tw
+
+# The IPv6 based entries for the primary network interface
+iface eth0 inet6 static
+address 2001:288:6004:17::17
+netmask 64
+gateway 2001:288:6004:17::254
+dns-nameservers 2001:288:6004:1::2 2001:b000:168::1
+
+# for internal ip setup
+auto eth1
+iface eth1 inet dhcp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;步驟四, 利用 sudo apt-get update 與 sudo apt-get upgrade 更新並升級上一改版後可能已經釋出的版本更新.&lt;/p&gt;
+&lt;p&gt;步驟五, 利用 sudo apt-get install ubuntu-desktop, 安裝 ubuntu-desktop, 主要目的在讓初學者可以利用 desktop 所提供的互動介面進行操作, 而非僅透過 command shell 執行操作.&lt;/p&gt;
+&lt;p&gt;步驟六, 利用 sudo apt-get install gcin, 安裝 gcin, 切換語系, 讓使用者可以利用各種輸入法輸入中文.&lt;/p&gt;
+&lt;p&gt;步驟七, 安裝 pip3, PyQt 與 Leo Editor.&lt;/p&gt;
+&lt;p&gt;sudo apt-get install python3-pip
+sudo apt-get install python3-pyqt4
+sudo pip3 install https://github.com/leo-editor/leo-editor/archive/master.zip
+上述三項模組安裝完成後, 以 leo&amp;amp; 開啟 Leo Editor.
+步驟八, 利用 sudo apt-get install git, 安裝 git client 工具.&lt;/p&gt;
+&lt;p&gt;步驟九, 安裝 Wine, 可以直接在 Ubuntu 環境中, 執行部份的 Windows 程式.&lt;/p&gt;
+&lt;p&gt;sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get update
+sudo apt-get install wine1.7
+步驟十, 利用 sudo apt-get install squid, 安裝 squid proxy server.&lt;/p&gt;
+&lt;p&gt;設定檔案位於 /etc/squid3/squid.conf&lt;/p&gt;
+&lt;p&gt;每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.&lt;/p&gt;
+&lt;p&gt;參考的設定檔案:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 999.130.17.0/24
+acl SSL_ports port 443
+acl Safe_ports port 80 # http
+acl Safe_ports port 88
+acl SSL_ports port 8443
+acl SSL_ports port 9443
+acl Safe_ports port 8443
+acl Safe_ports port 9443
+acl Safe_ports port 443 # https
+acl Safe_ports port 1025-65535 # unregistered ports
+acl CONNECT method CONNECT
+http_access deny !Safe_ports
+http_access deny CONNECT !SSL_ports
+http_access allow cad_lab
+http_access deny all
+http_access allow localhost manager
+http_access deny manager
+http_access allow localhost
+http_access deny all
+http_port 3128
+cache_dir ufs /var/spool/squid3 2000 16 256
+coredump_dir /var/spool/squid3
+refresh_pattern ^ftp: 1440 20% 10080
+refresh_pattern ^gopher: 1440 0% 1440
+refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
+refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
+refresh_pattern . 0 20% 4320
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;另外一個範例設定:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
+acl cad_lab src 2001:288:6004:17::/64
+
+acl SSL_ports port 443
+acl Safe_ports port 80 # http
+acl Safe_ports port 88
+
+#acl Safe_ports port 21 # ftp
+acl SSL_ports port 8443
+acl Safe_ports port 8443
+
+acl SSL_ports port 9443
+acl Safe_ports port 9443
+
+acl SSL_ports port 22
+acl Safe_ports port 22
+
+acl Safe_ports port 443 # https
+acl Safe_ports port 1025-65535 # unregistered ports
+acl Safe_ports port 280 # http-mgmt
+acl Safe_ports port 488 # gss-http
+acl Safe_ports port 591 # filemaker
+acl Safe_ports port 777 # multiling http
+acl CONNECT method CONNECT
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+http_access allow cad_lab
+http_access deny all
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+
+#http_access allow localnet
+http_access allow localhost
+
+# And finally deny all other access to this proxy
+http_access deny all
+
+# Squid normally listens to port 3128
+http_port 3128
+
+#cache_dir ufs /var/spool/squid3 100 16 256
+icp_port 3130
+icp_access allow all
+
+cache_dir ufs /var/spool/squid3 2000 16 256
+cache_peer 140.130.17.2 sibling 3128 3130
+cache_peer 140.130.17.4 sibling 3128 3130
+cache_peer 140.130.17.9 sibling 3128 3130
+cache_peer 140.130.17.22 sibling 3128 3130
+cache_peer 140.130.17.23 sibling 3128 3130
+
+#
+# Add any of your own refresh_pattern entries above these.
+#
+refresh_pattern ^ftp: 1440 20% 10080
+refresh_pattern ^gopher: 1440 0% 1440
+refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
+refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
+refresh_pattern . 0 20% 4320
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;h2&gt;新增其他管理者與一般用戶帳號&lt;/h2&gt;
+&lt;p&gt;新增一般用戶 (假設新帳號為 username):&lt;/p&gt;
+&lt;p&gt;sudo adduser username&lt;/p&gt;
+&lt;p&gt;過程中會先詢問允許執行 sudo 指令的帳號對應密碼, 然後再輸入兩次 username 的對應密碼&lt;/p&gt;
+&lt;p&gt;將一般用戶轉為管理者用戶:&lt;/p&gt;
+&lt;p&gt;sudo visudo&lt;/p&gt;
+&lt;p&gt;將 username 納為可以執行 sudo 的帳號&lt;/p&gt;
+&lt;p&gt;其中以上下鍵將游標移到管理者帳號設定區, 根據 %admin 行所提示的格式輸入, 先將要轉為管理者的 username 帳號放在第1區, 接著輸入允許執行 sudo 的權限, 之後再利用 Ctrl+o 存檔, 存檔後該用戶即可生效成為系統的管理者.&lt;/p&gt;
+&lt;h2&gt;安裝 nginx&lt;/h2&gt;
+&lt;p&gt;sudo apt-get update
+sudo apt-get install nginx&lt;/p&gt;
+&lt;p&gt;在 Ubuntu 安裝 nginx 後:&lt;/p&gt;
+&lt;p&gt;nginx 安裝在:
+/etc/nginx&lt;/p&gt;
+&lt;p&gt;nginx 設定檔案:
+/etc/nginx/nginx.conf&lt;/p&gt;
+&lt;p&gt;網站根目錄:
+/usr/share/nginx/html&lt;/p&gt;
+&lt;p&gt;內建的設定檔案:
+/etc/nginx/sites-available/default&lt;/p&gt;
+&lt;h2&gt;安裝 Leo Editor&lt;/h2&gt;
+&lt;p&gt;安裝 pip3&lt;/p&gt;
+&lt;p&gt;sudo apt-get install python3-pip&lt;/p&gt;
+&lt;p&gt;安裝 pyqt4&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;sudo apt–get install python3–pyqt4
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;選擇 Leo Editor 版本程式進行安裝&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;sudo pip3 install https://github.com/leo-editor/leo-editor/archive/broke-abbrev.zip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;執行 Leo Editor&lt;/p&gt;
+&lt;p&gt;leo&amp;amp;&lt;/p&gt;
+&lt;h2&gt;安裝 CMSimply&lt;/h2&gt;
+&lt;p&gt;sudo pip3 install cherrypy&lt;/p&gt;
+&lt;p&gt;git clone cmsimply 原始碼後, 可以利用 python3 application 在 127.0.0.7:8080 執行&lt;/p&gt;
+&lt;h2&gt;安裝 google-chrome&lt;/h2&gt;
+&lt;p&gt;sudo apt-get install libxss1 libappindicator1 libindicator7&lt;/p&gt;
+&lt;p&gt;wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb&lt;/p&gt;
+&lt;p&gt;sudo dpkg -i google-chrome*.deb&lt;/p&gt;
+&lt;h2&gt;手動安裝 PyQt4&lt;/h2&gt;
+&lt;p&gt;先安裝 sip&lt;/p&gt;
+&lt;p&gt;sudo wget http://sourceforge.net/projects/pyqt/files/sip/sip-4.16.9/sip-4.16.9.tar.gz&lt;/p&gt;
+&lt;p&gt;sudo tar -xvf sip-4.16.9.tar.gz&lt;/p&gt;
+&lt;p&gt;cd sip-4.16.9&lt;/p&gt;
+&lt;p&gt;sudo python3 configure.py&lt;/p&gt;
+&lt;p&gt;sudo make&lt;/p&gt;
+&lt;p&gt;sudo make install&lt;/p&gt;
+&lt;p&gt;再安裝 PyQt4&lt;/p&gt;
+&lt;p&gt;sudo wget http://downloads.sourceforge.net/project/pyqt/PyQt4/PyQt-4.11.4/PyQt-x11-gpl-4.11.4.tar.gz&lt;/p&gt;
+&lt;p&gt;sudo tar -xvf PyQt-x11-gpl-4.11.4.tar.gz&lt;/p&gt;
+&lt;p&gt;cd PyQt-x11-gpl-4.11.4&lt;/p&gt;
+&lt;p&gt;sudo python3 configure.py&lt;/p&gt;
+&lt;p&gt;sudo make&lt;/p&gt;
+&lt;p&gt;sudo make install&lt;/p&gt;
+&lt;h2&gt;手動安裝 Python 3.4.3&lt;/h2&gt;
+&lt;p&gt;註: 在 &lt;a href="https://bugs.launchpad.net/ubuntu/+source/python3.4/+bug/1503382"&gt;Ubuntu 1503382&lt;/a&gt; 錯誤尚未解決之前, 必須手動移除 Python3, 然後手動安裝 Python 3.4.3 以及 pip3 之後, 才能安裝 uwsgi 模組.&lt;/p&gt;
+&lt;p&gt;安裝 Python 之前, 先安裝 sqlite3 與 libsqlite3-dev (否則 Python 無法建立 sqlite3 模組)&lt;/p&gt;
+&lt;p&gt;sudo apt-get install sqlite3 libsqlite3-dev&lt;/p&gt;
+&lt;p&gt;再安裝 Python 3.4.3&lt;/p&gt;
+&lt;p&gt;sudo apt-get install libssl-dev openssl&lt;/p&gt;
+&lt;p&gt;cd /opt&lt;/p&gt;
+&lt;p&gt;sudo wget python.org/ftp/python/3.4.3/Python-3.4.3.tgz&lt;/p&gt;
+&lt;p&gt;sudo tar -xzvf Python-3.4.3.tgz&lt;/p&gt;
+&lt;p&gt;cd Python-3.4.3&lt;/p&gt;
+&lt;p&gt;sudo ./configure&lt;/p&gt;
+&lt;p&gt;sudo make&lt;/p&gt;
+&lt;p&gt;sudo make install&lt;/p&gt;
+&lt;p&gt;python3&lt;/p&gt;
+&lt;p&gt;安裝 pip3&lt;/p&gt;
+&lt;p&gt;sudo wget https://pypi.python.org/packages/source/p/pip/pip-7.1.2.tar.gz&lt;/p&gt;
+&lt;p&gt;sudo tar -xvf pip-7.1.2.tar.gz&lt;/p&gt;
+&lt;p&gt;cd pip-7.1.2&lt;/p&gt;
+&lt;p&gt;sudo python3 setup.py install&lt;/p&gt;
+&lt;p&gt;安裝 uwsgi&lt;/p&gt;
+&lt;p&gt;sudo pip3 install uwsgi&lt;/p&gt;
+&lt;h2&gt;移除 nginx&lt;/h2&gt;
+&lt;p&gt;只保留舊的設定檔案, 其餘移除&lt;/p&gt;
+&lt;p&gt;sudo apt-get remove nginx nginx-common&lt;/p&gt;
+&lt;p&gt;將所有與 nginx 有關的資料, 全數移除&lt;/p&gt;
+&lt;p&gt;sudo apt-get purge nginx nginx-common&lt;/p&gt;
+&lt;p&gt;移除用不到的相依套件&lt;/p&gt;
+&lt;p&gt;sudo apt-get autoremove&lt;/p&gt;
+&lt;h2&gt;設定 nginx 與 uwsgi&lt;/h2&gt;
+&lt;p&gt;sudo apt-get install nginx&lt;/p&gt;
+&lt;p&gt;內定 nginx 安裝目錄:&lt;/p&gt;
+&lt;p&gt;/etc/nginx&lt;/p&gt;
+&lt;p&gt;nginx 設定檔案:&lt;/p&gt;
+&lt;p&gt;/etc/nginx/nginx.conf&lt;/p&gt;
+&lt;p&gt;網站根目錄:&lt;/p&gt;
+&lt;p&gt;/usr/share/nginx/html&lt;/p&gt;
+&lt;p&gt;內建的設定檔案:&lt;/p&gt;
+&lt;p&gt;/etc/nginx/sites-available/default&lt;/p&gt;
+&lt;p&gt;與 nginx 結合的 default 設定檔:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;include&lt;/span&gt; &lt;span class="n"&gt;uwsgi_params&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;uwsgi_pass&lt;/span&gt; &lt;span class="m"&gt;127&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;8080&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="nt"&gt;server_name&lt;/span&gt; &lt;span class="nt"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nf"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.crt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.key&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_session_timeout&lt;/span&gt; &lt;span class="nt"&gt;5m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_protocols&lt;/span&gt; &lt;span class="nt"&gt;SSLv3&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="nc"&gt;.1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="nc"&gt;.2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_ciphers&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;try_files&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;uri&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;uri&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;uwsgi_params 檔案:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="x"&gt;uwsgi_param QUERY_STRING &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;query_string&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param REQUEST_METHOD &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;request_method&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param CONTENT_TYPE &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;content_type&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param CONTENT_LENGTH &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;content_length&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param REQUEST_URI &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;request_uri&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param PATH_INFO &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;document_uri&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param DOCUMENT_ROOT &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;document_root&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param SERVER_PROTOCOL &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;server_protocol&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param REMOTE_ADDR &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;remote_addr&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param REMOTE_PORT &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;remote_port&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param SERVER_ADDR &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;server_addr&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param SERVER_PORT &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;server_port&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;span class="x"&gt;uwsgi_param SERVER_NAME &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;server_name&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;位於 /etc/init 下的 uwsgi.conf 檔案設定:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;description &amp;quot;uwsgi for cmsimply&amp;quot;
+start on runlevel [2345]
+stop on runlevel [06]
+
+respawn
+
+exec uwsgi --master --processes 4 --die-on-term --socket :8080 --chdir /home/yen/cmsimply/wsgi --wsgi-file /home/yen/cmsimply/wsgi/application
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;在 Python wsgi cherrypy 程式中的啟動:&lt;/p&gt;
+&lt;p&gt;application = cherrypy.Application(root, config = application_conf)&lt;/p&gt;
+&lt;p&gt;重新啟動 nginx:&lt;/p&gt;
+&lt;p&gt;sudo service nginx restart&lt;/p&gt;
+&lt;p&gt;重新啟動 uwsgi:&lt;/p&gt;
+&lt;p&gt;sudo service uwsgi restart&lt;/p&gt;
+&lt;h2&gt;uwsgi 啟動多個 Python 程式&lt;/h2&gt;
+&lt;p&gt;利用 nginx 與 uwsgi 啟動多個 Python 應用程式:&lt;/p&gt;
+&lt;p&gt;必須採用 uwsgi Emperor 啟動模式設定:&lt;/p&gt;
+&lt;p&gt;/etc/init/uwsgi.conf 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# Emperor uwsgi script
+description &amp;quot;uwsgi Emperor&amp;quot;
+start on runlevel [2345]
+stop on runlevel [06]
+
+respawn
+
+# 以下為以 user id yen 與 user group yen 執行單一 Python 應用程式的 Upstart 設定
+# exec uwsgi --master --processes 4 --die-on-term --uid yen --gid yen --socket :8080 --chdir /home/yen/cmsimply/wsgi --wsgi-file /home/yen/cmsimply/wsgi/application
+
+# 以下為以 yen:yen 執行多個 Python 應用程式的設定, uwsgi --emperor 會進入 /home/yen/uwsgi_ini 目錄執行所有的 .ini 應用程式設定
+exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;/home/yen/uwsgi_ini 目錄中有 uwsgi.ini 與 uwsgi2.ini 設定檔, 分別用來啟動 /home/yen/cmsimply/wsgi/application 與 /home/yen/cmsimply2/wsgi/application&lt;/p&gt;
+&lt;p&gt;uwsgi.ini  內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[uwsgi]&lt;/span&gt;
+&lt;span class="na"&gt;socket&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;:8080&lt;/span&gt;
+&lt;span class="na"&gt;processes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;4&lt;/span&gt;
+&lt;span class="na"&gt;master&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;true&lt;/span&gt;
+&lt;span class="na"&gt;chdir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/home/yen/cmsimply/wsgi&lt;/span&gt;
+&lt;span class="na"&gt;wsgi-file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/home/yen/cmsimply/wsgi/application&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;uwsgi2.ini 內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[uwsgi]&lt;/span&gt;
+&lt;span class="na"&gt;socket&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;:8081&lt;/span&gt;
+&lt;span class="na"&gt;processes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;4&lt;/span&gt;
+&lt;span class="na"&gt;master&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;true&lt;/span&gt;
+&lt;span class="na"&gt;chdir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/home/yen/cmsimply2/wsgi&lt;/span&gt;
+&lt;span class="na"&gt;wsgi-file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;/home/yen/cmsimply2/wsgi/application&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;nginx 位於 sites-enabled 目錄下的 default 設定檔:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+ &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="p"&gt;}&lt;/span&gt;
+
+ &lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;include&lt;/span&gt; &lt;span class="n"&gt;uwsgi_params&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;uwsgi_pass&lt;/span&gt; &lt;span class="m"&gt;127&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;8080&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="p"&gt;}&lt;/span&gt;
+
+ &lt;span class="nt"&gt;server_name&lt;/span&gt; &lt;span class="nt"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nf"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.crt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.key&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_session_timeout&lt;/span&gt; &lt;span class="nt"&gt;5m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_protocols&lt;/span&gt; &lt;span class="nt"&gt;SSLv3&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="nc"&gt;.1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="nc"&gt;.2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_ciphers&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;try_files&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;uri&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;uri&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="err"&gt;}&lt;/span&gt;
+
+&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;88&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;88&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;8443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;8443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+ &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="p"&gt;}&lt;/span&gt;
+
+ &lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;include&lt;/span&gt; &lt;span class="n"&gt;uwsgi_params&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;uwsgi_pass&lt;/span&gt; &lt;span class="m"&gt;127&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;8081&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="p"&gt;}&lt;/span&gt;
+
+ &lt;span class="nt"&gt;server_name&lt;/span&gt; &lt;span class="nt"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nf"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.crt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.key&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_session_timeout&lt;/span&gt; &lt;span class="nt"&gt;5m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_protocols&lt;/span&gt; &lt;span class="nt"&gt;SSLv3&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="nc"&gt;.1&lt;/span&gt; &lt;span class="nt"&gt;TLSv1&lt;/span&gt;&lt;span class="nc"&gt;.2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_ciphers&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;ssl_prefer_server_ciphers&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nt"&gt;try_files&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;uri&lt;/span&gt; &lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="nt"&gt;uri&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="err"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;重新啟動 nginx:&lt;/p&gt;
+&lt;p&gt;sudo service nginx restart&lt;/p&gt;
+&lt;p&gt;重新啟動 uwsgi:&lt;/p&gt;
+&lt;p&gt;sudo service uwsgi restart&lt;/p&gt;
+&lt;p&gt;按照上述設定完成的測試用主機:&lt;/p&gt;
+&lt;p&gt;/home/yen/cmsimply 程式執行:&lt;/p&gt;
+&lt;p&gt;IPV6 網址: &lt;a href="http://[2001:288:6004:17::101]"&gt;http://[2001:288:6004:17::101]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://[2001:288:6004:17::101]"&gt;https://[2001:288:6004:17::101]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IPV4 網址: &lt;a href="http://140.130.17.101"&gt;http://140.130.17.101&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://140.130.17.101"&gt;https://140.130.17.101&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;/home/yen/cmsimply2 程式執行:&lt;/p&gt;
+&lt;p&gt;IPV6 網址: &lt;a href="http://[2001:288:6004:17::101]:88"&gt;http://[2001:288:6004:17::101]:88&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://[2001:288:6004:17::101]:8443"&gt;https://[2001:288:6004:17::101]:8443&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://140.130.17.101:88"&gt;http://140.130.17.101:88&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://140.130.17.101:8443"&gt;https://140.130.17.101:8443&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;純 IPV6 ssh&lt;/h2&gt;
+&lt;p&gt;從只有 IPV6 網址的電腦要 ssh 到另一台 IPV6 電腦:&lt;/p&gt;
+&lt;p&gt;ssh -6 帳號@IPV6 位址&lt;/p&gt;
+&lt;p&gt;例如: ssh -6 account@2001:288:6004:1::1&lt;/p&gt;
+&lt;h2&gt;安裝 Jupyterhub&lt;/h2&gt;
+&lt;p&gt;sudo apt-get install npm nodejs-legacy&lt;/p&gt;
+&lt;p&gt;sudo npm install -g configurable-http-proxy&lt;/p&gt;
+&lt;p&gt;sudo pip3 install jupyterhub&lt;/p&gt;
+&lt;p&gt;sudo pip3 install IPython&lt;/p&gt;
+&lt;p&gt;sudo pip3 install “ipython[notebook]”&lt;/p&gt;
+&lt;p&gt;以 SSL 啟動 :&lt;/p&gt;
+&lt;p&gt;先建立 key 與 certificate: sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jupyterhub.key -out jupyterhub.crt&lt;/p&gt;
+&lt;p&gt;jupyterhub –ip 10.0.1.2 –port 443 –ssl-key jupyterhub.key –ssl-cert jupyterhub.cert&lt;/p&gt;
+&lt;p&gt;或不指定 IP&lt;/p&gt;
+&lt;p&gt;jupyterhub  –port 9443 –ssl-key my_ssl.key –ssl-cert my_ssl.cert&lt;/p&gt;
+&lt;p&gt;之後則可以 https://jupyterIP:9443 連線&lt;/p&gt;
 &lt;h2&gt;putty 與 x windows&lt;/h2&gt;
-&lt;p&gt;putty for Windows 與 Ubuntu&lt;/p&gt;
-&lt;p&gt;xming for Windows&lt;/p&gt;
+&lt;p&gt;SSH 設定&lt;/p&gt;
+&lt;p&gt;X11 -&amp;gt;X11 forwarding 勾選 Enable X11 forwarding&lt;/p&gt;
+&lt;p&gt;X display location: 填入 localhost:0&lt;/p&gt;
+&lt;p&gt;若在 Windows 環境, 希望能夠將其他電腦上的 X window 畫面顯示在近端, 必須先啟動 xming for Windows&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://sourceforge.net/projects/xming/"&gt;http://sourceforge.net/projects/xming/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;x windows 設定與使用&lt;/p&gt;
 &lt;h1&gt;github 倉儲協同流程&lt;/h1&gt;
+&lt;p&gt;每一位成員在倉儲 users 目錄下各自擁有一個維護資料的 user.leo 檔案&lt;/p&gt;
+&lt;p&gt;每位成員可以利用 git clone 方式, 將遠端現有的資料倉儲放入近端硬碟中&lt;/p&gt;
+&lt;p&gt;在 content 目錄下, 以用戶名稱+日期的方式建立 .md 檔案, 若在近端測試, 可以利用 local-pelican 按鈕產生靜態網頁&lt;/p&gt;
+&lt;p&gt;若在推送過程發現遠端有新的版本資料, 則必須透過 git pull 的方式拉下資料後, 嘗試進行自動合併.&lt;/p&gt;
+&lt;p&gt;若無共同編輯的 .md 檔案, 則通常可以利用 gh-pages-pelican 按鈕建立遠端使用的靜態文件檔&lt;/p&gt;
+&lt;p&gt;若各內容檢查無誤, 則可以推送到遠端&lt;/p&gt;
 &lt;h2&gt;Openshift  網站&lt;/h2&gt;
 &lt;h2&gt;近端 Ubuntu 上的網站&lt;/h2&gt;
 &lt;h2&gt;uwsgi 與 nginx&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Jupyter 與 Jupyterhub&lt;/h1&gt;
-&lt;p&gt;近端的 Jupyter&lt;/p&gt;
-&lt;p&gt;Ubuntu 伺服器上的 Jupyterhub&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套搞</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/kmolab-user-wen-zhang-tao-gao/" rel="alternate"></link><updated>2016-01-06T13:57:03+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/kmolab-user-wen-zhang-tao-gao/</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
+
+
+&lt;h1&gt;文章標題&lt;/h1&gt;
+&lt;p&gt;這裡開始文章內容&lt;/p&gt;
+&lt;p&gt;文章內放入超文件的連結:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://chiamingyen.github.io/kmolab"&gt;http://chiamingyen.github.io/kmolab&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;文章子標題&lt;/h2&gt;
+&lt;p&gt;文章內放入圖片:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/hKlyUMrfKX8DuWxZ" width="300"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h1&gt;引入程式碼&lt;/h1&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+
+&lt;span class="c"&gt;# Pythagoras Theorem&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;side1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;side2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, h)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry></feed>
