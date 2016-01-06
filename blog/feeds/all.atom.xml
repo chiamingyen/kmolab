@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T16:51:58+08:00</updated><entry><title>Alumni interaction</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/alumni-interaction/" rel="alternate"></link><updated>2016-01-06T16:51:58+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/alumni-interaction/</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T17:14:52+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cad-lab/" rel="alternate"></link><updated>2016-01-06T17:14:52+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+
+
+&lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
+&lt;p&gt;intel i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
+&lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
+&lt;h1&gt;開機磁區&lt;/h1&gt;
+&lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
+&lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
+&lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
+&lt;h1&gt;舊電腦分配&lt;/h1&gt;
+&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>Alumni interaction</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/alumni-interaction/" rel="alternate"></link><updated>2016-01-06T17:13:27+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/alumni-interaction/</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
 
 
 &lt;p&gt;如何尋找校友?&lt;/p&gt;
 &lt;p&gt;如何互動？&lt;/p&gt;
 &lt;p&gt;如何延續價值?&lt;/p&gt;
 &lt;h1&gt;先建立自己的領英網頁&lt;/h1&gt;
+&lt;p&gt;在 &lt;a href="https://www.linkedin.com/"&gt;https://www.linkedin.com/&lt;/a&gt; 登錄帳號後, 填入個人相關專業資料, 之後將會不定期收到機器寄出的 cold mail, 一般而言, 可以無需理會這些 cold mail, 暫且不管這些電子郵件看起來像是人或機器寫的, 你都必須知道, 建立領英帳號的目的, 是要利用它, 而不是被它利用, 所有絕對要對這些網路上的冷信件, 保持冷靜, 儘量不要回應, 可以直接刪除.&lt;/p&gt;
 &lt;h1&gt;先建立自己的 about.me 網頁&lt;/h1&gt;
+&lt;p&gt;在 &lt;a href="https://about.me/"&gt;https://about.me/&lt;/a&gt; 建立帳號的態度, 應該要與領英一樣, 用它而不要被用. 意思就是說, 只要在上面提供並更新與個人相關的專業資料, 這種網路上的業面, 主要用途在於申請學校或找工作的時候有些用處, 其他時候, 就該讓它晾在那裡, 不要多費心或浪費時間.&lt;/p&gt;
 &lt;h1&gt;先每天早睡早起, 持續運動&lt;/h1&gt;
+&lt;p&gt;主要的目的在時時刻刻保持覺兆, 讓自己每天都精神飽滿, 可以應付課業或工作所需.&lt;/p&gt;
 &lt;h1&gt;找虎尾及雲林縣附近的校友, 一起參加活動&lt;/h1&gt;
-&lt;h1&gt;藉由各屆校友的資料整理, 利用網路進行互動&lt;/h1&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cad-lab/" rel="alternate"></link><updated>2016-01-06T16:49:20+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
-
-
-&lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
-&lt;p&gt;intel i7 電腦 63+4 台&lt;/p&gt;
-&lt;p&gt;防寫保護卡&lt;/p&gt;
-&lt;h1&gt;開機磁區&lt;/h1&gt;
-&lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
-&lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
-&lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
-&lt;h1&gt;舊電腦分配&lt;/h1&gt;
-&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T16:45:47+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;p&gt;每年都有慢跑活動, 可以找幾個身邊的好朋友, 每年參加, 並且利用網誌紀錄訓練與參賽的過程, 自然就會碰到許多志同道合的朋友與系友.&lt;/p&gt;
+&lt;h1&gt;藉由各屆校友的資料整理, 利用網路進行互動&lt;/h1&gt;
+&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T16:45:47+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
