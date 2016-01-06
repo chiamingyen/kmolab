@@ -4,70 +4,70 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/</loc>
-<lastmod>2016-01-06T10:37:54-00:00</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/</loc>
+<lastmod>2016-01-06T10:41:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/archives.html</loc>
-<lastmod>2016-01-06T10:37:54-00:00</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/archives.html</loc>
+<lastmod>2016-01-06T10:41:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/tags.html</loc>
-<lastmod>2016-01-06T10:37:54-00:00</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tags.html</loc>
+<lastmod>2016-01-06T10:41:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/categories.html</loc>
-<lastmod>2016-01-06T10:37:54-00:00</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/categories.html</loc>
+<lastmod>2016-01-06T10:41:27-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/pages/about/</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/pages/about/</loc>
 <lastmod>2016-01-06T10:32:03+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/posts/2016/01/06/kmolab-initialized/</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/kmolab-initialized/</loc>
 <lastmod>2016-01-06T10:00:05+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/category/4032zhuan-ti.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/category/4032zhuan-ti.html</loc>
 <lastmod>2016-01-06T10:00:05+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/tag/yan-jiu-shi.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/yan-jiu-shi.html</loc>
 <lastmod>2016-01-06T10:00:05+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/tag/zhuan-ti.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/zhuan-ti.html</loc>
 <lastmod>2016-01-06T10:00:05+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolsite/blog/author/yen.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/author/yen.html</loc>
 <lastmod>2016-01-06T10:00:05+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
