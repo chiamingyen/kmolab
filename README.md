@@ -1,2 +1,2 @@
 # kmolab
-Blog of Kmowledge Management and Optimal utilization Lab
+Blog of Knowledge Management and Optimal utilization Lab
