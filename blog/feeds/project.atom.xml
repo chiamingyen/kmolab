@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T23:38:30+08:00</updated><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-07T23:38:30+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T23:41:56+08:00</updated><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-07T23:41:56+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
 
 
 &lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallproject"&gt;https://github.com/2015fallproject&lt;/a&gt;&lt;/p&gt;
@@ -9,9 +9,9 @@
 &lt;p&gt;case2:&lt;/p&gt;
 &lt;p&gt;網際 3D 印表機批次列印管理系統案例研究 (參考用)&lt;/p&gt;
 &lt;p&gt;Case Study of a Web-based 3D Batch Printing Management System&lt;/p&gt;
-&lt;p&gt;專案一: 列印一個縮小比例, 可以作動的 NutCracker 機構.
-專案二: 參與 kmolab 的協同網誌發表後, 每一成員每週至少必須發表一篇相關資料.
-專案三: 在 17.103 機器上配置 Gogs: &lt;a href="https://gogs.io/"&gt;https://gogs.io/&lt;/a&gt; 與 Jupyterhub: &lt;a href="https://github.com/jupyter/jupyterhub"&gt;https://github.com/jupyter/jupyterhub&lt;/a&gt;, 讓所有成員都能連線使用.&lt;/p&gt;
+&lt;p&gt;工作項目一: 列印一個縮小比例, 可以作動的 NutCracker 機構.&lt;/p&gt;
+&lt;p&gt;工作項目二: 參與 kmolab 的協同網誌發表後, 每一成員每週至少必須發表一篇相關資料.&lt;/p&gt;
+&lt;p&gt;工作項目三: 在 17.103 機器上配置 Gogs: &lt;a href="https://gogs.io/"&gt;https://gogs.io/&lt;/a&gt; 與 Jupyterhub: &lt;a href="https://github.com/jupyter/jupyterhub"&gt;https://github.com/jupyter/jupyterhub&lt;/a&gt;, 讓所有成員都能連線使用.&lt;/p&gt;
 &lt;p&gt;403231&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
