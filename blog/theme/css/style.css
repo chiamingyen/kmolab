@@ -140,9 +140,11 @@ figure.floatcenter, .align-center {
     margin-bottom: 11px;
 }
 
+/* fix the line number width problem
 .highlighttable {
     width: 100%;
 }
+*/
 
 #categories ul, #tags ul {
     list-style: none;

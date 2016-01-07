@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-06T23:49:20+08:00</updated><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-06T23:49:20+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/courses.atom.xml" rel="self"></link><id>./</id><updated>2016-01-07T09:43:40+08:00</updated><entry><title>2016 CD course</title><link href="./posts/2016/01/07/2016-cd-course/index.html" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/2016-cd-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+
+
+&lt;h1&gt;MCAD 套件&lt;/h1&gt;
+&lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
+&lt;p&gt;Onshape: &lt;a href="https://www.onshape.com/"&gt;https://www.onshape.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Solvespace: &lt;a href="http://solvespace.com/index.pl"&gt;http://solvespace.com/index.pl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PTC Creo Parametric: &lt;a href="http://www.ptc.com/cad/creo/parametric"&gt;http://www.ptc.com/cad/creo/parametric&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;rattleCAD: &lt;a href="http://rattlecad.sourceforge.net/"&gt;http://rattlecad.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;零組件繪圖與設計&lt;/h1&gt;
+&lt;p&gt;將以自行車設計與 3D 模型組裝作為主題&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/y8NbIutMaY8NnFVt" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/mBuPlvra0Eylnkfq" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;＃標準零件庫&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.mcmaster.com/"&gt;http://www.mcmaster.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.bolts-library.org/"&gt;http://www.bolts-library.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://b2b.partcommunity.com/community/"&gt;https://b2b.partcommunity.com/community/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://grabcad.com/library/tag/bicycle"&gt;https://grabcad.com/library/tag/bicycle&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;客製化設計&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/vallettea/Bicycle"&gt;https://github.com/vallettea/Bicycle&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.atom3dp.com/"&gt;http://www.atom3dp.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/smoqadam/PyFladesk-rss-reader"&gt;https://github.com/smoqadam/PyFladesk-rss-reader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Planar Linkage Analysis: &lt;a href="https://copy.com/KLSdcu1EkmnzdV6U"&gt;https://copy.com/KLSdcu1EkmnzdV6U&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fourbar Synthesis: &lt;a href="https://copy.com/FgYUPh6RCpDUMnT1"&gt;https://copy.com/FgYUPh6RCpDUMnT1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spur Gear Design: &lt;a href="https://copy.com/nLeN7ODMNv0VLu9G"&gt;https://copy.com/nLeN7ODMNv0VLu9G&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spur Gear in Creo Parametric: &lt;a href="https://copy.com/LeIvhGJCoroQJdva"&gt;https://copy.com/LeIvhGJCoroQJdva&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Design of Spur and Helical Gears Transmissions: &lt;a href="https://github.com/efirvida/python-gearbox"&gt;https://github.com/efirvida/python-gearbox&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自行車控制設計: &lt;a href="https://plot.ly/ipython-notebooks/bicycle-control-design/"&gt;https://plot.ly/ipython-notebooks/bicycle-control-design/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Architecture of Collaboration: &lt;a href="https://copy.com/ZzdLE62hSYRSjTD2"&gt;https://copy.com/ZzdLE62hSYRSjTD2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="./posts/2016/01/06/2015-fall-cadp-w16/index.html" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2015-fall-cadp-w16/index.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
@@ -205,7 +235,17 @@
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+上述課程資料與 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=4584#more-4584"&gt;Wordpress 網頁&lt;/a&gt;上的資料內容相同, Ｗordpress 網站屬於動態的網誌, 而 &lt;a href="http://chiamingyen.github.io/kmolab/"&gt;http://chiamingyen.github.io/kmolab/&lt;/a&gt; 則是靜態網誌系統, 採用靜態網誌的優點如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比較安全&lt;/li&gt;
+&lt;li&gt;比較不會過時&lt;/li&gt;
+&lt;li&gt;部署成本比較低&lt;/li&gt;
+&lt;li&gt;可在各種平台上使用&lt;/li&gt;
+&lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="./posts/2016/01/06/2016-wcm-course/index.html" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-wcm-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
@@ -215,21 +255,4 @@
 &lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;
 &lt;h1&gt;參考資料&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-cd-course/" rel="alternate"></link><updated>2016-01-06T23:20:45+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
-
-
-&lt;h1&gt;MCAD 套件&lt;/h1&gt;
-&lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
-&lt;p&gt;Onshape&lt;/p&gt;
-&lt;p&gt;Solvespace&lt;/p&gt;
-&lt;p&gt;PTC Creo Parametric&lt;/p&gt;
-&lt;p&gt;rattleCAD&lt;/p&gt;
-&lt;h1&gt;零組件繪圖與設計&lt;/h1&gt;
-&lt;p&gt;將以自行車設計與 3D 模型組裝作為主題&lt;/p&gt;
-&lt;p&gt;＃標準零件庫&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.mcmaster.com/"&gt;http://www.mcmaster.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.bolts-library.org/"&gt;http://www.bolts-library.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://b2b.partcommunity.com/community/"&gt;https://b2b.partcommunity.com/community/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://grabcad.com/library/tag/bicycle"&gt;https://grabcad.com/library/tag/bicycle&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;參考資料&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/smoqadam/PyFladesk-rss-reader"&gt;https://github.com/smoqadam/PyFladesk-rss-reader&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry></feed>
