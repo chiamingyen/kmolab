@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/cadlab.atom.xml" rel="self"></link><id>./</id><updated>2016-01-07T09:43:40+08:00</updated><entry><title>2016 CAD Lab</title><link href="./posts/2016/01/07/2016-cad-lab/index.html" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/2016-cad-lab/index.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T09:43:40+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-cad-lab/" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 
 
 &lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;

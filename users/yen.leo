@@ -166,9 +166,9 @@ pages 文章
 <t tx="amd.20160107100615.1"></t>
 <t tx="amd.20160107100627.1">有時更新後, 會失去 disqus 留言系統連結
 
-具體原因: 不明
+具體原因: 因為沒有使用遠端按鈕轉檔, 因此送到遠端的資料為近端沒有 disqus 連結的格式
 
-解決方案: 無</t>
+解決方案: 設法提醒在送到遠端之前, 一定要弄對格式</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

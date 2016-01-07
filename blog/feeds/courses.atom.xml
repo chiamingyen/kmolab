@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/courses.atom.xml" rel="self"></link><id>./</id><updated>2016-01-07T09:43:40+08:00</updated><entry><title>2016 CD course</title><link href="./posts/2016/01/07/2016-cd-course/index.html" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/2016-cd-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T09:43:40+08:00</updated><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-cd-course/" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;MCAD 套件&lt;/h1&gt;
@@ -29,7 +29,7 @@
 &lt;p&gt;Design of Spur and Helical Gears Transmissions: &lt;a href="https://github.com/efirvida/python-gearbox"&gt;https://github.com/efirvida/python-gearbox&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;自行車控制設計: &lt;a href="https://plot.ly/ipython-notebooks/bicycle-control-design/"&gt;https://plot.ly/ipython-notebooks/bicycle-control-design/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Architecture of Collaboration: &lt;a href="https://copy.com/ZzdLE62hSYRSjTD2"&gt;https://copy.com/ZzdLE62hSYRSjTD2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="./posts/2016/01/06/2015-fall-cadp-w16/index.html" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2015-fall-cadp-w16/index.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
@@ -245,7 +245,7 @@
 &lt;li&gt;部署成本比較低&lt;/li&gt;
 &lt;li&gt;可在各種平台上使用&lt;/li&gt;
 &lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="./posts/2016/01/06/2016-wcm-course/index.html" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-wcm-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;

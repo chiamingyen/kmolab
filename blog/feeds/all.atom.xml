@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2016-01-07T10:01:15+08:00</updated><entry><title>Kmolab 4032 projects</title><link href="./posts/2016/01/07/kmolab-4032-projects/index.html" rel="alternate"></link><updated>2016-01-07T10:01:15+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/kmolab-4032-projects/index.html</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T10:01:15+08:00</updated><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-07T10:01:15+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
 
 
 &lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallproject"&gt;https://github.com/2015fallproject&lt;/a&gt;&lt;/p&gt;
@@ -21,7 +21,7 @@
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;&lt;br /&gt;
-403232&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>2016 CAD Lab</title><link href="./posts/2016/01/07/2016-cad-lab/index.html" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/2016-cad-lab/index.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+403232&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-cad-lab/" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 
 
 &lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
@@ -96,7 +96,7 @@
 &lt;li&gt;
 &lt;p&gt;proxy server 設為: proxy.mde.tw:3128&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2016 CD course</title><link href="./posts/2016/01/07/2016-cd-course/index.html" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/2016-cd-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-cd-course/" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;MCAD 套件&lt;/h1&gt;
@@ -126,7 +126,7 @@
 &lt;p&gt;Design of Spur and Helical Gears Transmissions: &lt;a href="https://github.com/efirvida/python-gearbox"&gt;https://github.com/efirvida/python-gearbox&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;自行車控制設計: &lt;a href="https://plot.ly/ipython-notebooks/bicycle-control-design/"&gt;https://plot.ly/ipython-notebooks/bicycle-control-design/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Architecture of Collaboration: &lt;a href="https://copy.com/ZzdLE62hSYRSjTD2"&gt;https://copy.com/ZzdLE62hSYRSjTD2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>Kmolab initialized</title><link href="./posts/2016/01/07/kmolab-initialized/index.html" rel="alternate"></link><updated>2016-01-07T09:33:13+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-07:./posts/2016/01/07/kmolab-initialized/index.html</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/kmolab-initialized/" rel="alternate"></link><updated>2016-01-07T09:33:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
 
 
 &lt;p&gt;二十一世紀是電腦網路與人工智慧充分整合的世代, Kmolab 一直以來對於人才的培育, 始終強調必須充份了解電腦的基本運作, 實際應用網路架構提升設計效能, 並且採用演化分析方法來發揮電腦的高速運算能力.&lt;/p&gt;
@@ -764,7 +764,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;p&gt;若無共同編輯的 .md 檔案, 則通常可以利用 gh-pages-pelican 按鈕建立遠端使用的靜態文件檔.&lt;/p&gt;
 &lt;p&gt;若各內容檢查無誤, 則可以推送到遠端.&lt;/p&gt;
 &lt;h2&gt;Openshift  網站&lt;/h2&gt;
-&lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="./posts/2016/01/07/kmolab-user-wen-zhang-tao-gao/index.html" rel="alternate"></link><updated>2016-01-07T09:30:44+08:00</updated><author><name>user</name></author><id>tag:,2016-01-07:./posts/2016/01/07/kmolab-user-wen-zhang-tao-gao/index.html</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
+&lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/kmolab-user-wen-zhang-tao-gao/" rel="alternate"></link><updated>2016-01-07T09:30:44+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/kmolab-user-wen-zhang-tao-gao/</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
 
 
 &lt;h1&gt;文章標題&lt;/h1&gt;
@@ -795,7 +795,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, h)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>2015 Fall CADP W16</title><link href="./posts/2016/01/06/2015-fall-cadp-w16/index.html" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2015-fall-cadp-w16/index.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
@@ -1011,7 +1011,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;li&gt;部署成本比較低&lt;/li&gt;
 &lt;li&gt;可在各種平台上使用&lt;/li&gt;
 &lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="./posts/2016/01/06/2016-wcm-course/index.html" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/2016-wcm-course/index.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
@@ -1021,7 +1021,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;
 &lt;h1&gt;參考資料&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>Alumni interaction</title><link href="./posts/2016/01/06/alumni-interaction/index.html" rel="alternate"></link><updated>2016-01-06T22:34:02+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/alumni-interaction/index.html</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>Alumni interaction</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/alumni-interaction/" rel="alternate"></link><updated>2016-01-06T22:34:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/alumni-interaction/</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
 
 
 &lt;p&gt;如何尋找校友?&lt;/p&gt;
@@ -1036,7 +1036,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;h1&gt;找虎尾及雲林縣附近的校友, 一起參加活動&lt;/h1&gt;
 &lt;p&gt;每年都有慢跑活動, 可以找幾個身邊的好朋友, 每年參加, 並且利用網誌紀錄訓練與參賽的過程, 自然就會碰到許多志同道合的朋友與系友.&lt;/p&gt;
 &lt;h1&gt;藉由各屆校友的資料整理, 利用網路進行互動&lt;/h1&gt;
-&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="./posts/2016/01/06/mechanical-designer-and-ipv6/index.html" rel="alternate"></link><updated>2016-01-06T21:52:31+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/mechanical-designer-and-ipv6/index.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-06T21:52:31+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
 
 
 &lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
@@ -1250,7 +1250,7 @@ IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來�
 目前階段使用 IPV4/IPV6 並存, 可能產生的問題:&lt;/p&gt;
 &lt;p&gt;連接純 IPV4 的網站, 可能速度反而會較慢 (例如: OpenShift 上的網站, 或 Amazon 平台上的網站).
 連接支援 IPV6 的網站, 可能速度會較快 (例如: Youtube 或各項 Google 所提供的服務)
-因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry><entry><title>About 17.101 server</title><link href="./posts/2016/01/06/about-17101-server/index.html" rel="alternate"></link><updated>2016-01-06T16:42:34+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/about-17101-server/index.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/about-17101-server/" rel="alternate"></link><updated>2016-01-06T16:42:34+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
 
 
 &lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
@@ -1395,7 +1395,7 @@ refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
 refresh_pattern . 0 20% 4320
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Pelican setup</title><link href="./posts/2016/01/06/pelican-setup/index.html" rel="alternate"></link><updated>2016-01-06T16:32:15+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-06:./posts/2016/01/06/pelican-setup/index.html</id><summary type="html">&lt;p&gt;Pelican templae 設定&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/pelican-setup/" rel="alternate"></link><updated>2016-01-06T16:32:15+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/pelican-setup/</id><summary type="html">&lt;p&gt;Pelican templae 設定&lt;/p&gt;
 
 
 &lt;p&gt;假如使用 &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;https://github.com/DandyDev/pelican-bootstrap3&lt;/a&gt; template, 則可將 Set SHOW_ARTICLE_AUTHOR 設為 True, 就可以在每篇文章中顯示作者. SHOW_ARTICLE_CATEGORY 則用來顯示類別. SHOW_DATE_MODIFIED 則可顯示文章修改的日期.&lt;/p&gt;</summary><category term="pelican"></category><category term="設定"></category></entry></feed>
