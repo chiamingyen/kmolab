@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T09:43:40+08:00</updated><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-cd-course/" rel="alternate"></link><updated>2016-01-07T09:43:40+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-07T23:32:05+08:00</updated><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-wcm-course/" rel="alternate"></link><updated>2016-01-07T23:32:05+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+
+
+&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
+&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
+&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
+&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
+&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &amp;lt; http://flask.pocoo.org&amp;gt; based 網站程式開發&lt;/p&gt;
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/07/2016-cd-course/" rel="alternate"></link><updated>2016-01-07T23:26:49+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/posts/2016/01/07/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;MCAD 套件&lt;/h1&gt;
@@ -29,7 +39,134 @@
 &lt;p&gt;Design of Spur and Helical Gears Transmissions: &lt;a href="https://github.com/efirvida/python-gearbox"&gt;https://github.com/efirvida/python-gearbox&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;自行車控制設計: &lt;a href="https://plot.ly/ipython-notebooks/bicycle-control-design/"&gt;https://plot.ly/ipython-notebooks/bicycle-control-design/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Architecture of Collaboration: &lt;a href="https://copy.com/ZzdLE62hSYRSjTD2"&gt;https://copy.com/ZzdLE62hSYRSjTD2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://bicycledesign.net/"&gt;http://bicycledesign.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/List_of_bicycle_parts"&gt;https://en.wikipedia.org/wiki/List_of_bicycle_parts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bicycle Parts (自行車零件):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/R2bPNa09nIhXPMPx" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Chains (鏈條):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/LtIzJ6Zg3qNjproU" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Crank (曲柄):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/zIWRwSFzmxHrh9nS" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Frame (車架):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/QUzmgVYpYBnwHpfM" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Front Derailleur (前變速器):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/oypsvgbLb4pfXrKu" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Handle Bar (車把):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/KUPxuDpBw2LZzbay" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Hub (花鼓):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/gVTOsKPDVBR9hN9Q" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Lever (桿):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/oQETiHMpYKrsldCo" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Rear Derailleur (後變速器):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/D1xZWpca2I1V8uud" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Rear Hub and Casette (後輪花鼓與飛輪組):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/qHY90QNmvlPTyioM" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Seat (座墊):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/xFnLfPDCtEIk4yCT" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Wheel (車輪):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/wgxfXTBDH4zHUWrE" width="600" /&gt;&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;Bicycle 自行車
+Tire 輪胎
+Rim 輪圈
+Saddle 坐墊
+Seat post 座桿
+Seat post clamp 座桿束子
+Rear brake 後剎車
+Front brake 前剎車
+Seat stay 後上叉
+Chain stay 後下叉
+Seat tube 座管
+Top tube 上管
+Down tube 下管
+Freewheel / cassette Sprockets 飛輪
+Rear Ends/Dropouts 後叉端
+Derailleur Cable 變速導線
+Rear Derailleur 後變速器
+Chain 鏈條
+Pedal 腳踏
+Front Derailleur 前變速器
+軸 axle
+滾珠軸承 ball bearing
+車鈴 bicycle ball
+車架 bicycle frame
+Rear suspension 後避震
+Chainwheel&amp;amp;cranks 大齒盤及曲柄
+Valve 汽門嘴
+Spoke (輪圈)幅條
+Spoke Nipple (幅條)接頭
+Front fork end 前叉端
+Hubs 花鼓
+Quick release 快拆桿
+Front fork 前叉
+Brake cable 剎車導線
+Front crown 前叉肩蓋
+Brake cable housing 剎車導線
+Brake lever 剎車握把
+Bar end 小手把（副把手）
+Grip/tape 握把套
+Head tube 頭管
+Handlebar 車把
+Derailleur lever 變速桿
+Stem 豎管
+Head parts 車頭碗組
+Kickstand 停車柱
+Chain cover 鏈蓋
+Head Light 前燈
+Back mirror 後照鏡
+Reflector 反光片
+Luggage Carrier 貨架
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-06T23:59:22+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
@@ -245,14 +382,4 @@
 &lt;li&gt;部署成本比較低&lt;/li&gt;
 &lt;li&gt;可在各種平台上使用&lt;/li&gt;
 &lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/06/2016-wcm-course/" rel="alternate"></link><updated>2016-01-06T23:23:23+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/posts/2016/01/06/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
-
-
-&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
-&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
-&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
-&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
-&lt;p&gt;OpenShift 與近端 Flask based 網站程式開發&lt;/p&gt;
-&lt;h1&gt;參考資料&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry></feed>
