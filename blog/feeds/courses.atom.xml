@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T14:44:02+08:00</updated><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T17:19:00+08:00</updated><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-08T17:19:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
@@ -11,7 +11,6 @@
 &lt;li&gt;利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;計算出&lt;/a&gt;的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)&lt;/li&gt;
 &lt;li&gt;除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用&lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py"&gt;基因演算法解題&lt;/a&gt;, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;Jupyterhub 平台&lt;/a&gt;上進行運算)&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;img src="https://copy.com/6rzaCBJcLvwyvQnV" width=600 /&gt;&lt;/p&gt;
 &lt;p&gt;圖一: 利用 Solvespace 中的繪圖約束條件找出右邊的極限點距離 Onshape Piston 組立原點 0.5&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://copy.com/9wpYcZpL6NDWuaVt" width=600 /&gt;&lt;/p&gt;
@@ -215,7 +214,19 @@
 &lt;li&gt;部署成本比較低&lt;/li&gt;
 &lt;li&gt;可在各種平台上使用&lt;/li&gt;
 &lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-cd-course/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-wcm-course/" rel="alternate"></link><updated>2016-01-08T17:15:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+
+
+&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
+&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
+&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
+&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
+&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &amp;lt; http://flask.pocoo.org&amp;gt; based 網站程式開發&lt;/p&gt;
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-cd-course/" rel="alternate"></link><updated>2016-01-08T16:29:09+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 
 
 &lt;h1&gt;MCAD 套件&lt;/h1&gt;
@@ -372,14 +383,4 @@ Back mirror 後照鏡
 Reflector 反光片
 Luggage Carrier 貨架
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-wcm-course/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
-
-
-&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
-&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
-&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
-&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
-&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &amp;lt; http://flask.pocoo.org&amp;gt; based 網站程式開發&lt;/p&gt;
-&lt;h1&gt;參考資料&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/p&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry></feed>
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry></feed>

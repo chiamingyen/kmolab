@@ -1,5 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T14:44:02+08:00</updated><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/about-17101-server/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T17:15:14+08:00</updated><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-08T17:15:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+
+
+&lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
+&lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
+&lt;p&gt;情境說明:&lt;/p&gt;
+&lt;p&gt;當中華電信的 ADSL 用戶升級成為 ADSL2 (光世代) 時, 負責實體進入用戶家中執行設定的工作人員會自帶一個”用戶帳號@wifi.hinet.net” 的撥接帳號, 而通常工作人員並不會告知用戶此一帳號的密碼(照理說用戶可以在安裝時向工作人員詢問此一 @wifi.hinet.net 帳號的對應密碼), 另外用戶在申請早期與特定家用電話號碼附掛的網路線時, 會從中華電信取到一個”用戶帳號”與密碼, 而此一帳號密碼可以附加成為”用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net” 進行 Modem (這裡以 ZyXEL VDSL2 P883 為例) 的撥接, 若使用者完成 IPV6 試用申請後, 利用 @hinet.net 或 @ip.hinet.net 帳號撥接後, 若用戶為非固接光世代用戶, 就可以同時從中華電信的 DHCP 伺服器取得 IPV4 與 IPV6 等兩種協定的位址.&lt;/p&gt;
+&lt;p&gt;結論就是：&lt;/p&gt;
+&lt;p&gt;每一個中華電信用戶總共有兩組可以透過 Modem (這裡以 ZyXEL VDSL2 P883 為例) 撥接進入中華電信的 DHCP 取得 IP 位址的帳號, 其中一組為升級安裝時, 工作人員帶過來的 “用戶帳號@wifi.hinet.net”, 而另外一組則是 “用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net”
+因為筆者並未取得 “用戶帳號@wifi.hinet.net” 的對應密碼, 因此無法測試這兩組帳號是否撥接後可以得到相同的效果, 但是”用戶帳號@hinet.net” 在完成 IPV6 試用申請後 ,完成撥接即可以取得 IPV4 與 IPV6 等兩組 IP 位址.
+設定 IPV4 與 IPV6 dual stack 之前:&lt;/p&gt;
+&lt;p&gt;利用 ZyXEL P883 執行撥號, 先設定 P883 為 192.168.1.1, 啟動 DHCP Server, 並且從 192.168.1.101 開始, 100 組的 IPV4 IP 提供給實體連線與 Wifi 連線使用, 以”用戶帳號@wifi.hinet.net” 及密碼撥接後, P883 即可發揮作用, 其中若連線電腦只有四台以內, 則可以透過實體網路線, 連接到 P883 機器後面的 Hub (集線器), 雖然這4個孔的 Hub 可以方便使用, 但是速度只有到 100M (意思就是若家裡的兩台電腦是透過 P883 內建的4個 Hub 連接, 那麼區網內的網路瓶頸就是 100M, 假如想要讓兩台電腦透過 1000M 以上的速度彼此連線, 就必須將這兩台電腦先接到一個 1000M 以上的 Hub, 再接到 P883 內建的 Hub Port).&lt;/p&gt;
+&lt;p&gt;由於在 ZyXEL P883 的設定介面中找不到 IPV6 支援的任何畫面 (在隨後的第2階段設定中, 可以知道不需要將 P883 轉到 DHCPIPV6, 機器後面的集線埠, 連線到 Windows 7 以上或 Ubuntu 14.04 都可以自行利用 PPPoE 獨立再撥號連接, 這裡所使用的 ZyXEL 軔體版本為 P883S4_TR069_20141110), 所以若以 P883 執行撥接 (利用 @wifi.hinet.net 帳號)後, 再將電腦接到 P883 的 Hub, 將無法正確透過 IPV6 協定連接到 WAN, 因此以下的 IPV6 dual stack 設定前, 必須在撥接密碼欄中輸入錯誤的密碼, 讓 P883 無法完成撥接, 而且 DHCP Server 必須關閉, 然後由連接在 P883 後 Hub 上的 Ubuntu (以 14.04 LTS 為例) 電腦執行 PPP 的撥接.&lt;/p&gt;
+&lt;p&gt;Ubuntu (以 14.04 LTS 為例) 與中華電信 IPV6 環境使用&lt;/p&gt;
+&lt;p&gt;完成 IPV6 使用申請, 並接到已經設定完成的通知.
+如上所述, 關閉 P883 @wifi.hinet.net 的撥接 (給錯誤密碼並存檔即可), 並且關閉 P883 DHCP Server 運作.
+使用下列的 /etc/ppp/options 設定檔案
+以 sudo pppoeconf 執行設定, 主要步驟在輸入”用戶帳號@hinet.net” 與對應密碼, 其餘一律採用內建設定, 設定結束後, 會自動修改 /etc/network/interfaces 中的內容如下(詳細的 Windows 7 與 Ubuntu 設定步驟請參考: &lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;/etc/ppp/options 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# /etc/ppp/options
+#
+asyncmap 0
+crtscts
++ipv6 ipv6cp-use-ipaddr
+# ------
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+經過 sudo pppoeconf 修改後的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
+auto lo
+iface lo inet loopback
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
+provider dsl-provider
+auto p10p1
+iface p10p1 inet manual
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+其中的 p10p1 為網路卡的代號 (一般為 eth0 或 eth1), 而手動撥接的指令為 sudo pon dsl-provider (關閉的指令為 sudo poff)&lt;/p&gt;
+&lt;p&gt;經過上述設定與電腦撥接之後的 ifconfig 呈現結果:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:64 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:4880 (16.8 KB)  TX bytes:4880 (16.8 KB)
+p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
+          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:15665 errors:0 dropped:158 overruns:0 frame:0
+          TX packets:13324 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:16816888 (16.8 MB)  TX bytes:16816888 (16.8 MB)
+          Interrupt:18
+ppp0      Link encap:Point-to-Point Protocol 
+          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
+          RX packets:2060 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1548 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3
+          RX bytes:1681688 (1.68 MB)  TX bytes:168168 (168.168 KB)
+ppp1      Link encap:Point-to-Point Protocol 
+          inet addr:168.168.168.18  P-t-P:168.168.168.254  Mask:255.255.255.255
+          inet6 addr: 2001:1688:1688:1688:1688:1688:1688:1688/64 Scope:Global
+          inet6 addr: fe80::918:2ec2:7e3:a107/10 Scope:Link
+          inet6 addr: 2001:1688:1688:1688:1688:1688:1168:1168/64 Scope:Global
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
+          RX packets:12547 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:11592 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3
+          RX bytes:18354307 (18.3 MB)  TX bytes:1398413 (1.3 MB)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+第2階段設定&lt;/p&gt;
+&lt;p&gt;有了上述的測試設定後(其實主要目的在取得正確的 /etc/ppp/options 設定內容, 因為在 Ubuntu 14.04 LTS 中利用&lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt; 執行設定所得到的 /etc/ppp/options 無法正確完成 Modem 撥接), 採用”用戶帳號@hinet.net” 進行 PPPoE 撥號的連線, 非固接的光世代連線, 已經可以同時支援 IPV4 與 IPV6 協定, 但是因為 P883 的 DHCP 與 PPPoE 都沒有啟用, 所有 WiFi 的功能就無法使用, 因此弄清楚 Windows 7 操作系統與 Ubuntu 14.04 的 PPPoE 撥號設定後, 嘗試再將 P883 機器中的 DHCP Server 與 PPPoE 撥號啟用後, 再分別利用連接到 P883 集線器的 Windows7 與 Ubuntu 14.04 各自執行 PPPoE 的撥號 (因為中華電信的非固接光世代可以同時支援 8 台 PPPoE 的撥號連線).&lt;/p&gt;
+&lt;p&gt;首先看 Ubuntu 14.04 中的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
+auto lo
+iface lo inet loopback
+# for sudo pon dsl-provider
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
+provider dsl-provider
+auto p10p1
+iface p10p1 inet dhcp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+透過上述設定, Ubuntu 會在開機的階段, 先以 PPPoE 撥號, 然後再向 P883 以 dhcp 取得網卡對應的 IPV4 位址, 重新開機後的 ifconfig 檔案內容為:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:133 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:133 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:9729 (9.7 KB)  TX bytes:9729 (9.7 KB)
+p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
+          inet addr:192.168.1.106  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:8484 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8165 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:2904256 (2.9 MB)  TX bytes:1086876 (1.0 MB)
+          Interrupt:18
+ppp0      Link encap:Point-to-Point Protocol 
+          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
+          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:1168/64 Scope:Global
+          inet6 addr: fe80::d95f:df3:bd89:1e47/10 Scope:Link
+          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:a849/64 Scope:Global
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
+          RX packets:7610 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7460 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3
+          RX bytes:2612710 (2.6 MB)  TX bytes:827230 (827.2 KB)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+設定至此, 已經在既有的 ZyXel P883 IPV4 架構下 (一台 Windows 7 + 一台 Ubuntu 14.04 + 多台 Wifi 裝置), 順利申請中華電信的 IPV6 試用, 完成機房設定後, 自行在 P883 連線之後, 分別在 Windows 7 與 Ubuntu 14.04 以 PPPoE 進行數據機撥號連線, 達到 IPV4 與 IPV6 共存並用的環境, 當使用者希望透過瀏覽器連接到特定 IPV6 網址的網站時, 可以使用 http://[IPV6 網址] 進行連線.&lt;/p&gt;
+&lt;p&gt;最後, 為什麼在這個時段要進入 IPV6 環境?&lt;/p&gt;
+&lt;p&gt;隨著 IPV4 網址的消耗殆盡, 有些主機或裝置未來只會有 IPV6 位址, 若不透過 IPV6 協定, 無法連接這些主機或裝置.
+IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來性的各項軟硬體需求, 作最好的準備.
+當許多客戶被迫使用 IPV6 環境後, 有些條件較 IPV4 安全, 但是在點對點的連線下, 可能產生更大的安全危害, 愈早因應, 愈可能降低損害.
+目前階段使用 IPV4/IPV6 並存, 可能產生的問題:&lt;/p&gt;
+&lt;p&gt;連接純 IPV4 的網站, 可能速度反而會較慢 (例如: OpenShift 上的網站, 或 Amazon 平台上的網站).
+連接支援 IPV6 的網站, 可能速度會較快 (例如: Youtube 或各項 Google 所提供的服務)
+因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/about-17101-server/" rel="alternate"></link><updated>2016-01-08T16:29:09+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
 
 
 &lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
@@ -205,218 +424,4 @@ refresh_pattern . 0 20% 4320
 2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;git config --global --unset http.proxy
 git config --global --unset https.proxy
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
-
-
-&lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
-&lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
-&lt;p&gt;情境說明:&lt;/p&gt;
-&lt;p&gt;當中華電信的 ADSL 用戶升級成為 ADSL2 (光世代) 時, 負責實體進入用戶家中執行設定的工作人員會自帶一個”用戶帳號@wifi.hinet.net” 的撥接帳號, 而通常工作人員並不會告知用戶此一帳號的密碼(照理說用戶可以在安裝時向工作人員詢問此一 @wifi.hinet.net 帳號的對應密碼), 另外用戶在申請早期與特定家用電話號碼附掛的網路線時, 會從中華電信取到一個”用戶帳號”與密碼, 而此一帳號密碼可以附加成為”用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net” 進行 Modem (這裡以 ZyXEL VDSL2 P883 為例) 的撥接, 若使用者完成 IPV6 試用申請後, 利用 @hinet.net 或 @ip.hinet.net 帳號撥接後, 若用戶為非固接光世代用戶, 就可以同時從中華電信的 DHCP 伺服器取得 IPV4 與 IPV6 等兩種協定的位址.&lt;/p&gt;
-&lt;p&gt;結論就是：&lt;/p&gt;
-&lt;p&gt;每一個中華電信用戶總共有兩組可以透過 Modem (這裡以 ZyXEL VDSL2 P883 為例) 撥接進入中華電信的 DHCP 取得 IP 位址的帳號, 其中一組為升級安裝時, 工作人員帶過來的 “用戶帳號@wifi.hinet.net”, 而另外一組則是 “用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net”
-因為筆者並未取得 “用戶帳號@wifi.hinet.net” 的對應密碼, 因此無法測試這兩組帳號是否撥接後可以得到相同的效果, 但是”用戶帳號@hinet.net” 在完成 IPV6 試用申請後 ,完成撥接即可以取得 IPV4 與 IPV6 等兩組 IP 位址.
-設定 IPV4 與 IPV6 dual stack 之前:&lt;/p&gt;
-&lt;p&gt;利用 ZyXEL P883 執行撥號, 先設定 P883 為 192.168.1.1, 啟動 DHCP Server, 並且從 192.168.1.101 開始, 100 組的 IPV4 IP 提供給實體連線與 Wifi 連線使用, 以”用戶帳號@wifi.hinet.net” 及密碼撥接後, P883 即可發揮作用, 其中若連線電腦只有四台以內, 則可以透過實體網路線, 連接到 P883 機器後面的 Hub (集線器), 雖然這4個孔的 Hub 可以方便使用, 但是速度只有到 100M (意思就是若家裡的兩台電腦是透過 P883 內建的4個 Hub 連接, 那麼區網內的網路瓶頸就是 100M, 假如想要讓兩台電腦透過 1000M 以上的速度彼此連線, 就必須將這兩台電腦先接到一個 1000M 以上的 Hub, 再接到 P883 內建的 Hub Port).&lt;/p&gt;
-&lt;p&gt;由於在 ZyXEL P883 的設定介面中找不到 IPV6 支援的任何畫面 (在隨後的第2階段設定中, 可以知道不需要將 P883 轉到 DHCPIPV6, 機器後面的集線埠, 連線到 Windows 7 以上或 Ubuntu 14.04 都可以自行利用 PPPoE 獨立再撥號連接, 這裡所使用的 ZyXEL 軔體版本為 P883S4_TR069_20141110), 所以若以 P883 執行撥接 (利用 @wifi.hinet.net 帳號)後, 再將電腦接到 P883 的 Hub, 將無法正確透過 IPV6 協定連接到 WAN, 因此以下的 IPV6 dual stack 設定前, 必須在撥接密碼欄中輸入錯誤的密碼, 讓 P883 無法完成撥接, 而且 DHCP Server 必須關閉, 然後由連接在 P883 後 Hub 上的 Ubuntu (以 14.04 LTS 為例) 電腦執行 PPP 的撥接.&lt;/p&gt;
-&lt;p&gt;Ubuntu (以 14.04 LTS 為例) 與中華電信 IPV6 環境使用&lt;/p&gt;
-&lt;p&gt;完成 IPV6 使用申請, 並接到已經設定完成的通知.
-如上所述, 關閉 P883 @wifi.hinet.net 的撥接 (給錯誤密碼並存檔即可), 並且關閉 P883 DHCP Server 運作.
-使用下列的 /etc/ppp/options 設定檔案
-以 sudo pppoeconf 執行設定, 主要步驟在輸入”用戶帳號@hinet.net” 與對應密碼, 其餘一律採用內建設定, 設定結束後, 會自動修改 /etc/network/interfaces 中的內容如下(詳細的 Windows 7 與 Ubuntu 設定步驟請參考: &lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;/etc/ppp/options 檔案內容:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# /etc/ppp/options
-#
-asyncmap 0
-crtscts
-+ipv6 ipv6cp-use-ipaddr
-# ------
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;經過 sudo pppoeconf 修改後的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
-auto lo
-iface lo inet loopback
-auto dsl-provider
-iface dsl-provider inet ppp
-pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
-provider dsl-provider
-auto p10p1
-iface p10p1 inet manual
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;其中的 p10p1 為網路卡的代號 (一般為 eth0 或 eth1), 而手動撥接的指令為 sudo pon dsl-provider (關閉的指令為 sudo poff)&lt;/p&gt;
-&lt;p&gt;經過上述設定與電腦撥接之後的 ifconfig 呈現結果:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
-          inet addr:127.0.0.1  Mask:255.0.0.0
-          inet6 addr: ::1/128 Scope:Host
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-          RX packets:64 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:64 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:0
-          RX bytes:4880 (16.8 KB)  TX bytes:4880 (16.8 KB)
-p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
-          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:15665 errors:0 dropped:158 overruns:0 frame:0
-          TX packets:13324 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000
-          RX bytes:16816888 (16.8 MB)  TX bytes:16816888 (16.8 MB)
-          Interrupt:18
-ppp0      Link encap:Point-to-Point Protocol 
-          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
-          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
-          RX packets:2060 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:1548 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:3
-          RX bytes:1681688 (1.68 MB)  TX bytes:168168 (168.168 KB)
-ppp1      Link encap:Point-to-Point Protocol 
-          inet addr:168.168.168.18  P-t-P:168.168.168.254  Mask:255.255.255.255
-          inet6 addr: 2001:1688:1688:1688:1688:1688:1688:1688/64 Scope:Global
-          inet6 addr: fe80::918:2ec2:7e3:a107/10 Scope:Link
-          inet6 addr: 2001:1688:1688:1688:1688:1688:1168:1168/64 Scope:Global
-          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
-          RX packets:12547 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:11592 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:3
-          RX bytes:18354307 (18.3 MB)  TX bytes:1398413 (1.3 MB)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;第2階段設定&lt;/p&gt;
-&lt;p&gt;有了上述的測試設定後(其實主要目的在取得正確的 /etc/ppp/options 設定內容, 因為在 Ubuntu 14.04 LTS 中利用&lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt; 執行設定所得到的 /etc/ppp/options 無法正確完成 Modem 撥接), 採用”用戶帳號@hinet.net” 進行 PPPoE 撥號的連線, 非固接的光世代連線, 已經可以同時支援 IPV4 與 IPV6 協定, 但是因為 P883 的 DHCP 與 PPPoE 都沒有啟用, 所有 WiFi 的功能就無法使用, 因此弄清楚 Windows 7 操作系統與 Ubuntu 14.04 的 PPPoE 撥號設定後, 嘗試再將 P883 機器中的 DHCP Server 與 PPPoE 撥號啟用後, 再分別利用連接到 P883 集線器的 Windows7 與 Ubuntu 14.04 各自執行 PPPoE 的撥號 (因為中華電信的非固接光世代可以同時支援 8 台 PPPoE 的撥號連線).&lt;/p&gt;
-&lt;p&gt;首先看 Ubuntu 14.04 中的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
-auto lo
-iface lo inet loopback
-# for sudo pon dsl-provider
-auto dsl-provider
-iface dsl-provider inet ppp
-pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
-provider dsl-provider
-auto p10p1
-iface p10p1 inet dhcp
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;透過上述設定, Ubuntu 會在開機的階段, 先以 PPPoE 撥號, 然後再向 P883 以 dhcp 取得網卡對應的 IPV4 位址, 重新開機後的 ifconfig 檔案內容為:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
-          inet addr:127.0.0.1  Mask:255.0.0.0
-          inet6 addr: ::1/128 Scope:Host
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-          RX packets:133 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:133 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:0
-          RX bytes:9729 (9.7 KB)  TX bytes:9729 (9.7 KB)
-p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
-          inet addr:192.168.1.106  Bcast:192.168.1.255  Mask:255.255.255.0
-          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:8484 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:8165 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000
-          RX bytes:2904256 (2.9 MB)  TX bytes:1086876 (1.0 MB)
-          Interrupt:18
-ppp0      Link encap:Point-to-Point Protocol 
-          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
-          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:1168/64 Scope:Global
-          inet6 addr: fe80::d95f:df3:bd89:1e47/10 Scope:Link
-          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:a849/64 Scope:Global
-          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
-          RX packets:7610 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:7460 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:3
-          RX bytes:2612710 (2.6 MB)  TX bytes:827230 (827.2 KB)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;設定至此, 已經在既有的 ZyXel P883 IPV4 架構下 (一台 Windows 7 + 一台 Ubuntu 14.04 + 多台 Wifi 裝置), 順利申請中華電信的 IPV6 試用, 完成機房設定後, 自行在 P883 連線之後, 分別在 Windows 7 與 Ubuntu 14.04 以 PPPoE 進行數據機撥號連線, 達到 IPV4 與 IPV6 共存並用的環境, 當使用者希望透過瀏覽器連接到特定 IPV6 網址的網站時, 可以使用 http://[IPV6 網址] 進行連線.&lt;/p&gt;
-&lt;p&gt;最後, 為什麼在這個時段要進入 IPV6 環境?&lt;/p&gt;
-&lt;p&gt;隨著 IPV4 網址的消耗殆盡, 有些主機或裝置未來只會有 IPV6 位址, 若不透過 IPV6 協定, 無法連接這些主機或裝置.
-IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來性的各項軟硬體需求, 作最好的準備.
-當許多客戶被迫使用 IPV6 環境後, 有些條件較 IPV4 安全, 但是在點對點的連線下, 可能產生更大的安全危害, 愈早因應, 愈可能降低損害.
-目前階段使用 IPV4/IPV6 並存, 可能產生的問題:&lt;/p&gt;
-&lt;p&gt;連接純 IPV4 的網站, 可能速度反而會較慢 (例如: OpenShift 上的網站, 或 Amazon 平台上的網站).
-連接支援 IPV6 的網站, 可能速度會較快 (例如: Youtube 或各項 Google 所提供的服務)
-因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry></feed>
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry></feed>

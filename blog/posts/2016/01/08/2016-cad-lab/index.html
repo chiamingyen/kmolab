@@ -269,7 +269,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-08T14:44:02.523117+08:00"> 週五 08 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-01-08T17:15:14.526426+08:00"> 五 08 一月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -312,53 +312,34 @@ Kmolab            </a>
 <p>server 168.95.1.1</p>
 <p>網路設定步驟:</p>
 <ol>
-<li>
-<p>優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.</p>
-</li>
-<li>
-<p>目前的 DNS 伺服器設為哪一台?是否可以正常工作</p>
-</li>
-</ol>
-<p>可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1</p>
-<p>首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.</p>
-<p>這個設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 或 proxy.kmol.info 轉換為一系列的伺服器群組 IP</p>
-<ol>
-<li>
-<p>若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128 或 proxy.kmol.info:3128</p>
-</li>
-<li>
-<p>假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 或 proxy.kmol.info:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:</p>
-</li>
+<li>優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.</li>
+<li>目前的 DNS 伺服器設為哪一台?是否可以正常工作, 可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1
+首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.
+此設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 轉換為一系列的伺服器群組 IP</li>
+<li>若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128</li>
+<li>假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:</li>
 </ol>
 <p>IPV6:</p>
-<p>2001:288:6004:17::2
-2001:288:6004:17::4
-2001:288:6004:17::9
-2001:288:6004:17::17
-2001:288:6004:17::22
-2001:288:6004:17::23</p>
+<p>2001:288:6004:17::2</p>
+<p>2001:288:6004:17::4</p>
+<p>2001:288:6004:17::9</p>
+<p>2001:288:6004:17::17</p>
+<p>2001:288:6004:17::22</p>
+<p>2001:288:6004:17::23</p>
 <p>IPV4:</p>
-<p>140.130.17.2
-140.130.17.4
-140.130.17.9
-140.130.17.17
-140.130.17.22
-140.130.17.23</p>
+<p>140.130.17.2</p>
+<p>140.130.17.4</p>
+<p>140.130.17.9</p>
+<p>140.130.17.17</p>
+<p>140.130.17.22</p>
+<p>140.130.17.23</p>
 <p>假如要查驗目前網路連線情形, 可以檢視 系上即時網路連線圖</p>
 <p>以上為 CAD Lab 透過 IPV4 協定使用 DHCP 與 NAT 的模式下, 有關代理主機的設定流程.  若 CAD LAb 所有電腦透過純 IPV6 協定上網, 則必須設定 DNS 與 Proxy 才能讓瀏覽器連網.</p>
 <ol>
-<li>
-<p>優先設系上的 DNS 伺服器: 2001:288:6004:17::3</p>
-</li>
-<li>
-<p>若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)</p>
-</li>
-<li>
-<p>若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2</p>
-</li>
-<li>
-<p>proxy server 設為: proxy.mde.tw:3128</p>
-</li>
+<li>優先設系上的 DNS 伺服器: 2001:288:6004:17::3</li>
+<li>若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)</li>
+<li>若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2</li>
+<li>proxy server 設為: proxy.mde.tw:3128</li>
 </ol>
             </div>
             <!-- /.entry-content -->
@@ -405,18 +386,13 @@ Kmolab            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-4032-projects/">
-                            Kmolab 4032 projects
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-initialized/">
-                            Kmolab initialized
-                        </a>
-                    </li>
-                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2015-fall-cadp-w16/">
                             2015 Fall CADP W16
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/">
+                            Mechanical Designer and IPV6
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -425,8 +401,13 @@ Kmolab            </a>
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/alumni-interaction/">
-                            Alumni interaction
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-wcm-course/">
+                            2016 WCM course
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-initialized/">
+                            Kmolab initialized
                         </a>
                     </li>
                 </ul>

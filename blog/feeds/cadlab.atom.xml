@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T14:44:02+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-cad-lab/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T17:15:14+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-cad-lab/" rel="alternate"></link><updated>2016-01-08T17:15:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 
 
 &lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
@@ -28,51 +28,32 @@
 &lt;p&gt;server 168.95.1.1&lt;/p&gt;
 &lt;p&gt;網路設定步驟:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;目前的 DNS 伺服器設為哪一台?是否可以正常工作&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1&lt;/p&gt;
-&lt;p&gt;首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.&lt;/p&gt;
-&lt;p&gt;這個設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 或 proxy.kmol.info 轉換為一系列的伺服器群組 IP&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128 或 proxy.kmol.info:3128&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 或 proxy.kmol.info:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.&lt;/li&gt;
+&lt;li&gt;目前的 DNS 伺服器設為哪一台?是否可以正常工作, 可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1
+首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.
+此設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 轉換為一系列的伺服器群組 IP&lt;/li&gt;
+&lt;li&gt;若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128&lt;/li&gt;
+&lt;li&gt;假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;IPV6:&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::2
-2001:288:6004:17::4
-2001:288:6004:17::9
-2001:288:6004:17::17
-2001:288:6004:17::22
-2001:288:6004:17::23&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::2&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::4&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::9&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::17&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::22&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::23&lt;/p&gt;
 &lt;p&gt;IPV4:&lt;/p&gt;
-&lt;p&gt;140.130.17.2
-140.130.17.4
-140.130.17.9
-140.130.17.17
-140.130.17.22
-140.130.17.23&lt;/p&gt;
+&lt;p&gt;140.130.17.2&lt;/p&gt;
+&lt;p&gt;140.130.17.4&lt;/p&gt;
+&lt;p&gt;140.130.17.9&lt;/p&gt;
+&lt;p&gt;140.130.17.17&lt;/p&gt;
+&lt;p&gt;140.130.17.22&lt;/p&gt;
+&lt;p&gt;140.130.17.23&lt;/p&gt;
 &lt;p&gt;假如要查驗目前網路連線情形, 可以檢視 系上即時網路連線圖&lt;/p&gt;
 &lt;p&gt;以上為 CAD Lab 透過 IPV4 協定使用 DHCP 與 NAT 的模式下, 有關代理主機的設定流程.  若 CAD LAb 所有電腦透過純 IPV6 協定上網, 則必須設定 DNS 與 Proxy 才能讓瀏覽器連網.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;優先設系上的 DNS 伺服器: 2001:288:6004:17::3&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;proxy server 設為: proxy.mde.tw:3128&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;優先設系上的 DNS 伺服器: 2001:288:6004:17::3&lt;/li&gt;
+&lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
+&lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
+&lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
 &lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry></feed>

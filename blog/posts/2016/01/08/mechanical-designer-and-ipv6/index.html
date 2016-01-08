@@ -269,7 +269,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-08T14:44:02.518117+08:00"> 週五 08 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-01-08T17:15:14.562426+08:00"> 五 08 一月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -316,7 +316,8 @@ crtscts
 </pre></div>
 </td></tr></table>
 
-<p>經過 sudo pppoeconf 修改後的 /etc/network/interfaces 檔案內容:</p>
+<p><br />
+經過 sudo pppoeconf 修改後的 /etc/network/interfaces 檔案內容:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -337,7 +338,8 @@ iface p10p1 inet manual
 </pre></div>
 </td></tr></table>
 
-<p>其中的 p10p1 為網路卡的代號 (一般為 eth0 或 eth1), 而手動撥接的指令為 sudo pon dsl-provider (關閉的指令為 sudo poff)</p>
+<p><br />
+其中的 p10p1 為網路卡的代號 (一般為 eth0 或 eth1), 而手動撥接的指令為 sudo pon dsl-provider (關閉的指令為 sudo poff)</p>
 <p>經過上述設定與電腦撥接之後的 ifconfig 呈現結果:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -407,7 +409,8 @@ ppp1      Link encap:Point-to-Point Protocol
 </pre></div>
 </td></tr></table>
 
-<p>第2階段設定</p>
+<p><br />
+第2階段設定</p>
 <p>有了上述的測試設定後(其實主要目的在取得正確的 /etc/ppp/options 設定內容, 因為在 Ubuntu 14.04 LTS 中利用<a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf">http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf</a> 執行設定所得到的 /etc/ppp/options 無法正確完成 Modem 撥接), 採用”用戶帳號@hinet.net” 進行 PPPoE 撥號的連線, 非固接的光世代連線, 已經可以同時支援 IPV4 與 IPV6 協定, 但是因為 P883 的 DHCP 與 PPPoE 都沒有啟用, 所有 WiFi 的功能就無法使用, 因此弄清楚 Windows 7 操作系統與 Ubuntu 14.04 的 PPPoE 撥號設定後, 嘗試再將 P883 機器中的 DHCP Server 與 PPPoE 撥號啟用後, 再分別利用連接到 P883 集線器的 Windows7 與 Ubuntu 14.04 各自執行 PPPoE 的撥號 (因為中華電信的非固接光世代可以同時支援 8 台 PPPoE 的撥號連線).</p>
 <p>首先看 Ubuntu 14.04 中的 /etc/network/interfaces 檔案內容:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -432,7 +435,8 @@ iface p10p1 inet dhcp
 </pre></div>
 </td></tr></table>
 
-<p>透過上述設定, Ubuntu 會在開機的階段, 先以 PPPoE 撥號, 然後再向 P883 以 dhcp 取得網卡對應的 IPV4 位址, 重新開機後的 ifconfig 檔案內容為:</p>
+<p><br />
+透過上述設定, Ubuntu 會在開機的階段, 先以 PPPoE 撥號, 然後再向 P883 以 dhcp 取得網卡對應的 IPV4 位址, 重新開機後的 ifconfig 檔案內容為:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -489,7 +493,8 @@ ppp0      Link encap:Point-to-Point Protocol
 </pre></div>
 </td></tr></table>
 
-<p>設定至此, 已經在既有的 ZyXel P883 IPV4 架構下 (一台 Windows 7 + 一台 Ubuntu 14.04 + 多台 Wifi 裝置), 順利申請中華電信的 IPV6 試用, 完成機房設定後, 自行在 P883 連線之後, 分別在 Windows 7 與 Ubuntu 14.04 以 PPPoE 進行數據機撥號連線, 達到 IPV4 與 IPV6 共存並用的環境, 當使用者希望透過瀏覽器連接到特定 IPV6 網址的網站時, 可以使用 http://[IPV6 網址] 進行連線.</p>
+<p><br />
+設定至此, 已經在既有的 ZyXel P883 IPV4 架構下 (一台 Windows 7 + 一台 Ubuntu 14.04 + 多台 Wifi 裝置), 順利申請中華電信的 IPV6 試用, 完成機房設定後, 自行在 P883 連線之後, 分別在 Windows 7 與 Ubuntu 14.04 以 PPPoE 進行數據機撥號連線, 達到 IPV4 與 IPV6 共存並用的環境, 當使用者希望透過瀏覽器連接到特定 IPV6 網址的網站時, 可以使用 http://[IPV6 網址] 進行連線.</p>
 <p>最後, 為什麼在這個時段要進入 IPV6 環境?</p>
 <p>隨著 IPV4 網址的消耗殆盡, 有些主機或裝置未來只會有 IPV6 位址, 若不透過 IPV6 協定, 無法連接這些主機或裝置.
 IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來性的各項軟硬體需求, 作最好的準備.
@@ -543,18 +548,13 @@ IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來�
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-4032-projects/">
-                            Kmolab 4032 projects
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-initialized/">
-                            Kmolab initialized
-                        </a>
-                    </li>
-                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2015-fall-cadp-w16/">
                             2015 Fall CADP W16
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/">
+                            Mechanical Designer and IPV6
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -563,8 +563,13 @@ IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來�
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/alumni-interaction/">
-                            Alumni interaction
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/2016-wcm-course/">
+                            2016 WCM course
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-initialized/">
+                            Kmolab initialized
                         </a>
                     </li>
                 </ul>
