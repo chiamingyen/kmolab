@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T13:14:36+08:00</updated><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-08T13:14:36+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T14:44:02+08:00</updated><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
 
 
 &lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallproject"&gt;https://github.com/2015fallproject&lt;/a&gt;&lt;/p&gt;
@@ -34,6 +34,16 @@
 &lt;p&gt;工作項目一: 列印一個縮小比例, 可以作動的 NutCracker 機構.&lt;/p&gt;
 &lt;p&gt;工作項目二: 參與 kmolab 的協同網誌發表後, 每一成員每週至少必須發表一篇相關資料.&lt;/p&gt;
 &lt;p&gt;工作項目三: 在 17.103 機器上配置 Gogs: &lt;a href="https://gogs.io/"&gt;https://gogs.io/&lt;/a&gt; 與 Jupyterhub: &lt;a href="https://github.com/jupyter/jupyterhub"&gt;https://github.com/jupyter/jupyterhub&lt;/a&gt;, 讓所有成員都能連線使用.&lt;/p&gt;
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;http://octoprint.org/&gt;&lt;/li&gt;
+&lt;li&gt;&lt;https://github.com/andrewhodel/grblweb&gt;&lt;/li&gt;
+&lt;li&gt;&lt;https://github.com/andrewhodel/reprapweb&gt;&lt;/li&gt;
+&lt;li&gt;&lt;https://github.com/AstroPrint/AstroBox&gt;&lt;/li&gt;
+&lt;li&gt;&lt;https://github.com/LinuxCNC/linuxcnc&gt;&lt;/li&gt;
+&lt;li&gt;&lt;https://github.com/donovan6000/M3D-Fio&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
 &lt;h1&gt;403232&lt;/h1&gt;
 &lt;h1&gt;研究動機:&lt;/h1&gt;
 &lt;p&gt;Jupyter, Creo Parametric, Onshape 的整合應用&lt;/p&gt;
@@ -45,7 +55,11 @@
 &lt;p&gt;工作項目一: 在 17.102 機器上配置 Gogs: &lt;a href="https://gogs.io/"&gt;https://gogs.io/&lt;/a&gt; 與 Jupyterhub: &lt;a href="https://github.com/jupyter/jupyterhub"&gt;https://github.com/jupyter/jupyterhub&lt;/a&gt;, 讓所有成員都能連線使用.&lt;/p&gt;
 &lt;p&gt;工作項目二: 參與 kmolab 的協同網誌發表後, 每一成員每週至少必須發表一篇相關資料.&lt;/p&gt;
 &lt;p&gt;工作項目三: 利用 Jupyterhub, 研究基因演算法在機構合成上的應用, 包括 Sympy 與 Deap 的應用.&lt;/p&gt;
-&lt;p&gt;工作項目三: &lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-initialized/" rel="alternate"></link><updated>2016-01-08T12:35:55+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;https://github.com/DEAP/deap&gt;&lt;/li&gt;
+&lt;li&gt;&lt;https://github.com/l-liciniuslucullus/TSP-GA&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-initialized/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
 
 
 &lt;p&gt;二十一世紀是電腦網路與人工智慧充分整合的世代, Kmolab 一直以來對於人才的培育, 始終強調必須充份了解電腦的基本運作, 實際應用網路架構提升設計效能, 並且採用演化分析方法來發揮電腦的高速運算能力.&lt;/p&gt;
@@ -683,7 +697,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;p&gt;若無共同編輯的 .md 檔案, 則通常可以利用 gh-pages-pelican 按鈕建立遠端使用的靜態文件檔.&lt;/p&gt;
 &lt;p&gt;若各內容檢查無誤, 則可以推送到遠端.&lt;/p&gt;
 &lt;h2&gt;Openshift  網站&lt;/h2&gt;
-&lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-user-wen-zhang-tao-gao/" rel="alternate"></link><updated>2016-01-08T12:35:55+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/kmolab-user-wen-zhang-tao-gao/</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
+&lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/kmolab-user-wen-zhang-tao-gao/" rel="alternate"></link><updated>2016-01-08T14:44:02+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/kmolab-user-wen-zhang-tao-gao/</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
 
 
 &lt;h1&gt;文章標題&lt;/h1&gt;
