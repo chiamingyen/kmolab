@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T07:31:38+08:00</updated><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T07:35:45+08:00</updated><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/" rel="alternate"></link><updated>2016-01-11T07:35:45+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
+&lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CADP 課程 part1 影片摘要:&lt;/p&gt;
+&lt;h1&gt;CADP W2&lt;/h1&gt;
+&lt;h2&gt;介紹可攜程式環境的下載與使用&lt;/h2&gt;
+&lt;p&gt;此一系統包括 Python3 程式環境, Leo Editor, Jupyter, 而每週作業則利用 reveal.js 製作網頁式投影片, 利用 Pelican 產生靜態網頁, 並且讓各學員可以在個人倉儲 gh-pages 與全班倉儲 gh-pages 網頁上來呈現各階段所完成的作業內容.&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/139886319" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139886319"&gt;2015fallcadp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h2&gt;利用電腦輔助方法, 善用 USB 客製化資料與 C 槽的既有隨身系統, 設法修改 C 槽啟動的 start.bat 批次檔案, 建立符合需求的可攜程式環境.&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/139890840" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139890840"&gt;2015cadp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;介紹 reveal.js 網頁式投影片的使用方法, 介紹 Github pages 倉儲分支 gh-pages 的用法.&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/139892322" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139892322"&gt;2015cadp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;複習倉儲分支之間的切換方法 (git checkout master 或 git checkout gh-pages)&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/139893872" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139893872"&gt;2015cadp_w2_6&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;Github 倉儲中 Leo Editor 5.1 版 @clean 節點指令與 reveal.js 網頁式投影片的用法.&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/139913541" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139913541"&gt;2015cadp_w2_reveal&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;甲班 CADP W2&lt;/p&gt;
+&lt;h2&gt;可攜程式系統的建立與使用&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140277094" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140277094"&gt;2015cadpa_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;avi 影片轉 flv 格式, 以可攜式 VLC 觀看 flv 影片, 利用 python -m http.server 執行近端檔案分享&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;git push origin gh-pages 系列指令的應用&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140281702" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140281702"&gt;2015cadpa_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CADP W3&lt;/h1&gt;
+&lt;h2&gt;Pelican 靜態網頁系統建立與分組協同, Solvespace 零件繪圖&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141021392" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141021392"&gt;2015_cadpa_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;git rm 的使用, 以及 git 提交, 訊息註記與推送設定&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141024439" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141024439"&gt;2015_cadpa_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;Solvespace 零件電腦輔助繪圖&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141026116" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141026116"&gt;2015_cadpa_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CADP W4&lt;/h1&gt;
+&lt;h2&gt;根據 What Engineers Do? 電子文件, 說明科學與工程, 自然與人文間的關係&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141370058" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141370058"&gt;2015fall_cadp_w4_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CADP W5&lt;/h1&gt;
+&lt;h2&gt;從 2008 年舊資料的回顧, 說明在地化與國際化的整合, 培養有專長, 能就業, 說明文化與教育對工程師的重要影響, 以及追求卓越的本意&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/142093273" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093273"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;zoomit.exe 在錄製電腦輔助設計說明流程上的應用, Leo Editor 與 Pelican 的使用&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/142473037" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142473037"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;電腦輔助設計系列課程的標準執行流程, 可攜, 永續與體貼的電腦輔助設計方法&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/142093479" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093479"&gt;2015cadp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;Creo2 primer 電子書的網頁化處理&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/142098889" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142098889"&gt;2015cadp_w5_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CADP W6&lt;/h1&gt;
+&lt;h2&gt;啟動可攜系統, Waht Engineers Do? 與 Creo 2 Parametric Primer 資料摘要, Creo Parametric 零件繪製與組立, 開始建立全班協同 gh-pages 網頁, 自行新增為倉儲協同者, 從 git clone 開始參與全班資料協同&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143225578" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143225578"&gt;2015cadp_a_w6_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CADP W7&lt;/h1&gt;
+&lt;h2&gt;學員自行新增為全班協同倉儲的協同者, 示範如何參與網頁協同資料管理&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143572506" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143572506"&gt;2015fall_cadp_w7_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;start.bat 內容的修改, 設法透過 Jupyter 執行網頁式設計分析或協同網頁資料編輯&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143574887" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143574887"&gt;2015fall_cadp_w7_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;期中報告內容說明, Creo 2 Parametric Primer 電子書閱讀與零件繪製與零件組操作練習&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143963816" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
 &lt;p&gt;最後資料改版期限: 2016.01.20 (星期三) 24:00&lt;/p&gt;
 &lt;p&gt;評分流程:&lt;/p&gt;
 &lt;ol&gt;
@@ -241,102 +336,7 @@
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150636968"&gt;2015fall_cadpb_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/150985277" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
-&lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/p&gt;
-
-
-&lt;p&gt;2015 Fall CADP 課程 part1 影片摘要:&lt;/p&gt;
-&lt;h1&gt;CADP W2&lt;/h1&gt;
-&lt;h2&gt;介紹可攜程式環境的下載與使用&lt;/h2&gt;
-&lt;p&gt;此一系統包括 Python3 程式環境, Leo Editor, Jupyter, 而每週作業則利用 reveal.js 製作網頁式投影片, 利用 Pelican 產生靜態網頁, 並且讓各學員可以在個人倉儲 gh-pages 與全班倉儲 gh-pages 網頁上來呈現各階段所完成的作業內容.&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/139886319" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139886319"&gt;2015fallcadp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;利用電腦輔助方法, 善用 USB 客製化資料與 C 槽的既有隨身系統, 設法修改 C 槽啟動的 start.bat 批次檔案, 建立符合需求的可攜程式環境.&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/139890840" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139890840"&gt;2015cadp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;介紹 reveal.js 網頁式投影片的使用方法, 介紹 Github pages 倉儲分支 gh-pages 的用法.&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/139892322" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139892322"&gt;2015cadp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;複習倉儲分支之間的切換方法 (git checkout master 或 git checkout gh-pages)&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/139893872" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139893872"&gt;2015cadp_w2_6&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;Github 倉儲中 Leo Editor 5.1 版 @clean 節點指令與 reveal.js 網頁式投影片的用法.&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/139913541" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139913541"&gt;2015cadp_w2_reveal&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;甲班 CADP W2&lt;/p&gt;
-&lt;h2&gt;可攜程式系統的建立與使用&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140277094" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140277094"&gt;2015cadpa_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;avi 影片轉 flv 格式, 以可攜式 VLC 觀看 flv 影片, 利用 python -m http.server 執行近端檔案分享&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;git push origin gh-pages 系列指令的應用&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140281702" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140281702"&gt;2015cadpa_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CADP W3&lt;/h1&gt;
-&lt;h2&gt;Pelican 靜態網頁系統建立與分組協同, Solvespace 零件繪圖&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141021392" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141021392"&gt;2015_cadpa_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;git rm 的使用, 以及 git 提交, 訊息註記與推送設定&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141024439" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141024439"&gt;2015_cadpa_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;Solvespace 零件電腦輔助繪圖&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141026116" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141026116"&gt;2015_cadpa_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CADP W4&lt;/h1&gt;
-&lt;h2&gt;根據 What Engineers Do? 電子文件, 說明科學與工程, 自然與人文間的關係&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141370058" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141370058"&gt;2015fall_cadp_w4_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CADP W5&lt;/h1&gt;
-&lt;h2&gt;從 2008 年舊資料的回顧, 說明在地化與國際化的整合, 培養有專長, 能就業, 說明文化與教育對工程師的重要影響, 以及追求卓越的本意&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/142093273" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093273"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;zoomit.exe 在錄製電腦輔助設計說明流程上的應用, Leo Editor 與 Pelican 的使用&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/142473037" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142473037"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;電腦輔助設計系列課程的標準執行流程, 可攜, 永續與體貼的電腦輔助設計方法&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/142093479" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093479"&gt;2015cadp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;Creo2 primer 電子書的網頁化處理&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/142098889" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142098889"&gt;2015cadp_w5_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CADP W6&lt;/h1&gt;
-&lt;h2&gt;啟動可攜系統, Waht Engineers Do? 與 Creo 2 Parametric Primer 資料摘要, Creo Parametric 零件繪製與組立, 開始建立全班協同 gh-pages 網頁, 自行新增為倉儲協同者, 從 git clone 開始參與全班資料協同&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143225578" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143225578"&gt;2015cadp_a_w6_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CADP W7&lt;/h1&gt;
-&lt;h2&gt;學員自行新增為全班協同倉儲的協同者, 示範如何參與網頁協同資料管理&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143572506" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143572506"&gt;2015fall_cadp_w7_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;start.bat 內容的修改, 設法透過 Jupyter 執行網頁式設計分析或協同網頁資料編輯&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143574887" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143574887"&gt;2015fall_cadp_w7_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;期中報告內容說明, Creo 2 Parametric Primer 電子書閱讀與零件繪製與零件組操作練習&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143963816" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://copy.com/lXWOkfyiPVYqjM2c" width="600" /&gt;&lt;/p&gt;
 &lt;p&gt;計算 Piston 不發生干涉的有效行程, 可採如下方法:&lt;/p&gt;
