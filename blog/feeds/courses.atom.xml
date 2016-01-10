@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-10T14:22:14+08:00</updated><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/2015-fall-cp-part-2/" rel="alternate"></link><updated>2016-01-10T14:22:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/2015-fall-cp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-10T18:13:54+08:00</updated><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/2015-fall-final-schedule/" rel="alternate"></link><updated>2016-01-10T18:13:54+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/2015-fall-final-schedule/</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
+
+
+&lt;p&gt;最後資料改版期限: 2016.01.20 (星期三) 24:00&lt;/p&gt;
+&lt;p&gt;評分流程:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;從各班個人連結頁面中 (&lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;2a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;2b&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1b&lt;/a&gt;), 進入各學員在各班倉儲中對應的&lt;strong&gt;個人 gh-pages 網頁&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;從上述頁面右下方的 Blogroll 中&lt;strong&gt;最下方&lt;/strong&gt;連結, 進入學員個人單獨的 gh-pages 網頁&lt;/li&gt;
+&lt;li&gt;根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
+&lt;li&gt;從各班的協同網頁中, 各組所公佈的分組報告中的 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
+&lt;li&gt;cadp 課程另外將參酌學員所完成的 &lt;strong&gt;Solvespace 零件檔案&lt;/strong&gt;, &lt;strong&gt;Creo Parametric 零組件檔案&lt;/strong&gt;, Onshape 零組件檔案評分.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2015 Fall 電腦輔助設計實習課程甲班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cadpa 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cadpa 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcadpa"&gt;http://2015fallhw.github.io/2015fallcadpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;https://github.com/2015fallhw/2015fallcadpa/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2015 Fall 電腦輔助設計實習課程乙班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cadpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cadpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcadpb"&gt;http://2015fallhw.github.io/2015fallcadpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;https://github.com/2015fallhw/2015fallcadpb/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2015 Fall 計算機程式課程甲班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpa 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cpa 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpa"&gt;http://2015fallhw.github.io/2015fallcpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;https://github.com/2015fallhw/2015fallcpa/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2015 Fall 計算機程式課程乙班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpb"&gt;http://2015fallhw.github.io/2015fallcpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpb/wiki"&gt;https://github.com/2015fallhw/2015fallcpb/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/2015-fall-cp-part-2/" rel="alternate"></link><updated>2016-01-10T14:22:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/2015-fall-cp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
 
 
 &lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
