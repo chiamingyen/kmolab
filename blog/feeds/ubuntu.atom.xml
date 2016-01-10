@@ -1,5 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-08T17:15:14+08:00</updated><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-08T17:15:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-10T11:19:53+08:00</updated><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/about-17101-server/" rel="alternate"></link><updated>2016-01-10T11:19:53+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+
+
+&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
+&lt;h1&gt;ubuntu-desktop&lt;/h1&gt;
+&lt;p&gt;這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:&lt;/p&gt;
+&lt;p&gt;sudo apt-get install ubuntu-desktop&lt;/p&gt;
+&lt;h1&gt;nginx 與 uwsgi&lt;/h1&gt;
+&lt;p&gt;之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.&lt;/p&gt;
+&lt;p&gt;目前 17.101 總計啟動 IPV4 與 IPV6 網路設定.&lt;/p&gt;
+&lt;p&gt;/etc/network/interfaces 設定檔案:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;auto lo
+iface lo inet loopback
+
+auto em1
+iface em1 inet static
+    address 140.130.17.101
+    netmask 255.255.255.0
+    network 140.130.17.0
+    broadcast 140.130.17.255
+    gateway 140.130.17.254
+    dns-nameservers 140.130.1.2 168.95.1.1
+    dns-search mde.nfu.edu.tw
+
+iface em1 inet6 static
+    address 2001:288:6004:17::101
+    netmask 64
+    gateway 2001:288:6004:17::254
+    dns-nameservers 2001:288:6004:1::2 2001:b000:168::1
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+17.101 還安裝了 Nginx 與 uwsgi, 分別在 port 80 與 88 執行 CMSimply, 並在 &lt;a href="https://140.130.17.101:9443"&gt;https://140.130.17.101:9443&lt;/a&gt; 安裝 Jupyterhub, 只是 IPv6 模式下的 Jupyterhub 還無法使用.&lt;/p&gt;
+&lt;h1&gt;squid proxy 伺服器&lt;/h1&gt;
+&lt;p&gt;利用 sudo apt-get install squid, 安裝 squid proxy server.&lt;/p&gt;
+&lt;p&gt;設定檔案位於 /etc/squid3/squid.conf&lt;/p&gt;
+&lt;p&gt;每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.&lt;/p&gt;
+&lt;p&gt;參考的設定檔案:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
+acl cad_lab src 2001:288:6004:17::/64
+
+acl SSL_ports port 443
+acl Safe_ports port 80 # http
+acl Safe_ports port 88
+
+#acl Safe_ports port 21 # ftp
+acl SSL_ports port 8443
+acl Safe_ports port 8443
+
+acl SSL_ports port 9443
+acl Safe_ports port 9443
+
+acl SSL_ports port 22
+acl Safe_ports port 22
+
+acl Safe_ports port 443 # https
+acl Safe_ports port 1025-65535 # unregistered ports
+acl Safe_ports port 280 # http-mgmt
+acl Safe_ports port 488 # gss-http
+acl Safe_ports port 591 # filemaker
+acl Safe_ports port 777 # multiling http
+acl CONNECT method CONNECT
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+http_access allow cad_lab
+http_access deny all
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+
+#http_access allow localnet
+http_access allow localhost
+
+# And finally deny all other access to this proxy
+http_access deny all
+
+# Squid normally listens to port 3128
+http_port 3128
+
+#cache_dir ufs /var/spool/squid3 100 16 256
+icp_port 3130
+icp_access allow all
+
+cache_dir ufs /var/spool/squid3 2000 16 256
+cache_peer 140.130.17.2 sibling 3128 3130
+cache_peer 140.130.17.4 sibling 3128 3130
+cache_peer 140.130.17.9 sibling 3128 3130
+cache_peer 140.130.17.22 sibling 3128 3130
+cache_peer 140.130.17.23 sibling 3128 3130
+
+#
+# Add any of your own refresh_pattern entries above these.
+#
+refresh_pattern ^ftp: 1440 20% 10080
+refresh_pattern ^gopher: 1440 0% 1440
+refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
+refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
+refresh_pattern . 0 20% 4320
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+當 Ubuntu 在純 IPV6 環境時, 希望使用 IVP6 Git proxy 設定時, 可以利用:&lt;/p&gt;
+&lt;p&gt;git config --global http.proxy http://[IPV6 位址]:埠號&lt;/p&gt;
+&lt;p&gt;例如: git config -- global http.proxy http://[2001:168:168::168]:3128&lt;/p&gt;
+&lt;p&gt;至於 python pip3 在純 IPV6 環境下,  也必須設定 proxy 才能正確運作:&lt;/p&gt;
+&lt;p&gt;~.pip/pip.conf 內容&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
+&lt;span class="na"&gt;proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;http://your.proxy.domain.name:3128&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+假如要解除 git proxy 設定:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;git config --global --unset http.proxy
+git config --global --unset https.proxy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-10T11:19:53+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
 
 
 &lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
@@ -218,210 +424,4 @@ IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來�
 目前階段使用 IPV4/IPV6 並存, 可能產生的問題:&lt;/p&gt;
 &lt;p&gt;連接純 IPV4 的網站, 可能速度反而會較慢 (例如: OpenShift 上的網站, 或 Amazon 平台上的網站).
 連接支援 IPV6 的網站, 可能速度會較快 (例如: Youtube 或各項 Google 所提供的服務)
-因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/08/about-17101-server/" rel="alternate"></link><updated>2016-01-08T16:29:09+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-08:kmolab/blog/posts/2016/01/08/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
-
-
-&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
-&lt;h1&gt;ubuntu-desktop&lt;/h1&gt;
-&lt;p&gt;這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:&lt;/p&gt;
-&lt;p&gt;sudo apt-get install ubuntu-desktop&lt;/p&gt;
-&lt;h1&gt;nginx 與 uwsgi&lt;/h1&gt;
-&lt;p&gt;之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.&lt;/p&gt;
-&lt;p&gt;目前 17.101 總計啟動 IPV4 與 IPV6 網路設定.&lt;/p&gt;
-&lt;p&gt;/etc/network/interfaces 設定檔案:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;auto lo
-iface lo inet loopback
-
-auto em1
-iface em1 inet static
-    address 140.130.17.101
-    netmask 255.255.255.0
-    network 140.130.17.0
-    broadcast 140.130.17.255
-    gateway 140.130.17.254
-    dns-nameservers 140.130.1.2 168.95.1.1
-    dns-search mde.nfu.edu.tw
-
-iface em1 inet6 static
-    address 2001:288:6004:17::101
-    netmask 64
-    gateway 2001:288:6004:17::254
-    dns-nameservers 2001:288:6004:1::2 2001:b000:168::1
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-17.101 還安裝了 Nginx 與 uwsgi, 分別在 port 80 與 88 執行 CMSimply, 並在 &lt;a href="https://140.130.17.101:9443"&gt;https://140.130.17.101:9443&lt;/a&gt; 安裝 Jupyterhub, 只是 IPv6 模式下的 Jupyterhub 還無法使用.&lt;/p&gt;
-&lt;h1&gt;squid proxy 伺服器&lt;/h1&gt;
-&lt;p&gt;利用 sudo apt-get install squid, 安裝 squid proxy server.&lt;/p&gt;
-&lt;p&gt;設定檔案位於 /etc/squid3/squid.conf&lt;/p&gt;
-&lt;p&gt;每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.&lt;/p&gt;
-&lt;p&gt;參考的設定檔案:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
-acl cad_lab src 2001:288:6004:17::/64
-
-acl SSL_ports port 443
-acl Safe_ports port 80 # http
-acl Safe_ports port 88
-
-#acl Safe_ports port 21 # ftp
-acl SSL_ports port 8443
-acl Safe_ports port 8443
-
-acl SSL_ports port 9443
-acl Safe_ports port 9443
-
-acl SSL_ports port 22
-acl Safe_ports port 22
-
-acl Safe_ports port 443 # https
-acl Safe_ports port 1025-65535 # unregistered ports
-acl Safe_ports port 280 # http-mgmt
-acl Safe_ports port 488 # gss-http
-acl Safe_ports port 591 # filemaker
-acl Safe_ports port 777 # multiling http
-acl CONNECT method CONNECT
-
-# Deny requests to certain unsafe ports
-http_access deny !Safe_ports
-
-# Deny CONNECT to other than secure SSL ports
-http_access deny CONNECT !SSL_ports
-
-http_access allow cad_lab
-http_access deny all
-# Only allow cachemgr access from localhost
-http_access allow localhost manager
-http_access deny manager
-
-#http_access allow localnet
-http_access allow localhost
-
-# And finally deny all other access to this proxy
-http_access deny all
-
-# Squid normally listens to port 3128
-http_port 3128
-
-#cache_dir ufs /var/spool/squid3 100 16 256
-icp_port 3130
-icp_access allow all
-
-cache_dir ufs /var/spool/squid3 2000 16 256
-cache_peer 140.130.17.2 sibling 3128 3130
-cache_peer 140.130.17.4 sibling 3128 3130
-cache_peer 140.130.17.9 sibling 3128 3130
-cache_peer 140.130.17.22 sibling 3128 3130
-cache_peer 140.130.17.23 sibling 3128 3130
-
-#
-# Add any of your own refresh_pattern entries above these.
-#
-refresh_pattern ^ftp: 1440 20% 10080
-refresh_pattern ^gopher: 1440 0% 1440
-refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
-refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
-refresh_pattern . 0 20% 4320
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-當 Ubuntu 在純 IPV6 環境時, 希望使用 IVP6 Git proxy 設定時, 可以利用:&lt;/p&gt;
-&lt;p&gt;git config --global http.proxy http://[IPV6 位址]:埠號&lt;/p&gt;
-&lt;p&gt;例如: git config -- global http.proxy http://[2001:168:168::168]:3128&lt;/p&gt;
-&lt;p&gt;至於 python pip3 在純 IPV6 環境下,  也必須設定 proxy 才能正確運作:&lt;/p&gt;
-&lt;p&gt;~.pip/pip.conf 內容&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
-&lt;span class="na"&gt;proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;http://your.proxy.domain.name:3128&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-假如要解除 git proxy 設定:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;git config --global --unset http.proxy
-git config --global --unset https.proxy
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry></feed>
+因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry></feed>
