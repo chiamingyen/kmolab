@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T07:35:45+08:00</updated><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/" rel="alternate"></link><updated>2016-01-11T07:35:45+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T11:13:13+08:00</updated><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-1/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
 &lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -94,12 +94,12 @@
 &lt;h2&gt;期中報告內容說明, Creo 2 Parametric Primer 電子書閱讀與零件繪製與零件組操作練習&lt;/h2&gt;
 &lt;iframe src="https://player.vimeo.com/video/143963816" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-final-schedule/</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
 &lt;p&gt;最後資料改版期限: 2016.01.20 (星期三) 24:00&lt;/p&gt;
 &lt;p&gt;評分流程:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;從各班個人連結頁面中 (&lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;2a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;2b&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1b&lt;/a&gt;), 進入各學員在各班倉儲中對應的&lt;strong&gt;個人 gh-pages 網頁&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;從上述頁面右下方的 Blogroll 中&lt;strong&gt;最下方&lt;/strong&gt;連結, 進入學員個人單獨的 gh-pages 網頁&lt;/li&gt;
+&lt;li&gt;從上述頁面右下方的 Blogroll 中&lt;strong&gt;最下方&lt;/strong&gt;連結 (名稱為"學號 個人網頁"), 進入學員個人單獨的 gh-pages 網頁&lt;/li&gt;
 &lt;li&gt;根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
 &lt;li&gt;從各班的協同網頁中, 各組所公佈的分組報告中的 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
 &lt;li&gt;cadp 課程另外將參酌學員所完成的 &lt;strong&gt;Solvespace 零件檔案&lt;/strong&gt;, &lt;strong&gt;Creo Parametric 零組件檔案&lt;/strong&gt;, Onshape 零組件檔案評分.&lt;/li&gt;
@@ -129,140 +129,7 @@
 &lt;li&gt;cpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;cpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpb"&gt;http://2015fallhw.github.io/2015fallcpb&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpb/wiki"&gt;https://github.com/2015fallhw/2015fallcpb/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cp-part-2/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
-&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 Fall CP 課程 part2 影片摘要:&lt;/p&gt;
-&lt;h1&gt;CP W12&lt;/h1&gt;
-&lt;h2&gt;介紹從 fix.bat 的搭建到猜顏色遊戲程式的編寫&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/147818514" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147818514"&gt;2015fallcp_b_w12_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;h1&gt;CP W15&lt;/h1&gt;
-&lt;h2&gt;介紹近端系統的建立與啟動, Python3 指令整理, 猜數字與猜顏色遊戲的流程圖, Brython 網頁繪圖&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/150000693" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150000693"&gt;2015cp_w15_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CP W17&lt;/h1&gt;
-&lt;h2&gt;說明如何使用 Python 函式, 以及如何進行 Brython 網頁動態繪圖&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/151096089" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151096089"&gt;2015fallcpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/151109576" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151109576"&gt;2015fallcp_w17b&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cp-part-1/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cp-part-1/</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part1&lt;/p&gt;
-&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 Fall CP 課程 part1 影片摘要:&lt;/p&gt;
-&lt;h1&gt;CP W2&lt;/h1&gt;
-&lt;h2&gt;2015 Fall 計算機程式可攜環境介紹&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140380091" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140380091"&gt;2015cp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;h2&gt;說明如何利用 python -m http.server 分享近端檔案&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;介紹如何利用 fix.bat 修補 C 槽既有的可攜程式系統, 說明 SciTE 如何執行 Python3 程式, 如何利用 gh-pages 分支網頁繳交作業&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140383708" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140383708"&gt;2015cp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;介紹如何從可攜系統的修補與啟動, 到如何利用 Github Pages 的網頁來繳交各週作業&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140394246" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140394246"&gt;2015cp_b_w4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;2015 Fall 課程工作與環境介紹&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140874547" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140874547"&gt;2015Fall 使用環境與工具介紹&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;英文打字的指法練習介紹, 說明 Github 倉儲的建立使用與刪除.&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140876400" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140876400"&gt;Github 倉儲建立, 使用與刪除&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;介紹 Github 倉儲分支的建立與使用&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/140878456" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140878456"&gt;Github 倉儲分支建立與使用&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CP W3&lt;/h1&gt;
-&lt;h2&gt;隨身程式系統的應用再提醒 (fix.zip), Leo Editor, Pelican, Markdown 模組的安裝設定與啟動, notebook.py 中編碼的設定&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141129640" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141129640"&gt;2015fall_cp_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/141142727" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141142727"&gt;2015cp_w3_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/141145747" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141145747"&gt;2015cp_w3_b3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/141144113" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141144113"&gt;2015cp_w3_b2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明工程師的工作分類, 工程與科學的相輔相成, 解釋何以人文是工程師的養份, 了解科學在探究自然現況, 工程則需面對自然挑戰, 解決人文想像與需求&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141131417" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141131417"&gt;2015fall_cp_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明如何利用 Github 建立倉儲, 起始倉儲, git clone 倉儲, 建立分支, 切換 gh-pages 分支, 提交 gh-pages 分支版本, 推送分支版本&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141132740" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141132740"&gt;2015fall_cp_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明 Python 程式執行模式, 可以採互動式執行, SciTE 環境下執行, Jupyter 網頁 noteook 環境下執行, Brython 瀏覽器中執行等&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/141134146" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141134146"&gt;2015fall_cp_w3_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CP W5&lt;/h1&gt;
-&lt;h2&gt;說明計算機程式作為電腦輔助與協同產品設計系列課程的先導課程, 必須在學習 Python3 程式語法的同時, 架構一個可以永續改進使用的系統&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/142582837" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142582837"&gt;2015cp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;fix.zip 內容的細步流程介紹, 從 markdown 透過 Pelican 指令的執行, 轉換為放上 Github Pages 網頁的 html 檔案資料, liquid_tags 延伸程式的應用&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/142584067" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142584067"&gt;2015cp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CP W6&lt;/h1&gt;
-&lt;h2&gt;介紹英文教學影片的字幕所在位置, 說明如利用 VLC 在近端播放教學影片&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143330980" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143330980"&gt;2015cp_w6_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明如何將各學員的作業整合到全班協同倉儲, 自行新增為全班倉儲的協同者&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143337293" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337293"&gt;2015cp_w6_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/143345717" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143345717"&gt;2015cp_w6_b_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;示範如何修正內含 git 衝突標示的 Leo Editor 檔案&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143337483" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337483"&gt;2015cp_w6_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h1&gt;CP W7&lt;/h1&gt;
-&lt;h2&gt;介紹如何建立有效率的機械設計工程師可攜程式環境 (Anaconda Python based), 學習計算機程式的概念, 認識程式設計與機械設計工程師角色間的關係&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/144078159" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144078159"&gt;2015_cp_w7_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明近端與 Jupyter 環境的 Python 程式執行, print 與 for 迴圈應用&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/144080408" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144080408"&gt;2015_cp_w7_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明如何將計算機程式的內容放到 gh-pages 網頁&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/144081268" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144081268"&gt;2015_cp_w7_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明如何利用 git reset -- hard 版本編號, 回復舊版本資料&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;說明如何修補被弄亂的全班倉儲&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
 &lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -336,7 +203,32 @@
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150636968"&gt;2015fall_cadpb_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/150985277" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cp-part-2/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
+&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CP 課程 part2 影片摘要:&lt;/p&gt;
+&lt;h1&gt;CP W12&lt;/h1&gt;
+&lt;h2&gt;介紹從 fix.bat 的搭建到猜顏色遊戲程式的編寫&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/147818514" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147818514"&gt;2015fallcp_b_w12_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h1&gt;CP W15&lt;/h1&gt;
+&lt;h2&gt;介紹近端系統的建立與啟動, Python3 指令整理, 猜數字與猜顏色遊戲的流程圖, Brython 網頁繪圖&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/150000693" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150000693"&gt;2015cp_w15_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CP W17&lt;/h1&gt;
+&lt;h2&gt;說明如何使用 Python 函式, 以及如何進行 Brython 網頁動態繪圖&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/151096089" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151096089"&gt;2015fallcpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/151109576" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151109576"&gt;2015fallcp_w17b&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cp"></category><category term="2015 Fall"></category></entry><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/kmolab-4032-projects/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/kmolab-4032-projects/</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
 &lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallproject"&gt;https://github.com/2015fallproject&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;403231&lt;/h1&gt;
 &lt;ul&gt;
@@ -395,889 +287,7 @@
 &lt;li&gt;&lt;a href="https://github.com/l-liciniuslucullus/TSP-GA"&gt;https://github.com/l-liciniuslucullus/TSP-GA&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.simscale.com"&gt;https://www.simscale.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://superpowers-html5.com/"&gt;http://superpowers-html5.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/lXWOkfyiPVYqjM2c" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;計算 Piston 不發生干涉的有效行程, 可採如下方法:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)&lt;/li&gt;
-&lt;li&gt;利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)&lt;/li&gt;
-&lt;li&gt;利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;計算出&lt;/a&gt;的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)&lt;/li&gt;
-&lt;li&gt;除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用&lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py"&gt;基因演算法解題&lt;/a&gt;, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;Jupyterhub 平台&lt;/a&gt;上進行運算)&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;&lt;img src="https://copy.com/6rzaCBJcLvwyvQnV" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖一: 利用 Solvespace 中的繪圖約束條件找出右邊的極限點距離 Onshape Piston 組立原點 0.5&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/9wpYcZpL6NDWuaVt" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖二: 利用 Solvespace 中的繪圖約束條件找出左邊的極限點距離 Onshape Piston 組立原點 2.23&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/XESVn24N1FLFzTrh" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖三: 當 piston 位於左邊極限點時, AB 轉角為 105.37 度&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/msL9Mwwfwt9HuxdY" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖四: Jupyter 計算分析時機構各點標示圖&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/CY6ETYiDKL2uto29" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖五: 利用 Jupyter 符號式結合數值分析法所得結果&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/FgXmcsLVAJgHSJVg" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖六: 利用基因演算解題, 所得到的結果, 當 piston 位於左邊極限點時, AB 轉角為 105.7 度&lt;/p&gt;
-&lt;p&gt;若採用 &lt;a href="https://github.com/deap/deap"&gt;deap&lt;/a&gt; 與 numpy 解題 (AB 轉角極限為 105.71 度):&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 這裡採用 numpy 與 deap 模組解題, 使用 Genetic Algorithm 模式&lt;/span&gt;
-&lt;span class="c"&gt;# 解的問題為 Nutcracker 左邊 connect 轉角極限&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;array&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;deap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;deap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;creator&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;deap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
-&lt;span class="c"&gt;# for evalIntersect 函式中的 sqrt, sin, cos, pi&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-
-&lt;span class="c"&gt;# 1/4 最小化題目 type of problem&lt;/span&gt;
-&lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;FitnessMin&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Fitness&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;weights&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
-&lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Individual&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;typecode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; \
-               &lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FitnessMin&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;# 2/4 initilization&lt;/span&gt;
-&lt;span class="c"&gt;# 兩個變數題目&lt;/span&gt;
-&lt;span class="n"&gt;NDIM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
-&lt;span class="n"&gt;toolbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Toolbox&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;attr_float&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uniform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;individual&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initRepeat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Individual&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attr_float&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NDIM&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;population&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initRepeat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c"&gt;# 3/4 選擇 operator step3/4&lt;/span&gt;
-&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;select&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;selRandom&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c"&gt;# 也可以採用下列設定&lt;/span&gt;
-&lt;span class="c"&gt;#toolbox.register(&amp;quot;mate&amp;quot;, tools.cxTwoPoint)&lt;/span&gt;
-&lt;span class="c"&gt;#toolbox.register(&amp;quot;mutate&amp;quot;, tools.mutGaussian, mu=0, sigma=1, indpb=0.1)&lt;/span&gt;
-&lt;span class="c"&gt;#toolbox.register(&amp;quot;select&amp;quot;, tools.selTournament, tournsize=3, k=3)&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;evalIntersect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="n"&gt;deg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;
-    &lt;span class="n"&gt;theta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;deg&lt;/span&gt;
-    &lt;span class="n"&gt;xtarget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.75&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
-    &lt;span class="n"&gt;ytarget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;
-    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;225&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;529&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;225&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; \
-        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;529&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
-    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="c"&gt;# 適應值&lt;/span&gt;
-    &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xtarget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ytarget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-    &lt;span class="c"&gt;# 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;  &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;theta&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fitness_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-
-&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;evaluate&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;evalIntersect&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;# 以上到 evaluate 為止, 為定義 operators&lt;/span&gt;
-
-&lt;span class="c"&gt;# 4/4 以下則為 Algorithms&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="c"&gt;# Differential evolution parameters&lt;/span&gt;
-    &lt;span class="n"&gt;CR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.25&lt;/span&gt;
-    &lt;span class="n"&gt;F&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; 
-    &lt;span class="n"&gt;MU&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
-    &lt;span class="n"&gt;NGEN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;   
-
-    &lt;span class="n"&gt;pop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MU&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="n"&gt;hof&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HallOfFame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Statistics&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;avg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;std&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;min&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;max&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-    &lt;span class="c"&gt;# Evaluate the individuals&lt;/span&gt;
-    &lt;span class="n"&gt;fitnesses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fitnesses&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fit&lt;/span&gt;
-
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NGEN&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;agent&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-            &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NDIM&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-                &lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
-        &lt;span class="n"&gt;hof&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Best individual is &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hof&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;hof&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-上述課程資料與 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=4584#more-4584"&gt;Wordpress 網頁&lt;/a&gt;上的資料內容相同, Ｗordpress 網站屬於動態的網誌, 而 &lt;a href="http://chiamingyen.github.io/kmolab/"&gt;http://chiamingyen.github.io/kmolab/&lt;/a&gt; 則是靜態網誌系統, 採用靜態網誌的優點如下:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;比較安全&lt;/li&gt;
-&lt;li&gt;比較不會過時&lt;/li&gt;
-&lt;li&gt;部署成本比較低&lt;/li&gt;
-&lt;li&gt;可在各種平台上使用&lt;/li&gt;
-&lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
-&lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
-&lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
-&lt;p&gt;情境說明:&lt;/p&gt;
-&lt;p&gt;當中華電信的 ADSL 用戶升級成為 ADSL2 (光世代) 時, 負責實體進入用戶家中執行設定的工作人員會自帶一個”用戶帳號@wifi.hinet.net” 的撥接帳號, 而通常工作人員並不會告知用戶此一帳號的密碼(照理說用戶可以在安裝時向工作人員詢問此一 @wifi.hinet.net 帳號的對應密碼), 另外用戶在申請早期與特定家用電話號碼附掛的網路線時, 會從中華電信取到一個”用戶帳號”與密碼, 而此一帳號密碼可以附加成為”用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net” 進行 Modem (這裡以 ZyXEL VDSL2 P883 為例) 的撥接, 若使用者完成 IPV6 試用申請後, 利用 @hinet.net 或 @ip.hinet.net 帳號撥接後, 若用戶為非固接光世代用戶, 就可以同時從中華電信的 DHCP 伺服器取得 IPV4 與 IPV6 等兩種協定的位址.&lt;/p&gt;
-
-
-&lt;p&gt;結論就是：&lt;/p&gt;
-&lt;p&gt;每一個中華電信用戶總共有兩組可以透過 Modem (這裡以 ZyXEL VDSL2 P883 為例) 撥接進入中華電信的 DHCP 取得 IP 位址的帳號, 其中一組為升級安裝時, 工作人員帶過來的 “用戶帳號@wifi.hinet.net”, 而另外一組則是 “用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net”
-因為筆者並未取得 “用戶帳號@wifi.hinet.net” 的對應密碼, 因此無法測試這兩組帳號是否撥接後可以得到相同的效果, 但是”用戶帳號@hinet.net” 在完成 IPV6 試用申請後 ,完成撥接即可以取得 IPV4 與 IPV6 等兩組 IP 位址.
-設定 IPV4 與 IPV6 dual stack 之前:&lt;/p&gt;
-&lt;p&gt;利用 ZyXEL P883 執行撥號, 先設定 P883 為 192.168.1.1, 啟動 DHCP Server, 並且從 192.168.1.101 開始, 100 組的 IPV4 IP 提供給實體連線與 Wifi 連線使用, 以”用戶帳號@wifi.hinet.net” 及密碼撥接後, P883 即可發揮作用, 其中若連線電腦只有四台以內, 則可以透過實體網路線, 連接到 P883 機器後面的 Hub (集線器), 雖然這4個孔的 Hub 可以方便使用, 但是速度只有到 100M (意思就是若家裡的兩台電腦是透過 P883 內建的4個 Hub 連接, 那麼區網內的網路瓶頸就是 100M, 假如想要讓兩台電腦透過 1000M 以上的速度彼此連線, 就必須將這兩台電腦先接到一個 1000M 以上的 Hub, 再接到 P883 內建的 Hub Port).&lt;/p&gt;
-&lt;p&gt;由於在 ZyXEL P883 的設定介面中找不到 IPV6 支援的任何畫面 (在隨後的第2階段設定中, 可以知道不需要將 P883 轉到 DHCPIPV6, 機器後面的集線埠, 連線到 Windows 7 以上或 Ubuntu 14.04 都可以自行利用 PPPoE 獨立再撥號連接, 這裡所使用的 ZyXEL 軔體版本為 P883S4_TR069_20141110), 所以若以 P883 執行撥接 (利用 @wifi.hinet.net 帳號)後, 再將電腦接到 P883 的 Hub, 將無法正確透過 IPV6 協定連接到 WAN, 因此以下的 IPV6 dual stack 設定前, 必須在撥接密碼欄中輸入錯誤的密碼, 讓 P883 無法完成撥接, 而且 DHCP Server 必須關閉, 然後由連接在 P883 後 Hub 上的 Ubuntu (以 14.04 LTS 為例) 電腦執行 PPP 的撥接.&lt;/p&gt;
-&lt;p&gt;Ubuntu (以 14.04 LTS 為例) 與中華電信 IPV6 環境使用&lt;/p&gt;
-&lt;p&gt;完成 IPV6 使用申請, 並接到已經設定完成的通知.
-如上所述, 關閉 P883 @wifi.hinet.net 的撥接 (給錯誤密碼並存檔即可), 並且關閉 P883 DHCP Server 運作.
-使用下列的 /etc/ppp/options 設定檔案
-以 sudo pppoeconf 執行設定, 主要步驟在輸入”用戶帳號@hinet.net” 與對應密碼, 其餘一律採用內建設定, 設定結束後, 會自動修改 /etc/network/interfaces 中的內容如下(詳細的 Windows 7 與 Ubuntu 設定步驟請參考: &lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;/etc/ppp/options 檔案內容:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# /etc/ppp/options
-#
-asyncmap 0
-crtscts
-+ipv6 ipv6cp-use-ipaddr
-# ------
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-經過 sudo pppoeconf 修改後的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
-auto lo
-iface lo inet loopback
-auto dsl-provider
-iface dsl-provider inet ppp
-pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
-provider dsl-provider
-auto p10p1
-iface p10p1 inet manual
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-其中的 p10p1 為網路卡的代號 (一般為 eth0 或 eth1), 而手動撥接的指令為 sudo pon dsl-provider (關閉的指令為 sudo poff)&lt;/p&gt;
-&lt;p&gt;經過上述設定與電腦撥接之後的 ifconfig 呈現結果:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
-          inet addr:127.0.0.1  Mask:255.0.0.0
-          inet6 addr: ::1/128 Scope:Host
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-          RX packets:64 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:64 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:0
-          RX bytes:4880 (16.8 KB)  TX bytes:4880 (16.8 KB)
-p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
-          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:15665 errors:0 dropped:158 overruns:0 frame:0
-          TX packets:13324 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000
-          RX bytes:16816888 (16.8 MB)  TX bytes:16816888 (16.8 MB)
-          Interrupt:18
-ppp0      Link encap:Point-to-Point Protocol 
-          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
-          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
-          RX packets:2060 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:1548 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:3
-          RX bytes:1681688 (1.68 MB)  TX bytes:168168 (168.168 KB)
-ppp1      Link encap:Point-to-Point Protocol 
-          inet addr:168.168.168.18  P-t-P:168.168.168.254  Mask:255.255.255.255
-          inet6 addr: 2001:1688:1688:1688:1688:1688:1688:1688/64 Scope:Global
-          inet6 addr: fe80::918:2ec2:7e3:a107/10 Scope:Link
-          inet6 addr: 2001:1688:1688:1688:1688:1688:1168:1168/64 Scope:Global
-          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
-          RX packets:12547 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:11592 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:3
-          RX bytes:18354307 (18.3 MB)  TX bytes:1398413 (1.3 MB)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-第2階段設定&lt;/p&gt;
-&lt;p&gt;有了上述的測試設定後(其實主要目的在取得正確的 /etc/ppp/options 設定內容, 因為在 Ubuntu 14.04 LTS 中利用&lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt; 執行設定所得到的 /etc/ppp/options 無法正確完成 Modem 撥接), 採用”用戶帳號@hinet.net” 進行 PPPoE 撥號的連線, 非固接的光世代連線, 已經可以同時支援 IPV4 與 IPV6 協定, 但是因為 P883 的 DHCP 與 PPPoE 都沒有啟用, 所有 WiFi 的功能就無法使用, 因此弄清楚 Windows 7 操作系統與 Ubuntu 14.04 的 PPPoE 撥號設定後, 嘗試再將 P883 機器中的 DHCP Server 與 PPPoE 撥號啟用後, 再分別利用連接到 P883 集線器的 Windows7 與 Ubuntu 14.04 各自執行 PPPoE 的撥號 (因為中華電信的非固接光世代可以同時支援 8 台 PPPoE 的撥號連線).&lt;/p&gt;
-&lt;p&gt;首先看 Ubuntu 14.04 中的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
-auto lo
-iface lo inet loopback
-# for sudo pon dsl-provider
-auto dsl-provider
-iface dsl-provider inet ppp
-pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
-provider dsl-provider
-auto p10p1
-iface p10p1 inet dhcp
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-透過上述設定, Ubuntu 會在開機的階段, 先以 PPPoE 撥號, 然後再向 P883 以 dhcp 取得網卡對應的 IPV4 位址, 重新開機後的 ifconfig 檔案內容為:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
-          inet addr:127.0.0.1  Mask:255.0.0.0
-          inet6 addr: ::1/128 Scope:Host
-          UP LOOPBACK RUNNING  MTU:65536  Metric:1
-          RX packets:133 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:133 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:0
-          RX bytes:9729 (9.7 KB)  TX bytes:9729 (9.7 KB)
-p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
-          inet addr:192.168.1.106  Bcast:192.168.1.255  Mask:255.255.255.0
-          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:8484 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:8165 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000
-          RX bytes:2904256 (2.9 MB)  TX bytes:1086876 (1.0 MB)
-          Interrupt:18
-ppp0      Link encap:Point-to-Point Protocol 
-          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
-          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:1168/64 Scope:Global
-          inet6 addr: fe80::d95f:df3:bd89:1e47/10 Scope:Link
-          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:a849/64 Scope:Global
-          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
-          RX packets:7610 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:7460 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:3
-          RX bytes:2612710 (2.6 MB)  TX bytes:827230 (827.2 KB)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-設定至此, 已經在既有的 ZyXel P883 IPV4 架構下 (一台 Windows 7 + 一台 Ubuntu 14.04 + 多台 Wifi 裝置), 順利申請中華電信的 IPV6 試用, 完成機房設定後, 自行在 P883 連線之後, 分別在 Windows 7 與 Ubuntu 14.04 以 PPPoE 進行數據機撥號連線, 達到 IPV4 與 IPV6 共存並用的環境, 當使用者希望透過瀏覽器連接到特定 IPV6 網址的網站時, 可以使用 http://[IPV6 網址] 進行連線.&lt;/p&gt;
-&lt;p&gt;最後, 為什麼在這個時段要進入 IPV6 環境?&lt;/p&gt;
-&lt;p&gt;隨著 IPV4 網址的消耗殆盡, 有些主機或裝置未來只會有 IPV6 位址, 若不透過 IPV6 協定, 無法連接這些主機或裝置.
-IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來性的各項軟硬體需求, 作最好的準備.
-當許多客戶被迫使用 IPV6 環境後, 有些條件較 IPV4 安全, 但是在點對點的連線下, 可能產生更大的安全危害, 愈早因應, 愈可能降低損害.
-目前階段使用 IPV4/IPV6 並存, 可能產生的問題:&lt;/p&gt;
-&lt;p&gt;連接純 IPV4 的網站, 可能速度反而會較慢 (例如: OpenShift 上的網站, 或 Amazon 平台上的網站).
-連接支援 IPV6 的網站, 可能速度會較快 (例如: Youtube 或各項 Google 所提供的服務)
-因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry><entry><title>Alumni interaction</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/alumni-interaction/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/alumni-interaction/</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
-&lt;p&gt;如何尋找校友?&lt;/p&gt;
-&lt;p&gt;如何互動？&lt;/p&gt;
-&lt;p&gt;如何延續價值?&lt;/p&gt;
-&lt;h1&gt;先建立自己的領英網頁&lt;/h1&gt;
-&lt;p&gt;在 &lt;a href="https://www.linkedin.com/"&gt;https://www.linkedin.com/&lt;/a&gt; 登錄帳號後, 填入個人相關專業資料, 之後將會不定期收到機器寄出的 cold mail, 一般而言, 可以無需理會這些 cold mail, 暫且不管這些電子郵件看起來像是人或機器寫的, 你都必須知道, 建立領英帳號的目的, 是要利用它, 而不是被它利用, 所以絕對要對這些網路上的冷信件, 保持冷靜, 儘量不要回應, 可以直接刪除.&lt;/p&gt;
-
-
-&lt;h1&gt;先建立自己的 about.me 網頁&lt;/h1&gt;
-&lt;p&gt;在 &lt;a href="https://about.me/"&gt;https://about.me/&lt;/a&gt; 建立帳號的態度, 應該要與領英一樣, 用它而不要被利用. 意思就是說, 只要在上面提供並更新與個人相關的專業資料, 並在申請學校或找工作的時候發揮其用處, 其他時候, 就該讓它晾在那裡, 不要多費心或浪費時間.&lt;/p&gt;
-&lt;h1&gt;先每天早睡早起, 持續運動&lt;/h1&gt;
-&lt;p&gt;主要的目的在時時刻刻保持覺照, 讓自己每天都精神飽滿, 可以應付課業或工作所需.&lt;/p&gt;
-&lt;h1&gt;找虎尾及雲林縣附近的校友, 一起參加活動&lt;/h1&gt;
-&lt;p&gt;每年都有慢跑活動, 可以找幾個身邊的好朋友, 每年參加, 並且利用網誌紀錄訓練與參賽的過程, 自然就會碰到許多志同道合的朋友與系友.&lt;/p&gt;
-&lt;h1&gt;藉由各屆校友的資料整理, 利用網路進行互動&lt;/h1&gt;
-&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2016-cad-lab/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
-&lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
-&lt;p&gt;intel Core i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
-&lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
-&lt;h1&gt;開機磁區&lt;/h1&gt;
-&lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
-&lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
-&lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
-
-
-&lt;h1&gt;舊電腦分配&lt;/h1&gt;
-&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;
-&lt;h1&gt;網路設置&lt;/h1&gt;
-&lt;p&gt;(以下設置為舊資料, 僅供參考)&lt;/p&gt;
-&lt;p&gt;目前電腦輔助設計室採 DHCP 換成 140.130.17.82 後連到學校主幹, 理論上設負載平衡的代理主機可以共享網路頻寬, 擷取網路資料的速度會比較快.&lt;/p&gt;
-&lt;p&gt;代理主機(理論上使用 140.130.17.3 作為 dns server, proxy 採 proxy.mde.nfu.edu.tw 速度最快):&lt;/p&gt;
-&lt;p&gt;proxy.mde.nfu.edu.tw:3128 或&lt;/p&gt;
-&lt;p&gt;proxy.mde.tw: 3128 或&lt;/p&gt;
-&lt;p&gt;proxy.kmol.info:3128&lt;/p&gt;
-&lt;p&gt;問題在於 DNS 伺服器是否可以正確執行任務, 將代理主機符號名稱換成多台 Proxy 的 IP?&lt;/p&gt;
-&lt;p&gt;學校的 DNS 伺服器: 140.130.1.2 與 140.130.1.20&lt;/p&gt;
-&lt;p&gt;系上的 DNS 伺服器: 140.130.17.3&lt;/p&gt;
-&lt;p&gt;中華電信的 DNS 伺服器: 168.95.1.1&lt;/p&gt;
-&lt;p&gt;DNS 設定優先順序: 系上優先, 再來是學校, 最後才是中華電信.&lt;/p&gt;
-&lt;p&gt;查驗 DNS 是否正常運作: nslookup&lt;/p&gt;
-&lt;p&gt;更換 dns server 為 168.95.1.1&lt;/p&gt;
-&lt;p&gt;server 168.95.1.1&lt;/p&gt;
-&lt;p&gt;網路設定步驟:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.&lt;/li&gt;
-&lt;li&gt;目前的 DNS 伺服器設為哪一台?是否可以正常工作, 可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1
-首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.
-此設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 轉換為一系列的伺服器群組 IP&lt;/li&gt;
-&lt;li&gt;若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128&lt;/li&gt;
-&lt;li&gt;假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;IPV6:&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::2&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::4&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::9&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::17&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::22&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::23&lt;/p&gt;
-&lt;p&gt;IPV4:&lt;/p&gt;
-&lt;p&gt;140.130.17.2&lt;/p&gt;
-&lt;p&gt;140.130.17.4&lt;/p&gt;
-&lt;p&gt;140.130.17.9&lt;/p&gt;
-&lt;p&gt;140.130.17.17&lt;/p&gt;
-&lt;p&gt;140.130.17.22&lt;/p&gt;
-&lt;p&gt;140.130.17.23&lt;/p&gt;
-&lt;p&gt;假如要查驗目前網路連線情形, 可以檢視 系上即時網路連線圖&lt;/p&gt;
-&lt;p&gt;以上為 CAD Lab 透過 IPV4 協定使用 DHCP 與 NAT 的模式下, 有關代理主機的設定流程.  若 CAD LAb 所有電腦透過純 IPV6 協定上網, 則必須設定 DNS 與 Proxy 才能讓瀏覽器連網.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;優先設系上的 DNS 伺服器: 2001:288:6004:17::3&lt;/li&gt;
-&lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
-&lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
-&lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2016-wcm-course/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
-&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
-&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
-&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
-&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
-&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &lt;a href="http://flask.pocoo.org"&gt;http://flask.pocoo.org&lt;/a&gt; based 網站程式開發&lt;/p&gt;
-
-
-&lt;h1&gt;參考資料&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="https://github.com/embik/bloks"&gt;https://github.com/embik/bloks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2016-cd-course/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
-&lt;h1&gt;MCAD 套件&lt;/h1&gt;
-&lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
-&lt;p&gt;Onshape: &lt;a href="https://www.onshape.com/"&gt;https://www.onshape.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Solvespace: &lt;a href="http://solvespace.com/index.pl"&gt;http://solvespace.com/index.pl&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PTC Creo Parametric: &lt;a href="http://www.ptc.com/cad/creo/parametric"&gt;http://www.ptc.com/cad/creo/parametric&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;rattleCAD: &lt;a href="http://rattlecad.sourceforge.net/"&gt;http://rattlecad.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
-
-
-&lt;h1&gt;零組件繪圖與設計&lt;/h1&gt;
-&lt;p&gt;將以自行車設計與 3D 模型組裝作為主題&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/y8NbIutMaY8NnFVt" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/mBuPlvra0Eylnkfq" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;＃標準零件庫&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.mcmaster.com/"&gt;http://www.mcmaster.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.bolts-library.org/"&gt;http://www.bolts-library.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://b2b.partcommunity.com/community/"&gt;https://b2b.partcommunity.com/community/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://grabcad.com/library/tag/bicycle"&gt;https://grabcad.com/library/tag/bicycle&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;客製化設計&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/vallettea/Bicycle"&gt;https://github.com/vallettea/Bicycle&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.atom3dp.com/"&gt;http://www.atom3dp.com/&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;參考資料&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://github.com/smoqadam/PyFladesk-rss-reader"&gt;https://github.com/smoqadam/PyFladesk-rss-reader&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Planar Linkage Analysis: &lt;a href="https://copy.com/KLSdcu1EkmnzdV6U"&gt;https://copy.com/KLSdcu1EkmnzdV6U&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Fourbar Synthesis: &lt;a href="https://copy.com/FgYUPh6RCpDUMnT1"&gt;https://copy.com/FgYUPh6RCpDUMnT1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spur Gear Design: &lt;a href="https://copy.com/nLeN7ODMNv0VLu9G"&gt;https://copy.com/nLeN7ODMNv0VLu9G&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spur Gear in Creo Parametric: &lt;a href="https://copy.com/LeIvhGJCoroQJdva"&gt;https://copy.com/LeIvhGJCoroQJdva&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Design of Spur and Helical Gears Transmissions: &lt;a href="https://github.com/efirvida/python-gearbox"&gt;https://github.com/efirvida/python-gearbox&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;自行車控制設計: &lt;a href="https://plot.ly/ipython-notebooks/bicycle-control-design/"&gt;https://plot.ly/ipython-notebooks/bicycle-control-design/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Architecture of Collaboration: &lt;a href="https://copy.com/ZzdLE62hSYRSjTD2"&gt;https://copy.com/ZzdLE62hSYRSjTD2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://bicycledesign.net/"&gt;http://bicycledesign.net/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/List_of_bicycle_parts"&gt;https://en.wikipedia.org/wiki/List_of_bicycle_parts&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Bicycle Parts (自行車零件):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/R2bPNa09nIhXPMPx" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Chains (鏈條):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/LtIzJ6Zg3qNjproU" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Crank (曲柄):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/zIWRwSFzmxHrh9nS" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Frame (車架):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/QUzmgVYpYBnwHpfM" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Front Derailleur (前變速器):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/oypsvgbLb4pfXrKu" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Handle Bar (車把):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/KUPxuDpBw2LZzbay" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Hub (花鼓):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/gVTOsKPDVBR9hN9Q" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Lever (桿):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/oQETiHMpYKrsldCo" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Rear Derailleur (後變速器):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/D1xZWpca2I1V8uud" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Rear Hub and Casette (後輪花鼓與飛輪組):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/qHY90QNmvlPTyioM" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Seat (座墊):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/xFnLfPDCtEIk4yCT" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;Wheel (車輪):&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/wgxfXTBDH4zHUWrE" width="600" /&gt;&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;Bicycle 自行車
-Tire 輪胎
-Rim 輪圈
-Saddle 坐墊
-Seat post 座桿
-Seat post clamp 座桿束子
-Rear brake 後剎車
-Front brake 前剎車
-Seat stay 後上叉
-Chain stay 後下叉
-Seat tube 座管
-Top tube 上管
-Down tube 下管
-Freewheel / cassette Sprockets 飛輪
-Rear Ends/Dropouts 後叉端
-Derailleur Cable 變速導線
-Rear Derailleur 後變速器
-Chain 鏈條
-Pedal 腳踏
-Front Derailleur 前變速器
-軸 axle
-滾珠軸承 ball bearing
-車鈴 bicycle ball
-車架 bicycle frame
-Rear suspension 後避震
-Chainwheel&amp;amp;cranks 大齒盤及曲柄
-Valve 汽門嘴
-Spoke (輪圈)幅條
-Spoke Nipple (幅條)接頭
-Front fork end 前叉端
-Hubs 花鼓
-Quick release 快拆桿
-Front fork 前叉
-Brake cable 剎車導線
-Front crown 前叉肩蓋
-Brake cable housing 剎車導線
-Brake lever 剎車握把
-Bar end 小手把（副把手）
-Grip/tape 握把套
-Head tube 頭管
-Handlebar 車把
-Derailleur lever 變速桿
-Stem 豎管
-Head parts 車頭碗組
-Kickstand 停車柱
-Chain cover 鏈蓋
-Head Light 前燈
-Back mirror 後照鏡
-Reflector 反光片
-Luggage Carrier 貨架
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/about-17101-server/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
-&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
-&lt;h1&gt;ubuntu-desktop&lt;/h1&gt;
-&lt;p&gt;這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:&lt;/p&gt;
-&lt;p&gt;sudo apt-get install ubuntu-desktop&lt;/p&gt;
-&lt;h1&gt;nginx 與 uwsgi&lt;/h1&gt;
-&lt;p&gt;之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.&lt;/p&gt;
-
-
-&lt;p&gt;目前 17.101 總計啟動 IPV4 與 IPV6 網路設定.&lt;/p&gt;
-&lt;p&gt;/etc/network/interfaces 設定檔案:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;auto lo
-iface lo inet loopback
-
-auto em1
-iface em1 inet static
-    address 140.130.17.101
-    netmask 255.255.255.0
-    network 140.130.17.0
-    broadcast 140.130.17.255
-    gateway 140.130.17.254
-    dns-nameservers 140.130.1.2 168.95.1.1
-    dns-search mde.nfu.edu.tw
-
-iface em1 inet6 static
-    address 2001:288:6004:17::101
-    netmask 64
-    gateway 2001:288:6004:17::254
-    dns-nameservers 2001:288:6004:1::2 2001:b000:168::1
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-17.101 還安裝了 Nginx 與 uwsgi, 分別在 port 80 與 88 執行 CMSimply, 並在 &lt;a href="https://140.130.17.101:9443"&gt;https://140.130.17.101:9443&lt;/a&gt; 安裝 Jupyterhub, 只是 IPv6 模式下的 Jupyterhub 還無法使用.&lt;/p&gt;
-&lt;h1&gt;squid proxy 伺服器&lt;/h1&gt;
-&lt;p&gt;利用 sudo apt-get install squid, 安裝 squid proxy server.&lt;/p&gt;
-&lt;p&gt;設定檔案位於 /etc/squid3/squid.conf&lt;/p&gt;
-&lt;p&gt;每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.&lt;/p&gt;
-&lt;p&gt;參考的設定檔案:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
-acl cad_lab src 2001:288:6004:17::/64
-
-acl SSL_ports port 443
-acl Safe_ports port 80 # http
-acl Safe_ports port 88
-
-#acl Safe_ports port 21 # ftp
-acl SSL_ports port 8443
-acl Safe_ports port 8443
-
-acl SSL_ports port 9443
-acl Safe_ports port 9443
-
-acl SSL_ports port 22
-acl Safe_ports port 22
-
-acl Safe_ports port 443 # https
-acl Safe_ports port 1025-65535 # unregistered ports
-acl Safe_ports port 280 # http-mgmt
-acl Safe_ports port 488 # gss-http
-acl Safe_ports port 591 # filemaker
-acl Safe_ports port 777 # multiling http
-acl CONNECT method CONNECT
-
-# Deny requests to certain unsafe ports
-http_access deny !Safe_ports
-
-# Deny CONNECT to other than secure SSL ports
-http_access deny CONNECT !SSL_ports
-
-http_access allow cad_lab
-http_access deny all
-# Only allow cachemgr access from localhost
-http_access allow localhost manager
-http_access deny manager
-
-#http_access allow localnet
-http_access allow localhost
-
-# And finally deny all other access to this proxy
-http_access deny all
-
-# Squid normally listens to port 3128
-http_port 3128
-
-#cache_dir ufs /var/spool/squid3 100 16 256
-icp_port 3130
-icp_access allow all
-
-cache_dir ufs /var/spool/squid3 2000 16 256
-cache_peer 140.130.17.2 sibling 3128 3130
-cache_peer 140.130.17.4 sibling 3128 3130
-cache_peer 140.130.17.9 sibling 3128 3130
-cache_peer 140.130.17.22 sibling 3128 3130
-cache_peer 140.130.17.23 sibling 3128 3130
-
-#
-# Add any of your own refresh_pattern entries above these.
-#
-refresh_pattern ^ftp: 1440 20% 10080
-refresh_pattern ^gopher: 1440 0% 1440
-refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
-refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
-refresh_pattern . 0 20% 4320
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-當 Ubuntu 在純 IPV6 環境時, 希望使用 IVP6 Git proxy 設定時, 可以利用:&lt;/p&gt;
-&lt;p&gt;git config --global http.proxy http://[IPV6 位址]:埠號&lt;/p&gt;
-&lt;p&gt;例如: git config -- global http.proxy http://[2001:168:168::168]:3128&lt;/p&gt;
-&lt;p&gt;至於 python pip3 在純 IPV6 環境下,  也必須設定 proxy 才能正確運作:&lt;/p&gt;
-&lt;p&gt;~.pip/pip.conf 內容&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
-&lt;span class="na"&gt;proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;http://your.proxy.domain.name:3128&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-假如要解除 git proxy 設定:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;git config --global --unset http.proxy
-git config --global --unset https.proxy
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/kmolab-initialized/" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/kmolab-initialized/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/kmolab-initialized/</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
 &lt;p&gt;二十一世紀是電腦網路與人工智慧充分整合的世代, Kmolab 一直以來對於人才的培育, 始終強調必須充份了解電腦的基本運作, 實際應用網路架構提升設計效能, 並且採用演化分析方法來發揮電腦的高速運算能力.&lt;/p&gt;
 &lt;p&gt;然而這些理念的落實, 必須從電腦的操作系統安裝設定開始, 進而納入 IPV4 與 IPV6 網路協定架構整合, 並且每一成員都有能力運用近端、
 廣域主機與雲端主機上的各項軟硬體資源, 將知識管理與最佳化應用的精神納入產品的設計開發, 才能真正融入知識經濟與國際協同的趨勢.&lt;/p&gt;
@@ -1916,7 +926,1000 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;p&gt;若無共同編輯的 .md 檔案, 則通常可以利用 gh-pages-pelican 按鈕建立遠端使用的靜態文件檔.&lt;/p&gt;
 &lt;p&gt;若各內容檢查無誤, 則可以推送到遠端.&lt;/p&gt;
 &lt;h2&gt;Openshift  網站&lt;/h2&gt;
-&lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/kmolab-user-wen-zhang-tao-gao/" rel="alternate"></link><updated>2016-01-10T11:19:53+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/kmolab-user-wen-zhang-tao-gao/</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
+&lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-w16/</id><summary type="html">&lt;p&gt;根據 &lt;a href="https://copy.com/DXQiGkDoe9K8Cz7m"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/lXWOkfyiPVYqjM2c" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;計算 Piston 不發生干涉的有效行程, 可採如下方法:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)&lt;/li&gt;
+&lt;li&gt;利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)&lt;/li&gt;
+&lt;li&gt;利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;計算出&lt;/a&gt;的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)&lt;/li&gt;
+&lt;li&gt;除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用&lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py"&gt;基因演算法解題&lt;/a&gt;, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;Jupyterhub 平台&lt;/a&gt;上進行運算)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;img src="https://copy.com/6rzaCBJcLvwyvQnV" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖一: 利用 Solvespace 中的繪圖約束條件找出右邊的極限點距離 Onshape Piston 組立原點 0.5&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/9wpYcZpL6NDWuaVt" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖二: 利用 Solvespace 中的繪圖約束條件找出左邊的極限點距離 Onshape Piston 組立原點 2.23&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/XESVn24N1FLFzTrh" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖三: 當 piston 位於左邊極限點時, AB 轉角為 105.37 度&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/msL9Mwwfwt9HuxdY" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖四: Jupyter 計算分析時機構各點標示圖&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/CY6ETYiDKL2uto29" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖五: 利用 Jupyter 符號式結合數值分析法所得結果&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/FgXmcsLVAJgHSJVg" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖六: 利用基因演算解題, 所得到的結果, 當 piston 位於左邊極限點時, AB 轉角為 105.7 度&lt;/p&gt;
+&lt;p&gt;若採用 &lt;a href="https://github.com/deap/deap"&gt;deap&lt;/a&gt; 與 numpy 解題 (AB 轉角極限為 105.71 度):&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 這裡採用 numpy 與 deap 模組解題, 使用 Genetic Algorithm 模式&lt;/span&gt;
+&lt;span class="c"&gt;# 解的問題為 Nutcracker 左邊 connect 轉角極限&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;array&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;deap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;deap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;creator&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;deap&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+&lt;span class="c"&gt;# for evalIntersect 函式中的 sqrt, sin, cos, pi&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+
+&lt;span class="c"&gt;# 1/4 最小化題目 type of problem&lt;/span&gt;
+&lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;FitnessMin&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Fitness&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;weights&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+&lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Individual&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;typecode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; \
+               &lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FitnessMin&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# 2/4 initilization&lt;/span&gt;
+&lt;span class="c"&gt;# 兩個變數題目&lt;/span&gt;
+&lt;span class="n"&gt;NDIM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;toolbox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Toolbox&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;attr_float&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;uniform&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;individual&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initRepeat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;creator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Individual&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attr_float&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NDIM&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;population&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;initRepeat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# 3/4 選擇 operator step3/4&lt;/span&gt;
+&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;select&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;selRandom&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# 也可以採用下列設定&lt;/span&gt;
+&lt;span class="c"&gt;#toolbox.register(&amp;quot;mate&amp;quot;, tools.cxTwoPoint)&lt;/span&gt;
+&lt;span class="c"&gt;#toolbox.register(&amp;quot;mutate&amp;quot;, tools.mutGaussian, mu=0, sigma=1, indpb=0.1)&lt;/span&gt;
+&lt;span class="c"&gt;#toolbox.register(&amp;quot;select&amp;quot;, tools.selTournament, tournsize=3, k=3)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;evalIntersect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;deg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;180&lt;/span&gt;
+    &lt;span class="n"&gt;theta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;individual&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;deg&lt;/span&gt;
+    &lt;span class="n"&gt;xtarget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.75&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+    &lt;span class="n"&gt;ytarget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;225&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;529&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;225&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;529&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;92&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;# 適應值&lt;/span&gt;
+    &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;xtarget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ytarget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c"&gt;# 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;  &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;theta&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;fitness_value&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fitness_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;evaluate&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;evalIntersect&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# 以上到 evaluate 為止, 為定義 operators&lt;/span&gt;
+
+&lt;span class="c"&gt;# 4/4 以下則為 Algorithms&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c"&gt;# Differential evolution parameters&lt;/span&gt;
+    &lt;span class="n"&gt;CR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.25&lt;/span&gt;
+    &lt;span class="n"&gt;F&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; 
+    &lt;span class="n"&gt;MU&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+    &lt;span class="n"&gt;NGEN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;   
+
+    &lt;span class="n"&gt;pop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;population&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;MU&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;hof&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HallOfFame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tools&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Statistics&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;avg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;std&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;min&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;max&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Evaluate the individuals&lt;/span&gt;
+    &lt;span class="n"&gt;fitnesses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fit&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fitnesses&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;ind&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fit&lt;/span&gt;
+
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NGEN&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;agent&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolbox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NDIM&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="n"&gt;agent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
+        &lt;span class="n"&gt;hof&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pop&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Best individual is &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hof&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;hof&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fitness&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+上述課程資料與 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=4584#more-4584"&gt;Wordpress 網頁&lt;/a&gt;上的資料內容相同, Ｗordpress 網站屬於動態的網誌, 而 &lt;a href="http://chiamingyen.github.io/kmolab/"&gt;http://chiamingyen.github.io/kmolab/&lt;/a&gt; 則是靜態網誌系統, 採用靜態網誌的優點如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比較安全&lt;/li&gt;
+&lt;li&gt;比較不會過時&lt;/li&gt;
+&lt;li&gt;部署成本比較低&lt;/li&gt;
+&lt;li&gt;可在各種平台上使用&lt;/li&gt;
+&lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="cadp"></category><category term="電腦輔助設計實習"></category><category term="2015 fall cadp"></category></entry><entry><title>Alumni interaction</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/alumni-interaction/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/alumni-interaction/</id><summary type="html">&lt;p&gt;主動尋找校友互動&lt;/p&gt;
+&lt;p&gt;如何尋找校友?&lt;/p&gt;
+&lt;p&gt;如何互動？&lt;/p&gt;
+&lt;p&gt;如何延續價值?&lt;/p&gt;
+&lt;h1&gt;先建立自己的領英網頁&lt;/h1&gt;
+&lt;p&gt;在 &lt;a href="https://www.linkedin.com/"&gt;https://www.linkedin.com/&lt;/a&gt; 登錄帳號後, 填入個人相關專業資料, 之後將會不定期收到機器寄出的 cold mail, 一般而言, 可以無需理會這些 cold mail, 暫且不管這些電子郵件看起來像是人或機器寫的, 你都必須知道, 建立領英帳號的目的, 是要利用它, 而不是被它利用, 所以絕對要對這些網路上的冷信件, 保持冷靜, 儘量不要回應, 可以直接刪除.&lt;/p&gt;
+
+
+&lt;h1&gt;先建立自己的 about.me 網頁&lt;/h1&gt;
+&lt;p&gt;在 &lt;a href="https://about.me/"&gt;https://about.me/&lt;/a&gt; 建立帳號的態度, 應該要與領英一樣, 用它而不要被利用. 意思就是說, 只要在上面提供並更新與個人相關的專業資料, 並在申請學校或找工作的時候發揮其用處, 其他時候, 就該讓它晾在那裡, 不要多費心或浪費時間.&lt;/p&gt;
+&lt;h1&gt;先每天早睡早起, 持續運動&lt;/h1&gt;
+&lt;p&gt;主要的目的在時時刻刻保持覺照, 讓自己每天都精神飽滿, 可以應付課業或工作所需.&lt;/p&gt;
+&lt;h1&gt;找虎尾及雲林縣附近的校友, 一起參加活動&lt;/h1&gt;
+&lt;p&gt;每年都有慢跑活動, 可以找幾個身邊的好朋友, 每年參加, 並且利用網誌紀錄訓練與參賽的過程, 自然就會碰到許多志同道合的朋友與系友.&lt;/p&gt;
+&lt;h1&gt;藉由各屆校友的資料整理, 利用網路進行互動&lt;/h1&gt;
+&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2016-cad-lab/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2016-cad-lab/</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+&lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
+&lt;p&gt;intel Core i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
+&lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
+&lt;h1&gt;開機磁區&lt;/h1&gt;
+&lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
+&lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
+&lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
+
+
+&lt;h1&gt;舊電腦分配&lt;/h1&gt;
+&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;
+&lt;h1&gt;網路設置&lt;/h1&gt;
+&lt;p&gt;(以下設置為舊資料, 僅供參考)&lt;/p&gt;
+&lt;p&gt;目前電腦輔助設計室採 DHCP 換成 140.130.17.82 後連到學校主幹, 理論上設負載平衡的代理主機可以共享網路頻寬, 擷取網路資料的速度會比較快.&lt;/p&gt;
+&lt;p&gt;代理主機(理論上使用 140.130.17.3 作為 dns server, proxy 採 proxy.mde.nfu.edu.tw 速度最快):&lt;/p&gt;
+&lt;p&gt;proxy.mde.nfu.edu.tw:3128 或&lt;/p&gt;
+&lt;p&gt;proxy.mde.tw: 3128 或&lt;/p&gt;
+&lt;p&gt;proxy.kmol.info:3128&lt;/p&gt;
+&lt;p&gt;問題在於 DNS 伺服器是否可以正確執行任務, 將代理主機符號名稱換成多台 Proxy 的 IP?&lt;/p&gt;
+&lt;p&gt;學校的 DNS 伺服器: 140.130.1.2 與 140.130.1.20&lt;/p&gt;
+&lt;p&gt;系上的 DNS 伺服器: 140.130.17.3&lt;/p&gt;
+&lt;p&gt;中華電信的 DNS 伺服器: 168.95.1.1&lt;/p&gt;
+&lt;p&gt;DNS 設定優先順序: 系上優先, 再來是學校, 最後才是中華電信.&lt;/p&gt;
+&lt;p&gt;查驗 DNS 是否正常運作: nslookup&lt;/p&gt;
+&lt;p&gt;更換 dns server 為 168.95.1.1&lt;/p&gt;
+&lt;p&gt;server 168.95.1.1&lt;/p&gt;
+&lt;p&gt;網路設定步驟:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.&lt;/li&gt;
+&lt;li&gt;目前的 DNS 伺服器設為哪一台?是否可以正常工作, 可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1
+首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.
+此設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 轉換為一系列的伺服器群組 IP&lt;/li&gt;
+&lt;li&gt;若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128&lt;/li&gt;
+&lt;li&gt;假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;IPV6:&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::2&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::4&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::9&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::17&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::22&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::23&lt;/p&gt;
+&lt;p&gt;IPV4:&lt;/p&gt;
+&lt;p&gt;140.130.17.2&lt;/p&gt;
+&lt;p&gt;140.130.17.4&lt;/p&gt;
+&lt;p&gt;140.130.17.9&lt;/p&gt;
+&lt;p&gt;140.130.17.17&lt;/p&gt;
+&lt;p&gt;140.130.17.22&lt;/p&gt;
+&lt;p&gt;140.130.17.23&lt;/p&gt;
+&lt;p&gt;假如要查驗目前網路連線情形, 可以檢視 系上即時網路連線圖&lt;/p&gt;
+&lt;p&gt;以上為 CAD Lab 透過 IPV4 協定使用 DHCP 與 NAT 的模式下, 有關代理主機的設定流程.  若 CAD LAb 所有電腦透過純 IPV6 協定上網, 則必須設定 DNS 與 Proxy 才能讓瀏覽器連網.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;優先設系上的 DNS 伺服器: 2001:288:6004:17::3&lt;/li&gt;
+&lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
+&lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
+&lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2016-cd-course/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2016-cd-course/</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;h1&gt;MCAD 套件&lt;/h1&gt;
+&lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
+&lt;p&gt;Onshape: &lt;a href="https://www.onshape.com/"&gt;https://www.onshape.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Solvespace: &lt;a href="http://solvespace.com/index.pl"&gt;http://solvespace.com/index.pl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PTC Creo Parametric: &lt;a href="http://www.ptc.com/cad/creo/parametric"&gt;http://www.ptc.com/cad/creo/parametric&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;rattleCAD: &lt;a href="http://rattlecad.sourceforge.net/"&gt;http://rattlecad.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;h1&gt;零組件繪圖與設計&lt;/h1&gt;
+&lt;p&gt;將以自行車設計與 3D 模型組裝作為主題&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/y8NbIutMaY8NnFVt" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/mBuPlvra0Eylnkfq" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;＃標準零件庫&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.mcmaster.com/"&gt;http://www.mcmaster.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.bolts-library.org/"&gt;http://www.bolts-library.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://b2b.partcommunity.com/community/"&gt;https://b2b.partcommunity.com/community/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://grabcad.com/library/tag/bicycle"&gt;https://grabcad.com/library/tag/bicycle&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;客製化設計&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/vallettea/Bicycle"&gt;https://github.com/vallettea/Bicycle&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.atom3dp.com/"&gt;http://www.atom3dp.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://github.com/smoqadam/PyFladesk-rss-reader"&gt;https://github.com/smoqadam/PyFladesk-rss-reader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Planar Linkage Analysis: &lt;a href="https://copy.com/KLSdcu1EkmnzdV6U"&gt;https://copy.com/KLSdcu1EkmnzdV6U&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fourbar Synthesis: &lt;a href="https://copy.com/FgYUPh6RCpDUMnT1"&gt;https://copy.com/FgYUPh6RCpDUMnT1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spur Gear Design: &lt;a href="https://copy.com/nLeN7ODMNv0VLu9G"&gt;https://copy.com/nLeN7ODMNv0VLu9G&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spur Gear in Creo Parametric: &lt;a href="https://copy.com/LeIvhGJCoroQJdva"&gt;https://copy.com/LeIvhGJCoroQJdva&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Design of Spur and Helical Gears Transmissions: &lt;a href="https://github.com/efirvida/python-gearbox"&gt;https://github.com/efirvida/python-gearbox&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自行車控制設計: &lt;a href="https://plot.ly/ipython-notebooks/bicycle-control-design/"&gt;https://plot.ly/ipython-notebooks/bicycle-control-design/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Architecture of Collaboration: &lt;a href="https://copy.com/ZzdLE62hSYRSjTD2"&gt;https://copy.com/ZzdLE62hSYRSjTD2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pomax/bezierjs"&gt;https://github.com/Pomax/bezierjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://bicycledesign.net/"&gt;http://bicycledesign.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/List_of_bicycle_parts"&gt;https://en.wikipedia.org/wiki/List_of_bicycle_parts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bicycle Parts (自行車零件):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/R2bPNa09nIhXPMPx" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Chains (鏈條):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/LtIzJ6Zg3qNjproU" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Crank (曲柄):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/zIWRwSFzmxHrh9nS" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Frame (車架):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/QUzmgVYpYBnwHpfM" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Front Derailleur (前變速器):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/oypsvgbLb4pfXrKu" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Handle Bar (車把):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/KUPxuDpBw2LZzbay" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Hub (花鼓):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/gVTOsKPDVBR9hN9Q" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Lever (桿):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/oQETiHMpYKrsldCo" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Rear Derailleur (後變速器):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/D1xZWpca2I1V8uud" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Rear Hub and Casette (後輪花鼓與飛輪組):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/qHY90QNmvlPTyioM" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Seat (座墊):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/xFnLfPDCtEIk4yCT" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Wheel (車輪):&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/wgxfXTBDH4zHUWrE" width="600" /&gt;&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;Bicycle 自行車
+Tire 輪胎
+Rim 輪圈
+Saddle 坐墊
+Seat post 座桿
+Seat post clamp 座桿束子
+Rear brake 後剎車
+Front brake 前剎車
+Seat stay 後上叉
+Chain stay 後下叉
+Seat tube 座管
+Top tube 上管
+Down tube 下管
+Freewheel / cassette Sprockets 飛輪
+Rear Ends/Dropouts 後叉端
+Derailleur Cable 變速導線
+Rear Derailleur 後變速器
+Chain 鏈條
+Pedal 腳踏
+Front Derailleur 前變速器
+軸 axle
+滾珠軸承 ball bearing
+車鈴 bicycle ball
+車架 bicycle frame
+Rear suspension 後避震
+Chainwheel&amp;amp;cranks 大齒盤及曲柄
+Valve 汽門嘴
+Spoke (輪圈)幅條
+Spoke Nipple (幅條)接頭
+Front fork end 前叉端
+Hubs 花鼓
+Quick release 快拆桿
+Front fork 前叉
+Brake cable 剎車導線
+Front crown 前叉肩蓋
+Brake cable housing 剎車導線
+Brake lever 剎車握把
+Bar end 小手把（副把手）
+Grip/tape 握把套
+Head tube 頭管
+Handlebar 車把
+Derailleur lever 變速桿
+Stem 豎管
+Head parts 車頭碗組
+Kickstand 停車柱
+Chain cover 鏈蓋
+Head Light 前燈
+Back mirror 後照鏡
+Reflector 反光片
+Luggage Carrier 貨架
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 spring"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2016-wcm-course/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2016-wcm-course/</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;h1&gt;github pages 上的靜態網頁系統&lt;/h1&gt;
+&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
+&lt;h1&gt;html 與 Javascript (Brython based)&lt;/h1&gt;
+&lt;h1&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h1&gt;
+&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &lt;a href="http://flask.pocoo.org"&gt;http://flask.pocoo.org&lt;/a&gt; based 網站程式開發&lt;/p&gt;
+
+
+&lt;h1&gt;參考資料&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/embik/bloks"&gt;https://github.com/embik/bloks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 spring"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/about-17101-server/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/about-17101-server/</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+&lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
+&lt;h1&gt;ubuntu-desktop&lt;/h1&gt;
+&lt;p&gt;這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:&lt;/p&gt;
+&lt;p&gt;sudo apt-get install ubuntu-desktop&lt;/p&gt;
+&lt;h1&gt;nginx 與 uwsgi&lt;/h1&gt;
+&lt;p&gt;之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.&lt;/p&gt;
+
+
+&lt;p&gt;目前 17.101 總計啟動 IPV4 與 IPV6 網路設定.&lt;/p&gt;
+&lt;p&gt;/etc/network/interfaces 設定檔案:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;auto lo
+iface lo inet loopback
+
+auto em1
+iface em1 inet static
+    address 140.130.17.101
+    netmask 255.255.255.0
+    network 140.130.17.0
+    broadcast 140.130.17.255
+    gateway 140.130.17.254
+    dns-nameservers 140.130.1.2 168.95.1.1
+    dns-search mde.nfu.edu.tw
+
+iface em1 inet6 static
+    address 2001:288:6004:17::101
+    netmask 64
+    gateway 2001:288:6004:17::254
+    dns-nameservers 2001:288:6004:1::2 2001:b000:168::1
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+17.101 還安裝了 Nginx 與 uwsgi, 分別在 port 80 與 88 執行 CMSimply, 並在 &lt;a href="https://140.130.17.101:9443"&gt;https://140.130.17.101:9443&lt;/a&gt; 安裝 Jupyterhub, 只是 IPv6 模式下的 Jupyterhub 還無法使用.&lt;/p&gt;
+&lt;h1&gt;squid proxy 伺服器&lt;/h1&gt;
+&lt;p&gt;利用 sudo apt-get install squid, 安裝 squid proxy server.&lt;/p&gt;
+&lt;p&gt;設定檔案位於 /etc/squid3/squid.conf&lt;/p&gt;
+&lt;p&gt;每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.&lt;/p&gt;
+&lt;p&gt;參考的設定檔案:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
+acl cad_lab src 2001:288:6004:17::/64
+
+acl SSL_ports port 443
+acl Safe_ports port 80 # http
+acl Safe_ports port 88
+
+#acl Safe_ports port 21 # ftp
+acl SSL_ports port 8443
+acl Safe_ports port 8443
+
+acl SSL_ports port 9443
+acl Safe_ports port 9443
+
+acl SSL_ports port 22
+acl Safe_ports port 22
+
+acl Safe_ports port 443 # https
+acl Safe_ports port 1025-65535 # unregistered ports
+acl Safe_ports port 280 # http-mgmt
+acl Safe_ports port 488 # gss-http
+acl Safe_ports port 591 # filemaker
+acl Safe_ports port 777 # multiling http
+acl CONNECT method CONNECT
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+http_access allow cad_lab
+http_access deny all
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+
+#http_access allow localnet
+http_access allow localhost
+
+# And finally deny all other access to this proxy
+http_access deny all
+
+# Squid normally listens to port 3128
+http_port 3128
+
+#cache_dir ufs /var/spool/squid3 100 16 256
+icp_port 3130
+icp_access allow all
+
+cache_dir ufs /var/spool/squid3 2000 16 256
+cache_peer 140.130.17.2 sibling 3128 3130
+cache_peer 140.130.17.4 sibling 3128 3130
+cache_peer 140.130.17.9 sibling 3128 3130
+cache_peer 140.130.17.22 sibling 3128 3130
+cache_peer 140.130.17.23 sibling 3128 3130
+
+#
+# Add any of your own refresh_pattern entries above these.
+#
+refresh_pattern ^ftp: 1440 20% 10080
+refresh_pattern ^gopher: 1440 0% 1440
+refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
+refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
+refresh_pattern . 0 20% 4320
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+當 Ubuntu 在純 IPV6 環境時, 希望使用 IVP6 Git proxy 設定時, 可以利用:&lt;/p&gt;
+&lt;p&gt;git config --global http.proxy http://[IPV6 位址]:埠號&lt;/p&gt;
+&lt;p&gt;例如: git config -- global http.proxy http://[2001:168:168::168]:3128&lt;/p&gt;
+&lt;p&gt;至於 python pip3 在純 IPV6 環境下,  也必須設定 proxy 才能正確運作:&lt;/p&gt;
+&lt;p&gt;~.pip/pip.conf 內容&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
+&lt;span class="na"&gt;proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;http://your.proxy.domain.name:3128&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+假如要解除 git proxy 設定:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;git config --global --unset http.proxy
+git config --global --unset https.proxy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/pelican-setup/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/pelican-setup/</id><summary type="html">&lt;p&gt;Pelican templae 設定&lt;/p&gt;
+
+
+&lt;p&gt;假如使用 &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;https://github.com/DandyDev/pelican-bootstrap3&lt;/a&gt; template, 則可將 Set SHOW_ARTICLE_AUTHOR 設為 True, 就可以在每篇文章中顯示作者. SHOW_ARTICLE_CATEGORY 則用來顯示類別. SHOW_DATE_MODIFIED 則可顯示文章修改的日期.&lt;/p&gt;</summary><category term="pelican"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/mechanical-designer-and-ipv6/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/mechanical-designer-and-ipv6/</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+&lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
+&lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
+&lt;p&gt;情境說明:&lt;/p&gt;
+&lt;p&gt;當中華電信的 ADSL 用戶升級成為 ADSL2 (光世代) 時, 負責實體進入用戶家中執行設定的工作人員會自帶一個”用戶帳號@wifi.hinet.net” 的撥接帳號, 而通常工作人員並不會告知用戶此一帳號的密碼(照理說用戶可以在安裝時向工作人員詢問此一 @wifi.hinet.net 帳號的對應密碼), 另外用戶在申請早期與特定家用電話號碼附掛的網路線時, 會從中華電信取到一個”用戶帳號”與密碼, 而此一帳號密碼可以附加成為”用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net” 進行 Modem (這裡以 ZyXEL VDSL2 P883 為例) 的撥接, 若使用者完成 IPV6 試用申請後, 利用 @hinet.net 或 @ip.hinet.net 帳號撥接後, 若用戶為非固接光世代用戶, 就可以同時從中華電信的 DHCP 伺服器取得 IPV4 與 IPV6 等兩種協定的位址.&lt;/p&gt;
+
+
+&lt;p&gt;結論就是：&lt;/p&gt;
+&lt;p&gt;每一個中華電信用戶總共有兩組可以透過 Modem (這裡以 ZyXEL VDSL2 P883 為例) 撥接進入中華電信的 DHCP 取得 IP 位址的帳號, 其中一組為升級安裝時, 工作人員帶過來的 “用戶帳號@wifi.hinet.net”, 而另外一組則是 “用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net”
+因為筆者並未取得 “用戶帳號@wifi.hinet.net” 的對應密碼, 因此無法測試這兩組帳號是否撥接後可以得到相同的效果, 但是”用戶帳號@hinet.net” 在完成 IPV6 試用申請後 ,完成撥接即可以取得 IPV4 與 IPV6 等兩組 IP 位址.
+設定 IPV4 與 IPV6 dual stack 之前:&lt;/p&gt;
+&lt;p&gt;利用 ZyXEL P883 執行撥號, 先設定 P883 為 192.168.1.1, 啟動 DHCP Server, 並且從 192.168.1.101 開始, 100 組的 IPV4 IP 提供給實體連線與 Wifi 連線使用, 以”用戶帳號@wifi.hinet.net” 及密碼撥接後, P883 即可發揮作用, 其中若連線電腦只有四台以內, 則可以透過實體網路線, 連接到 P883 機器後面的 Hub (集線器), 雖然這4個孔的 Hub 可以方便使用, 但是速度只有到 100M (意思就是若家裡的兩台電腦是透過 P883 內建的4個 Hub 連接, 那麼區網內的網路瓶頸就是 100M, 假如想要讓兩台電腦透過 1000M 以上的速度彼此連線, 就必須將這兩台電腦先接到一個 1000M 以上的 Hub, 再接到 P883 內建的 Hub Port).&lt;/p&gt;
+&lt;p&gt;由於在 ZyXEL P883 的設定介面中找不到 IPV6 支援的任何畫面 (在隨後的第2階段設定中, 可以知道不需要將 P883 轉到 DHCPIPV6, 機器後面的集線埠, 連線到 Windows 7 以上或 Ubuntu 14.04 都可以自行利用 PPPoE 獨立再撥號連接, 這裡所使用的 ZyXEL 軔體版本為 P883S4_TR069_20141110), 所以若以 P883 執行撥接 (利用 @wifi.hinet.net 帳號)後, 再將電腦接到 P883 的 Hub, 將無法正確透過 IPV6 協定連接到 WAN, 因此以下的 IPV6 dual stack 設定前, 必須在撥接密碼欄中輸入錯誤的密碼, 讓 P883 無法完成撥接, 而且 DHCP Server 必須關閉, 然後由連接在 P883 後 Hub 上的 Ubuntu (以 14.04 LTS 為例) 電腦執行 PPP 的撥接.&lt;/p&gt;
+&lt;p&gt;Ubuntu (以 14.04 LTS 為例) 與中華電信 IPV6 環境使用&lt;/p&gt;
+&lt;p&gt;完成 IPV6 使用申請, 並接到已經設定完成的通知.
+如上所述, 關閉 P883 @wifi.hinet.net 的撥接 (給錯誤密碼並存檔即可), 並且關閉 P883 DHCP Server 運作.
+使用下列的 /etc/ppp/options 設定檔案
+以 sudo pppoeconf 執行設定, 主要步驟在輸入”用戶帳號@hinet.net” 與對應密碼, 其餘一律採用內建設定, 設定結束後, 會自動修改 /etc/network/interfaces 中的內容如下(詳細的 Windows 7 與 Ubuntu 設定步驟請參考: &lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;/etc/ppp/options 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# /etc/ppp/options
+#
+asyncmap 0
+crtscts
++ipv6 ipv6cp-use-ipaddr
+# ------
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+經過 sudo pppoeconf 修改後的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
+auto lo
+iface lo inet loopback
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
+provider dsl-provider
+auto p10p1
+iface p10p1 inet manual
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+其中的 p10p1 為網路卡的代號 (一般為 eth0 或 eth1), 而手動撥接的指令為 sudo pon dsl-provider (關閉的指令為 sudo poff)&lt;/p&gt;
+&lt;p&gt;經過上述設定與電腦撥接之後的 ifconfig 呈現結果:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:64 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:4880 (16.8 KB)  TX bytes:4880 (16.8 KB)
+p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
+          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:15665 errors:0 dropped:158 overruns:0 frame:0
+          TX packets:13324 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:16816888 (16.8 MB)  TX bytes:16816888 (16.8 MB)
+          Interrupt:18
+ppp0      Link encap:Point-to-Point Protocol 
+          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
+          RX packets:2060 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1548 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3
+          RX bytes:1681688 (1.68 MB)  TX bytes:168168 (168.168 KB)
+ppp1      Link encap:Point-to-Point Protocol 
+          inet addr:168.168.168.18  P-t-P:168.168.168.254  Mask:255.255.255.255
+          inet6 addr: 2001:1688:1688:1688:1688:1688:1688:1688/64 Scope:Global
+          inet6 addr: fe80::918:2ec2:7e3:a107/10 Scope:Link
+          inet6 addr: 2001:1688:1688:1688:1688:1688:1168:1168/64 Scope:Global
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
+          RX packets:12547 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:11592 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3
+          RX bytes:18354307 (18.3 MB)  TX bytes:1398413 (1.3 MB)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+第2階段設定&lt;/p&gt;
+&lt;p&gt;有了上述的測試設定後(其實主要目的在取得正確的 /etc/ppp/options 設定內容, 因為在 Ubuntu 14.04 LTS 中利用&lt;a href="http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf"&gt;http://www.ipv6.hinet.net/form/HiNet_IPv6_connect-setting.pdf&lt;/a&gt; 執行設定所得到的 /etc/ppp/options 無法正確完成 Modem 撥接), 採用”用戶帳號@hinet.net” 進行 PPPoE 撥號的連線, 非固接的光世代連線, 已經可以同時支援 IPV4 與 IPV6 協定, 但是因為 P883 的 DHCP 與 PPPoE 都沒有啟用, 所有 WiFi 的功能就無法使用, 因此弄清楚 Windows 7 操作系統與 Ubuntu 14.04 的 PPPoE 撥號設定後, 嘗試再將 P883 機器中的 DHCP Server 與 PPPoE 撥號啟用後, 再分別利用連接到 P883 集線器的 Windows7 與 Ubuntu 14.04 各自執行 PPPoE 的撥號 (因為中華電信的非固接光世代可以同時支援 8 台 PPPoE 的撥號連線).&lt;/p&gt;
+&lt;p&gt;首先看 Ubuntu 14.04 中的 /etc/network/interfaces 檔案內容:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
+auto lo
+iface lo inet loopback
+# for sudo pon dsl-provider
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /sbin/ifconfig p10p1 up # line maintained by pppoeconf
+provider dsl-provider
+auto p10p1
+iface p10p1 inet dhcp
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+透過上述設定, Ubuntu 會在開機的階段, 先以 PPPoE 撥號, 然後再向 P883 以 dhcp 取得網卡對應的 IPV4 位址, 重新開機後的 ifconfig 檔案內容為:&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:133 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:133 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:9729 (9.7 KB)  TX bytes:9729 (9.7 KB)
+p10p1     Link encap:Ethernet  HWaddr aa:bb:cc:dd:ee:ff 
+          inet addr:192.168.1.106  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::d685:64ff:feba:59b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:8484 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8165 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:2904256 (2.9 MB)  TX bytes:1086876 (1.0 MB)
+          Interrupt:18
+ppp0      Link encap:Point-to-Point Protocol 
+          inet addr:168.168.168.168  P-t-P:168.168.168.254  Mask:255.255.255.255
+          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:1168/64 Scope:Global
+          inet6 addr: fe80::d95f:df3:bd89:1e47/10 Scope:Link
+          inet6 addr: 2001:1168:1168:1168:1168:1168:1168:a849/64 Scope:Global
+          UP POINTOPOINT RUNNING NOARP MULTICAST  MTU:1492  Metric:1
+          RX packets:7610 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7460 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:3
+          RX bytes:2612710 (2.6 MB)  TX bytes:827230 (827.2 KB)
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+設定至此, 已經在既有的 ZyXel P883 IPV4 架構下 (一台 Windows 7 + 一台 Ubuntu 14.04 + 多台 Wifi 裝置), 順利申請中華電信的 IPV6 試用, 完成機房設定後, 自行在 P883 連線之後, 分別在 Windows 7 與 Ubuntu 14.04 以 PPPoE 進行數據機撥號連線, 達到 IPV4 與 IPV6 共存並用的環境, 當使用者希望透過瀏覽器連接到特定 IPV6 網址的網站時, 可以使用 http://[IPV6 網址] 進行連線.&lt;/p&gt;
+&lt;p&gt;最後, 為什麼在這個時段要進入 IPV6 環境?&lt;/p&gt;
+&lt;p&gt;隨著 IPV4 網址的消耗殆盡, 有些主機或裝置未來只會有 IPV6 位址, 若不透過 IPV6 協定, 無法連接這些主機或裝置.
+IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來性的各項軟硬體需求, 作最好的準備.
+當許多客戶被迫使用 IPV6 環境後, 有些條件較 IPV4 安全, 但是在點對點的連線下, 可能產生更大的安全危害, 愈早因應, 愈可能降低損害.
+目前階段使用 IPV4/IPV6 並存, 可能產生的問題:&lt;/p&gt;
+&lt;p&gt;連接純 IPV4 的網站, 可能速度反而會較慢 (例如: OpenShift 上的網站, 或 Amazon 平台上的網站).
+連接支援 IPV6 的網站, 可能速度會較快 (例如: Youtube 或各項 Google 所提供的服務)
+因為讓 double stack 支援的 IPV4 直接曝露在 WAN 上, 若沒有強而有效的防火牆保護, 或者沒有定期更新系統安全修補, 可能會比較容易受到駭客攻擊或利用.&lt;/p&gt;</summary><category term="IPV6"></category><category term="網路設定"></category></entry><entry><title>2015 Fall CP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cp-part-1/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cp-part-1/</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part1&lt;/p&gt;
+&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CP 課程 part1 影片摘要:&lt;/p&gt;
+&lt;h1&gt;CP W2&lt;/h1&gt;
+&lt;h2&gt;2015 Fall 計算機程式可攜環境介紹&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140380091" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140380091"&gt;2015cp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h2&gt;說明如何利用 python -m http.server 分享近端檔案&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;介紹如何利用 fix.bat 修補 C 槽既有的可攜程式系統, 說明 SciTE 如何執行 Python3 程式, 如何利用 gh-pages 分支網頁繳交作業&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140383708" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140383708"&gt;2015cp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;介紹如何從可攜系統的修補與啟動, 到如何利用 Github Pages 的網頁來繳交各週作業&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140394246" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140394246"&gt;2015cp_b_w4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;2015 Fall 課程工作與環境介紹&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140874547" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140874547"&gt;2015Fall 使用環境與工具介紹&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;英文打字的指法練習介紹, 說明 Github 倉儲的建立使用與刪除.&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140876400" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140876400"&gt;Github 倉儲建立, 使用與刪除&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;介紹 Github 倉儲分支的建立與使用&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/140878456" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140878456"&gt;Github 倉儲分支建立與使用&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CP W3&lt;/h1&gt;
+&lt;h2&gt;隨身程式系統的應用再提醒 (fix.zip), Leo Editor, Pelican, Markdown 模組的安裝設定與啟動, notebook.py 中編碼的設定&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141129640" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141129640"&gt;2015fall_cp_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/141142727" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141142727"&gt;2015cp_w3_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/141145747" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141145747"&gt;2015cp_w3_b3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/141144113" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141144113"&gt;2015cp_w3_b2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明工程師的工作分類, 工程與科學的相輔相成, 解釋何以人文是工程師的養份, 了解科學在探究自然現況, 工程則需面對自然挑戰, 解決人文想像與需求&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141131417" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141131417"&gt;2015fall_cp_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明如何利用 Github 建立倉儲, 起始倉儲, git clone 倉儲, 建立分支, 切換 gh-pages 分支, 提交 gh-pages 分支版本, 推送分支版本&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141132740" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141132740"&gt;2015fall_cp_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明 Python 程式執行模式, 可以採互動式執行, SciTE 環境下執行, Jupyter 網頁 noteook 環境下執行, Brython 瀏覽器中執行等&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/141134146" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141134146"&gt;2015fall_cp_w3_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CP W5&lt;/h1&gt;
+&lt;h2&gt;說明計算機程式作為電腦輔助與協同產品設計系列課程的先導課程, 必須在學習 Python3 程式語法的同時, 架構一個可以永續改進使用的系統&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/142582837" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142582837"&gt;2015cp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;fix.zip 內容的細步流程介紹, 從 markdown 透過 Pelican 指令的執行, 轉換為放上 Github Pages 網頁的 html 檔案資料, liquid_tags 延伸程式的應用&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/142584067" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142584067"&gt;2015cp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CP W6&lt;/h1&gt;
+&lt;h2&gt;介紹英文教學影片的字幕所在位置, 說明如利用 VLC 在近端播放教學影片&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143330980" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143330980"&gt;2015cp_w6_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明如何將各學員的作業整合到全班協同倉儲, 自行新增為全班倉儲的協同者&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143337293" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337293"&gt;2015cp_w6_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/143345717" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143345717"&gt;2015cp_w6_b_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;示範如何修正內含 git 衝突標示的 Leo Editor 檔案&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143337483" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337483"&gt;2015cp_w6_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h1&gt;CP W7&lt;/h1&gt;
+&lt;h2&gt;介紹如何建立有效率的機械設計工程師可攜程式環境 (Anaconda Python based), 學習計算機程式的概念, 認識程式設計與機械設計工程師角色間的關係&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/144078159" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144078159"&gt;2015_cp_w7_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明近端與 Jupyter 環境的 Python 程式執行, print 與 for 迴圈應用&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/144080408" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144080408"&gt;2015_cp_w7_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明如何將計算機程式的內容放到 gh-pages 網頁&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/144081268" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144081268"&gt;2015_cp_w7_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明如何利用 git reset -- hard 版本編號, 回復舊版本資料&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;說明如何修補被弄亂的全班倉儲&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 fall cp"></category><category term="2015 Fall"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/kmolab-user-wen-zhang-tao-gao/" rel="alternate"></link><updated>2016-01-11T11:13:13+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/kmolab-user-wen-zhang-tao-gao/</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
 
 
 &lt;h1&gt;文章標題&lt;/h1&gt;
@@ -1947,7 +1950,4 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, h)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/10/pelican-setup/" rel="alternate"></link><updated>2016-01-10T11:19:53+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/posts/2016/01/10/pelican-setup/</id><summary type="html">&lt;p&gt;Pelican templae 設定&lt;/p&gt;
-
-
-&lt;p&gt;假如使用 &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;https://github.com/DandyDev/pelican-bootstrap3&lt;/a&gt; template, 則可將 Set SHOW_ARTICLE_AUTHOR 設為 True, 就可以在每篇文章中顯示作者. SHOW_ARTICLE_CATEGORY 則用來顯示類別. SHOW_DATE_MODIFIED 則可顯示文章修改的日期.&lt;/p&gt;</summary><category term="pelican"></category><category term="設定"></category></entry></feed>
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry></feed>
