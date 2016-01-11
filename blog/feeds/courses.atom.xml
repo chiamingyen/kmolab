@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T15:48:04+08:00</updated><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/" rel="alternate"></link><updated>2016-01-11T15:48:04+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T16:09:05+08:00</updated><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/" rel="alternate"></link><updated>2016-01-11T16:09:05+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/posts/2016/01/11/2015-fall-cadp-part-2/</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
 &lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -11,15 +11,15 @@
 &lt;ol&gt;
 &lt;li&gt;人文的軸向, 其中包括與人類思想層面有關的各種活動, 也就是文學, 宗教, 音樂與藝術等活動.&lt;/li&gt;
 &lt;li&gt;科學的軸向, 其中牽涉到人所處的自然環境, 科學家主要在利用系統方法與工具, 探究存在自然界的各種原理原則, 而工程師在解決問題時, 必須面對自然界的各項挑戰, 依據各種已知的科學方法, 從人文的角度出發, 創造各種產品與服務, 來改善人的生存環境, 提升人的生活價值.&lt;/li&gt;
-&lt;li&gt;產品與服務的軸向, 此一軸向的活動, 即是工程師以人文層面的內容作為養份, 面對自然, 以科學認知及方法, 創造各種產品與服務的項目.&lt;/li&gt;
+&lt;li&gt;產品與服務的軸向, 此一軸向的活動, 即是工程師以人文想像層面的內容作為養份, 面對自然環境, 以科學認知及方法, 創造各種產品與服務的項目.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;電腦的角色:&lt;/p&gt;
+&lt;p&gt;電腦在工程解題所扮演的角色:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;提升資訊的傳輸效能, 利用網路, Git, Github 讓數位資訊的傳輸更有效能.&lt;/li&gt;
-&lt;li&gt;強化文字、視覺與口語的溝通效率, 以隨選或即時媒體, 讓協同成員互通想法, 激發創意.&lt;/li&gt;
+&lt;li&gt;提升資訊的傳輸效能, 利用網路, Git (2005 之後), Github (2008 之後) 讓數位資訊的傳輸更有效能.&lt;/li&gt;
+&lt;li&gt;強化文字、視覺與口語的溝通效率, 以隨選或即時媒體, 讓協同成員互通想法, 闡述設計, 激發創意.&lt;/li&gt;
 &lt;li&gt;簡化數據與資料的收集與儲存, 搜索引擎與資料庫的搭配使用.&lt;/li&gt;
 &lt;li&gt;支援各種設計與運算分析所需要的軟硬體配備, CAD, CAE, 虛擬實境, 擴增實境, 平行運算等技術的支援.&lt;/li&gt;
-&lt;li&gt;支援各種層面的製造規劃與管理.&lt;/li&gt;
+&lt;li&gt;支援各種層面的製造規劃與管理, CAM, Computer Aided Process Planning 等.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;iframe src="https://player.vimeo.com/video/145820006" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -27,11 +27,19 @@
 
 
 &lt;h2&gt;介紹可攜程式系統的搭建流程與細節&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;首先下載與操作系統對應的 Miniconda (使用 Python3)&lt;/li&gt;
+&lt;li&gt;利用 conda install pip&lt;/li&gt;
+&lt;li&gt;利用 pip install pelican Markdown 安裝 pelican 與 Markdown 模組&lt;/li&gt;
+&lt;li&gt;可以利用 pip uninstall leo 移除先前所安裝的 Leo Editor 模組&lt;/li&gt;
+&lt;li&gt;利用 conda install pyqt (由 conda 自行選擇可以與既有系統相容的 pyqt 版本)&lt;/li&gt;
+&lt;/ol&gt;
 &lt;iframe src="https://player.vimeo.com/video/145825547" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/145825547"&gt;2015cadp_w10_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;h1&gt;CADP W11&lt;/h1&gt;
 &lt;h2&gt;fix.zip 修補流程再介紹, 說明電腦輔助機械設計的目標&lt;/h2&gt;
+&lt;p&gt;將隨身碟中的資料, 複製到電腦硬碟, 然後再利用 start.bat 啟動硬碟上的可攜程式系統.&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/146592105" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/146592105"&gt;2015fallcadpw11_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
