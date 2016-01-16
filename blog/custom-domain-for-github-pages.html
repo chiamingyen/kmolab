@@ -269,7 +269,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-17T01:06:53.119291+08:00"> 日 17 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-01-17T01:14:17.103276+08:00"> 日 17 一月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -291,9 +291,9 @@ Kmolab            </a>
 是一個已經將 default branch 設為 gh-pages 分支的倉儲, 這個網站可以透過 <a href="http://cad-lab.github.io/blog/">http://cad-lab.github.io/blog/</a>  呼叫. 但是目前已經透過設定將網址綁定到 <a href="http://cadlab.mde.tw">http://cadlab.mde.tw</a>, 想要完成這樣的設定, 步驟如下:</p>
 <ol>
 <li>使用者擁有 domain name, 且可以透過 DNS 設定管理, 將網站與網址綁定, 在這裡網址 domain name 為 mde.tw</li>
-<li>在 <a href="https://github.com/cad-lab/blog">https://github.com/cad-lab/blog</a> 倉儲中的根目錄, 增加一個檔案名稱為 CNAME, 且內容為 cadlab.mde.tw 的檔案</li>
-<li>登入到 <a href="https://github.com/cad-lab/blog">https://github.com/cad-lab/blog</a> 倉儲, 利用 Settings-&gt;Branches, 將 Default branch 設為 gh-pages 分支</li>
-<li>接著到 DNS 伺服器設定, 將 cad-lab.github.io 網址以 CNAME 類別, 設為與 cadlab.mde.tw 網址綁定</li>
+<li>在 <a href="https://github.com/cad-lab/blog">https://github.com/cad-lab/blog</a> 倉儲中的根目錄, 增加一個檔案名稱為 CNAME, 且內容為 cadlab.mde.tw 的<a href="https://github.com/cad-lab/blog/blob/gh-pages/CNAME">檔案</a></li>
+<li>登入到 <a href="https://github.com/cad-lab/blog">https://github.com/cad-lab/blog</a> 倉儲, 利用 Settings-&gt;Branches, 將 Default branch 設為 gh-pages 分支 (原先內定 Default branch 為 Master)</li>
+<li>接著到 DNS 伺服器設定, 將 cad-lab.github.io 網址以 CNAME 類別, 設為與 cadlab.mde.tw 網址綁定, 這裡必須注意的是, Github 會自行將 cad-lab.github.io/blog 跳轉到 cadlab.mde.tw</li>
 </ol>
 <p>完成設定後, Github 就會將 http://cadlab.mde.tw 的連結呼叫與設定 default 分支的 gh-pages http://cad-lab.github.io/blog 進行跳轉, 也就是當使用者以瀏覽器連到 <a href="http://cadlab.mde.tw">http://cadlab.mde.tw</a> 時, 其實資料來自 <a href="http://cad-lab.github.io/blog">http://cad-lab.github.io/blog</a></p>
 <p>由於 <a href="http://cadlab.mde.tw">http://cadlab.mde.tw</a> 網站採用 Pelican 靜態網誌系統進行轉檔, 因此原先 SITEURL 設為 SITEURL = 'http://cad-lab.github.io/blog/post' 必須配合改為 SITEURL = 'http://cadlab.mde.tw/post'</p>
