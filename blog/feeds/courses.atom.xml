@@ -1,5 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-11T17:16:57+08:00</updated><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-01-11T17:16:57+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-14T23:08:07+08:00</updated><entry><title>機械設計工程師的計算機程式</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-ji-suan-ji-cheng-shi.html" rel="alternate"></link><updated>2016-01-14T23:08:07+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-01-14:kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-ji-suan-ji-cheng-shi.html</id><summary type="html">&lt;p&gt;機械設計工程師的計算機程式&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="https://adriann.github.io/programming_problems.html"&gt;https://adriann.github.io/programming_problems.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://m.cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext"&gt;http://m.cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;先列出需求, 想想可行方案, 畫出流程圖, 然後從中找出一條最棒的方法!!&lt;/p&gt;
+&lt;p&gt;新生剛剛入學, 經常會問, 我為什麼要學計算機程式?&lt;/p&gt;
+&lt;p&gt;解決問題有一定的時間與成本限制, 因此總想要用最快的方式解決問題&lt;/p&gt;
+&lt;p&gt;創造一個解題的好方法, 想要不斷套用&lt;/p&gt;
+&lt;p&gt;What Engineers Do? 工程師在做些什麼事?&lt;/p&gt;
+&lt;p&gt;Engineering is a profession.&lt;/p&gt;
+&lt;p&gt;工程是一項職業&lt;/p&gt;
+&lt;p&gt;Its members work closely with scientists and apply new and old scientific effects to produce products and services that people want. &lt;/p&gt;
+&lt;p&gt;工程人員與科學家緊密合作, 應用新舊科學認知來產出人們想要的產品與服務&lt;/p&gt;
+&lt;p&gt;Engineers do creative work. &lt;/p&gt;
+&lt;p&gt;工程師做的是創意的工作&lt;/p&gt;
+&lt;p&gt;They are skilled in the art of inventing new ways of using the forces of nature to do useful things. &lt;/p&gt;
+&lt;p&gt;工程師擅長使用自然力量發明新方法來做有用的事&lt;/p&gt;
+&lt;p&gt;Scientists strive to understand nature while engineers aim to produce useful products subject to economic and societal constraints.&lt;/p&gt;
+&lt;p&gt;科學家致力於了解自然, 而工程師則專注在經濟與社會的約束下, 產出有用的產品&lt;/p&gt;
+&lt;p&gt;Engineers deal with reality and usually have a set of specific problems that must be solved to achieve a goal. &lt;/p&gt;
+&lt;p&gt;工程師必須面對現實, 而且經常必須解決一系列的問題後, 才能完成目標.&lt;/p&gt;
+&lt;p&gt;If a particular problem is unusually difficult, it may have to be solved approximately within the time and cost limitations under which the engineer operates.&lt;/p&gt;
+&lt;p&gt;假如特定問題非常困難, 也必須要在一定的時間與成本限制下, 完成該盡的任務&lt;/p&gt;
+&lt;p&gt;Engineering problems usually have more than one solution. &lt;/p&gt;
+&lt;p&gt;工程問題經常不只有一個答案&lt;/p&gt;
+&lt;p&gt;It is the aim of the engineer to obtain the best solution possible with the resources available. &lt;/p&gt;
+&lt;p&gt;工程師的任務就式在有限資源下達到最佳方案&lt;/p&gt;
+&lt;p&gt;A criterion for measuring the degree of success of a solution is usually adopted and an attempt is made to optimize the solution relative to this criterion. &lt;/p&gt;
+&lt;p&gt;The engineer rarely achieves the best solution the first time; a design may have to be iterated several times.&lt;/p&gt;
+&lt;p&gt;Engineers are professionally responsible for the safety and performance of their designs. &lt;/p&gt;
+&lt;p&gt;The objective is to solve a given problem with the simplest, safest, most efficient design possible, at the lowest cost.&lt;/p&gt;
+&lt;p&gt;the major human activities represented as three poles labeled as follows:&lt;/p&gt;
+&lt;p&gt;Ideas 人類的想法, 用語言文字音樂記載想法, 或用文字來說明人生與宇宙間的道理 (宗教), 形成文學宗教音樂與藝術
+  介於想法與自然界之間, 為抽像科學, 人類用自己的想法來解釋大自然的現象與事物, 例如數學
+Nature 人所處的自然環境 - 用來說明自然界原本存在的科學 物理化學生物與植物學等
+  介於自然與人與事之間, 人類為了解決日常生活的各種問題, 創造了應用科學, 例如工程科學, 醫學等
+People and Things 人類與所造之物- 直接用來解決人與事所產生的問題, 交通通訊農業採礦建築製造軍事商業銷售
+  介於想法與人與事之間, 人用自己的想法來解決人與事物互動所衍生的問題, 例如社會科學, 心理學, 法律, 經濟學與新聞學等
+Ideas&lt;/p&gt;
+&lt;p&gt;人的想法
+自然界
+人與事&lt;/p&gt;
+&lt;p&gt;there are 4 main classes of computation that mechanical engineers are involved in. &lt;/p&gt;
+&lt;p&gt;Computer Aided Design (CAD)
+Finite Element Analysis
+Data Acquisition
+Numerical Analysis. &lt;/p&gt;
+&lt;p&gt;資料擷取 (DAQ) 即透過電腦而測得物理或電子現象，如電壓、電流、溫度、壓力、聲音。DAQ 系統包含感測器、DAQ 量測硬體、電腦 (具備可程式化軟體)。與傳統量測系統相較，電腦架構的 DAQ 系統可整合工業級電腦的處理效能、產能、顯示、連結功能，提供更高彈性、高成本效益的量測解決方案。&lt;/p&gt;
+&lt;p&gt;感測器 現象
+RTD、熱電偶、熱敏電阻    溫度
+光感測器    光線
+麥克風 聲音
+應變規、壓電傳感器   應力/壓力
+LVDT、位移計、光學編碼器  定位與移位
+加速規 加速度
+酸鹼計 pH&lt;/p&gt;
+&lt;p&gt;http://www.ni.com/white-paper/13654/zht/&lt;/p&gt;
+&lt;p&gt;http://www.southampton.ac.uk/~fangohr/training/python/index.html&lt;/p&gt;
+&lt;p&gt;http://www.southampton.ac.uk/~fangohr/training/python/pdfs/Python-for-Computational-Science-and-Engineering-slides.pdf&lt;/p&gt;
+&lt;p&gt;myopenlab&lt;/p&gt;
+&lt;p&gt;http://syzygy.st/Public/linkage/&lt;/p&gt;
+&lt;p&gt;https://github.com/pydy/pydy&lt;/p&gt;
+&lt;p&gt;100 題目&lt;/p&gt;
+&lt;p&gt;https://github.com/zhiwehu/Python-programming-exercises/blob/master/100%2B%20Python%20challenging%20programming%20exercises.txt&lt;/p&gt;
+&lt;p&gt;http://www.davesquared.net/2008/03/99-problems-with-python-1-10.html&lt;/p&gt;
+&lt;p&gt;TSP 基因演算&lt;/p&gt;
+&lt;p&gt;http://blog.kmol.info/indexb0b7.html?cat=6&lt;/p&gt;
+&lt;p&gt;以基因演算法處理 TSP (Traveling Salesman Problem) 問題的 Permutation Crossover Operator, TSP 對應到機械工程相關範例為多孔加工的最短切削刀具路徑運算, 也可以用在其他自動控制最短路徑規劃應用, 零件組立流程或工廠配置 (屬於 Operational Research 範疇) 的最佳化設計&lt;/p&gt;
+&lt;p&gt;工程師天生要來解決問題的, 如何解決問題?先要有一點想像力 (人文本質), 了解一些些所處的環境 (現實與現況), 然後找方法, 一步步解決問題.&lt;/p&gt;
+&lt;p&gt;他想要打飛靶百發百中, 距離 100 公尺, 步槍射程 350 公尺, 但是目標卻以亂數出現在遠處, 他卻想要百發百中!!
+不要忘記, 地球有引力, 空氣有阻力, 而你有牛頓運動定律以及一台連著網路線的電腦!! (而他假如只是一個飛靶場的百來位客戶之一)&lt;/p&gt;
+&lt;p&gt;你想要開連鎖餐廳, 因為競爭對手可以一分鐘內完成點餐, 而你想要 30 秒內就完成同樣的點餐流程!!&lt;/p&gt;
+&lt;p&gt;互相認識一下:&lt;/p&gt;
+&lt;p&gt;請問您是誰?您來自那個高中?住在那裏?&lt;/p&gt;
+&lt;p&gt;讓您先留個言!&lt;/p&gt;
+&lt;p&gt;算一下班上有幾位同學?&lt;/p&gt;
+&lt;p&gt;假如您是超商的收銀機!&lt;/p&gt;
+&lt;p&gt;紀錄一下每位同學的手機號碼&lt;/p&gt;
+&lt;p&gt;導師要給班上每位同學寫一封信&lt;/p&gt;
+&lt;p&gt;能夠為我排個功課表嗎?&lt;/p&gt;
+&lt;p&gt;派誰當工讀生?&lt;/p&gt;
+&lt;p&gt;能不能為我畫一張耶誕卡?&lt;/p&gt;
+&lt;p&gt;如何三不五時寫個家書?&lt;/p&gt;
+&lt;p&gt;想不想玩線上遊戲?&lt;/p&gt;
+&lt;p&gt;噪音小效能高的發電扇葉設計 Fan Design, Turbine Design&lt;/p&gt;
+&lt;p&gt;適合醫生使用操作的醫療器具&lt;/p&gt;
+&lt;p&gt;大樓空調管線配置設計&lt;/p&gt;
+&lt;p&gt;各種座椅設計 &lt;/p&gt;
+&lt;p&gt;設計專案管理&lt;/p&gt;
+&lt;p&gt;專利工程師&lt;/p&gt;
+&lt;p&gt;新產品開發過程中的系統模擬與分析&lt;/p&gt;
+&lt;p&gt;讓電腦程式處理原本必須採手工處理的煩雜流程, 加速工作效率&lt;/p&gt;
+&lt;p&gt;利用程式與程式設計流程圖進行協同產品設計團隊成員間的有效溝通&lt;/p&gt;
+&lt;p&gt;電腦能做什麼工作?&lt;/p&gt;
+&lt;p&gt;系統化與結構性的工作&lt;/p&gt;
+&lt;p&gt;資料搜尋與處理&lt;/p&gt;
+&lt;p&gt;專案與資料管理&lt;/p&gt;
+&lt;p&gt;資料輸出&lt;/p&gt;
+&lt;p&gt;基因演算法 (Genetic Algorithm) 是一種能夠利用電腦程式進行廣域最佳化 (Global Optimization) 參數組合搜尋的運算邏輯方法,主要原理在模仿地球上自然界物種演化 (Species Evolution) 的過程,透過原始物種族群的建立,特定環境因素對於這些物種族群所造成的影響,以優勝劣敗的淘汰機制,決定單一個體是否得以存活至延續下一代,並透過特定 機制將單一個體的基因,以交配重組或突變的模式,將適合環境生存的特定基因對(染色體)加以傳承.&lt;/p&gt;
+&lt;p&gt;由於基因演算法的理論根據在達爾文的”物 種起源”說,與地球上各物種在”物競天擇” (Ntaural Selection) 與”物種演化”的過程,已經由許多生物學及考古學的研究得到證實,但是目前用於基因演算法上的運算邏輯與自然界生物演化的複雜度,仍不可同日而語.&lt;/p&gt;
+&lt;p&gt;除 了基因演算法,就演化運算 (Evolutionary Computation) 的方法而言,近年來不斷受到各領域研究者的重視,目前已經發展出”超啟發演算法”(Metaheuristics)的新研究學門,人類在運算學上,憑藉高 速運算能力的不斷提升,以自然為師的最佳化參數組合搜尋,未來在各領域的最佳化設計運算過程中,將會取得更重要的地位.&lt;/p&gt;
+&lt;p&gt;基因演算法的流程:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;決定參數編碼方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列出評量(適應)方程式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立初始族群 (決定族群大小,建立初始族群序列)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;個體評量過程 (以參數編碼方法,將每一個體,以評量方程式,排出優劣次序)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;進行交配 (決定交配個體(父母)選擇方法,基因交配方法,交配時突變方法與機率)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;產生下一代物種族群&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重複第 4 步驟,直到最佳化參數組合出現,或者達到所設定的最大演化世代數.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基因演算法關鍵:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;如何針對設計變數進行編碼,編碼與參數可能範圍值之間的搭配&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何產生電腦程式中”合理”的亂數&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交配父代與母代的選擇 (交配方法與交配率的選擇)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交配時基因交換機制,突變率與突變方法的選擇&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最大演化運算代數的選擇&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;適應函數與程式最小誤差值的取捨&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;基因演算法常用術語:&lt;/p&gt;
+&lt;p&gt;gene 基因&lt;/p&gt;
+&lt;p&gt;genome 基因組&lt;/p&gt;
+&lt;p&gt;genetic 基因的,遺傳的&lt;/p&gt;
+&lt;p&gt;allele 等位基因&lt;/p&gt;
+&lt;p&gt;chromosomes 染色體&lt;/p&gt;
+&lt;p&gt;mutation 突變&lt;/p&gt;
+&lt;p&gt;mate 交配&lt;/p&gt;
+&lt;p&gt;crossover 交配&lt;/p&gt;
+&lt;p&gt;reproduction 生殖,繁殖&lt;/p&gt;
+&lt;p&gt;recombination 重組&lt;/p&gt;
+&lt;p&gt;replication 複製&lt;/p&gt;
+&lt;p&gt;encode 編碼&lt;/p&gt;
+&lt;p&gt;decode 解碼&lt;/p&gt;
+&lt;p&gt;evolution 演化&lt;/p&gt;
+&lt;p&gt;random 隨機&lt;/p&gt;
+&lt;p&gt;selection 選擇&lt;/p&gt;
+&lt;p&gt;Roulette 輪盤&lt;/p&gt;
+&lt;p&gt;adenine 腺嘌呤&lt;/p&gt;
+&lt;p&gt;cytosine 胞嘧啶&lt;/p&gt;
+&lt;p&gt;thymine 胸腺嘧啶&lt;/p&gt;
+&lt;p&gt;guanine 鳥嘌呤&lt;/p&gt;
+&lt;p&gt;amino acid 氨基酸&lt;/p&gt;
+&lt;p&gt;deoxyribonucleotide 去氧核糖核酸&lt;/p&gt;
+&lt;p&gt;deoxyribonucleic acid DNA 去氧核糖核酸&lt;/p&gt;
+&lt;p&gt;nucleic acid 核酸&lt;/p&gt;
+&lt;p&gt;proteins 蛋白質&lt;/p&gt;
+&lt;p&gt;autosome 常染色體&lt;/p&gt;
+&lt;p&gt;double helix 雙螺旋&lt;/p&gt;
+&lt;p&gt;enzyme 酶&lt;/p&gt;
+&lt;p&gt;exogenous 外源性&lt;/p&gt;
+&lt;p&gt;exons 外顯子&lt;/p&gt;
+&lt;p&gt;introns 內含子&lt;/p&gt;
+&lt;p&gt;nucleotides 核苷酸&lt;/p&gt;
+&lt;p&gt;haploid 單倍體&lt;/p&gt;
+&lt;p&gt;heterozygosity 雜合度&lt;/p&gt;
+&lt;p&gt;homologies 同源性&lt;/p&gt;
+&lt;p&gt;hybridization 雜交&lt;/p&gt;
+&lt;p&gt;karyotype 核型&lt;/p&gt;
+&lt;p&gt;polymorphism 多態性&lt;/p&gt;
+&lt;p&gt;purine 嘌呤&lt;/p&gt;
+&lt;p&gt;ribonucleic acid RNA 核糖核酸&lt;/p&gt;
+&lt;p&gt;telomere 端粒&lt;/p&gt;
+&lt;p&gt;transformation 轉型&lt;/p&gt;</summary><category term="計算機程式"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-01-11T17:16:57+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
 &lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;

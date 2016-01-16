@@ -84,7 +84,7 @@
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
 <v t="amd.20160106093510.1" a="E"><vh>201601</vh>
-<v t="amd.20160106093531.1" a="E"><vh>w1</vh>
+<v t="amd.20160106093531.1"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
 <v t="amd.20160106113823.1"><vh>@edit yen_20160106-2.md</vh></v>
@@ -100,6 +100,10 @@
 <v t="amd.20160110135831.1"><vh>@edit yen_20150110-2.md</vh></v>
 <v t="amd.20160110135845.1"><vh>@edit yen_20160110-3.md</vh></v>
 <v t="amd.20160110173241.1"><vh>@edit yen_20160110-4.md</vh></v>
+<v t="amd.20160111234254.1"><vh>@edit yen_20160110-5.md</vh></v>
+</v>
+<v t="amd.20160117003659.1" a="E"><vh>w2</vh>
+<v t="amd.20160117003704.1"><vh>yen_20160117.md</vh></v>
 </v>
 </v>
 </v>
@@ -174,6 +178,30 @@ pages 文章
 具體原因: 因為沒有使用遠端按鈕轉檔, 因此送到遠端的資料為近端沒有 disqus 連結的格式
 
 解決方案: 設法提醒在送到遠端之前, 一定要弄對格式</t>
+<t tx="amd.20160117003659.1"></t>
+<t tx="amd.20160117003704.1">@language md
+Title: Custom domain for Github pages
+Category: cadlab
+Tags: Github, domain names
+Author: yen
+
+如何設定 Github pages 網頁符號名稱綁定
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+這裡要舉的例子為 &lt;http://cadlab.mde.tw&gt; 網站的網址設定.
+
+Github pages 是一種靜態頁面網站的服務系統, 使用者可以自選網站綁定的符號名稱, 例如: &lt;https://github.com/cad-lab/blog&gt;
+是一個已經將 default branch 設為 gh-pages 分支的倉儲, 這個網站可以透過 &lt;http://cad-lab.github.io/blog/&gt;  呼叫. 但是目前已經透過設定將網址綁定到 &lt;http://cadlab.mde.tw&gt;, 想要完成這樣的設定, 步驟如下:
+
+1. 使用者擁有 domain name, 且可以透過 DNS 設定管理, 將網站與網址綁定, 在這裡網址 domain name 為 mde.tw
+2. 在 &lt;https://github.com/cad-lab/blog&gt; 倉儲中的根目錄, 增加一個檔案名稱為 CNAME, 且內容為 cadlab.mde.tw 的檔案
+3. 登入到 &lt;https://github.com/cad-lab/blog&gt; 倉儲, 利用 Settings-&gt;Branches, 將 Default branch 設為 gh-pages 分支
+4. 接著到 DNS 伺服器設定, 將 cad-lab.github.io 網址以 CNAME 類別, 設為與 cadlab.mde.tw 網址綁定
+
+完成設定後, Github 就會將 http://cadlab.mde.tw 的連結呼叫與設定 default 分支的 gh-pages http://cad-lab.github.io/blog 進行跳轉, 也就是當使用者以瀏覽器連到 &lt;http://cadlab.mde.tw&gt; 時, 其實資料來自 &lt;http://cad-lab.github.io/blog&gt;
+
+由於 &lt;http://cadlab.mde.tw&gt; 網站採用 Pelican 靜態網誌系統進行轉檔, 因此原先 SITEURL 設為 SITEURL = 'http://cad-lab.github.io/blog/post' 必須配合改為 SITEURL = 'http://cadlab.mde.tw/post'</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
