@@ -1,5 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T22:06:49+08:00</updated><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/pelican-setup.html" rel="alternate"></link><updated>2016-01-17T22:06:49+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/pelican-setup.html</id><summary type="html">&lt;p&gt;Pelican 靜態網頁系統架構與設定&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T22:59:14+08:00</updated><entry><title>近端 Jupyterhub 電腦主機設定</title><link href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html" rel="alternate"></link><updated>2016-01-17T22:59:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html</id><summary type="html">&lt;p&gt;利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="http://101.mde.tw"&gt;http://101.mde.tw&lt;/a&gt; 就是其中的一台 &lt;a href="http://www8.hp.com/tw/zh/products/proliant-servers/product-detail.html?oid=7796450"&gt;HP 小型伺服主機&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Jupyterhub 安裝&lt;/h2&gt;
+&lt;p&gt;sudo apt-get install npm nodejs-legacy&lt;/p&gt;
+&lt;p&gt;sudo npm install -g configurable-http-proxy&lt;/p&gt;
+&lt;p&gt;sudo pip3 install jupyterhub&lt;/p&gt;
+&lt;p&gt;sudo pip3 install IPython&lt;/p&gt;
+&lt;p&gt;以 SSL 啟動 :&lt;/p&gt;
+&lt;p&gt;先建立 key 與 certificate: sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jupyterhub.key -out jupyterhub.crt&lt;/p&gt;
+&lt;p&gt;jupyterhub --ip 10.0.1.2 --port 443 --ssl-key jupyterhub.key --ssl-cert jupyterhub.cert&lt;/p&gt;
+&lt;p&gt;或不指定 IP&lt;/p&gt;
+&lt;p&gt;jupyterhub  --port 9443 --ssl-key my_ssl.key --ssl-cert my_ssl.cert&lt;/p&gt;
+&lt;p&gt;之後則可以 https://jupyterIP:9443 連線&lt;/p&gt;
+&lt;h2&gt;jupyter_config.py 設定檔&lt;/h2&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# jupyterhub_config.py&lt;/span&gt;
+&lt;span class="c"&gt;# jupyterhub -f /path/to/jupyterhub_config.py&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_config&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="n"&gt;pjoin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;
+
+&lt;span class="n"&gt;runtime_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/srv/jupyterhub&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ssl_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ssl&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;makedirs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# https on :9443&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;9443&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssl_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;nginx.key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssl_cert&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;nginx.crt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# put the JupyterHub cookie secret and state db&lt;/span&gt;
+&lt;span class="c"&gt;# in /var/run/jupyterhub&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookie_secret_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cookie_secret&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;jupyterhub.sqlite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c"&gt;# or `--db=/path/to/jupyterhub.sqlite` on the command-line&lt;/span&gt;
+
+&lt;span class="c"&gt;# put the log file in /var/log&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/var/log/jupyterhub.log&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;# use GitHub OAuthenticator for local users&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+
+&lt;span class="sd"&gt;c.JupyterHub.authenticator_class = &amp;#39;oauthenticator.LocalGitHubOAuthenticator&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;c.GitHubOAuthenticator.oauth_callback_url = os.environ[&amp;#39;OAUTH_CALLBACK_URL&amp;#39;]&lt;/span&gt;
+&lt;span class="sd"&gt;# create system users that don&amp;#39;t exist yet&lt;/span&gt;
+&lt;span class="sd"&gt;c.LocalAuthenticator.create_system_users = True&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;# specify users and admin&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Authenticator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;whitelist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;user1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;user2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Authenticator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;admin_users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;user1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;user2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# start single-user notebook servers in ~/assignments,&lt;/span&gt;
+&lt;span class="c"&gt;# with ~/assignments/Welcome.ipynb as the default landing page&lt;/span&gt;
+&lt;span class="c"&gt;# this config could also be put in&lt;/span&gt;
+&lt;span class="c"&gt;# /etc/ipython/ipython_notebook_config.py&lt;/span&gt;
+&lt;span class="c"&gt;#c.Spawner.notebook_dir = &amp;#39;~/tmp&amp;#39;&lt;/span&gt;
+&lt;span class="c"&gt;#c.Spawner.args = [&amp;#39;--NotebookApp.default_url=/notebooks/Welcome.ipynb&amp;#39;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2&gt;將 Jupyterhub 設為開機啟動&lt;/h2&gt;
+&lt;p&gt;將下列檔案存成 /etc/init.d/jupyterhub&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;#! /bin/sh&lt;/span&gt;
+&lt;span class="c"&gt;### BEGIN INIT INFO&lt;/span&gt;
+&lt;span class="c"&gt;# Provides:          jupyterhub&lt;/span&gt;
+&lt;span class="c"&gt;# Required-Start:    $remote_fs $syslog&lt;/span&gt;
+&lt;span class="c"&gt;# Required-Stop:     $remote_fs $syslog&lt;/span&gt;
+&lt;span class="c"&gt;# Default-Start:     2 3 4 5&lt;/span&gt;
+&lt;span class="c"&gt;# Default-Stop:      0 1 6&lt;/span&gt;
+&lt;span class="c"&gt;# Short-Description: Start jupyterhub&lt;/span&gt;
+&lt;span class="c"&gt;# Description:       This file should be used to construct $ sudo chmod +x /etc/init.d/jupyterhub&lt;/span&gt;
+&lt;span class="c"&gt;# Create a default config to /etc/jupyterhub/jupyterhub_config.py&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+&lt;span class="c"&gt;# Start jupyterhub&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub start
+&lt;span class="c"&gt;# Stop jupyterhub&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub stop
+&lt;span class="c"&gt;# Start jupyterhub on boot&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo update-rc.d jupyterhub defaults
+&lt;span class="c"&gt;# Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo rcconfscripts to be
+&lt;span class="c"&gt;#                    placed in /etc/init.d.&lt;/span&gt;
+&lt;span class="c"&gt;### END INIT INFO&lt;/span&gt;
+
+&lt;span class="c"&gt;# Author: Alisue &amp;lt;lambdalisue@hashnote.net&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Please remove the &amp;quot;Author&amp;quot; lines above and replace them&lt;/span&gt;
+&lt;span class="c"&gt;# with your own name if you copy and modify this script.&lt;/span&gt;
+
+&lt;span class="c"&gt;# Do NOT &amp;quot;set -e&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# PATH should only include /usr/* if it runs after the mountnfs.sh script&lt;/span&gt;
+&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+&lt;span class="nv"&gt;DESC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Multi-user server for Jupyter notebooks&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;jupyterhub
+&lt;span class="nv"&gt;DAEMON&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin/jupyterhub
+&lt;span class="nv"&gt;DAEMON_ARGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;--config=/etc/jupyterhub/jupyterhub_config.py&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;PIDFILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/var/run/&lt;span class="nv"&gt;$NAME&lt;/span&gt;.pid
+&lt;span class="nv"&gt;SCRIPTNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/etc/init.d/&lt;span class="nv"&gt;$NAME&lt;/span&gt;
+
+&lt;span class="c"&gt;# Exit if the package is not installed&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt; -x &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DAEMON&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;exit &lt;/span&gt;0
+
+&lt;span class="c"&gt;# Read configuration variable file if it is present&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt; -r /etc/default/&lt;span class="nv"&gt;$NAME&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; . /etc/default/&lt;span class="nv"&gt;$NAME&lt;/span&gt;
+
+&lt;span class="c"&gt;# Load the VERBOSE setting and other rcS variables&lt;/span&gt;
+. /lib/init/vars.sh
+
+&lt;span class="c"&gt;# Define LSB log_* functions.&lt;/span&gt;
+&lt;span class="c"&gt;# Depend on lsb-base (&amp;gt;= 3.2-14) to ensure that this file is present&lt;/span&gt;
+&lt;span class="c"&gt;# and status_of_proc is working.&lt;/span&gt;
+. /lib/lsb/init-functions
+
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Function that starts the daemon/service&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+do_start&lt;span class="o"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="c"&gt;# Return&lt;/span&gt;
+    &lt;span class="c"&gt;#   0 if daemon has been started&lt;/span&gt;
+    &lt;span class="c"&gt;#   1 if daemon was already running&lt;/span&gt;
+    &lt;span class="c"&gt;#   2 if daemon could not be started&lt;/span&gt;
+    start-stop-daemon --start --quiet --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --exec &lt;span class="nv"&gt;$DAEMON&lt;/span&gt; --test &amp;gt; /dev/null &lt;span class="se"&gt;\&lt;/span&gt;
+        &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 1
+    start-stop-daemon --start --background --make-pidfile --quiet --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --exec &lt;span class="nv"&gt;$DAEMON&lt;/span&gt; -- &lt;span class="se"&gt;\&lt;/span&gt;
+        &lt;span class="nv"&gt;$DAEMON_ARGS&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+        &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 2
+    &lt;span class="c"&gt;# Add code here, if necessary, that waits for the process to be ready&lt;/span&gt;
+    &lt;span class="c"&gt;# to handle requests from services started subsequently which depend&lt;/span&gt;
+    &lt;span class="c"&gt;# on this one.  As a last resort, sleep for some time.&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Function that stops the daemon/service&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+do_stop&lt;span class="o"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="c"&gt;# Return&lt;/span&gt;
+    &lt;span class="c"&gt;#   0 if daemon has been stopped&lt;/span&gt;
+    &lt;span class="c"&gt;#   1 if daemon was already stopped&lt;/span&gt;
+    &lt;span class="c"&gt;#   2 if daemon could not be stopped&lt;/span&gt;
+    &lt;span class="c"&gt;#   other if a failure occurred&lt;/span&gt;
+    start-stop-daemon --stop --quiet --retry&lt;span class="o"&gt;=&lt;/span&gt;TERM/30/KILL/5 --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --name &lt;span class="nv"&gt;$NAME&lt;/span&gt;
+    &lt;span class="nv"&gt;RETVAL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$RETVAL&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 2
+    &lt;span class="c"&gt;# Wait for children to finish too if this is a daemon that forks&lt;/span&gt;
+    &lt;span class="c"&gt;# and if the daemon is only ever run from this initscript.&lt;/span&gt;
+    &lt;span class="c"&gt;# If the above conditions are not satisfied then add some other code&lt;/span&gt;
+    &lt;span class="c"&gt;# that waits for the process to drop all resources that could be&lt;/span&gt;
+    &lt;span class="c"&gt;# needed by services started subsequently.  A last resort is to&lt;/span&gt;
+    &lt;span class="c"&gt;# sleep for some time.&lt;/span&gt;
+    start-stop-daemon --stop --quiet --oknodo --retry&lt;span class="o"&gt;=&lt;/span&gt;0/30/KILL/5 --exec &lt;span class="nv"&gt;$DAEMON&lt;/span&gt;
+    &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 2
+    &lt;span class="c"&gt;# Many daemons don&amp;#39;t delete their pidfiles when they exit.&lt;/span&gt;
+    rm -f &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$RETVAL&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Function that sends a SIGHUP to the daemon/service&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+do_reload&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="c"&gt;#&lt;/span&gt;
+    &lt;span class="c"&gt;# If the daemon can reload its configuration without&lt;/span&gt;
+    &lt;span class="c"&gt;# restarting (for example, when it is sent a SIGHUP),&lt;/span&gt;
+    &lt;span class="c"&gt;# then implement that here.&lt;/span&gt;
+    &lt;span class="c"&gt;#&lt;/span&gt;
+    start-stop-daemon --stop --signal &lt;span class="m"&gt;1&lt;/span&gt; --quiet --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --name &lt;span class="nv"&gt;$NAME&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; 0
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
+  start&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$VERBOSE&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; no &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; log_daemon_msg &lt;span class="s2"&gt;&amp;quot;Starting &lt;/span&gt;&lt;span class="nv"&gt;$DESC&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    do_start
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
+        0&lt;span class="p"&gt;|&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$VERBOSE&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; no &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; log_end_msg &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+        2&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$VERBOSE&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; no &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+    &lt;span class="k"&gt;esac&lt;/span&gt;
+    &lt;span class="p"&gt;;;&lt;/span&gt;
+  stop&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$VERBOSE&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; no &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; log_daemon_msg &lt;span class="s2"&gt;&amp;quot;Stopping &lt;/span&gt;&lt;span class="nv"&gt;$DESC&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    do_stop
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
+        0&lt;span class="p"&gt;|&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$VERBOSE&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; no &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; log_end_msg &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+        2&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$VERBOSE&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; no &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+    &lt;span class="k"&gt;esac&lt;/span&gt;
+    &lt;span class="p"&gt;;;&lt;/span&gt;
+  status&lt;span class="o"&gt;)&lt;/span&gt;
+    status_of_proc &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DAEMON&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;exit &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt;
+    &lt;span class="p"&gt;;;&lt;/span&gt;
+  &lt;span class="c"&gt;#reload|force-reload)&lt;/span&gt;
+    &lt;span class="c"&gt;#&lt;/span&gt;
+    &lt;span class="c"&gt;# If do_reload() is not implemented then leave this commented out&lt;/span&gt;
+    &lt;span class="c"&gt;# and leave &amp;#39;force-reload&amp;#39; as an alias for &amp;#39;restart&amp;#39;.&lt;/span&gt;
+    &lt;span class="c"&gt;#&lt;/span&gt;
+    &lt;span class="c"&gt;#log_daemon_msg &amp;quot;Reloading $DESC&amp;quot; &amp;quot;$NAME&amp;quot;&lt;/span&gt;
+    &lt;span class="c"&gt;#do_reload&lt;/span&gt;
+    &lt;span class="c"&gt;#log_end_msg $?&lt;/span&gt;
+    &lt;span class="c"&gt;#;;&lt;/span&gt;
+  restart&lt;span class="p"&gt;|&lt;/span&gt;force-reload&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;#&lt;/span&gt;
+    &lt;span class="c"&gt;# If the &amp;quot;reload&amp;quot; option is implemented then remove the&lt;/span&gt;
+    &lt;span class="c"&gt;# &amp;#39;force-reload&amp;#39; alias&lt;/span&gt;
+    &lt;span class="c"&gt;#&lt;/span&gt;
+    log_daemon_msg &lt;span class="s2"&gt;&amp;quot;Restarting &lt;/span&gt;&lt;span class="nv"&gt;$DESC&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    do_stop
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
+      0&lt;span class="p"&gt;|&lt;/span&gt;1&lt;span class="o"&gt;)&lt;/span&gt;
+        do_start
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
+            0&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+            1&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="c"&gt;# Old process is still running&lt;/span&gt;
+            *&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="c"&gt;# Failed to start&lt;/span&gt;
+        &lt;span class="k"&gt;esac&lt;/span&gt;
+        &lt;span class="p"&gt;;;&lt;/span&gt;
+      *&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="c"&gt;# Failed to stop&lt;/span&gt;
+        log_end_msg 1
+        &lt;span class="p"&gt;;;&lt;/span&gt;
+    &lt;span class="k"&gt;esac&lt;/span&gt;
+    &lt;span class="p"&gt;;;&lt;/span&gt;
+  *&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;#echo &amp;quot;Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}&amp;quot; &amp;gt;&amp;amp;2&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class="nv"&gt;$SCRIPTNAME&lt;/span&gt;&lt;span class="s2"&gt; {start|stop|status|restart|force-reload}&amp;quot;&lt;/span&gt; &amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;2
+    &lt;span class="nb"&gt;exit &lt;/span&gt;3
+    &lt;span class="p"&gt;;;&lt;/span&gt;
+&lt;span class="k"&gt;esac&lt;/span&gt;
+
+:
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;接著執行下列設定, 讓電腦開機時就能啟動 jupyterhub 服務.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo chmod +x /etc/init.d/jupyterhub
+&lt;span class="c"&gt;# Create a default config to /etc/jupyterhub/jupyterhub_config.py&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+&lt;span class="c"&gt;# Start jupyterhub&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub start
+&lt;span class="c"&gt;# Stop jupyterhub&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub stop
+&lt;span class="c"&gt;# Start jupyterhub on boot&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo update-rc.d jupyterhub defaults
+&lt;span class="c"&gt;# Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo rcconf
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/pelican-setup.html" rel="alternate"></link><updated>2016-01-17T22:34:07+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/pelican-setup.html</id><summary type="html">&lt;p&gt;Pelican 靜態網頁系統架構與設定&lt;/p&gt;
 
 
 &lt;h2&gt;近端與遠端設定上的考量&lt;/h2&gt;
@@ -34,7 +509,7 @@
 &lt;p&gt;本網站目前將圖檔存在 copy dot com, 而影片檔案則存在 Vimeo, 雖然目前 copy dot com 提供一個帳號可以有 15 GB 的免費資料儲存空間, 但是這樣的服務能夠持續多久, 實在不可預期, 因此一旦 copy dot com 公告要停止免費帳號服務, 本網站各文章連結的圖檔將會失效, 因此目前的規劃如下:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;將圖檔放在 copy dot com 的原因是在最小化 gh-pages 倉儲的容量, 若協同者需要 git clone 資料, 可以節省許多時間&lt;/li&gt;
-&lt;li&gt;為了保險起見, 本網站仍需定期利用程式, 抓下本網站的所有圖檔, 並且以異地備份與多系統儲存的方式暫存, 一旦 copy dot com 公告即將停止服務, 就必須透過轉檔程式 ,處理本網站的所有 .md 檔案, 將 copy dot com 的圖檔連結改為相對 images 目錄連結或其他相關連結, 以延續本網站系統的內容與功能&lt;/li&gt;
+&lt;li&gt;為了保險起見, 本網站仍需定期利用程式, 抓下本網站的所有圖檔, 並且以異地備份與多系統儲存的方式暫存, 一旦 copy dot com 公告即將停止服務, 就必須透過轉檔程式, 處理本網站的所有 .md 檔案, 將 copy dot com 的圖檔連結改為相對 images 目錄連結或其他相關連結, 以延續本網站系統的內容與功能&lt;/li&gt;
 &lt;li&gt;由於影片檔案較大, 我們只好希望 Vimeo 可以一直存活下去, 或者將相同的影片檔案存一份到 Youtube, 當作備份&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;上述所謂的網站圖擋下載程式:&lt;/p&gt;
@@ -96,9 +571,9 @@
 56
 57
 58
-59&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 配合 pelican site, 將上傳到 copy.com 的圖檔, 逐一下載到 images 目錄&lt;/span&gt;
+59&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 配合 pelican site, 將上傳到 copy dot com 的圖檔, 逐一下載到 images 目錄&lt;/span&gt;
 &lt;span class="c"&gt;# 主要的考量在於若 copy.com 不再提供服務, 近端或替代遠端的網頁必須要能夠修改後持續運作&lt;/span&gt;
-&lt;span class="c"&gt;# 除了下載必要的圖檔外, 還需要逐一修改所有 .md 檔案, 將 https://copy.com 字串換成 images 目錄名稱&lt;/span&gt;
+&lt;span class="c"&gt;# 除了下載必要的圖檔外, 還需要逐一修改所有 .md 檔案, 將 https://copy dot com 字串換成 images 目錄名稱&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.parse&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlsplit&lt;/span&gt;
 &lt;span class="c"&gt;# 利用 bs4 解讀 html 內容&lt;/span&gt;
@@ -110,7 +585,6 @@
 &lt;span class="c"&gt;# 以遞迴方式搜尋圖檔的 url&lt;/span&gt;
 &lt;span class="c"&gt;# level 0 為根 URL&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;downloadImages&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;level&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-
     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;urlList&lt;/span&gt;
     &lt;span class="c"&gt;# 避免納入重複的 URL&lt;/span&gt;
@@ -123,12 +597,13 @@
         &lt;span class="k"&gt;return&lt;/span&gt;
 
     &lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;urlContent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="c"&gt;# 利用 bs4 搜尋 img 標註後, 檢查是否位於 copy.com, 若是則下載該圖檔&lt;/span&gt;
+    &lt;span class="c"&gt;# 利用 bs4 搜尋 img 標註後, 檢查是否位於 copy dot com, 若是則下載該圖檔&lt;/span&gt;
     &lt;span class="n"&gt;imgTags&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;imgTag&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;imgTags&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;imgUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;imgTag&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
         &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;copy.com&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;imgUrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c"&gt;# 記得將 dot  改為 .&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;copy dot com&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;imgUrl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="k"&gt;continue&lt;/span&gt;
             &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
                 &lt;span class="n"&gt;imgData&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;imgUrl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;

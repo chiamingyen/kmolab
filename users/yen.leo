@@ -105,7 +105,7 @@
 </v>
 <v t="amd.20160117003659.1" a="E"><vh>w2</vh>
 <v t="amd.20160117003704.1"><vh>@edit yen_20160117.md</vh></v>
-<v t="amd.20160117172615.1"><vh>yen_20160117.md</vh></v>
+<v t="amd.20160117172615.1"><vh>@edit yen_20160117-1.md</vh></v>
 </v>
 </v>
 </v>
@@ -497,77 +497,6 @@ transformation 轉型
 import os
 os.system("git rm -rf blog")
 g.es("git rm -rf blog 執行完畢")</t>
-<t tx="amd.20160117172615.1">@language md
-Title: Pelican site images downloader
-Category: Pelican
-Tags: Python, Image download
-Author: yen
-
-靜態網頁下圖檔的永續處理
-
-&lt;!-- PELICAN_END_SUMMARY --&gt;
-
-~~~python
-# 配合 pelican site, 將上傳到 copy.com 的圖檔, 逐一下載到 images 目錄
-# 主要的考量在於若 copy.com 不再提供服務, 近端或替代遠端的網頁必須要能夠修改後持續運作
-# 除了下載必要的圖檔外, 還需要逐一修改所有 .md 檔案, 將 https://copy.com 字串換成 images 目錄名稱
-from urllib.request import urlopen
-from urllib.parse import urlsplit
-# 利用 bs4 解讀 html 內容
-from bs4 import BeautifulSoup
-import os
-
-urlList = []
-
-# 以遞迴方式搜尋圖檔的 url
-# level 0 為根 URL
-def downloadImages(url, level):
-
-    print(url)
-    global urlList
-    # 避免納入重複的 URL
-    if url in urlList:
-        return
-    urlList.append(url)
-    try:
-        urlContent = urlopen(url).read()
-    except:
-        return
-
-    soup = BeautifulSoup(urlContent)
-    # 利用 bs4 搜尋 img 標註後, 檢查是否位於 copy.com, 若是則下載該圖檔
-    imgTags = soup.findAll('img')
-    for imgTag in imgTags:
-        imgUrl = imgTag['src']
-        try:
-            if "copy.com" not in imgUrl:
-                continue
-            else:
-                imgData = urlopen(imgUrl).read()
-                fileName = os.path.basename(urlsplit(imgUrl)[2])
-                output = open("images/"+fileName,'wb')
-                output.write(imgData)
-                output.close()
-        except:
-            pass
-
-    # 若頁面有 anchor 標註則納入進行遞迴搜尋
-    if level &gt; 0:
-        linkTags = soup.findAll('a')
-        if len(linkTags) &gt; 0:
-            for linkTag in linkTags:
-                try:
-                    linkUrl = linkTag['href']
-                    downloadImages(linkUrl, level - 1)
-                except:
-                    pass
-
-# 若執行目錄下無 images 目錄則在此建立 images 目錄
-if not os.path.exists("images"):
-    os.makedirs("images")
-# 執行遞迴圖檔搜尋與下載
-downloadImages('http://chiamingyen.github.io/kmolab/blog/', 1)
-~~~</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
