@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
@@ -85,7 +85,7 @@
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
 <v t="amd.20160106093510.1" a="E"><vh>201601</vh>
-<v t="amd.20160106093531.1" a="E"><vh>w1</vh>
+<v t="amd.20160106093531.1"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
 <v t="amd.20160106113823.1"><vh>@edit yen_20160106-2.md</vh></v>
@@ -106,6 +106,9 @@
 <v t="amd.20160117003659.1" a="E"><vh>w2</vh>
 <v t="amd.20160117003704.1"><vh>@edit yen_20160117.md</vh></v>
 <v t="amd.20160117172615.1"><vh>@edit yen_20160117-1.md</vh></v>
+<v t="amd.20160118000852.1"><vh>@edit yen_20160118.md</vh></v>
+<v t="amd.20160118121123.1"><vh>@edit yen_20160118-1.md</vh></v>
+<v t="amd.20160118162431.1"><vh>yen_20160118-2.md</vh></v>
 </v>
 </v>
 </v>
@@ -497,6 +500,66 @@ transformation 轉型
 import os
 os.system("git rm -rf blog")
 g.es("git rm -rf blog 執行完畢")</t>
+<t tx="amd.20160118162431.1">埠號掃描
+
+~~~python
+#!/usr/bin/env python
+import socket
+import subprocess
+import sys
+from datetime import datetime
+
+# Clear the screen
+subprocess.call('clear', shell=True)
+
+# Ask for input
+remoteServer    = input("Enter a remote host to scan: ")
+remoteServerIP  = socket.gethostbyname(remoteServer)
+
+# Print a nice banner with information on which host we are about to scan
+print("-" * 60)
+print("Please wait, scanning remote host", remoteServerIP)
+print("-" * 60)
+
+# Check what time the scan started
+t1 = datetime.now()
+#print(t1)
+
+# Using the range function to specify ports (here it will scans all ports between 1 and 1024)
+
+# We also put in some error handling for catching errors
+
+try:
+    for port in range(1,1025): 
+        #print(port, end=",")
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        result = sock.connect_ex((remoteServerIP, port))
+        if result == 0:
+            print("Port {}: \t Open".format(port))
+        sock.close()
+
+except KeyboardInterrupt:
+    print("You pressed Ctrl+C")
+    sys.exit()
+
+except socket.gaierror:
+    print('Hostname could not be resolved. Exiting')
+    sys.exit()
+
+except socket.error:
+    print("Couldn't connect to server")
+    sys.exit()
+
+# Checking the time again
+t2 = datetime.now()
+
+# Calculates the difference of time, to see how long it took to run the script
+total =  t2 - t1
+
+# Printing the information to screen
+print('Scanning Completed in: ', total)
+~~~
+&lt;br /&gt;</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
