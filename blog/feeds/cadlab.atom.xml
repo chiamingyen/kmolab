@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T01:14:17+08:00</updated><entry><title>Custom domain for Github pages</title><link href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html" rel="alternate"></link><updated>2016-01-17T01:14:17+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/custom-domain-for-github-pages.html</id><summary type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
-
-
-&lt;p&gt;這裡要舉的例子為 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站的網址設定.&lt;/p&gt;
-&lt;p&gt;Github pages 是一種靜態頁面網站的服務系統, 使用者可以自選網站綁定的符號名稱, 例如: &lt;a href="https://github.com/cad-lab/blog"&gt;https://github.com/cad-lab/blog&lt;/a&gt;
-是一個已經將 default branch 設為 gh-pages 分支的倉儲, 這個網站可以透過 &lt;a href="http://cad-lab.github.io/blog/"&gt;http://cad-lab.github.io/blog/&lt;/a&gt;  呼叫. 但是目前已經透過設定將網址綁定到 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt;, 想要完成這樣的設定, 步驟如下:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用者擁有 domain name, 且可以透過 DNS 設定管理, 將網站與網址綁定, 在這裡網址 domain name 為 mde.tw&lt;/li&gt;
-&lt;li&gt;在 &lt;a href="https://github.com/cad-lab/blog"&gt;https://github.com/cad-lab/blog&lt;/a&gt; 倉儲中的根目錄, 增加一個檔案名稱為 CNAME, 且內容為 cadlab.mde.tw 的&lt;a href="https://github.com/cad-lab/blog/blob/gh-pages/CNAME"&gt;檔案&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;登入到 &lt;a href="https://github.com/cad-lab/blog"&gt;https://github.com/cad-lab/blog&lt;/a&gt; 倉儲, 利用 Settings-&amp;gt;Branches, 將 Default branch 設為 gh-pages 分支 (原先內定 Default branch 為 Master)&lt;/li&gt;
-&lt;li&gt;接著到 DNS 伺服器設定, 將 cad-lab.github.io 網址以 CNAME 類別, 設為與 cadlab.mde.tw 網址綁定, 這裡必須注意的是, Github 會自行將 cad-lab.github.io/blog 跳轉到 cadlab.mde.tw&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;完成設定後, Github 就會將 http://cadlab.mde.tw 的連結呼叫與設定 default 分支的 gh-pages http://cad-lab.github.io/blog 進行跳轉, 也就是當使用者以瀏覽器連到 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時, 其實資料來自 &lt;a href="http://cad-lab.github.io/blog"&gt;http://cad-lab.github.io/blog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;由於 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站採用 Pelican 靜態網誌系統進行轉檔, 因此原先 SITEURL 設為 SITEURL = 'http://cad-lab.github.io/blog/post' 必須配合改為 SITEURL = 'http://cadlab.mde.tw/post'&lt;/p&gt;</summary><category term="Github"></category><category term="domain names"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><updated>2016-01-11T07:31:38+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-13T09:45:39+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 &lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
 &lt;p&gt;intel Core i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
 &lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
-&lt;h1&gt;開機磁區&lt;/h1&gt;
+&lt;h2&gt;開機磁區&lt;/h2&gt;
 &lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
 &lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
 &lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
@@ -24,7 +11,7 @@
 
 &lt;h1&gt;舊電腦分配&lt;/h1&gt;
 &lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;
-&lt;h1&gt;網路設置&lt;/h1&gt;
+&lt;h2&gt;網路設置&lt;/h2&gt;
 &lt;p&gt;(以下設置為舊資料, 僅供參考)&lt;/p&gt;
 &lt;p&gt;目前電腦輔助設計室採 DHCP 換成 140.130.17.82 後連到學校主幹, 理論上設負載平衡的代理主機可以共享網路頻寬, 擷取網路資料的速度會比較快.&lt;/p&gt;
 &lt;p&gt;代理主機(理論上使用 140.130.17.3 作為 dns server, proxy 採 proxy.mde.nfu.edu.tw 速度最快):&lt;/p&gt;
@@ -69,4 +56,17 @@
 &lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
 &lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
 &lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry></feed>
+&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>Custom domain for Github pages</title><link href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html" rel="alternate"></link><updated>2016-01-17T01:14:17+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/custom-domain-for-github-pages.html</id><summary type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
+
+
+&lt;p&gt;這裡要舉的例子為 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站的網址設定.&lt;/p&gt;
+&lt;p&gt;Github pages 是一種靜態頁面網站的服務系統, 使用者可以自選網站綁定的符號名稱, 例如: &lt;a href="https://github.com/cad-lab/blog"&gt;https://github.com/cad-lab/blog&lt;/a&gt;
+是一個已經將 default branch 設為 gh-pages 分支的倉儲, 這個網站可以透過 &lt;a href="http://cad-lab.github.io/blog/"&gt;http://cad-lab.github.io/blog/&lt;/a&gt;  呼叫. 但是目前已經透過設定將網址綁定到 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt;, 想要完成這樣的設定, 步驟如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用者擁有 domain name, 且可以透過 DNS 設定管理, 將網站與網址綁定, 在這裡網址 domain name 為 mde.tw&lt;/li&gt;
+&lt;li&gt;在 &lt;a href="https://github.com/cad-lab/blog"&gt;https://github.com/cad-lab/blog&lt;/a&gt; 倉儲中的根目錄, 增加一個檔案名稱為 CNAME, 且內容為 cadlab.mde.tw 的&lt;a href="https://github.com/cad-lab/blog/blob/gh-pages/CNAME"&gt;檔案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;登入到 &lt;a href="https://github.com/cad-lab/blog"&gt;https://github.com/cad-lab/blog&lt;/a&gt; 倉儲, 利用 Settings-&amp;gt;Branches, 將 Default branch 設為 gh-pages 分支 (原先內定 Default branch 為 Master)&lt;/li&gt;
+&lt;li&gt;接著到 DNS 伺服器設定, 將 cad-lab.github.io 網址以 CNAME 類別, 設為與 cadlab.mde.tw 網址綁定, 這裡必須注意的是, Github 會自行將 cad-lab.github.io/blog 跳轉到 cadlab.mde.tw&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;完成設定後, Github 就會將 http://cadlab.mde.tw 的連結呼叫與設定 default 分支的 gh-pages http://cad-lab.github.io/blog 進行跳轉, 也就是當使用者以瀏覽器連到 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時, 其實資料來自 &lt;a href="http://cad-lab.github.io/blog"&gt;http://cad-lab.github.io/blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;由於 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站採用 Pelican 靜態網誌系統進行轉檔, 因此原先 SITEURL 設為 SITEURL = 'http://cad-lab.github.io/blog/post' 必須配合改為 SITEURL = 'http://cadlab.mde.tw/post'&lt;/p&gt;</summary><category term="Github"></category><category term="domain names"></category></entry></feed>

@@ -84,8 +84,8 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160106093510.1" a="E"><vh>201601</vh>
-<v t="amd.20160106093531.1"><vh>w1</vh>
+<v t="amd.20160106093510.1"><vh>201601</vh>
+<v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
 <v t="amd.20160106113823.1"><vh>@edit yen_20160106-2.md</vh></v>
@@ -103,17 +103,28 @@
 <v t="amd.20160110173241.1"><vh>@edit yen_20160110-4.md</vh></v>
 <v t="amd.20160111234254.1"><vh>yen_20160110-5.md (前面沒有 @edit 表示尚未寫完)</vh></v>
 </v>
-<v t="amd.20160117003659.1" a="E"><vh>w2</vh>
+<v t="amd.20160117003659.1"><vh>w2</vh>
 <v t="amd.20160117003704.1"><vh>@edit yen_20160117.md</vh></v>
 <v t="amd.20160117172615.1"><vh>@edit yen_20160117-1.md</vh></v>
 <v t="amd.20160118000852.1"><vh>@edit yen_20160118.md</vh></v>
 <v t="amd.20160118121123.1"><vh>@edit yen_20160118-1.md</vh></v>
-<v t="amd.20160118162431.1"><vh>yen_20160118-2.md</vh></v>
+<v t="amd.20160118162431.1"><vh>@edit yen_20160118-2.md</vh></v>
+</v>
+<v t="amd.20160123100821.1"><vh>w3</vh>
+<v t="amd.20160123100826.1"><vh>@edit yen_20160123.md</vh></v>
+<v t="amd.20160125202110.1"><vh>@edit yen_20160125.md</vh></v>
+</v>
+</v>
+<v t="amd.20160213095053.1" a="E"><vh>201602</vh>
+<v t="amd.20160213095059.1" a="E"><vh>w2</vh>
+<v t="amd.20160215225005.1"><vh>yen_20160215.md</vh></v>
+<v t="amd.20160221123826.1"><vh>@edit yen_20160221.md</vh></v>
+<v t="amd.20160221125630.1"><vh>@edit yen_20160221-1.md</vh></v>
 </v>
 </v>
 </v>
 </v>
-<v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
+<v t="amd.20160106094754.1" a="E"><vh>@path ./../content/pages</vh>
 <v t="amd.20160106094829.1" a="E"><vh>yen pages 文章</vh>
 <v t="amd.20160106094844.1"><vh>@edit yen_pages_1.md</vh></v>
 </v>
@@ -194,6 +205,16 @@ Author: kmol
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
 &lt;https://adriann.github.io/programming_problems.html&gt;
+
+&lt;https://projecteuler.net/&gt;
+
+計算機程式練習題目:
+
+1. 在命令列(或 Leo Editor 或瀏覽器中)利用程式列出特定文字或數字內容. (print() 或 g.es(), Leo Editor global 物件的 echo string 方法)
+2. 在命令列(或 Leo Editor 或瀏覽器中)利用程式, 接受使用者的輸入, 然後進行資料處理或數值運算後, 列出相關結果. (數值累加, 單位換算等)
+3. 只累加偶數或只累加奇數, 使用者輸入齒數、模數與壓力角, 利用程式在瀏覽器中畫出漸開線正齒輪輪廓. (利用小段直線或 Nurbs 繪圖)
+4. 數列與字串資料的應用. (利用姓與名的字串檔案, 以亂數產生虛擬班級的學生學號與姓名名單)
+5. 利用現有的虛擬班級名單, 利用亂數進行分組與排電腦教室的座位表, 並在瀏覽器中列出編排結果.
 
 &lt;http://m.cacm.acm.org/blogs/blog-cacm/166115-why-scientists-and-engineers-must-learn-programming/fulltext&gt;
 
@@ -285,7 +306,6 @@ LVDT、位移計、光學編碼器	定位與移位
 酸鹼計	pH
 
 http://www.ni.com/white-paper/13654/zht/
-
 
 http://www.southampton.ac.uk/~fangohr/training/python/index.html
 
@@ -500,66 +520,163 @@ transformation 轉型
 import os
 os.system("git rm -rf blog")
 g.es("git rm -rf blog 執行完畢")</t>
-<t tx="amd.20160118162431.1">埠號掃描
+<t tx="amd.20160123100821.1"></t>
+<t tx="amd.20160213095053.1"></t>
+<t tx="amd.20160213095059.1"></t>
+<t tx="amd.20160215225005.1">課程中文名稱: 協同產品設計實習
 
-~~~python
-#!/usr/bin/env python
-import socket
-import subprocess
-import sys
-from datetime import datetime
+工具介紹
 
-# Clear the screen
-subprocess.call('clear', shell=True)
+PTC Creo Parametric and Onshape
 
-# Ask for input
-remoteServer    = input("Enter a remote host to scan: ")
-remoteServerIP  = socket.gethostbyname(remoteServer)
+kmol2016
 
-# Print a nice banner with information on which host we are about to scan
-print("-" * 60)
-print("Please wait, scanning remote host", remoteServerIP)
-print("-" * 60)
+    Python 3.4
+    
+    Pelican
+    
+    Leo Editor 建立產品開發專案
+    
+    Jupyter
+    
+    Git
+    
+    ungit
+    
+    Cherrypy and Flask
+    
+    SQLite
+    
+Bicycle 折疊機構設計
 
-# Check what time the scan started
-t1 = datetime.now()
-#print(t1)
+Bicycle 電動系統設計 (Ebike)
 
-# Using the range function to specify ports (here it will scans all ports between 1 and 1024)
+Solar Car Design
 
-# We also put in some error handling for catching errors
+參考: https://docs.google.com/document/d/1YhsK03sDFf_hAN0Tcm9zwXZ3Rr__PrVaTkEfVLwLiH4/edit?pref=2&amp;pli=1
 
-try:
-    for port in range(1,1025): 
-        #print(port, end=",")
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex((remoteServerIP, port))
-        if result == 0:
-            print("Port {}: \t Open".format(port))
-        sock.close()
+https://www.launchpadcentral.com/education
 
-except KeyboardInterrupt:
-    print("You pressed Ctrl+C")
-    sys.exit()
+https://canvanizer.com/new/business-model-canvas
 
-except socket.gaierror:
-    print('Hostname could not be resolved. Exiting')
-    sys.exit()
+https://en.wikipedia.org/wiki/Collaborative_product_development
 
-except socket.error:
-    print("Couldn't connect to server")
-    sys.exit()
+二十一世紀的同步工程:
 
-# Checking the time again
-t2 = datetime.now()
+https://my.pcloud.com/publink/show?code=XZ7dz4ZskySAzc0vUVAUasEKT77pyrGr1Ty
 
-# Calculates the difference of time, to see how long it took to run the script
-total =  t2 - t1
+Course Objectives
+The course objectives for CSE498 include (but are not limited to) the following.
+a. Learning to architect, develop, and deliver a complete software application to a client.
+b. Learning to work effectively in a team environment.
+c. Developing your written and oral communication skills.
+d. Becoming proficient with software development tools and environments.
+e. Learning about system building and system administration.
+f. Integrating everything you have learned in your other computer science courses.
 
-# Printing the information to screen
-print('Scanning Completed in: ', total)
-~~~
-&lt;br /&gt;</t>
+Course Goals:
+Students who take this course will be able to:
+• Understand and articulate the key principles of co-design
+• Demonstrate knowledge of the history, actors, trends, and critiques of co-design methods
+• Apply theoretical and practical tools of co-design in a real-world partnership with a community-based organization
+• Effectively use free/libre and open source project management tools to facilitate collaborative work in diverse teams
+• Make concrete contributions to the development of a real-world civic media project that is grounded in the needs of a community partner
+
+
+課程英文名稱: Collaborative Product Design Principles and Practices
+
+課程主要介紹協同產品設計原理與協同產品設計流程的實踐
+
+協同產品設計原理:
+
+1. 產品設計流程中, 牽涉多名相關的成員時, 該如何執行各項設計工作?
+2. 以完成產品開發作為共同目標
+3. 透過產品生命週期管理機制
+4. 成員分別或共同完成產品專案中的分項任務
+
+協同產品設計流程的實踐:
+
+產品開發流程確認
+成員角色確認
+協同工作模式
+產品生命週期管理系統
+
+協同的背景
+
+全球化帶來的密集與瞬息萬變的競爭, 即便是全球各領域目前領先的國際大公司都必須要靠快速併購, 才能具備克敵致勝的專業能力, 因此對於規模較小, 專業能力較不全面的公司與團隊, 為求生存, 必得積極尋求各方協同的機會.
+
+以機械設計流程的角度言, 協同產品設計過程中主要的項目在資訊與知識層次上的協同.
+
+協同的目的在追求速度, 效能, 多元, 互動與彈性
+
+速度 - 推出新產品的速度, 修正既有錯誤的速度
+
+效能 - 強調效率與功能, 持續降低成本
+
+多元 - 多方嘗試, 多方檢視, 多方調控, 多方出擊
+
+互動 - 有推有拉, 有來有往, 密切藕合
+
+彈性 - 及時調整適應, 配合需求能夠加以變化
+
+協同(Collaboration)與合作(Cooperation)有何差異?
+
+協同源自各方公認的共同目標, 而合作則通常指源自個別認知下的不同標的.
+
+協同互動性高於合作
+協同的積極與動態性, 高於合作
+協同成員間的專業重疊性, 高於合作
+協同的價值通常高於合作
+就時代發展的潮流而言, 以 Collaboration 模式進行協同合作的公司, 所有成員不僅秉持相同目標, 積極主動, 彼此可互相替代職務, 在永續經營理念下, 不斷創造價值的公司, 將具有相對於採 Cooperation 模式公司較高的國際競爭力.
+
+Collaboration 公司 (若公司文化無法支撐以下條件, 則必須透過系統機制達成):
+
+所有成員在所規劃安排的時間, 盡心盡力完成自我期許的任務, 沒有摸魚與怠忽職守的問題.
+所有成員在解決各種問題的流程中, 能不斷自我學習並惕勵自己, 讓公司價值不斷向上攀升.
+所有成員都是老闆, 公司的價值得以即時公平落實到所有成員身上.
+所有成員在任何時間地點都能上班, 也都能到世界各地去上班, 沒有打卡約束與適應的問題.
+公司成員間, 有許多職務都可隨時替代安排, 因此沒有“非我不可”, 加班與爆肝的問題.
+協同範例
+
+http://en.flossmanuals.net/_booki/openstreetmap/openstreetmap.pdf
+http://www.openstreetmap.org/
+協同原理
+
+http://en.wikipedia.org/wiki/General_theory_of_collaboration
+http://www.designingcollaboration.com/
+控制工廠間的協同
+協同的基本元素:
+
+協同的動機 - 為何要協同? 環境使然, 趨勢使然, 或者只是為協同而協同.
+協同的分享 - 協同過程中, 如何分享?(功勞記在誰頭上?) 分享甚麼?(要全盤托出嗎?) 何時分享? 跟誰分享?
+協同的溝通 - 該與誰溝通? 如何溝通? 溝通甚麼? 何時進行溝通?(隨選或即時或定時溝通)
+協同的廣度 - 協同的範圍取捨, 哪些領域與專長的人該進來協同?
+協同的效度 - 協同解決了甚麼問題? 解決誰的問題? 解決何時的問題? 問題真的解決了嗎?
+協同的支援 - 因協同而得的特殊支援項目, 當天就要塌下來了, 誰該負責?
+
+知識創建
+
+知識分為隱性與顯性, 一般的 know-how 屬於技術性的隱性知識, 另一種隱性知識則稱為認知型隱性知識
+認知型的隱性知識則包括團隊間的認知文化, 經驗與潛規則
+而顯性知識則泛指書本, 導引手冊, 指南等以文字, 影像, 語音, 圖表及多媒體型式, 清楚表達的資訊內容
+通常在新產品開發過程中, 透過團隊間付出與能力上的競爭, 會激化出隱性知識的創建
+隱性知識通常透過成員在組織間, 以較長時間浸濡方可傳承, 必須設法轉為顯性知識, 以加快並擴大知識所能產生的效益
+協同產品設計公司的挑戰之一則是如何將新產品開發過程中的隱性知識轉化為顯性知識
+http://l.kryptoniitti.com/lassial/files/summaries/100120-Nonaka_and_Takeuchi_1995_summary.pdf 
+on copy.com: https://copy.com/CzkayeKNeI2atnoc  (Knowledge creation company)
+on copy.com: https://copy.com/Z320KPqOaAiHnXRW (Summary of knowledge creation company)
+https://ai.wu.ac.at/~kaiser/birgit/Nonaka-Papers/From-information-processing-to-knowledge-creation-1996.pdf 
+on copy.com: https://copy.com/Zvvx1dg70VYMwzeG (From information processing to knowledge creation)
+https://wiki.hi.is/images/0505Nonaka_u_Toyama.pdf 
+on copy.com: https://copy.com/Zvvx1dg70VYMwzeG (Knowledge creation revisited)
+http://www.markd.nl/content/references/1990Hammer.pdf 
+on copy.com: http://www.markd.nl/content/references/1990Hammer.pdf (reengineering work)
+Volvo 全球協同下的知識管理: https://copy.com/8BGJy0bQqEkca104 
+顯性就是已經清楚表達出來的, 隱性就是存在但沒有清楚表達的
+
+書本, 導引手冊是顯性知識, 隱性知識又分兩種, 一種是團隊間大家都知道「一定」要這樣做才可以解決問題的知識, 又稱 know-how
+
+而另外一種隱性知識則是大家「一直」都這樣做的認知, 又稱文化, 習慣或潛規則</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

@@ -177,7 +177,7 @@ init_mathjax();
         <meta property="og:title" content="Kmolab initialized"/>
         <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/kmolab-initialized.html"/>
         <meta property="og:description" content="KMOL Lab 啟用 Github pages 靜態網頁 二十一世紀是電腦網路與人工智慧充分整合的世代, Kmolab 一直以來對於人才的培育, 始終強調必須充份了解電腦的基本運作, 實際應用網路架構提升設計效能, 並且採用演化分析方法來發揮電腦的高速運算能力. 然而這些理念的落實, 必須從電腦的操作系統安裝設定開始, 進而納入 IPV4 與 IPV6 網路協定架構整合, 並且每一成員都有能力運用近端、 廣域主機與雲端主機上的各項軟硬體資源, 將知識管理與最佳化應用的精神納入產品的設計開發, 才能真正融入知識經濟與國際協同的趨勢. 首先以安裝設定 Ubuntu Server 開始."/>
-        <meta property="article:published_time" content="2016-01-11" />
+        <meta property="article:published_time" content="2016-02-13" />
             <meta property="article:section" content="project" />
             <meta property="article:tag" content="研究室" />
             <meta property="article:tag" content="4032專題" />
@@ -269,7 +269,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-11T15:48:04.293910+08:00"> 一 11 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-02-13T09:45:39.704942+08:00"> 六 13 二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -290,8 +290,8 @@ Kmolab            </a>
 <p>首先以安裝設定 Ubuntu Server 開始.</p>
 
 
-<h1>安裝 Ubuntu Server</h1>
-<h2>基本系統安裝</h2>
+<h2>安裝 Ubuntu Server</h2>
+<h3>基本系統安裝</h3>
 <p>從 <a href="https://wiki.ubuntu.com/LTS">https://wiki.ubuntu.com/LTS</a>, 可以了解各 Ubuntu 版次的產品生命週期, 就現在這個時間點來說, Ubuntu 14.04 的生命週期最長, 因此選擇安裝 14.04 的 Server 版本.</p>
 <p>步驟一, 就是從 <a href="http://www.ubuntu.com/download/server">http://www.ubuntu.com/download/server</a> 下載 Ubuntu Server 14.04 版本的 iso 檔案, 然後燒錄到 DVD 光碟上, 然後用此光碟開機執行安裝.</p>
 <p>假如電腦並沒有 DVD 光碟機, 而只有早期的 CD Rom 光碟機, 可以下載 <a href="https://help.ubuntu.com/community/Installation/MinimalCD">https://help.ubuntu.com/community/Installation/MinimalCD</a>, 然後燒錄到 CD 片, 並且將網路線接上電腦的網路插槽, Ubuntu 就會透過網路線取得大部分的安裝資料, 順利完成安裝, 唯一必須注意的則是, 若此電腦位於內部網路, 通常必須要設定 proxy Server 才能順利從外部電腦取回安裝所需的資料.</p>
@@ -507,7 +507,7 @@ refresh_pattern . 0 20% 4320
 </pre></div>
 </td></tr></table>
 
-<h2>新增其他管理者與一般用戶帳號</h2>
+<h3>新增其他管理者與一般用戶帳號</h3>
 <p>新增一般用戶 (假設新帳號為 username):</p>
 <p>sudo adduser username</p>
 <p>過程中會先詢問允許執行 sudo 指令的帳號對應密碼, 然後再輸入兩次 username 的對應密碼</p>
@@ -542,14 +542,14 @@ refresh_pattern . 0 20% 4320
 
 <p>執行 Leo Editor</p>
 <p>leo&amp;</p>
-<h2>安裝 CMSimply</h2>
+<h3>安裝 CMSimply</h3>
 <p>sudo pip3 install cherrypy</p>
 <p>git clone cmsimply 原始碼後, 可以利用 python3 application 在 127.0.0.7:8080 執行</p>
-<h2>安裝 google-chrome</h2>
+<h3>安裝 google-chrome</h3>
 <p>sudo apt-get install libxss1 libappindicator1 libindicator7</p>
 <p>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</p>
 <p>sudo dpkg -i google-chrome*.deb</p>
-<h2>手動安裝 PyQt4</h2>
+<h3>手動安裝 PyQt4</h3>
 <p>先安裝 sip</p>
 <p>sudo wget http://sourceforge.net/projects/pyqt/files/sip/sip-4.16.9/sip-4.16.9.tar.gz</p>
 <p>sudo tar -xvf sip-4.16.9.tar.gz</p>
@@ -564,7 +564,7 @@ refresh_pattern . 0 20% 4320
 <p>sudo python3 configure.py</p>
 <p>sudo make</p>
 <p>sudo make install</p>
-<h2>手動安裝 Python 3.4.3</h2>
+<h3>手動安裝 Python 3.4.3</h3>
 <p>註: 在 <a href="https://bugs.launchpad.net/ubuntu/+source/python3.4/+bug/1503382">Ubuntu 1503382</a> 錯誤尚未解決之前, 必須手動移除 Python3, 然後手動安裝 Python 3.4.3 以及 pip3 之後, 才能安裝 uwsgi 模組.</p>
 <p>安裝 Python 之前, 先安裝 sqlite3 與 libsqlite3-dev (否則 Python 無法建立 sqlite3 模組)</p>
 <p>sudo apt-get install sqlite3 libsqlite3-dev</p>
@@ -585,14 +585,14 @@ refresh_pattern . 0 20% 4320
 <p>sudo python3 setup.py install</p>
 <p>安裝 uwsgi</p>
 <p>sudo pip3 install uwsgi</p>
-<h2>移除 nginx</h2>
+<h3>移除 nginx</h3>
 <p>只保留舊的設定檔案, 其餘移除</p>
 <p>sudo apt-get remove nginx nginx-common</p>
 <p>將所有與 nginx 有關的資料, 全數移除</p>
 <p>sudo apt-get purge nginx nginx-common</p>
 <p>移除用不到的相依套件</p>
 <p>sudo apt-get autoremove</p>
-<h2>設定 nginx 與 uwsgi</h2>
+<h3>設定 nginx 與 uwsgi</h3>
 <p>sudo apt-get install nginx</p>
 <p>內定 nginx 安裝目錄:</p>
 <p>/etc/nginx</p>
@@ -892,11 +892,11 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 <p><a href="https://[2001:288:6004:17::101]:8443">https://[2001:288:6004:17::101]:8443</a></p>
 <p><a href="http://140.130.17.101:88">http://140.130.17.101:88</a></p>
 <p><a href="https://140.130.17.101:8443">https://140.130.17.101:8443</a></p>
-<h2>純 IPV6 ssh</h2>
+<h3>純 IPV6 ssh</h3>
 <p>從只有 IPV6 網址的電腦要 ssh 到另一台 IPV6 電腦:</p>
 <p>ssh -6 帳號@IPV6 位址</p>
 <p>例如: ssh -6 account@2001:288:6004:1::1</p>
-<h2>安裝 Jupyterhub</h2>
+<h3>安裝 Jupyterhub</h3>
 <p>sudo apt-get install npm nodejs-legacy</p>
 <p>sudo npm install -g configurable-http-proxy</p>
 <p>sudo pip3 install jupyterhub</p>
@@ -908,22 +908,22 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 <p>或不指定 IP</p>
 <p>jupyterhub  –port 9443 –ssl-key my_ssl.key –ssl-cert my_ssl.cert</p>
 <p>之後則可以 https://jupyterIP:9443 連線</p>
-<h2>putty 與 x windows</h2>
+<h3>putty 與 x windows</h3>
 <p>SSH 設定</p>
 <p>X11 -&gt;X11 forwarding 勾選 Enable X11 forwarding</p>
 <p>X display location: 填入 localhost:0</p>
 <p>若在 Windows 環境, 希望能夠將其他電腦上的 X window 畫面顯示在近端, 必須先啟動 xming for Windows</p>
 <p><a href="http://sourceforge.net/projects/xming/">http://sourceforge.net/projects/xming/</a></p>
-<h1>github 倉儲協同流程</h1>
+<h2>github 倉儲協同流程</h2>
 <p>每一位成員在倉儲 users 目錄下各自擁有一個維護資料的 user.leo 檔案</p>
 <p>每位成員可以利用 git clone 方式, 將遠端現有的資料倉儲放入近端硬碟中</p>
 <p>在 content 目錄下, 以用戶名稱+日期的方式建立 .md 檔案, 若在近端測試, 可以利用 local-pelican 按鈕產生靜態網頁</p>
 <p>若在推送過程發現遠端有新的版本資料, 則必須透過 git pull origin gh-pages 的方式拉下資料後, 嘗試進行自動合併.</p>
 <p>若無共同編輯的 .md 檔案, 則通常可以利用 gh-pages-pelican 按鈕建立遠端使用的靜態文件檔.</p>
 <p>若各內容檢查無誤, 則可以推送到遠端.</p>
-<h2>Openshift  網站</h2>
+<h3>Openshift  網站</h3>
 <p>隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.</p>
-<h2>安裝 Beautifulsoup4</h2>
+<h3>安裝 Beautifulsoup4</h3>
 <p>由於 kmolab 靜態網誌中的 tipue_search plugin 需要 bs4, 因此必須透過 sudo apt-get install python3-bs4 安裝.</p>
             </div>
             <!-- /.entry-content -->
@@ -970,28 +970,28 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html">
-                            機械設計工程師的設計模擬與實作
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html">
+                            2016 Spring Collaborative Product Design Course
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/brython-and-amber-languages.html">
-                            Brython and Amber languages
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html">
+                            2016 Spring Web based Content Management
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html">
-                            近端 Jupyterhub 電腦主機設定
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html">
+                            2015 Fall CP part 2
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/pelican-setup.html">
-                            Pelican setup
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html">
+                            2015 Fall CP part 1
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html">
-                            Custom domain for Github pages
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-2.html">
+                            2015 Fall CADP part 2
                         </a>
                     </li>
                 </ul>
@@ -1006,7 +1006,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">
-                            <i class="fa fa-folder-open fa-lg"></i> cadlab
+                            <i class="fa fa-folder-open fa-lg"></i> CADlab
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -1016,7 +1016,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/project.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Project
+                            <i class="fa fa-folder-open fa-lg"></i> project
                         </a>
                     </li>
                     <li class="list-group-item">

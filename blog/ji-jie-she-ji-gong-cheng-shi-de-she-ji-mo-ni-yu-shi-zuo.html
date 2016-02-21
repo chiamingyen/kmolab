@@ -270,7 +270,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-19T10:01:46.461270+08:00"> 二 19 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-01-19T10:36:58.525197+08:00"> 二 19 一月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -1620,7 +1620,9 @@ ctx.restore()
 197
 198
 199
-200</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
+200
+201
+202</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
 <span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;gear2&quot;</span> <span class="na">width=</span><span class="s">&quot;800&quot;</span> <span class="na">height=</span><span class="s">&quot;400&quot;</span> <span class="na">style=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
 <span class="c">&lt;!-- 開始執行 Brython 繪圖 --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/python3&quot;</span><span class="nt">&gt;</span>
@@ -1699,7 +1701,8 @@ ctx.restore()
                 <span class="nx">alpha</span><span class="o">=</span><span class="nx">theta</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">atan</span><span class="p">(</span><span class="nx">theta</span><span class="p">)</span>
                 <span class="nx">xpt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">alpha</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
                 <span class="nx">ypt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">alpha</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
-                <span class="nx">xd</span><span class="o">=</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
+                <span class="nx">xd</span><span class="o">=</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span><span class="nx">重力啟動機械時鐘所需的齒輪組</span><span class="p">,</span> <span class="nx">然後在</span> <span class="nx">Onshape</span> <span class="nx">進行零組件設計繪圖</span><span class="p">,</span> <span class="nx">最後再用</span> <span class="mi">3</span><span class="nx">D</span> <span class="nx">印表機將零件印出並組裝測試</span><span class="p">.</span>
+
                 <span class="nx">yd</span><span class="o">=</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
                 <span class="err">#</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span> <span class="nx">時</span><span class="p">,</span> <span class="nx">繪線起點由齒根圓上的點</span><span class="p">,</span> <span class="nx">作為起點</span>
                 <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">:</span>
@@ -1750,7 +1753,8 @@ ctx.restore()
 <span class="nx">canvas</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">[</span><span class="s2">&quot;gear2&quot;</span><span class="p">]</span>
 <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">模數決定齒的尺寸大小</span><span class="p">,</span> <span class="nx">囓合齒輪組必須有相同的模數與壓力角</span>
+<span class="err">#</span> <span class="nx">模數決定齒的尺寸大小</span><span class="p">,</span> <span class="nx">囓合齒輪組必須有相同的模重力啟動機械時鐘所需的齒輪組</span><span class="p">,</span> <span class="nx">然後在</span> <span class="nx">Onshape</span> <span class="nx">進行零組件設計繪圖</span><span class="p">,</span> <span class="nx">最後再用</span> <span class="mi">3</span><span class="nx">D</span> <span class="nx">印表機將零件印出並組裝測試</span><span class="p">.</span>
+<span class="nx">數與壓力角</span>
 <span class="err">#</span> <span class="nx">壓力角</span> <span class="nx">pa</span> <span class="nx">單位為角度</span>
 <span class="nx">pa</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="err">#</span> <span class="nx">第1齒輪齒數</span>
@@ -1882,28 +1886,28 @@ ctx.restore()
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html">
-                            機械設計工程師的設計模擬與實作
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html">
+                            2016 Spring Collaborative Product Design Course
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/brython-and-amber-languages.html">
-                            Brython and Amber languages
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html">
+                            2016 Spring Web based Content Management
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html">
-                            近端 Jupyterhub 電腦主機設定
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html">
+                            2015 Fall CP part 2
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/pelican-setup.html">
-                            Pelican setup
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html">
+                            2015 Fall CP part 1
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html">
-                            Custom domain for Github pages
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-2.html">
+                            2015 Fall CADP part 2
                         </a>
                     </li>
                 </ul>
@@ -1918,7 +1922,7 @@ ctx.restore()
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">
-                            <i class="fa fa-folder-open fa-lg"></i> cadlab
+                            <i class="fa fa-folder-open fa-lg"></i> CADlab
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -1928,7 +1932,7 @@ ctx.restore()
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/project.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Project
+                            <i class="fa fa-folder-open fa-lg"></i> project
                         </a>
                     </li>
                     <li class="list-group-item">

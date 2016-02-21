@@ -177,7 +177,7 @@ init_mathjax();
         <meta property="og:title" content="About 17.101 server"/>
         <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html"/>
         <meta property="og:description" content="Ubuntu 伺服器 設定 介紹 17.101 機器的設定與使用 ubuntu-desktop 這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件: sudo apt-get install ubuntu-desktop nginx 與 uwsgi 之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線."/>
-        <meta property="article:published_time" content="2016-01-11" />
+        <meta property="article:published_time" content="2016-02-13" />
             <meta property="article:section" content="Ubuntu" />
             <meta property="article:tag" content="Linux" />
             <meta property="article:tag" content="設定" />
@@ -269,7 +269,7 @@ Kmolab            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-11T07:31:38.256567+08:00"> 一 11 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-02-13T09:45:39.748943+08:00"> 六 13 二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -285,10 +285,10 @@ Kmolab            </a>
                 </div>
                 <p>Ubuntu 伺服器 設定</p>
 <p>介紹 17.101 機器的設定與使用</p>
-<h1>ubuntu-desktop</h1>
+<h2>ubuntu-desktop</h2>
 <p>這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:</p>
 <p>sudo apt-get install ubuntu-desktop</p>
-<h1>nginx 與 uwsgi</h1>
+<h2>nginx 與 uwsgi</h2>
 <p>之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.</p>
 
 
@@ -334,7 +334,7 @@ iface em1 inet6 static
 
 <p><br />
 17.101 還安裝了 Nginx 與 uwsgi, 分別在 port 80 與 88 執行 CMSimply, 並在 <a href="https://140.130.17.101:9443">https://140.130.17.101:9443</a> 安裝 Jupyterhub, 只是 IPv6 模式下的 Jupyterhub 還無法使用.</p>
-<h1>squid proxy 伺服器</h1>
+<h2>squid proxy 伺服器</h2>
 <p>利用 sudo apt-get install squid, 安裝 squid proxy server.</p>
 <p>設定檔案位於 /etc/squid3/squid.conf</p>
 <p>每次修改設定檔案後, 利用 sudo service squid3 restart, 重新啟動.</p>
@@ -535,28 +535,28 @@ git config --global --unset https.proxy
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html">
-                            機械設計工程師的設計模擬與實作
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html">
+                            2016 Spring Collaborative Product Design Course
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/brython-and-amber-languages.html">
-                            Brython and Amber languages
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html">
+                            2016 Spring Web based Content Management
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html">
-                            近端 Jupyterhub 電腦主機設定
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html">
+                            2015 Fall CP part 2
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/pelican-setup.html">
-                            Pelican setup
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html">
+                            2015 Fall CP part 1
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html">
-                            Custom domain for Github pages
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-2.html">
+                            2015 Fall CADP part 2
                         </a>
                     </li>
                 </ul>
@@ -571,7 +571,7 @@ git config --global --unset https.proxy
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">
-                            <i class="fa fa-folder-open fa-lg"></i> cadlab
+                            <i class="fa fa-folder-open fa-lg"></i> CADlab
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -581,7 +581,7 @@ git config --global --unset https.proxy
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/project.html">
-                            <i class="fa fa-folder-open fa-lg"></i> Project
+                            <i class="fa fa-folder-open fa-lg"></i> project
                         </a>
                     </li>
                     <li class="list-group-item">
