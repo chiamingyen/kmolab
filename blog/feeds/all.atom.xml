@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-21T17:57:36+08:00</updated><entry><title>2016 Spring Collaborative Product Design Course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html" rel="alternate"></link><updated>2016-02-21T17:57:36+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-collaborative-product-design-course.html</id><summary type="html">&lt;p&gt;2016 Spring 產品設計實習課程 W1&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-21T21:45:08+08:00</updated><entry><title>computational thinking and digitally literate</title><link href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T21:45:08+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study"&gt;https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;computational thinking and digitally literate&lt;/p&gt;
+&lt;p&gt;運算思維與數位化教育&lt;/p&gt;
+&lt;p&gt;Computing has deep links with mathematics, science and design and technology, and provides insights into both natural and artificial systems.&lt;/p&gt;
+&lt;p&gt;運算與數學、科學、設計及科技都有很緊密的關聯, 能讓我們充份了解自然或人造的系統.&lt;/p&gt;
+&lt;p&gt;Computing also ensures that pupils become digitally literate – able to use, and express themselves and develop their ideas through, information and communication technology – at a level suitable for the future workplace and as active participants in a digital world.&lt;/p&gt;
+&lt;p&gt;運算同時確保學習者俱備數位認知, 能夠運用、表達並透過資訊與通訊科技開展理念, 並在未來的數位世界職場中成為積極的參與者.&lt;/p&gt;
+&lt;p&gt;Aim:&lt;/p&gt;
+&lt;p&gt;運算教育的目標:&lt;/p&gt;
+&lt;p&gt;can understand and apply the fundamental principles and concepts of computer science, including abstraction, logic, algorithms and data representation&lt;/p&gt;
+&lt;p&gt;能夠了解並應用電腦科學的基本原理與概念, 包括抽象、邏輯, 演算法, 以及數據表達.&lt;/p&gt;
+&lt;p&gt;can analyse problems in computational terms, and have repeated practical experience of writing computer programs in order to solve such problems&lt;/p&gt;
+&lt;p&gt;能夠透過運算術語分析問題, 並且運用多重的程式編寫實務經驗, 來解決問題.&lt;/p&gt;
+&lt;p&gt;can evaluate and apply information technology, including new or unfamiliar technologies, analytically to solve problems&lt;/p&gt;
+&lt;p&gt;能夠應用資訊科技, 對全新或原本並不熟悉的科技進行評量, 能夠採解析方法解決各種問題.&lt;/p&gt;
+&lt;p&gt;are responsible, competent, confident and creative users of information and communication technology&lt;/p&gt;
+&lt;p&gt;成為肯負責、能勝任、具備信心與創意的資訊及通信科技使用者.&lt;/p&gt;</summary><category term="運算思維"></category><category term="數位化教育"></category></entry><entry><title>2016 Spring Web based Content Management</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html" rel="alternate"></link><updated>2016-02-21T20:36:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-web-based-content-management.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理 W1&lt;/p&gt;
+
+
+&lt;h2&gt;2016 Spring 網際內容管理:&lt;/h2&gt;
+&lt;h3&gt;可攜套件倉儲:&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/chiamingyen/kmol2016"&gt;https://github.com/chiamingyen/kmol2016&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;kmol2016 下載:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX"&gt;https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallhw/2016springwcm"&gt;https://github.com/2015fallhw/2016springwcm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/2016springwcm/"&gt;http://2015fallhw.github.io/2016springwcm/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;網際繪圖程式庫 (與 CD 課程共用): &lt;a href="https://github.com/2015fallhw/arcidau"&gt;https://github.com/2015fallhw/arcidau&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;http://2015fallhw.github.io/arcidau/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;結合 &lt;a href="http://reeborg.ca/"&gt;http://reeborg.ca/&lt;/a&gt; 與 &lt;a href="https://codemirror.net/"&gt;https://codemirror.net/&lt;/a&gt; 還有 &lt;a href="https://github.com/google/blockly"&gt;https://github.com/google/blockly&lt;/a&gt;,  我們能否自行打造類似 &lt;a href="https://studio.code.org/hoc/2"&gt;https://studio.code.org/hoc/2&lt;/a&gt; 的網站, 並且逐步建構泛用型網際 2D/3D 機械設計資源中心, 以探索、儲存與開發機械設計相關內容的網站邁進.&lt;/p&gt;
+&lt;p&gt;參考:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/josephg/Chipmunk-js"&gt;https://github.com/josephg/Chipmunk-js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/viblo/pymunk"&gt;https://github.com/viblo/pymunk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/user/thang010146/videos"&gt;https://www.youtube.com/user/thang010146/videos&lt;/a&gt; (使用 AutoDesk Inventor 建置)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZO2f4ZQTLgWWIyTiuLdB3vkcuutS65plv7"&gt;機構介紹 1&lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZI2f4ZdR1tblX7Tj0Wf6glOgW5fjSG6LYV"&gt;機構介紹 2&lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZa2f4Z1faO9LKQUlQJhJkCSeQQzmHanqfy"&gt;機構介紹 3 &lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZ32f4ZMrcoB5nWPC4coh9yQAaXSfbFuivk"&gt;機構介紹 4 &lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.algodoo.com/"&gt;http://www.algodoo.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linkage &lt;a href="http://chiamingyen.github.io/linkage/"&gt;http://chiamingyen.github.io/linkage/&lt;/a&gt; 操作步驟:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按下 c 刪除畫面所有內容&lt;/li&gt;
+&lt;li&gt;利用滑鼠左鍵, 在螢幕點出4個四連桿的4個關鍵點&lt;/li&gt;
+&lt;li&gt;利用滑鼠左鍵, 點選第一個點 ,令其變為藍色&lt;/li&gt;
+&lt;li&gt;再以滑鼠左鍵, 點選第1桿件的第二個點, 滑鼠按下後, 先不要放開, 等左手按下 Alt 後, 並讓 Alt 鍵與滑鼠左鍵同時放開, 就可以順利利用第1點與第2點建立一個連桿&lt;/li&gt;
+&lt;li&gt;利用相同方法 ,建立第2與第3可動桿&lt;/li&gt;
+&lt;li&gt;以滑鼠左鍵, 選擇第1點, 然後按下 f 鍵, 表示要固定這個點, 此時點的顏色轉為紅色, 並且釋出其對應的自由度&lt;/li&gt;
+&lt;li&gt;再用相同方法 ,固定第四點&lt;/li&gt;
+&lt;li&gt;選擇要追蹤的點, 然後按下 t (tracking)&lt;/li&gt;
+&lt;li&gt;機構的作動則依靠, 選追蹤點, 左手按住 Shift 鍵, 然後移動滑鼠位置, 讓追蹤點隨滑鼠移動, 即可留下特定點的運動軌跡.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;歷年課程回顧&lt;/h2&gt;
+&lt;h3&gt;2015 Spring 網際內容管理:&lt;/h3&gt;
+&lt;p&gt;Wordpress: &lt;a href="http://wordpress-2015course.rhcloud.com/?cat=2"&gt;http://wordpress-2015course.rhcloud.com/?cat=2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86"&gt;CMSimply 網站&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/coursemdetw/2015wcm"&gt;https://github.com/coursemdetw/2015wcm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gitbook: &lt;a href="https://www.gitbook.com/book/coursemde/2015wcm"&gt;https://www.gitbook.com/book/coursemde/2015wcm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vimeo 教學影片: &lt;a href="https://vimeo.com/tag:2015wcm"&gt;https://vimeo.com/tag:2015wcm&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2016 Spring Collaborative Product Design Course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html" rel="alternate"></link><updated>2016-02-21T17:57:36+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-collaborative-product-design-course.html</id><summary type="html">&lt;p&gt;2016 Spring 產品設計實習課程 W1&lt;/p&gt;
 
 
 &lt;h2&gt;2016 Spring 協同產品設計實習:&lt;/h2&gt;
@@ -78,49 +139,7 @@
 &lt;h3&gt;2012 Spring 協同產品設計實習:&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://blog.kmol.info/indexd06b.html?cat=8&amp;amp;paged=3"&gt;http://blog.kmol.info/indexd06b.html?cat=8&amp;amp;paged=3&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;2011 Spring 協同產品設計實習:&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4"&gt;http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>2016 Spring Web based Content Management</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html" rel="alternate"></link><updated>2016-02-21T17:33:48+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-web-based-content-management.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理 W1&lt;/p&gt;
-
-
-&lt;h2&gt;2016 Spring 網際內容管理:&lt;/h2&gt;
-&lt;h3&gt;可攜套件倉儲:&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://github.com/chiamingyen/kmol2016"&gt;https://github.com/chiamingyen/kmol2016&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;kmol2016 下載:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX"&gt;https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallhw/2016springwcm"&gt;https://github.com/2015fallhw/2016springwcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/2016springwcm/"&gt;http://2015fallhw.github.io/2016springwcm/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;網際繪圖程式庫 (與 CD 課程共用): &lt;a href="https://github.com/2015fallhw/arcidau"&gt;https://github.com/2015fallhw/arcidau&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;http://2015fallhw.github.io/arcidau/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;結合 &lt;a href="http://reeborg.ca/"&gt;http://reeborg.ca/&lt;/a&gt; 與 &lt;a href="https://codemirror.net/"&gt;https://codemirror.net/&lt;/a&gt; 還有 &lt;a href="https://github.com/google/blockly"&gt;https://github.com/google/blockly&lt;/a&gt;,  我們能否自行打造類似 &lt;a href="https://studio.code.org/hoc/2"&gt;https://studio.code.org/hoc/2&lt;/a&gt; 的網站, 並且逐步建構泛用型網際 2D/3D 機械設計資源中心, 以探索、儲存與開發機械設計相關內容的網站邁進.&lt;/p&gt;
-&lt;p&gt;參考:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="https://github.com/josephg/Chipmunk-js"&gt;https://github.com/josephg/Chipmunk-js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/viblo/pymunk"&gt;https://github.com/viblo/pymunk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/user/thang010146/videos"&gt;https://www.youtube.com/user/thang010146/videos&lt;/a&gt; (使用 AutoDesk Inventor 建置)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZO2f4ZQTLgWWIyTiuLdB3vkcuutS65plv7"&gt;機構介紹 1&lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZI2f4ZdR1tblX7Tj0Wf6glOgW5fjSG6LYV"&gt;機構介紹 2&lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZa2f4Z1faO9LKQUlQJhJkCSeQQzmHanqfy"&gt;機構介紹 3 &lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZ32f4ZMrcoB5nWPC4coh9yQAaXSfbFuivk"&gt;機構介紹 4 &lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.algodoo.com/"&gt;http://www.algodoo.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Linkage &lt;a href="http://chiamingyen.github.io/linkage/"&gt;http://chiamingyen.github.io/linkage/&lt;/a&gt; 操作步驟:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;按下 c 刪除畫面所有內容&lt;/li&gt;
-&lt;li&gt;利用滑鼠左鍵, 在螢幕點出4個四連桿的4個關鍵點&lt;/li&gt;
-&lt;li&gt;利用滑鼠左鍵, 點選第一個點 ,令其變為藍色&lt;/li&gt;
-&lt;li&gt;再以滑鼠左鍵, 點選第1桿件的第二個點, 滑鼠按下後, 先不要放開, 等左手按下 Alt 後, 並讓 Alt 鍵與滑鼠左鍵同時放開, 就可以順利利用第1點與第2點建立一個連桿&lt;/li&gt;
-&lt;li&gt;利用相同方法 ,建立第2與第3可動桿&lt;/li&gt;
-&lt;li&gt;以滑鼠左鍵, 選擇第1點, 然後按下 f 鍵, 表示要固定這個點, j此時點的顏色轉為紅色, 並且釋出其對應的自由度&lt;/li&gt;
-&lt;li&gt;再用相同方法 ,固定第四點&lt;/li&gt;
-&lt;li&gt;選擇要追蹤的點, 然後按下 t (tracking)&lt;/li&gt;
-&lt;li&gt;機構的作動則依靠, 選追蹤點, 然後移動滑鼠位置, 讓追蹤點隨滑鼠移動, 即可留下特定點的運動軌跡.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;歷年課程回顧&lt;/h2&gt;
-&lt;h3&gt;2015 Spring 網際內容管理:&lt;/h3&gt;
-&lt;p&gt;Wordpress: &lt;a href="http://wordpress-2015course.rhcloud.com/?cat=2"&gt;http://wordpress-2015course.rhcloud.com/?cat=2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86"&gt;CMSimply 網站&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/coursemdetw/2015wcm"&gt;https://github.com/coursemdetw/2015wcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Gitbook: &lt;a href="https://www.gitbook.com/book/coursemde/2015wcm"&gt;https://www.gitbook.com/book/coursemde/2015wcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Vimeo 教學影片: &lt;a href="https://vimeo.com/tag:2015wcm"&gt;https://vimeo.com/tag:2015wcm&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4"&gt;http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
 &lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
