@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-21T21:47:57+08:00</updated><entry><title>computational thinking and digitally literate</title><link href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T21:47:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-23T17:27:54+08:00</updated><entry><title>2016 Spring CD Task0</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-cd-task0.html" rel="alternate"></link><updated>2016-02-23T17:27:54+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-23:kmolab/blog/2016-spring-cd-task0.html</id><summary type="html">&lt;p&gt;這個實習任務的目的, 在讓學員根據分組與電腦教室座位編排的問題, 進行思考, 如何以協同方式或流程, 有效完成任務&lt;/p&gt;
+
+
+&lt;p&gt;學期伊始, 一如往常, 各班學員以每 6 人一組為原則, 在 Cadlab 電腦教室安排固定座位, 但是 2016 Spring 開始, 儘管允許學員自行編組, 但是同組學員卻希望故意錯開座位, 讓所有爾後各組的產品設計解題都能夠儘量透過資訊與通訊系統完成, 而且所有溝通流程與內容都能夠存在產品開發專案中.&lt;/p&gt;
+&lt;p&gt;首先採用 &lt;a href="https://ethercalc.tw/"&gt;https://ethercalc.tw/&lt;/a&gt; 讓所有上課學員, 以即時同步模式, 填入分組資料, 若以 2a 班級為例, 分組資料中只填入學員學號, 則可以直接從瀏覽器畫面中複製分組資料, 放入 SciTE 中, 存為 2016_cd_2a_1.txt, 若利用 ethercalc 的 clipboard 格式轉檔, 可以存為 csv 格式, 存為 2016_cd_2a_2.txt, 且從學校開課前學員選課資料, 可得選課學員學號名單, 存為 2016_cd_2a_3.txt.&lt;/p&gt;
+&lt;p&gt;Task0 的任務, 就是以各班協同分組後所取得的這 3 個檔案開始, 依據下列敘述, 完成各班的 Cadlab 電腦教室座位表, 讓每一位學員都能夠知道所被分配的學期固定座位, 並在爾後上課依序入座.&lt;/p&gt;
+&lt;p&gt;任務描述:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每組以 6 人為原則, 至少 4 人, 至多 7 人&lt;/li&gt;
+&lt;li&gt;各組學員, 以學號遞增排序後, 排序第1者為組長, 負責代表該組與其他組進行溝通&lt;/li&gt;
+&lt;li&gt;各組的班級分組序號, 則依據各組組長的學號, 再進行各組比序, 以遞增方式排列, 排序第1者為第1組, 其餘依序定下各組序號組別&lt;/li&gt;
+&lt;li&gt;Cadlab 電腦教室的配置為每列 9 排, 共有 7 列, 因此若每人一台電腦排座位, 可以容納 63 名學員&lt;/li&gt;
+&lt;li&gt;固定座位命名方式, 以面對講台的最右邊為第1排, 以最靠近講台者為第1列&lt;/li&gt;
+&lt;li&gt;一旦各組依照學員學號排序定組序後, 第1組的第1名同學, 從第1排第1列開始固定座位, 接著排第二組的第1位同學, 排在第1排的第2列座位, 然後將第三組的第1位同學, 排在第1排的第3列座位, 依此類推&lt;/li&gt;
+&lt;li&gt;座位安排中, 第1排排至第七列後, 則接著排在第2排的第1列座位上, 且各組若不及 7 位學員時, 則該座位由下一組的順位同學遞補&lt;/li&gt;
+&lt;li&gt;完成座位編排後, 必須能夠轉為網頁格式, 放入各組的協同倉儲所對應的 gh-pages 網頁或 OpenShift 網頁中&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>computational thinking and digitally literate</title><link href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T21:47:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study"&gt;https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study&lt;/a&gt;&lt;/p&gt;

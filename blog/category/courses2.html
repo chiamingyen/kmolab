@@ -247,6 +247,23 @@ Kmolab            </a>
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">2015 Fall CADP W16</a></h2>
+                <div class="summary"><p>根據 <a href="https://copy.com/DXQiGkDoe9K8Cz7m">Nutcracker 機構</a>的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.</p>
+<p><img src="https://copy.com/NVBFOibIyl0vUD13" width="600" /></p>
+<p><img src="https://copy.com/lXWOkfyiPVYqjM2c" width="600" /></p>
+<p>計算 Piston 不發生干涉的有效行程, 可採如下方法:</p>
+<ol>
+<li>實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)</li>
+<li>利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)</li>
+<li>利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, <a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb">計算出</a>的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)</li>
+<li>除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用<a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py">基因演算法解題</a>, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 <a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb">Jupyterhub 平台</a>上進行運算)</li>
+</ol>
+
+                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html">2015 Fall Final Schedule</a></h2>
                 <div class="summary"><p>2015 Fall 學期成績評分時程規劃</p>
 <p>最後資料改版期限: 2016.01.20 (星期三) 24:00</p>
@@ -283,6 +300,11 @@ Kmolab            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-cd-task0.html">
+                            2016 Spring CD Task0
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html">
                             computational thinking and digitally literate
                         </a>
@@ -300,11 +322,6 @@ Kmolab            </a>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html">
                             2015 Fall CP part 2
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html">
-                            2015 Fall CP part 1
                         </a>
                     </li>
                 </ul>
