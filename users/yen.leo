@@ -84,7 +84,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160106093510.1"><vh>201601</vh>
+<v t="amd.20160106093510.1" a="E"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
@@ -122,6 +122,7 @@
 <v t="amd.20160221125630.1"><vh>@edit yen_20160221-1.md</vh></v>
 <v t="amd.20160221204026.1"><vh>@edit yen_20160221-2.md</vh></v>
 <v t="amd.20160223165441.1"><vh>@edit yen_20160223.md</vh></v>
+<v t="amd.20160224093221.1"><vh>@edit yen_20160224.md</vh></v>
 </v>
 </v>
 </v>
@@ -665,15 +666,15 @@ http://www.designingcollaboration.com/
 隱性知識通常透過成員在組織間, 以較長時間浸濡方可傳承, 必須設法轉為顯性知識, 以加快並擴大知識所能產生的效益
 協同產品設計公司的挑戰之一則是如何將新產品開發過程中的隱性知識轉化為顯性知識
 http://l.kryptoniitti.com/lassial/files/summaries/100120-Nonaka_and_Takeuchi_1995_summary.pdf 
-on copy.com: https://copy.com/CzkayeKNeI2atnoc  (Knowledge creation company)
-on copy.com: https://copy.com/Z320KPqOaAiHnXRW (Summary of knowledge creation company)
+or &lt;http://chiamingyen.github.io/kmolab_data/files/The-Knowledge-Creating-Company-Nonaka.pdf&gt;  (Knowledge creation company)
+or &lt;http://chiamingyen.github.io/kmolab_data/files/Nonaka_and_Takeuchi_1995_summary.pdf&gt; (Summary of knowledge creation company)
 https://ai.wu.ac.at/~kaiser/birgit/Nonaka-Papers/From-information-processing-to-knowledge-creation-1996.pdf 
-on copy.com: https://copy.com/Zvvx1dg70VYMwzeG (From information processing to knowledge creation)
+or &lt;http://chiamingyen.github.io/kmolab_data/files/From-information-processing-to-knowledge-creation-1996.pdf&gt; (From information processing to knowledge creation)
 https://wiki.hi.is/images/0505Nonaka_u_Toyama.pdf 
-on copy.com: https://copy.com/Zvvx1dg70VYMwzeG (Knowledge creation revisited)
+or &lt;http://chiamingyen.github.io/kmolab_data/files/0505Nonaka_u_Toyama.pdf&gt;  (Knowledge creation revisited)
 http://www.markd.nl/content/references/1990Hammer.pdf 
-on copy.com: http://www.markd.nl/content/references/1990Hammer.pdf (reengineering work)
-Volvo 全球協同下的知識管理: https://copy.com/8BGJy0bQqEkca104 
+or &lt;http://chiamingyen.github.io/kmolab_data/files/1990Hammer.pdf&gt; (reengineering work)
+Volvo 全球協同下的知識管理: &lt;http://chiamingyen.github.io/kmolab_data/files/km_global_team.pdf&gt;
 顯性就是已經清楚表達出來的, 隱性就是存在但沒有清楚表達的
 
 書本, 導引手冊是顯性知識, 隱性知識又分兩種, 一種是團隊間大家都知道「一定」要這樣做才可以解決問題的知識, 又稱 know-how

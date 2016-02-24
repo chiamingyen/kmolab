@@ -23,18 +23,18 @@ KMOL Lab 為台灣國立虎尾科技大學, 機械設計工程系, 知識管理�
 
 ##KMOL 標誌
 
-<img src="https://copy.com/QHWbodvOvAyU6YL7" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_1172x340_red_3yrs.png" width="300"></img>
 
-<img src="https://copy.com/1h9QDFaG7gEFL1fl" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_1172x340_green_3yrs.png" width="300"></img>
 
-<img src="https://copy.com/i97jaSY1OMh6wAv2" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_1172x340_blue_3yrs.png" width="300"></img>
 
-<img src="https://copy.com/Kp1RYtHEOgwbPygb" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_1172x340_yellow_3yrs.png" width="300"></img>
 
-<img src="https://copy.com/hKlyUMrfKX8DuWxZ" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_1172x340_color_3yrs.png" width="300"></img>
 
-<img src="https://copy.com/fN4Gto1QccCl3cia" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_1172x340_bw_3yrs.png" width="300"></img>
 
-<img src="https://copy.com/MtGsJq0rNOCNJ2nC" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/kmol_rotary_570x570.png" width="300"></img>
 
-<img src="https://copy.com/V6FyTPpsAlcXWslK" width="300"></img>
+<img src="https://raw.githubusercontent.com/chiamingyen/kmolab/gh-pages/logo/3yrs_camel.jpg" width="300"></img>
