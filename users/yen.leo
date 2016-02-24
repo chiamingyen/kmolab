@@ -84,7 +84,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160106093510.1" a="E"><vh>201601</vh>
+<v t="amd.20160106093510.1"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
@@ -123,11 +123,12 @@
 <v t="amd.20160221204026.1"><vh>@edit yen_20160221-2.md</vh></v>
 <v t="amd.20160223165441.1"><vh>@edit yen_20160223.md</vh></v>
 <v t="amd.20160224093221.1"><vh>@edit yen_20160224.md</vh></v>
+<v t="amd.20160224124815.1"><vh>@edit yen_20160224-1.md</vh></v>
 </v>
 </v>
 </v>
 </v>
-<v t="amd.20160106094754.1" a="E"><vh>@path ./../content/pages</vh>
+<v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
 <v t="amd.20160106094829.1" a="E"><vh>yen pages 文章</vh>
 <v t="amd.20160106094844.1"><vh>@edit yen_pages_1.md</vh></v>
 </v>
