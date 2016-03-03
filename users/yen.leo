@@ -126,6 +126,9 @@
 <v t="amd.20160224124815.1"><vh>@edit yen_20160224-1.md</vh></v>
 </v>
 </v>
+<v t="amd.20160303201215.1" a="E"><vh>201603</vh>
+<v t="amd.20160303201222.1"><vh>@edit yen_20160303.md</vh></v>
+</v>
 </v>
 </v>
 <v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
@@ -681,6 +684,7 @@ Volvo 全球協同下的知識管理: &lt;http://chiamingyen.github.io/kmolab_da
 書本, 導引手冊是顯性知識, 隱性知識又分兩種, 一種是團隊間大家都知道「一定」要這樣做才可以解決問題的知識, 又稱 know-how
 
 而另外一種隱性知識則是大家「一直」都這樣做的認知, 又稱文化, 習慣或潛規則</t>
+<t tx="amd.20160303201215.1"></t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
