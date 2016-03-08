@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
@@ -75,8 +75,14 @@
 </v>
 </v>
 </v>
-<v t="amd.20160107100615.1"><vh>已知系統問題</vh>
-<v t="amd.20160107100627.1"><vh>disqus</vh></v>
+<v t="amd.20160303212723.1"><vh>2016spring課程</vh>
+<v t="amd.20160303212735.1"><vh>2016springcd</vh></v>
+<v t="amd.20160303212739.1"><vh>2016springwcm</vh></v>
+<v t="amd.20160303213007.1"><vh>cptocadp</vh></v>
+<v t="amd.20160303213301.1" a="E"><vh>projectmdetw</vh>
+<v t="amd.20160303213308.1"><vh>www</vh></v>
+<v t="amd.20160303213346.1"><vh>ethercalc</vh></v>
+</v>
 </v>
 </v>
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
@@ -128,6 +134,7 @@
 </v>
 <v t="amd.20160303201215.1" a="E"><vh>201603</vh>
 <v t="amd.20160303201222.1"><vh>@edit yen_20160303.md</vh></v>
+<v t="amd.20160308133314.1"><vh>@edit yen_20160309.md</vh></v>
 </v>
 </v>
 </v>
@@ -195,12 +202,6 @@ pages 文章
 <t tx="amd.20160106094754.1"></t>
 <t tx="amd.20160106094829.1"></t>
 <t tx="amd.20160106095324.1"></t>
-<t tx="amd.20160107100615.1"></t>
-<t tx="amd.20160107100627.1">有時更新後, 會失去 disqus 留言系統連結
-
-具體原因: 因為沒有使用遠端按鈕轉檔, 因此送到遠端的資料為近端沒有 disqus 連結的格式
-
-解決方案: 設法提醒在送到遠端之前, 一定要弄對格式</t>
 <t tx="amd.20160111234254.1">@language md
 Title: 機械設計工程師的計算機程式
 Category: Courses
@@ -685,6 +686,23 @@ Volvo 全球協同下的知識管理: &lt;http://chiamingyen.github.io/kmolab_da
 
 而另外一種隱性知識則是大家「一直」都這樣做的認知, 又稱文化, 習慣或潛規則</t>
 <t tx="amd.20160303201215.1"></t>
+<t tx="amd.20160303212723.1"></t>
+<t tx="amd.20160303212735.1">github: https://github.com/2015fallhw/2016springcd
+
+openshift: 2015fallhw At Gmail</t>
+<t tx="amd.20160303212739.1">github: https://github.com/2015fallhw/2016springwcm
+
+openshift: 2015fallhw At Gmail.com</t>
+<t tx="amd.20160303213007.1">github: https://github.com/2015fallhw/cptocadp
+
+openshift: 
+
+2015fallhw At gmail
+
+http://cptocadp-2015fallhw.rhcloud.com/</t>
+<t tx="amd.20160303213301.1">利用 projectmdetw At Gmail 登記</t>
+<t tx="amd.20160303213308.1">http://www-projectmdetw.rhcloud.com/</t>
+<t tx="amd.20160303213346.1">http://nodejs-projectmdetw.rhcloud.com/</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
