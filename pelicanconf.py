@@ -40,7 +40,7 @@ DEFAULT_PAGINATION = 10
 
 # 必須絕對目錄或相對於設定檔案所在目錄
 PLUGIN_PATHS = ['plugin']
-PLUGINS = ['liquid_tags.notebook', 'summary', 'tipue_search', 'sitemap']
+PLUGINS = ['liquid_tags.notebook', 'summary', 'tipue_search', 'sitemap', 'render_math']
 
 # for sitemap plugin
 SITEMAP = {

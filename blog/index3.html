@@ -181,12 +181,58 @@ init_mathjax();
         <link rel="stylesheet" href="http://chiamingyen.github.io/kmolab/blog/theme/css/bootstrap.united.min.css" type="text/css"/>
     <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/pygments/fruity.css" rel="stylesheet">
+    <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/pygments/monokai.css" rel="stylesheet">
     <link href="http://chiamingyen.github.io/kmolab/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://chiamingyen.github.io/kmolab/blog/theme/css/style.css" type="text/css"/>
 
         <link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Kmolab ATOM Feed"/>
+
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
 
 </head>
 <body>
@@ -245,6 +291,33 @@ Kmolab            </a>
     <div class="row">
         <div class="col-sm-9">
 
+            <article>
+                <h2><a href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html">2016 WCM course</a></h2>
+                <div class="summary"><p>2016 Spring 網際內容管理課程規劃</p>
+<h2>github pages 上的靜態網頁系統</h2>
+<p>Github pages, Leo Editor 與 Pelican site builder</p>
+<h2>html 與 Javascript (Brython based)</h2>
+<h2>Python3 的動態網頁 (Flask 與 SQLite based)</h2>
+<p>OpenShift Web Console: <a href="https://www.openshift.com">https://www.openshift.com</a> 與近端 Flask: <a href="http://flask.pocoo.org">http://flask.pocoo.org</a> based 網站程式開發</p>
+
+                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html">About 17.101 server</a></h2>
+                <div class="summary"><p>Ubuntu 伺服器 設定</p>
+<p>介紹 17.101 機器的設定與使用</p>
+<h2>ubuntu-desktop</h2>
+<p>這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:</p>
+<p>sudo apt-get install ubuntu-desktop</p>
+<h2>nginx 與 uwsgi</h2>
+<p>之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.</p>
+
+                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
             <article>
                 <h2><a href="http://chiamingyen.github.io/kmolab/blog/kmolab-initialized.html">Kmolab initialized</a></h2>
                 <div class="summary"><p>KMOL Lab 啟用 Github pages 靜態網頁</p>
@@ -313,31 +386,6 @@ Kmolab            </a>
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html">Custom domain for Github pages</a></h2>
-                <div class="summary"><p>如何設定 Github pages 網頁符號名稱綁定</p>
-
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html">2015 Fall Final Schedule</a></h2>
-                <div class="summary"><p>2015 Fall 學期成績評分時程規劃</p>
-<p>最後資料改版期限: 2016.01.20 (星期三) 24:00</p>
-<p>評分流程:</p>
-<ol>
-<li>從各班個人連結頁面中 (<a href="https://github.com/2015fallhw/2015fallcadpa/wiki">2a</a>, <a href="https://github.com/2015fallhw/2015fallcadpb/wiki">2b</a>, <a href="https://github.com/2015fallhw/2015fallcpa/wiki">1a</a>, <a href="https://github.com/2015fallhw/2015fallcpa/wiki">1b</a>), 進入各學員在各班倉儲中對應的<strong>個人 gh-pages 網頁</strong></li>
-<li>從上述頁面右下方的 Blogroll 中<strong>最下方</strong>連結 (名稱為"學號 個人網頁"), 進入學員個人單獨的 gh-pages 網頁</li>
-<li>根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 <strong>投影片</strong>, <strong>操作影片</strong>以及頁面上的其他<strong>相關檔案資料</strong>評分.</li>
-<li>從各班的協同網頁中, 各組所公佈的分組報告中的 <strong>投影片</strong>, <strong>操作影片</strong>以及頁面上的其他<strong>相關檔案資料</strong>評分.</li>
-<li>cadp 課程另外將參酌學員所完成的 <strong>Solvespace 零件檔案</strong>, <strong>Creo Parametric 零組件檔案</strong>, Onshape 零組件檔案評分.</li>
-</ol>
-
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="http://chiamingyen.github.io/kmolab/blog/index2.html">&laquo;</a>
@@ -363,6 +411,16 @@ Kmolab            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html">
+                            全球資訊網上的內容管理系統
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html">
+                            機械設計流程的內容與管理
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html">
                             利用 Github 執行協同設計專案
                         </a>
@@ -375,16 +433,6 @@ Kmolab            </a>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html">
                             2016 Spring Collaborative Product Design Course
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/about-lektor-content-management-system.html">
-                            About Lektor Content Management System
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/create-an-online-ethercalc-site.html">
-                            Create an online Ethercalc site
                         </a>
                     </li>
                 </ul>

@@ -188,12 +188,58 @@ init_mathjax();
         <link rel="stylesheet" href="http://chiamingyen.github.io/kmolab/blog/theme/css/bootstrap.united.min.css" type="text/css"/>
     <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/pygments/fruity.css" rel="stylesheet">
+    <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/pygments/monokai.css" rel="stylesheet">
     <link href="http://chiamingyen.github.io/kmolab/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     <link rel="stylesheet" href="http://chiamingyen.github.io/kmolab/blog/theme/css/style.css" type="text/css"/>
 
         <link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Kmolab ATOM Feed"/>
+
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
 
 </head>
 <body>
@@ -354,6 +400,16 @@ Kmolab            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html">
+                            全球資訊網上的內容管理系統
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html">
+                            機械設計流程的內容與管理
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html">
                             利用 Github 執行協同設計專案
                         </a>
@@ -366,16 +422,6 @@ Kmolab            </a>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html">
                             2016 Spring Collaborative Product Design Course
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/about-lektor-content-management-system.html">
-                            About Lektor Content Management System
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/create-an-online-ethercalc-site.html">
-                            Create an online Ethercalc site
                         </a>
                     </li>
                 </ul>

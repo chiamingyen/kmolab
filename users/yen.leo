@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
@@ -51,7 +51,7 @@
 </v>
 </v>
 <v t="amd.20151215154950.1" a="E"><vh>@path pelican-bootstrap3_local</vh>
-<v t="amd.20151215154950.2"><vh>@path templates</vh>
+<v t="amd.20151215154950.2" a="E"><vh>@path templates</vh>
 <v t="amd.20151215154950.3"><vh>@edit base.html</vh></v>
 <v t="amd.20151215154950.4"><vh>@edit search.html</vh></v>
 <v t="amd.20151215162536.1" a="E"><vh>@path includes</vh>
@@ -135,6 +135,8 @@
 <v t="amd.20160303201215.1" a="E"><vh>201603</vh>
 <v t="amd.20160303201222.1"><vh>@edit yen_20160303.md</vh></v>
 <v t="amd.20160308133314.1"><vh>@edit yen_20160309.md</vh></v>
+<v t="amd.20160311160710.1"><vh>@edit yen_20160311.md</vh></v>
+<v t="amd.20160312225435.1"><vh>@edit yen_20160312.md</vh></v>
 </v>
 </v>
 </v>

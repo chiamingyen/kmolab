@@ -22,7 +22,10 @@ THEME = 'theme/pelican-bootstrap3_local'
 #BOOTSTRAP_THEME = 'readable-old'
 BOOTSTRAP_THEME = 'united'
 #PYGMENTS_STYLE = 'paraiso-drak'
-PYGMENTS_STYLE = 'fruity'
+#PYGMENTS_STYLE = 'fruity'
+# 為了同時兼容 render_math, 必須放棄 fruity
+PYGMENTS_STYLE = 'monokai'
+
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'

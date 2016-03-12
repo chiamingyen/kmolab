@@ -1,5 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-08T16:34:58+08:00</updated><entry><title>利用 Github 執行協同設計專案</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html" rel="alternate"></link><updated>2016-03-08T16:34:58+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-08:kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html</id><summary type="html">&lt;p&gt;Github 的分散式版次管理, 可以讓機械設計工程師體會非同步協同的團隊合作模式, 在眾目睽睽之下, 所有與設計相關的細節都能夠加以保留.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-12T23:16:49+08:00</updated><entry><title>全球資訊網上的內容管理系統</title><link href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T23:16:49+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
+
+
+&lt;p&gt;由於本課程的目的, 不僅要將機械設計的各式內容送到雲端上的 CMSimply, 而且還要修改 Python3 內容管理系統的程式碼, 因此必須在本地端建立 rsa 格式的 key pair.&lt;/p&gt;
+&lt;p&gt;在 Windows 平台上, 可以利用 puttygen: &lt;a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"&gt;http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html&lt;/a&gt; 完成, 使用步驟如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開啟 puttygen.exe 後, 以 Generate 按鈕後, 移動滑鼠後即可完成.&lt;/li&gt;
+&lt;li&gt;將 Public key 送到 OpenShift 帳號中的 settings 處.&lt;/li&gt;
+&lt;li&gt;按 Conversions 功能表, 以 export OpenSSH 格式的 private key, 存到 home 目錄下的 .ssh 目錄中, 且以 id_rsa 命名檔案.&lt;/li&gt;
+&lt;li&gt;之後若需從 OpenShift git clone 與這把 key 對應的應用程式, OpenShift 端會利用 settings 上所登錄的 public key 與 .ssh 目錄中的 id_rsa 進行驗證, 必須通過驗證才能順利完成倉儲的 git clone.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在 Ubuntu 平台上, 除了利用 ssh-keygen -t rsa 來建立 rsa 格式的 key pair 外, 其他步驟同 Windows.&lt;/p&gt;
+&lt;p&gt;至於在 Windows 配合 Filezilla 與 OpenShift 雲端應用程式相連時, 必須利用 pageant.exe 載入 private key 後才能通過認証, 而在 Ubuntu 則可以透過 ssh-add ~/.ssh/id_rsa, 載入對應的 private key.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>機械設計流程的內容與管理</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html" rel="alternate"></link><updated>2016-03-12T22:52:53+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html</id><summary type="html">&lt;p&gt;機械設計流程中可能產生的內容, 可分為口語表達、文字表達、2D 圖像、3D 表達、解析表達與實體表達等六大類.&lt;/p&gt;
+
+
+&lt;p&gt;所謂的口語表達即是在機械設計過程中採口頭方式呈現, 可以利用錄音方式將口語表達轉為 mp3, 或者採逐字稿, 轉為文字檔, 然後上傳到網際內容管理系統.&lt;/p&gt;
+&lt;p&gt;文字表達就網際而言, 就是利用 html 將文字內容寫在全球資訊網路上, 也可以整理成 pdf, 或其他格式的文字檔, 然後再上傳到網際內容管理系統&lt;/p&gt;
+&lt;p&gt;而 2D 圖像, 可以是一張照片, 手繪圖, 說明圖檔, 流程圖, 或者是產品的工程圖, 通常以 png、jpeg  或 gif 副檔名檔案格式.&lt;/p&gt;
+&lt;p&gt;3D 表達, 包括一般影片、模擬動畫、CAD 零件, CAD 組件等.&lt;/p&gt;
+&lt;p&gt;解析表達就是與機械設計相關的理論分析, 可以是方程式推導, 設計流程最佳化或各類型 CAE 模擬分析.&lt;/p&gt;
+&lt;p&gt;實體表達就是實際做出實體的過程, 牽涉許多不同類型的製造程序, 一旦根據前述的五種表達方式模擬與規劃之後, 透過原型實驗測試來驗證機械設計的可行性與可靠度.&lt;/p&gt;
+&lt;p&gt;以下則是利用 2D 圖像來表達數學式:&lt;/p&gt;
+&lt;p&gt;在文章中, 一旦啟用 render_math plugin, 就可以利用一前一後的 $ 與數學式相連的方式來呈現符號.&lt;/p&gt;
+&lt;p&gt;例如: 前後用 $ 符號包圍 e=mc^2, 可以得到:&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;也可以利用一對 $$ 符號界定方程式, 利用 LaTeX 語法來表示:&lt;/p&gt;
+&lt;p&gt;x^2  被一前一後的兩個 $$ 包圍, 可以得到:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+x^2 
+$$&lt;/div&gt;
+&lt;p&gt;A_\text{c} = (\pi/4) d^2 則得到:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+A_\text{c} = (\pi/4) d^2
+$$&lt;/div&gt;
+&lt;p&gt;\alpha{}_t(i) = P(O_1, O_2, … O_t, q_t = S_i \lambda{}) 則得到:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha{}_t(i) = P(O_1, O_2, … O_t, q_t = S_i \lambda{})
+$$&lt;/div&gt;
+&lt;p&gt;\cos (2\theta) = \cos^2 \theta - \sin^2 \theta 則得到:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+$$&lt;/div&gt;
+&lt;p&gt;\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2} 則得到:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}
+$$&lt;/div&gt;
+&lt;p&gt;y =x^4 + 4 \nonumber \
+=(x^2+2)^2 -4x^2 \nonumber \
+\le(x^2+2)^2&lt;/p&gt;
+&lt;p&gt;則成為:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+y =x^4 + 4 \nonumber \\
+=(x^2+2)^2 -4x^2 \nonumber \\
+\le(x^2+2)^2
+$$&lt;/div&gt;
+&lt;p&gt;\lim_{x \to a} f(x) 則成為:&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\lim_{x \to a} f(x)
+$$&lt;/div&gt;
+&lt;p&gt;而程式碼的部份, 則使用 syntaxhighlighter 來顯示:&lt;/p&gt;
+&lt;pre class="brush: python; html-script: true"&gt;
+# python 程式碼
+# 定義一個 myfunction 函式
+def myfunciont():
+    # 設定變數 i 與 10 對應
+    i = 10
+    # 啟動一個 for 重複迴圈, 以 j 為指標變數
+    for j in range(i):
+        # 在迴圈中列印 j 變數的對應值
+        print(j)
+# 呼叫 myfunction 函式
+myfunction()
+&lt;/pre&gt;
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>利用 Github 執行協同設計專案</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html" rel="alternate"></link><updated>2016-03-08T16:34:58+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-08:kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html</id><summary type="html">&lt;p&gt;Github 的分散式版次管理, 可以讓機械設計工程師體會非同步協同的團隊合作模式, 在眾目睽睽之下, 所有與設計相關的細節都能夠加以保留.&lt;/p&gt;
 
 
 &lt;h2&gt;協同設計規劃&lt;/h2&gt;
