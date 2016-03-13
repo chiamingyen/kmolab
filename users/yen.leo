@@ -137,6 +137,7 @@
 <v t="amd.20160308133314.1"><vh>@edit yen_20160309.md</vh></v>
 <v t="amd.20160311160710.1"><vh>@edit yen_20160311.md</vh></v>
 <v t="amd.20160312225435.1"><vh>@edit yen_20160312.md</vh></v>
+<v t="amd.20160313114257.1"><vh>@edit yen_20160313.md</vh></v>
 </v>
 </v>
 </v>
@@ -172,7 +173,13 @@ Author: kmol
 
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
-這裡為文章主要內容</t>
+這裡為文章主要內容
+
+程式碼
+
+&lt;pre class="brush: python; html-script: true"&gt;
+print("hello")
+&lt;/pre&gt;</t>
 <t tx="amd.20151216173334.1"></t>
 <t tx="amd.20151216173344.1"></t>
 <t tx="amd.20151216173352.1"></t>

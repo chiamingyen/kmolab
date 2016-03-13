@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-12T23:16:49+08:00</updated><entry><title>全球資訊網上的內容管理系統</title><link href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T23:16:49+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-13T12:24:53+08:00</updated><entry><title>WCM 電腦教室分組研究</title><link href="http://chiamingyen.github.io/kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html" rel="alternate"></link><updated>2016-03-13T12:24:53+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-13:kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html</id><summary type="html">&lt;p&gt;在網際內容管理的課程中, 有一個針對電腦教室實際的配置, 讓學員自行籌組, 然後再依據各組組員的學號排序選出組長後, 再根據各組長的學號排序決定組序, 這裡希望採用 Flask 網際框架, 並且將 Github 倉儲中的程式與 OpenShift 上的應用程式同步, 以便讓機械設計學員體會之後如何應用類似的網際流程來提升產品開發的效能.&lt;/p&gt;
+
+
+&lt;p&gt;在網際內容管理的&lt;a href="https://github.com/2015fallhw/2016springwcm/wiki/%E7%B6%B2%E9%9A%9B%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%A0%94%E7%A9%B6%E4%B8%BB%E9%A1%8C"&gt;研究主題&lt;/a&gt;中, 列出與全球資訊網應用相關的軟體與硬體內容管理, 其中透過全球資訊網應用程式, 能夠讓使用者:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;直接利用瀏覽器輸入基本資料&lt;/li&gt;
+&lt;li&gt;讓使用者選擇處理基本資料的方法&lt;/li&gt;
+&lt;li&gt;利用雲端上的主機進行資訊的運算或處理&lt;/li&gt;
+&lt;li&gt;處理結束後, 使用者可以在瀏覽器上檢視處理結果 ,然後再設法利用資料庫儲存這些資料, 並依照需求進行下一階段的工作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;而上述處理資料的流程與許多機械設計的流程類似:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用者利用瀏覽器輸入基本的設計需求 (例如, 從機械元件設計資料庫中, 選擇以漸開線正齒輪組, 輸入傳遞功率與減速需求, 設計減速機)&lt;/li&gt;
+&lt;li&gt;使用者利用網際選單, 進一步選擇設計條件 (例如, 使用者可以選擇安全係數, 某一個齒輪的齒數或材料或熱處理的方法等)&lt;/li&gt;
+&lt;li&gt;網際機械設計程式根據使用者的輸入與設計要求, 選擇既定的設計運算流程, 其中包括自動查表, 自動選擇適用的配合零組件&lt;/li&gt;
+&lt;li&gt;處理或運算結數後, 使用者可以直接從瀏覽器取得設計結果 (例如, 系統直接完成各零組件的參數繪圖, 使用者可以選擇零件格式下載, 進行下一步的原型列印與組裝測試)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;先看看目前這個簡單的分組程式操作畫面:&lt;/p&gt;
+&lt;p&gt;使用者輸入各組自行籌組的資料, 這裡實際上採用雲端即時試算表讓所有組員同時利用瀏覽器輸入分組資料後, 轉進表單:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/simpleflask-2014openshift.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;分別選擇組內排序方法, 選出組長 ,然後再選各組間的組長排序方法 ,定出組序, 按下 Select, 即可列出分組結果:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/simpleflask-2014openshift_2.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;上述這個基本的 Flask 程式配置流程, 請參考 &lt;a href="http://project.mde.tw/blog/yen-wang-ji-flask-cheng-shi-jia-gou.html"&gt;http://project.mde.tw/blog/yen-wang-ji-flask-cheng-shi-jia-gou.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;有了能夠接受網際表單的 Flask 程式後, 分別將程式與 Leo Editor 專案資料送到 Github 倉儲 &lt;a href="https://github.com/2015fallhw/simpleflask"&gt;https://github.com/2015fallhw/simpleflask&lt;/a&gt;, 然後再利用本地端的 git remote add 與 OpenShift 上的雲端程式同步 &lt;a href="http://simpleflask-2014openshift.rhcloud.com/option"&gt;http://simpleflask-2014openshift.rhcloud.com/option&lt;/a&gt;, 就能夠讓使用者直接在瀏覽器執行自動分組的流程.&lt;/p&gt;
+&lt;p&gt;有關這個版次的程式, 請參考 &lt;a href="https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45"&gt;https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>全球資訊網上的內容管理系統</title><link href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T23:16:49+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
 
 
 &lt;p&gt;由於本課程的目的, 不僅要將機械設計的各式內容送到雲端上的 CMSimply, 而且還要修改 Python3 內容管理系統的程式碼, 因此必須在本地端建立 rsa 格式的 key pair.&lt;/p&gt;
