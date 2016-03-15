@@ -292,6 +292,14 @@ Kmolab            </a>
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="http://chiamingyen.github.io/kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html">利用 Leo Editor 執行程式開發</a></h2>
+                <div class="summary"><p>Leo Editor 是一套利用大綱模式與程式方法管理多元資料的 Python3 + PyQt 單機應用程式.</p>
+
+                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://chiamingyen.github.io/kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html">WCM 電腦教室分組研究</a></h2>
                 <div class="summary"><p>在網際內容管理的課程中, 有一個針對電腦教室實際的配置, 讓學員自行籌組, 然後再依據各組組員的學號排序選出組長後, 再根據各組長的學號排序決定組序, 這裡希望採用 Flask 網際框架, 並且將 Github 倉儲中的程式與 OpenShift 上的應用程式同步, 以便讓機械設計學員體會之後如何應用類似的網際流程來提升產品開發的效能.</p>
 
@@ -369,23 +377,6 @@ Kmolab            </a>
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">2015 Fall CADP W16</a></h2>
-                <div class="summary"><p>根據 <a href="http://chiamingyen.github.io/kmolab_data/files/ProEMechanism.pdf">Nutcracker 機構</a>的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_left_limit.png" width="600" /></p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_right_limit.png" width="600" /></p>
-<p>計算 Piston 不發生干涉的有效行程, 可採如下方法:</p>
-<ol>
-<li>實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)</li>
-<li>利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)</li>
-<li>利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, <a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb">計算出</a>的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)</li>
-<li>除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用<a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py">基因演算法解題</a>, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 <a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb">Jupyterhub 平台</a>上進行運算)</li>
-</ol>
-
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev disabled"><a href="#">&laquo;</a></li>
@@ -410,6 +401,11 @@ Kmolab            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html">
+                            利用 Leo Editor 執行程式開發
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html">
                             WCM 電腦教室分組研究
                         </a>
@@ -427,11 +423,6 @@ Kmolab            </a>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html">
                             利用 Github 執行協同設計專案
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html">
-                            KMOL 可攜程式系統改版
                         </a>
                     </li>
                 </ul>

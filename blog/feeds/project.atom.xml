@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-24T10:45:35+08:00</updated><entry><title>Create an online Ethercalc site</title><link href="http://chiamingyen.github.io/kmolab/blog/create-an-online-ethercalc-site.html" rel="alternate"></link><updated>2016-02-24T10:45:35+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/create-an-online-ethercalc-site.html</id><summary type="html">&lt;p&gt;利用 OpenShift 與 Ethercalc, 自行建立一個雲端線上試算表&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-15T14:49:02+08:00</updated><entry><title>利用 Leo Editor 執行程式開發</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html" rel="alternate"></link><updated>2016-03-15T14:49:02+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html</id><summary type="html">&lt;p&gt;Leo Editor 是一套利用大綱模式與程式方法管理多元資料的 Python3 + PyQt 單機應用程式.&lt;/p&gt;
+
+
+&lt;p&gt;所謂的大綱模式, 指的是 Leo Editor 將所有的內容分為大綱與內文, 而每一個大綱資料可以擁有下屬大綱, 使用者可以利用階層式的方法來管理各種文字資料. 至於所謂管理多元資料的程式方法, Leo Editor 發明了許多大綱標題上的指令, 以及大綱內文中的語法指令來協助使用者管理資料. 這裡我們先簡單介紹 @edit 與 @clean 在 Python3 程式開發上的應用.&lt;/p&gt;
+&lt;p&gt;Leo Editor 基本的使用模式如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開啟 Leo Editor 後, 使用者可以新增一個 .leo 檔案, 並在其中加入大綱標題(或者稱為節點), 以及在大綱標題對應的內文中輸入資料.&lt;/li&gt;
+&lt;li&gt;當使用者決定 .leo 各大綱內文中所儲存的資料, 希望能夠單獨以一個檔案的格式存在, 就可以修改內文對應的標題, 放入 @edit myfile.txt, 當使用者儲存 .leo 檔案時, Leo Editor 就會根據 @edit 標題指令的指示, 將內文資料以 myfile.txt 存檔, 並在 Log 區註記檔案已經建立.&lt;/li&gt;
+&lt;li&gt;假如上述儲存在大綱對應內文的資料是 Python3 格式的程式碼, 那麼使用者只要將滑鼠停留在該程式內文中, 然後按下 Ctrl + b, 就可以執行這個程式, 並且通常使用者會使用 g.es() 來取代 print(), 直接在 Leo Editor 中進行程式碼的測試.&lt;/li&gt;
+&lt;li&gt;換言之, 假如使用者在步驟 2. 將檔案存為 myprog.py, 這個 Python 程式就可以與其他的程式套件結合, 成為各種應用套件, 整個 Leo Editor 就是在這樣的環境下開發, 而且是採用 PyQt 作為圖形介面程式庫, 使用者可以在 leo/core/LeoPyRef.leo 中的 Code 節點中看到這些程式碼.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;實際操作:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開啟 Leo Editor, 利用 File-&amp;gt;New 新增一個 .leo 檔案, 按下 Ctrl + i, 以 insert 的方法加入一個大綱(節點), 在內文中放入:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="brush: python;"&gt;
+try:
+    g.es("hello")
+except:
+    print("hello")
+&lt;/pre&gt;
+
+&lt;p&gt;然後按下 Ctrl + b, 就可以在 Leo 中看到程式執行時, 以 g.es("hello"), 將字串送到 Log 視窗, 這裡的 g 是 Leo Editor 程式中的一個模組, 包含廣域函式與類別, 而 g.es 就是其中的一個 echo string 方法.&lt;/p&gt;
+&lt;p&gt;而且 g 是 Leo Editor 套件中一個很大的模組, 假如您真的想看看 g 在 5.1 版中的所有 439 個函式與類別, 可以利用 g.es(len(list(dir(g)))) 列出 g 的函式與類別個數 ,或者以 g.es(list(dir(g))) 列出這個大數列.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;假如我們希望將目前 .leo 檔中唯一的大綱內容存成 myprog.py, 只要將此內文程式的標題改為 "@edit myprog.py", 然後存 .leo 檔案即可. 此時, Leo Editor 的 Log pane 中將註記 myprog.py 已經建立的訊息, 而且使用者可以在操作系統的檔案架構中, 利用 python3 myprog.py 來執行這個 myprog.py 程式.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最後一個例子是, Leo Editor 可以透過 @clean 節點指令, refresh 已經存在外部的 myclass.py 物件導向程式碼, 以階層架構的方式讀進 myclass.py 的內容, 之後, 使用者在 Leo Editor 修改 myclass.py 的程式內容, 將在存檔後存入 myclass.py, 若離開 Leo Editor 之後, myclass.py 內容修改, Leo Editor 將在打開對應 .leo 檔案時, 讀進 myclass.py 最新的內容.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;利用 Leo Editor 的節點指令, @clean 導入下列已經存在檔案系統中的 myclass.py 程式碼, 只要新增一個節點, 並且標題輸入 "@clean myclass.py", 而且確定 .leo 檔案與 myclass.py 位於相同目錄中, 然後點選 @clean myclass.py 節點, 以滑鼠右鍵拉出 refresh from disk, Leo Editor 就會以階層架構讀進 myclass.py.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;myclass.py 的程式碼如下:&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+class Employee:
+    'Common base class for all employees'
+    empCount = 0
+
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+        Employee.empCount += 1
+
+    def displayCount(self):
+        try:
+            g.es("Total Employee %d" % Employee.empCount)
+        except:
+            print("Total Employee %d" % Employee.empCount)
+
+    def displayEmployee(self):
+        try:
+            g.es("Name : ", self.name,  ", Salary: ", self.salary)
+        except:
+            print("Name : ", self.name,  ", Salary: ", self.salary)
+
+"This would create first object of Employee class"
+emp1 = Employee("Zara", 2000)
+"This would create second object of Employee class"
+emp2 = Employee("Manni", 5000)
+
+emp1.displayEmployee()
+emp2.displayEmployee()
+try:
+    g.es("Total Employee %d" % Employee.empCount)
+except:
+    print("Total Employee %d" % Employee.empCount)
+&lt;/pre&gt;
+
+&lt;p&gt;以上的 Leo Editor 導引教學內容,可以從 &lt;a href="https://github.com/chiamingyen/leoeditor_tutorial"&gt;https://github.com/chiamingyen/leoeditor_tutorial&lt;/a&gt; 中下載.&lt;/p&gt;</summary><category term="Leo Editor"></category><category term="Python"></category></entry><entry><title>Create an online Ethercalc site</title><link href="http://chiamingyen.github.io/kmolab/blog/create-an-online-ethercalc-site.html" rel="alternate"></link><updated>2016-02-24T10:45:35+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/create-an-online-ethercalc-site.html</id><summary type="html">&lt;p&gt;利用 OpenShift 與 Ethercalc, 自行建立一個雲端線上試算表&lt;/p&gt;
 
 
 &lt;p&gt;試算表的功能非常多元, 一旦將試算表以多人可即時更新內容的架構搬上雲端, 功能將會更加實用.&lt;/p&gt;
