@@ -1,5 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-15T20:19:13+08:00</updated><entry><title>協同產品設計實習的網際 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-15T20:19:13+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;在這個範例中, 所有參與協同的機械設計課程學員, 透過 Github 的 pull request 機制進行協同繪圖程式開發, 而各組組長則以 collaborator 的角色負責審核各組員送出的 pull requests, 本繪圖任務中的基本單 2D 繪圖單元, 是由 4 個彼此相切的圓弧所組成, 各組必須根據幾何約束條件求出各相切點的座標後, 使用指定的網際繪圖程式庫, 著手結合各組員, 在一致的內容格式規劃下, 完成所要求的 2D 組件繪圖.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-16T21:21:39+08:00</updated><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="http://chiamingyen.github.io/kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T21:21:39+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-16:kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
+
+
+&lt;p&gt;以 Solvespace 繪製輪廓圖: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;從 Solvespace 輪廓圖長出 3D 零件後, 以 export 2D section SVG 圖檔: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_ss.svg"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_ss.svg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;從 cd_task1_chain_ss.svg 圖檔, 可以得知斷面圖檔寬度為 26.696mm, 而高度為 47.906mm, 且 SVG 各點的座標原點位於圖檔的左下角落點. 從此資訊就可以算出 svgToCgoSVG 函式中的座標 offset 值為 (26.696/2, 47.906/2+10) (因為上下兩個圓弧的圓心距離 20 mm), 而 Solvespace 轉出 SVG 時將上下圓弧分別截為三段表示. 下圖中綠色輪廓繪圖數據即來自 Solvespace.&lt;/p&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea" width="800" height="800"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+#cgo.setWorldCoords(-300, -300, 600, 600)
+cgo.setWorldCoords(-200, -200, 400, 400) 
+
+#畫座標軸線
+
+cgo.drawAxes(0, 190, 0, 190, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 10,
+    "xLabelInterval": 20,
+    "yTickInterval": 10,
+    "yLabelInterval": 20})
+
+deg = math.pi/180
+
+#選擇長弧, 且向內畫弧
+def chain1(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894                      A 7, 7, 0, 1, 0, 6.8397, -1.4894                      A 40, 40, 0, 0, 1, 6.8397, -18.511                      A 7, 7, 0, 1, 0, -6.8397, -18.511                      A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("1-長向內", x, y-10, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+# 選擇短弧, 且向內畫弧
+def chain2(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894                      A 7, 7, 0, 0, 0, 6.8397, -1.4894                      A 40, 40, 0, 0, 1, 6.8397, -18.511                      A 7, 7, 0, 1, 0, -6.8397, -18.511                      A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("2-短向內", x, y-10, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+#選擇長弧, 且向外畫弧
+def chain3(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894                      A 7, 7, 0, 1, 1, 6.8397, -1.4894                      A 40, 40, 0, 0, 1, 6.8397, -18.511                      A 7, 7, 0, 1, 0, -6.8397, -18.511                      A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("3-長向外", x, y-30, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+#選擇短弧, 且向外畫弧
+def chain4(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894                      A 7, 7, 0, 0, 1, 6.8397, -1.4894                      A 40, 40, 0, 0, 1, 6.8397, -18.511                      A 7, 7, 0, 1, 0, -6.8397, -18.511                      A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("4-短向外", x, y-30, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+#利用 boundary 界定出繪圖的範圍
+def boundary():
+    chamber = "M -200, -200 L 200, -200 L 200, 200 L -200, 200z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "PATH", {
+            "fillColor": "black",
+            "border": True,
+            "strokeColor": "black",
+            "lineWidth": 5 })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, 0, 0, 1, 0)
+    #cgo.drawText("2-短向內", x, y-10, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+def drawSpiral():
+    chamber = "M 289.16,447.14 \
+                 C 233.33,399.03 267.47,290.34 364.53,265.28 \
+                   408.88,269.91 448.14,282.58 483.22,303.79 \
+                   391.79,287.12 292.99,369.50 331.90,451.11 \
+                   318.79,447.43 302.35,446.61 289.16,447.14 z"
+    cgoChamber = window.svgToCgoSVG(chamber, -287, -536)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+        "fillColor":"lightyellow",
+        "strokeColor":"tan",
+        "lineWidthWC":4,
+        "border":True })
+    #cgo.drawShape(shapedefs.circle(8),0 ,0 , {"fillColor":"tan"})
+    cmbr.scale(0.5)
+    scl = 1
+    for i in range(50):
+        scl = scl/(1.08)
+        cgo.render(cmbr, 0, 0, scl, -i*24.5)
+
+# 從 solvespace 轉出的 SVG (必須長出實體, 然後選擇斷面後, 以 export 2D section 轉出 SVG) 
+# width='26.696mm' height='47.906mm', 且原點在左下角落
+def solvespace(x, y):
+    centerx = 26.696/2
+    centery = 47.906/2+10
+    chamber = "M16.772 7.656 \
+            A7.000,7.000 0 0,1 8.924,7.656 \
+            A7.000,7.000 0 0,1 6.008,14.942 \
+            A40.000,40.000 0 0,1 6.008,31.964 \
+            A7.000,7.000 0 0,0 8.924,39.250 \
+            A7.000,7.000 0 0,0 16.772,39.250 \
+            A7.000,7.000 0 0,0 19.688,31.964 \
+            A40.000,40.000 0 0,1 19.688,14.942 \
+            A7.000,7.000 0 0,0 16.772,7.656z"
+    # 以其中一個相切點作為關鍵原點
+    # -centerx 為 x 座標的 offset 值, 也就是新原點位於 (centerx, centery)
+    cgoChamber = window.svgToCgoSVG(chamber, -centerx, -centery)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": "green",
+            "border": True,
+            "strokeColor": "black",
+            "lineWidth": 4 })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, 0)
+    cgo.drawText("從 ss 轉出", x, y-30, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+boundary()
+drawSpiral()
+yellow = "#f4c20d"
+white = "#ffffff"
+chain1(0, 0, 0, 0, 0, white, True, 4)
+chain2(35, 0, 0, 0, 0, white, True, 4)
+chain3(70, 0, 0, 0, 0, white, True, 4)
+chain4(105, 0, 0, 0, 0, white, True, 4)
+solvespace(140, 0)
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>協同產品設計實習的網際 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-15T20:19:13+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;在這個範例中, 所有參與協同的機械設計課程學員, 透過 Github 的 pull request 機制進行協同繪圖程式開發, 而各組組長則以 collaborator 的角色負責審核各組員送出的 pull requests, 本繪圖任務中的基本單 2D 繪圖單元, 是由 4 個彼此相切的圓弧所組成, 各組必須根據幾何約束條件求出各相切點的座標後, 使用指定的網際繪圖程式庫, 著手結合各組員, 在一致的內容格式規劃下, 完成所要求的 2D 組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;任務倉儲: &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt;&lt;/p&gt;

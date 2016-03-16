@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
@@ -75,13 +75,20 @@
 </v>
 </v>
 </v>
-<v t="amd.20160303212723.1"><vh>2016spring課程</vh>
+<v t="amd.20160303212723.1" a="E"><vh>2016spring課程</vh>
 <v t="amd.20160303212735.1"><vh>2016springcd</vh></v>
 <v t="amd.20160303212739.1"><vh>2016springwcm</vh></v>
 <v t="amd.20160303213007.1"><vh>cptocadp</vh></v>
-<v t="amd.20160303213301.1" a="E"><vh>projectmdetw</vh>
+<v t="amd.20160303213301.1"><vh>projectmdetw</vh>
 <v t="amd.20160303213308.1"><vh>www</vh></v>
 <v t="amd.20160303213346.1"><vh>ethercalc</vh></v>
+</v>
+<v t="amd.20160315212100.1" a="E"><vh>C4F</vh>
+<v t="amd.20160315230300.1" a="E"><vh>Arc 參數</vh>
+<v t="amd.20160315231631.1"><vh>Elliptical Arcs with SVG</vh></v>
+<v t="amd.20160316004643.1"><vh>4個輪廓比較</vh></v>
+</v>
+<v t="amd.20160315213312.1"><vh>Cango 設定</vh></v>
 </v>
 </v>
 </v>
@@ -90,7 +97,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160106093510.1" a="E"><vh>201601</vh>
+<v t="amd.20160106093510.1"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
@@ -140,6 +147,7 @@
 <v t="amd.20160313114257.1"><vh>@edit yen_20160313.md</vh></v>
 <v t="amd.20160315113132.1"><vh>@edit yen_20160315.md</vh></v>
 <v t="amd.20160315170155.1"><vh>@edit yen_20160315-1.md</vh></v>
+<v t="amd.20160316145308.1"><vh>@edit yen_20160316.md</vh></v>
 </v>
 </v>
 </v>
@@ -714,6 +722,835 @@ http://cptocadp-2015fallhw.rhcloud.com/</t>
 <t tx="amd.20160303213301.1">利用 projectmdetw At Gmail 登記</t>
 <t tx="amd.20160303213308.1">http://www-projectmdetw.rhcloud.com/</t>
 <t tx="amd.20160303213346.1">http://nodejs-projectmdetw.rhcloud.com/</t>
+<t tx="amd.20160315212100.1">@language html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Circle Testing&lt;/title&gt;
+    &lt;link rel="stylesheet" href="../css/style.css"&gt;
+    &lt;!-- IE 9: display inline SVG --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea" width="800" height="800"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+
+# 設定 SVG 繪圖的格點範圍, 原點位於 (0%, 100%), 也就是原點位於畫布的左上角落點, 而且長與寬的尺寸比例都是 100%
+'''
+cgo.setGridboxSVG(0, cgo.heightPW, 100, cgo.heightPW);
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.
+Calling 'cgo.setGridboxSVG()' with no parameters is equivalent to calling
+cgo.setGridboxSVG(originX, originY, width_scale, height_scale)
+cgo.setGridboxSVG(0, 100, cgo.widthPW, cgo.heightPW)
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.
+另一 Y 向上為正的設定 cgo.setGridboxRHC()
+'''
+#cgo.setGridboxSVG(0, 100, 100, 100)
+# 當使用者沒有設定 cgo.setGridboxSVG() 或 cgo.setGridboxRHC(), 系統採用內定的 cgo.setGridboxRHC()
+# 因為經由 cgo.setGridboxSVG(0, 100, 100, 100) 已經將格點範圍的原點設於畫布的左上角落點
+# 以下的絕對座標設定, 即是將此原點標定為繪圖座標的(-200, -200), 而且畫布的有效座標範圍, 寬為 400, 高也是 400
+cgo.setWorldCoords(-200, -200, 400, 400) 
+
+# 決定要不要畫座標軸線
+'''
+cgo.drawAxes(0, 200, 0, 100, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 10,
+    "xLabelInterval": 20,
+    "yTickInterval": 10,
+    "yLabelInterval": 10})
+'''
+        
+#cgo.drawText("使用 Cango 繪圖程式庫!", 0, 0, {"fontSize":60, "fontWeight": 1200, "lorg":5 })
+
+deg = math.pi/180
+# 還必須考慮各字元的旋轉中心!!
+def Four(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    longchamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -28.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -28.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgolongChamber = window.svgToCgoSVG(longchamber)
+    longcmbr = cobj(cgolongChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+            
+    mediumchamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -23.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -23.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgomediumChamber = window.svgToCgoSVG(mediumchamber)
+    mediumcmbr = cobj(cgomediumChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+            
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    
+    basic2 = mediumcmbr.dup()
+    basic2.rotate(-90)
+
+    basic3 = longcmbr.dup()
+    basic3.rotate(165)
+    basic3.translate(-25, 0)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+
+def C(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 120 度
+    basic1.rotate(120)
+    basic2 = cmbr.dup()
+    basic2.rotate(60)
+    basic2.translate(0, -20)
+    
+    basic3 = cmbr.dup()
+    basic3.rotate(60)
+    basic3.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(120)
+    basic4.translate(20*math.cos(30*deg), -20*math.sin(30*deg)-20)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def O(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 120 度
+    basic1.rotate(120)
+    basic2 = cmbr.dup()
+    basic2.rotate(60)
+    basic2.translate(0, -20)
+    
+    basic3 = cmbr.dup()
+    basic3.rotate(60)
+    basic3.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(120)
+    basic4.translate(20*math.cos(30*deg), -20*math.sin(30*deg)-20)
+    
+    basic5 = cmbr.dup()
+    basic5.translate(2*20*math.cos(30*deg), 0)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+    cmbr.appendPath(basic5)
+    
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def D(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    basic2 = cmbr.dup()
+    
+    basic3 = cmbr.dup()
+    basic3.rotate(98)
+    basic3.translate(0, -20)
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(82)
+    basic4.translate(0, 20)
+    
+    basic5 = cmbr.dup()
+    basic5.rotate(-30)
+    basic5.translate(20*math.cos(8*deg)+20*math.cos(60*deg), 0)
+    
+    basic6 = cmbr.dup()
+    basic6.rotate(210)
+    basic6.translate(20*math.cos(8*deg)+20*math.cos(60*deg), 0)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+    cmbr.appendPath(basic5)
+    cmbr.appendPath(basic6)
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def E(x, y, rx, ry, rot, color, border, linewidth):
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    
+    basic2 = cmbr.dup()
+    basic2.rotate(90)
+    
+    basic3 = cmbr.dup()
+    basic3.rotate(90)
+    basic3.translate(0, -20)
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(90)
+    basic4.translate(0, 20)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def F(x, y, rx, ry, rot, color, border, linewidth):
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    
+    basic2 = cmbr.dup()
+    basic2.rotate(90)
+    
+    basic3 = cmbr.dup()
+    basic3.rotate(90)
+    basic3.translate(0, 20)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def T(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    basic2 = cmbr.dup()
+    
+    basic3 = cmbr.dup()
+    # 82 度為 D 的角度, 再加轉 8 度
+    basic3.rotate(82-8)
+    basic3.translate(0, 20)
+    
+    basic4 = cmbr.dup()
+    # 278 度為 D 的對稱角度, 再加轉 8 度
+    basic4.rotate(278+8)
+    basic4.translate(0, 20)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+    
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def R(x, y, rx, ry, rot, color, border, linewidth):
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+            
+    longchamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -28.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -28.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgolongChamber = window.svgToCgoSVG(longchamber)
+    longcmbr = cobj(cgolongChamber, "SHAPE", {
+            "fillColor": color,
+            "border": True,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    
+    basic2 = cmbr.dup()
+    basic2.rotate(90)
+    
+    basic3 = cmbr.dup()
+    basic3.rotate(90)
+    basic3.translate(0, 20)
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(180)
+    basic4.translate(20, 0)
+    
+    basic5 = longcmbr.dup()
+    basic5.rotate(45)
+    #basic5.translate(20, 0)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+    cmbr.appendPath(basic5)
+        
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+    
+def U(x, y, rx, ry, rot, color, border, linewidth):
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+            
+    longchamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -28.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -28.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgolongChamber = window.svgToCgoSVG(longchamber)
+    longcmbr = cobj(cgolongChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+            
+    mediumchamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -23.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -23.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgomediumChamber = window.svgToCgoSVG(mediumchamber)
+    mediumcmbr = cobj(cgomediumChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 180 度
+    basic1.rotate(180)
+    
+    basic2 = mediumcmbr.dup()
+    basic2.rotate(90)
+    basic2.translate(0, -20)
+
+    basic3 = cmbr.dup()
+    basic3.translate(25, 0)
+    
+    basic4 = cmbr.dup()
+    basic4.rotate(180)
+    basic4.translate(25, 0)
+    
+    cmbr.appendPath(basic1)
+    cmbr.appendPath(basic2)
+    cmbr.appendPath(basic3)
+    cmbr.appendPath(basic4)
+        
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+    cgo.render(cmbr, x, y, 1, rot)
+
+# google colors
+green = "#3cba54"
+yellow = "#f4c20d"
+red = "#db3236"
+blue = "#4885ed"
+
+'''
+C(-170, 0, 0, 0, 0, red, False, 1)
+O(-120, 0, 0, 0, 0, yellow, False, 1)
+D(-70, -10, 0, 0, 0, green, False, 1)
+E(-25, -10, 0, 0, 0, blue, False, 1)
+Four(36, -10, 0, 0, 0, red, False, 1)
+
+F(-170, -80, 0, 0, 0, blue, False, 1)
+U(-139, -80, 0, 0, 0, red, False, 1)
+U(-67, -80, 0, 0, 0, yellow, False, 1)
+T(-88, -80, 0, 0, 0, green, False, 1)
+R(-21, -80, 0, 0, 0, red, False, 1)
+E(16, -80, 0, 0, 0, blue, False, 1)
+'''
+'''
+C(-170, 0, 0, 0, 0, red, True, 1)
+O(-120, 0, 0, 0, 0, yellow, True, 1)
+D(-70, -10, 0, 0, 0, green, True, 1)
+E(-25, -10, 0, 0, 0, blue, True, 1)
+Four(36, -10, 0, 0, 0, red, True, 1)
+
+F(-170, -80, 0, 0, 0, blue, True, 1)
+U(-139, -80, 0, 0, 0, red, True, 1)
+U(-67, -80, 0, 0, 0, yellow, True, 1)
+T(-88, -80, 0, 0, 0, green, True, 1)
+R(-21, -80, 0, 0, 0, red, True, 1)
+E(16, -80, 0, 0, 0, blue, True, 1)
+'''
+'''
+black = "#000000"
+
+C(-170, 0, 0, 0, 0, black, False, 1)
+O(-120, 0, 0, 0, 0, black, False, 1)
+D(-70, -10, 0, 0, 0, black, False, 1)
+E(-25, -10, 0, 0, 0, black, False, 1)
+Four(36, -10, 0, 0, 0, black, False, 1)
+
+F(-170, -80, 0, 0, 0, black, False, 1)
+U(-139, -80, 0, 0, 0, black, False, 1)
+U(-63, -80, 0, 0, 0, black, False, 1)
+T(-88, -80, 0, 0, 0, black, False, 1)
+R(-21, -80, 0, 0, 0, black, False, 1)
+E(16, -80, 0, 0, 0, black, False, 1)
+'''
+'''
+# blue
+C(-170, 0, 0, 0, 0, blue, False, 1)
+O(-120, 0, 0, 0, 0, blue, False, 1)
+D(-70, -10, 0, 0, 0, blue, False, 1)
+E(-25, -10, 0, 0, 0, blue, False, 1)
+Four(36, -10, 0, 0, 0, blue, False, 1)
+
+F(-170, -80, 0, 0, 0, blue, False, 1)
+U(-139, -80, 0, 0, 0, blue, False, 1)
+U(-63, -80, 0, 0, 0, blue, False, 1)
+T(-88, -80, 0, 0, 0, blue, False, 1)
+R(-21, -80, 0, 0, 0, blue, False, 1)
+E(16, -80, 0, 0, 0, blue, False, 1)
+'''
+'''
+#red
+C(-170, 0, 0, 0, 0, red, False, 1)
+O(-120, 0, 0, 0, 0, red, False, 1)
+D(-70, -10, 0, 0, 0, red, False, 1)
+E(-25, -10, 0, 0, 0, red, False, 1)
+Four(36, -10, 0, 0, 0, red, False, 1)
+
+F(-170, -80, 0, 0, 0, red, False, 1)
+U(-139, -80, 0, 0, 0, red, False, 1)
+U(-63, -80, 0, 0, 0, red, False, 1)
+T(-88, -80, 0, 0, 0, red, False, 1)
+R(-21, -80, 0, 0, 0, red, False, 1)
+E(16, -80, 0, 0, 0, red, False, 1)
+'''
+'''
+#green
+C(-170, 0, 0, 0, 0, green, False, 1)
+O(-120, 0, 0, 0, 0, green, False, 1)
+D(-70, -10, 0, 0, 0, green, False, 1)
+E(-25, -10, 0, 0, 0, green, False, 1)
+Four(36, -10, 0, 0, 0, green, False, 1)
+
+F(-170, -80, 0, 0, 0, green, False, 1)
+U(-139, -80, 0, 0, 0, green, False, 1)
+U(-63, -80, 0, 0, 0, green, False, 1)
+T(-88, -80, 0, 0, 0, green, False, 1)
+R(-21, -80, 0, 0, 0, green, False, 1)
+E(16, -80, 0, 0, 0, green, False, 1)
+'''
+'''
+#yellow
+C(-170, 0, 0, 0, 0, yellow, False, 1)
+O(-120, 0, 0, 0, 0, yellow, False, 1)
+D(-70, -10, 0, 0, 0, yellow, False, 1)
+E(-25, -10, 0, 0, 0, yellow, False, 1)
+Four(36, -10, 0, 0, 0, yellow, False, 1)
+
+F(-170, -80, 0, 0, 0, yellow, False, 1)
+U(-139, -80, 0, 0, 0, yellow, False, 1)
+U(-63, -80, 0, 0, 0, yellow, False, 1)
+T(-88, -80, 0, 0, 0, yellow, False, 1)
+R(-21, -80, 0, 0, 0, yellow, False, 1)
+E(16, -80, 0, 0, 0, yellow, False, 1)
+'''
+black = "#000000"
+C(-170, 0, 0, 0, 0, black, False, 1)
+O(-120, 0, 0, 0, 0, black, False, 1)
+D(-70, -10, 0, 0, 0, black, False, 1)
+E(-25, -10, 0, 0, 0, black, False, 1)
+Four(36, -10, 0, 0, 0, black, False, 1)
+
+F(-170, -80, 0, 0, 0, black, False, 1)
+U(-139, -80, 0, 0, 0, black, False, 1)
+U(-63, -80, 0, 0, 0, black, False, 1)
+T(-88, -80, 0, 0, 0, black, False, 1)
+R(-21, -80, 0, 0, 0, black, False, 1)
+E(16, -80, 0, 0, 0, black, False, 1)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</t>
+<t tx="amd.20160315213312.1">Calling 'cgo.setGridboxRHC()' with no parameters is equivalent to calling
+
+cgo.setGridboxRHC(0, 0, 100, cgo.heightPW);
+
+which sets the grid origin at the LOWER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width (100) and height (cgo.heightPW).
+
+Calling 'cgo.setGridboxSVG()' with no parameters is equivalent to calling
+
+cgo.setGridboxSVG(0, cgo.heightPW, 100, cgo.heightPW);
+
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.</t>
+<t tx="amd.20160315230300.1">chamber = "M(Move to) -6.8397, -1.4894 \
+                 A(Arc) 7, 7, 0(x軸轉角為0), 1(取長弧), 0(從起點以右手拇指向下畫弧, 畫向終點), 6.8397, -1.4894
+                 A 40, 40, 0(x軸轉角為0), 0(取短弧), 1(從起點以右手拇指向上畫弧, 畫向終點), 6.8397, -18.511 \
+                 A 7, 7, 0(x軸轉角為0), 1(取長弧), 0(從起點以右手拇指向下畫弧, 畫向終點), -6.8397, -18.511 \
+                 A 40, 40, 0(x軸轉角為0), 0(取短弧), 1(從起點以右手拇指向上畫弧, 畫向終點), -6.8397, -1.4894 z(end)"
+                 
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+
+https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/ArcTo.html
+
+SVG
+
+x axis rotation, 0 表示採用逆時鐘旋轉畫弧, 1 表示採順時鐘角度畫弧
+large arc flag 0 表示小於 180 的弧, 若為 1, 表示為大於 180 度的弧
+sweep flag  0 表示採右手則, 拇指向下畫弧, 若為 1 表示以右手拇指向上畫弧
+                 
+A
+
+rx, ry,
+x-rotation,
+large-arc-flag,
+sweep-flag,
+x, y
+
+從目前所在的點, 畫橢圓到 x, y 點, 其中的 x 方向圓半徑為 rx, y 方向圓半徑為 ry, 
+
+直角座標下:
+
+x-rotation=1 表圓弧以逆時鐘方向延伸, large-arc-flag, sweep-flag=1 也是向逆時鐘方向掃略
+
+SVG 座標下:
+
+x-rotation=1 表圓弧以順時鐘方向延伸, large-arc-flag, sweep-flag=1 也是向順時鐘方向掃略
+
+elliptical arc: 
+
+Draws and arc starting from the current point and ending at (x, y). The ellipse has the two radii (rx, ry). The x-axis of the ellipse is rotated by 'x-axis-rotation' relative to the x-axis of the world coordinate system. 
+
+The 'large-arc-flag' and the 'sweep-flag' together define which way the arc joins to start and end point.
+
+For Cartesian coordinate systems the 'x-axis-rotation' is measured anti-clockwise and 'sweep-flag = 1' may be interpreted as the arc sweeping in an anti-clockwise direction.
+
+For SVG coordinate systems the 'x-axis-rotation' is measured clockwise and 'sweep-flag = 1' flag may be interpreted as the arc sweeping in a clockwise direction.
+</t>
+<t tx="amd.20160315231631.1">Elliptical Arcs with SVG
+
+http://www.svgbasics.com/arcs.html
+
+An elliptical arc draws an arc from the current point to a specified point. 
+
+The arc command begins with the x and y radius and ends with the ending point of the arc. 
+
+Between these are three other values: 
+
+x axis rotation, 0 表示採用順時鐘旋轉畫弧, 1 表示採逆時鐘角度畫弧
+sweep flag  0 表示採負的切線角度畫弧, 若為 1 表示以正的切線角度畫弧
+large arc flag 0 表示小於 180 的弧, 若為 1, 表示為大於 180 度的弧
+
+
+The x axis rotation is used to rotate the ellipse that the arc is created from. 
+
+This rotation maintains the start and end points, whereas a rotation with the transform attribute (outside the path description) would cause the entire path, including the start and end points, to be rotated. 
+
+The large arc flag and sweep flag control which part of the ellipse is used to cut the arc. These are needed because there's more than one way to place an ellipse so that it includes the start and end points.</t>
+<t tx="amd.20160316004643.1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Circle Testing&lt;/title&gt;
+    &lt;link rel="stylesheet" href="../css/style.css"&gt;
+    &lt;!-- IE 9: display inline SVG --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea" width="800" height="800"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+
+# 設定 SVG 繪圖的格點範圍, 原點位於 (0%, 100%), 也就是原點位於畫布的左上角落點, 而且長與寬的尺寸比例都是 100%
+'''
+cgo.setGridboxSVG(0, cgo.heightPW, 100, cgo.heightPW);
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.
+Calling 'cgo.setGridboxSVG()' with no parameters is equivalent to calling
+cgo.setGridboxSVG(originX, originY, width_scale, height_scale)
+cgo.setGridboxSVG(0, 100, cgo.widthPW, cgo.heightPW)
+which sets the grid origin at the UPPER LEFT corner of the canvas and the gridbox width and height equal to the full canvas width and height.
+另一 Y 向上為正的設定 cgo.setGridboxRHC()
+'''
+#cgo.setGridboxSVG(0, 100, 100, 100)
+# 當使用者沒有設定 cgo.setGridboxSVG() 或 cgo.setGridboxRHC(), 系統採用內定的 cgo.setGridboxRHC()
+# 因為經由 cgo.setGridboxSVG(0, 100, 100, 100) 已經將格點範圍的原點設於畫布的左上角落點
+# 以下的絕對座標設定, 即是將此原點標定為繪圖座標的(-200, -200), 而且畫布的有效座標範圍, 寬為 400, 高也是 400
+cgo.setWorldCoords(-200, -200, 400, 400) 
+
+# 決定要不要畫座標軸線
+
+cgo.drawAxes(0, 200, 0, 100, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 10,
+    "xLabelInterval": 20,
+    "yTickInterval": 10,
+    "yLabelInterval": 10})
+
+        
+#cgo.drawText("使用 Cango 繪圖程式庫!", 0, 0, {"fontSize":60, "fontWeight": 1200, "lorg":5 })
+
+deg = math.pi/180
+def chain1(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("1-長向內", x, y-10, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+# 第一個 Arc, 選擇短軸
+def chain2(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 0, 0, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("2-短向內", x, y-10, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+def chain3(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 1, 1, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("3-長向外", x, y-30, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+def chain4(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+                     A 7, 7, 0, 0, 1, 6.8397, -1.4894 \
+                     A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+                     A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+                     A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "black",
+            "lineWidth": linewidth })
+    # 尺寸放大兩倍
+    cgo.render(cmbr, x, y, 2, rot)
+    cgo.drawText("4-短向外", x, y-30, {"fontSize":10, "fontWeight": 1200, "lorg":5 })
+
+yellow = "#f4c20d"
+white = "#ffffff"
+chain1(0, 0, 0, 0, 0, white, True, 4)
+chain2(35, 0, 0, 0, 0, white, True, 4)
+chain3(70, 0, 0, 0, 0, white, True, 4)
+chain4(105, 0, 0, 0, 0, white, True, 4)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
