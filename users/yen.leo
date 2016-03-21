@@ -148,6 +148,7 @@
 <v t="amd.20160315113132.1"><vh>@edit yen_20160315.md</vh></v>
 <v t="amd.20160315170155.1"><vh>@edit yen_20160315-1.md</vh></v>
 <v t="amd.20160316145308.1"><vh>@edit yen_20160316.md</vh></v>
+<v t="amd.20160321215635.1"><vh>@edit yen_20160321.md</vh></v>
 </v>
 </v>
 </v>
@@ -187,7 +188,7 @@ Author: kmol
 
 程式碼
 
-&lt;pre class="brush: python; html-script: true"&gt;
+&lt;pre class="brush: python;"&gt;
 print("hello")
 &lt;/pre&gt;</t>
 <t tx="amd.20151216173334.1"></t>

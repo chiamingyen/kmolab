@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-16T21:21:39+08:00</updated><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="http://chiamingyen.github.io/kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T21:21:39+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-16:kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-21T22:06:23+08:00</updated><entry><title>SVG 檔案解讀</title><link href="http://chiamingyen.github.io/kmolab/blog/svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T22:06:23+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-21:kmolab/blog/svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
+
+
+&lt;pre class="brush: python;"&gt;
+from xml.dom import minidom
+
+svg_file = "cd_task1_chain_ss.svg"
+
+# 利用 minidom 解讀 svg 檔案
+doc = minidom.parse(svg_file)
+
+# 設法取得 svg 檔案的長與寬, 並且去除 mm 單位字串
+width = float([path.getAttribute('width') for path
+             in doc.getElementsByTagName('svg')][0].replace("mm", ""))
+
+height = float([path.getAttribute('height') for path
+              in doc.getElementsByTagName('svg')][0].replace("mm", ""))
+
+# 取得 svg 的路徑字串
+path_strings = [path.getAttribute('d') for path
+                in doc.getElementsByTagName('path')][0]
+
+doc.unlink()
+
+print("width:", width, "\nheight:", height, "\npath:", path_strings)
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="http://chiamingyen.github.io/kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T21:21:39+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-16:kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
 
 
 &lt;p&gt;以 Solvespace 繪製輪廓圖: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs&lt;/a&gt;&lt;/p&gt;
