@@ -75,7 +75,7 @@
 </v>
 </v>
 </v>
-<v t="amd.20160303212723.1" a="E"><vh>2016spring課程</vh>
+<v t="amd.20160303212723.1"><vh>2016spring課程</vh>
 <v t="amd.20160303212735.1"><vh>2016springcd</vh></v>
 <v t="amd.20160303212739.1"><vh>2016springwcm</vh></v>
 <v t="amd.20160303213007.1"><vh>cptocadp</vh></v>
@@ -149,6 +149,7 @@
 <v t="amd.20160315170155.1"><vh>@edit yen_20160315-1.md</vh></v>
 <v t="amd.20160316145308.1"><vh>@edit yen_20160316.md</vh></v>
 <v t="amd.20160321215635.1"><vh>@edit yen_20160321.md</vh></v>
+<v t="amd.20160323170832.1"><vh>@edit yen_20160323.md</vh></v>
 </v>
 </v>
 </v>

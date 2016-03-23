@@ -1,5 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-21T22:06:23+08:00</updated><entry><title>SVG 檔案解讀</title><link href="http://chiamingyen.github.io/kmolab/blog/svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T22:06:23+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-21:kmolab/blog/svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-23T21:24:55+08:00</updated><entry><title>協同流程的規劃與實踐</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html" rel="alternate"></link><updated>2016-03-23T21:24:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-23:kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html</id><summary type="html">&lt;p&gt;隨著分散式版次管理系統技術的不斷進展, 各種軟硬體協同開發流程的規劃也跟著日漸多元, 當然, 從機械設計的角度來看, &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 的推出, 或許可以讓過去許多無緣一窺大型制式 PDM 或 PLM 系統的學員, 透過免費帳號的使用, 稍微體會一個版本多方推升改版所帶來的便利.&lt;/p&gt;
+
+
+&lt;p&gt;而在這個課程中, 我們則透過 &lt;a href="https://github.com/"&gt;Github&lt;/a&gt; 協同倉儲的運作, 從學員分組、指定組長、安排座位、各組組長設為倉儲直接協同者 (collaborator)、其他組員以 Pull Request 參與協同, 一直到本地端 &lt;a href="http://solvespace.com/"&gt;Solvespace&lt;/a&gt; 的零件輪廓繪製, 進而透過 SVG (Scalable Vector Graphics) 格式將零件斷面輪廓搬上全球資訊網, 然後以各組協同完成網際 2D 組件繪圖告一段落.&lt;/p&gt;
+&lt;p&gt;其中的程式皆以 Python3 完成, 工具組則包含 Leo Editor, Github 倉儲, Git client, Github Pages, Flask 框架, WSGI 協定, OpenShift 雲端平台等.&lt;/p&gt;
+&lt;p&gt;以雲端上的學員分組到安排座位, 初步的說明在 &lt;a href="wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html"&gt;電腦教室分組研究&lt;/a&gt;, 而當各組組長確立後, 則必須要利用 &lt;a href="https://developer.github.com/v3/"&gt;Github API&lt;/a&gt; 自動建立對應協同倉儲, 並且自動按照協同產品設計期程與內容規劃, 將各組組長設為各協同倉儲的直接協同者 (collaborator), 以便審核該組組員透過 Pull Request 送出的協同內容版次合併事宜.&lt;/p&gt;
+&lt;p&gt;針對此一自動建立 Github 倉儲與納組長為直接協同者的流程, 我們將利用 &lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt; 與 &lt;a href="https://github.com/mitsuhiko/flask"&gt;https://github.com/mitsuhiko/flask&lt;/a&gt;, 在 &lt;a href="https://www.openshift.com/"&gt;OpenShift&lt;/a&gt; 平台上完成. &lt;/p&gt;
+&lt;h2&gt;讀取學員分組基本資料&lt;/h2&gt;
+&lt;pre class="brush: python;"&gt;
+content = '''40323101,40323102,40323103,40323108,40323124,,
+40323109,40323130,40323135,40323136,40323138,40323144,
+40323111,40323117,40323118,40323119,40323120,40323122,
+40323110,40323113,40323116,40323121,40323151,,
+40323112,40323133,40323147,40323152,40323155,40323156,
+40323105,40323106,40323107,40323146,40223153,40023139,
+40123119,40123141,40123149,40123216,40123227,40123255,40023234
+40323125,40323126,40323132,40323149,40323150,40323153,
+40323123,40323131,40323137,40323143,40323145,40323154,
+40323127,40323128,40323139,40323141,,,
+'''
+result = []
+
+# splitlines() 方法會將每一行內容作為字串後傳回分割行資料數列
+for line in content.splitlines():
+    try:
+        g.es(line.split(","))
+    except:
+        print(line.split(","))
+    #各行字串再以逗點隔開成為各組學號數列, 再一一放入 result 數列中
+    result.append(line.split(","))
+
+try:
+    g.es(result)
+except:
+    print(result)
+&lt;/pre&gt;
+
+&lt;h2&gt;組內學號排序, 以及組間之組長學號排序&lt;/h2&gt;
+&lt;pre class="brush: python;"&gt;
+# 依照總組數, 逐一取出各組學號數列進行排序
+for i in range(len(result)):
+    #學號遞增排序
+    group_list = sorted(list(filter(None, result[i])))
+    #學號遞減排序
+    group_list = sorted(list(filter(None, result[i])), reverse=True)
+    group_sorted.append(group_list)
+#根據各組第一位組員學號, 進行各組間排序, 以訂出組序
+final_result = sorted(group_sorted)
+#學號遞減排序
+#final_result = sorted(group_sorted, reverse=True)
+&lt;/pre&gt;
+
+&lt;p&gt;當確定各組組長以及各組的組序後, 就可以利用下列流程, 自動建立對應倉儲, 並將組長納為 collaborator:&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+#導入 github3.py
+import github3
+# account 為要加為 collaborator 的用戶名稱
+account = "github_account_to_be_added_as_collaborator"
+# user_account 為 repository 倉儲擁有者的帳號
+user_account = "your_github_account"
+repository = "your_repository"
+#url = "https://github.com/your_github_account/your_repository.git"
+# 登入系統
+g = github3.login("your_github_account", "your_github_password")
+# 以下則新增協同者
+#若新增 collaborator 成功傳回 True 否則傳回 False
+result = g.repository(user_account, repository).add_collaborator(account):
+#移除 collaborator
+#result = g.repository(user_account, repository).remove_collaborator(account):
+&lt;/pre&gt;
+
+&lt;p&gt;建立新倉儲(&lt;a href="http://github3py.readthedocs.org/en/latest/examples/github.html#creating-a-new-repository"&gt;參考&lt;/a&gt;):&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+repo = {}
+keys = ['name', 'description', 'homepage', 'private', 'has_issues',
+    'has_wiki', 'has_downloads']
+
+for key in keys:
+    try:
+        repo[key] = raw_input(key + ': ')
+    except KeyboardInterrupt:
+        pass
+
+r = None
+if repo.get('name'):
+    r = g.create_repo(repo.pop('name'), **repo)
+
+if r:
+    print("Created {0} successfully.".format(r.name))
+&lt;/pre&gt;
+
+&lt;p&gt;最後則配合 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 的電腦教室配置, 依據已經完成分組的名單, 以依組序分別取出單一組員, 排入各排座位, 以分散各組組員, 令其儘量透過網路與系統資料進行協同產品設計.&lt;/p&gt;
+&lt;p&gt;分組與列出座位表的程式如下:&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+@app.route('/optionaction', methods=['POST'])
+def optionaction():
+    # 最後傳回的字串為 out_string
+    out_string = ""
+    # 程式內需要暫時使用的 tmp_string
+    tmp_string = ""
+    # 傳回字串中, 用來說明排序原則的 desc_string
+    desc_string = ""
+    result = []
+    group_sorted = []
+    num_of_stud = 0
+    # 每組至多 7 人
+    max_num_in_one_group = 7
+    # 電腦教室配置, 共有 9 排
+    total_column = 9
+    # 上面為相關變數的初始值設定, 以下開始取出 data_a 或 data_b 進行處理, 由 option3 傳回值決定
+    if request.form["option3"]  == "2a":
+        content = request.form["data_a"]
+    else:
+        content = request.form["data_b"]
+    #result = content.splitlines()
+    for line in content.splitlines():
+        result.append(list(line.split(",")))
+    # i 為行序
+    for i in range(len(result)):
+        # j 為組員序
+        for j in range(len(result[i])):
+            tmp_string += result[i][j] + ", "
+        out_string += "第" + str(i+1) + "排資料:"+ tmp_string + "&lt;br /&gt;"
+        tmp_string = ""
+    for i in range(len(result)):
+        # 開始進入組內排序, 根據 request.form["option1"]  的值決定遞增或遞減
+        if request.form["option1"]  == "遞增":
+            group_list = sorted(list(filter(None, result[i])))
+        else:
+            group_list = sorted(list(filter(None, result[i])), reverse=True)
+        group_sorted.append(group_list)
+    if request.form["option1"]  == "遞增":
+        desc_string += "組內學號最小者為組長."
+    else:
+         desc_string += "組內學號最大者為組長."
+    # 開始進入組間組長學號排序, 根據 request.form["option2"] 的值決定遞增或遞減
+    if request.form["option2"]  == "遞增":
+        desc_string += "各組長中學號最小者為第1組."
+        final_result = sorted(group_sorted)
+    else:
+        desc_string += "各組長中學號最大者為第1組."
+        final_result = sorted(group_sorted, reverse=True)
+    out_string += "&lt;br /&gt;" + desc_string + "&lt;br /&gt;"
+    # i 為行序
+    for i in range(len(final_result)):
+        # j 為組員序
+        for j in range(len(final_result[i])):
+            num_of_stud += 1
+            tmp_string += final_result[i][j] + ","
+        out_string += "第" + str(i+1) + "組:"+ tmp_string + "&lt;br /&gt;"
+        tmp_string = ""
+    #return "總共有" + str(i+) + "組"
+    # group_num 為總組數
+    group_num = i + 1
+    # 截至這裡, 已經完成選組長, 以及定組序的工作 ,接下來要排座位, 並且印出座位表
+    # 先算每班的總人數
+    #return "總共有"+ str(num_of_stud) + "人"
+    seat_by_column = []
+    for row in range(max_num_in_one_group):
+    # 每組最多 7 人
+    #for row in range(7):
+        # 這裡的 11 為總組數
+        #for column in range(11):
+        for column in range(group_num):
+            # 因為各分組數列的長度並不相同, 但是最長的有 7 位組員, 因此若無法取得的資料 (因為索引超值), 就補上空字串
+            try:
+                seat_by_column.append(final_result[column][row])
+            except:
+                seat_by_column.append("")
+    # seat_by_column 為去除空白字串前的座位數列
+    # 然後利用 filter(None, seat_by_column) 去除空白字串, 就可以得到以 column 為主的座位排序
+    seat_by_column = list(filter(None, seat_by_column))
+    # 然後每 N 個取為 1 排, 即可得到以排為主的座位序列, 而 N 則視全班人數除以 9, 也就是 total_column 進位決定, 因為共有 9 排
+    N = math.ceil(num_of_stud/total_column)
+    # for debug
+    #return str(num_of_stud) + ":" + str(total_column) + ":" + str(N)
+    column_list = [seat_by_column[n:n+N] for n in range(0, len(seat_by_column), N)]
+    # 列出每 N 個組員一排的數列 column_list
+    # 接下來要納入以排為主的座位
+    # 根據 column_list, 建立一個 dictionary, 其中學號為 index, 座位號為對應值
+    seat_dict = {}
+    for column in range(len(column_list)):
+        for i in range(N):
+            try:
+                seat_dict.update({column_list[column][i]: (column, i)})
+            except:
+                seat_dict.update({"": ""})
+
+    # 開始準備用順序列出學員座號
+    # 根據學號, 排序 dictionary 的方法
+    import operator
+    seat_dict_sort = sorted(seat_dict.items(), key = operator.itemgetter(0), reverse = False)
+    # 依照學號順序, 列出座位表
+    out_string += "&lt;br /&gt;按照學號次序列出座位表:&lt;br /&gt;&lt;br /&gt;"
+    for i in range(1, len(seat_dict_sort)):
+        out_string +=  str(i) + ":"+ str(seat_dict_sort[i]) + "&lt;br /&gt;"
+    # 結束準備用順序列出學員座號
+    # dont know why .reverse() did not work, 只有 [::-1] 可以 reverse list elements
+    #g.es(column_list[::-1])
+
+    # 因為經由 zip 逐一重新 transpose 的列資料, 必須配合最大 (也就是總共有 7 列, 也就是 N 的值) 列數補上空白字串 (也就是空位)
+    # 所以不能使用 zip, 而必須導入 zip_longest 模組方法
+    from itertools import zip_longest
+    final_seat = list(zip_longest(*column_list[::-1], fillvalue=""))
+    # 列出最後的座位表
+    #g.es(final_seat)
+    # 最後轉成 html table 標註格式
+    out_string += "&lt;br /&gt; &lt;br /&gt;"
+    out_string += "&lt;table border='1' width='100%'&gt;"
+    out_string += "&lt;tr&gt;&lt;td colspan='9' style='text-align:center'&gt;講台&lt;/td&gt;&lt;/tr&gt;"
+    for row in range(len(final_seat)):
+        out_string += "&lt;tr&gt;"
+        # 因為每一 row 有 9, 也就是 total_column 個位子
+        for i in range(total_column):
+            try:
+                if i%2 != 0:
+                    out_string += "&lt;td style='text-align:center'  bgcolor='#FFD78C' height='30'&gt;" + str(final_seat[row][i]) + "&lt;/td&gt;"
+                else:
+                    out_string += "&lt;td style='text-align:center' height='30'&gt;" + str(final_seat[row][i]) + "&lt;/td&gt;"
+            except:
+                out_string += "&lt;td&gt;&amp;nbsp;&lt;/td&gt;"
+        out_string += "&lt;/tr&gt;"
+    out_string += "&lt;/table&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;"
+    return out_string
+    # 等運算或資料處理結束後, 再將相關值送到對應的 template 進行資料的展示
+    #return render_template('optionaction.html', option_list1=option_list1, option_list2=option_list2)
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>SVG 檔案解讀</title><link href="http://chiamingyen.github.io/kmolab/blog/svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T22:06:23+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-21:kmolab/blog/svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
 
 
 &lt;pre class="brush: python;"&gt;
