@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/</loc>
-<lastmod>2016-03-29T22:03:45-00:00</lastmod>
+<lastmod>2016-03-30T00:44:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/archives.html</loc>
-<lastmod>2016-03-29T22:03:45-00:00</lastmod>
+<lastmod>2016-03-30T00:44:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/tags.html</loc>
-<lastmod>2016-03-29T22:03:45-00:00</lastmod>
+<lastmod>2016-03-30T00:44:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/categories.html</loc>
-<lastmod>2016-03-29T22:03:45-00:00</lastmod>
+<lastmod>2016-03-30T00:44:40-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -40,7 +40,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html</loc>
-<lastmod>2016-03-29T22:03:06+08:00</lastmod>
+<lastmod>2016-03-30T00:44:15+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -334,7 +334,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/category/courses.html</loc>
-<lastmod>2016-03-29T22:03:06+08:06</lastmod>
+<lastmod>2016-03-30T00:44:15+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -361,22 +361,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/ga.html</loc>
-<lastmod>2016-01-26T20:22:47+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/nodejs.html</loc>
-<lastmod>2016-02-24T10:45:35+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/jupyter.html</loc>
-<lastmod>2016-01-17T22:59:14+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/brython.html</loc>
+<lastmod>2016-01-19T23:14:34+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -389,20 +375,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/xie-tong-chan-pin-she-ji-shi-xi.html</loc>
-<lastmod>2016-03-29T22:03:06+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/2016-spring.html</loc>
-<lastmod>2016-03-29T22:03:06+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://chiamingyen.github.io/kmolab/blog/tag/domain-names.html</loc>
 <lastmod>2016-01-17T01:14:17+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -410,8 +382,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/ipv6.html</loc>
-<lastmod>2016-02-13T09:45:39+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/python.html</loc>
+<lastmod>2016-03-15T15:02:06+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/2016-spring.html</loc>
+<lastmod>2016-03-30T00:44:15+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -424,36 +403,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/brython.html</loc>
-<lastmod>2016-01-19T23:14:34+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/shu-wei-hua-jiao-yu.html</loc>
-<lastmod>2016-02-21T21:47:57+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/yan-jiu-shi.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/dian-nao-fu-zhu-she-ji-shi.html</loc>
 <lastmod>2016-02-13T09:45:39+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/she-ding.html</loc>
-<lastmod>2016-02-13T09:45:39+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/wang-lu-she-ding.html</loc>
-<lastmod>2016-02-13T09:45:39+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/pelican.html</loc>
+<lastmod>2016-01-17T22:34:07+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -473,43 +431,50 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/sheng-ya-gui-hua.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/linux.html</loc>
 <lastmod>2016-02-13T09:45:39+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/ethercalc.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/xie-tong-chan-pin-she-ji-shi-xi.html</loc>
+<lastmod>2016-03-30T00:44:15+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/she-ding.html</loc>
+<lastmod>2016-02-13T09:45:39+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/nodejs.html</loc>
 <lastmod>2016-02-24T10:45:35+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/python.html</loc>
-<lastmod>2016-03-15T15:02:06+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/4032zhuan-ti.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/2015-fall-cp.html</loc>
 <lastmod>2016-02-13T09:45:39+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/leo-editor.html</loc>
-<lastmod>2016-03-15T15:02:06+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/wang-ji-nei-rong-guan-li.html</loc>
+<lastmod>2016-03-23T21:24:55+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/javascript.html</loc>
-<lastmod>2016-01-19T23:14:34+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/yan-jiu-shi.html</loc>
+<lastmod>2016-02-13T09:45:39+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -529,22 +494,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/yun-suan-si-wei.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/shu-wei-hua-jiao-yu.html</loc>
 <lastmod>2016-02-21T21:47:57+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/dian-nao-fu-zhu-she-ji-shi-xi.html</loc>
-<lastmod>2016-02-24T10:29:34+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/javascript.html</loc>
+<lastmod>2016-01-19T23:14:34+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/pelican.html</loc>
-<lastmod>2016-01-17T22:34:07+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/ethercalc.html</loc>
+<lastmod>2016-02-24T10:45:35+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/4032zhuan-ti.html</loc>
+<lastmod>2016-02-13T09:45:39+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/jupyter.html</loc>
+<lastmod>2016-01-17T22:59:14+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -557,36 +536,57 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/wang-ji-nei-rong-guan-li.html</loc>
-<lastmod>2016-03-23T21:24:55+08:06</lastmod>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/ga.html</loc>
+<lastmod>2016-01-26T20:22:47+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/dian-nao-fu-zhu-she-ji-shi.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/sheng-ya-gui-hua.html</loc>
 <lastmod>2016-02-13T09:45:39+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/2015-fall-cp.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/wang-lu-she-ding.html</loc>
 <lastmod>2016-02-13T09:45:39+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://chiamingyen.github.io/kmolab/blog/tag/linux.html</loc>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/ipv6.html</loc>
 <lastmod>2016-02-13T09:45:39+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/dian-nao-fu-zhu-she-ji-shi-xi.html</loc>
+<lastmod>2016-02-24T10:29:34+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/yun-suan-si-wei.html</loc>
+<lastmod>2016-02-21T21:47:57+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://chiamingyen.github.io/kmolab/blog/tag/leo-editor.html</loc>
+<lastmod>2016-03-15T15:02:06+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://chiamingyen.github.io/kmolab/blog/author/kmol.html</loc>
-<lastmod>2016-03-29T22:03:06+08:06</lastmod>
+<lastmod>2016-03-30T00:44:15+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

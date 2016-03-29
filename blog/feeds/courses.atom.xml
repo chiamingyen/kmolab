@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-29T22:03:06+08:00</updated><entry><title>任務一 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-29T22:03:06+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-29:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;假設 2a CD 課程中有第 100 組, 由三位組員: scrum-1, scrum-2,  scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 所在在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 其餘三人則必須透過 Pull Requests 進行協同.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-30T00:44:15+08:00</updated><entry><title>任務一 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-30T00:44:15+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;假設 2a CD 課程中有第 100 組, 由四位組員: scrum-1, scrum-2,  scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 可以直接將本地端的 CDW2 倉儲版本資料提交推送到遠端, 其餘三人則必須透過 Pull Requests 進行協同.&lt;/p&gt;
 
 
-&lt;p&gt;每一位組員參與協同的方法都是先根據 &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html&lt;/a&gt; 中的說明. 登入 Github 後, 以瀏覽器連結到 &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt; 後, 按一下右上方的  Fork 鍵後, 就可建立與原始倉儲互有關聯的"互刻"內容.&lt;/p&gt;
-&lt;p&gt;接下來 scrum-1 必須 git clone 這個"互刻"下來的倉儲, 以便在本地端就工作目錄中的內容進行處理. 由於現在 CDW2 倉儲中的 master 與 gh-pages 已經徹底分離, master 分支主要用來執行 Python3 wsgi 程式, 而 gh-pages 分支則要協同各組回報的資料, 以 Github Pages 的網頁呈現.&lt;/p&gt;
+&lt;p&gt;scrum-1 可以直接 git clone cdw2, 然後改版提交推送, 其他組員參與協同的方法都是先根據 &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html&lt;/a&gt; 中的說明. 登入 Github 後, 以瀏覽器連結到 &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt; 後, 按一下右上方的  Fork 鍵後, 就可建立與原始倉儲互有關聯的"互刻"內容.&lt;/p&gt;
+&lt;p&gt;scrum-1 git clone cdw2 倉儲後, 可以在本地端就工作目錄中的內容進行處理. 由於現在 cdw2 倉儲中的 master 與 gh-pages 已經徹底分離, master 分支主要用來執行 Python3 wsgi 程式, 而 gh-pages 分支則要協同各組回報的資料, 以 Github Pages 的網頁呈現.&lt;/p&gt;
 &lt;p&gt;在 cdw2 master 分支上的工作:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;git clone cdw2 倉儲, 以 git branch 指令確定工作目錄中的資料為 master 分支.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;在 users/s2a/g100 分組目錄中, 建立 scrum1.leo, 主要目的建立 scrum1_task1.py 然後在近端測試後, 要同步推送到分組的 OpenShift 雲端平台,  然後再將結果回報到 cdw2 的 gh-pages 分支豬的 Pelican 網站.&lt;/p&gt;
+&lt;p&gt;在 users/s2a/g100 分組目錄中, 建立 scrum1.leo, 主要目的建立 scrum1_task1.py 然後在近端測試後, 要利用 git remote add 建立同步設定後, 再推送到各分組自行建立的 OpenShift 應用程式倉儲,  然後再將結果回報到 cdw2 的 gh-pages 分支的 Pelican 網站.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;首先是在 scrum1_task1.py 程式中, 利用 Flask 的 Blueprint() 建立藍圖, 且名稱為 scrum1_task1, 這個變數名稱, 就是後面用來指定路徑 decorator 用的藍圖案例, 從這裡可以知道隨後測試可以 /ag100/scrum1_task1 呼叫 task1() 函式傳回的繪圖程式.&lt;/p&gt;
@@ -18,14 +18,14 @@
 &lt;/ol&gt;
 &lt;p&gt;接著則是在 myflaskapp.py 檔案中, 利用 import users.s2a.g100.scrum1_task1 導入 scrum1_task1.py 程式內容, 且在 flask app 註冊的時候, 利用 app.register_blueprint(users.s2a.g100.scrum1_task1.scrum1_task1) 註冊 scrum1_task1.py 程式中的 scrum1_task1 藍圖變數.&lt;/p&gt;
 &lt;p&gt;完整的程式碼: &lt;a href="https://github.com/2015fallhw/cdw2/blob/efc0bf77c01c2d4218f16fb0603bb5ed27639e1b/users/s2a/g100/scrum1_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/efc0bf77c01c2d4218f16fb0603bb5ed27639e1b/users/s2a/g100/scrum1_task1.py&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;完成上述的 /ag100/scrum1_task1 繪圖的本地端測試後, 可以正常顯示繪圖內容後, 將 master 分支的版本提交推送到 https://github.com/2015fallhw/cdw2.git 倉儲後, 接著就利用組長 scrum_master 所登記的 OpenShift python3 應用程式將原始碼指到 https://github.com/2015fallhw/cdw2.git 後就可以完成 ag100 組所對應的 &lt;a href="http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1"&gt;http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;最後,為了將 ag100 組員 scrum-1 所完成的繪圖結果回報到 https://github.com/2015fallhw/cdw2.git 的 gh-pages 網頁, 因此將本地端的 cdw2 切換到 gh-pages 分支, 並且複製 users 目錄中的 template.leo 檔案, 並且建立 s2a/g100 目錄, 並且將 template.leo 存為 scrum1.leo 後, 進行修改.&lt;/p&gt;
+&lt;p&gt;完成上述的 /ag100/scrum1_task1 繪圖的本地端測試後, 可以正常顯示繪圖內容後, 將 master 分支的版本提交推送到 https://github.com/2015fallhw/cdw2.git 倉儲後, 接著就利用組長所登記的 OpenShift python3 應用程式, 將原始碼指到 https://github.com/2015fallhw/cdw2.git 後就可以完成 ag100 組所對應的 &lt;a href="http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1"&gt;http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;最後,為了將 ag100 組員 scrum-1 所完成的繪圖結果回報到 https://github.com/2015fallhw/cdw2.git 的 gh-pages 網頁, 因此將本地端的 cdw2 切換到 gh-pages 分支, 並且複製 users 目錄中的 template.leo 檔案, 並且建立 s2a/g100 目錄, 再將 template.leo 存為 scrum1.leo 後, 進行修改.&lt;/p&gt;
 &lt;p&gt;scrum1.leo 是 ag100 組員 scrum-1 所對應的 .leo 檔案, 目的是要建立 content 目錄中的 .md 檔案, 並在本地端用近端按鈕將 .md 轉為 Pelican 網誌, 進行檢視後, 然後再利用遠端按鈕將資料轉為遠端專用格式, 以提交推送到 cdw2 倉儲的 gh-pages 分支.&lt;/p&gt;
 &lt;p&gt;scrum1.leo 位於 users/s2a/g100 目錄中, 編輯 .md 檔案時必須特別注意:&lt;/p&gt;
 &lt;p&gt;Title: scrum1-回報 ag100 scrum1 初步繪圖主機與連結&lt;/p&gt;
 &lt;p&gt;必須加入 scrum1 個人學號, 以免多組員使用相同文章標題後, Pelican 無法轉成 html, 因為設定中是以 Title 名稱來決定最後 .html 的檔名.&lt;/p&gt;
 &lt;p&gt;其次則是要在 Category: 中標示自己的組別, 這裡的標題為 ag100, 表示 scrum-1 組員為甲班 g100 的成員.&lt;/p&gt;
-&lt;p&gt;寫完文章後, 先將滑鼠停在 @button local pelican 節點, 然後案上方的 local-pelican, 完成轉換為 html 後, 打開 cdw2 倉儲中 gh-pages 分支中的 index.html 檢查是否正確轉檔, 若是, 則再將滑鼠停在　@button gh-pages pelican 節點, 再按上方的 gh-pages-pelican 按鈕後, 將版本資料提交推送到 cdw2 的 gh-pages 分支中.&lt;/p&gt;
+&lt;p&gt;寫完文章後, 先將滑鼠停在 @button local pelican 節點, 然後按上方的 local-pelican 按鈕, 完成轉換為 html 後, 打開 cdw2 倉儲中 gh-pages 分支中的 index.html 檢查是否正確轉檔, 若是, 則再將滑鼠停在 @button gh-pages pelican 節點, 再按上方的 gh-pages-pelican 按鈕後, 將版本資料提交推送到 cdw2 的 gh-pages 分支中.&lt;/p&gt;
 &lt;p&gt;因為這裡要推送到 gh-pages 分支, 若以指令推送, 必須使用 git push origin gh-pages, 若是需要拉回 gh-pages 的分支版本, 則使用 git pull origin gh-pages 指令.&lt;/p&gt;
 &lt;p&gt;當 scrum-1 用戶完成 cdw2 gh-pages 分支版次資料後, 所新增的網誌文章為: &lt;a href="http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html"&gt;http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>協同流程的規劃與實踐</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html" rel="alternate"></link><updated>2016-03-23T21:24:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-23:kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html</id><summary type="html">&lt;p&gt;隨著分散式版次管理系統技術的不斷進展, 各種軟硬體協同開發流程的規劃也跟著日漸多元, 當然, 從機械設計的角度來看, &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 的推出, 或許可以讓過去許多無緣一窺大型制式 PDM 或 PLM 系統的學員, 透過免費帳號的使用, 稍微體會一個版本多方推升改版所帶來的便利.&lt;/p&gt;
 
