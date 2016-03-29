@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'kmol'
-SITENAME = 'Kmolab (國立虎科大MDE)'
+SITENAME = 'Kmolab (虎尾科大MDE)'
 #SITEURL = 'http://chiamingyen.github.io/kmolsite/'
 
 # 不要用文章所在目錄作為類別
