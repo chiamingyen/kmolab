@@ -177,7 +177,7 @@ init_mathjax();
         <meta property="og:title" content="任務一 2D 協同繪圖"/>
         <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html"/>
         <meta property="og:description" content="假設 2a CD 課程中有第 100 組, 由三位組員: scrum-1, scrum-2, scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 所在在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 其餘三人則必須透過 Pull Requests 進行協同."/>
-        <meta property="article:published_time" content="2016-03-28" />
+        <meta property="article:published_time" content="2016-03-29" />
             <meta property="article:section" content="Courses" />
             <meta property="article:tag" content="2016 Spring" />
             <meta property="article:tag" content="協同產品設計實習" />
@@ -315,7 +315,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-03-28T20:43:41.151945+08:00"> 一 28 三月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-03-29T22:03:06.960789+08:00"> 二 29 三月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
@@ -333,7 +333,31 @@ Kmolab (虎尾科大MDE)            </a>
 
 
 <p>每一位組員參與協同的方法都是先根據 <a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html">http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</a> 中的說明. 登入 Github 後, 以瀏覽器連結到 <a href="https://github.com/2015fallhw/cdw2">https://github.com/2015fallhw/cdw2</a> 後, 按一下右上方的  Fork 鍵後, 就可建立與原始倉儲互有關聯的"互刻"內容.</p>
-<p>接下來 scrum-1 必須 git clone 這個"互刻"下來的倉儲, 以便在本地端就工作目錄中的內容進行處理.</p>
+<p>接下來 scrum-1 必須 git clone 這個"互刻"下來的倉儲, 以便在本地端就工作目錄中的內容進行處理. 由於現在 CDW2 倉儲中的 master 與 gh-pages 已經徹底分離, master 分支主要用來執行 Python3 wsgi 程式, 而 gh-pages 分支則要協同各組回報的資料, 以 Github Pages 的網頁呈現.</p>
+<p>在 cdw2 master 分支上的工作:</p>
+<ol>
+<li>
+<p>git clone cdw2 倉儲, 以 git branch 指令確定工作目錄中的資料為 master 分支.</p>
+</li>
+<li>
+<p>在 users/s2a/g100 分組目錄中, 建立 scrum1.leo, 主要目的建立 scrum1_task1.py 然後在近端測試後, 要同步推送到分組的 OpenShift 雲端平台,  然後再將結果回報到 cdw2 的 gh-pages 分支豬的 Pelican 網站.</p>
+</li>
+<li>
+<p>首先是在 scrum1_task1.py 程式中, 利用 Flask 的 Blueprint() 建立藍圖, 且名稱為 scrum1_task1, 這個變數名稱, 就是後面用來指定路徑 decorator 用的藍圖案例, 從這裡可以知道隨後測試可以 /ag100/scrum1_task1 呼叫 task1() 函式傳回的繪圖程式.</p>
+</li>
+</ol>
+<p>接著則是在 myflaskapp.py 檔案中, 利用 import users.s2a.g100.scrum1_task1 導入 scrum1_task1.py 程式內容, 且在 flask app 註冊的時候, 利用 app.register_blueprint(users.s2a.g100.scrum1_task1.scrum1_task1) 註冊 scrum1_task1.py 程式中的 scrum1_task1 藍圖變數.</p>
+<p>完整的程式碼: <a href="https://github.com/2015fallhw/cdw2/blob/efc0bf77c01c2d4218f16fb0603bb5ed27639e1b/users/s2a/g100/scrum1_task1.py">https://github.com/2015fallhw/cdw2/blob/efc0bf77c01c2d4218f16fb0603bb5ed27639e1b/users/s2a/g100/scrum1_task1.py</a>  </p>
+<p>完成上述的 /ag100/scrum1_task1 繪圖的本地端測試後, 可以正常顯示繪圖內容後, 將 master 分支的版本提交推送到 https://github.com/2015fallhw/cdw2.git 倉儲後, 接著就利用組長 scrum_master 所登記的 OpenShift python3 應用程式將原始碼指到 https://github.com/2015fallhw/cdw2.git 後就可以完成 ag100 組所對應的 <a href="http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1">http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1</a>.</p>
+<p>最後,為了將 ag100 組員 scrum-1 所完成的繪圖結果回報到 https://github.com/2015fallhw/cdw2.git 的 gh-pages 網頁, 因此將本地端的 cdw2 切換到 gh-pages 分支, 並且複製 users 目錄中的 template.leo 檔案, 並且建立 s2a/g100 目錄, 並且將 template.leo 存為 scrum1.leo 後, 進行修改.</p>
+<p>scrum1.leo 是 ag100 組員 scrum-1 所對應的 .leo 檔案, 目的是要建立 content 目錄中的 .md 檔案, 並在本地端用近端按鈕將 .md 轉為 Pelican 網誌, 進行檢視後, 然後再利用遠端按鈕將資料轉為遠端專用格式, 以提交推送到 cdw2 倉儲的 gh-pages 分支.</p>
+<p>scrum1.leo 位於 users/s2a/g100 目錄中, 編輯 .md 檔案時必須特別注意:</p>
+<p>Title: scrum1-回報 ag100 scrum1 初步繪圖主機與連結</p>
+<p>必須加入 scrum1 個人學號, 以免多組員使用相同文章標題後, Pelican 無法轉成 html, 因為設定中是以 Title 名稱來決定最後 .html 的檔名.</p>
+<p>其次則是要在 Category: 中標示自己的組別, 這裡的標題為 ag100, 表示 scrum-1 組員為甲班 g100 的成員.</p>
+<p>寫完文章後, 先將滑鼠停在 @button local pelican 節點, 然後案上方的 local-pelican, 完成轉換為 html 後, 打開 cdw2 倉儲中 gh-pages 分支中的 index.html 檢查是否正確轉檔, 若是, 則再將滑鼠停在　@button gh-pages pelican 節點, 再按上方的 gh-pages-pelican 按鈕後, 將版本資料提交推送到 cdw2 的 gh-pages 分支中.</p>
+<p>因為這裡要推送到 gh-pages 分支, 若以指令推送, 必須使用 git push origin gh-pages, 若是需要拉回 gh-pages 的分支版本, 則使用 git pull origin gh-pages 指令.</p>
+<p>當 scrum-1 用戶完成 cdw2 gh-pages 分支版次資料後, 所新增的網誌文章為: <a href="http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html">http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html</a></p>
             </div>
             <!-- /.entry-content -->
     <hr/>
