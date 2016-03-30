@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/cadlab.atom.xml" rel="self"></link><id>./</id><updated>2016-02-13T09:45:39+08:00</updated><entry><title>2016 CAD Lab</title><link href="./2016-cad-lab.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-13:./2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-02-13T09:45:39+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 &lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
 &lt;p&gt;intel Core i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
 &lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
@@ -56,7 +56,7 @@
 &lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
 &lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
 &lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>Custom domain for Github pages</title><link href="./custom-domain-for-github-pages.html" rel="alternate"></link><updated>2016-01-17T01:14:17+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-17:./custom-domain-for-github-pages.html</id><summary type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>Custom domain for Github pages</title><link href="http://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html" rel="alternate"></link><updated>2016-01-17T01:14:17+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/custom-domain-for-github-pages.html</id><summary type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
 
 
 &lt;p&gt;這裡要舉的例子為 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站的網址設定.&lt;/p&gt;
