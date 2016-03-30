@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-30T00:44:15+08:00</updated><entry><title>任務一 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-30T00:44:15+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;假設 2a CD 課程中有第 100 組, 由四位組員: scrum-1, scrum-2,  scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 可以直接將本地端的 CDW2 倉儲版本資料提交推送到遠端, 其餘三人則必須透過 Pull Requests 進行協同.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/courses.atom.xml" rel="self"></link><id>./</id><updated>2016-03-30T23:59:43+08:00</updated><entry><title>任務一 2D 協同繪圖之二</title><link href="./ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html" rel="alternate"></link><updated>2016-03-30T23:59:43+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-30:./ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html</id><summary type="html">&lt;p&gt;這裡要介紹的是 scrum-2 組員利用 forked cdw2 倉儲版本, git clone 到近端後, 以 git checkout gh-pages 轉到 Github Pages 對應的網頁資料上工作.&lt;/p&gt;
+
+
+&lt;p&gt;在 users/s2a/g100 目錄下建立 scrum2.leo 後, 就利用 Leo Editor 在 content 目錄中, 建立 .md 檔案, 完成後先在近端利用 local-pelican 測試結果, 若能夠正確轉換 Pelican post 目錄中的網誌, 就可以再用 gh-pages-pelican 按鈕, 將 post 目錄中轉成遠端網頁所需要的格式 (主要是讓 disqus 留言系統可以正常運作).&lt;/p&gt;
+&lt;p&gt;然後 scrum-2 用戶就可以利用 git add -A, git commit -m "提交註記訊息", 以及 git push origin gh-pages 將近端的版本提交推送到 scrum-2 自己 forked 的 cdw2 倉儲.&lt;/p&gt;
+&lt;p&gt;接著, scrum-2 用戶就必須登入到 github, 然後從自己帳號下的 scrum-2/cdw2 倉儲中建立 pull request.&lt;/p&gt;
+&lt;p&gt;因為 scrum-2 要將 gh-pages 分支的資料版本, 以拉回請求 (pull request) 的方式送到 2015fallhw/cdw2 倉儲, 而這項請求, 必須由 ag100 的組長來進行檢查並且設法完成版本的衝突解決與合併.&lt;/p&gt;
+&lt;p&gt;建立 pull request 時, scrum-2 必須確定基底互刻 (base fork) 為 2015fallhw/cdw2 倉儲中的 gh-pages 分支, 而標頭互刻 (head fork) 則為 scrum-2/cdw2 倉儲中的 gh-pages 分支, 其間 Github 還特別顯示 "Can't automatically merge", 表示這個拉回請求無法自動合併, scrum-1 組長必須要採用手動合併.&lt;/p&gt;
+&lt;p&gt;接著 scrum-2 組員按下 Create pull request 按鈕, 並在 comment 表單中寫下此一拉回請求的改版要點, 完成後的請求連結為 &lt;a href="https://github.com/2015fallhw/cdw2/pull/169"&gt;https://github.com/2015fallhw/cdw2/pull/169&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;接下來的 pull request 審核與合併工作就落在 scrum-1 組長的身上, scrum-1 登入 Github 後, 進入 2015fallhw/cdw2 倉儲. 點下 &lt;a href="https://github.com/2015fallhw/cdw2/pull/169"&gt;https://github.com/2015fallhw/cdw2/pull/169&lt;/a&gt; pull request.&lt;/p&gt;
+&lt;p&gt;這時可以看到 "This branch has conflicts that must be resolved", 表示 scrum-1 必須手動處理衝突與合併.&lt;/p&gt;
+&lt;p&gt;假如 scrum-1 近端沒有 &lt;a href="https://github.com/2015fallhw/cdw2.git"&gt;https://github.com/2015fallhw/cdw2.git&lt;/a&gt; 倉儲的版本資料, 必須要利用 git clone 複製到本地端, 然後確定分支指在 gh-pages 分支上.&lt;/p&gt;
+&lt;p&gt;Github 針對此一流程, 建立的基本步驟如下:&lt;/p&gt;
+&lt;pre&gt;
+Step 1: From your project repository, check out a new branch and test the changes.
+
+git checkout -b scrum-2-gh-pages gh-pages
+git pull https://github.com/scrum-2/cdw2.git gh-pages
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout gh-pages
+git merge --no-ff scrum-2-gh-pages
+git push origin gh-pages
+&lt;/pre&gt;
+
+&lt;p&gt;有關 git checkout 指令, 使用 -b 表示要利用 git branch 建立新分支 scrum-2-gh-pages, 同時切換到該分支, 至於 start-point 指的是該新建立的分支, 其對應分支起點為 gh-pages. 假如 scrum-1 近端的倉儲資料已經在之前使用 -b 建立過 scrum-2-gh-pages 分支, 且 start-point 設為 gh-pages 分支, 則必須改用 git checkout  scrum-2-gh-pages&lt;/p&gt;
+&lt;p&gt;接著執行 git pull https://github.com/scrum-2/cdw2.git gh-pages, 拉回 scrum-2/cdw2 的 gh-pages 分支版本資料, 這時 users/s2a/g100/scrum2.leo 因為無法自動合併而無法從 Leo Editor 開啟, 必須用純文字編輯器打開後解決衝突.&lt;/p&gt;
+&lt;p&gt;開啟 scrum2.leo 後, 看到的第1段衝突為:&lt;/p&gt;
+&lt;pre&gt;
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;v t="amd.20160329174139.1"&gt;&lt;vh&gt;@clean scrum2-20160330.md&lt;/vh&gt;&lt;/v&gt;
+&lt;v t="amd.20160330205248.1"&gt;&lt;vh&gt;@clean scrum2-20160330-1.md&lt;/vh&gt;&lt;/v&gt;
+=======
+&lt;v t="amd.20160329174139.1"&gt;&lt;vh&gt;@clean scrum2-20160330-2.md&lt;/vh&gt;&lt;/v&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 61b5812abdc9cdb907dbd1b865194e5bdb70bbdf
+&lt;/pre&gt;
+
+&lt;p&gt;表示 scrum-1 近端版本有 @clean scrum2-20160330.md 與 @clean scrum2-20160330-1.md 等兩個節點, 而 scrum-2 pull request 的版本則有 @clean scrum2-20160330-2.md 節點, 這裡必須保留這3個分別建立網誌文章的 .md 檔案, 因此刪除衝突標示符號後即可.&lt;/p&gt;
+&lt;p&gt;過程中 scrum-1 組長可以根據 content 目錄中的組員對應 .md 檔案來解決 .leo 檔案中的衝突, 同時各組員也必須經常利用反向的 pull request, 儘量自行在 task 1 任務執行期間跟上 2015fallhw/cdw2 的最新版本, 才能減少組長審查組員 pull request 的版本差異.&lt;/p&gt;
+&lt;p&gt;完成 scrum-2 pull request  版本的合併後, scrum-1 必須利用近端與遠端按鈕建立 Pelican 網誌後, 進行近端的版本提交, git add -A 與 git commit -m "提交訊息", 之後繼續執行 scrum-2-gh-pages 與 gh-pages 分支版本的合併.&lt;/p&gt;
+&lt;p&gt;先利用 git checkout gh-pages 將分支轉為 gh-pages, 然後執行的指令為 git merge --no-ff scrum-2-gh-pages, 其中的 --no-ff 表示合併時不使用快進 (fast-forward) 模式. 而是考量互刻 (fork) 分支後, 2015fallhw/cdw2 的版本可能已經被其他協同組員改版, 必須將這些版本資料納入合併.&lt;/p&gt;
+&lt;p&gt;接著必須要再利用近端與遠端按鈕進行 post 目錄中網誌資料的轉檔後, 就可以提交推送到遠端的 cdw2 倉儲 gh-pages 分支.&lt;/p&gt;
+&lt;p&gt;步驟為:&lt;/p&gt;
+&lt;p&gt;git add -A&lt;/p&gt;
+&lt;p&gt;git commit -m "提交訊息"&lt;/p&gt;
+&lt;p&gt;git push origin gh-pages&lt;/p&gt;
+&lt;p&gt;最後, 當組長 scrum-1 完成  scrum-2 pull request 的合併後, scrum-2 就可以利用反向 pull request 更新 scrum-2/cdw2 gh-pages 分支上的版本資料.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖</title><link href="./ren-wu-yi-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-30T00:44:15+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-30:./ren-wu-yi-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;假設 2a CD 課程中有第 100 組, 由四位組員: scrum-1, scrum-2,  scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 可以直接將本地端的 CDW2 倉儲版本資料提交推送到遠端, 其餘三人則必須透過 Pull Requests 進行協同.&lt;/p&gt;
 
 
 &lt;p&gt;scrum-1 可以直接 git clone cdw2, 然後改版提交推送, 其他組員參與協同的方法都是先根據 &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html&lt;/a&gt; 中的說明. 登入 Github 後, 以瀏覽器連結到 &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt; 後, 按一下右上方的  Fork 鍵後, 就可建立與原始倉儲互有關聯的"互刻"內容.&lt;/p&gt;
@@ -27,7 +74,7 @@
 &lt;p&gt;其次則是要在 Category: 中標示自己的組別, 這裡的標題為 ag100, 表示 scrum-1 組員為甲班 g100 的成員.&lt;/p&gt;
 &lt;p&gt;寫完文章後, 先將滑鼠停在 @button local pelican 節點, 然後按上方的 local-pelican 按鈕, 完成轉換為 html 後, 打開 cdw2 倉儲中 gh-pages 分支中的 index.html 檢查是否正確轉檔, 若是, 則再將滑鼠停在 @button gh-pages pelican 節點, 再按上方的 gh-pages-pelican 按鈕後, 將版本資料提交推送到 cdw2 的 gh-pages 分支中.&lt;/p&gt;
 &lt;p&gt;因為這裡要推送到 gh-pages 分支, 若以指令推送, 必須使用 git push origin gh-pages, 若是需要拉回 gh-pages 的分支版本, 則使用 git pull origin gh-pages 指令.&lt;/p&gt;
-&lt;p&gt;當 scrum-1 用戶完成 cdw2 gh-pages 分支版次資料後, 所新增的網誌文章為: &lt;a href="http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html"&gt;http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>協同流程的規劃與實踐</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html" rel="alternate"></link><updated>2016-03-23T21:24:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-23:kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html</id><summary type="html">&lt;p&gt;隨著分散式版次管理系統技術的不斷進展, 各種軟硬體協同開發流程的規劃也跟著日漸多元, 當然, 從機械設計的角度來看, &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 的推出, 或許可以讓過去許多無緣一窺大型制式 PDM 或 PLM 系統的學員, 透過免費帳號的使用, 稍微體會一個版本多方推升改版所帶來的便利.&lt;/p&gt;
+&lt;p&gt;當 scrum-1 用戶完成 cdw2 gh-pages 分支版次資料後, 所新增的網誌文章為: &lt;a href="http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html"&gt;http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>協同流程的規劃與實踐</title><link href="./xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html" rel="alternate"></link><updated>2016-03-23T21:24:55+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-23:./xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html</id><summary type="html">&lt;p&gt;隨著分散式版次管理系統技術的不斷進展, 各種軟硬體協同開發流程的規劃也跟著日漸多元, 當然, 從機械設計的角度來看, &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 的推出, 或許可以讓過去許多無緣一窺大型制式 PDM 或 PLM 系統的學員, 透過免費帳號的使用, 稍微體會一個版本多方推升改版所帶來的便利.&lt;/p&gt;
 
 
 &lt;p&gt;而在這個課程中, 我們則透過 &lt;a href="https://github.com/"&gt;Github&lt;/a&gt; 協同倉儲的運作, 從學員分組、指定組長、安排座位、各組組長設為倉儲直接協同者 (collaborator)、其他組員以 Pull Request 參與協同, 一直到本地端 &lt;a href="http://solvespace.com/"&gt;Solvespace&lt;/a&gt; 的零件輪廓繪製, 進而透過 SVG (Scalable Vector Graphics) 格式將零件斷面輪廓搬上全球資訊網, 然後以各組協同完成網際 2D 組件繪圖告一段落.&lt;/p&gt;
@@ -253,7 +300,7 @@ def optionaction():
     return out_string
     # 等運算或資料處理結束後, 再將相關值送到對應的 template 進行資料的展示
     #return render_template('optionaction.html', option_list1=option_list1, option_list2=option_list2)
-&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>SVG 檔案解讀</title><link href="http://chiamingyen.github.io/kmolab/blog/svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T22:06:23+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-21:kmolab/blog/svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>SVG 檔案解讀</title><link href="./svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T22:06:23+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-21:./svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
 
 
 &lt;pre class="brush: python;"&gt;
@@ -278,7 +325,7 @@ path_strings = [path.getAttribute('d') for path
 doc.unlink()
 
 print("width:", width, "\nheight:", height, "\npath:", path_strings)
-&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="http://chiamingyen.github.io/kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T21:21:39+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-16:kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="./cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T21:21:39+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-16:./cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
 
 
 &lt;p&gt;以 Solvespace 繪製輪廓圖: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs&lt;/a&gt;&lt;/p&gt;
@@ -449,7 +496,7 @@ chain2(35, 0, 0, 0, 0, white, True, 4)
 chain3(70, 0, 0, 0, 0, white, True, 4)
 chain4(105, 0, 0, 0, 0, white, True, 4)
 solvespace(140, 0)
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>協同產品設計實習的網際 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-15T20:19:13+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;在這個範例中, 所有參與協同的機械設計課程學員, 透過 Github 的 pull request 機制進行協同繪圖程式開發, 而各組組長則以 collaborator 的角色負責審核各組員送出的 pull requests, 本繪圖任務中的基本單 2D 繪圖單元, 是由 4 個彼此相切的圓弧所組成, 各組必須根據幾何約束條件求出各相切點的座標後, 使用指定的網際繪圖程式庫, 著手結合各組員, 在一致的內容格式規劃下, 完成所要求的 2D 組件繪圖.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>協同產品設計實習的網際 2D 協同繪圖</title><link href="./xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-15T20:19:13+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-15:./xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;在這個範例中, 所有參與協同的機械設計課程學員, 透過 Github 的 pull request 機制進行協同繪圖程式開發, 而各組組長則以 collaborator 的角色負責審核各組員送出的 pull requests, 本繪圖任務中的基本單 2D 繪圖單元, 是由 4 個彼此相切的圓弧所組成, 各組必須根據幾何約束條件求出各相切點的座標後, 使用指定的網際繪圖程式庫, 著手結合各組員, 在一致的內容格式規劃下, 完成所要求的 2D 組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;任務倉儲: &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt;&lt;/p&gt;
@@ -459,7 +506,7 @@ solvespace(140, 0)
 &lt;p&gt;Task1 任務:&lt;/p&gt;
 &lt;p&gt;請各組利用上述協同繪圖所提供的鏈條元件輪廓, 完成下列字母排列方式中的 ABCD 4個字母繪圖, 且每一位組員在各字母中必須至少繪製一小截鏈條, 各組所完成的規劃過程與結果, 則必須在 cdw2 倉儲對應的 &lt;a href="http://2015fallhw.github.io/cdw2/"&gt;http://2015fallhw.github.io/cdw2/&lt;/a&gt; Github Pages 網頁中完成.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/bike_chain_1.jpg" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/bike_chain_2.jpg" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>WCM 電腦教室分組研究</title><link href="http://chiamingyen.github.io/kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html" rel="alternate"></link><updated>2016-03-13T12:24:53+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-13:kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html</id><summary type="html">&lt;p&gt;在網際內容管理的課程中, 有一個針對電腦教室實際的配置, 讓學員自行籌組, 然後再依據各組組員的學號排序選出組長後, 再根據各組長的學號排序決定組序, 這裡希望採用 Flask 網際框架, 並且將 Github 倉儲中的程式與 OpenShift 上的應用程式同步, 以便讓機械設計學員體會之後如何應用類似的網際流程來提升產品開發的效能.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/bike_chain_2.jpg" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>WCM 電腦教室分組研究</title><link href="./wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html" rel="alternate"></link><updated>2016-03-13T12:24:53+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-13:./wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html</id><summary type="html">&lt;p&gt;在網際內容管理的課程中, 有一個針對電腦教室實際的配置, 讓學員自行籌組, 然後再依據各組組員的學號排序選出組長後, 再根據各組長的學號排序決定組序, 這裡希望採用 Flask 網際框架, 並且將 Github 倉儲中的程式與 OpenShift 上的應用程式同步, 以便讓機械設計學員體會之後如何應用類似的網際流程來提升產品開發的效能.&lt;/p&gt;
 
 
 &lt;p&gt;在網際內容管理的&lt;a href="https://github.com/2015fallhw/2016springwcm/wiki/%E7%B6%B2%E9%9A%9B%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%A0%94%E7%A9%B6%E4%B8%BB%E9%A1%8C"&gt;研究主題&lt;/a&gt;中, 列出與全球資訊網應用相關的軟體與硬體內容管理, 其中透過全球資訊網應用程式, 能夠讓使用者:&lt;/p&gt;
@@ -483,7 +530,7 @@ solvespace(140, 0)
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/simpleflask-2014openshift_2.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;上述這個基本的 Flask 程式配置流程, 請參考 &lt;a href="http://project.mde.tw/blog/yen-wang-ji-flask-cheng-shi-jia-gou.html"&gt;http://project.mde.tw/blog/yen-wang-ji-flask-cheng-shi-jia-gou.html&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;有了能夠接受網際表單的 Flask 程式後, 分別將程式與 Leo Editor 專案資料送到 Github 倉儲 &lt;a href="https://github.com/2015fallhw/simpleflask"&gt;https://github.com/2015fallhw/simpleflask&lt;/a&gt;, 然後再利用本地端的 git remote add 與 OpenShift 上的雲端程式同步 &lt;a href="http://simpleflask-2014openshift.rhcloud.com/option"&gt;http://simpleflask-2014openshift.rhcloud.com/option&lt;/a&gt;, 就能夠讓使用者直接在瀏覽器執行自動分組的流程.&lt;/p&gt;
-&lt;p&gt;有關這個版次的程式, 請參考 &lt;a href="https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45"&gt;https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>全球資訊網上的內容管理系統</title><link href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T23:16:49+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
+&lt;p&gt;有關這個版次的程式, 請參考 &lt;a href="https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45"&gt;https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>全球資訊網上的內容管理系統</title><link href="./quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T23:16:49+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-12:./quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
 
 
 &lt;p&gt;由於本課程的目的, 不僅要將機械設計的各式內容送到雲端上的 CMSimply, 而且還要修改 Python3 內容管理系統的程式碼, 因此必須在本地端建立 rsa 格式的 key pair.&lt;/p&gt;
@@ -495,7 +542,7 @@ solvespace(140, 0)
 &lt;li&gt;之後若需從 OpenShift git clone 與這把 key 對應的應用程式, OpenShift 端會利用 settings 上所登錄的 public key 與 .ssh 目錄中的 id_rsa 進行驗證, 必須通過驗證才能順利完成倉儲的 git clone.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;在 Ubuntu 平台上, 除了利用 ssh-keygen -t rsa 來建立 rsa 格式的 key pair 外, 其他步驟同 Windows.&lt;/p&gt;
-&lt;p&gt;至於在 Windows 配合 Filezilla 與 OpenShift 雲端應用程式相連時, 必須利用 pageant.exe 載入 private key 後才能通過認証, 而在 Ubuntu 則可以透過 ssh-add ~/.ssh/id_rsa, 載入對應的 private key.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>機械設計流程的內容與管理</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html" rel="alternate"></link><updated>2016-03-12T22:52:53+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html</id><summary type="html">&lt;p&gt;機械設計流程中可能產生的內容, 可分為口語表達、文字表達、2D 圖像、3D 表達、解析表達與實體表達等六大類.&lt;/p&gt;
+&lt;p&gt;至於在 Windows 配合 Filezilla 與 OpenShift 雲端應用程式相連時, 必須利用 pageant.exe 載入 private key 後才能通過認証, 而在 Ubuntu 則可以透過 ssh-add ~/.ssh/id_rsa, 載入對應的 private key.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>機械設計流程的內容與管理</title><link href="./ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html" rel="alternate"></link><updated>2016-03-12T22:52:53+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-12:./ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html</id><summary type="html">&lt;p&gt;機械設計流程中可能產生的內容, 可分為口語表達、文字表達、2D 圖像、3D 表達、解析表達與實體表達等六大類.&lt;/p&gt;
 
 
 &lt;p&gt;所謂的口語表達即是在機械設計過程中採口頭方式呈現, 可以利用錄音方式將口語表達轉為 mp3, 或者採逐字稿, 轉為文字檔, 然後上傳到網際內容管理系統.&lt;/p&gt;
@@ -613,7 +660,7 @@ myfunction()
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>利用 Github 執行協同設計專案</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html" rel="alternate"></link><updated>2016-03-08T16:34:58+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-08:kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html</id><summary type="html">&lt;p&gt;Github 的分散式版次管理, 可以讓機械設計工程師體會非同步協同的團隊合作模式, 在眾目睽睽之下, 所有與設計相關的細節都能夠加以保留.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>利用 Github 執行協同設計專案</title><link href="./li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html" rel="alternate"></link><updated>2016-03-08T16:34:58+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-08:./li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html</id><summary type="html">&lt;p&gt;Github 的分散式版次管理, 可以讓機械設計工程師體會非同步協同的團隊合作模式, 在眾目睽睽之下, 所有與設計相關的細節都能夠加以保留.&lt;/p&gt;
 
 
 &lt;h2&gt;協同設計規劃&lt;/h2&gt;
@@ -652,12 +699,12 @@ myfunction()
 &lt;p&gt;course-mde-tw 用戶按下上一個畫面中的 Create pull request 按鈕後, 進入下一個畫面, 可以填寫 pull request 的標題與說明.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/github_pull_request_reversing_10.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;course-mde-tw 填寫完 pull request 的請求後, 按下送出, 就可以在此一 pull request 中具備同意權, 因為版本資料是從父倉儲更新到子倉儲, 若兩端資料沒有衝突就可以直接在 Github 的畫面中, 按下 Merge pull request 自動完成合併, 畫面如下圖.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/github_pull_request_reversing_11.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>KMOL 可攜程式系統改版</title><link href="http://chiamingyen.github.io/kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html" rel="alternate"></link><updated>2016-03-03T20:54:35+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-03:kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html</id><summary type="html">&lt;p&gt;將原有的 nodejs 目錄刪除, 改用 NodeJSPortable, 位於 apps 目錄下, 仍以 start_ungit.bat 啟動&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/github_pull_request_reversing_11.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>KMOL 可攜程式系統改版</title><link href="./kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html" rel="alternate"></link><updated>2016-03-03T20:54:35+08:00</updated><author><name>kmol</name></author><id>tag:,2016-03-03:./kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html</id><summary type="html">&lt;p&gt;將原有的 nodejs 目錄刪除, 改用 NodeJSPortable, 位於 apps 目錄下, 仍以 start_ungit.bat 啟動&lt;/p&gt;
 
 
 &lt;p&gt;直接下載: 2016springkmol.7z &lt;a href="https://my.pcloud.com/publink/show?code=XZT4I4Ztpna2PMhDtVAOQKD7FI6CyfFf2H7"&gt;https://my.pcloud.com/publink/show?code=XZT4I4Ztpna2PMhDtVAOQKD7FI6CyfFf2H7&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;利用 git clone 下載: &lt;a href="https://github.com/chiamingyen/kmol2016.git"&gt;https://github.com/chiamingyen/kmol2016.git&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在電腦輔助設計室 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時 &lt;a href="http://140.130.17.17/public/fix2016.zip"&gt;下載 fix2016.zip&lt;/a&gt;.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>2016 Spring Collaborative Product Design Course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html" rel="alternate"></link><updated>2016-02-24T21:32:24+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/2016-spring-collaborative-product-design-course.html</id><summary type="html">&lt;p&gt;2016 Spring 產品設計實習課程 W1&lt;/p&gt;
+&lt;p&gt;在電腦輔助設計室 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時 &lt;a href="http://140.130.17.17/public/fix2016.zip"&gt;下載 fix2016.zip&lt;/a&gt;.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>2016 Spring Collaborative Product Design Course</title><link href="./2016-spring-collaborative-product-design-course.html" rel="alternate"></link><updated>2016-02-24T21:32:24+08:00</updated><author><name>kmol</name></author><id>tag:,2016-02-24:./2016-spring-collaborative-product-design-course.html</id><summary type="html">&lt;p&gt;2016 Spring 產品設計實習課程 W1&lt;/p&gt;
 
 
 &lt;h2&gt;2016 Spring 協同產品設計實習:&lt;/h2&gt;
@@ -739,7 +786,7 @@ myfunction()
 &lt;h3&gt;2012 Spring 協同產品設計實習:&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://blog.kmol.info/indexd06b.html?cat=8&amp;amp;paged=3"&gt;http://blog.kmol.info/indexd06b.html?cat=8&amp;amp;paged=3&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;2011 Spring 協同產品設計實習:&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4"&gt;http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>About Lektor Content Management System</title><link href="http://chiamingyen.github.io/kmolab/blog/about-lektor-content-management-system.html" rel="alternate"></link><updated>2016-02-24T15:30:43+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/about-lektor-content-management-system.html</id><summary type="html">&lt;p&gt;初探 Lektor 內容管理系統, 假如它能在第1時間就支援 Python3, 應該會更棒&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4"&gt;http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>About Lektor Content Management System</title><link href="./about-lektor-content-management-system.html" rel="alternate"></link><updated>2016-02-24T15:30:43+08:00</updated><author><name>kmol</name></author><id>tag:,2016-02-24:./about-lektor-content-management-system.html</id><summary type="html">&lt;p&gt;初探 Lektor 內容管理系統, 假如它能在第1時間就支援 Python3, 應該會更棒&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="http://lucumr.pocoo.org/2015/12/21/introducing-lektor/"&gt;http://lucumr.pocoo.org/2015/12/21/introducing-lektor/&lt;/a&gt;&lt;/p&gt;
@@ -755,7 +802,7 @@ myfunction()
 &lt;p&gt;只不過, 目前的 Desktop 應用程式只能用在 OsX 系統, 而 Python 也只支援 2.7 版, 真是可惜!&lt;/p&gt;
 &lt;p&gt;有關目前只能支援 Python 2.7 的情形, 幾乎就與當年 Flask 推出時的情況一樣, 也許作者對於 Python 2.7 版比較熟, 可能要再等一陣子, 才能在 Python3 的環境中使用了.&lt;/p&gt;
 &lt;p&gt;所以, 現階段, 想要靜態網頁系統, 而且自外於 Pelican: &lt;a href="https://github.com/getpelican/pelican"&gt;https://github.com/getpelican/pelican&lt;/a&gt;, 只能先從 &lt;a href="http://urubu.jandecaluwe.com/"&gt;http://urubu.jandecaluwe.com/&lt;/a&gt; 看起.&lt;/p&gt;
-&lt;p&gt;另外, 假如想要脫離 Python3 一些些, 可以從 &lt;a href="https://github.com/meteor/meteor"&gt;https://github.com/meteor/meteor&lt;/a&gt; 入手.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cd-course.html" rel="alternate"></link><updated>2016-02-24T10:43:59+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/2016-cd-course.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;p&gt;另外, 假如想要脫離 Python3 一些些, 可以從 &lt;a href="https://github.com/meteor/meteor"&gt;https://github.com/meteor/meteor&lt;/a&gt; 入手.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2016 CD course</title><link href="./2016-cd-course.html" rel="alternate"></link><updated>2016-02-24T10:43:59+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-24:./2016-cd-course.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 &lt;h2&gt;MCAD 套件&lt;/h2&gt;
 &lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
 &lt;p&gt;Onshape: &lt;a href="https://www.onshape.com/"&gt;https://www.onshape.com/&lt;/a&gt;&lt;/p&gt;
@@ -912,7 +959,7 @@ Back mirror 後照鏡
 Reflector 反光片
 Luggage Carrier 貨架
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 Spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html" rel="alternate"></link><updated>2016-02-24T10:29:34+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/2015-fall-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://chiamingyen.github.io/kmolab_data/files/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 Spring"></category></entry><entry><title>2015 Fall CADP W16</title><link href="./2015-fall-cadp-w16.html" rel="alternate"></link><updated>2016-02-24T10:29:34+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-24:./2015-fall-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://chiamingyen.github.io/kmolab_data/files/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_left_limit.png" width="600" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_right_limit.png" width="600" /&gt;&lt;/p&gt;
 &lt;p&gt;計算 Piston 不發生干涉的有效行程, 可採如下方法:&lt;/p&gt;
@@ -1127,7 +1174,7 @@ Luggage Carrier 貨架
 &lt;li&gt;部署成本比較低&lt;/li&gt;
 &lt;li&gt;可在各種平台上使用&lt;/li&gt;
 &lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>2016 Spring CD Task0</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-cd-task0.html" rel="alternate"></link><updated>2016-02-23T18:18:27+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-23:kmolab/blog/2016-spring-cd-task0.html</id><summary type="html">&lt;p&gt;這個實習任務的目的, 在讓學員根據分組與電腦教室座位編排的問題, 進行思考, 如何以協同方式或流程, 有效完成任務&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>2016 Spring CD Task0</title><link href="./2016-spring-cd-task0.html" rel="alternate"></link><updated>2016-02-23T18:18:27+08:00</updated><author><name>kmol</name></author><id>tag:,2016-02-23:./2016-spring-cd-task0.html</id><summary type="html">&lt;p&gt;這個實習任務的目的, 在讓學員根據分組與電腦教室座位編排的問題, 進行思考, 如何以協同方式或流程, 有效完成任務&lt;/p&gt;
 
 
 &lt;p&gt;學期伊始, 一如往常, 各班學員以每 6 人一組為原則, 在 Cadlab 電腦教室安排固定座位, 但是 2016 Spring 開始, 儘管允許學員自行編組, 但是同組學員卻希望故意錯開座位, 讓所有爾後各組的產品設計解題都能夠儘量透過資訊與通訊系統完成, 而且所有溝通流程與內容都能夠存在產品開發專案中.&lt;/p&gt;
@@ -1183,7 +1230,7 @@ Luggage Carrier 貨架
 &lt;p&gt;g.es&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://leoeditor.com/tutorial-scripting.html"&gt;http://leoeditor.com/tutorial-scripting.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;zip_longest&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest"&gt;https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>computational thinking and digitally literate</title><link href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T21:47:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest"&gt;https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>computational thinking and digitally literate</title><link href="./computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T21:47:57+08:00</updated><author><name>kmol</name></author><id>tag:,2016-02-21:./computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study"&gt;https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study&lt;/a&gt;&lt;/p&gt;
@@ -1202,7 +1249,7 @@ Luggage Carrier 貨架
 &lt;p&gt;can evaluate and apply information technology, including new or unfamiliar technologies, analytically to solve problems&lt;/p&gt;
 &lt;p&gt;能夠應用資訊科技, 對全新或原本並不熟悉的科技進行評量, 能夠採解析方法解決各種問題.&lt;/p&gt;
 &lt;p&gt;are responsible, competent, confident and creative users of information and communication technology&lt;/p&gt;
-&lt;p&gt;成為肯負責、能勝任、具備信心與創意的資訊及通信科技使用者.&lt;/p&gt;</summary><category term="運算思維"></category><category term="數位化教育"></category></entry><entry><title>2016 Spring Web based Content Management</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html" rel="alternate"></link><updated>2016-02-21T20:36:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-web-based-content-management.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理 W1&lt;/p&gt;
+&lt;p&gt;成為肯負責、能勝任、具備信心與創意的資訊及通信科技使用者.&lt;/p&gt;</summary><category term="運算思維"></category><category term="數位化教育"></category></entry><entry><title>2016 Spring Web based Content Management</title><link href="./2016-spring-web-based-content-management.html" rel="alternate"></link><updated>2016-02-21T20:36:55+08:00</updated><author><name>kmol</name></author><id>tag:,2016-02-21:./2016-spring-web-based-content-management.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理 W1&lt;/p&gt;
 
 
 &lt;h2&gt;2016 Spring 網際內容管理:&lt;/h2&gt;
@@ -1244,7 +1291,7 @@ Luggage Carrier 貨架
 &lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86"&gt;CMSimply 網站&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Github 倉儲: &lt;a href="https://github.com/coursemdetw/2015wcm"&gt;https://github.com/coursemdetw/2015wcm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Gitbook: &lt;a href="https://www.gitbook.com/book/coursemde/2015wcm"&gt;https://www.gitbook.com/book/coursemde/2015wcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Vimeo 教學影片: &lt;a href="https://vimeo.com/tag:2015wcm"&gt;https://vimeo.com/tag:2015wcm&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
+&lt;p&gt;Vimeo 教學影片: &lt;a href="https://vimeo.com/tag:2015wcm"&gt;https://vimeo.com/tag:2015wcm&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2015 Fall CP part 2</title><link href="./2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-13:./2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
 &lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -1269,7 +1316,7 @@ Luggage Carrier 貨架
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151096089"&gt;2015fallcpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/151109576" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151109576"&gt;2015fallcp_w17b&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part1&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151109576"&gt;2015fallcp_w17b&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 1</title><link href="./2015-fall-cp-part-1.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-13:./2015-fall-cp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part1&lt;/p&gt;
 &lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -1377,7 +1424,7 @@ Luggage Carrier 貨架
 &lt;h3&gt;說明如何修補被弄亂的全班倉儲&lt;/h3&gt;
 &lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cadp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 2</title><link href="./2015-fall-cadp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-13:./2015-fall-cadp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
 &lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -1473,7 +1520,7 @@ Luggage Carrier 貨架
 &lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150636968"&gt;2015fall_cadpb_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/150985277" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-1.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cadp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 1</title><link href="./2015-fall-cadp-part-1.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-13:./2015-fall-cadp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
 &lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;與&lt;/p&gt;
@@ -1568,7 +1615,7 @@ Luggage Carrier 貨架
 &lt;h3&gt;期中報告內容說明, Creo 2 Parametric Primer 電子書閱讀與零件繪製與零件組操作練習&lt;/h3&gt;
 &lt;iframe src="https://player.vimeo.com/video/143963816" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-wcm-course.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2016 WCM course</title><link href="./2016-wcm-course.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:,2016-02-13:./2016-wcm-course.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 &lt;h2&gt;github pages 上的靜態網頁系統&lt;/h2&gt;
 &lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
 &lt;h2&gt;html 與 Javascript (Brython based)&lt;/h2&gt;
@@ -1581,7 +1628,7 @@ Luggage Carrier 貨架
 &lt;li&gt;&lt;a href="https://github.com/embik/bloks"&gt;https://github.com/embik/bloks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 Spring"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html" rel="alternate"></link><updated>2016-01-11T15:48:04+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/2015-fall-final-schedule.html</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 Spring"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="./2015-fall-final-schedule.html" rel="alternate"></link><updated>2016-01-11T15:48:04+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-11:./2015-fall-final-schedule.html</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
 &lt;p&gt;最後資料改版期限: 2016.01.20 (星期三) 24:00&lt;/p&gt;
 &lt;p&gt;評分流程:&lt;/p&gt;
 &lt;ol&gt;
