@@ -315,7 +315,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-04-12T00:45:10.287448+08:00"> 二 12 四月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-04-12T01:18:00.675380+08:00"> 二 12 四月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
@@ -880,6 +880,7 @@ O3(0, 0, 0, 0, 0, "green", True, 4)
 <p>所對應的 2015fallhw/cdw2 提交版本為: <a href="https://github.com/2015fallhw/cdw2/tree/92ccd643061f2fb43030a9423c825f425963d481">https://github.com/2015fallhw/cdw2/tree/92ccd643061f2fb43030a9423c825f425963d481</a></p>
 <p>scrum1_task1.py 版本為: <a href="https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum1_task1.py">https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum1_task1.py</a></p>
 <p>scrum2_task1.py 版本則為: <a href="https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum2_task1.py">https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum2_task1.py</a></p>
+<p>最後, 當各組員首次建立 Openshift 平台上與 2015fallhw/cdw2 倉儲 master 分支對應的 wsgi 應用程式時, 可以將 https://github.com/2015fallhw/cdw2.git 列為該應用程式的原始碼, 當 2015fallhw/cdw2 倉儲 master 分支版本不斷改版後, 各組員可以利用類似 git clone ssh://123e6d7b22d5271fb220000c9@cdw2-ladisai.rhcloud.com/~/git/cdw2.git/ cdw2_openshift 將倉儲資料 clone 到近端後, 進入 cdw2_openshift 目錄後, 以 git rm -rf * 將所有先前的版本內容全數刪除後, 再放入 2015fallhw/cdw2 倉儲 master 分支中的最新版本資料後, 以 git add -A, git commit -m "提交訊息", git push 等提交與推送指令, 將 wsgi 程式送到對應的 Openshift 平台應用程式上執行, 每次各組有新的對應程式改版後, 再採用相同模式更新 Openshift 平台上的程式版本, 避免在 Openshift 對應倉儲中處理衝突問題.</p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
