@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
@@ -92,6 +92,15 @@
 </v>
 </v>
 </v>
+<v t="amd.20160410195429.1"><vh>blockdiag</vh>
+<v t="amd.20160410195429.2"><vh>@button blockdiag</vh></v>
+<v t="amd.20160410195429.3"><vh>blockdiag</vh></v>
+<v t="amd.20160410195429.4"><vh>@button nwdiag</vh></v>
+<v t="amd.20160410195429.5"><vh>nwdiag</vh></v>
+</v>
+<v t="amd.20160411214944.1" a="E"><vh>2016springcd</vh>
+<v t="amd.20160411214953.1"><vh>task1</vh></v>
+</v>
 <v t="amd.20151215170350.1"><vh>以下為 content 目錄中的 md 檔案</vh></v>
 <v t="amd.20160106093610.1"><vh>協同網誌編寫規範</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
@@ -139,7 +148,7 @@
 <v t="amd.20160224124815.1"><vh>@edit yen_20160224-1.md</vh></v>
 </v>
 </v>
-<v t="amd.20160303201215.1" a="E"><vh>201603</vh>
+<v t="amd.20160303201215.1"><vh>201603</vh>
 <v t="amd.20160303201222.1"><vh>@edit yen_20160303.md</vh></v>
 <v t="amd.20160308133314.1"><vh>@edit yen_20160309.md</vh></v>
 <v t="amd.20160311160710.1"><vh>@edit yen_20160311.md</vh></v>
@@ -152,6 +161,9 @@
 <v t="amd.20160323170832.1"><vh>@edit yen_20160323.md</vh></v>
 <v t="amd.20160328153406.1"><vh>@edit yen_20160328.md</vh></v>
 <v t="amd.20160330214447.1"><vh>@edit yen_20160330.md</vh></v>
+</v>
+<v t="amd.20160411205604.1" a="E"><vh>201604</vh>
+<v t="amd.20160411205621.1"><vh>@edit yen_20160411.md</vh></v>
 </v>
 </v>
 </v>
@@ -1555,6 +1567,192 @@ chain4(105, 0, 0, 0, 0, white, True, 4)
 &lt;/body&gt;
 &lt;/html&gt;
 </t>
+<t tx="amd.20160410195429.1"></t>
+<t tx="amd.20160410195429.2">@language python
+import os
+# 節點的 body 內容設為 content
+content = p.b
+with open('test.diag', 'w') as f:
+    f.write(content)
+f.closed
+# 存為 svg
+#os.system("blockdiag -Tsvg test.diag" )
+# 存為 png, 使用 fireflysung.ttf
+#os.system("blockdiag -f fireflysung.ttf test.diag" )
+os.system("blockdiag test.diag" )
+g.es("已經存 test.png 檔案")</t>
+<t tx="amd.20160410195429.3">
+blockdiag {
+    default_shape = roundedbox;
+    // 內定寬度為 128
+    node_width = 140;
+    // 內定高度為 40
+    node_height = 50;
+    default_fontsize = 15;
+    default_node_color = "lightyellow";
+    edge_layout = flowchart;
+    // 表達方式
+    表達 [label = "六種表達方式"];
+    1 [label = "口語表達(聲音)"];
+    2 [label = "文字表達", color="#99ff33"];
+    3 [label = "2D表達(靜態影像)"];
+    4 [label = "3D表達(動態影像)"];
+    5 [label = "理論表達(定量分析)"];
+    6 [label = "實體表達", color="#99ff33"];
+    表達 -&gt; 1;
+    表達 -&gt; 2;
+    表達 -&gt; 3;
+    表達 -&gt; 4;
+    表達 -&gt; 5;
+    表達 -&gt; 6;
+    // 學門
+    學門 [label = "四種技術領域"];
+    學門1 [label = "熱流力學"];
+    學門2 [label = "固體力學"];
+    學門3 [label = "電機電子"];
+    學門4 [label = "資訊通信", color="#99ff33"];
+    學門 -&gt; 學門1;
+    學門 -&gt; 學門2;
+    學門 -&gt; 學門3;
+    學門 -&gt; 學門4;
+    // 流程
+    流程 [label = "四個層面"];
+    流程1 [label = "設計", color="#99ff33"];
+    流程2 [label = "製造"];
+    流程3 [label = "控制"];
+    流程4 [label = "管理", color="#99ff33"];
+    流程 -&gt; 流程1;
+    流程 -&gt; 流程2;
+    流程 -&gt; 流程3;
+    流程 -&gt; 流程4;
+    //專題
+    //專題 [label = "機械設計專題", stacked];
+    專題 [label = "隨身卡片電腦選購", stacked, color="#ff5050"];
+    專題 -&gt; 表達;
+    專題 -&gt; 流程;
+    專題 -&gt; 學門;
+}
+</t>
+<t tx="amd.20160410195429.4">@language python
+import os
+# 節點的 body 內容設為 content
+content = p.b
+with open('test.diag', 'w') as f:
+    f.write(content)
+f.closed
+# 存為 svg
+#os.system("nwdiag -Tsvg test.diag" )
+# 存為 png, 使用 fireflysung.ttf
+#os.system("nwdiag -f fireflysung.ttf test.diag" )
+os.system("nwdiag test.diag" )
+g.es("已經存 test.png 檔案")</t>
+<t tx="amd.20160410195429.5">/*
+nwdiag {
+  network dmz {
+      address = "210.x.x.x/24"
+
+      web01 [address = "210.x.x.1"];
+      web02 [address = "210.x.x.2"];
+  }
+  network internal {
+      address = "172.x.x.x/24";
+
+      web01 [address = "172.x.x.1"];
+      web02 [address = "172.x.x.2"];
+      db01;
+      db02;
+  }
+}
+*/
+
+nwdiag {
+    default_fontsize = 15;
+    校主幹 [shape = cloud];
+    校主幹 -- 系路由器;
+    
+    network 系主幹{
+        address = "140.130.17.0/24";
+        系路由器 [address="140.130.17.254"];
+        雲端點名網路;
+        八樓集線器 [address="140.130.17.82"];
+        七樓集線器;
+        六樓集線器;
+        系伺服器群;
+    }
+    
+    network 八樓主幹{
+        address="17.10-82"
+        八樓集線器 [address="140.130.17.82"];
+        老師1伺服器群 [address="140.130.17.10-15"];
+        老師2伺服器群 [address="140.130.17.16-25"];
+        老師3伺服器群 [address="140.130.17.26-60"];
+    }
+    
+    network CAD_CAE{
+        address="17.83";
+        八樓集線器 [address="140.130.17.82"];
+        CAD_NAT [address="140.130.17.82"];
+        CAE_NAT [address="140.130.17.83"];
+    }
+    
+    network 電腦輔助設計室{
+        address="192.168.1.0/24";
+        CAD_NAT [address="192.168.1.1"];
+        CAD1 [address=".2"];
+        CAD2;
+        CAD64 [address=".100"];
+    }
+    
+    network 電腦輔助繪圖室{
+        address="192.168.1.0/24";
+        CAE_NAT [address="192.168.1.1"];
+        CAE1 [address=".2"];
+        CAE2;
+        CAE64 [address=".100"];
+    }
+    
+    network 七樓主幹{
+        address="140.130.17.83-90"
+        七樓集線器;
+        老師4伺服器群 [address="140.130.17.61-63"];
+        老師5伺服器群 [address="140.130.17.64-70"];
+        老師6伺服器群 [address="140.130.17.71-75"];
+    }
+    
+    network 六樓主幹{
+        address="140.130.17.91-100"
+        六樓集線器;
+        老師7伺服器群 [address="140.130.17.76-78"];
+        老師8伺服器群 [address="140.130.17.79-80"];
+        老師9伺服器群 [address="140.130.17.81-95"];
+    }
+}</t>
+<t tx="amd.20160411205604.1"></t>
+<t tx="amd.20160411214944.1"></t>
+<t tx="amd.20160411214953.1">from sympy import *
+# center ot radius 40
+x1 = Symbol('x1')
+y1 = Symbol('y1')
+# upper tangent point
+x2 = Symbol('x2')
+y2 = Symbol('y2')
+# lower tangent point
+x3 = Symbol('x3')
+y3 = Symbol('y3')
+answer = solve([(x2-0)**2 + (y2-0)**2 - 7*7, (x1-x2)**2+(y1-y2)**2 -40**2, (x1-x3)**2+(y1-y3)**2 -40**2, (x1)**2+(y1)**2 -47**2, \
+       (x1)**2+(y1+20)**2 -47**2, x2 -x3], [x1, y1, x2, y2, x3, y3])
+group = 1
+for i in answer:
+    try:
+        g.es("group", group, ":")
+    except:
+        print("group", group, ":")
+    for j in i:
+        try:
+            g.es(j.evalf(5))
+        except:
+            print(j.evalf(5))
+    group += 1</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
