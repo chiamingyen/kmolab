@@ -315,7 +315,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-04-14T18:03:36.334265+08:00"> 四 14 四月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-04-14T18:41:02.974244+08:00"> 四 14 四月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
@@ -530,13 +530,13 @@ x4, y4 = mychain.basic_rot(x3, y3, 90)
 x5, y5 = mychain.basic_rot(x4, y4, 0)
 # 右斜 -40 度
 x6, y6 = mychain.basic_rot(x5, y5, -40)
-x7, y7 = mychain.basic_rot(x6, y6, -70)
+x7, y7 = mychain.basic_rot(x6, y6, -60)
 # 右中垂直向下單元
 x8, y8 = mychain.basic_rot(x7, y7, -90)
-# -110 度
-x9, y9 = mychain.basic_rot(x8, y8, -100)
-# -150
-x10, y10 = mychain.basic_rot(x9, y9, -150)
+# -120 度
+x9, y9 = mychain.basic_rot(x8, y8, -120)
+# -140
+x10, y10 = mychain.basic_rot(x9, y9, -140)
 # 水平接回原點
 mychain.basic(x10, y10, 0+65*3, 0, color="red")
 &lt;/script&gt;
@@ -574,6 +574,7 @@ obj2d = JSConstructor(window.Obj2D)
 cgo = cango("plotarea2")
 
 cgo.setGridboxRHC(10, 10, 100, 100)
+cgo.fillGridbox("lightyellow")
 cgo.setWorldCoords(-10, -10, 300, 300) 
 
 # 畫軸線
@@ -734,13 +735,13 @@ x4, y4 = mychain.basic_rot(x3, y3, 90)
 x5, y5 = mychain.basic_rot(x4, y4, 0)
 # 右斜 -40 度
 x6, y6 = mychain.basic_rot(x5, y5, -40)
-x7, y7 = mychain.basic_rot(x6, y6, -70)
+x7, y7 = mychain.basic_rot(x6, y6, -60)
 # 右中垂直向下單元
 x8, y8 = mychain.basic_rot(x7, y7, -90)
-# -110 度
-x9, y9 = mychain.basic_rot(x8, y8, -100)
-# -150
-x10, y10 = mychain.basic_rot(x9, y9, -150)
+# -120 度
+x9, y9 = mychain.basic_rot(x8, y8, -120)
+# -140
+x10, y10 = mychain.basic_rot(x9, y9, -140)
 # 水平接回原點
 mychain.basic(x10, y10, 0+65*3, 0, color="red")
 </script>
