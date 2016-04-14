@@ -315,7 +315,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-04-14T17:09:14.906296+08:00"> 四 14 四月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-04-14T18:03:36.334265+08:00"> 四 14 四月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
@@ -559,7 +559,7 @@ brython(1);
 }
 </script>
 
-<canvas id="plotarea2" width="800" height="800"></canvas>
+<canvas id="plotarea2" width="800" height="400"></canvas>
 
 <script type="text/python">
 from javascript import JSConstructor
@@ -573,7 +573,8 @@ shapedefs = window.shapeDefs
 obj2d = JSConstructor(window.Obj2D)
 cgo = cango("plotarea2")
 
-cgo.setWorldCoords(-250, -250, 500, 500) 
+cgo.setGridboxRHC(10, 10, 100, 100)
+cgo.setWorldCoords(-10, -10, 300, 300) 
 
 # 畫軸線
 cgo.drawAxes(0, 240, 0, 240, {

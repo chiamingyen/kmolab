@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-14T17:09:14+08:00</updated><entry><title>2D 鏈條零組件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-14T17:09:14+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-14:kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html</id><summary type="html">&lt;p&gt;2D 鏈條輪廓繪圖的目的在讓學員了解如何透過數值運算與程式技巧, 完成產品開發流程中所被交付的零組件繪圖.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-14T18:03:36+08:00</updated><entry><title>2D 鏈條零組件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-14T18:03:36+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-14:kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html</id><summary type="html">&lt;p&gt;2D 鏈條輪廓繪圖的目的在讓學員了解如何透過數值運算與程式技巧, 完成產品開發流程中所被交付的零組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;何謂 &lt;a href="https://zh.wikipedia.org/wiki/Atan2"&gt;atan2()&lt;/a&gt; 函數？&lt;/p&gt;
@@ -229,7 +229,7 @@ brython(1);
 }
 &lt;/script&gt;
 
-&lt;canvas id="plotarea2" width="800" height="800"&gt;&lt;/canvas&gt;
+&lt;canvas id="plotarea2" width="800" height="400"&gt;&lt;/canvas&gt;
 
 &lt;script type="text/python"&gt;
 from javascript import JSConstructor
@@ -243,7 +243,8 @@ shapedefs = window.shapeDefs
 obj2d = JSConstructor(window.Obj2D)
 cgo = cango("plotarea2")
 
-cgo.setWorldCoords(-250, -250, 500, 500) 
+cgo.setGridboxRHC(10, 10, 100, 100)
+cgo.setWorldCoords(-10, -10, 300, 300) 
 
 # 畫軸線
 cgo.drawAxes(0, 240, 0, 240, {
