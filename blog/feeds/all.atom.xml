@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-14T18:58:57+08:00</updated><entry><title>2D 鏈條零組件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-14T18:58:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-14:kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html</id><summary type="html">&lt;p&gt;2D 鏈條輪廓繪圖的目的在讓學員了解如何透過數值運算與程式技巧, 完成產品開發流程中所被交付的零組件繪圖.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-15T21:50:24+08:00</updated><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><updated>2016-04-15T21:50:24+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-04-15:kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+&lt;p&gt;CADLab 靜態網誌: &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CADLab 動態網誌: &lt;a href="http://wordpress-cadlab.rhcloud.com"&gt;http://wordpress-cadlab.rhcloud.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CMSimply 網站: &lt;a href="http://cmsimply-cadlab.rhcloud.com/"&gt;http://cmsimply-cadlab.rhcloud.com/&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
+&lt;p&gt;intel Core i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
+&lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
+&lt;h2&gt;開機磁區&lt;/h2&gt;
+&lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
+&lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
+&lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
+&lt;h1&gt;舊電腦分配&lt;/h1&gt;
+&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;
+&lt;h2&gt;網路設置&lt;/h2&gt;
+&lt;p&gt;(以下設置為舊資料, 僅供參考)&lt;/p&gt;
+&lt;p&gt;目前電腦輔助設計室採 DHCP 換成 140.130.17.82 後連到學校主幹, 理論上設負載平衡的代理主機可以共享網路頻寬, 擷取網路資料的速度會比較快.&lt;/p&gt;
+&lt;p&gt;代理主機(理論上使用 140.130.17.3 作為 dns server, proxy 採 proxy.mde.nfu.edu.tw 速度最快):&lt;/p&gt;
+&lt;p&gt;proxy.mde.nfu.edu.tw:3128 或&lt;/p&gt;
+&lt;p&gt;proxy.mde.tw: 3128 或&lt;/p&gt;
+&lt;p&gt;proxy.kmol.info:3128&lt;/p&gt;
+&lt;p&gt;問題在於 DNS 伺服器是否可以正確執行任務, 將代理主機符號名稱換成多台 Proxy 的 IP?&lt;/p&gt;
+&lt;p&gt;學校的 DNS 伺服器: 140.130.1.2 與 140.130.1.20&lt;/p&gt;
+&lt;p&gt;系上的 DNS 伺服器: 140.130.17.3&lt;/p&gt;
+&lt;p&gt;中華電信的 DNS 伺服器: 168.95.1.1&lt;/p&gt;
+&lt;p&gt;DNS 設定優先順序: 系上優先, 再來是學校, 最後才是中華電信.&lt;/p&gt;
+&lt;p&gt;查驗 DNS 是否正常運作: nslookup&lt;/p&gt;
+&lt;p&gt;更換 dns server 為 168.95.1.1&lt;/p&gt;
+&lt;p&gt;server 168.95.1.1&lt;/p&gt;
+&lt;p&gt;網路設定步驟:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.&lt;/li&gt;
+&lt;li&gt;目前的 DNS 伺服器設為哪一台?是否可以正常工作, 可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1
+首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.
+此設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 轉換為一系列的伺服器群組 IP&lt;/li&gt;
+&lt;li&gt;若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128&lt;/li&gt;
+&lt;li&gt;假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;IPV6:&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::2&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::4&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::9&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::17&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::22&lt;/p&gt;
+&lt;p&gt;2001:288:6004:17::23&lt;/p&gt;
+&lt;p&gt;IPV4:&lt;/p&gt;
+&lt;p&gt;140.130.17.2&lt;/p&gt;
+&lt;p&gt;140.130.17.4&lt;/p&gt;
+&lt;p&gt;140.130.17.9&lt;/p&gt;
+&lt;p&gt;140.130.17.17&lt;/p&gt;
+&lt;p&gt;140.130.17.22&lt;/p&gt;
+&lt;p&gt;140.130.17.23&lt;/p&gt;
+&lt;p&gt;假如要查驗目前網路連線情形, 可以檢視 系上即時網路連線圖&lt;/p&gt;
+&lt;p&gt;以上為 CAD Lab 透過 IPV4 協定使用 DHCP 與 NAT 的模式下, 有關代理主機的設定流程.  若 CAD LAb 所有電腦透過純 IPV6 協定上網, 則必須設定 DNS 與 Proxy 才能讓瀏覽器連網.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;優先設系上的 DNS 伺服器: 2001:288:6004:17::3&lt;/li&gt;
+&lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
+&lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
+&lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2D 鏈條零組件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-14T18:58:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-14:kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html</id><summary type="html">&lt;p&gt;2D 鏈條輪廓繪圖的目的在讓學員了解如何透過數值運算與程式技巧, 完成產品開發流程中所被交付的零組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;何謂 &lt;a href="https://zh.wikipedia.org/wiki/Atan2"&gt;atan2()&lt;/a&gt; 函數？&lt;/p&gt;
@@ -3020,64 +3080,7 @@ IPV6 是一條不得不轉進的道路, 愈早涉入, 愈能對於具有未來�
 &lt;h1&gt;找虎尾及雲林縣附近的校友, 一起參加活動&lt;/h1&gt;
 &lt;p&gt;每年都有慢跑活動, 可以找幾個身邊的好朋友, 每年參加, 並且利用網誌紀錄訓練與參賽的過程, 自然就會碰到許多志同道合的朋友與系友.&lt;/p&gt;
 &lt;h2&gt;藉由各屆校友的資料整理, 利用網路進行互動&lt;/h2&gt;
-&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 CAD Lab</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
-&lt;p&gt;採購電腦規格與開機磁區規劃&lt;/p&gt;
-&lt;p&gt;intel Core i7 電腦 63+4 台 - 四台電腦將充作 IPV4/IPV6 相容的 Squid 代理伺服器&lt;/p&gt;
-&lt;p&gt;防寫保護卡 - 打算使用目前既有的硬碟防寫卡&lt;/p&gt;
-&lt;h2&gt;開機磁區&lt;/h2&gt;
-&lt;p&gt;第1磁區: 64位元 Windows 10 (一般必須安裝的套件)&lt;/p&gt;
-&lt;p&gt;第2磁區: 64位元 Windows 10 (以無需安裝的綠色套件為主)&lt;/p&gt;
-&lt;p&gt;第3磁區: Ubuntu Server 加上 ubuntu-desktop 介面&lt;/p&gt;
-
-
-&lt;h1&gt;舊電腦分配&lt;/h1&gt;
-&lt;p&gt;淘汰下來的舊電腦分配與應用&lt;/p&gt;
-&lt;h2&gt;網路設置&lt;/h2&gt;
-&lt;p&gt;(以下設置為舊資料, 僅供參考)&lt;/p&gt;
-&lt;p&gt;目前電腦輔助設計室採 DHCP 換成 140.130.17.82 後連到學校主幹, 理論上設負載平衡的代理主機可以共享網路頻寬, 擷取網路資料的速度會比較快.&lt;/p&gt;
-&lt;p&gt;代理主機(理論上使用 140.130.17.3 作為 dns server, proxy 採 proxy.mde.nfu.edu.tw 速度最快):&lt;/p&gt;
-&lt;p&gt;proxy.mde.nfu.edu.tw:3128 或&lt;/p&gt;
-&lt;p&gt;proxy.mde.tw: 3128 或&lt;/p&gt;
-&lt;p&gt;proxy.kmol.info:3128&lt;/p&gt;
-&lt;p&gt;問題在於 DNS 伺服器是否可以正確執行任務, 將代理主機符號名稱換成多台 Proxy 的 IP?&lt;/p&gt;
-&lt;p&gt;學校的 DNS 伺服器: 140.130.1.2 與 140.130.1.20&lt;/p&gt;
-&lt;p&gt;系上的 DNS 伺服器: 140.130.17.3&lt;/p&gt;
-&lt;p&gt;中華電信的 DNS 伺服器: 168.95.1.1&lt;/p&gt;
-&lt;p&gt;DNS 設定優先順序: 系上優先, 再來是學校, 最後才是中華電信.&lt;/p&gt;
-&lt;p&gt;查驗 DNS 是否正常運作: nslookup&lt;/p&gt;
-&lt;p&gt;更換 dns server 為 168.95.1.1&lt;/p&gt;
-&lt;p&gt;server 168.95.1.1&lt;/p&gt;
-&lt;p&gt;網路設定步驟:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;優先使用代理主機”自動偵測設定”,  系統將會透過 Web Proxy Auto-Discovery Protocol 自動搜尋可用的代理主機,  若連線不正常則進行以下手動設置.&lt;/li&gt;
-&lt;li&gt;目前的 DNS 伺服器設為哪一台?是否可以正常工作, 可以使用的 DNS 伺服器: 140.130.17.3, 140.130.1.2, 140.130.1.20 與 168.95.1.1
-首先設為 140.130.17.3, 利用 nslookup 指令測試是否正常運作, 若不正常則依序改設其他 DNS 伺服器.
-此設定的目的在確定可以透過 DNS 伺服器正確將 proxy.mde.tw 轉換為一系列的伺服器群組 IP&lt;/li&gt;
-&lt;li&gt;若 DNS 伺服器設定與運作正常, 則可以將代理主機設為 proxy.mde.tw:3128&lt;/li&gt;
-&lt;li&gt;假如 DNS 完全無法運作, 那麼 proxy.mde.tw:3128 由下列 IP 協同分擔運作, 使用者可以自行選擇任何一台作為 Proxy, 埠號都是 3128:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;IPV6:&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::2&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::4&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::9&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::17&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::22&lt;/p&gt;
-&lt;p&gt;2001:288:6004:17::23&lt;/p&gt;
-&lt;p&gt;IPV4:&lt;/p&gt;
-&lt;p&gt;140.130.17.2&lt;/p&gt;
-&lt;p&gt;140.130.17.4&lt;/p&gt;
-&lt;p&gt;140.130.17.9&lt;/p&gt;
-&lt;p&gt;140.130.17.17&lt;/p&gt;
-&lt;p&gt;140.130.17.22&lt;/p&gt;
-&lt;p&gt;140.130.17.23&lt;/p&gt;
-&lt;p&gt;假如要查驗目前網路連線情形, 可以檢視 系上即時網路連線圖&lt;/p&gt;
-&lt;p&gt;以上為 CAD Lab 透過 IPV4 協定使用 DHCP 與 NAT 的模式下, 有關代理主機的設定流程.  若 CAD LAb 所有電腦透過純 IPV6 協定上網, 則必須設定 DNS 與 Proxy 才能讓瀏覽器連網.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;優先設系上的 DNS 伺服器: 2001:288:6004:17::3&lt;/li&gt;
-&lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
-&lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
-&lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-wcm-course.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;p&gt;利用各種機會, 向過去的校友或系友請益, 這些前輩已經浸入社會多年, 擁有各式寶貴的經驗, 假如他們願意花一點時間與後進分享, 那就真是太棒了!&lt;/p&gt;</summary><category term="系友"></category><category term="生涯規劃"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-wcm-course.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
 &lt;h2&gt;github pages 上的靜態網頁系統&lt;/h2&gt;
 &lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
 &lt;h2&gt;html 與 Javascript (Brython based)&lt;/h2&gt;
