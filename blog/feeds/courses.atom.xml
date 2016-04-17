@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-14T18:58:57+08:00</updated><entry><title>2D 鏈條零組件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-14T18:58:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-14:kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html</id><summary type="html">&lt;p&gt;2D 鏈條輪廓繪圖的目的在讓學員了解如何透過數值運算與程式技巧, 完成產品開發流程中所被交付的零組件繪圖.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-17T22:05:45+08:00</updated><entry><title>2016Spring 課程期中自評</title><link href="http://chiamingyen.github.io/kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html" rel="alternate"></link><updated>2016-04-17T22:05:45+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-17:kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html</id><summary type="html">&lt;p&gt;本學期各班課程將依照下列時程規劃, 完成所有學員的期中自評工作.&lt;/p&gt;
+
+
+&lt;p&gt;協同產品設計實習課程:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;期中自評的任務描述: &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;on kmolab&lt;/a&gt; 加上 &lt;a href="https://github.com/2015fallhw/cdw2/wiki/2016spring-CD-%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A%E5%85%A7%E5%AE%B9"&gt;on cdw2 wiki&lt;/a&gt; 的補充說明.&lt;/li&gt;
+
+&lt;li&gt;自評要求: 各學員自評分數與依據內容必須呈現在 &lt;a href="http://2015fallhw.github.io/cdw2/"&gt;http://2015fallhw.github.io/cdw2/&lt;/a&gt; (自評查驗將透過 Tags-&gt;學員學號進行) 以及期限內所指定的即時試算表上 (2a 期限為 2016.04.25 (一) 下課前, 2b 期限為 2016.04.21 (四) 下課前, 期中成績將在 2016.04.29 (五) 中午前送出, 期中成績評定為不及格學員, 申請最後 review 期限為第十二週上課結束前).&lt;/li&gt;
+&lt;li&gt; 各組員的自評內容必須包括: 自評成績, 期中報告操作流程介紹, 期中報告心得, 以及期中報告內容參考連結等.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;網際內容管理:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;期中自評的任務描述: &lt;a href="https://cmsimply-cadlab.rhcloud.com/get_page?heading=2016springwcm"&gt;第七週到第九週自評&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;自評要求: 各學員自評分數與依據內容必須呈現在 &lt;a href="http://wp-ladisai.rhcloud.com/"&gt;http://wp-ladisai.rhcloud.com/&lt;/a&gt; 以及期限內所指定的即時試算表上 (1a 期限為 2016.04.22 (五) 下課前, 期中成績將在 2016.04.29 (五) 中午前送出, 期中成績評定為不及格學員, 申請最後 review 期限為第十二週上課結束前).&lt;/li&gt;
+&lt;li&gt; 各組員的自評內容必須包括: 自評成績, 期中報告操作流程介紹, 期中報告心得, 以及期中報告內容參考連結等.&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category><category term="網際內容管理"></category></entry><entry><title>2D 鏈條零組件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-14T18:58:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-14:kmolab/blog/2d-lian-tiao-ling-zu-jian-hui-tu.html</id><summary type="html">&lt;p&gt;2D 鏈條輪廓繪圖的目的在讓學員了解如何透過數值運算與程式技巧, 完成產品開發流程中所被交付的零組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;何謂 &lt;a href="https://zh.wikipedia.org/wiki/Atan2"&gt;atan2()&lt;/a&gt; 函數？&lt;/p&gt;
