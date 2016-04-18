@@ -1,5 +1,821 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-17T22:05:45+08:00</updated><entry><title>2016Spring 課程期中自評</title><link href="http://chiamingyen.github.io/kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html" rel="alternate"></link><updated>2016-04-17T22:05:45+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-17:kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html</id><summary type="html">&lt;p&gt;本學期各班課程將依照下列時程規劃, 完成所有學員的期中自評工作.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-18T19:40:34+08:00</updated><entry><title>協同產品設計實習期中報告</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html" rel="alternate"></link><updated>2016-04-18T19:40:34+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-18:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html</id><summary type="html">&lt;p&gt;2016spring 的協同產品設計課程, 導入了 git 版次管理的 &lt;a href="https://help.github.com/articles/adding-collaborators-to-a-personal-repository/"&gt;collaborator&lt;/a&gt; (各組組長) 與 &lt;a href="https://help.github.com/articles/using-pull-requests/"&gt;pull request&lt;/a&gt; (各組組員)協同模式, 由於 Github 提供了免費的多人協同方案, 讓兩班 133 名學員(2a: 62, 2b: 71)可以各自在本地端與遠端的倉儲分支資料中進行改版.&lt;/p&gt;
+
+
+&lt;p&gt;從 &lt;a href="http://chiamingyen.github.io/kmolab/blog/tag/xie-tong-chan-pin-she-ji-shi-xi.html"&gt;協同產品設計實習課程 tag&lt;/a&gt; 可以查閱與協同產品設計實習有關的頁面, &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;期中報告內容&lt;/a&gt; (&lt;a href="https://github.com/2015fallhw/cdw2/wiki/2016spring-CD-%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A%E5%85%A7%E5%AE%B9"&gt;cdw2 倉儲 wiki&lt;/a&gt;) 則包含 2D/3D 鏈條零組件的繪圖, 2D 零件繪圖以 &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;Cango 繪圖程式庫&lt;/a&gt;與 &lt;a href="http://www.brython.info/"&gt;Brython 程式語言&lt;/a&gt;為主, 實際的繪圖程式採用 &lt;a href="http://flask.pocoo.org/"&gt;Flask 框架&lt;/a&gt;, 可以在近端與 &lt;a href="https://www.openshift.com/"&gt;Openshift 雲端&lt;/a&gt;平台上執行繪圖. 至於 3D 零組件繪圖則要求在 &lt;a href="https://www.onshape.com"&gt;Onshape 雲端 CAD&lt;/a&gt; 系統中完成.&lt;/p&gt;
+&lt;p&gt;以下為期中報告的任務 (Task 1) 執行參考流程:&lt;/p&gt;
+&lt;h2&gt;網際協同 2D 零組件繪圖:&lt;/h2&gt;
+&lt;h3&gt;計算鏈條輪廓圓弧相切點座標&lt;/h3&gt;
+&lt;p&gt;以下符號式運算使用 sympy, 並且能夠直接在 &lt;a href="https://github.com/jupyter/jupyterhub"&gt;Jupyter hub&lt;/a&gt; 環境中執行, 若&lt;a href="https://github.com/chiamingyen/kmol2016"&gt;隨身 Python3 程式環境&lt;/a&gt;無 sympy 模組, 可以 pip install sympy 安裝.&lt;/p&gt;
+&lt;p&gt;假設上方圓弧圓心位於原點, 且鏈條輪廓上下垂直沒有轉角.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt; 設為左側圓弧的圓心座標, &lt;span class="math"&gt;\((x2, y2)\)&lt;/span&gt; 則為上方圓弧與左側圓弧的相切點座標, &lt;span class="math"&gt;\((x3, y3)\)&lt;/span&gt; 則為下方圓弧與左側圓弧的相切點座標.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\((x2-0)**2 + (y2-0)**2 - 7*7 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x2, y2)\)&lt;/span&gt; 位於圓心 (0, 0), 半徑 7 的圓上.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\((x1-x2)**2+(y1-y2)**2 -40**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x2, y2)\)&lt;/span&gt; 也同時位於圓心 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt;, 半徑 40 的圓上.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\((x1-x3)**2+(y1-y3)**2 -40**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x3, y3)\)&lt;/span&gt; 位於圓心 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt;, 半徑 40 的圓上.&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\((x1-0)**2+(y1-0)**2 -47**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt; 與 (0, 0) 兩個圓弧的圓心距離為 (40+7).&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\((x1)**2+(y1+20)**2 -47**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt; 與 (0, -20) 兩個圓弧的圓心距離也是 (40+7).&lt;/p&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(x2 - x3 = 0\)&lt;/span&gt;, 表示鏈條輪廓上下垂直沒有轉角, 所以 &lt;span class="math"&gt;\(x2 = x3\)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+from sympy import *
+# center ot radius 40
+x1 = Symbol('x1')
+y1 = Symbol('y1')
+# upper tangent point
+x2 = Symbol('x2')
+y2 = Symbol('y2')
+# lower tangent point
+x3 = Symbol('x3')
+y3 = Symbol('y3')
+answer = solve([(x2-0)**2 + (y2-0)**2 - 7*7, (x1-x2)**2+(y1-y2)**2 -40**2, (x1-x3)**2+(y1-y3)**2 -40**2, (x1)**2+(y1)**2 -47**2, \
+       (x1)**2+(y1+20)**2 -47**2, x2 -x3], [x1, y1, x2, y2, x3, y3])
+group = 1
+for i in answer:
+    try:
+        g.es("group", group, ":")
+    except:
+        print("group", group, ":")
+    for j in i:
+        try:
+            g.es(j.evalf(5))
+        except:
+            print(j.evalf(5))
+    group += 1
+&lt;/pre&gt;
+
+&lt;p&gt;計算出的結果:&lt;/p&gt;
+&lt;pre class="brush: xml;"&gt;
+左邊半徑 40 的圓心座標 (-45.924, -10.000)
+左上方的切點座標 (-6.8397, -1.4894)
+左下方的切點座標 (-6.8397, -18.511)
+右邊半徑 40 的圓心座標 (45.924, -10.000)
+右上方切點座標 (6.8397, -1.4894)
+右下方切點座標 (6.8397, -18.511)
+&lt;/pre&gt;
+
+&lt;p&gt;根據四個切點的座標, 利用 Cango 與 Brython 完成單一鍊條輪廓繪圖:&lt;/p&gt;
+&lt;pre class="brush: xml;"&gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset="UTF-8"&amp;gt;
+    &amp;lt;title&amp;gt;網際 2D 繪圖&amp;lt;/title&amp;gt;
+    &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
+    &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
+&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;script&amp;gt;
+window.onload=function(){
+brython(1);
+}
+&amp;lt;/script&amp;gt;
+
+&amp;lt;canvas id="plotarea" width="800" height="600"&amp;gt;&amp;lt;/canvas&amp;gt;
+
+&amp;lt;script type="text/python"&amp;gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 決定要不要畫座標軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+def O(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 放大 5 倍
+    cgo.render(cmbr, x, y, 5, rot)
+
+O(0, 0, 0, 0, 0, "lightyellow", True, 4)
+# 準備標示出4個點的座標 (放大 5 倍)
+cgo.drawText("各點的座標值放大5倍", (-6.8397*5)-50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+# 左上角點
+cgo.drawText("(-6.8397, -1.4894)", (-6.8397*5)-50, (-1.4894*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-1.4894*5), {"fillColor": "red"})
+# 右上角點
+cgo.drawText("(6.8397, -1.4894)", (6.8397*5)+50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-1.4894*5), {"fillColor": "red"})
+# 左下角點
+cgo.drawText("(-6.8397, -18.511)", (-6.8397*5)-50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-18.511*5), {"fillColor": "red"})
+# 右下角點
+cgo.drawText("(6.8397, -18.511)", (6.8397*5)+50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-18.511*5), {"fillColor": "red"})
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;繪圖結果如下:&lt;/p&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea" width="800" height="600"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 決定要不要畫座標軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+def O(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 放大 5 倍
+    cgo.render(cmbr, x, y, 5, rot)
+
+O(0, 0, 0, 0, 0, "lightyellow", True, 4)
+# 準備標示出4個點的座標 (放大 5 倍)
+cgo.drawText("各點的座標值放大5倍", (-6.8397*5)-50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+# 左上角點
+cgo.drawText("(-6.8397, -1.4894)", (-6.8397*5)-50, (-1.4894*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-1.4894*5), {"fillColor": "red"})
+# 右上角點
+cgo.drawText("(6.8397, -1.4894)", (6.8397*5)+50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-1.4894*5), {"fillColor": "red"})
+# 左下角點
+cgo.drawText("(-6.8397, -18.511)", (-6.8397*5)-50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-18.511*5), {"fillColor": "red"})
+# 右下角點
+cgo.drawText("(6.8397, -18.511)", (6.8397*5)+50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
+cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-18.511*5), {"fillColor": "red"})
+&lt;/script&gt;
+
+&lt;p&gt;上述 2D 鏈條輪廓繪圖因為採用 Cango 與 Brython, 可以直接利用 Javascript 在 html 網頁上執行繪圖, 此特點與 PTC Creo Parametric 中的 Pro/Web.Link 3D 零組件繪圖模式相同, 但是為了要能夠利用雲端網際環境進行協同, 還必須要透過 Web Server based 的 Python3 wsgi 程式來派送 2D 與 3D 零組件的繪圖 (也可以採用 Java, Node.js 或其他 Web Server based 的程式方法完成).&lt;/p&gt;
+&lt;p&gt;這裡的 Web Based Server 程式採用 Python3 與 Flask, 並且可以在近端與 &lt;a href="https://www.openshift.com/"&gt;Openshift&lt;/a&gt; 雲端派送上述的 2D 鏈條輪廓繪圖, 而此一協同架構隨後將應用到 PTC Creo Parametric 中的 Pro/Web.Link 3D 零組件繪圖, 比較不同的是, 在 Windows 環境下, Pro/Web.Link 的執行只能在嵌入式的 IE 瀏覽器中執行, 而且無法與支援較新 Javascript 版本的 Brython 結合. 換言之, 隨後的 Pro/Web.Link 3D 零組件繪圖, 必須採用純 Javascript 程式, 而且只能在 Creo Parametric 的嵌入式 IE 中執行.&lt;/p&gt;
+&lt;h2&gt;Github cdw2 倉儲協同規劃&lt;/h2&gt;
+&lt;p&gt;接下來, 為了要能夠在 Github 倉儲中實現近端與 &lt;a href="https://www.openshift.com/"&gt;Openshift&lt;/a&gt; 平台上的 Python3 &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt; wsgi 程式 2D 零組件繪圖, 同時利用 &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;Github Pages&lt;/a&gt; 來集結各組所完成的期中報告結果, 我們決定要將 cdw2 倉儲分為 master 與 gh-pages 的分支版本, 而且不可合併. cdw2 的 master 可以直接在近端完成 2D 零組件繪圖, 而且同一組程式將利用 git remote add 由各組組員送到各自的 &lt;a href="https://www.openshift.com/"&gt;Openshift&lt;/a&gt; Python3 應用程式上執行, 而且各組員所完成的期中報告結果, 可以利用 cdw2 倉儲中的 gh-pages 分支, 以 &lt;a href="https://github.com/getpelican/pelican"&gt;Pelican 靜態網誌&lt;/a&gt;的架構執行協同內容管理.&lt;/p&gt;
+&lt;p&gt;2D 零組件協同繪圖 (注意畫布名稱必須與上列繪圖名稱不同):&lt;/p&gt;
+&lt;pre class="brush: xml;"&gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset="UTF-8"&amp;gt;
+    &amp;lt;title&amp;gt;網際 2D 繪圖&amp;lt;/title&amp;gt;
+    &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
+    &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
+&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&amp;gt;&amp;lt;/script&amp;gt;
+
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;script&amp;gt;
+window.onload=function(){
+brython(1);
+}
+&amp;lt;/script&amp;gt;
+
+&amp;lt;canvas id="plotarea2" width="800" height="600"&amp;gt;&amp;lt;/canvas&amp;gt;
+
+&amp;lt;script type="text/python"&amp;gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 決定要不要畫座標軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+def O(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 放大 5 倍
+    cgo.render(cmbr, x, y, 5, rot)
+
+O(0, 0, 0, 0, 0, "red", True, 4)
+&amp;lt;/script&amp;gt;
+&amp;lt;!-- 以下為第2位組員的零件繪圖 --&amp;gt;
+&amp;lt;script type="text/python"&amp;gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+deg = math.pi/180  
+def O2(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 120 度
+    basic1.rotate(120)
+
+    # 放大 5 倍
+    cgo.render(basic1, x, y, 5, rot)
+
+O2(0, 0, 0, 0, 0, "blue", True, 4)
+&amp;lt;/script&amp;gt;
+&amp;lt;!-- 以下為第3位組員的零件繪圖 --&amp;gt;
+&amp;lt;script type="text/python"&amp;gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+deg = math.pi/180  
+def O3(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 90 度
+    basic1.rotate(90)
+    # 平移到 O2 的鏈條端點
+    basic1.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+
+    # 放大 5 倍
+    cgo.render(basic1, x, y, 5, rot)
+
+O3(0, 0, 0, 0, 0, "green", True, 4)
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;2D 協同繪圖結果如下:&lt;/p&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea2" width="800" height="600"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 決定要不要畫座標軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+def O(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 放大 5 倍
+    cgo.render(cmbr, x, y, 5, rot)
+
+O(0, 0, 0, 0, 0, "red", True, 4)
+&lt;/script&gt;
+
+&lt;!-- 以下為第2位組員的零件繪圖 --&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+deg = math.pi/180  
+def O2(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 120 度
+    basic1.rotate(120)
+
+    # 放大 5 倍
+    cgo.render(basic1, x, y, 5, rot)
+
+O2(0, 0, 0, 0, 0, "blue", True, 4)
+&lt;/script&gt;
+
+&lt;!-- 以下為第3位組員的零件繪圖 --&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+deg = math.pi/180  
+def O3(x, y, rx, ry, rot, color, border, linewidth):
+    # 旋轉必須要針對相對中心 rot not working yet
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+    cmbr = cobj(cgoChamber, "SHAPE", {
+            "fillColor": color,
+            "border": border,
+            "strokeColor": "tan",
+            "lineWidth": linewidth })
+
+    # hole 為原點位置
+    hole = cobj(shapedefs.circle(4), "PATH")
+    cmbr.appendPath(hole)
+
+    # 複製 cmbr, 然後命名為 basic1
+    basic1 = cmbr.dup()
+    # basic1 轉 90 度
+    basic1.rotate(90)
+    # 平移到 O2 的鏈條端點
+    basic1.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
+
+    # 放大 5 倍
+    cgo.render(basic1, x, y, 5, rot)
+
+O3(0, 0, 0, 0, 0, "green", True, 4)
+&lt;/script&gt;
+
+&lt;p&gt;完成上述 2D 零組件協同繪圖後, 各組組長就可以直接將 cdw2 master 分支上的 wsgi 程式, 先在本地端測試無誤後, 再提交推送到 2015fallhw/cdw2, 若為組員則需透過 pull request, 以拉回請求的方式, 要求組長將 master 分支上的 wsgi 改版資料, 設法合併到 2015fallhw/cdw2 倉儲中.&lt;/p&gt;
+&lt;p&gt;這裡利用 scrum1 示範帳號, 將上述 2D 零組件繪圖程式提交推送到 2015fallhw/cdw2 後, 再利用 git remote add openshift ssh://123e6d7b22d5271fb220000c9@cdw2-ladisai.rhcloud.com/~/git/cdw2.git/, 透過 /home/.ssh/id_rsa 中 OpenSSL 格式的 private key, 與 Openshift 應用程式上 settings 中的 public key 對應, 取得權限後, 以 git push openshift 將 cdw2 master 的資料送到 Openshift 平台上執行, 所得結果為:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo1"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo2"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo3"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所對應的 2015fallhw/cdw2 提交版本為: &lt;a href="https://github.com/2015fallhw/cdw2/tree/92ccd643061f2fb43030a9423c825f425963d481"&gt;https://github.com/2015fallhw/cdw2/tree/92ccd643061f2fb43030a9423c825f425963d481&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;scrum1_task1.py 版本為: &lt;a href="https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum1_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum1_task1.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;scrum2_task1.py 版本則為: &lt;a href="https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum2_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum2_task1.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最後, 當各組員首次建立 Openshift 平台上與 2015fallhw/cdw2 倉儲 master 分支對應的 wsgi 應用程式時, 可以將 https://github.com/2015fallhw/cdw2.git 列為該應用程式的原始碼, 當 2015fallhw/cdw2 倉儲 master 分支版本不斷改版後, 各組員可以利用類似 git clone ssh://123e6d7b22d5271fb220000c9@cdw2-ladisai.rhcloud.com/~/git/cdw2.git/ cdw2_openshift 將倉儲資料 clone 到近端後, 進入 cdw2_openshift 目錄後, 以 git rm -rf * 將所有先前的版本內容全數刪除後, 再放入 2015fallhw/cdw2 倉儲 master 分支中的最新版本資料後, 以 git add -A, git commit -m "提交訊息", git push 等提交與推送指令, 將 wsgi 程式送到對應的 Openshift 平台應用程式上執行, 每次各組有新的對應程式改版後, 再採用相同模式更新 Openshift 平台上的程式版本, 避免在 Openshift 對應倉儲中處理衝突問題.&lt;/p&gt;
+&lt;h3&gt;2D 鏈條繪圖範例&lt;/h3&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea3" width="800" height="400"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import alert
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea3")
+
+cgo.setGridboxRHC(10, 10, 100, 100)
+cgo.fillGridbox("lightyellow")
+cgo.setWorldCoords(-10, -10, 300, 300) 
+
+# 畫軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+
+# 將繪製鏈條輪廓的內容寫成 class 物件
+class chain():
+    # 輪廓的外型設為成員變數
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+
+    # 利用鏈條起點與終點定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic(self, x1, y1, x2, y2, color="green", border=True, linewidth=4, scale=1):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+        self.color = color
+        self.border = border
+        self.linewidth = linewidth
+        self.scale = scale
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": color,
+                "border": border,
+                "strokeColor": "tan",
+                "lineWidth": linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4), "PATH")
+        cmbr.appendPath(hole)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(math.atan2(y2-y1, x2-x1)/deg+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, scale, 0)
+
+    # 利用鏈條起點與旋轉角度定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic_rot(self, x1, y1, rot, color="green", border=True, linewidth=4, scale=1):
+        self.x1 = x1
+        self.y1 = y1
+        self.rot = rot
+        self.color = color
+        self.border = border
+        self.linewidth = linewidth
+        self.scale = scale
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": color,
+                "border": border,
+                "strokeColor": "tan",
+                "lineWidth": linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4), "PATH")
+        cmbr.appendPath(hole)
+        # 根據旋轉角度, 計算 x2 與 y2
+        x2 = x1 + 20*math.cos(rot*deg)
+        y2 = y1 + 20*math.sin(rot*deg)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(rot+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, scale, 0)
+
+        return x2, y2
+
+# 利用 chain class 建立案例, 對應到 mychain 變數
+mychain = chain()
+
+# 畫 A
+# 左邊兩個垂直單元
+x1, y1 = mychain.basic_rot(0, 0, 90)
+x2, y2 = mychain.basic_rot(x1, y1, 90)
+# 左斜邊兩個單元
+x3, y3 = mychain.basic_rot(x2, y2, 80)
+x4, y4 = mychain.basic_rot(x3, y3, 71)
+# 最上方水平單元
+x5, y5 = mychain.basic_rot(x4, y4, 0)
+# 右斜邊兩個單元
+x6, y6 = mychain.basic_rot(x5, y5, -71)
+x7, y7 = mychain.basic_rot(x6, y6, -80)
+# 右邊兩個垂直單元
+x8, y8 = mychain.basic_rot(x7, y7, -90)
+x9, y9 = mychain.basic_rot(x8, y8, -90)
+# 中間兩個水平單元
+x10, y10 = mychain.basic_rot(x8, y8, -180)
+mychain.basic(x10, y10, x1, y1, color="red")
+
+# 畫 B
+# 左邊四個垂直單元
+x1, y1 = mychain.basic_rot(0+ 65, 0, 90)
+x2, y2 = mychain.basic_rot(x1, y1, 90)
+x3, y3 = mychain.basic_rot(x2, y2, 90)
+x4, y4 = mychain.basic_rot(x3, y3, 90)
+# 上方一個水平單元
+x5, y5 = mychain.basic_rot(x4, y4, 0)
+# 右斜 -30 度
+x6, y6 = mychain.basic_rot(x5, y5, -30)
+# 右上垂直向下單元
+x7, y7 = mychain.basic_rot(x6, y6, -90)
+# 右斜 240 度
+x8, y8 = mychain.basic_rot(x7, y7, 210)
+# 中間水平
+mychain.basic(x8, y8, x2, y2)
+# 右下斜 -30 度
+x10, y10 = mychain.basic_rot(x8, y8, -30)
+# 右下垂直向下單元
+x11, y11 = mychain.basic_rot(x10, y10, -90)
+# 右下斜 240 度
+x12, y12 = mychain.basic_rot(x11, y11, 210)
+# 水平接回起點
+mychain.basic(x12,y12, 0, 0, color="red")
+
+# 畫 C
+# 上半部
+# 左邊中間垂直起點, 圓心位於線段中央, y 方向再向上平移兩個鏈條圓心距單位
+x1, y1 = mychain.basic_rot(0+65*2, -10+10+20*math.sin(80*deg)+20*math.sin(30*deg), 90)
+# 上方轉 80 度
+x2, y2 = mychain.basic_rot(x1, y1, 80)
+# 上方轉 30 度
+x3, y3 = mychain.basic_rot(x2, y2, 30)
+# 上方水平
+x4, y4 = mychain.basic_rot(x3, y3, 0)
+# 下半部, 從起點開始 -80 度
+x5, y5 = mychain.basic_rot(0+65*2, -10+10+20*math.sin(80*deg)+20*math.sin(30*deg), -80)
+# 下斜 -30 度
+x6, y6 = mychain.basic_rot(x5, y5, -30)
+# 下方水平單元
+x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
+
+
+# 畫 D
+# 左邊四個垂直單元
+x1, y1 = mychain.basic_rot(0+65*3, 0, 90)
+x2, y2 = mychain.basic_rot(x1, y1, 90)
+x3, y3 = mychain.basic_rot(x2, y2, 90)
+x4, y4 = mychain.basic_rot(x3, y3, 90)
+# 上方一個水平單元
+x5, y5 = mychain.basic_rot(x4, y4, 0)
+# 右斜 -40 度
+x6, y6 = mychain.basic_rot(x5, y5, -40)
+x7, y7 = mychain.basic_rot(x6, y6, -60)
+# 右中垂直向下單元
+x8, y8 = mychain.basic_rot(x7, y7, -90)
+# -120 度
+x9, y9 = mychain.basic_rot(x8, y8, -120)
+# -140
+x10, y10 = mychain.basic_rot(x9, y9, -140)
+# 水平接回原點
+mychain.basic(x10, y10, 0+65*3, 0, color="red")
+&lt;/script&gt;
+
+&lt;h3&gt;3D 鏈條繪圖範例&lt;/h3&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/onshape_bike_chain_assembly.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/onshape_char_a.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cad.onshape.com/documents/29d1a262b055745e59be7c09/w/1f25948ad73282e2440ffdcf/e/e27164ff303f821d684ca266"&gt;Onshape 字母 A 鏈條組立檔案&lt;/a&gt;&lt;/p&gt;
+&lt;script src="https://embed.github.com/view/3d/chiamingyen/kmolab_data/gh-pages/files/bicycle%20chain%20-%20a_char.stl"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>2016Spring 課程期中自評</title><link href="http://chiamingyen.github.io/kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html" rel="alternate"></link><updated>2016-04-17T22:05:45+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-17:kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html</id><summary type="html">&lt;p&gt;本學期各班課程將依照下列時程規劃, 完成所有學員的期中自評工作.&lt;/p&gt;
 
 
 &lt;p&gt;協同產品設計實習課程:&lt;/p&gt;
@@ -435,615 +1251,7 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
 &lt;p&gt;將上述程式拆解成 scrum1 與 scrum2 兩人協同繪圖的結果:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://cdw2-ag100.rhcloud.com/ag100/scrum1_week8_abc"&gt;http://cdw2-ag100.rhcloud.com/ag100/scrum1_week8_abc&lt;/a&gt; 與 &lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_week8_abc"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_week8_abc&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;版本程式的 scrum1_task1.py: &lt;a href="https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum1_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum1_task1.py&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;版本程式的 scrum2_task2.py: &lt;a href="https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>協同產品設計實習期中報告</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html" rel="alternate"></link><updated>2016-04-12T01:18:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-12:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html</id><summary type="html">&lt;p&gt;2016spring 的協同產品設計課程, 導入了 git 版次管理的 &lt;a href="https://help.github.com/articles/adding-collaborators-to-a-personal-repository/"&gt;collaborator&lt;/a&gt; (各組組長) 與 &lt;a href="https://help.github.com/articles/using-pull-requests/"&gt;pull request&lt;/a&gt; (各組組員)協同模式, 由於 Github 提供了免費的多人協同方案, 讓兩班 133 名學員(2a: 62, 2b: 71)可以各自在本地端與遠端的倉儲分支資料中進行改版.&lt;/p&gt;
-
-
-&lt;p&gt;從 &lt;a href="http://chiamingyen.github.io/kmolab/blog/tag/xie-tong-chan-pin-she-ji-shi-xi.html"&gt;協同產品設計實習課程 tag&lt;/a&gt; 可以查閱與協同產品設計實習有關的頁面, &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;期中報告內容&lt;/a&gt; (&lt;a href="https://github.com/2015fallhw/cdw2/wiki/2016spring-CD-%E6%9C%9F%E4%B8%AD%E5%A0%B1%E5%91%8A%E5%85%A7%E5%AE%B9"&gt;cdw2 倉儲 wiki&lt;/a&gt;) 則包含 2D/3D 鏈條零組件的繪圖, 2D 零件繪圖以 &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;Cango 繪圖程式庫&lt;/a&gt;與 &lt;a href="http://www.brython.info/"&gt;Brython 程式語言&lt;/a&gt;為主, 實際的繪圖程式採用 &lt;a href="http://flask.pocoo.org/"&gt;Flask 框架&lt;/a&gt;, 可以在近端與 &lt;a href="https://www.openshift.com/"&gt;Openshift 雲端&lt;/a&gt;平台上執行繪圖. 至於 3D 零組件繪圖則要求在 &lt;a href="https://www.onshape.com"&gt;Onshape 雲端 CAD&lt;/a&gt; 系統中完成.&lt;/p&gt;
-&lt;p&gt;以下為期中報告的任務 (Task 1) 執行參考流程:&lt;/p&gt;
-&lt;h2&gt;網際協同 2D 零組件繪圖:&lt;/h2&gt;
-&lt;h3&gt;計算鏈條輪廓圓弧相切點座標&lt;/h3&gt;
-&lt;p&gt;以下符號式運算使用 sympy, 並且能夠直接在 &lt;a href="https://github.com/jupyter/jupyterhub"&gt;Jupyter hub&lt;/a&gt; 環境中執行, 若&lt;a href="https://github.com/chiamingyen/kmol2016"&gt;隨身 Python3 程式環境&lt;/a&gt;無 sympy 模組, 可以 pip install sympy 安裝.&lt;/p&gt;
-&lt;p&gt;假設上方圓弧圓心位於原點, 且鏈條輪廓上下垂直沒有轉角.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt; 設為左側圓弧的圓心座標, &lt;span class="math"&gt;\((x2, y2)\)&lt;/span&gt; 則為上方圓弧與左側圓弧的相切點座標, &lt;span class="math"&gt;\((x3, y3)\)&lt;/span&gt; 則為下方圓弧與左側圓弧的相切點座標.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\((x2-0)**2 + (y2-0)**2 - 7*7 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x2, y2)\)&lt;/span&gt; 位於圓心 (0, 0), 半徑 7 的圓上.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\((x1-x2)**2+(y1-y2)**2 -40**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x2, y2)\)&lt;/span&gt; 也同時位於圓心 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt;, 半徑 40 的圓上.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\((x1-x3)**2+(y1-y3)**2 -40**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x3, y3)\)&lt;/span&gt; 位於圓心 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt;, 半徑 40 的圓上.&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\((x1-0)**2+(y1-0)**2 -47**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt; 與 (0, 0) 兩個圓弧的圓心距離為 (40+7).&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\((x1)**2+(y1+20)**2 -47**2 = 0\)&lt;/span&gt;, 表示 &lt;span class="math"&gt;\((x1, y1)\)&lt;/span&gt; 與 (0, -20) 兩個圓弧的圓心距離也是 (40+7).&lt;/p&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(x2 - x3 = 0\)&lt;/span&gt;, 表示鏈條輪廓上下垂直沒有轉角, 所以 &lt;span class="math"&gt;\(x2 = x3\)&lt;/span&gt;.&lt;/p&gt;
-&lt;pre class="brush: python;"&gt;
-from sympy import *
-# center ot radius 40
-x1 = Symbol('x1')
-y1 = Symbol('y1')
-# upper tangent point
-x2 = Symbol('x2')
-y2 = Symbol('y2')
-# lower tangent point
-x3 = Symbol('x3')
-y3 = Symbol('y3')
-answer = solve([(x2-0)**2 + (y2-0)**2 - 7*7, (x1-x2)**2+(y1-y2)**2 -40**2, (x1-x3)**2+(y1-y3)**2 -40**2, (x1)**2+(y1)**2 -47**2, \
-       (x1)**2+(y1+20)**2 -47**2, x2 -x3], [x1, y1, x2, y2, x3, y3])
-group = 1
-for i in answer:
-    try:
-        g.es("group", group, ":")
-    except:
-        print("group", group, ":")
-    for j in i:
-        try:
-            g.es(j.evalf(5))
-        except:
-            print(j.evalf(5))
-    group += 1
-&lt;/pre&gt;
-
-&lt;p&gt;計算出的結果:&lt;/p&gt;
-&lt;pre class="brush: xml;"&gt;
-左邊半徑 40 的圓心座標 (-45.924, -10.000)
-左上方的切點座標 (-6.8397, -1.4894)
-左下方的切點座標 (-6.8397, -18.511)
-右邊半徑 40 的圓心座標 (45.924, -10.000)
-右上方切點座標 (6.8397, -1.4894)
-右下方切點座標 (6.8397, -18.511)
-&lt;/pre&gt;
-
-&lt;p&gt;根據四個切點的座標, 利用 Cango 與 Brython 完成單一鍊條輪廓繪圖:&lt;/p&gt;
-&lt;pre class="brush: xml;"&gt;
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset="UTF-8"&amp;gt;
-    &amp;lt;title&amp;gt;網際 2D 繪圖&amp;lt;/title&amp;gt;
-    &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
-    &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
-&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;script&amp;gt;
-window.onload=function(){
-brython(1);
-}
-&amp;lt;/script&amp;gt;
-
-&amp;lt;canvas id="plotarea" width="800" height="800"&amp;gt;&amp;lt;/canvas&amp;gt;
-
-&amp;lt;script type="text/python"&amp;gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-# 決定要不要畫座標軸線
-cgo.drawAxes(0, 240, 0, 240, {
-    "strokeColor":"#aaaaaa",
-    "fillColor": "#aaaaaa",
-    "xTickInterval": 20,
-    "xLabelInterval": 20,
-    "yTickInterval": 20,
-    "yLabelInterval": 20})
-
-deg = math.pi/180  
-def O(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 放大 5 倍
-    cgo.render(cmbr, x, y, 5, rot)
-
-O(0, 0, 0, 0, 0, "lightyellow", True, 4)
-# 準備標示出4個點的座標 (放大 5 倍)
-cgo.drawText("各點的座標值放大5倍", (-6.8397*5)-50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-# 左上角點
-cgo.drawText("(-6.8397, -1.4894)", (-6.8397*5)-50, (-1.4894*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-1.4894*5), {"fillColor": "red"})
-# 右上角點
-cgo.drawText("(6.8397, -1.4894)", (6.8397*5)+50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-1.4894*5), {"fillColor": "red"})
-# 左下角點
-cgo.drawText("(-6.8397, -18.511)", (-6.8397*5)-50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-18.511*5), {"fillColor": "red"})
-# 右下角點
-cgo.drawText("(6.8397, -18.511)", (6.8397*5)+50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-18.511*5), {"fillColor": "red"})
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;繪圖結果如下:&lt;/p&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
-
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;canvas id="plotarea" width="800" height="800"&gt;&lt;/canvas&gt;
-
-&lt;script type="text/python"&gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-# 決定要不要畫座標軸線
-cgo.drawAxes(0, 240, 0, 240, {
-    "strokeColor":"#aaaaaa",
-    "fillColor": "#aaaaaa",
-    "xTickInterval": 20,
-    "xLabelInterval": 20,
-    "yTickInterval": 20,
-    "yLabelInterval": 20})
-
-deg = math.pi/180  
-def O(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 放大 5 倍
-    cgo.render(cmbr, x, y, 5, rot)
-
-O(0, 0, 0, 0, 0, "lightyellow", True, 4)
-# 準備標示出4個點的座標 (放大 5 倍)
-cgo.drawText("各點的座標值放大5倍", (-6.8397*5)-50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-# 左上角點
-cgo.drawText("(-6.8397, -1.4894)", (-6.8397*5)-50, (-1.4894*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-1.4894*5), {"fillColor": "red"})
-# 右上角點
-cgo.drawText("(6.8397, -1.4894)", (6.8397*5)+50, (-1.4894*5)+20, {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-1.4894*5), {"fillColor": "red"})
-# 左下角點
-cgo.drawText("(-6.8397, -18.511)", (-6.8397*5)-50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (-6.8397*5), (-18.511*5), {"fillColor": "red"})
-# 右下角點
-cgo.drawText("(6.8397, -18.511)", (6.8397*5)+50, (-18.511*5), {"fontSize": 12, "fontWeight": 1200, "lorg":5 })
-cgo.drawShape(shapedefs.circle(4), (6.8397*5), (-18.511*5), {"fillColor": "red"})
-&lt;/script&gt;
-
-&lt;p&gt;上述 2D 鏈條輪廓繪圖因為採用 Cango 與 Brython, 可以直接利用 Javascript 在 html 網頁上執行繪圖, 此特點與 PTC Creo Parametric 中的 Pro/Web.Link 3D 零組件繪圖模式相同, 但是為了要能夠利用雲端網際環境進行協同, 還必須要透過 Web Server based 的 Python3 wsgi 程式來派送 2D 與 3D 零組件的繪圖 (也可以採用 Java, Node.js 或其他 Web Server based 的程式方法完成).&lt;/p&gt;
-&lt;p&gt;這裡的 Web Based Server 程式採用 Python3 與 Flask, 並且可以在近端與 &lt;a href="https://www.openshift.com/"&gt;Openshift&lt;/a&gt; 雲端派送上述的 2D 鏈條輪廓繪圖, 而此一協同架構隨後將應用到 PTC Creo Parametric 中的 Pro/Web.Link 3D 零組件繪圖, 比較不同的是, 在 Windows 環境下, Pro/Web.Link 的執行只能在嵌入式的 IE 瀏覽器中執行, 而且無法與支援較新 Javascript 版本的 Brython 結合. 換言之, 隨後的 Pro/Web.Link 3D 零組件繪圖, 必須採用純 Javascript 程式, 而且只能在 Creo Parametric 的嵌入式 IE 中執行.&lt;/p&gt;
-&lt;h2&gt;Github cdw2 倉儲協同規劃&lt;/h2&gt;
-&lt;p&gt;接下來, 為了要能夠在 Github 倉儲中實現近端與 &lt;a href="https://www.openshift.com/"&gt;Openshift&lt;/a&gt; 平台上的 Python3 &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt; wsgi 程式 2D 零組件繪圖, 同時利用 &lt;a href="https://help.github.com/categories/github-pages-basics/"&gt;Github Pages&lt;/a&gt; 來集結各組所完成的期中報告結果, 我們決定要將 cdw2 倉儲分為 master 與 gh-pages 的分支版本, 而且不可合併. cdw2 的 master 可以直接在近端完成 2D 零組件繪圖, 而且同一組程式將利用 git remote add 由各組組員送到各自的 &lt;a href="https://www.openshift.com/"&gt;Openshift&lt;/a&gt; Python3 應用程式上執行, 而且各組員所完成的期中報告結果, 可以利用 cdw2 倉儲中的 gh-pages 分支, 以 &lt;a href="https://github.com/getpelican/pelican"&gt;Pelican 靜態網誌&lt;/a&gt;的架構執行協同內容管理.&lt;/p&gt;
-&lt;p&gt;2D 零組件協同繪圖 (注意畫布名稱必須與上列繪圖名稱不同):&lt;/p&gt;
-&lt;pre class="brush: xml;"&gt;
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset="UTF-8"&amp;gt;
-    &amp;lt;title&amp;gt;網際 2D 繪圖&amp;lt;/title&amp;gt;
-    &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
-    &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
-&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&amp;gt;&amp;lt;/script&amp;gt;
-
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-
-&amp;lt;script&amp;gt;
-window.onload=function(){
-brython(1);
-}
-&amp;lt;/script&amp;gt;
-
-&amp;lt;canvas id="plotarea2" width="800" height="800"&amp;gt;&amp;lt;/canvas&amp;gt;
-
-&amp;lt;script type="text/python"&amp;gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea2")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-# 決定要不要畫座標軸線
-cgo.drawAxes(0, 240, 0, 240, {
-    "strokeColor":"#aaaaaa",
-    "fillColor": "#aaaaaa",
-    "xTickInterval": 20,
-    "xLabelInterval": 20,
-    "yTickInterval": 20,
-    "yLabelInterval": 20})
-
-deg = math.pi/180  
-def O(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 放大 5 倍
-    cgo.render(cmbr, x, y, 5, rot)
-
-O(0, 0, 0, 0, 0, "red", True, 4)
-&amp;lt;/script&amp;gt;
-&amp;lt;!-- 以下為第2位組員的零件繪圖 --&amp;gt;
-&amp;lt;script type="text/python"&amp;gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea2")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-deg = math.pi/180  
-def O2(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 複製 cmbr, 然後命名為 basic1
-    basic1 = cmbr.dup()
-    # basic1 轉 120 度
-    basic1.rotate(120)
-
-    # 放大 5 倍
-    cgo.render(basic1, x, y, 5, rot)
-
-O2(0, 0, 0, 0, 0, "blue", True, 4)
-&amp;lt;/script&amp;gt;
-&amp;lt;!-- 以下為第3位組員的零件繪圖 --&amp;gt;
-&amp;lt;script type="text/python"&amp;gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea2")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-deg = math.pi/180  
-def O3(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 複製 cmbr, 然後命名為 basic1
-    basic1 = cmbr.dup()
-    # basic1 轉 90 度
-    basic1.rotate(90)
-    # 平移到 O2 的鏈條端點
-    basic1.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
-
-    # 放大 5 倍
-    cgo.render(basic1, x, y, 5, rot)
-
-O3(0, 0, 0, 0, 0, "green", True, 4)
-&amp;lt;/script&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;2D 協同繪圖結果如下:&lt;/p&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
-
-&lt;script&gt;
-window.onload=function(){
-brython(1);
-}
-&lt;/script&gt;
-
-&lt;canvas id="plotarea2" width="800" height="800"&gt;&lt;/canvas&gt;
-
-&lt;script type="text/python"&gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea2")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-# 決定要不要畫座標軸線
-cgo.drawAxes(0, 240, 0, 240, {
-    "strokeColor":"#aaaaaa",
-    "fillColor": "#aaaaaa",
-    "xTickInterval": 20,
-    "xLabelInterval": 20,
-    "yTickInterval": 20,
-    "yLabelInterval": 20})
-
-deg = math.pi/180  
-def O(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 放大 5 倍
-    cgo.render(cmbr, x, y, 5, rot)
-
-O(0, 0, 0, 0, 0, "red", True, 4)
-&lt;/script&gt;
-
-&lt;!-- 以下為第2位組員的零件繪圖 --&gt;
-
-&lt;script type="text/python"&gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea2")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-deg = math.pi/180  
-def O2(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 複製 cmbr, 然後命名為 basic1
-    basic1 = cmbr.dup()
-    # basic1 轉 120 度
-    basic1.rotate(120)
-
-    # 放大 5 倍
-    cgo.render(basic1, x, y, 5, rot)
-
-O2(0, 0, 0, 0, 0, "blue", True, 4)
-&lt;/script&gt;
-
-&lt;!-- 以下為第3位組員的零件繪圖 --&gt;
-
-&lt;script type="text/python"&gt;
-from javascript import JSConstructor
-from browser import window
-import math
-
-cango = JSConstructor(window.Cango)
-cobj = JSConstructor(window.Cobj)
-shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea2")
-
-cgo.setWorldCoords(-250, -250, 500, 500) 
-
-deg = math.pi/180  
-def O3(x, y, rx, ry, rot, color, border, linewidth):
-    # 旋轉必須要針對相對中心 rot not working yet
-    chamber = "M -6.8397, -1.4894 \
-            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
-            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
-            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
-            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
-    cgoChamber = window.svgToCgoSVG(chamber)
-    cmbr = cobj(cgoChamber, "SHAPE", {
-            "fillColor": color,
-            "border": border,
-            "strokeColor": "tan",
-            "lineWidth": linewidth })
-
-    # hole 為原點位置
-    hole = cobj(shapedefs.circle(4), "PATH")
-    cmbr.appendPath(hole)
-
-    # 複製 cmbr, 然後命名為 basic1
-    basic1 = cmbr.dup()
-    # basic1 轉 90 度
-    basic1.rotate(90)
-    # 平移到 O2 的鏈條端點
-    basic1.translate(20*math.cos(30*deg), 20*math.sin(30*deg))
-
-    # 放大 5 倍
-    cgo.render(basic1, x, y, 5, rot)
-
-O3(0, 0, 0, 0, 0, "green", True, 4)
-&lt;/script&gt;
-
-&lt;p&gt;完成上述 2D 零組件協同繪圖後, 各組組長就可以直接將 cdw2 master 分支上的 wsgi 程式, 先在本地端測試無誤後, 再提交推送到 2015fallhw/cdw2, 若為組員則需透過 pull request, 以拉回請求的方式, 要求組長將 master 分支上的 wsgi 改版資料, 設法合併到 2015fallhw/cdw2 倉儲中.&lt;/p&gt;
-&lt;p&gt;這裡利用 scrum1 示範帳號, 將上述 2D 零組件繪圖程式提交推送到 2015fallhw/cdw2 後, 再利用 git remote add openshift ssh://123e6d7b22d5271fb220000c9@cdw2-ladisai.rhcloud.com/~/git/cdw2.git/, 透過 /home/.ssh/id_rsa 中 OpenSSL 格式的 private key, 與 Openshift 應用程式上 settings 中的 public key 對應, 取得權限後, 以 git push openshift 將 cdw2 master 的資料送到 Openshift 平台上執行, 所得結果為:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo1"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo2"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo3"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_demo3&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;所對應的 2015fallhw/cdw2 提交版本為: &lt;a href="https://github.com/2015fallhw/cdw2/tree/92ccd643061f2fb43030a9423c825f425963d481"&gt;https://github.com/2015fallhw/cdw2/tree/92ccd643061f2fb43030a9423c825f425963d481&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;scrum1_task1.py 版本為: &lt;a href="https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum1_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum1_task1.py&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;scrum2_task1.py 版本則為: &lt;a href="https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum2_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/92ccd643061f2fb43030a9423c825f425963d481/users/s2a/g100/scrum2_task1.py&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;最後, 當各組員首次建立 Openshift 平台上與 2015fallhw/cdw2 倉儲 master 分支對應的 wsgi 應用程式時, 可以將 https://github.com/2015fallhw/cdw2.git 列為該應用程式的原始碼, 當 2015fallhw/cdw2 倉儲 master 分支版本不斷改版後, 各組員可以利用類似 git clone ssh://123e6d7b22d5271fb220000c9@cdw2-ladisai.rhcloud.com/~/git/cdw2.git/ cdw2_openshift 將倉儲資料 clone 到近端後, 進入 cdw2_openshift 目錄後, 以 git rm -rf * 將所有先前的版本內容全數刪除後, 再放入 2015fallhw/cdw2 倉儲 master 分支中的最新版本資料後, 以 git add -A, git commit -m "提交訊息", git push 等提交與推送指令, 將 wsgi 程式送到對應的 Openshift 平台應用程式上執行, 每次各組有新的對應程式改版後, 再採用相同模式更新 Openshift 平台上的程式版本, 避免在 Openshift 對應倉儲中處理衝突問題.&lt;/p&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖之二</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html" rel="alternate"></link><updated>2016-03-30T23:59:43+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html</id><summary type="html">&lt;p&gt;這裡要介紹的是 scrum-2 組員利用 forked cdw2 倉儲版本, git clone 到近端後, 以 git checkout gh-pages 轉到 Github Pages 對應的網頁資料上工作.&lt;/p&gt;
+&lt;p&gt;版本程式的 scrum2_task2.py: &lt;a href="https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖之二</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html" rel="alternate"></link><updated>2016-03-30T23:59:43+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html</id><summary type="html">&lt;p&gt;這裡要介紹的是 scrum-2 組員利用 forked cdw2 倉儲版本, git clone 到近端後, 以 git checkout gh-pages 轉到 Github Pages 對應的網頁資料上工作.&lt;/p&gt;
 
 
 &lt;p&gt;在 users/s2a/g100 目錄下建立 scrum2.leo 後, 就利用 Leo Editor 在 content 目錄中, 建立 .md 檔案, 完成後先在近端利用 local-pelican 測試結果, 若能夠正確轉換 Pelican post 目錄中的網誌, 就可以再用 gh-pages-pelican 按鈕, 將 post 目錄中轉成遠端網頁所需要的格式 (主要是讓 disqus 留言系統可以正常運作).&lt;/p&gt;
