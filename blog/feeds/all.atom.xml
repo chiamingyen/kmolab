@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-23T00:28:47+08:00</updated><entry><title>網際跨來源資源共享 2D 零件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-23T00:28:47+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-23:kmolab/blog/wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html</id><summary type="html">&lt;p&gt;跨來源資源共享 (Cross-Origin Resource Sharing): &lt;a href="https://www.w3.org/TR/cors/"&gt;https://www.w3.org/TR/cors/&lt;/a&gt; 機制是本地端從多個伺服器分別取得相關資源後, 以其中某一個伺服器的內容為主體進行近端程式執行的架構, 就協同機械設計流程而言, 可以應用在工程師與工程師之間的 2D 與 3D 零組件繪圖.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-30T15:10:57+08:00</updated><entry><title>使用 flask-cors 延伸模組</title><link href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html" rel="alternate"></link><updated>2016-04-30T15:10:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-30:kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html</id><summary type="html">&lt;p&gt;在 &lt;a href="wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html"&gt;網際跨來源資源共享 2D 零件繪圖&lt;/a&gt;中, 我們已經利用 flask 的 make_response 送出跨網址 ajax 導入資源的方法, 其中因為目前的 make_response 函式只能接受單一字串的 origins, 所以若需要同時支援 http://localhost:5000 與某一廣域的網址擷取程式段, 通常採用 response.headers['Access-Control-Allow-Origin'] = '*' 處理, 也就是允許所有的主機呼叫, 並使用對應函式所提供的 ajax 資源.&lt;/p&gt;
+
+
+&lt;p&gt;假如使用 flask 框架, 並且希望明確指定多台 ajax 資源共享的網址, 則可以使用 flask-cors 延伸模組 (這裡以 flask-cors 2.1.2 版為例).&lt;/p&gt;
+&lt;p&gt;flask-cors 延伸模組的安裝共有三種情況:&lt;/p&gt;
+&lt;p&gt;假如是在 Windows 可攜 Python3 程式環境, 可以直接利用 pip install flask-cors 安裝.&lt;/p&gt;
+&lt;p&gt;假如是在 16.04 版之前的 Ubuntu (因為 Python2 與 Python3 共存),使用 必須使用 pip3 install flask-cors 安裝.&lt;/p&gt;
+&lt;p&gt;假如使用 OpenShift 雲端平台上的 Python3 應用程式, 則利用 setup.py 指定安裝 flask-cors 延伸模組.&lt;/p&gt;
+&lt;p&gt;實際操作時, 則必須先導入 flask.ext.cors 模組中的 cross_origin decorator 方法.&lt;/p&gt;
+&lt;p&gt;from flask.ext.cors import cross_origin&lt;/p&gt;
+&lt;p&gt;然後在對應的協同繪圖函式中, 指定可以引用的網址, 例如, 允許 localhost 與 cdw2-ag100.rhcloud.com 擷取繪圖程式段的範例:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+# 畫 C 函式
+@scrum1_task1.route('/scrum1_week8_c')
+@cross_origin(origins=['http://localhost', 'http://cdw2-ag100.rhcloud.com'], allow_headers=['Content-Type'])
+def week8_c():
+    outstring = '''
+from javascript import JSConstructor
+from browser import alert
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea2")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 畫軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+
+# 將繪製鏈條輪廓的內容寫成 class 物件
+class chain():
+    # 輪廓的外型設為成員變數
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+
+    # 利用鏈條起點與終點定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic(self, x1, y1, x2, y2, color="green", border=True, linewidth=4, scale=1):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+        self.color = color
+        self.border = border
+        self.linewidth = linewidth
+        self.scale = scale
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": color,
+                "border": border,
+                "strokeColor": "tan",
+                "lineWidth": linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4), "PATH")
+        cmbr.appendPath(hole)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(math.atan2(y2-y1, x2-x1)/deg+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, scale, 0)
+
+    # 利用鏈條起點與旋轉角度定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic_rot(self, x1, y1, rot, color="green", border=True, linewidth=4, scale=1):
+        self.x1 = x1
+        self.y1 = y1
+        self.rot = rot
+        self.color = color
+        self.border = border
+        self.linewidth = linewidth
+        self.scale = scale
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": color,
+                "border": border,
+                "strokeColor": "tan",
+                "lineWidth": linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4), "PATH")
+        cmbr.appendPath(hole)
+        # 根據旋轉角度, 計算 x2 與 y2
+        x2 = x1 + 20*math.cos(rot*deg)
+        y2 = y1 + 20*math.sin(rot*deg)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(rot+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, scale, 0)
+
+        return x2, y2
+
+# 利用 chain class 建立案例, 對應到 mychain 變數
+mychain = chain()
+
+# 畫 C
+# 上半部
+# 左邊中間垂直起點, 圓心位於線段中央, y 方向再向上平移兩個鏈條圓心距單位
+x1, y1 = mychain.basic_rot(0+65*2, -10+10+20*math.sin(80*deg)+20*math.sin(30*deg), 90)
+# 上方轉 80 度
+x2, y2 = mychain.basic_rot(x1, y1, 80)
+# 上方轉 30 度
+x3, y3 = mychain.basic_rot(x2, y2, 30)
+# 上方水平
+x4, y4 = mychain.basic_rot(x3, y3, 0)
+# 下半部, 從起點開始 -80 度
+x5, y5 = mychain.basic_rot(0+65*2, -10+10+20*math.sin(80*deg)+20*math.sin(30*deg), -80)
+# 下斜 -30 度
+x6, y6 = mychain.basic_rot(x5, y5, -30)
+# 下方水平單元
+x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
+'''
+    return outstring
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category><category term="CORS"></category><category term="flask-cors"></category></entry><entry><title>網際跨來源資源共享 2D 零件繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html" rel="alternate"></link><updated>2016-04-23T00:28:47+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-23:kmolab/blog/wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html</id><summary type="html">&lt;p&gt;跨來源資源共享 (Cross-Origin Resource Sharing): &lt;a href="https://www.w3.org/TR/cors/"&gt;https://www.w3.org/TR/cors/&lt;/a&gt; 機制是本地端從多個伺服器分別取得相關資源後, 以其中某一個伺服器的內容為主體進行近端程式執行的架構, 就協同機械設計流程而言, 可以應用在工程師與工程師之間的 2D 與 3D 零組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;此地的 2D 零件繪圖以 &lt;a href="http://www.brython.info/"&gt;Brython&lt;/a&gt; 加上 &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;Cango&lt;/a&gt; Javascript 繪圖程式庫為例, 而 3D 零件繪圖則希望以 PTC Creo Parametric 的 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=1507"&gt;Pro/Web.Link&lt;/a&gt; 二次開發進行練習.&lt;/p&gt;

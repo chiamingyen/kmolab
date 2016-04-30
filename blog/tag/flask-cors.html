@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>2015 Fall Final Schedule - Kmolab (虎尾科大MDE)</title>
+    <title>flask-cors - Kmolab (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,21 +166,16 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html">
 
-        <meta name="author" content="yen" />
-        <meta name="keywords" content="2015 Fall" />
-        <meta name="description" content="2015 Fall 學期成績評分時程規劃 最後資料改版期限: 2016.01.20 (星期三) 24:00 評分流程: 從各班個人連結頁面中 (2a, 2b, 1a, 1b), 進入各學員在各班倉儲中對應的個人 gh-pages 網頁 從上述頁面右下方的 Blogroll 中最下方連結 (名稱為&#34;學號 個人網頁&#34;), 進入學員個人單獨的 gh-pages 網頁 根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 投影片, 操作影片以及頁面上的其他相關檔案資料評分. 從各班的協同網頁中, 各組所公佈的分組報告中的 投影片, 操作影片以及頁面上的其他相關檔案資料評分. cadp 課程另外將參酌學員所完成的 Solvespace 零件檔案, Creo Parametric 零組件檔案, Onshape 零組件檔案評分." />
+    <meta name="author" content="kmol" />
+    <meta name="keywords" content="flask-cors" />
 
+    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Kmolab (虎尾科大MDE)" />
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="2015 Fall Final Schedule"/>
-        <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html"/>
-        <meta property="og:description" content="2015 Fall 學期成績評分時程規劃 最後資料改版期限: 2016.01.20 (星期三) 24:00 評分流程: 從各班個人連結頁面中 (2a, 2b, 1a, 1b), 進入各學員在各班倉儲中對應的個人 gh-pages 網頁 從上述頁面右下方的 Blogroll 中最下方連結 (名稱為&#34;學號 個人網頁&#34;), 進入學員個人單獨的 gh-pages 網頁 根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 投影片, 操作影片以及頁面上的其他相關檔案資料評分. 從各班的協同網頁中, 各組所公佈的分組報告中的 投影片, 操作影片以及頁面上的其他相關檔案資料評分. cadp 課程另外將參酌學員所完成的 Solvespace 零件檔案, Creo Parametric 零組件檔案, Onshape 零組件檔案評分."/>
-        <meta property="article:published_time" content="2016-01-11" />
-            <meta property="article:section" content="Courses" />
-            <meta property="article:tag" content="2015 Fall" />
-            <meta property="article:author" content="yen" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Kmolab (虎尾科大MDE)"/>
+        <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog"/>
+        <meta property="og:description" content="Kmolab (虎尾科大MDE)"/>
 
 
     <!-- Bootstrap -->
@@ -266,7 +261,7 @@ Kmolab (虎尾科大MDE)            </a>
                         <li >
                             <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">Cadlab</a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="http://chiamingyen.github.io/kmolab/blog/category/courses.html">Courses</a>
                         </li>
                         <li >
@@ -297,105 +292,14 @@ Kmolab (虎尾科大MDE)            </a>
     <div class="row">
         <div class="col-sm-9">
 
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html"
-                       rel="bookmark"
-                       title="Permalink to 2015 Fall Final Schedule">
-                        2015 Fall Final Schedule
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-11T15:48:04.293910+08:00"> 一 11 一月 2016</time>
-    </span>
-            <span class="label label-default">By</span>
-            <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
+            <article>
+                <h2><a href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html">使用 flask-cors 延伸模組</a></h2>
+                <div class="summary"><p>在 <a href="wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html">網際跨來源資源共享 2D 零件繪圖</a>中, 我們已經利用 flask 的 make_response 送出跨網址 ajax 導入資源的方法, 其中因為目前的 make_response 函式只能接受單一字串的 origins, 所以若需要同時支援 http://localhost:5000 與某一廣域的網址擷取程式段, 通常採用 response.headers['Access-Control-Allow-Origin'] = '*' 處理, 也就是允許所有的主機呼叫, 並使用對應函式所提供的 ajax 資源.</p>
 
-
-
-<span class="label label-default">Tags</span>
-	<a href="http://chiamingyen.github.io/kmolab/blog/tag/2015-fall.html">2015 Fall</a>
-    
-</footer><!-- /.post-info -->                    </div>
+                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html">more ...</a>
                 </div>
-                <p>2015 Fall 學期成績評分時程規劃</p>
-<p>最後資料改版期限: 2016.01.20 (星期三) 24:00</p>
-<p>評分流程:</p>
-<ol>
-<li>從各班個人連結頁面中 (<a href="https://github.com/2015fallhw/2015fallcadpa/wiki">2a</a>, <a href="https://github.com/2015fallhw/2015fallcadpb/wiki">2b</a>, <a href="https://github.com/2015fallhw/2015fallcpa/wiki">1a</a>, <a href="https://github.com/2015fallhw/2015fallcpa/wiki">1b</a>), 進入各學員在各班倉儲中對應的<strong>個人 gh-pages 網頁</strong></li>
-<li>從上述頁面右下方的 Blogroll 中<strong>最下方</strong>連結 (名稱為"學號 個人網頁"), 進入學員個人單獨的 gh-pages 網頁</li>
-<li>根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 <strong>投影片</strong>, <strong>操作影片</strong>以及頁面上的其他<strong>相關檔案資料</strong>評分.</li>
-<li>從各班的協同網頁中, 各組所公佈的分組報告中的 <strong>投影片</strong>, <strong>操作影片</strong>以及頁面上的其他<strong>相關檔案資料</strong>評分.</li>
-<li>cadp 課程另外將參酌學員所完成的 <strong>Solvespace 零件檔案</strong>, <strong>Creo Parametric 零組件檔案</strong>, Onshape 零組件檔案評分.</li>
-</ol>
-
-
-<p>2015 Fall 電腦輔助設計實習課程甲班:</p>
-<ul>
-<li>cadpa 倉儲: <a href="https://github.com/2015fallhw/2015fallcadpa">https://github.com/2015fallhw/2015fallcadpa</a></li>
-<li>cadpa 網頁: <a href="http://2015fallhw.github.io/2015fallcadpa">http://2015fallhw.github.io/2015fallcadpa</a></li>
-<li>個人連結: <a href="https://github.com/2015fallhw/2015fallcadpa/wiki">https://github.com/2015fallhw/2015fallcadpa/wiki</a></li>
-</ul>
-<p>2015 Fall 電腦輔助設計實習課程乙班:</p>
-<ul>
-<li>cadpb 倉儲: <a href="https://github.com/2015fallhw/2015fallcadpb">https://github.com/2015fallhw/2015fallcadpb</a></li>
-<li>cadpb 網頁: <a href="http://2015fallhw.github.io/2015fallcadpb">http://2015fallhw.github.io/2015fallcadpb</a></li>
-<li>個人連結: <a href="https://github.com/2015fallhw/2015fallcadpb/wiki">https://github.com/2015fallhw/2015fallcadpb/wiki</a></li>
-</ul>
-<p>2015 Fall 計算機程式課程甲班:</p>
-<ul>
-<li>cpa 倉儲: <a href="https://github.com/2015fallhw/2015fallcpa">https://github.com/2015fallhw/2015fallcpa</a></li>
-<li>cpa 網頁: <a href="http://2015fallhw.github.io/2015fallcpa">http://2015fallhw.github.io/2015fallcpa</a></li>
-<li>個人連結: <a href="https://github.com/2015fallhw/2015fallcpa/wiki">https://github.com/2015fallhw/2015fallcpa/wiki</a></li>
-</ul>
-<p>2015 Fall 計算機程式課程乙班:</p>
-<ul>
-<li>cpb 倉儲: <a href="https://github.com/2015fallhw/2015fallcpb">https://github.com/2015fallhw/2015fallcpb</a></li>
-<li>cpb 網頁: <a href="http://2015fallhw.github.io/2015fallcpb">http://2015fallhw.github.io/2015fallcpb</a></li>
-<li>個人連結: <a href="https://github.com/2015fallhw/2015fallcpb/wiki">https://github.com/2015fallhw/2015fallcpb/wiki</a></li>
-</ul>
-            </div>
-            <!-- /.entry-content -->
-    <hr/>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'kmolab'; // required: replace example with your forum shortname
-
-                    var disqus_identifier = '2015-fall-final-schedule';
-                var disqus_url = 'http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html';
-
-            var disqus_config = function () {
-                this.language = "en";
-            };
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
-        </article>
-    </section>
+            </article>
+            <hr/>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -409,26 +313,6 @@ Kmolab (虎尾科大MDE)            </a>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html">
                             使用 flask-cors 延伸模組
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html">
-                            網際跨來源資源共享 2D 零件繪圖
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html">
-                            協同產品設計實習期中報告
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/2016spring-ke-cheng-qi-zhong-zi-ping.html">
-                            2016Spring 課程期中自評
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html">
-                            2016 CAD Lab
                         </a>
                     </li>
                 </ul>
