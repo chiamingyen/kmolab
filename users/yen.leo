@@ -98,7 +98,7 @@
 <v t="amd.20160410195429.4"><vh>@button nwdiag</vh></v>
 <v t="amd.20160410195429.5"><vh>nwdiag</vh></v>
 </v>
-<v t="amd.20160411214944.1" a="E"><vh>2016springcd</vh>
+<v t="amd.20160411214944.1"><vh>2016springcd</vh>
 <v t="amd.20160411214953.1"><vh>task1</vh></v>
 <v t="amd.20160413142752.1"><vh>task1 鏈條繪圖</vh></v>
 </v>
@@ -108,7 +108,7 @@
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
 <v t="amd.20160106093510.1"><vh>201601</vh>
-<v t="amd.20160106093531.1"><vh>w1</vh>
+<v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
 <v t="amd.20160106113823.1"><vh>@edit yen_20160106-2.md</vh></v>
@@ -169,6 +169,7 @@
 <v t="amd.20160417212507.1"><vh>@edit yen_20160417.md</vh></v>
 <v t="amd.20160422215112.1"><vh>@edit yen_20160422.md</vh></v>
 <v t="amd.20160430144950.1"><vh>@edit yen_20160430.md</vh></v>
+<v t="amd.20160430151915.1"><vh>@edit yen_20160430-1.md</vh></v>
 </v>
 </v>
 </v>

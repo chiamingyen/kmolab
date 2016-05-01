@@ -1,5 +1,1687 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-30T15:10:57+08:00</updated><entry><title>使用 flask-cors 延伸模組</title><link href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html" rel="alternate"></link><updated>2016-04-30T15:10:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-30:kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html</id><summary type="html">&lt;p&gt;在 &lt;a href="wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html"&gt;網際跨來源資源共享 2D 零件繪圖&lt;/a&gt;中, 我們已經利用 flask 的 make_response 送出跨網址 ajax 導入資源的方法, 其中因為目前的 make_response 函式只能接受單一字串的 origins, 所以若需要同時支援 http://localhost:5000 與某一廣域的網址擷取程式段, 通常採用 response.headers['Access-Control-Allow-Origin'] = '*' 處理, 也就是允許所有的主機呼叫, 並使用對應函式所提供的 ajax 資源.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-04-30T18:11:14+08:00</updated><entry><title>歷年協同產品設計實習課程內容整理</title><link href="http://chiamingyen.github.io/kmolab/blog/li-nian-xie-tong-chan-pin-she-ji-shi-xi-ke-cheng-nei-rong-zheng-li.html" rel="alternate"></link><updated>2016-04-30T18:11:14+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-30:kmolab/blog/li-nian-xie-tong-chan-pin-she-ji-shi-xi-ke-cheng-nei-rong-zheng-li.html</id><summary type="html">&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/"&gt;2015 Spring 協同產品設計實習課程網頁&lt;/a&gt;, &lt;a href="http://wiki.mde.tw/doku.php?id=%E5%8D%94%E5%90%8C%E7%94%A2%E5%93%81%E8%A8%AD%E8%A8%88:%E5%AF%A6%E7%BF%92%E7%9B%AE%E6%A8%99"&gt;2014 Spring 協同產品設計實習課程網頁&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;h2&gt;課程簡介&lt;/h2&gt;
+&lt;p&gt;課程中文名稱: 協同產品設計實習&lt;/p&gt;
+&lt;p&gt;課程英文名稱: Collaborative Product Design Principles and Practices&lt;/p&gt;
+&lt;p&gt;課程主要介紹協同產品設計原理與協同產品設計流程的實踐&lt;/p&gt;
+&lt;h2&gt;協同產品設計原理&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;牽涉多名與產品設計相關的成員&lt;/li&gt;
+&lt;li&gt;以完成產品開發作為共同目標&lt;/li&gt;
+&lt;li&gt;透過產品生命週期管理機制&lt;/li&gt;
+&lt;li&gt;成員分別或共同完成產品專案中的分項任務&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;協同產品設計流程的實踐&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;產品開發流程確認&lt;/li&gt;
+&lt;li&gt;成員角色確認&lt;/li&gt;
+&lt;li&gt;協同工作模式&lt;/li&gt;
+&lt;li&gt;產品生命週期管理系統&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;協同的背景&lt;/h2&gt;
+&lt;p&gt;全球化帶來的密集與瞬息萬變的競爭, 即便是全球各領域目前領先的國際大公司都必須要靠快速併購, 才能具備克敵致勝的專業能力, 因此對於規模較小, 專業能力較不全面的公司與團隊, 為求生存, 必得積極尋求各方協同的機會.&lt;/p&gt;
+&lt;p&gt;以機械設計流程的角度言, 協同產品設計過程中主要的項目在資訊與知識層次上的協同.&lt;/p&gt;
+&lt;p&gt;協同的目的在追求速度, 效能, 多元, 互動與彈性&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;速度 - 推出新產品的速度, 修正既有錯誤的速度&lt;/li&gt;
+&lt;li&gt;效能 - 強調效率與功能, 持續降低成本&lt;/li&gt;
+&lt;li&gt;多元 - 多方嘗試, 多方檢視, 多方調控, 多方出擊&lt;/li&gt;
+&lt;li&gt;互動 - 有推有拉, 有來有往, 密切藕合&lt;/li&gt;
+&lt;li&gt;彈性 - 及時調整適應, 配合需求能夠加以變化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;知識創建&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;知識分為隱性與顯性, 一般的 know-how 屬於技術性的隱性知識, 另一種隱性知識則稱為認知型隱性知識&lt;/li&gt;
+&lt;li&gt;認知型的隱性知識則包括團隊間的認知文化, 經驗與潛規則&lt;/li&gt;
+&lt;li&gt;顯性知識則泛指書本, 導引手冊, 指南等以文字, 影像, 語音, 圖表及多媒體型式, 清楚表達的資訊內容&lt;/li&gt;
+&lt;li&gt;通常在新產品開發過程中, 透過團隊間付出與能力上的競爭, 會激化出隱性知識的創建&lt;/li&gt;
+&lt;li&gt;隱性知識通常透過成員在組織間, 以較長時間浸濡方可傳承, 必須設法轉為顯性知識, 以加快並擴大知識所能產生的效益&lt;/li&gt;
+&lt;li&gt;協同產品設計公司的挑戰之一則是如何將新產品開發過程中的隱性知識轉化為顯性知識&lt;/li&gt;
+&lt;li&gt;顯性就是已經清楚表達出來的, 隱性就是存在但沒有清楚表達的&lt;/li&gt;
+&lt;li&gt;書本, 導引手冊是顯性知識, 隱性知識又分兩種, 一種是團隊間大家都知道「一定」要這樣做才可以解決問題的知識, 又稱 know-how&lt;/li&gt;
+&lt;li&gt;而另外一種隱性知識則是大家「一直」都這樣做的認知, 又稱文化, 習慣或潛規則&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;採用 Brython 與直線段繪製的漸開線正齒輪輪廓繪圖:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+from math import *
+
+# 準備在 id="plotarea" 的 canvas 中繪圖
+canvas = doc["plotarea"]
+ctx = canvas.getContext("2d")
+
+def create_line(x1, y1, x2, y2, width=3, fill="red"):
+    ctx.beginPath()
+    ctx.lineWidth = width
+    ctx.moveTo(x1, y1)
+    ctx.lineTo(x2, y2)
+    ctx.strokeStyle = fill
+    ctx.stroke()
+
+# 導入數學函式後, 圓周率為 pi
+# deg 為角度轉為徑度的轉換因子
+deg = pi/180.
+#
+# 以下分別為正齒輪繪圖與主 tkinter 畫布繪圖
+#
+# 定義一個繪正齒輪的繪圖函式
+# midx 為齒輪圓心 x 座標
+# midy 為齒輪圓心 y 座標
+# rp 為節圓半徑, n 為齒數
+def gear(midx, midy, rp, n, 顏色):
+    # 將角度轉換因子設為全域變數
+    global deg
+    # 齒輪漸開線分成 15 線段繪製
+    imax = 15
+    # 在輸入的畫布上繪製直線, 由圓心到節圓 y 軸頂點畫一直線
+    create_line(midx, midy, midx, midy-rp)
+    # 畫出 rp 圓, 畫圓函式尚未定義
+    #create_oval(midx-rp, midy-rp, midx+rp, midy+rp, width=2)
+    # a 為模數 (代表公制中齒的大小), 模數為節圓直徑(稱為節徑)除以齒數
+    # 模數也就是齒冠大小
+    a=2*rp/n
+    # d 為齒根大小, 為模數的 1.157 或 1.25倍, 這裡採 1.25 倍
+    d=2.5*rp/n
+    # ra 為齒輪的外圍半徑
+    ra=rp+a
+    print("ra:", ra)
+    # 畫出 ra 圓, 畫圓函式尚未定義
+    #create_oval(midx-ra, midy-ra, midx+ra, midy+ra, width=1)
+    # rb 則為齒輪的基圓半徑
+    # 基圓為漸開線長齒之基準圓
+    rb=rp*cos(20*deg)
+    print("rp:", rp)
+    print("rb:", rb)
+    # 畫出 rb 圓 (基圓), 畫圓函式尚未定義
+    #create_oval(midx-rb, midy-rb, midx+rb, midy+rb, width=1)
+    # rd 為齒根圓半徑
+    rd=rp-d
+    # 當 rd 大於 rb 時
+    print("rd:", rd)
+    # 畫出 rd 圓 (齒根圓), 畫圓函式尚未定義
+    #create_oval(midx-rd, midy-rd, midx+rd, midy+rd, width=1)
+    # dr 則為基圓到齒頂圓半徑分成 imax 段後的每段半徑增量大小
+    # 將圓弧分成 imax 段來繪製漸開線
+    dr=(ra-rb)/imax
+    # tan(20*deg)-20*deg 為漸開線函數
+    sigma=pi/(2*n)+tan(20*deg)-20*deg
+    for j in range(n):
+        ang=-2.*j*pi/n+sigma
+        ang2=2.*j*pi/n+sigma
+        lxd=midx+rd*sin(ang2-2.*pi/n)
+        lyd=midy-rd*cos(ang2-2.*pi/n)
+        for i in range(imax+1):
+            r=rb+i*dr
+            theta=sqrt((r*r)/(rb*rb)-1.)
+            alpha=theta-atan(theta)
+            xpt=r*sin(alpha-ang)
+            ypt=r*cos(alpha-ang)
+            xd=rd*sin(-ang)
+            yd=rd*cos(-ang)
+            # i=0 時, 繪線起點由齒根圓上的點, 作為起點
+            if(i==0):
+                last_x = midx+xd
+                last_y = midy-yd
+            # 由左側齒根圓作為起點, 除第一點 (xd,yd) 齒根圓上的起點外, 其餘的 (xpt,ypt)則為漸開線上的分段點
+            create_line((midx+xpt),(midy-ypt),(last_x),(last_y),fill=顏色)
+            # 最後一點, 則為齒頂圓
+            if(i==imax):
+                lfx=midx+xpt
+                lfy=midy-ypt
+            last_x = midx+xpt
+            last_y = midy-ypt
+        '''
+        the line from last end of dedendum point to the recent
+        end of dedendum point
+        '''
+        # lxd 為齒根圓上的左側 x 座標, lyd 則為 y 座標
+        # 下列為齒根圓上用來近似圓弧的直線
+        create_line((lxd),(lyd),(midx+xd),(midy-yd),fill=顏色)
+        for i in range(imax+1):
+            r=rb+i*dr
+            theta=sqrt((r*r)/(rb*rb)-1.)
+            alpha=theta-atan(theta)
+            xpt=r*sin(ang2-alpha)
+            ypt=r*cos(ang2-alpha)
+            xd=rd*sin(ang2)
+            yd=rd*cos(ang2)
+            # i=0 時, 繪線起點由齒根圓上的點, 作為起點
+            if(i==0):
+                last_x = midx+xd
+                last_y = midy-yd
+            # 由右側齒根圓作為起點, 除第一點 (xd,yd) 齒根圓上的起點外, 其餘的 (xpt,ypt)則為漸開線上的分段點
+            create_line((midx+xpt),(midy-ypt),(last_x),(last_y),fill=顏色)
+            # 最後一點, 則為齒頂圓
+            if(i==imax):
+                rfx=midx+xpt
+                rfy=midy-ypt
+            last_x = midx+xpt
+            last_y = midy-ypt
+        # lfx 為齒頂圓上的左側 x 座標, lfy 則為 y 座標
+        # 下列為齒頂圓上用來近似圓弧的直線
+        create_line(lfx,lfy,rfx,rfy,fill=顏色)
+
+gear(400,400,300,20,"blue")
+&lt;/pre&gt;
+
+&lt;p&gt;利用 Cango 程式庫, 繪製曲線與漸開線正齒輪輪廓:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/Cango2D.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/Cango-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/gearUtils.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/CangoAnimation.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="gear1" width="600" height="600"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python"&gt;
+# 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
+from browser import document as doc
+# 由於 Python3 與 Javascript 程式碼已經不再混用, 因此來自 Javascript 的變數, 必須居中透過 window 物件轉換
+from browser import window
+# 針對 Javascript 既有的物件, 則必須透過 JSConstructor 轉換
+from javascript import JSConstructor
+import math
+
+# 主要用來取得畫布大小
+canvas = doc["gear1"]
+# 此程式採用 Cango Javascript 程式庫繪圖, 因此無需 ctx
+#ctx = canvas.getContext("2d")
+# 針對類別的轉換, 將 Cango.js 中的 Cango 物件轉為 Python cango 物件
+cango = JSConstructor(window.Cango)
+# 針對變數的轉換, shapeDefs 在 Cango 中資料型別為變數, 可以透過 window 轉換
+shapedefs = window.shapeDefs
+# 目前 Cango 結合 Animation 在 Brython 尚無法運作, 此刻只能繪製靜態圖形
+# in CangoAnimation.js
+#interpolate1 = window.interpolate
+# Cobi 與 createGearTooth 都是 Cango Javascript 程式庫中的物件
+cobj = JSConstructor(window.Cobj)
+creategeartooth = JSConstructor(window.createGearTooth)
+
+# 經由 Cango 轉換成 Brython 的 cango, 指定將圖畫在 id="gear1" 的 canvas 上
+cgo = cango("gear1")
+
+######################################
+# 畫正齒輪輪廓
+#####################################
+# n 為齒數
+n = 17
+# pa 為壓力角
+pa = 25
+# m 為模數, 根據畫布的寬度, 計算適合的模數大小
+# Module = mm of pitch diameter per tooth
+m = 0.8*canvas.width/n
+# pr 為節圓半徑
+pr = n*m/2 # gear Pitch radius
+# generate gear
+data = creategeartooth(m, n, pa)
+# Brython 程式中的 print 會將資料印在 Browser 的 console 區
+#print(data)
+''' data 印出來為:
+M 代表 Move to, L 代表 Line to, C 代表 Curve to
+參考: https://www.w3.org/TR/SVG11/paths.html
+齒輪函式庫: http://cadlab.mde.tw/post/js/gearUtils.js
+['M', 213.42546567394663, -26.249132721692735, 'L', 216.4771485764625, -26.59457489332413, 'C', 218.01364355836117, -26.670135871173535, 222.6241377296874, -26.675359459917235, 230.33407980945245, -24.786115738049222, 239.516053270179, -22.484881644156854, 252.57720520079252, -17.521220042103984, 268.1953141424361, -6.908892817203213, 'A', 268.2352941176471, 268.2352941176471, 0, 0, 1, 268.1953141424361, 6.908892817203213, 'C', 252.57720520079252, 17.521220042103984, 239.516053270179, 22.484881644156854, 230.33407980945245, 24.786115738049222, 222.6241377296874, 26.675359459917235, 218.01364355836117, 26.670135871173535, 216.4771485764625, 26.59457489332413, 'L', 213.42546567394663, 26.249132721692735, 'A', 10.588235294117652, 10.588235294117652, 0, 0, 0, 201.7022692356982, 34.938415176795026, 'A', 204.70588235294116, 204.70588235294116, 0, 0, 1, 200.70297598253308, 40.28416192067229, 'A', 10.588235294117652, 10.588235294117652, 0, 0, 0, 208.49560022899982, 52.62158351789785]
+'''
+gearTooth = cobj(data, "SHAPE", {
+        "fillColor":"#ddd0dd",
+        "border": True,
+        "strokeColor": "#606060" })
+gearTooth.rotate(180/n) # rotate gear 1/2 tooth to mesh
+# 單齒的齒形資料經過旋轉後, 將資料複製到 gear 物件中
+gear = gearTooth.dup()
+# gear 為單一齒的輪廓資料
+#cgo.render(gearTooth)
+
+# 利用單齒輪廓旋轉, 產生整個正齒輪外形
+for i in range(1, n):
+    # 將 gearTooth 中的資料複製到 newTooth
+    newTooth = gearTooth.dup()
+    # 配合迴圈, newTooth 的齒形資料進行旋轉, 然後利用 appendPath 方法, 將資料併入 gear
+    newTooth.rotate(360*i/n)
+    # appendPath 為 Cango 程式庫中的方法, 第二個變數為 True, 表示要刪除最前頭的 Move to SVG Path 標註符號
+    gear.appendPath(newTooth, True) # trim move command = True
+
+# 建立軸孔
+# add axle hole, hr 為 hole radius
+hr = 0.6*pr # diameter of gear shaft
+shaft = cobj(shapedefs.circle(hr), "PATH")
+shaft.revWinding()
+gear.appendPath(shaft) # retain the 'moveTo' command for shaft sub path
+cx = canvas.width/2
+cy = canvas.height/2
+gear.translate(cx, cy)
+# render 繪出靜態正齒輪輪廓
+cgo.render(gear)
+&lt;/script&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;利用 Brython 將漸開線正齒輪輪廓繪圖, 寫為 spur.py 模組:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#coding: utf-8
+import math
+# 導入數學函式後, 圓周率為 pi
+# deg 為角度轉為徑度的轉換因子
+deg = math.pi/180.
+class Spur(object):
+    def __init__(self, ctx):
+        self.ctx = ctx
+
+    def create_line(self, x1, y1, x2, y2, width=3, fill="red"):
+        self.ctx.beginPath()
+        self.ctx.lineWidth = width
+        self.ctx.moveTo(x1, y1)
+        self.ctx.lineTo(x2, y2)
+        self.ctx.strokeStyle = fill
+        self.ctx.stroke()
+    #
+    # 以下為正齒輪繪圖
+    #
+    # 定義一個繪正齒輪的繪圖函式
+    # midx 為齒輪圓心 x 座標
+    # midy 為齒輪圓心 y 座標
+    # rp 為節圓半徑, n 為齒數
+    # pa 為壓力角 (deg)
+    # rot 為旋轉角 (deg)
+    # 注意 n 為 52 齒時繪圖產生錯誤, 因為 base circle 與齒根圓大小未進行判斷, 必須要修正
+    def Gear(self, midx, midy, rp, n=20, pa=20, color="black"):
+        # 齒輪漸開線分成 15 線段繪製
+        imax = 15
+        # 在輸入的畫布上繪製直線, 由圓心到節圓 y 軸頂點畫一直線
+        self.create_line(midx, midy, midx, midy-rp)
+        # 畫出 rp 圓, 畫圓函式尚未定義
+        #create_oval(midx-rp, midy-rp, midx+rp, midy+rp, width=2)
+        # a 為模數 (代表公制中齒的大小), 模數為節圓直徑(稱為節徑)除以齒數
+        # 模數也就是齒冠大小
+        a=2*rp/n
+        # d 為齒根大小, 為模數的 1.157 或 1.25倍, 這裡採 1.25 倍
+        d=2.5*rp/n
+        # ra 為齒輪的外圍半徑
+        ra=rp+a
+        # 畫出 ra 圓, 畫圓函式尚未定義
+        #create_oval(midx-ra, midy-ra, midx+ra, midy+ra, width=1)
+        # rb 則為齒輪的基圓半徑
+        # 基圓為漸開線長齒之基準圓
+        rb=rp*math.cos(pa*deg)
+        # 畫出 rb 圓 (基圓), 畫圓函式尚未定義
+        #create_oval(midx-rb, midy-rb, midx+rb, midy+rb, width=1)
+        # rd 為齒根圓半徑
+        rd=rp-d
+        # 當 rd 大於 rb 時, 漸開線並非畫至 rb, 而是 rd
+        # 畫出 rd 圓 (齒根圓), 畫圓函式尚未定義
+        #create_oval(midx-rd, midy-rd, midx+rd, midy+rd, width=1)
+        # dr 則為基圓到齒頂圓半徑分成 imax 段後的每段半徑增量大小
+        # 將圓弧分成 imax 段來繪製漸開線
+        # 當 rd 大於 rb 時, 漸開線並非畫至 rb, 而是 rd
+        if rd&gt;rb:
+            dr = (ra-rd)/imax
+        else:
+            dr=(ra-rb)/imax
+        # tan(pa*deg)-pa*deg 為漸開線函數
+        sigma=math.pi/(2*n)+math.tan(pa*deg)-pa*deg
+        for j in range(n):
+            ang=-2.*j*math.pi/n+sigma
+            ang2=2.*j*math.pi/n+sigma
+            lxd=midx+rd*math.sin(ang2-2.*math.pi/n)
+            lyd=midy-rd*math.cos(ang2-2.*math.pi/n)
+            for i in range(imax+1):
+                # 當 rd 大於 rb 時, 漸開線並非畫至 rb, 而是 rd
+                if rd&gt;rb:
+                    r=rd+i*dr
+                else:
+                    r=rb+i*dr
+                theta=math.sqrt((r*r)/(rb*rb)-1.)
+                alpha=theta-math.atan(theta)
+                xpt=r*math.sin(alpha-ang)
+                ypt=r*math.cos(alpha-ang)
+                xd=rd*math.sin(-ang)
+                yd=rd*math.cos(-ang)
+                # i=0 時, 繪線起點由齒根圓上的點, 作為起點
+                if(i==0):
+                    last_x = midx+xd
+                    last_y = midy-yd
+                # 由左側齒根圓作為起點, 除第一點 (xd,yd) 齒根圓上的起點外, 其餘的 (xpt,ypt)則為漸開線上的分段點
+                self.create_line((midx+xpt),(midy-ypt),(last_x),(last_y),fill=color)
+                # 最後一點, 則為齒頂圓
+                if(i==imax):
+                    lfx=midx+xpt
+                    lfy=midy-ypt
+                last_x = midx+xpt
+                last_y = midy-ypt
+            # the line from last end of dedendum point to the recent
+            # end of dedendum point
+            # lxd 為齒根圓上的左側 x 座標, lyd 則為 y 座標
+            # 下列為齒根圓上用來近似圓弧的直線
+            self.create_line((lxd),(lyd),(midx+xd),(midy-yd),fill=color)
+            for i in range(imax+1):
+                # 當 rd 大於 rb 時, 漸開線並非畫至 rb, 而是 rd
+                if rd&gt;rb:
+                    r=rd+i*dr
+                else:
+                    r=rb+i*dr
+                theta=math.sqrt((r*r)/(rb*rb)-1.)
+                alpha=theta-math.atan(theta)
+                xpt=r*math.sin(ang2-alpha)
+                ypt=r*math.cos(ang2-alpha)
+                xd=rd*math.sin(ang2)
+                yd=rd*math.cos(ang2)
+                # i=0 時, 繪線起點由齒根圓上的點, 作為起點
+                if(i==0):
+                    last_x = midx+xd
+                    last_y = midy-yd
+                # 由右側齒根圓作為起點, 除第一點 (xd,yd) 齒根圓上的起點外, 其餘的 (xpt,ypt)則為漸開線上的分段點
+                self.create_line((midx+xpt),(midy-ypt),(last_x),(last_y),fill=color)
+                # 最後一點, 則為齒頂圓
+                if(i==imax):
+                    rfx=midx+xpt
+                    rfy=midy-ypt
+                last_x = midx+xpt
+                last_y = midy-ypt
+            # lfx 為齒頂圓上的左側 x 座標, lfy 則為 y 座標
+            # 下列為齒頂圓上用來近似圓弧的直線
+            self.create_line(lfx,lfy,rfx,rfy,fill=color)
+&lt;/pre&gt;
+
+&lt;p&gt;假如將 spur.py 放入 Brython 函式庫 Lib/site-packages 目錄中, 則使用者可以導入 spur.py 後進行&lt;a href="http://project-scrum2mdetw.rhcloud.com/mygeartest2"&gt;齒輪組輪廓繪圖&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+    &lt;script type="text/python"&gt;
+    # 從 browser 導入 document
+    from browser import document
+    from math import *
+    # 請注意, 這裡導入位於 Lib/site-packages 目錄下的 spur.py 檔案
+    import spur
+
+    # 準備在 id="plotarea" 的 canvas 中繪圖
+    canvas = document["plotarea"]
+    ctx = canvas.getContext("2d")
+
+    # 以下利用 spur.py 程式進行繪圖, 接下來的協同設計運算必須要配合使用者的需求進行設計運算與繪圖
+    # 其中並將工作分配給其他組員建立類似 spur.py 的相關零件繪圖模組
+    # midx, midy 為齒輪圓心座標, rp 為節圓半徑, n 為齒數, pa 為壓力角, color 為線的顏色
+    # Gear(midx, midy, rp, n=20, pa=20, color="black"):
+    # 模數決定齒的尺寸大小, 囓合齒輪組必須有相同的模數與壓力角
+    # 壓力角 pa 單位為角度
+    pa = 20
+    # m 為模數
+    m = 20
+    # 第1齒輪齒數
+    n_g1 = 17
+    # 第2齒輪齒數
+    n_g2 = 11
+    # 第3齒輪齒數
+    n_g3 = 13
+    # 計算兩齒輪的節圓半徑
+    rp_g1 = m*n_g1/2
+    rp_g2 = m*n_g2/2
+    rp_g3 = m*n_g3/2
+
+    # 繪圖第1齒輪的圓心座標
+    x_g1 = 400
+    y_g1 = 400
+    # 第2齒輪的圓心座標, 假設排列成水平, 表示各齒輪圓心 y 座標相同
+    x_g2 = x_g1 + rp_g1 + rp_g2
+    y_g2 = y_g1
+    # 第3齒輪的圓心座標
+    x_g3 = x_g1 + rp_g1 + 2*rp_g2 + rp_g3
+    y_g3 = y_g1
+
+    # 將第1齒輪順時鐘轉 90 度
+    # 使用 ctx.save() 與 ctx.restore() 以確保各齒輪以相對座標進行旋轉繪圖
+    ctx.save()
+    # translate to the origin of second gear
+    ctx.translate(x_g1, y_g1)
+    # rotate to engage
+    ctx.rotate(pi/2)
+    # put it back
+    ctx.translate(-x_g1, -y_g1)
+    spur.Spur(ctx).Gear(x_g1, y_g1, rp_g1, n_g1, pa, "blue")
+    ctx.restore()
+
+    # 將第2齒輪逆時鐘轉 90 度之後, 再多轉一齒, 以便與第1齒輪進行囓合
+    ctx.save()
+    # translate to the origin of second gear
+    ctx.translate(x_g2, y_g2)
+    # rotate to engage
+    ctx.rotate(-pi/2-pi/n_g2)
+    # put it back
+    ctx.translate(-x_g2, -y_g2)
+    spur.Spur(ctx).Gear(x_g2, y_g2, rp_g2, n_g2, pa, "black")
+    ctx.restore()
+
+    # 將第3齒輪逆時鐘轉 90 度之後, 再往回轉第2齒輪定位帶動轉角, 然後再逆時鐘多轉一齒, 以便與第2齒輪進行囓合
+    ctx.save()
+    # translate to the origin of second gear
+    ctx.translate(x_g3, y_g3)
+    # rotate to engage
+    # pi+pi/n_g2 為第2齒輪從順時鐘轉 90 度之後, 必須配合目前的標記線所作的齒輪 2 轉動角度, 要轉換到齒輪3 的轉動角度
+    # 必須乘上兩齒輪齒數的比例, 若齒輪2 大, 則齒輪3 會轉動較快
+    # 第1個 -pi/2 為將原先垂直的第3齒輪定位線逆時鐘旋轉 90 度
+    # -pi/n_g3 則是第3齒與第2齒定位線重合後, 必須再逆時鐘多轉一齒的轉角, 以便進行囓合
+    # (pi+pi/n_g2)*n_g2/n_g3 則是第2齒原定位線為順時鐘轉動 90 度, 
+    # 但是第2齒輪為了與第1齒輪囓合, 已經距離定位線, 多轉了 180 度, 再加上第2齒輪的一齒角度, 因為要帶動第3齒輪定位, 
+    # 這個修正角度必須要再配合第2齒與第3齒的轉速比加以轉換成第3齒輪的轉角, 因此乘上 n_g2/n_g3
+    ctx.rotate(-pi/2-pi/n_g3+(pi+pi/n_g2)*n_g2/n_g3)
+    # put it back
+    ctx.translate(-x_g3, -y_g3)
+    spur.Spur(ctx).Gear(x_g3, y_g3, rp_g3, n_g3, pa, "red")
+    ctx.restore()
+
+    # 按照上面三個正齒輪的囓合轉角運算, 隨後的傳動齒輪轉角便可依此類推, 完成6個齒輪的囓合繪圖
+    &lt;/script&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;利用 Pro/Web.Link 建立 PTC/Creo Parametric 網際參數繪圖範例:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+&lt;h1&gt;Creo 參數化零件&lt;/h1&gt;
+&lt;script type="text/javascript" src="/static/weblink/pfcUtils.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/static/weblink/wl_header.js"&gt;
+document.writeln ("Error loading Pro/Web.Link header!");
+&lt;/script&gt;
+&lt;script type="text/javascript" language="JavaScript"&gt;
+if (!pfcIsWindows()) netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+// 若第三輸入為 false, 表示僅載入 session, 但是不顯示
+// ret 為 model open return
+var ret = document.pwl.pwlMdlOpen("cube.prt", "v:/tmp", false);
+if (!ret.Status) {
+alert("pwlMdlOpen failed (" + ret.ErrorCode + ")");
+}
+//將 ProE 執行階段設為變數 session
+var session = pfcGetProESession();
+// 在視窗中打開零件檔案, 並且顯示出來
+var window = session.OpenFile(pfcCreate("pfcModelDescriptor").CreateFromFileName("cube.prt"));
+var solid = session.GetModel("cube.prt",pfcCreate("pfcModelType").MDL_PART);
+var length,width,myf,myn,i,j,volume,count,d1Value,d2Value;
+// 將模型檔中的 length 變數設為 javascript 中的 length 變數
+length = solid.GetParam("a1");
+// 將模型檔中的 width 變數設為 javascript 中的 width 變數
+width = solid.GetParam("a2");
+//改變零件尺寸
+//myf=20;
+//myn=20;
+volume=0;
+count=0;
+try
+{
+    // 以下採用 URL 輸入對應變數
+    //createParametersFromArguments ();
+    // 以下則直接利用 javascript 程式改變零件參數
+    for(i=0;i&lt;=5;i++)
+    {
+        //for(j=0;j&lt;=2;j++)
+        //{
+            myf=100.0;
+            myn=100.0+i*5.0;
+// 設定變數值, 利用 ModelItem 中的 CreateDoubleParamValue 轉換成 Pro/Web.Link 所需要的浮點數值
+ d1Value = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myf);
+ d2Value = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myn);
+// 將處理好的變數值, 指定給對應的零件變數
+            length.Value = d1Value;
+            width.Value = d2Value;
+            //零件尺寸重新設定後, 呼叫 Regenerate 更新模型
+            solid.Regenerate(void null);
+            //利用 GetMassProperty 取得模型的質量相關物件
+            properties = solid.GetMassProperty(void null);
+            //volume = volume + properties.Volume;
+volume = properties.Volume;
+            count = count + 1;
+alert("執行第"+count+"次,零件總體積:"+volume);
+// 將零件存為新檔案
+var newfile = document.pwl.pwlMdlSaveAs("cube.prt", "v:/tmp", "cube"+count+".prt");
+if (!newfile.Status) {
+alert("pwlMdlSaveAs failed (" + newfile.ErrorCode + ")");
+}
+//} // 內圈 for 迴圈
+    } //外圈 for 迴圈
+    //alert("共執行:"+count+"次,零件總體積:"+volume);
+    //alert("零件體積:"+properties.Volume);
+    //alert("零件體積取整數:"+Math.round(properties.Volume));
+}
+catch(err)
+{
+    alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+&lt;/script&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=gear%20width%20Design"&gt;漸開線正齒輪減速機齒面寬設計運算與繪圖&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=lego%20man%20assembly"&gt;樂高人偶以程式組立&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=lego%20man2%20assembly"&gt;樂高人偶以程式組立 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;樂高人偶以程式組立範例:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+if (!pfcIsWindows())
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+var session = pfcGetProESession();
+//建立擺放零件的位置矩陣
+var identityMatrix = pfcCreate ("pfcMatrix3D");
+for (var x = 0; x &lt; 4; x++)
+for (var y = 0; y &lt; 4; y++)
+{
+if (x == y)
+identityMatrix.Set (x, y, 1.0);
+else
+identityMatrix.Set (x, y, 0.0);
+}
+var transf = pfcCreate ("pfcTransform3D").Create (identityMatrix);
+//取得目前的工作目錄
+var currentDir = session.getCurrentDirectory();
+//以目前已開檔, 作為 model
+var model = session.CurrentModel;
+//查驗有無 model, 或 model 類別是否為組立件
+if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+throw new Error (0, "Current model is not an assembly.");
+var assembly = model;
+function MAN_wai() {
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_waist.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        //0為組合匯入順序第一個
+        var featID = components.Item(0).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+
+        var asmDatums = new Array ("DTM4","DTM5","DTM6");
+        var compDatums =new Array ("DTM1","DTM2","DTM3");
+        var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 3; j++)
+        {
+        var asmItem = subassembly.GetItemByName (pfcCreate("pfcModelItemType").ITEM_SURFACE,asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (pfcCreate("pfcModelItemType").ITEM_SURFACE, compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[j]);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_1() {
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_body.prt");
+// 若 link1.prt 在 session 則直接取用
+var componentModel = session.GetModelFromDescr (descr);
+//若 link1.prt 不在 session 則從工作目錄中載入 session
+var componentModel = session.RetrieveModel(descr);
+//若 link1.prt 已經在 session 則放入組立檔中
+if (componentModel != void null)
+{
+//注意這個 asmcomp 即為設定約束條件的本體
+//asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+//將指定的組件模型加到組立模組所指定的初始位置。
+var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+//設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
+var asmDatums = new Array ("ASM_FRONT", "ASM_TOP", "ASM_RIGHT");
+//設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
+var compDatums = new Array ("FRONT","TOP","RIGHT");
+// 建立約束條件變數
+var constrs = pfcCreate ("pfcComponentConstraints");
+//利用迴圈分別約束組立與零件檔中的三個定位平面
+for (var i = 0; i &lt; 3; i++)
+{
+//設定組立參考面 ，GetItemByName:存取指定模型項目名稱， 組立參考面:ASM_FRONT", "ASM_TOP", "ASM_RIGHT。
+var asmItem = assembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,asmDatums [i]);
+//若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+if (asmItem == void null)
+{
+interactFlag = true;
+continue;
+}
+//設定零件參考面，零件參考面:"FRONT","TOP","RIGHT"
+var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE,compDatums [i]);
+//若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+if (compItem == void null)
+{
+interactFlag = true;
+continue;
+}
+//建立 ids 變數, intseq 為 sequence of integers 為資料類別,使用者可以經由整數索引擷取此資料類別的元件,第一個索引為 0
+var ids = pfcCreate ("intseq");
+//建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+var path = pfcCreate ("MpfcAssembly").CreateComponentPath (assembly,ids);
+//採用互動式設定相關的變數
+var MpfcSelect = pfcCreate ("MpfcSelect");
+//屬於 asmSel 的 asmItem 參考面。
+var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, path);
+//屬於 compSel 的 compItem 參考面。
+var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+//constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+var constr = pfcCreate ("pfcComponentConstraint").Create ( pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+//組立基準
+constr.AssemblyReference = asmSel;
+//放置組件的基準。
+constr.ComponentReference = compSel;
+//約束屬性
+constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+//將互動選擇相關資料, 附加在程式約束變數之後
+constrs.Append (constr);
+}
+//設定組立約束條件，(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)。
+asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_h() {
+        var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_head.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        var featID = components.Item(0).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+        var asmDatums = new Array ("A_16","DTM3");
+        var compDatums =new Array ("A_2","DTM1");
+        var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[j]);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_la() {
+        var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_arm_lt.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        var featID = components.Item(0).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+        var asmDatums = new Array ("A_15","DTM2");
+        var compDatums =new Array ("A_7","TOP");
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_lh(){
+        var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_hand.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        var featID = components.Item(2).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+        var asmDatums = new Array ("A_8","DTM1");
+        var compDatums =new Array ("A_1","DTM3");
+        var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[j]);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_rh(){
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_hand.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        var featID = components.Item(1).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+        var asmDatums = new Array ("A_10","DTM1");
+        var compDatums =new Array ("A_1","DTM3");
+        var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[j]);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_ll(){
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_leg_lt.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        //0為組合匯入順序第一個
+        var featID = components.Item(5).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+
+        var asmDatums = new Array ("A_8","DTM4");
+        var compDatums =new Array ("A_10","DTM1");
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_ra(){
+        var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_arm_rt.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        var featID = components.Item(0).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+        var asmDatums = new Array ("A_14","DTM1");
+        var compDatums =new Array ("A_9","TOP");
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_rl(){
+        var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_leg_rt.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        //0為組合匯入順序第一個
+        var featID = components.Item(5).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+
+        var asmDatums = new Array ("A_8","DTM5");
+        var compDatums =new Array ("A_10","DTM1");
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function MAN_hat(){
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("lego_hat.prt");
+        // 若 link1.prt 在 session 則直接取用
+        var componentModel = session.GetModelFromDescr (descr);
+        //若 link1.prt 不在 session 則從工作目錄中載入 session
+        var componentModel = session.RetrieveModel(descr);
+        //若 link1.prt 已經在 session 則放入組立檔中
+        if (componentModel != void null)
+        {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+        }
+        var ids = pfcCreate ("intseq");
+        //回傳序列模型中的功能，True:該功能只列出公共功能。
+        var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+        //取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+        var featID = components.Item(3).Id;
+        ids.Append(featID);
+        //在 assembly 模型中建立子零件所對應的路徑
+        //建立路徑變數，CreateComponentPath:回傳組件的路徑物件，把組立模型和的ID路徑給所需的組件。
+        var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+        document.write("id 為:"+subPath.ComponentIds(0));
+        //回傳實體模型，最後的組件路徑
+        subassembly = subPath.Leaf;
+        var asmDatums = new Array ("A_2","TOP");
+        var compDatums =new Array ("A_2","FRONT");
+        var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+        var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+        //建立約束條件變數
+        var constrs = pfcCreate ("pfcComponentConstraints");
+        for(var j = 0; j &lt; 2; j++)
+        {
+        var asmItem = subassembly.GetItemByName (relationItem[j],asmDatums [j]);
+        //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+        if (asmItem == void null)
+        {
+        interactFlag = true;
+        }
+        //設定零件參考面, compItem 為 model item，零件參考面:"FRONT","TOP","RIGHT"
+        var compItem = componentModel.GetItemByName (relationItem[j], compDatums [j]);
+        //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+        if (compItem == void null)
+        {
+        interactFlag = true;
+        }
+        //採用互動式設定相關的變數
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        //屬於 asmSel 的 asmItem 參考面。
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        //屬於 compSel 的 compItem 參考面。
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        //constr約束方式，ASM_CONSTRAINT_ALIGN 貼齊
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[j]);
+        //組立基準
+        constr.AssemblyReference = asmSel;
+        //放置組件的基準。
+        constr.ComponentReference = compSel;
+        //約束屬性
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true , false);
+        //將互動選擇相關資料, 附加在程式約束變數之後
+        constrs.Append (constr);
+        }
+        //設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+        //請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+        //(約束的組件,void null:如果約束只適用於組件，參數的值應該是空的)
+        asmcomp.SetConstraints (constrs, void null);
+try
+{
+document.write("目前 Creo 的工作目錄:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+}
+function main() {
+MAN_1();
+MAN_ra();
+MAN_la();
+MAN_h();
+MAN_hat();
+MAN_wai();
+MAN_rh();
+MAN_lh();
+MAN_ll();
+MAN_rl();
+assembly.Regenerate (void null);
+session.GetModelWindow (assembly).Repaint();
+}
+&lt;form&gt;
+&lt;p&gt;&lt;input onclick="main()" type="button" value="Start assembly"&gt;?&lt;/p&gt;
+&lt;/form&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;nutcracker 程式組立範例:&lt;/p&gt;
+&lt;pre class="brush: jscript"&gt;
+if (!pfcIsWindows())
+netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+var session = pfcGetProESession();
+// 設定 config option
+session.SetConfigOption("comp_placement_assumptions","no");
+// 建立擺放零件的位置矩陣
+var identityMatrix = pfcCreate ("pfcMatrix3D");
+for (var x = 0; x &lt; 4; x++)
+    for (var y = 0; y &lt; 4; y++)
+    {
+        if (x == y)
+            identityMatrix.Set (x, y, 1.0);
+        else
+            identityMatrix.Set (x, y, 0.0);
+    }
+var transf = pfcCreate ("pfcTransform3D").Create (identityMatrix);
+// 取得目前的工作目錄
+var currentDir = session.getCurrentDirectory();
+// 以目前已開檔, 作為 model
+var model = session.CurrentModel;
+// 查驗有無 model, 或 model 類別是否為組立件
+if (model == void null || model.Type != pfcCreate ("pfcModelType").MDL_ASSEMBLY)
+throw new Error (0, "Current model is not an assembly.");
+var assembly = model;
+
+/**----------------------------------------------- fix -------------------------------------------------------------**/
+
+    var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("nutcracker/fix.prt");
+    // 若 link1.prt 在 session 則直接取用
+    var componentModel = session.GetModelFromDescr (descr);
+    //若 link1.prt 不在 session 則從工作目錄中載入 session
+    var componentModel = session.RetrieveModel(descr);
+    //若 link1.prt 已經在 session 則放入組立檔中
+    if (componentModel != void null)
+    {
+        //注意這個 asmcomp 即為設定約束條件的本體
+        //asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+        var asmcomp = assembly.AssembleComponent (componentModel, transf);
+    }
+
+// 建立約束條件變數
+var constrs = pfcCreate ("pfcComponentConstraints");
+//設定組立檔中的三個定位面, 注意內定名稱與 Pro/E WF 中的 ASM_D_FRONT 不同, 而是 ASM_FRONT
+var asmDatums = new Array ("ASM_FRONT", "ASM_TOP", "ASM_RIGHT");
+//設定零件檔中的三個定位面, 名稱與 Pro/E WF 中相同
+var compDatums = new Array ("FRONT", "TOP", "RIGHT");
+    //建立 ids 變數, intseq 為 sequence of integers 為資料類別, 使用者可以經由整數索引擷取此資料類別的元件, 第一個索引為 0
+    var ids = pfcCreate ("intseq");
+    //建立路徑變數
+    var path = pfcCreate ("MpfcAssembly").CreateComponentPath (assembly, ids);
+    //採用互動式設定相關的變數
+    var MpfcSelect = pfcCreate ("MpfcSelect");
+//利用迴圈分別約束組立與零件檔中的三個定位平面
+for (var i = 0; i &lt; 3; i++)
+{
+    //設定組立參考面
+    var asmItem = assembly.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, asmDatums [i]);
+    //若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+    if (asmItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+    //設定零件參考面
+    var compItem = componentModel.GetItemByName (pfcCreate ("pfcModelItemType").ITEM_SURFACE, compDatums [i]);
+    //若無對應的零件參考面, 則啟用互動式平面選擇表單 flag
+    if (compItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+    var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, path);
+    var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+    var constr = pfcCreate ("pfcComponentConstraint").Create (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN);
+    constr.AssemblyReference = asmSel;
+    constr.ComponentReference = compSel;
+    constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (false, false);
+    //將互動選擇相關資料, 附加在程式約束變數之後
+    constrs.Append (constr);
+}
+
+//設定組立約束條件
+asmcomp.SetConstraints (constrs, void null);
+/**-------------------------------------------------------------------------------------------------------------------**/
+
+/**----------------------------------------------- fixture -------------------------------------------------------------**/
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("nutcracker/fixture.prt");
+var componentModel = session.GetModelFromDescr (descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+var featID = components.Item(0).Id;
+
+ids.Append(featID);
+var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+subassembly = subPath.Leaf;
+var asmDatums = new Array ("A_2", "RIGHT");
+var compDatums = new Array ("A_3", "DTM1");
+var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+var constrs = pfcCreate ("pfcComponentConstraints");
+for (var i = 0; i &lt; 2; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
+        constrs.Append (constr);
+    }
+asmcomp.SetConstraints (constrs, void null);
+
+
+/**-------------------------------------------------------------------------------------------------------------------**/
+
+/**----------------------------------------------- cracker -------------------------------------------------------------**/
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("nutcracker/cracker.prt");
+var componentModel = session.GetModelFromDescr (descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var ids = pfcCreate ("intseq");
+ids.Append(featID);
+var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+subassembly = subPath.Leaf;
+var asmDatums = new Array ("A_4");
+var compDatums = new Array ("A_1");
+var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+var constrs = pfcCreate ("pfcComponentConstraints");
+for (var i = 0; i &lt; 1; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
+        constrs.Append (constr);
+    }
+asmcomp.SetConstraints (constrs, void null);
+
+/**-------------------------------------------------------------------------------------------------------------------**/
+
+/**----------------------------------------------- link -------------------------------------------------------------**/
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("nutcracker/link.prt");
+var componentModel = session.GetModelFromDescr (descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var ids = pfcCreate ("intseq");
+ids.Append(featID+2);
+var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+subassembly = subPath.Leaf;
+var asmDatums = new Array ("A_2","DTM1");
+var compDatums = new Array ("A_1","DTM1");
+var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+var constrs = pfcCreate ("pfcComponentConstraints");
+for (var i = 0; i &lt; 2; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
+        constrs.Append (constr);
+    }
+asmcomp.SetConstraints (constrs, void null);
+
+
+
+/**-------------------------------------------------------------------------------------------------------------------**/
+
+
+/**----------------------------------------------- handle -------------------------------------------------------------**/
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("nutcracker/handle.prt");
+var componentModel = session.GetModelFromDescr (descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS,pfcCreate("pfcModelItemType").ITEM_SURFACE);
+var constrs = pfcCreate ("pfcComponentConstraints");
+
+var ids = pfcCreate ("intseq");
+ids.Append(featID);
+var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+subassembly = subPath.Leaf;
+var asmDatums = new Array ("A_3","DTM3");
+var compDatums = new Array ("A_1","DTM1");
+for (var i = 0; i &lt; 2; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, false);
+        constrs.Append (constr);
+    }
+asmcomp.SetConstraints (constrs, void null);
+
+
+var ids = pfcCreate ("intseq");
+
+ids.Append(featID+3);
+var subPath = pfcCreate ("MpfcAssembly").CreateComponentPath( assembly, ids );
+subassembly = subPath.Leaf;
+var asmDatums = new Array ("A_2", "DTM1");
+var compDatums = new Array ("A_2", "DTM1");
+for (var i = 0; i &lt; 2; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate ("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate ("pfcConstraintAttributes").Create (true, true);
+        constrs.Append (constr);
+    }
+asmcomp.SetConstraints (constrs, void null);
+
+/**-------------------------------------------------------------------------------------------------------------------**/
+var session = pfcGetProESession ();
+var solid = session.CurrentModel;
+
+properties = solid.GetMassProperty(void null);
+var COG = properties.GravityCenter;
+
+document.write("MassProperty:&lt;br /&gt;");
+document.write("Mass:"+(properties.Mass.toFixed(2))+"       pound&lt;br /&gt;");
+document.write("Average Density:"+(properties.Density.toFixed(2))+"       pound/inch^3&lt;br /&gt;");
+document.write("Surface area:"+(properties.SurfaceArea.toFixed(2))+"           inch^2&lt;br /&gt;");
+document.write("Volume:"+(properties.Volume.toFixed(2))+"   inch^3&lt;br /&gt;");
+document.write("COG_X:"+COG.Item(0).toFixed(2)+"&lt;br /&gt;");
+document.write("COG_Y:"+COG.Item(1).toFixed(2)+"&lt;br /&gt;");
+document.write("COG_Z:"+COG.Item(2).toFixed(2)+"&lt;br /&gt;");
+
+try
+{
+document.write("Current Directory:&lt;br /&gt;"+currentDir);
+}
+catch (err)
+{
+alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+assembly.Regenerate (void null);
+session.GetModelWindow (assembly).Repaint();
+&lt;/pre&gt;
+
+&lt;p&gt;PTC Creo Parametric 程式組立 &lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=Creo%20Pro/Web.Link"&gt;Pro/Web.Link 相關參考檔案&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>使用 flask-cors 延伸模組</title><link href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html" rel="alternate"></link><updated>2016-04-30T15:10:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-04-30:kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html</id><summary type="html">&lt;p&gt;在 &lt;a href="wang-ji-kua-lai-yuan-zi-yuan-gong-xiang-2d-ling-jian-hui-tu.html"&gt;網際跨來源資源共享 2D 零件繪圖&lt;/a&gt;中, 我們已經利用 flask 的 make_response 送出跨網址 ajax 導入資源的方法, 其中因為目前的 make_response 函式只能接受單一字串的 origins, 所以若需要同時支援 http://localhost:5000 與某一廣域的網址擷取程式段, 通常採用 response.headers['Access-Control-Allow-Origin'] = '*' 處理, 也就是允許所有的主機呼叫, 並使用對應函式所提供的 ajax 資源.&lt;/p&gt;
 
 
 &lt;p&gt;假如使用 flask 框架, 並且希望明確指定多台 ajax 資源共享的網址, 則可以使用 flask-cors 延伸模組 (這裡以 flask-cors 2.1.2 版為例).&lt;/p&gt;
