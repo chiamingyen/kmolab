@@ -25,7 +25,7 @@
 <v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
-<v t="leo.20151213230723.1"><vh>Pelican 設定</vh>
+<v t="leo.20151213230723.1" a="E"><vh>Pelican 設定</vh>
 <v t="leo.20151213230957.1"><vh>文章 Date 設定</vh></v>
 <v t="leo.20151213230729.1"><vh>使用 summary plugin</vh></v>
 </v>
@@ -35,7 +35,7 @@
 <v t="leo.20151212173803.1"><vh>@edit publishconf.py</vh></v>
 <v t="amd.20151215170221.1"><vh>以下 local_publishconf.py 為近端所使用的設定</vh></v>
 <v t="leo.20151213085752.1"><vh>@edit local_publishconf.py</vh></v>
-<v t="amd.20151215121740.1" a="E"><vh>@path theme</vh>
+<v t="amd.20151215121740.1"><vh>@path theme</vh>
 <v t="amd.20151215121758.1" a="E"><vh>@path pelican-bootstrap3</vh>
 <v t="amd.20151215121816.1" a="E"><vh>@path templates</vh>
 <v t="amd.20151215121827.1"><vh>@edit base.html</vh></v>
@@ -170,6 +170,7 @@
 <v t="amd.20160422215112.1"><vh>@edit yen_20160422.md</vh></v>
 <v t="amd.20160430144950.1"><vh>@edit yen_20160430.md</vh></v>
 <v t="amd.20160430151915.1"><vh>@edit yen_20160430-1.md</vh></v>
+<v t="amd.20160503123538.1"><vh>@edit yen_20160502.md</vh></v>
 </v>
 </v>
 </v>
