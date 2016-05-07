@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1" a="E"><vh>Pelican 設定</vh>
@@ -75,7 +75,7 @@
 </v>
 </v>
 </v>
-<v t="amd.20160303212723.1"><vh>2016spring課程</vh>
+<v t="amd.20160303212723.1" a="E"><vh>2016spring課程</vh>
 <v t="amd.20160303212735.1"><vh>2016springcd</vh></v>
 <v t="amd.20160303212739.1"><vh>2016springwcm</vh></v>
 <v t="amd.20160303213007.1"><vh>cptocadp</vh></v>
@@ -107,7 +107,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160106093510.1"><vh>201601</vh>
+<v t="amd.20160106093510.1" a="E"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
