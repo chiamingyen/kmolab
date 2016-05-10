@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>自行車傳動 2D 鏈條繪圖 (二) - Kmolab (虎尾科大MDE)</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<style type="text/css">
+
+/*some stuff for output/input prompts*/
+div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.cell.selected{border-radius:4px;border:thin #ababab solid}
+div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
+div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
+div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
+@media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
+div.prompt:empty{padding-top:0;padding-bottom:0}
+div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}
+div.inner_cell{width:90%;}
+div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;}
+div.input_prompt{color:navy;border-top:1px solid transparent;}
+div.output_wrapper{margin-top:5px;position:relative;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);-moz-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);}
+div.output_collapsed{margin:0px;padding:0px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+div.out_prompt_overlay{height:100%;padding:0px 0.4em;position:absolute;border-radius:4px;}
+div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000000;-moz-box-shadow:inset 0 0 1px #000000;box-shadow:inset 0 0 1px #000000;background:rgba(240, 240, 240, 0.5);}
+div.output_prompt{color:darkred;}
+
+a.anchor-link:link{text-decoration:none;padding:0px 20px;visibility:hidden;}
+h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible;}
+/* end stuff for output/input prompts*/
+
+
+.highlight-ipynb .hll { background-color: #ffffcc }
+.highlight-ipynb  { background: #f8f8f8; }
+.highlight-ipynb .c { color: #408080; font-style: italic } /* Comment */
+.highlight-ipynb .err { border: 1px solid #FF0000 } /* Error */
+.highlight-ipynb .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight-ipynb .o { color: #666666 } /* Operator */
+.highlight-ipynb .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight-ipynb .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight-ipynb .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight-ipynb .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight-ipynb .gd { color: #A00000 } /* Generic.Deleted */
+.highlight-ipynb .ge { font-style: italic } /* Generic.Emph */
+.highlight-ipynb .gr { color: #FF0000 } /* Generic.Error */
+.highlight-ipynb .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight-ipynb .gi { color: #00A000 } /* Generic.Inserted */
+.highlight-ipynb .go { color: #888888 } /* Generic.Output */
+.highlight-ipynb .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight-ipynb .gs { font-weight: bold } /* Generic.Strong */
+.highlight-ipynb .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight-ipynb .gt { color: #0044DD } /* Generic.Traceback */
+.highlight-ipynb .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight-ipynb .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight-ipynb .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight-ipynb .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight-ipynb .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight-ipynb .kt { color: #B00040 } /* Keyword.Type */
+.highlight-ipynb .m { color: #666666 } /* Literal.Number */
+.highlight-ipynb .s { color: #BA2121 } /* Literal.String */
+.highlight-ipynb .na { color: #7D9029 } /* Name.Attribute */
+.highlight-ipynb .nb { color: #008000 } /* Name.Builtin */
+.highlight-ipynb .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight-ipynb .no { color: #880000 } /* Name.Constant */
+.highlight-ipynb .nd { color: #AA22FF } /* Name.Decorator */
+.highlight-ipynb .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight-ipynb .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight-ipynb .nf { color: #0000FF } /* Name.Function */
+.highlight-ipynb .nl { color: #A0A000 } /* Name.Label */
+.highlight-ipynb .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight-ipynb .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight-ipynb .nv { color: #19177C } /* Name.Variable */
+.highlight-ipynb .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight-ipynb .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight-ipynb .mf { color: #666666 } /* Literal.Number.Float */
+.highlight-ipynb .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight-ipynb .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight-ipynb .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight-ipynb .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight-ipynb .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight-ipynb .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight-ipynb .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight-ipynb .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight-ipynb .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight-ipynb .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight-ipynb .sx { color: #008000 } /* Literal.String.Other */
+.highlight-ipynb .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight-ipynb .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight-ipynb .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight-ipynb .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight-ipynb .vc { color: #19177C } /* Name.Variable.Class */
+.highlight-ipynb .vg { color: #19177C } /* Name.Variable.Global */
+.highlight-ipynb .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight-ipynb .il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+div.entry-content {
+  overflow: visible;
+  padding: 8px;
+}
+.input_area {
+  padding: 0.2em;
+}
+
+a.heading-anchor {
+ white-space: normal;
+}
+
+.rendered_html
+code {
+ font-size: .8em;
+}
+
+pre.ipynb {
+  color: black;
+  background: #f7f7f7;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
+  margin: 0px;
+  font-size: 13px;
+}
+
+/* remove the prompt div from text cells */
+div.text_cell .prompt {
+    display: none;
+}
+
+/* remove horizontal padding from text cells, */
+/* so it aligns with outer body text */
+div.text_cell_render {
+    padding: 0.5em 0em;
+}
+
+img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
+</style>
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<link rel="canonical" href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html">
+
+        <meta name="author" content="kmol" />
+        <meta name="keywords" content="2016 Spring,協同產品設計實習" />
+        <meta name="description" content="免費不是重點, 自由與永續才是! 設計結果不是重點, 能否協同與持續改進才是! -- 協同產品設計實習課程 本課程因為使用 Jupyter, 而不必使用 Mathematica 或 Matlab. 本課程因為使用 Ubuntu, 而不必使用 Windows 10. 本課程因為使用 Leo Editor, Python3 與 Flask, 而不必使用 Visual Studio 或 C#. 本課程因為使用 Onshape, 而不必使用 Solidworks 或其他單機 MCAD 套件. 本課程因為使用 Github, Openshift 與 Bitbucket, 因此各參與協同者除了有本地端版本, 而且有協同的雲端版本. 更重要的是, 本課程所採用的所有工具, 不僅自由, 而且免費." />
+
+        <meta property="og:site_name" content="Kmolab (虎尾科大MDE)" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="自行車傳動 2D 鏈條繪圖 (二)"/>
+        <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html"/>
+        <meta property="og:description" content="免費不是重點, 自由與永續才是! 設計結果不是重點, 能否協同與持續改進才是! -- 協同產品設計實習課程 本課程因為使用 Jupyter, 而不必使用 Mathematica 或 Matlab. 本課程因為使用 Ubuntu, 而不必使用 Windows 10. 本課程因為使用 Leo Editor, Python3 與 Flask, 而不必使用 Visual Studio 或 C#. 本課程因為使用 Onshape, 而不必使用 Solidworks 或其他單機 MCAD 套件. 本課程因為使用 Github, Openshift 與 Bitbucket, 因此各參與協同者除了有本地端版本, 而且有協同的雲端版本. 更重要的是, 本課程所採用的所有工具, 不僅自由, 而且免費."/>
+        <meta property="article:published_time" content="2016-05-10" />
+            <meta property="article:section" content="Courses" />
+            <meta property="article:tag" content="2016 Spring" />
+            <meta property="article:tag" content="協同產品設計實習" />
+            <meta property="article:author" content="kmol" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://chiamingyen.github.io/kmolab/blog/theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://chiamingyen.github.io/kmolab/blog/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="http://chiamingyen.github.io/kmolab/blog/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://chiamingyen.github.io/kmolab/blog/theme/css/style.css" type="text/css"/>
+
+        <link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Kmolab (虎尾科大MDE) ATOM Feed"/>
+
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shCore.css";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/css/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://chiamingyen.github.io/kmolab/blog/" class="navbar-brand">
+Kmolab (虎尾科大MDE)            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://chiamingyen.github.io/kmolab/blog/pages/about/">
+                             About
+                          </a></li>
+                        <li >
+                            <a href="http://chiamingyen.github.io/kmolab/blog/category/alumni.html">Alumni</a>
+                        </li>
+                        <li >
+                            <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">Cadlab</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://chiamingyen.github.io/kmolab/blog/category/courses.html">Courses</a>
+                        </li>
+                        <li >
+                            <a href="http://chiamingyen.github.io/kmolab/blog/category/project.html">Project</a>
+                        </li>
+                        <li >
+                            <a href="http://chiamingyen.github.io/kmolab/blog/category/python.html">Python</a>
+                        </li>
+                        <li >
+                            <a href="http://chiamingyen.github.io/kmolab/blog/category/ubuntu.html">Ubuntu</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><span>
+                <form class="navbar-search" action="http://chiamingyen.github.io/kmolab/blog/search.html">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+              <li><a href="http://chiamingyen.github.io/kmolab/blog/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html"
+                       rel="bookmark"
+                       title="Permalink to 自行車傳動 2D 鏈條繪圖 (二)">
+                        自行車傳動 2D 鏈條繪圖 (二)
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-05-10T12:09:07.132725+08:00"> 二 10 五月 2016</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://chiamingyen.github.io/kmolab/blog/tag/2016-spring.html">2016 Spring</a>
+        /
+	<a href="http://chiamingyen.github.io/kmolab/blog/tag/xie-tong-chan-pin-she-ji-shi-xi.html">協同產品設計實習</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>免費不是重點, 自由與永續才是!</p>
+<p>設計結果不是重點, 能否協同與持續改進才是!</p>
+<p>-- 協同產品設計實習課程</p>
+<p>本課程因為使用 Jupyter, 而不必使用 Mathematica 或 Matlab.</p>
+<p>本課程因為使用 Ubuntu, 而不必使用 Windows 10.</p>
+<p>本課程因為使用 Leo Editor, Python3 與 Flask, 而不必使用 Visual Studio 或 C#.</p>
+<p>本課程因為使用 Onshape, 而不必使用 Solidworks 或其他單機 MCAD 套件.</p>
+<p>本課程因為使用 Github, Openshift 與 Bitbucket, 因此各參與協同者除了有本地端版本, 而且有協同的雲端版本.</p>
+<p>更重要的是, 本課程所採用的所有工具, 不僅自由, 而且免費.</p>
+
+
+<p>利用 <a href="http://jupyter.org/">Jupyter</a> 與 <a href="http://www.sympy.org/">Sympy</a> 計算與鏈條傳動對應的兩個節圓, 所產生的 8 個相切點座標, 假設兩個圓均位於 X 軸上, 且右側圓之圓心位於原點, 左側小齒盤 18 齒, 而右側大齒盤 30 齒, 以下符號式運算將產生符合約束條件的兩條外切線與兩條內切線所對應的 8 個切點座標與左側圓之圓心座標:</p>
+<pre class="brush: python">
+from sympy import *
+import math
+# center of left circle
+x1 = Symbol('x1')
+y1 = Symbol('y1')
+# center of right circle
+x2 = Symbol('x2')
+y2 = Symbol('y2')
+# left tangent points
+x3 = Symbol('x3')
+y3 = Symbol('y3')
+# right tangent points
+x4 = Symbol('x4')
+y4 = Symbol('y4')
+
+chainlength = 20
+leftdegree = 20
+rightdegree = 12
+leftr = chainlength/2/math.sin(leftdegree*math.pi/180/2)
+rightr = chainlength/2/math.sin(rightdegree*math.pi/180/2)
+#print(leftr,"\n",rightr)
+# tangent line is 10 sets of chain
+len34 = 10*chainlength
+# (x3-x4)**2+(y3-y4)**2-len34**2 表示 (x3, y3) 與 (x4, y4)距離 len34
+# (x1-x3)**2+(y1-y3)**2-(leftr)**2 表示 (x1, y1) 與 (x3, y3) 距離為左圓半徑
+# (x2-x4)**2+(y2-y4)**2-(rightr)**2 表示 (x2, y2) 與 (x4, y4) 距離為右圓半徑
+# (x1-x4)**2+(y1-y4)**2-len34**2-(leftr)**2 表示左圓心與兩個相切點所圍成直角三角形邊長關係
+# (x2-x3)**2+(y2-y3)**2-len34**2-(rightr)**2 表示右圓心與兩個相切點所圍成直角三角形邊長關係
+
+answer = solve([(x3-x4)**2+(y3-y4)**2-len34**2, \
+(x1-x3)**2+(y1-y3)**2-(leftr)**2, \
+(x2-x4)**2+(y2-y4)**2-(rightr)**2, \
+(x1-x4)**2+(y1-y4)**2-len34**2-(leftr)**2, \
+(x2-x3)**2+(y2-y3)**2-len34**2-(rightr)**2, y1, x2, y2], \
+[x1, y1, x2, y2, x3, y3, x4, y4])
+
+for i in range(len(answer)):
+    try:
+        g.es(answer[i])
+    except:
+        print(answer[i])
+</pre>
+
+<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_sympy.png" width="800" /></p>
+<p>上述符號式運算流程得到的結果:</p>
+<p>(-251.966715968566, 0.0, 0.0, 0.0, -216.939755087825, -45.7105650721111, -58.1886285898711, 75.9367934509185)
+(-251.966715968566, 0.0, 0.0, 0.0, -216.939755087825, 45.7105650721111, -58.1886285898711, -75.9367934509185)
+(-203.592946177111, 0.0, 0.0, 0.0, -214.364148466539, -56.5714145924675, -17.8936874260919, -93.9794075692901)
+(-203.592946177111, 0.0, 0.0, 0.0, -214.364148466539, 56.5714145924675, -17.8936874260919, 93.9794075692901)
+(203.592946177111, 0.0, 0.0, 0.0, 214.364148466539, -56.5714145924675, 17.8936874260919, -93.9794075692901)
+(203.592946177111, 0.0, 0.0, 0.0, 214.364148466539, 56.5714145924675, 17.8936874260919, 93.9794075692901)
+(251.966715968566, 0.0, 0.0, 0.0, 216.939755087825, -45.7105650721111, 58.1886285898711, 75.9367934509185)
+(251.966715968566, 0.0, 0.0, 0.0, 216.939755087825, 45.7105650721111, 58.1886285898711, -75.9367934509185)</p>
+<p>其中, 可以得到兩條外切線 (external tangents) 對應的關鍵座標點:</p>
+<ol>
+<li>左圓圓心: (-203.592946177111, 0.0)</li>
+<li>左側上切點座標: (-214.3641, 56.5714)</li>
+<li>右側上切點座標: (-17.8936, 93.9794)</li>
+<li>左側下切點座標: (-214.3641, -56.5714)</li>
+<li>右側下切點座標: (-17.8936, -93.9794)</li>
+</ol>
+<p>以及與左側上方切點相連的節圓周上鏈條與水平線對應角度為 20.78 度, 上切線與水平線對應角度為 10.78 度, 而右側節圓周上與切點相連的鏈條, 與水平線的角度則為 4.78 度. </p>
+<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_1.png" width="800" /></p>
+<p>同時, 以下利用 Solvespace 以綠色線條, 標示出符合兩圓相切線的所謂內切線 (internal tangents), 與對應左側圓心位置, 而此等內切線可應用在皮帶傳動的設計配置.</p>
+<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_2.png" width="800" /></p>
+<p>根據上述的切點座標與相關角度條件, 就可以利用 <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html">自行車傳動 2D 鏈條繪圖</a> 中的鏈條繪圖元件進行下列繪圖:</p>
+<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
+
+<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
+
+<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
+
+<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<canvas id="plotarea" width="800" height="800"></canvas>
+
+<script type="text/python">
+from javascript import JSConstructor
+from browser import alert
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 畫軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+
+# 將繪製鏈條輪廓的內容寫成 class 物件
+class chain():
+    # 輪廓的外型設為 class variable
+    chamber = "M -6.8397, -1.4894             A 7, 7, 0, 1, 0, 6.8397, -1.4894             A 40, 40, 0, 0, 1, 6.8397, -18.511             A 7, 7, 0, 1, 0, -6.8397, -18.511             A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    #chamber = "M 0, 0 L 0, -20 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+
+    def __init__(self, fillcolor="green", border=True, strokecolor= "tan", linewidth=2, scale=1):
+        self.fillcolor = fillcolor
+        self.border = border
+        self.strokecolor = strokecolor
+        self.linewidth = linewidth
+        self.scale = scale
+
+    # 利用鏈條起點與終點定義繪圖
+    def basic(self, x1, y1, x2, y2):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": self.fillcolor,
+                "border": self.border,
+                "strokeColor": self.strokecolor,
+                "lineWidth": self.linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4*self.scale), "PATH")
+        cmbr.appendPath(hole)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(math.atan2(y2-y1, x2-x1)/deg+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, self.scale, 0)
+
+    # 利用鏈條起點與旋轉角度定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic_rot(self, x1, y1, rot, v=False):
+        # 若 v 為 True 則為虛擬 chain, 不 render
+        self.x1 = x1
+        self.y1 = y1
+        self.rot = rot
+        self.v = v
+        # 注意, cgoChamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": self.fillcolor,
+                "border": self.border,
+                "strokeColor": self.strokecolor,
+                "lineWidth": self.linewidth })
+
+        # hole0 為原點位置
+        hole = cobj(shapedefs.circle(4*self.scale), "PATH")
+        cmbr.appendPath(hole)
+        # 根據旋轉角度, 計算 x2 與 y2
+        x2 = x1 + 20*math.cos(rot*deg)*self.scale
+        y2 = y1 + 20*math.sin(rot*deg)*self.scale
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(rot+90)
+
+        # 放大 scale 倍
+        if v == False:
+            cgo.render(basic1, x1, y1, self.scale, 0)
+
+        return x2, y2
+
+mychain = chain()
+
+x1, y1 = mychain.basic_rot(-133.06,49.48, 20.78)
+
+x2, y2=mychain.basic_rot(x1, y1,0.7800000000000011, True) 
+x3, y3=mychain.basic_rot(x2, y2,-19.22, True) 
+x4, y4=mychain.basic_rot(x3, y3,-39.22, True) 
+x5, y5=mychain.basic_rot(x4, y4,-59.22, True) 
+x6, y6=mychain.basic_rot(x5, y5,-79.22, True) 
+x7, y7=mychain.basic_rot(x6, y6,-99.22, True) 
+x8, y8=mychain.basic_rot(x7, y7,-119.22, True) 
+x9, y9=mychain.basic_rot(x8, y8,-139.22, True) 
+x10, y10=mychain.basic_rot(x9, y9,-159.22, True) 
+x11, y11=mychain.basic_rot(x10, y10,-179.22, True) 
+x12, y12=mychain.basic_rot(x11, y11,-199.22) 
+x13, y13=mychain.basic_rot(x12, y12,-219.22) 
+x14, y14=mychain.basic_rot(x13, y13,-239.22) 
+x15, y15=mychain.basic_rot(x14, y14,-259.22) 
+x16, y16=mychain.basic_rot(x15, y15,-279.22) 
+x17, y17=mychain.basic_rot(x16, y16,-299.22) 
+x18, y18=mychain.basic_rot(x17, y17,-319.22) 
+
+#mychain = chain()
+
+p1, k1 = mychain.basic_rot(82.11,93.98, 4.78)
+p2, k2=mychain.basic_rot(p1, k1,-7.219999999999999) 
+p3, k3=mychain.basic_rot(p2, k2,-19.22) 
+p4, k4=mychain.basic_rot(p3, k3,-31.22) 
+p5, k5=mychain.basic_rot(p4, k4,-43.22) 
+p6, k6=mychain.basic_rot(p5, k5,-55.22) 
+p7, k7=mychain.basic_rot(p6, k6,-67.22) 
+p8, k8=mychain.basic_rot(p7, k7,-79.22) 
+p9, k9=mychain.basic_rot(p8, k8,-91.22) 
+p10, k10=mychain.basic_rot(p9, k9,-103.22) 
+p11, k11=mychain.basic_rot(p10, k10,-115.22) 
+p12, k12=mychain.basic_rot(p11, k11,-127.22) 
+p13, k13=mychain.basic_rot(p12, k12,-139.22) 
+p14, k14=mychain.basic_rot(p13, k13,-151.22) 
+p15, k15=mychain.basic_rot(p14, k14,-163.22) 
+p16, k16=mychain.basic_rot(p15, k15,-175.22) 
+p17, k17=mychain.basic_rot(p16, k16,-187.22) 
+p18, k18=mychain.basic_rot(p17, k17,-199.22, True) 
+p19, k19=mychain.basic_rot(p18, k18,-211.22, True) 
+p20, k20=mychain.basic_rot(p19, k19,-223.22, True) 
+p21, k21=mychain.basic_rot(p20, k20,-235.22, True) 
+p22, k22=mychain.basic_rot(p21, k21,-247.22, True) 
+p23, k23=mychain.basic_rot(p22, k22,-259.22, True) 
+p24, k24=mychain.basic_rot(p23, k23,-271.22, True) 
+p25, k25=mychain.basic_rot(p24, k24,-283.22, True) 
+p26, k26=mychain.basic_rot(p25, k25,-295.22, True) 
+p27, k27=mychain.basic_rot(p26, k26,-307.22, True) 
+p28, k28=mychain.basic_rot(p27, k27,-319.22, True) 
+p29, k29=mychain.basic_rot(p28, k28,-331.22, True) 
+p30, k30=mychain.basic_rot(p29, k29,-343.22, True) 
+
+m1, n1 = mychain.basic_rot(x1, y1, 10.78)
+m2, n2=mychain.basic_rot(m1, n1, 10.78)
+m3, n3=mychain.basic_rot(m2, n2, 10.78)
+m4, n4=mychain.basic_rot(m3, n3, 10.78)
+m5, n5=mychain.basic_rot(m4, n4, 10.78)
+m6, n6=mychain.basic_rot(m5, n5, 10.78)
+m7, n7=mychain.basic_rot(m6, n6, 10.78)
+m8, n8=mychain.basic_rot(m7, n7, 10.78)
+m9, n9=mychain.basic_rot(m8, n8, 10.78)
+m10, n10=mychain.basic_rot(m9, n9, 10.78)
+
+r1, s1 = mychain.basic_rot(x11, y11, -10.78)
+r2, s2=mychain.basic_rot(r1, s1, -10.78)
+r3, s3=mychain.basic_rot(r2, s2, -10.78)
+r4, s4=mychain.basic_rot(r3, s3, -10.78)
+r5, s5=mychain.basic_rot(r4, s4, -10.78)
+r6, s6=mychain.basic_rot(r5, s5, -10.78)
+r7, s7=mychain.basic_rot(r6, s6, -10.78)
+r8, s8=mychain.basic_rot(r7, s7, -10.78)
+r9, s9=mychain.basic_rot(r8, s8, -10.78)
+r10, s10=mychain.basic_rot(r9, s9, -10.78)
+</script>
+
+<p>上述 2D 鏈條傳動的 Brython 繪圖程式碼:</p>
+<pre class="brush: python">
+<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
+<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
+<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
+<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<canvas id="plotarea" width="800" height="800"></canvas>
+
+<script type="text/python">
+from javascript import JSConstructor
+from browser import alert
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 畫軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+
+# 將繪製鏈條輪廓的內容寫成 class 物件
+class chain():
+    # 輪廓的外型設為 class variable
+    chamber = "M -6.8397, -1.4894             A 7, 7, 0, 1, 0, 6.8397, -1.4894             A 40, 40, 0, 0, 1, 6.8397, -18.511             A 7, 7, 0, 1, 0, -6.8397, -18.511             A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    #chamber = "M 0, 0 L 0, -20 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+
+    def __init__(self, fillcolor="green", border=True, strokecolor= "tan", linewidth=2, scale=1):
+        self.fillcolor = fillcolor
+        self.border = border
+        self.strokecolor = strokecolor
+        self.linewidth = linewidth
+        self.scale = scale
+
+    # 利用鏈條起點與終點定義繪圖
+    def basic(self, x1, y1, x2, y2):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": self.fillcolor,
+                "border": self.border,
+                "strokeColor": self.strokecolor,
+                "lineWidth": self.linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4*self.scale), "PATH")
+        cmbr.appendPath(hole)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(math.atan2(y2-y1, x2-x1)/deg+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, self.scale, 0)
+
+    # 利用鏈條起點與旋轉角度定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic_rot(self, x1, y1, rot, v=False):
+        # 若 v 為 True 則為虛擬 chain, 不 render
+        self.x1 = x1
+        self.y1 = y1
+        self.rot = rot
+        self.v = v
+        # 注意, cgoChamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": self.fillcolor,
+                "border": self.border,
+                "strokeColor": self.strokecolor,
+                "lineWidth": self.linewidth })
+
+        # hole0 為原點位置
+        hole = cobj(shapedefs.circle(4*self.scale), "PATH")
+        cmbr.appendPath(hole)
+        # 根據旋轉角度, 計算 x2 與 y2
+        x2 = x1 + 20*math.cos(rot*deg)*self.scale
+        y2 = y1 + 20*math.sin(rot*deg)*self.scale
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(rot+90)
+
+        # 放大 scale 倍
+        if v == False:
+            cgo.render(basic1, x1, y1, self.scale, 0)
+
+        return x2, y2
+
+mychain = chain()
+
+x1, y1 = mychain.basic_rot(-133.06,49.48, 20.78)
+
+x2, y2=mychain.basic_rot(x1, y1,0.7800000000000011, True) 
+x3, y3=mychain.basic_rot(x2, y2,-19.22, True) 
+x4, y4=mychain.basic_rot(x3, y3,-39.22, True) 
+x5, y5=mychain.basic_rot(x4, y4,-59.22, True) 
+x6, y6=mychain.basic_rot(x5, y5,-79.22, True) 
+x7, y7=mychain.basic_rot(x6, y6,-99.22, True) 
+x8, y8=mychain.basic_rot(x7, y7,-119.22, True) 
+x9, y9=mychain.basic_rot(x8, y8,-139.22, True) 
+x10, y10=mychain.basic_rot(x9, y9,-159.22, True) 
+x11, y11=mychain.basic_rot(x10, y10,-179.22, True) 
+x12, y12=mychain.basic_rot(x11, y11,-199.22) 
+x13, y13=mychain.basic_rot(x12, y12,-219.22) 
+x14, y14=mychain.basic_rot(x13, y13,-239.22) 
+x15, y15=mychain.basic_rot(x14, y14,-259.22) 
+x16, y16=mychain.basic_rot(x15, y15,-279.22) 
+x17, y17=mychain.basic_rot(x16, y16,-299.22) 
+x18, y18=mychain.basic_rot(x17, y17,-319.22) 
+
+#mychain = chain()
+
+p1, k1 = mychain.basic_rot(82.11,93.98, 4.78)
+p2, k2=mychain.basic_rot(p1, k1,-7.219999999999999) 
+p3, k3=mychain.basic_rot(p2, k2,-19.22) 
+p4, k4=mychain.basic_rot(p3, k3,-31.22) 
+p5, k5=mychain.basic_rot(p4, k4,-43.22) 
+p6, k6=mychain.basic_rot(p5, k5,-55.22) 
+p7, k7=mychain.basic_rot(p6, k6,-67.22) 
+p8, k8=mychain.basic_rot(p7, k7,-79.22) 
+p9, k9=mychain.basic_rot(p8, k8,-91.22) 
+p10, k10=mychain.basic_rot(p9, k9,-103.22) 
+p11, k11=mychain.basic_rot(p10, k10,-115.22) 
+p12, k12=mychain.basic_rot(p11, k11,-127.22) 
+p13, k13=mychain.basic_rot(p12, k12,-139.22) 
+p14, k14=mychain.basic_rot(p13, k13,-151.22) 
+p15, k15=mychain.basic_rot(p14, k14,-163.22) 
+p16, k16=mychain.basic_rot(p15, k15,-175.22) 
+p17, k17=mychain.basic_rot(p16, k16,-187.22) 
+p18, k18=mychain.basic_rot(p17, k17,-199.22, True) 
+p19, k19=mychain.basic_rot(p18, k18,-211.22, True) 
+p20, k20=mychain.basic_rot(p19, k19,-223.22, True) 
+p21, k21=mychain.basic_rot(p20, k20,-235.22, True) 
+p22, k22=mychain.basic_rot(p21, k21,-247.22, True) 
+p23, k23=mychain.basic_rot(p22, k22,-259.22, True) 
+p24, k24=mychain.basic_rot(p23, k23,-271.22, True) 
+p25, k25=mychain.basic_rot(p24, k24,-283.22, True) 
+p26, k26=mychain.basic_rot(p25, k25,-295.22, True) 
+p27, k27=mychain.basic_rot(p26, k26,-307.22, True) 
+p28, k28=mychain.basic_rot(p27, k27,-319.22, True) 
+p29, k29=mychain.basic_rot(p28, k28,-331.22, True) 
+p30, k30=mychain.basic_rot(p29, k29,-343.22, True) 
+
+m1, n1 = mychain.basic_rot(x1, y1, 10.78)
+m2, n2=mychain.basic_rot(m1, n1, 10.78)
+m3, n3=mychain.basic_rot(m2, n2, 10.78)
+m4, n4=mychain.basic_rot(m3, n3, 10.78)
+m5, n5=mychain.basic_rot(m4, n4, 10.78)
+m6, n6=mychain.basic_rot(m5, n5, 10.78)
+m7, n7=mychain.basic_rot(m6, n6, 10.78)
+m8, n8=mychain.basic_rot(m7, n7, 10.78)
+m9, n9=mychain.basic_rot(m8, n8, 10.78)
+m10, n10=mychain.basic_rot(m9, n9, 10.78)
+
+r1, s1 = mychain.basic_rot(x11, y11, -10.78)
+r2, s2=mychain.basic_rot(r1, s1, -10.78)
+r3, s3=mychain.basic_rot(r2, s2, -10.78)
+r4, s4=mychain.basic_rot(r3, s3, -10.78)
+r5, s5=mychain.basic_rot(r4, s4, -10.78)
+r6, s6=mychain.basic_rot(r5, s5, -10.78)
+r7, s7=mychain.basic_rot(r6, s6, -10.78)
+r8, s8=mychain.basic_rot(r7, s7, -10.78)
+r9, s9=mychain.basic_rot(r8, s8, -10.78)
+r10, s10=mychain.basic_rot(r9, s9, -10.78)
+</script>
+</pre>
+
+<p>從上述 2D 傳動鏈條的繪圖中, 可以發現, 由於整個設計配置以上方兩個切點的直線距離 200 mm 為準進行繪圖後, 下方的切點位置並無法精確與實際齒盤鏈條定位, 表示在上述鏈條傳動組立下, 精確繞行圓周的長度並無法得到整數的鏈條單元數, 在實務上通常會多加上一個鏈條單元.</p>
+<p>而從下方的 2D 繪圖中可以發現, 依照上方取 10 個單元的鏈條長度, 比幾何運算的節圓鏈條線段長度長, 因此可以直接讓下方鏈條下垂的方式進行鏈條單元組立.</p>
+<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_assembly_1.png" width="800" /></p>
+<p>此外, 上面所列出的 Brython 鏈條傳動繪圖, 是由下方的 flask 程式片斷所建立, 當使用者透過 Python3 與 flask 網際框架, 將協同程式配置在 Github 與 OpenShift 平台上時, 將可以透過更高階的網際協同程式架構, 執行各種產品開發專案.</p>
+<p>各學員參考下列 2D 鏈條傳動繪圖設計後, 可以自行練習 18 齒與 36 齒的傳動繪圖, 並配合後續的齒輪減速機與自行車設計, 完成各組的電動與人力兩用自行車期末專案.</p>
+<pre class="brush: python">
+from flask import Blueprint, request
+
+ag100 = Blueprint('ag100', __name__, url_prefix='/ag100', template_folder='templates')
+
+head_str = '''
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;網際 2D 繪圖&lt;/title&gt;
+    &lt;!-- IE 9: display inline SVG --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
+&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="plotarea" width="800" height="800"&gt;&lt;/canvas&gt;
+'''
+
+tail_str = '''
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'''
+
+chain_str = '''
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import alert
+from browser import window
+import math
+
+cango = JSConstructor(window.Cango)
+cobj = JSConstructor(window.Cobj)
+shapedefs = window.shapeDefs
+obj2d = JSConstructor(window.Obj2D)
+cgo = cango("plotarea")
+
+cgo.setWorldCoords(-250, -250, 500, 500) 
+
+# 畫軸線
+cgo.drawAxes(0, 240, 0, 240, {
+    "strokeColor":"#aaaaaa",
+    "fillColor": "#aaaaaa",
+    "xTickInterval": 20,
+    "xLabelInterval": 20,
+    "yTickInterval": 20,
+    "yLabelInterval": 20})
+
+deg = math.pi/180  
+
+# 將繪製鏈條輪廓的內容寫成 class 物件
+class chain():
+    # 輪廓的外型設為 class variable
+    chamber = "M -6.8397, -1.4894 \
+            A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+            A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+            A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+            A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+    #chamber = "M 0, 0 L 0, -20 z"
+    cgoChamber = window.svgToCgoSVG(chamber)
+
+    def __init__(self, fillcolor="green", border=True, strokecolor= "tan", linewidth=2, scale=1):
+        self.fillcolor = fillcolor
+        self.border = border
+        self.strokecolor = strokecolor
+        self.linewidth = linewidth
+        self.scale = scale
+
+    # 利用鏈條起點與終點定義繪圖
+    def basic(self, x1, y1, x2, y2):
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+        # 注意, cgo.Chamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": self.fillcolor,
+                "border": self.border,
+                "strokeColor": self.strokecolor,
+                "lineWidth": self.linewidth })
+
+        # hole 為原點位置
+        hole = cobj(shapedefs.circle(4*self.scale), "PATH")
+        cmbr.appendPath(hole)
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(math.atan2(y2-y1, x2-x1)/deg+90)
+
+        # 放大 scale 倍
+        cgo.render(basic1, x1, y1, self.scale, 0)
+
+    # 利用鏈條起點與旋轉角度定義繪圖, 使用內定的 color, border 與 linewidth 變數
+    def basic_rot(self, x1, y1, rot, v=False):
+        # 若 v 為 True 則為虛擬 chain, 不 render
+        self.x1 = x1
+        self.y1 = y1
+        self.rot = rot
+        self.v = v
+        # 注意, cgoChamber 為成員變數
+        cmbr = cobj(self.cgoChamber, "SHAPE", {
+                "fillColor": self.fillcolor,
+                "border": self.border,
+                "strokeColor": self.strokecolor,
+                "lineWidth": self.linewidth })
+
+        # hole0 為原點位置
+        hole = cobj(shapedefs.circle(4*self.scale), "PATH")
+        cmbr.appendPath(hole)
+        # 根據旋轉角度, 計算 x2 與 y2
+        x2 = x1 + 20*math.cos(rot*deg)*self.scale
+        y2 = y1 + 20*math.sin(rot*deg)*self.scale
+
+        # 複製 cmbr, 然後命名為 basic1
+        basic1 = cmbr.dup()
+        # 因為鏈條的角度由原點向下垂直, 所以必須轉 90 度, 再考量 atan2 的轉角
+        basic1.rotate(rot+90)
+
+        # 放大 scale 倍
+        if v == False:
+            cgo.render(basic1, x1, y1, self.scale, 0)
+
+        return x2, y2
+'''
+
+# 傳繪 A 函式內容
+def a(x, y, scale=1, color="green"):
+    outstring = '''
+# 利用 chain class 建立案例, 對應到 mychain 變數
+mychain = chain(scale='''+str(scale)+''', fillcolor="'''+str(color)+'''")
+
+# 畫 A
+# 左邊兩個垂直單元
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+''', 90)
+x2, y2 = mychain.basic_rot(x1, y1, 90)
+# 左斜邊兩個單元
+x3, y3 = mychain.basic_rot(x2, y2, 80)
+x4, y4 = mychain.basic_rot(x3, y3, 71)
+# 最上方水平單元
+x5, y5 = mychain.basic_rot(x4, y4, 0)
+# 右斜邊兩個單元
+x6, y6 = mychain.basic_rot(x5, y5, -71)
+x7, y7 = mychain.basic_rot(x6, y6, -80)
+# 右邊兩個垂直單元
+x8, y8 = mychain.basic_rot(x7, y7, -90)
+x9, y9 = mychain.basic_rot(x8, y8, -90)
+# 中間兩個水平單元
+x10, y10 = mychain.basic_rot(x8, y8, -180)
+mychain.basic(x10, y10, x1, y1)
+'''
+
+    return outstring
+
+
+# 傳繪 B 函式內容
+def b(x, y):
+    outstring = '''
+# 利用 chain class 建立案例, 對應到 mychain 變數
+mychain = chain()
+
+# 畫 B
+# 左邊四個垂直單元
+# 每一個字元間隔為 65 pixels
+#x1, y1 = mychain.basic_rot(0+ 65, 0, 90)
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+''', 90)
+x2, y2 = mychain.basic_rot(x1, y1, 90)
+x3, y3 = mychain.basic_rot(x2, y2, 90)
+x4, y4 = mychain.basic_rot(x3, y3, 90)
+# 上方一個水平單元
+x5, y5 = mychain.basic_rot(x4, y4, 0)
+# 右斜 -30 度
+x6, y6 = mychain.basic_rot(x5, y5, -30)
+# 右上垂直向下單元
+x7, y7 = mychain.basic_rot(x6, y6, -90)
+# 右斜 240 度
+x8, y8 = mychain.basic_rot(x7, y7, 210)
+# 中間水平
+mychain.basic(x8, y8, x2, y2)
+# 右下斜 -30 度
+x10, y10 = mychain.basic_rot(x8, y8, -30)
+# 右下垂直向下單元
+x11, y11 = mychain.basic_rot(x10, y10, -90)
+# 右下斜 240 度
+x12, y12 = mychain.basic_rot(x11, y11, 210)
+# 水平接回起點
+mychain.basic(x12,y12, '''+str(x)+","+str(y)+''')
+'''
+
+    return outstring
+
+# 傳繪 C 函式內容
+def c(x, y):
+    outstring = '''
+# 利用 chain class 建立案例, 對應到 mychain 變數
+mychain = chain()
+
+# 上半部
+# 左邊中間垂直起點, 圓心位於線段中央, y 方向再向上平移兩個鏈條圓心距單位
+#x1, y1 = mychain.basic_rot(0+65*2, -10+10+20*math.sin(80*deg)+20*math.sin(30*deg), 90)
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+'''-10+10+20*math.sin(80*deg)+20*math.sin(30*deg), 90)
+# 上方轉 80 度
+x2, y2 = mychain.basic_rot(x1, y1, 80)
+# 上方轉 30 度
+x3, y3 = mychain.basic_rot(x2, y2, 30)
+# 上方水平
+x4, y4 = mychain.basic_rot(x3, y3, 0)
+# 下半部, 從起點開始 -80 度
+#x5, y5 = mychain.basic_rot(0+65*2, -10+10+20*math.sin(80*deg)+20*math.sin(30*deg), -80)
+x5, y5 = mychain.basic_rot('''+str(x)+","+str(y)+'''-10+10+20*math.sin(80*deg)+20*math.sin(30*deg), -80)
+# 下斜 -30 度
+x6, y6 = mychain.basic_rot(x5, y5, -30)
+# 下方水平單元
+x7, y7 = mychain.basic_rot(x6, y6, -0)
+'''
+
+    return outstring
+
+
+# 傳繪 D 函式內容
+def d(x, y):
+    outstring = '''
+# 利用 chain class 建立案例, 對應到 mychain 變數
+mychain = chain()
+
+# 左邊四個垂直單元
+#x1, y1 = mychain.basic_rot(0+65*3, 0, 90)
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+''', 90)
+x2, y2 = mychain.basic_rot(x1, y1, 90)
+x3, y3 = mychain.basic_rot(x2, y2, 90)
+x4, y4 = mychain.basic_rot(x3, y3, 90)
+# 上方一個水平單元
+x5, y5 = mychain.basic_rot(x4, y4, 0)
+# 右斜 -40 度
+x6, y6 = mychain.basic_rot(x5, y5, -40)
+x7, y7 = mychain.basic_rot(x6, y6, -60)
+# 右中垂直向下單元
+x8, y8 = mychain.basic_rot(x7, y7, -90)
+# -120 度
+x9, y9 = mychain.basic_rot(x8, y8, -120)
+# -140
+x10, y10 = mychain.basic_rot(x9, y9, -140)
+# 水平接回原點
+#mychain.basic(x10, y10, 0+65*3, 0, color="red")
+mychain.basic(x10, y10, '''+str(x)+","+str(y)+''')
+'''
+
+    return outstring
+
+def circle(x, y):
+    outstring = '''
+mychain = chain()
+
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+''', 50)
+'''
+    for i in range(2, 10):
+        outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+", 90-"+str(i*40)+") \n"
+    return outstring
+
+def circle1(x, y, degree=10):
+    # 20 為鏈條兩圓距
+    # chain 所圍之圓圈半徑為 20/2/math.asin(degree*math.pi/180/2)
+    # degree = math.asin(20/2/radius)*180/math.pi
+    #degree = 10
+    first_degree = 90 - degree
+    repeat = 360 / degree
+    outstring = '''
+mychain = chain()
+
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+", "+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+", 90-"+str(i*degree)+") \n"
+    return outstring
+
+
+def circle2(x, y, degree=10):
+    # 20 為鏈條兩圓距
+    # chain 所圍之圓圈半徑為 20/2/math.asin(degree*math.pi/180/2)
+    # degree = math.asin(20/2/radius)*180/math.pi
+    #degree = 10
+    first_degree = 90 - degree
+    repeat = 360 / degree
+
+    outstring = '''
+mychain = chain()
+
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+", "+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+", 90-"+str(i*degree)+") \n"
+    return outstring
+
+
+def twocircle(x, y):
+    # 20 為鏈條兩圓距
+    # chain 所圍之圓圈半徑為 20/2/math.asin(degree*math.pi/180/2)
+    # degree = math.asin(20/2/radius)*180/math.pi
+    x = 50
+    y = 0
+    degree = 12
+    # 78, 66, 54, 42, 30, 18, 6度
+    #必須有某些 chain 算座標但是不 render
+    first_degree = 90 - degree
+    repeat = 360 / degree
+    # 第1節也是 virtual chain
+    outstring = '''
+mychain = chain()
+
+x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+", "+str(first_degree)+''', True)
+#x1, y1 = mychain.basic_rot('''+str(x)+","+str(y)+", "+str(first_degree)+''')
+'''
+    # 這裡要上下各多留一節虛擬 chain, 以便最後進行連接 (x7, y7) 與 (x22, y22)
+    for i in range(2, int(repeat)+1):
+        #if i &lt; 7 or i &gt; 23:        
+        if i &lt;= 7 or i &gt;= 23:
+            # virautl chain
+            outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+", 90-"+str(i*degree)+", True) \n"
+            #outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+", 90-"+str(i*degree)+") \n"
+        else:
+            outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+", 90-"+str(i*degree)+") \n"
+
+    p = -150
+    k = 0
+    degree = 20
+    # 70, 50, 30, 10
+    # 從 i=5 開始, 就是 virautl chain
+    first_degree = 90 - degree
+    repeat = 360 / degree
+    # 第1節不是 virtual chain
+    outstring += '''
+#mychain = chain()
+
+p1, k1 = mychain.basic_rot('''+str(p)+","+str(k)+", "+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        if i &gt;= 5 and i &lt;= 13:
+            # virautl chain
+            outstring += "p"+str(i)+", k"+str(i)+"=mychain.basic_rot(p"+str(i-1)+", k"+str(i-1)+", 90-"+str(i*degree)+", True) \n"
+            #outstring += "p"+str(i)+", k"+str(i)+"=mychain.basic_rot(p"+str(i-1)+", k"+str(i-1)+", 90-"+str(i*degree)+") \n"
+        else:
+            outstring += "p"+str(i)+", k"+str(i)+"=mychain.basic_rot(p"+str(i-1)+", k"+str(i-1)+", 90-"+str(i*degree)+") \n"
+
+    # 上段連接直線
+    # 從 p5, k5 作為起點
+    first_degree = 10
+    repeat = 11
+    outstring += '''
+m1, n1 = mychain.basic_rot(p4, k4, '''+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        outstring += "m"+str(i)+", n"+str(i)+"=mychain.basic_rot(m"+str(i-1)+", n"+str(i-1)+", "+str(first_degree)+")\n"
+
+    # 下段連接直線
+    # 從 p12, k12 作為起點
+    first_degree = -10
+    repeat = 11
+    outstring += '''
+r1, s1 = mychain.basic_rot(p13, k13, '''+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        outstring += "r"+str(i)+", s"+str(i)+"=mychain.basic_rot(r"+str(i-1)+", s"+str(i-1)+", "+str(first_degree)+")\n"
+
+    # 上段右方接點為 x7, y7, 左側則為 m11, n11
+    outstring += "mychain.basic(x7, y7, m11, n11)\n"
+    # 下段右方接點為 x22, y22, 左側則為 r11, s11
+    outstring += "mychain.basic(x22, y22, r11, s11)\n"
+
+    return outstring
+def eighteenthirty(x, y):
+    '''
+從圖解法與符號式解法得到的兩條外切線座標點
+(-203.592946177111, 0.0), (0.0, 0.0), (-214.364148466539, 56.5714145924675), (-17.8936874260919, 93.9794075692901)
+(-203.592946177111, 0.0), (0.0, 0.0), (-214.364148466539, -56.5714145924675), (-17.8936874260919, -93.9794075692901)
+左邊關鍵鍊條起點 (-233.06, 49.48), 角度 20.78, 圓心 (-203.593, 0.0)
+右邊關鍵鍊條起點 (-17.89, 93.9), 角度 4.78, 圓心 (0, 0)
+    '''
+    # 20 為鏈條兩圓距
+    # chain 所圍之圓圈半徑為 20/2/math.asin(degree*math.pi/180/2)
+    # degree = math.asin(20/2/radius)*180/math.pi
+    x = 50
+    y = 0
+    degree = 20
+    first_degree = 20.78
+    startx = -233.06+100
+    starty = 49.48
+    repeat = 360 / degree
+    # 先畫出左邊第一關鍵節
+    outstring = '''
+mychain = chain()
+
+x1, y1 = mychain.basic_rot('''+str(startx)+","+str(starty)+", "+str(first_degree)+''')
+
+'''
+    # 接著繪製左邊的非虛擬鍊條
+    for i in range(2, int(repeat)+1):
+        if i &gt;=2 and i &lt;=11:
+            # virautl chain
+            #outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+","+str(first_degree+degree-i*degree)+") \n"
+            outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+","+str(first_degree+degree-i*degree)+", True) \n"
+        else:
+            outstring += "x"+str(i)+", y"+str(i)+"=mychain.basic_rot(x"+str(i-1)+", y"+str(i-1)+","+str(first_degree+degree-i*degree)+") \n"
+
+    # 接著處理右邊的非虛擬鍊條
+    # 先畫出右邊第一關鍵節
+
+    p = -17.89+100
+    k = 93.98
+    degree = 12
+    first_degree = 4.78
+    repeat = 360 / degree
+    # 第1節不是 virtual chain
+    outstring += '''
+#mychain = chain()
+
+p1, k1 = mychain.basic_rot('''+str(p)+","+str(k)+", "+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        if i &gt;=18:
+            # virautl chain
+            outstring += "p"+str(i)+", k"+str(i)+"=mychain.basic_rot(p"+str(i-1)+", k"+str(i-1)+","+str(first_degree+degree-i*degree)+", True) \n"
+            #outstring += "p"+str(i)+", k"+str(i)+"=mychain.basic_rot(p"+str(i-1)+", k"+str(i-1)+","+str(first_degree+degree-i*degree)+") \n"
+        else:
+            outstring += "p"+str(i)+", k"+str(i)+"=mychain.basic_rot(p"+str(i-1)+", k"+str(i-1)+","+str(first_degree+degree-i*degree)+") \n"
+
+    # 上段連接直線
+    # 從 x1, y1 作為起點
+    first_degree = 10.78
+    repeat = 10
+    outstring += '''
+m1, n1 = mychain.basic_rot(x1, y1, '''+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        outstring += "m"+str(i)+", n"+str(i)+"=mychain.basic_rot(m"+str(i-1)+", n"+str(i-1)+", "+str(first_degree)+")\n"
+
+    # 下段連接直線
+    # 從 x11, y11 作為起點
+    first_degree = -10.78
+    repeat = 10
+    outstring += '''
+r1, s1 = mychain.basic_rot(x11, y11, '''+str(first_degree)+''')
+'''
+    for i in range(2, int(repeat)+1):
+        outstring += "r"+str(i)+", s"+str(i)+"=mychain.basic_rot(r"+str(i-1)+", s"+str(i-1)+", "+str(first_degree)+")\n"
+
+    return outstring
+
+
+@ag100.route('/a')
+def draw_a():
+    return head_str + chain_str + a(0, 0) + tail_str
+
+
+@ag100.route('/b')
+def draw_b():
+   # 每個橫向字元距離為 65 pixels, 上下字距則為 110 pixels
+    return head_str + chain_str + b(0+65, 0) + tail_str
+
+
+@ag100.route('/c')
+def draw_c():
+    # 每個橫向字元距離為 65 pixels
+    return head_str + chain_str + c(0+65*2, 0) + tail_str
+
+
+@ag100.route('/d')
+def draw_d():
+    return head_str + chain_str + d(0+65*3, 0) + tail_str
+
+
+@ag100.route('/ab')
+def draw_ab():
+    #return head_str + chain_str + a(0, 0) + b(0+65, 0) + tail_str
+    return head_str + chain_str + a(0, 0) + b(0, 0-110) + tail_str
+
+
+@ag100.route('/ac')
+def draw_ac():
+    return head_str + chain_str + a(0, 0) + c(0+65, 0) + tail_str
+
+
+@ag100.route('/bc')
+def draw_bc():
+    return head_str + chain_str + b(0, 0) + c(0+65, 0) + tail_str
+
+
+@ag100.route('/abc')
+def draw_abc():
+    return head_str + chain_str + a(0, 0) + b(0+65, 0) + c(0+65*2, 0) + tail_str
+
+
+@ag100.route('/aaaa')
+def draw_aaaa():
+    outstring = head_str + chain_str
+    scale = 2
+    for i in range(20):
+        scale = scale*0.9
+        outstring +=  a(0+10*i, 0, scale=scale)
+    return outstring + tail_str
+    #return head_str + chain_str + a(0, 0, scale=1) + a(0+65, 0, scale=0.8, color="red") + a(0+65*2, 0, scale=0.6) + a(0+65*3, 0, scale=0.4, color="red") + tail_str
+
+
+@ag100.route('/badc')
+def draw_badc():
+    return head_str + chain_str + b(0, 0) + a(0+65, 0) + d(0+65*2, 0) + c(0+65*3, 0) + tail_str
+
+
+@ag100.route('/abcd')
+def draw_abcd():
+    #return head_str + chain_str + a(0, 0) + b(0+65, 0) + c(0+65*2, 0) + d(0+65*3, 0) + tail_str
+    return head_str + chain_str + a(0, 110) + b(0, 110-110) + c(0, 110-110*2) + d(0, 110-110*3) + tail_str
+
+
+@ag100.route('/circle')
+def drawcircle():
+    return head_str + chain_str + circle(0, 0) + tail_str
+
+
+@ag100.route('/circle1/&lt;degree&gt;', defaults={'x': 0, 'y': 0})
+@ag100.route('/circle1/&lt;x&gt;/&lt;degree&gt;', defaults={'y': 0})
+@ag100.route('/circle1/&lt;x&gt;/&lt;y&gt;/&lt;degree&gt;')
+#@ag100.route('/circle1/&lt;int:x&gt;/&lt;int:y&gt;/&lt;int:degree&gt;')
+def drawcircle1(x,y,degree):
+    return head_str + chain_str + circle1(int(x), int(y), int(degree)) + tail_str
+
+
+@ag100.route('/circle2/&lt;degree&gt;', defaults={'x': 0, 'y': 0})
+@ag100.route('/circle2/&lt;x&gt;/&lt;degree&gt;', defaults={'y': 0})
+@ag100.route('/circle2/&lt;x&gt;/&lt;y&gt;/&lt;degree&gt;')
+#@ag100.route('/circle2/&lt;int:x&gt;/&lt;int:y&gt;/&lt;int:degree&gt;')
+def drawcircle2(x,y,degree):
+    return head_str + chain_str + circle2(int(x), int(y), int(degree)) + tail_str
+
+
+@ag100.route('/twocircle/&lt;x&gt;/&lt;y&gt;')
+@ag100.route('/twocircle', defaults={'x':0, 'y':0})
+def drawtwocircle(x,y):
+    return head_str + chain_str + twocircle(int(x), int(y)) + tail_str
+
+
+@ag100.route('/eighteenthirty/&lt;x&gt;/&lt;y&gt;')
+@ag100.route('/eighteenthirty', defaults={'x':0, 'y':0})
+def draweithteenthirdy(x,y):
+    return head_str + chain_str + eighteenthirty(int(x), int(y)) + tail_str
+
+
+@ag100.route('/snap')
+# http://svg.dabbles.info/snaptut-base
+def snap():
+    outstring = '''
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;網際 snap 繪圖&lt;/title&gt;
+    &lt;!-- IE 9: display inline SVG --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
+    &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="/static/snap.svg-min.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    window.onload=function(){
+    brython(1);
+    }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;svg width="800" height="800" viewBox="0 0 800 800" id="svgout"&gt;&lt;/svg&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import alert
+from browser import window, document
+
+# 透過 window 與 JSConstructor 從 Brython 物件 snap 擷取 Snap 物件的內容
+snap = JSConstructor(window.Snap)
+
+s = snap("#svgout")
+# 建立物件時, 同時設定 id 名稱
+r = s.rect(10,10,100,100).attr({'id': 'rect'})
+c = s.circle(100,100,50).attr({'id': 'circle'})
+r.attr('fill', 'red')
+c.attr({ 'fill': 'blue', 'stroke': 'black', 'strokeWidth': 10 })
+r.attr({ 'stroke': '#123456', 'strokeWidth': 20 })
+s.text(180,100, '點按一下圖形').attr({'fill' : 'blue',  'stroke': 'blue', 'stroke-width': 0.2 })
+
+g = s.group().attr({'id': 'tux'})
+
+def hoverover(ev):
+    g.animate({'transform': 's1.5r45,t180,20'}, 1000, window.mina.bounce)
+
+def hoverout(ev):
+    g.animate({'transform': 's1r0,t180,20'}, 1000, window.mina.bounce) 
+
+# callback 函式
+def onSVGLoaded(data):
+    #s.append(data)
+    g.append(data)
+    #g.hover(hoverover, hoverout )
+    g.text(300,100, '拿滑鼠指向我')
+
+# 利用 window.Snap.load 載入 svg 檔案
+tux = window.Snap.load("/static/Dreaming_tux.svg", onSVGLoaded)
+g.transform('t180,20')
+
+# 與視窗事件對應的函式
+def rtoyellow(ev):
+    r.attr('fill', 'yellow')
+
+def ctogreen(ev):
+    c.attr('fill', 'green')
+
+# 根據物件 id 綁定滑鼠事件執行對應函式
+document['rect'].bind('click', rtoyellow)
+document['circle'].bind('click', ctogreen)
+document['tux'].bind('mouseover', hoverover)
+document['tux'].bind('mouseleave', hoverout)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'''
+    return outstring
+
+
+@ag100.route('/snap_link')
+# http://svg.dabbles.info/
+def snap_link():
+    outstring = '''
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;網際 snap 繪圖&lt;/title&gt;
+    &lt;!-- IE 9: display inline SVG --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
+    &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="/static/snap.svg-min.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    window.onload=function(){
+    brython(1);
+    }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;svg width="800" height="800" viewBox="0 0 800 800" id="svgout"&gt;&lt;/svg&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import alert
+from browser import window, document
+
+# 透過 window 與 JSConstructor 從 Brython 物件 snap 擷取 Snap 物件的內容
+snap = JSConstructor(window.Snap)
+
+# 使用 id 為 "svgout" 的 svg 標註進行繪圖
+s = snap("#svgout")
+
+offsetY = 50
+
+# 是否標訂出繪圖範圍
+#borderRect = s.rect(0,0,800,640,10,10).attr({ 'stroke': "silver", 'fill': "silver", 'strokeWidth': "3" })
+
+g = s.group().transform('t250,120')
+r0 = s.rect(150,150,100,100,20,20).attr({ 'fill': "orange", 'opacity': "0.8", 'stroke': "black", 'strokeWidth': "2" })
+c0 = s.circle(225,225,10).attr({ 'fill': "silver", 'stroke': "black", 'strokeWidth': "4"  }).attr({ 'id': 'c0' })
+g0 = s.group( r0,c0 ).attr({ 'id': 'g0' })
+#g0.animate({ 'transform' : 't250,120r360,225,225' },4000)
+g0.appendTo( g )
+g0.animate({ 'transform' : 'r360,225,225' },4000)
+# 讓 g0 可以拖動
+g0.drag()
+
+r1 = s.rect(100,100,100,100,20,20).attr({ 'fill': "red", 'opacity': "0.8", 'stroke': "black", 'strokeWidth': "2" })
+c1 = s.circle(175,175,10).attr({ 'fill': "silver", 'stroke': "black" , 'strokeWidth': "4"}).attr({ 'id': 'c1' })
+g1 = s.group( r1,c1 ).attr({ 'id': 'g1' })
+g1.appendTo( g0 ).attr({ 'id': 'g1' })
+g1.animate({ 'transform' : 'r360,175,175' },4000)
+
+r2 = s.rect(50,50,100,100,20,20).attr({ 'fill': "blue", 'opacity': "0.8", 'stroke': "black", 'strokeWidth': "2" })
+c2 = s.circle(125,125,10).attr({ 'fill': "silver", 'stroke': "black", 'strokeWidth': "4" }).attr({ 'id': 'c2' })
+g2 = s.group(r2,c2).attr({ 'id': 'g2' })
+
+g2.appendTo( g1 );
+g2.animate( { 'transform' : 'r360,125,125' },4000);
+
+r3 = s.rect(0,0,100,100,20,20).attr({ 'fill': "yellow", 'opacity': "0.8", 'stroke': "black", 'strokeWidth': "2" })
+c3 = s.circle(75,75,10).attr({ 'fill': "silver", 'stroke': "black", 'strokeWidth': "4" }).attr({ 'id': 'c3' })
+g3 = s.group(r3,c3).attr({ 'id': 'g3' })
+
+g3.appendTo( g2 )
+g3.animate( { 'transform' : 'r360,75,75' },4000)
+
+r4 = s.rect(-50,-50,100,100,20,20).attr({ 'fill': "green", 'opacity': "0.8", 'stroke': "black", 'strokeWidth': "2" })
+c4 = s.circle(25,25,10).attr({ 'fill': "silver", 'stroke': "black", 'strokeWidth': "4" }).attr({ 'id': 'c4' })
+g4 = s.group(r4,c4).attr({ 'id': 'g4' });
+g4.appendTo( g3 )
+g4.animate( { 'transform' : 'r360,25,25' },4000)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'''
+    return outstring
+
+
+@ag100.route('/snap_gear')
+def snap_gear():
+    outstring = '''
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;網際 snap 繪圖&lt;/title&gt;
+    &lt;!-- IE 9: display inline SVG --&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
+    &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="/static/snap.svg-min.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    window.onload=function(){
+    brython(1);
+    }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;svg width="800" height="800" viewBox="0 0 800 800" id="svgout"&gt;&lt;/svg&gt;
+
+&lt;script type="text/python"&gt;
+from javascript import JSConstructor
+from browser import alert
+from browser import window, document
+
+# 透過 window 與 JSConstructor 從 Brython 物件 snap 擷取 Snap 物件的內容
+snap = JSConstructor(window.Snap)
+
+s = snap("#svgout")
+# 畫直線
+s.line(0, 0, 100, 100).attr({ 'fill': "silver", 'stroke': "black", 'strokeWidth': "1"  }).attr({ 'id': 'line1' })
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+'''
+    return outstring
+</pre>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'kmolab'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er';
+                var disqus_url = 'http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html">
+                            自行車傳動 2D 鏈條繪圖 (二)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html">
+                            協同產品設計實習期中報告
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">
+                            2015 Fall CADP W16
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html">
+                            導入 Brython 與 Snap.svg 網際繪圖
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html">
+                            自行車傳動 2D 鏈條繪圖
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="http://chiamingyen.github.io/kmolab/blog/categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/category/alumni.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Alumni
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">
+                            <i class="fa fa-folder-open fa-lg"></i> CADlab
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/category/courses.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Courses
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/category/project.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Project
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/category/python.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/category/ubuntu.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Ubuntu
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="http://chiamingyen.github.io/kmolab/blog/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://github.com/DandyDev/pelican-bootstrap3/" target="_blank">
+                pelican-bootstrap3
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://github.com/getpelican/pelican-plugins" target="_blank">
+                pelican-plugins
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://github.com/Tipue/Tipue-Search" target="_blank">
+                Tipue search
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 kmol
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://chiamingyen.github.io/kmolab/blog/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://chiamingyen.github.io/kmolab/blog/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://chiamingyen.github.io/kmolab/blog/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'kmolab'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>

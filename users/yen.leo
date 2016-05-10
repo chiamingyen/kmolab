@@ -22,7 +22,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1" a="E"><vh>Pelican 設定</vh>
@@ -35,7 +35,7 @@
 <v t="leo.20151212173803.1"><vh>@edit publishconf.py</vh></v>
 <v t="amd.20151215170221.1"><vh>以下 local_publishconf.py 為近端所使用的設定</vh></v>
 <v t="leo.20151213085752.1"><vh>@edit local_publishconf.py</vh></v>
-<v t="amd.20151215121740.1"><vh>@path theme</vh>
+<v t="amd.20151215121740.1" a="E"><vh>@path theme</vh>
 <v t="amd.20151215121758.1" a="E"><vh>@path pelican-bootstrap3</vh>
 <v t="amd.20151215121816.1" a="E"><vh>@path templates</vh>
 <v t="amd.20151215121827.1"><vh>@edit base.html</vh></v>
@@ -75,7 +75,7 @@
 </v>
 </v>
 </v>
-<v t="amd.20160303212723.1" a="E"><vh>2016spring課程</vh>
+<v t="amd.20160303212723.1"><vh>2016spring課程</vh>
 <v t="amd.20160303212735.1"><vh>2016springcd</vh></v>
 <v t="amd.20160303212739.1"><vh>2016springwcm</vh></v>
 <v t="amd.20160303213007.1"><vh>cptocadp</vh></v>
@@ -107,7 +107,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160106093510.1" a="E"><vh>201601</vh>
+<v t="amd.20160106093510.1"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
 <v t="amd.20160106113310.1"><vh>@edit yen_20160106-1.md</vh></v>
@@ -163,7 +163,7 @@
 <v t="amd.20160328153406.1"><vh>@edit yen_20160328.md</vh></v>
 <v t="amd.20160330214447.1"><vh>@edit yen_20160330.md</vh></v>
 </v>
-<v t="amd.20160411205604.1" a="E"><vh>201604</vh>
+<v t="amd.20160411205604.1"><vh>201604</vh>
 <v t="amd.20160411205621.1"><vh>@edit yen_20160411.md</vh></v>
 <v t="amd.20160413214912.1"><vh>@edit yen_20160413.md</vh></v>
 <v t="amd.20160417212507.1"><vh>@edit yen_20160417.md</vh></v>
@@ -172,6 +172,9 @@
 <v t="amd.20160430151915.1"><vh>@edit yen_20160430-1.md</vh></v>
 <v t="amd.20160503123538.1"><vh>@edit yen_20160502.md</vh></v>
 <v t="amd.20160503211630.1"><vh>@edit yen_20160502-1.md</vh></v>
+</v>
+<v t="amd.20160510095801.1" a="E"><vh>201605</vh>
+<v t="amd.20160510095822.1" a="M"><vh>@edit yen_20160510.md</vh></v>
 </v>
 </v>
 </v>
@@ -1968,6 +1971,7 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</t>
+<t tx="amd.20160510095801.1"></t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
