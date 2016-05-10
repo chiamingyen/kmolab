@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-05-10T12:09:07+08:00</updated><entry><title>自行車傳動 2D 鏈條繪圖 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html" rel="alternate"></link><updated>2016-05-10T12:09:07+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-10:kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html</id><summary type="html">&lt;p&gt;免費不是重點, 自由與永續才是!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-05-10T12:17:38+08:00</updated><entry><title>自行車傳動 2D 鏈條繪圖 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html" rel="alternate"></link><updated>2016-05-10T12:17:38+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-10:kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html</id><summary type="html">&lt;p&gt;免費不是重點, 自由與永續才是!&lt;/p&gt;
 &lt;p&gt;設計結果不是重點, 能否協同與持續改進才是!&lt;/p&gt;
 &lt;p&gt;-- 協同產品設計實習課程&lt;/p&gt;
 &lt;p&gt;本課程因為使用 Jupyter, 而不必使用 Mathematica 或 Matlab.&lt;/p&gt;
@@ -459,9 +459,9 @@ r10, s10=mychain.basic_rot(r9, s9, -10.78)
 &lt;/pre&gt;
 
 &lt;p&gt;從上述 2D 傳動鏈條的繪圖中, 可以發現, 由於整個設計配置以上方兩個切點的直線距離 200 mm 為準進行繪圖後, 下方的切點位置並無法精確與實際齒盤鏈條定位, 表示在上述鏈條傳動組立下, 精確繞行圓周的長度並無法得到整數的鏈條單元數, 在實務上通常會多加上一個鏈條單元.&lt;/p&gt;
-&lt;p&gt;而從下方的 2D 繪圖中可以發現, 依照上方取 10 個單元的鏈條長度, 比幾何運算的節圓鏈條線段長度長, 因此可以直接讓下方鏈條下垂的方式進行鏈條單元組立.&lt;/p&gt;
+&lt;p&gt;而從下方的 2D 繪圖中可以發現, 依照上方取 10 個單元的鏈條長度, 比幾何運算的節圓鏈條線段長度長, 因此在實際鏈條組立時, 可以直接讓下方鏈條下垂的方式進行鏈條單元組立.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_assembly_1.png" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;此外, 上面所列出的 Brython 鏈條傳動繪圖, 是由下方的 flask 程式片斷所建立, 當使用者透過 Python3 與 flask 網際框架, 將協同程式配置在 Github 與 OpenShift 平台上時, 將可以透過更高階的網際協同程式架構, 執行各種產品開發專案.&lt;/p&gt;
+&lt;p&gt;此外, 上面所列出的 Brython 鏈條傳動繪圖, 是由下方的 flask 程式片斷, 採 Blueprint 的程式架構所建立, 當使用者透過 Python3 與 flask 網際框架, 將協同程式配置在 Github 與 OpenShift 平台上時, 將可以透過更高階的網際協同程式架構, 執行各種產品開發專案.&lt;/p&gt;
 &lt;p&gt;各學員參考下列 2D 鏈條傳動繪圖設計後, 可以自行練習 18 齒與 36 齒的傳動繪圖, 並配合後續的齒輪減速機與自行車設計, 完成各組的電動與人力兩用自行車期末專案.&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
 from flask import Blueprint, request
