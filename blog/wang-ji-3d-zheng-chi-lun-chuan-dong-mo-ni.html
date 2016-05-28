@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Python - Kmolab (虎尾科大MDE)</title>
+    <title>網際 3D 正齒輪傳動模擬 - Kmolab (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,27 +166,33 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
+<link rel="canonical" href="./wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html">
 
-    <meta name="author" content="kmol" />
-    <meta name="keywords" content="Python" />
+        <meta name="author" content="kmol" />
+        <meta name="keywords" content="2016 Spring,協同產品設計實習" />
+        <meta name="description" content="Onshape 終於正式公開 FeatureScript 以及所有內建特徵功能的原始碼, 並且同時追加了許多新的功能, 包括機構的動態模擬." />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Kmolab (虎尾科大MDE)" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Kmolab (虎尾科大MDE)"/>
-        <meta property="og:url" content=".."/>
-        <meta property="og:description" content="Kmolab (虎尾科大MDE)"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="網際 3D 正齒輪傳動模擬"/>
+        <meta property="og:url" content="./wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html"/>
+        <meta property="og:description" content="Onshape 終於正式公開 FeatureScript 以及所有內建特徵功能的原始碼, 並且同時追加了許多新的功能, 包括機構的動態模擬."/>
+        <meta property="article:published_time" content="2016-05-28" />
+            <meta property="article:section" content="Courses" />
+            <meta property="article:tag" content="2016 Spring" />
+            <meta property="article:tag" content="協同產品設計實習" />
+            <meta property="article:author" content="kmol" />
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="../theme/css/bootstrap.united.min.css" type="text/css"/>
-    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./theme/css/bootstrap.united.min.css" type="text/css"/>
+    <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="../theme/css/pygments/monokai.css" rel="stylesheet">
-    <link href="../theme/tipuesearch/tipuesearch.css" rel="stylesheet">
-    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+    <link href="./theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="./theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
 
-        <link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Kmolab (虎尾科大MDE) ATOM Feed"/>
 
 <script type="text/javascript" src="http://chiamingyen.github.io/kmolab_data/files/syntaxhighlighter/shCore.js"></script>
@@ -247,40 +253,40 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="../" class="navbar-brand">
+            <a href="./" class="navbar-brand">
 Kmolab (虎尾科大MDE)            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="../pages/about/">
+                         <li><a href="./pages/about/">
                              About
                           </a></li>
                         <li >
-                            <a href="../category/alumni.html">Alumni</a>
+                            <a href="./category/alumni.html">Alumni</a>
                         </li>
                         <li >
-                            <a href="../category/cadlab.html">Cadlab</a>
-                        </li>
-                        <li >
-                            <a href="../category/courses.html">Courses</a>
-                        </li>
-                        <li >
-                            <a href="../category/project.html">Project</a>
+                            <a href="./category/cadlab.html">Cadlab</a>
                         </li>
                         <li class="active">
-                            <a href="../category/python.html">Python</a>
+                            <a href="./category/courses.html">Courses</a>
                         </li>
                         <li >
-                            <a href="../category/ubuntu.html">Ubuntu</a>
+                            <a href="./category/project.html">Project</a>
+                        </li>
+                        <li >
+                            <a href="./category/python.html">Python</a>
+                        </li>
+                        <li >
+                            <a href="./category/ubuntu.html">Ubuntu</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><span>
-                <form class="navbar-search" action="../search.html">
+                <form class="navbar-search" action="./search.html">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
                 </form></span>
               </li>
-              <li><a href="../archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="./archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -292,22 +298,50 @@ Kmolab (虎尾科大MDE)            </a>
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="../genetic-algorithm-in-python.html">Genetic Algorithm in Python</a></h2>
-                <div class="summary"><p>利用 Python 實現基因演算</p>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="./wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html"
+                       rel="bookmark"
+                       title="Permalink to 網際 3D 正齒輪傳動模擬">
+                        網際 3D 正齒輪傳動模擬
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-05-28T15:56:26.687654+08:00"> 六 28 五月 2016</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="./author/kmol.html"><i class="fa fa-user"></i> kmol</a>
 
-                    <a class="btn btn-default btn-xs" href="../genetic-algorithm-in-python.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../pelican-setup.html">Pelican setup</a></h2>
-                <div class="summary"><p>Pelican 靜態網頁系統架構與設定</p>
 
-                    <a class="btn btn-default btn-xs" href="../pelican-setup.html">more ...</a>
+
+<span class="label label-default">Tags</span>
+	<a href="./tag/2016-spring.html">2016 Spring</a>
+        /
+	<a href="./tag/xie-tong-chan-pin-she-ji-shi-xi.html">協同產品設計實習</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
+                <p>Onshape 終於正式公開 <a href="https://www.onshape.com/featurescript">FeatureScript</a> 以及所有內建特徵功能的<a href="https://cad.onshape.com/documents/5749364ce4b0f60f1b7940fe/w/925a5467b6e725168eb9c993/e/ff3b765aacc32576f893ed23">原始碼</a>, 並且同時追加了許多新的功能, 包括機構的動態模擬.</p>
+
+
+<p>其中, 正好與協同產品設計實習課程進度結合的為<a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab">正齒輪組</a>的網際 3D 零組件設計繪圖與傳動模擬.</p>
+<p>以下為上述正齒輪組的零件組立圖:</p>
+<p><image src="http://chiamingyen.github.io/kmolab_data/files/201605/onshape_spur_gear_demo.png" width="800" /></p>
+<p>使用者可以直接在瀏覽器或平版手機上, 開啟漸開線<a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/2923cd50930798d8999b2ef0">正齒輪零件的 Featurescript 繪圖程式碼</a>:</p>
+<p><image src="http://chiamingyen.github.io/kmolab_data/files/201605/onshape_spur_gear_featurescript.png" width="800" /></p>
+<p>此外, 使用者也可以開啟<a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab">正齒輪組立</a>連結後, 自行以滑鼠右鍵選擇主動旋轉的齒輪軸, 並按下 Animate, 就可以進行齒輪組的傳動模擬.</p>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -319,54 +353,69 @@ Kmolab (虎尾科大MDE)            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="../genetic-algorithm-in-python.html">
-                            Genetic Algorithm in Python
+                        <a href="./wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html">
+                            網際 3D 正齒輪傳動模擬
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../pelican-setup.html">
-                            Pelican setup
+                        <a href="./wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html">
+                            網際 2D 正齒輪傳動囓合繪圖
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html">
+                            自行車傳動 2D 鏈條繪圖 (二)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./xie-tong-chan-pin-she-ji-shi-xi-qi-zhong-bao-gao.html">
+                            協同產品設計實習期中報告
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./2015-fall-cadp-w16.html">
+                            2015 Fall CADP W16
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="../categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+            <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
                     <li class="list-group-item">
-                        <a href="../category/alumni.html">
+                        <a href="./category/alumni.html">
                             <i class="fa fa-folder-open fa-lg"></i> Alumni
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/cadlab.html">
+                        <a href="./category/cadlab.html">
                             <i class="fa fa-folder-open fa-lg"></i> CADlab
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/courses.html">
+                        <a href="./category/courses.html">
                             <i class="fa fa-folder-open fa-lg"></i> Courses
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/project.html">
+                        <a href="./category/project.html">
                             <i class="fa fa-folder-open fa-lg"></i> Project
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/python.html">
+                        <a href="./category/python.html">
                             <i class="fa fa-folder-open fa-lg"></i> Python
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="../category/ubuntu.html">
+                        <a href="./category/ubuntu.html">
                             <i class="fa fa-folder-open fa-lg"></i> Ubuntu
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="../tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="./tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
                 </ul>
             </li>
@@ -412,13 +461,13 @@ Kmolab (虎尾科大MDE)            </a>
       </div>
    </div>
 </footer>
-<script src="../theme/js/jquery.min.js"></script>
+<script src="./theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../theme/js/bootstrap.min.js"></script>
+<script src="./theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="../theme/js/respond.min.js"></script>
+<script src="./theme/js/respond.min.js"></script>
 
 
 </body>
