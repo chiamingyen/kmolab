@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/python.atom.xml" rel="self"></link><id>./</id><updated>2016-01-26T20:22:47+08:00</updated><entry><title>Genetic Algorithm in Python</title><link href="./genetic-algorithm-in-python.html" rel="alternate"></link><updated>2016-01-26T20:22:47+08:00</updated><author><name>kmol</name></author><id>tag:,2016-01-26:./genetic-algorithm-in-python.html</id><summary type="html">&lt;p&gt;利用 Python 實現基因演算&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/python.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-26T20:22:47+08:00</updated><entry><title>Genetic Algorithm in Python</title><link href="http://chiamingyen.github.io/kmolab/blog/genetic-algorithm-in-python.html" rel="alternate"></link><updated>2016-01-26T20:22:47+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-01-26:kmolab/blog/genetic-algorithm-in-python.html</id><summary type="html">&lt;p&gt;利用 Python 實現基因演算&lt;/p&gt;
 
 
 &lt;p&gt;利用"Genetic Algorithm in python jupyter" 查詢, 得到如下的相關連結:&lt;/p&gt;
@@ -1135,7 +1135,7 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;&lt;br /&gt;
-~~~python&lt;/p&gt;</summary><category term="GA"></category><category term="基因演算"></category></entry><entry><title>Pelican setup</title><link href="./pelican-setup.html" rel="alternate"></link><updated>2016-01-17T22:34:07+08:00</updated><author><name>yen</name></author><id>tag:,2016-01-17:./pelican-setup.html</id><summary type="html">&lt;p&gt;Pelican 靜態網頁系統架構與設定&lt;/p&gt;
+~~~python&lt;/p&gt;</summary><category term="GA"></category><category term="基因演算"></category></entry><entry><title>Pelican setup</title><link href="http://chiamingyen.github.io/kmolab/blog/pelican-setup.html" rel="alternate"></link><updated>2016-01-17T22:34:07+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/pelican-setup.html</id><summary type="html">&lt;p&gt;Pelican 靜態網頁系統架構與設定&lt;/p&gt;
 
 
 &lt;h2&gt;近端與遠端設定上的考量&lt;/h2&gt;
