@@ -14,6 +14,9 @@
 <v t="leo.20151212173315.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20151212173315.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
+<v t="amd.20160531150040.1" a="E"><vh>Sprocket 繪圖</vh>
+<v t="amd.20160531183958.1"><vh>參考</vh></v>
+</v>
 <v t="amd.20160106095324.1" a="E"><vh>@path ./../</vh>
 <v t="leo.20151213173811.1" a="E"><vh>假如要送到 gh-pages 分支, 使用下列按鈕</vh>
 <v t="leo.20151212173658.1"><vh>@button gh-pages pelican</vh></v>
@@ -22,7 +25,7 @@
 <v t="leo.20151213085727.1"><vh>@button local pelican</vh></v>
 </v>
 <v t="amd.20160117010542.1"><vh>@button git rm -rf blog</vh></v>
-<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1"><vh>@edit index.html</vh></v>
 <v t="amd.20151216152209.1"><vh>@edit README.md</vh></v>
 <v t="leo.20151213230723.1" a="E"><vh>Pelican 設定</vh>
@@ -177,6 +180,8 @@
 <v t="amd.20160510095822.1" a="M"><vh>@edit yen_20160510.md</vh></v>
 <v t="amd.20160523233557.1"><vh>@edit yen_20160523.md</vh></v>
 <v t="amd.20160528152557.1"><vh>@edit yen_20160528.md</vh></v>
+<v t="amd.20160529171317.1"><vh>@@edit yen_20160529.md</vh></v>
+<v t="amd.20160531123308.1"><vh>@edit yen_20160531.md</vh></v>
 </v>
 </v>
 </v>
@@ -1974,6 +1979,1004 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
 &lt;/body&gt;
 &lt;/html&gt;</t>
 <t tx="amd.20160510095801.1"></t>
+<t tx="amd.20160529171317.1">@language md
+Title: 正齒輪零件 FeatureScript 程式碼
+Category: Courses
+Tags: 2016 Spring, 協同產品設計實習
+Author: kmol
+
+&lt;a href="http://chiamingyen.github.io/kmolab_data/files/201605/Appx_involute_Curve_for_CAD.pdf"&gt;Approximation of Involute Curves for CAD-System Processing&lt;/a&gt; 論文中, 討論了如何利用 Bezier curves 來近似繪製齒輪的漸開線.
+
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+Context (模型主體)
+
+模型主體是一種內建資料型別, 用於儲存模擬資料, 其中包含物體 (實體, 面, 線與點), 相關組成元件(表面, 邊線與頂點), 變數, 特徵錯誤狀態等
+
+所有的特徵, 操作, 與評量函式都需要在模型主體中操作
+
+每一個 Onshape 零件工房都使用各自的模型主體.
+
+不同的模型主體彼此並無互動, 但是資料可以藉由 opMergeContexts 操作, 從某一模型主體轉換到另一個模型主體.
+
+每一個模型主體會使用建構時的 Onshape 標準程式庫版本, 當某一特徵重建時, 模型主體會回報所用的程式庫版本, 讓各自的特徵與操作回朔該舊版本時該有的運作模式.
+
+Bodies (物體)
+
+模型主體中的幾何形狀是由獨立的物體所組合而成
+
+物體包含零個或多個頂點, 面, 邊界, 用來表示 3D(實體), 2D(片狀體), 1D(線條)或 0D(點) 區域. 例如: 圓柱, 就是一個由 0 個頂點, 兩個邊界線與3個面所組成的實體. 而建構平面則是具有一個面的特殊平面體. 物體的內容始終互相連接, 例如, 兩個沒有交集的空間或曲面無法組成一個單一物體.
+
+物體, 頂點, 邊界線與面集合起來稱為造型元素, 每一個面, 邊界與頂點都屬於物體, 典型的零件工房重建結果, 就是在其模型主體中建立物體.
+
+Queries (查詢)
+
+查詢用來指定模型主體中的拓樸元素 (頂點, 邊界, 面與物體), 可以將查詢看作是一個幾何形狀的訂單, 說明必須符合查詢條件的特定幾何標準 (用法類似 SQL 查詢). 例如, qCreatedBy 就是指定必須在特定操作條件下建構的幾何條件. qContainsPoint 則指定該幾何條件必須與某一點交接. 這些查詢可以包含其他特定的查詢或巢狀查詢, 組成一個更大的查詢.
+
+查詢並不直接參照到幾何元素, 而只解讀所要取得的幾何元素標準. 只有當這些查詢送入諸如評量或操作等相關函數, 並與模型主體互相搭配後, 這些函式就能判定那些元素符合查詢條件 (用法也是類似 SQL 查詢).
+
+通常, 使用的函式可以直接透過評量過程, 取得符合查詢條件的元素. 但是有時則需先取得可能符合查詢條件的元素個數, 然後再逐一透過迴圈進行查詢條件的查找. 這個情況下可以採用 evaluateQuery, 先傳回暫定的元素陣列, 然後在模型主體中的評量階段, 再透過查詢條件查找符合的項目.
+
+Evaluations (評量)
+
+評量函式在模型主體中, 用來量測幾何與拓樸內容. 評量函式以 ev 開頭, 並且需要兩個輸入參數: 模型主體與宣告量測內容的映射資料. 例如, evBox3d 與 evVolume 分別用來取得一組元素的涵蓋範圍與體積, 而 evVertexPoint 則會傳回某一頂點的 3D 位置向量
+
+Operations (操作)
+
+操作是一組用來建立或修改模型主體中幾何形狀的標準程式庫. 操作函式以 op 開頭, 並且需要3個輸入參數: 模型主體, 操作編號, 以及一個定義映射資料. 某項特徵可能也無需任何操作 (例如, assignVariable), 只需要一項操作 (例如, 倒角操作函式稱為 opFillet), 或者需要多項操作 (例如, 擠出 (opExtrude), 拔模 (opDraft), 布林 (opBoolean) 等)
+
+操作將會修改輸入的模型主體, 也就是創建, 刪除或更動其幾何元素. 這些修改在 Onshape 中會分別用獨特的 id 編號加以追蹤.
+
+&lt;a href="http://www.me-bac.com/gear.php?lang=en"&gt;http://www.me-bac.com/gear.php?lang=en&lt;/a&gt;
+
+&lt;pre class="brush: jscript"&gt;
+/*    
+    Spur Gear
+    
+    This custom feature creates mathematically correct 
+    spur gears with optional center bore hole and keyway.
+
+    Version 1 - May 22, 2016 - Neil Cooke, Onshape Inc.
+*/    
+
+FeatureScript 336;
+import(path : "onshape/std/geometry.fs", version : "336.0");
+
+annotation { "Feature Type Name" : "Spur Gear", "Feature Name Template" : "Spur Gear (#teeth teeth)", "Filter Selector" : "fs", "Editing Logic Function" : "editGearLogic" }
+export const SpurGear = defineFeature(function(context is Context, id is Id, definition is map)
+    precondition
+    {
+        // this hidden field is used to name the feature in the "Feature Name Template" 
+        // the value for "teeth" is calculated and set in the "Editing Logic Function"
+        annotation { "Name" : "teeth", "UIHint" : "ALWAYS_HIDDEN" }
+        definition.teeth is string; //used to name the feature only
+        // 齒輪齒數
+        annotation { "Name" : "Number of teeth" }
+        isInteger(definition.numTeeth, TEETH_BOUNDS);
+        // 齒輪輸入類別
+        annotation { "Name" : "Input type" }
+        definition.GearInputType is GearInputType;
+
+        if (definition.GearInputType == GearInputType.module)
+        {
+            // 齒輪模數
+            annotation { "Name" : "Module" }
+            isLength(definition.module, MODULE_BOUNDS);
+        }
+
+        if (definition.GearInputType == GearInputType.diametralPitch)
+        {
+            // 徑節
+            annotation { "Name" : "Diametral pitch" }
+            isReal(definition.diametralPitch, POSITIVE_REAL_BOUNDS);
+        }
+
+        if (definition.GearInputType == GearInputType.circularPitch)
+        {
+            // 周節
+            annotation { "Name" : "Circular pitch" }
+            isLength(definition.circularPitch, LENGTH_BOUNDS);
+        }
+        // 節圓直徑
+        annotation { "Name" : "Pitch circle diameter" }
+        isLength(definition.pitchCircleDiameter, LENGTH_BOUNDS);
+        // 壓力角
+        annotation { "Name" : "Pressure angle" }
+        isAngle(definition.pressureAngle, PRESSURE_ANGLE_BOUNDS);
+        // 是否建立中心軸孔
+        annotation { "Name" : "Center hole" }
+        definition.centerHole is boolean;
+
+        // 若建立中心軸孔變數為 true
+        if (definition.centerHole)
+        {
+            annotation { "Name" : "Hole diameter" }
+            isLength(definition.centerHoleDia, CENTERHOLE_BOUNDS);
+            // 是否建立鍵槽
+            annotation { "Name" : "Keyway" }
+            definition.key is boolean;
+
+            if (definition.key)
+            {
+                annotation { "Name" : "Key width" }
+                isLength(definition.keyWidth, KEY_BOUNDS);
+
+                annotation { "Name" : "Key height" }
+                isLength(definition.keyHeight, KEY_BOUNDS);
+            }
+        }
+        // 是否指定齒輪圓心
+        annotation { "Name" : "Select origin position" }
+        definition.centerPoint is boolean;
+
+        // 若要指定圓心位置, 則透過訂詢 (Query) 由使用者指定圓心位置
+        if (definition.centerPoint)
+        {
+            annotation { "Name" : "Sketch vertex for center", "Filter" : EntityType.VERTEX &amp;&amp; SketchObject.YES, "MaxNumberOfPicks" : 1 }
+            definition.center is Query;
+        }
+        // 齒面寬
+        annotation { "Name" : "Extrude depth" }
+        isLength(definition.gearDepth, BLEND_BOUNDS);
+        // 是否反向
+        annotation { "Name" : "Extrude direction", "UIHint" : "OPPOSITE_DIRECTION" }
+        definition.flipGear is boolean;
+        // 是否偏移
+        annotation { "Name" : "Offset" }
+        definition.offset is boolean;
+
+        if (definition.offset)
+        {
+            annotation { "Name" : "Root diameter" }
+            isLength(definition.offsetClearance, ZERO_DEFAULT_LENGTH_BOUNDS);
+
+            annotation { "Name" : "Outside diameter" }
+            isLength(definition.offsetDiameter, ZERO_DEFAULT_LENGTH_BOUNDS);
+
+            annotation { "Name" : "Tooth angle" }
+            isAngle(definition.offsetAngle, ANGLE_360_ZERO_DEFAULT_BOUNDS);
+        }
+    }
+    
+    {
+        // diameters in gear definition
+        var offsetDiameter = 0 * meter;
+        var offsetClearance = 0 * meter;
+        var offsetAngle = 0 * degree;
+
+        if (definition.offset)
+        {
+            offsetDiameter = definition.offsetDiameter;
+            offsetClearance = definition.offsetClearance;
+            offsetAngle = definition.offsetAngle;
+        }
+
+        if (definition.centerHole &amp;&amp; definition.centerHoleDia &gt;= definition.pitchCircleDiameter - 4 * definition.module)
+        {
+            throw regenError("Center hole diameter must be less than the root diameter", ["centerHoleDia"]);
+        }
+        
+        if (definition.key &amp;&amp; definition.keyHeight / 2 + definition.centerHoleDia &gt;= definition.pitchCircleDiameter - 4 * definition.module)
+        {
+            throw regenError("Center hole diameter plus Key height must be less than the root diameter", ["keyHeight"]);
+        }
+
+        const addendum = definition.module + offsetDiameter;
+        const dedendum = 1.25 * definition.module + offsetClearance;
+        const base = definition.pitchCircleDiameter * cos(definition.pressureAngle);
+
+        // angle between root of teeth
+        const alpha = sqrt(definition.pitchCircleDiameter ^ 2 - base ^ 2) / base * radian - definition.pressureAngle;
+        const beta = 360 / (4 * definition.numTeeth) * degree - alpha;
+
+        // if no center vertex selected build gear on the front plane at the origin
+        var location = vector(0, 0, 0) * meter;
+        var sketchPlane = plane(location, vector(0, -1, 0), vector(1, 0, 0));
+        var center3D = location;
+
+        // else find location of selected vertex and its sketch plane and create a new sketch for the gear profile
+        if (definition.centerPoint)
+        {
+            location = evaluateQuery(context, definition.center)[0];
+            sketchPlane = evOwnerSketchPlane(context, { "entity" : location });
+            center3D = evVertexPoint(context, { "vertex" : location });
+        }
+
+        const gearSketch = newSketchOnPlane(context, id + "gearSketch", { "sketchPlane" : sketchPlane });
+        const center2D = worldToPlane(sketchPlane, center3D);
+
+        // create the outer diameter circle
+        // skCircle (sketch is Sketch, circleId is string, value is map) returns map
+        skCircle(gearSketch, "addendum", {
+                    "center" : center2D,
+                    "radius" : definition.pitchCircleDiameter / 2 + addendum
+                });
+
+        var nameId = 1;
+        var filletEdges = [];
+        var regionPoint;
+
+        // build involute splines for each tooth
+        // featurescript 迴圈用法與 C 相同
+        for (var teeth = 0; teeth &lt; definition.numTeeth; teeth += 1)
+        {
+            var involute1 = [];
+            var involute2 = [];
+            var arcDone = false;
+
+            for (var t = 0; t &lt;= 2; t += (1 / 20)) // (1/20) is the involute spline tolerance
+            {
+                // involute definition math
+                var angle = t * radian;
+                var offset = ((360 / definition.numTeeth) * PI * teeth) / 180 * radian + beta + offsetAngle;
+                var ca = cos(angle + offset);
+                var sa = sin(angle + offset);
+                var cab = cos(offset - beta * 2 - angle);
+                var sab = sin(offset - beta * 2 - angle);
+                var point1;
+                var point2;
+                // 考量齒數大於或等於 52 齒時, 基圓半徑將大於齒根圓, 因此輪廓必須畫到基圓而非齒根圓
+                if (base &gt;= definition.pitchCircleDiameter - 2 * dedendum &amp;&amp; t == 0) // special case when base cylinder diameter is greater than dedendum
+                {
+                    // calculate involute spline point
+                    point1 = vector((definition.pitchCircleDiameter / 2 - dedendum) * ca, (definition.pitchCircleDiameter / 2 - dedendum) * sa);
+                    point2 = vector((definition.pitchCircleDiameter / 2 - dedendum) * cab, (definition.pitchCircleDiameter / 2 - dedendum) * sab);
+                }
+                else
+                {
+                    point1 = vector(base * 0.5 * (ca + t * sa), base * 0.5 * (sa - t * ca));
+                    point2 = vector(base * 0.5 * (cab - t * sab), base * 0.5 * (sab + t * cab));
+                }
+
+                // and add to array
+                involute1 = append(involute1, point1 + center2D);
+                involute2 = append(involute2, point2 + center2D);
+
+                if (!arcDone) // create base arc between involutes once per tooth
+                {
+                    var mid = getArcMidPoint(center2D, point2 + center2D, point1 + center2D); // sketch arc is arc 3 points so need addtional point on arc
+
+                    if (mid != undefined) // if no base cylinder present (due to pressure angle), don't draw it
+                    {
+                        // skArc (sketch is Sketch, arcId is string, value is map) returns map
+                        skArc(gearSketch, "arc" ~ nameId, {
+                                    "start" : point2 + center2D,
+                                    "mid" : mid,
+                                    "end" : point1 + center2D
+                                });
+                    }
+
+                    // find points in 3D space where edges need to be filleted later
+                    filletEdges = append(filletEdges, toWorldVector(planeToCSys(sketchPlane), point2 + center2D, definition.gearDepth, definition.flipGear));
+                    filletEdges = append(filletEdges, toWorldVector(planeToCSys(sketchPlane), point1 + center2D, definition.gearDepth, definition.flipGear));
+
+                    // find area to extrude
+                    regionPoint = vector(point1[0] * 0.95 + center2D[0], point1[1] * 0.95 + center2D[1], 0 * meter);
+                    arcDone = true;
+                }
+
+                // if involute points go outside the outer diameter of the gear then stop
+                if (sqrt(point1[0] ^ 2 + point1[1] ^ 2) &gt;= (definition.pitchCircleDiameter / 2 + addendum))
+                    break;
+            }
+
+            // create involute sketch splines
+            skFitSpline(gearSketch, "spline-a" ~ nameId, {
+                        "points" : involute1
+                    });
+            skFitSpline(gearSketch, "spline-b" ~ nameId, {
+                        "points" : involute2
+                    });
+
+            // increment name ID to ensure unique IDs for each sketch entity
+            nameId += 1;
+        }
+
+        if (definition.centerHole)
+        {
+            if (definition.key)
+            {
+                var keyVector = vector(0, 1);
+                var perpKeyVector = vector(-1, 0);
+                var keyHeight = (definition.keyHeight + definition.centerHoleDia) / 2;
+
+                var points = [
+                    center2D - (definition.keyWidth / 2) * perpKeyVector,
+                    center2D - (definition.keyWidth / 2) * perpKeyVector + keyHeight * keyVector,
+                    center2D + (definition.keyWidth / 2) * perpKeyVector + keyHeight * keyVector,
+                    center2D + (definition.keyWidth / 2) * perpKeyVector];
+
+                for (var i = 0; i &lt; size(points); i += 1)
+                {
+                    skLineSegment(gearSketch, "line" ~ nameId,
+                            { "start" : points[i],
+                                "end" : points[(i + 1) % size(points)]
+                            });
+                    nameId += 1;
+                }
+            }
+
+            // center hole circle sketch
+            skCircle(gearSketch, "Center", {
+                        "center" : center2D,
+                        "radius" : definition.centerHoleDia / 2
+                    });
+        }
+        skSolve(gearSketch);
+
+        extrude(context, id + "extrude1", {
+                    "entities" : qContainsPoint(qCreatedBy(id + "gearSketch", EntityType.FACE), toWorld(planeToCSys(sketchPlane), regionPoint)),
+                    "endBound" : BoundingType.BLIND,
+                    "depth" : definition.gearDepth,
+                    "oppositeDirection" : definition.flipGear
+                });
+
+        var filletEdges3D = [];
+
+        for (var i = 0; i &lt; size(filletEdges); i += 1)
+        {
+            // Find the edges that intersect the points previously collected
+            filletEdges3D = append(filletEdges3D, qContainsPoint(qCreatedBy(id + "extrude1", EntityType.EDGE), filletEdges[i]));
+        }
+
+        const filletRadius = norm(filletEdges[1] - filletEdges[0]) / 3; // arbitrary fillet size = one third the distance between the edges
+
+        if (filletRadius &gt;= 0.2 * millimeter) // arbitrary small size assuming tooling cannot hold a fillet radius smaller than this
+        {
+            try(opFillet(context, id + "fillet1", {
+                            "entities" : qUnion(filletEdges3D),
+                            "radius" : filletRadius
+                        }));
+        }
+
+        // Remove sketch entities - no longer required
+        opDeleteBodies(context, id + "delete", { "entities" : qCreatedBy(id + "gearSketch") });
+
+        // created PCD sketch
+        const PCDSketch = newSketchOnPlane(context, id + "PCDsketch", { "sketchPlane" : sketchPlane });
+        skCircle(PCDSketch, "PCD", {
+                    "center" : center2D,
+                    "radius" : definition.pitchCircleDiameter / 2,
+                    "construction" : true
+                });
+        skSolve(PCDSketch);
+
+    }, {});
+
+function getArcMidPoint(center is Vector, start is Vector, end is Vector)
+{
+    // need to convert 2D vectors back to 3D for vector angle calculation
+    const center3D = vector(center[0], center[1], 0 * meter);
+    const start3D = vector(start[0], start[1], 0 * meter);
+    const end3D = vector(end[0], end[1], 0 * meter);
+
+    const angle = vectorAngle(center3D - start3D, center3D - end3D) / 2;
+    // if angle is less than zero then arc was flipped
+    if (angle &lt;= 0 * radian)
+        return;
+    start = center - start;
+
+    var ca = cos(angle); // in radians
+    var sa = sin(angle);
+    return center - vector(ca * start[0] - sa * start[1], sa * start[0] + ca * start[1]);
+}
+
+function vectorAngle(vector1 is Vector, vector2 is Vector)
+{
+    // function assumes vectors are on a 2D plane so Z is always zero and the normal vector is always [0, 0, 1]
+    return atan2(dot(vector(0, 0, 1), cross(vector1, vector2)), dot(vector1, vector2));
+}
+
+function toWorldVector(csys is CoordSystem, point is Vector, depth is map, direction is boolean) returns Vector
+{
+    var dir = direction ? -1 : 1;
+    var vector3D = vector(point[0], point[1], dir * depth / 2);
+    return toWorld(csys, vector3D);
+}
+
+export function editGearLogic(context is Context, id is Id, oldDefinition is map, definition is map, isCreating is boolean, specifiedParameters is map, hiddenBodies is Query) returns map
+{
+    // isCreating is required in the function definition for edit logic to work when editing an existing feature
+    if (oldDefinition.numTeeth != definition.numTeeth)
+    {
+        definition.module = definition.pitchCircleDiameter / definition.numTeeth;
+        definition.circularPitch = definition.module * PI;
+        definition.diametralPitch = 1 * inch / definition.module;
+        definition.teeth = toString(definition.numTeeth); //to name the feature
+        return definition;
+    }
+    
+    if (oldDefinition.circularPitch != definition.circularPitch)
+    {
+        definition.module = definition.circularPitch / PI;
+        definition.pitchCircleDiameter = (definition.circularPitch * definition.numTeeth) / PI;
+        definition.diametralPitch = 1 * inch / definition.module;
+        return definition;
+    }
+    
+    if (oldDefinition.pitchCircleDiameter != definition.pitchCircleDiameter)
+    {
+        definition.module = definition.pitchCircleDiameter / definition.numTeeth;
+        definition.circularPitch = (PI * definition.pitchCircleDiameter) / definition.numTeeth;
+        definition.diametralPitch = 1 * inch / definition.module;
+        return definition;
+    }
+    
+    if (oldDefinition.module != definition.module)
+    {
+        definition.circularPitch = definition.module * PI;
+        definition.pitchCircleDiameter = definition.numTeeth * definition.module;
+        definition.diametralPitch = 1 * inch / definition.module;
+        return definition;
+    }
+    
+    if (oldDefinition.diametralPitch != definition.diametralPitch)
+    {
+        definition.circularPitch = PI / (definition.diametralPitch / inch);
+        definition.module = definition.circularPitch / PI;
+        definition.pitchCircleDiameter = (definition.circularPitch * definition.numTeeth) / PI;
+        return definition;
+    }
+
+    return definition;
+}
+
+const TEETH_BOUNDS =
+{
+            "min" : 4,
+            "max" : 250,
+            (unitless) : [4, 25, 250]
+        } as IntegerBoundSpec;
+
+const PRESSURE_ANGLE_BOUNDS =
+{
+            "min" : 12 * degree,
+            "max" : 35 * degree,
+            (degree) : [12, 20, 35]
+        } as AngleBoundSpec;
+
+const MODULE_BOUNDS =
+{
+            "min" : -TOLERANCE.zeroLength * meter,
+            "max" : 500 * meter,
+            (meter) : [1e-5, 0.001, 500],
+            (centimeter) : 0.1,
+            (millimeter) : 1.0,
+            (inch) : 0.04
+        } as LengthBoundSpec;
+
+const CENTERHOLE_BOUNDS =
+{
+            "min" : -TOLERANCE.zeroLength * meter,
+            "max" : 500 * meter,
+            (meter) : [1e-5, 0.01, 500],
+            (centimeter) : 1.0,
+            (millimeter) : 10.0,
+            (inch) : 0.375
+        } as LengthBoundSpec;
+
+const KEY_BOUNDS =
+{
+            "min" : -TOLERANCE.zeroLength * meter,
+            "max" : 500 * meter,
+            (meter) : [1e-5, 0.003, 500],
+            (centimeter) : 0.3,
+            (millimeter) : 3.0,
+            (inch) : 0.125
+        } as LengthBoundSpec;
+
+export enum GearInputType
+{
+    annotation { "Name" : "Module" }
+    module,
+    annotation { "Name" : "Diametral pitch" }
+    diametralPitch,
+    annotation { "Name" : "Circular pitch" }
+    circularPitch
+}
+&lt;/pre&gt;
+
+利用 FreeCAD 建立 spur gear: &lt;a href="https://bitbucket.org/douardda/fcgear"&gt;https://bitbucket.org/douardda/fcgear&lt;/a&gt;
+
+&lt;pre class="brush: python"&gt;
+# (c) 2014 David Douard &lt;david.douard@gmail.com&gt;
+# Based on https://github.com/attoparsec/inkscape-extensions.git
+# Based on gearUtils-03.js by Dr A.R.Collins
+#          http://www.arc.id.au/gearDrawing.html
+#
+# Calculation of Bezier coefficients for
+# Higuchi et al. approximation to an involute.
+# ref: YNU Digital Eng Lab Memorandum 05-1
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU Lesser General Public License (LGPL)
+#   as published by the Free Software Foundation; either version 2 of
+#   the License, or (at your option) any later version.
+#   for detail see the LICENCE text file.
+#
+#   FCGear is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public
+#   License along with FCGear; if not, write to the Free Software
+#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+
+from math import cos, sin, pi, acos, asin, atan, sqrt
+
+def CreateExternalGear(w, m, Z, phi, split=True):
+    """
+    Create an external gear
+
+    w is wirebuilder object (in which the gear will be constructed)
+
+    if split is True, each profile of a teeth will consist in 2 Bezier
+    curves of degree 3, otherwise it will be made of one Bezier curve
+    of degree 4
+    """
+    # ****** external gear specifications
+    addendum = m              # distance from pitch circle to tip circle
+    dedendum = 1.25 * m         # pitch circle to root, sets clearance
+    clearance = dedendum - addendum
+
+    # Calculate radii
+    Rpitch = Z * m / 2            # pitch circle radius
+    Rb = Rpitch*cos(phi * pi / 180)  # base circle radius
+    Ra = Rpitch + addendum    # tip (addendum) circle radius
+    Rroot = Rpitch - dedendum # root circle radius
+    fRad = 1.5 * clearance # fillet radius, max 1.5*clearance
+    Rf = sqrt((Rroot + fRad)**2 - fRad**2) # radius at top of fillet
+    if (Rb &lt; Rf):
+        Rf = Rroot + clearance
+
+    # ****** calculate angles (all in radians)
+    pitchAngle = 2 * pi / Z  # angle subtended by whole tooth (rads)
+    baseToPitchAngle = genInvolutePolar(Rb, Rpitch)
+    pitchToFilletAngle = baseToPitchAngle  # profile starts at base circle
+    if (Rf &gt; Rb):         # start profile at top of fillet (if its greater)
+        pitchToFilletAngle -= genInvolutePolar(Rb, Rf)
+
+    filletAngle = atan(fRad / (fRad + Rroot))  # radians
+
+    # ****** generate Higuchi involute approximation
+    fe = 1       # fraction of profile length at end of approx
+    fs = 0.01    # fraction of length offset from base to avoid singularity
+    if (Rf &gt; Rb):
+        fs = (Rf**2 - Rb**2) / (Ra**2 - Rb**2)  # offset start to top of fillet
+
+    if split:
+        # approximate in 2 sections, split 25% along the involute
+        fm = fs + (fe - fs) / 4   # fraction of length at junction (25% along profile)
+        dedInv = BezCoeffs(m, Z, phi, 3, fs, fm)
+        addInv = BezCoeffs(m, Z, phi, 3, fm, fe)
+
+        # join the 2 sets of coeffs (skip duplicate mid point)
+        inv = dedInv + addInv[1:]
+    else:
+        inv = BezCoeffs(m, Z, phi, 4, fs, fe)
+
+    # create the back profile of tooth (mirror image)
+    invR = []
+    for i, pt in enumerate(inv):
+        # rotate all points to put pitch point at y = 0
+        ptx, pty = inv[i] = rotate(pt, -baseToPitchAngle - pitchAngle / 4)
+        # generate the back of tooth profile nodes, mirror coords in X axis
+        invR.append((ptx, -pty))
+
+    # ****** calculate section junction points R=back of tooth, Next=front of next tooth)
+    fillet = toCartesian(Rf, -pitchAngle / 4 - pitchToFilletAngle) # top of fillet
+    filletR = [fillet[0], -fillet[1]]   # flip to make same point on back of tooth
+    rootR = toCartesian(Rroot, pitchAngle / 4 + pitchToFilletAngle + filletAngle)
+    rootNext = toCartesian(Rroot, 3 * pitchAngle / 4 - pitchToFilletAngle - filletAngle)
+    filletNext = rotate(fillet, pitchAngle)  # top of fillet, front of next tooth
+
+    # Build the shapes using FreeCAD.Part
+    t_inc = 2.0 * pi / float(Z)
+    thetas = [(x * t_inc) for x in range(Z)]
+
+    w.move(fillet) # start at top of fillet
+
+    for theta in thetas:
+        w.theta = theta
+        if (Rf &lt; Rb):
+            w.line(inv[0]) # line from fillet up to base circle
+
+        if split:
+            w.curve(inv[1], inv[2], inv[3])
+            w.curve(inv[4], inv[5], inv[6])
+            w.arc(invR[6], Ra, 1) # arc across addendum circle
+            w.curve(invR[5], invR[4], invR[3])
+            w.curve(invR[2], invR[1], invR[0])
+        else:
+            w.curve(*inv[1:])
+            w.arc(invR[-1], Ra, 1) # arc across addendum circle
+            w.curve(*invR[-2::-1])
+
+        if (Rf &lt; Rb):
+            w.line(filletR) # line down to topof fillet
+
+        if (rootNext[1] &gt; rootR[1]):    # is there a section of root circle between fillets?
+            w.arc(rootR, fRad, 0) # back fillet
+            w.arc(rootNext, Rroot, 1) # root circle arc
+
+        w.arc(filletNext, fRad, 0)
+
+    w.close()
+    return w
+
+
+
+def genInvolutePolar(Rb, R):
+    """returns the involute angle as function of radius R.
+    Rb = base circle radius
+    """
+    return (sqrt(R*R - Rb*Rb) / Rb) - acos(Rb / R)
+
+
+def rotate(pt, rads):
+    "rotate pt by rads radians about origin"
+    sinA = sin(rads)
+    cosA = cos(rads)
+    return (pt[0] * cosA - pt[1] * sinA,
+            pt[0] * sinA + pt[1] * cosA)
+
+
+
+def toCartesian(radius, angle):
+    "convert polar coords to cartesian"
+    return [radius * cos(angle), radius * sin(angle)]
+
+
+def chebyExpnCoeffs(j, func):
+    N = 50      # a suitably large number  N&gt;&gt;p
+    c = 0
+    for k in xrange(1, N + 1):
+        c += func(cos(pi * (k - 0.5) / N)) * cos(pi * j * (k - 0.5) / N)
+    return 2 *c / N
+
+
+def chebyPolyCoeffs(p, func):
+    coeffs = [0]*(p+1)
+    fnCoeff = []
+    T = [coeffs[:] for i in range(p+1)]
+    T[0][0] = 1
+    T[1][1] = 1
+    # now generate the Chebyshev polynomial coefficient using
+    # formula T(k+1) = 2xT(k) - T(k-1) which yields
+    # T = [ [ 1,  0,  0,  0,  0,  0],    # T0(x) =  +1
+    #       [ 0,  1,  0,  0,  0,  0],    # T1(x) =   0  +x
+    #       [-1,  0,  2,  0,  0,  0],    # T2(x) =  -1  0  +2xx
+    #       [ 0, -3,  0,  4,  0,  0],    # T3(x) =   0 -3x    0   +4xxx
+    #       [ 1,  0, -8,  0,  8,  0],    # T4(x) =  +1  0  -8xx       0  +8xxxx
+    #       [ 0,  5,  0,-20,  0, 16],    # T5(x) =   0  5x    0  -20xxx       0  +16xxxxx
+    #     ...                     ]
+
+    for k in xrange(1, p):
+        for j in xrange(len(T[k]) - 1):
+            T[k + 1][j + 1] = 2 * T[k][j]
+        for j in xrange(len(T[k - 1])):
+            T[k + 1][j] -= T[k - 1][j]
+
+    # convert the chebyshev function series into a simple polynomial
+    # and collect like terms, out T polynomial coefficients
+    for k in xrange(p + 1):
+        fnCoeff.append(chebyExpnCoeffs(k, func))
+
+    for k in xrange(p + 1):
+        for pwr in xrange(p + 1):
+            coeffs[pwr] += fnCoeff[k] * T[k][pwr]
+
+    coeffs[0] -= fnCoeff[0] / 2  # fix the 0th coeff
+    return coeffs
+
+
+def binom(n, k):
+    coeff = 1
+    for i in xrange(n - k + 1, n + 1):
+        coeff *= i
+
+    for i in xrange(1, k + 1):
+        coeff /= i
+
+    return coeff
+
+
+def bezCoeff(i, p, polyCoeffs):
+    '''generate the polynomial coeffs in one go'''
+    return sum(binom(i, j) * polyCoeffs[j] / binom(p, j) for j in range(i+1))
+
+
+    # Parameters:
+    # module - sets the size of teeth (see gear design texts)
+    # numTeeth - number of teeth on the gear
+    # pressure angle - angle in degrees, usually 14.5 or 20
+    # order - the order of the Bezier curve to be fitted [3, 4, 5, ..]
+    # fstart - fraction of distance along tooth profile to start
+    # fstop - fraction of distance along profile to stop
+def BezCoeffs(module, numTeeth, pressureAngle, order, fstart, fstop):
+    Rpitch = module * numTeeth / 2       # pitch circle radius
+    phi = pressureAngle        # pressure angle
+    Rb = Rpitch * cos(phi * pi / 180) # base circle radius
+    Ra = Rpitch + module               # addendum radius (outer radius)
+    ta = sqrt(Ra * Ra - Rb * Rb) / Rb   # involute angle at addendum
+    te = sqrt(fstop) * ta          # involute angle, theta, at end of approx
+    ts = sqrt(fstart) * ta         # involute angle, theta, at start of approx
+    p = order                     # order of Bezier approximation
+
+    def involuteXbez(t):
+        "Equation of involute using the Bezier parameter t as variable"
+        # map t (0 &lt;= t &lt;= 1) onto x (where -1 &lt;= x &lt;= 1)
+        x = t * 2 - 1
+        # map theta (where ts &lt;= theta &lt;= te) from x (-1 &lt;=x &lt;= 1)
+        theta = x * (te - ts) / 2 + (ts + te) / 2
+        return Rb * (cos(theta) + theta * sin(theta))
+
+    def involuteYbez(t):
+        "Equation of involute using the Bezier parameter t as variable"
+        # map t (0 &lt;= t &lt;= 1) onto x (where -1 &lt;= x &lt;= 1)
+        x = t * 2 - 1
+        # map theta (where ts &lt;= theta &lt;= te) from x (-1 &lt;=x &lt;= 1)
+        theta = x * (te - ts) / 2 + (ts + te) / 2
+        return Rb * (sin(theta) - theta * cos(theta))
+
+    # calc Bezier coeffs
+    bzCoeffs = []
+    polyCoeffsX = chebyPolyCoeffs(p, involuteXbez)
+    polyCoeffsY = chebyPolyCoeffs(p, involuteYbez)
+    for i in xrange(p + 1):
+        bx = bezCoeff(i, p, polyCoeffsX)
+        by = bezCoeff(i, p, polyCoeffsY)
+        bzCoeffs.append((bx, by))
+    return bzCoeffs
+&lt;/pre&gt;
+
+&lt;pre class="brush: python"&gt;
+# (c) 2014 David Douard &lt;david.douard@gmail.com&gt;
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU Lesser General Public License (LGPL)
+#   as published by the Free Software Foundation; either version 2 of
+#   the License, or (at your option) any later version.
+#   for detail see the LICENCE text file.
+#
+#   FCGear is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public
+#   License along with FCGear; if not, write to the Free Software
+#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+
+import itertools
+from math import cos, sin
+from involute import CreateExternalGear, rotate
+
+def makeGear(m, Z, angle):
+    w = SVGWireBuilder()
+    CreateExternalGear(w, m, Z, angle)
+    return '\n'.join(w.svg)
+
+class SVGWireBuilder(object):
+    def __init__(self):
+        self.theta = 0.0
+        self.pos = None
+        self.svg = []
+
+    def move(self, p):
+        p = rotate(p, self.theta)
+        self.svg.append('M %s,%s' % (p[0], p[1]))
+        self.pos = p
+
+    def line(self, p):
+        p = rotate(p, self.theta)
+        self.svg.append('L %s,%s' % (p[0], p[1]))
+        self.pos = p
+
+    def arc(self, p, r, sweep):
+        p = rotate(p, self.theta)
+        self.svg.append('A %s,%s 0,0,%s %s,%s' % (r, r, str(sweep), p[0], p[1]))
+        self.pos = p
+
+    def curve(self, *points):
+        """Add a Bezier curve from self.pos to points[-1]
+        every other points are the control points of the Bezier curve (which
+        will thus be of degree len(points) )
+        """
+        assert len(points) == 3
+        points = [rotate(p, self.theta) for p in points]
+        self.svg.append('C %s,%s %s,%s %s,%s' % tuple(itertools.chain(*points)))
+        self.pos = points[-1]
+
+    def close(self):
+        self.svg.append('Z')
+
+if __name__ == '__main__':
+    from optparse import OptionParser
+    p = OptionParser()
+    p.add_option('-a', '--angle', help='pressure angle',
+                 dest='angle', default=20)
+    opts, args = p.parse_args()
+    if len(args) != 2:
+        p.error()
+    m, Z = [float(v) for v in args]
+    print makeGear(m, int(Z), float(opts.angle))
+&lt;/pre&gt;
+
+FreeCAD spur gear:
+
+&lt;pre class="brush: python"&gt;
+# (c) 2014 David Douard &lt;david.douard@gmail.com&gt;
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU Lesser General Public License (LGPL)
+#   as published by the Free Software Foundation; either version 2 of
+#   the License, or (at your option) any later version.
+#   for detail see the LICENCE text file.
+#
+#   FCGear is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU Library General Public License for more details.
+#
+#   You should have received a copy of the GNU Library General Public
+#   License along with FCGear; if not, write to the Free Software
+#   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+
+from math import cos, sin, pi, acos, asin, atan, sqrt
+
+import FreeCAD, FreeCADGui, Part
+from FreeCAD import Base, Console
+import involute
+reload(involute)
+rotate = involute.rotate
+
+
+def makeGear(m, Z, angle, split=True):
+    if FreeCAD.ActiveDocument is None:
+        FreeCAD.newDocument("Gear")
+    doc = FreeCAD.ActiveDocument
+    w = FCWireBuilder()
+    involute.CreateExternalGear(w, m, Z, angle, split)
+    gearw = Part.Wire([o.toShape() for o in w.wire])
+    gear = doc.addObject("Part::Feature", "Gear")
+    gear.Shape = gearw
+    return gear
+
+
+class FCWireBuilder(object):
+    """A helper class to prepare a Part.Wire object"""
+    def __init__(self):
+        self.pos = None
+        self.theta = 0.0
+        self.wire = []
+
+    def move(self, p):
+        """set current position"""
+        self.pos = Base.Vector(*p)
+
+    def line(self, p):
+        """Add a segment between self.pos and p"""
+        p = rotate(p, self.theta)
+        end = Base.Vector(*p)
+        self.wire.append(Part.Line(self.pos, end))
+        self.pos = end
+
+    def arc(self, p, r, sweep):
+        """"Add an arc from self.pos to p which radius is r
+        sweep (0 or 1) determine the orientation of the arc
+        """
+        p = rotate(p, self.theta)
+        end = Base.Vector(*p)
+        mid = Base.Vector(*(midpoints(p, self.pos, r)[sweep]))
+        self.wire.append(Part.Arc(self.pos, mid, end))
+        self.pos = end
+
+    def curve(self, *points):
+        """Add a Bezier curve from self.pos to points[-1]
+        every other points are the control points of the Bezier curve (which
+        will thus be of degree len(points) )
+        """
+        points = [Base.Vector(*rotate(p, self.theta)) for p in points]
+        bz = Part.BezierCurve()
+        bz.setPoles([self.pos] + points)
+        self.wire.append(bz)
+        self.pos = points[-1]
+
+    def close(self):
+        pass
+
+def midpoints(p1, p2, r):
+    """A very ugly function that returns the midpoint of a p1 and p2
+    on the circle which radius is r and which pass throught p1 and
+    p2
+
+    Return the 2 possible solutions
+    """
+    vx, vy = p2[0]-p1[0], p2[1]-p1[1]
+    b = (vx**2 + vy**2)**.5
+    v = (vx/b, vy/b)
+    cosA = b**2 / (2*b*r)
+    A = acos(cosA)
+
+    vx, vy = rotate(v, A)
+    c1 = (p1[0]+r*vx, p1[1]+r*vy)
+    m1x, m1y = ((p1[0]+p2[0])/2 - c1[0], (p1[1]+p2[1])/2 - c1[1])
+    dm1 = (m1x**2+m1y**2)**.5
+    m1x, m1y = (c1[0] + r*m1x/dm1, c1[1] + r*m1y/dm1)
+    m1 = (m1x, m1y)
+
+    vx, vy = rotate(v, -A)
+    c2 = (p1[0]+r*vx, p1[1]+r*vy)
+    m2x, m2y = ((p1[0]+p2[0])/2 - c2[0], (p1[1]+p2[1])/2 - c2[1])
+    dm2 = (m2x**2+m2y**2)**.5
+    m2x, m2y = (c2[0] + r*m2x/dm2, c2[1] + r*m2y/dm2)
+    m2 = (m2x, m2y)
+
+    return m1, m2
+&lt;/pre&gt;</t>
+<t tx="amd.20160531150040.1">roller radius = 7 mm
+
+rs = 7
+
+pitch of chain 
+
+pc = 20 mm
+
+chamber = "M -6.8397, -1.4894 \
+        A 7, 7, 0, 1, 0, 6.8397, -1.4894 \
+        A 40, 40, 0, 0, 1, 6.8397, -18.511 \
+        A 7, 7, 0, 1, 0, -6.8397, -18.511 \
+        A 40, 40, 0, 0, 1, -6.8397, -1.4894 z"
+        
+sprocket 的單齒輪廓使用4個圓弧近似繪圖:
+
+sprocket 半徑設為 pr
+sprocket 齒數為 n
+angle for each tooth = 360/n
+degree = math.pi/180
+
+rs = 7
+pc = 20
+pr = pc/2/math.sin(360*degree/n/2)
+
+假設 sprocket 圓心座標為 xc, yc
+
+假設小圓 (roller) 圓心位於心位於 (xc+pr, yc)
+
+則另外一個 roller 圓心 (xc+pc*math.cos(360*degree/n), yc+pc*math.sin(360*degree/n))
+
+</t>
+<t tx="amd.20160531183958.1">    # 必須求出5點個圓弧的關鍵座標, 然後畫出4個圓弧作為一齒, 旋轉複製後, 即可得到 sprocket 零件外形
+    # roller1 圓心點座標 (pr, 0), roller2 圓心點座標 ((pr*math.cos(rotangle*math.pi/180), pr*math.sin(rotangle*math.pi/180))
+    # 第1點: (pr-rs, 0), 第五點則以 pr-rs 為半徑旋轉 rotangle 
+    (((pr-rs)*math.cos(rotangle*math.pi/180), (pr-rs)*math.sin(rotangle*math.pi/180))
+    # 第2與第4點則介於兩 roller 圓心點的連線上, 且分別位於 roller 半徑 rs 比例與 pc-rs 比例上
+    第2點: (pr-(pr-pr*math.cos(rotangle*math.pi/180))*rs/pc, (pr*math.sin(rotangle*math.pi/180))*rs/pc)
+    中線點座標 ((pr-(pr-pr*math.cos(rotangle*math.pi/180))*(0.5*pc)/pc, (pr*math.sin(rotangle*math.pi/180))*(0.5*pc)/pc)
+    中線點到第 3 點距離 math.sqrt(math.pow(pc-rs,2)-math.pow(pc*0.5, 2))
+    原點到第3點的距離: math.sqrt(math.pow((pr-(pr-pr*math.cos(rotangle*math.pi/180))*(0.5*pc)/pc, 2)+math.pow((pr*math.sin(rotangle*math.pi/180))*(0.5*pc)/pc, 2))
+    r3 = math.sqrt(math.pow((pr-(pr-pr*math.cos(rotangle*math.pi/180))*(0.5*pc)/pc, 2)+math.pow((pr*math.sin(rotangle*math.pi/180))*(0.5*pc)/pc, 2))
+    第3點的座標就是 r3 旋轉 0.5*rotangle 角度
+    第4點:(pr-(pr-pr*math.cos(rotangle*math.pi/180))*(pc-rs)/pc, (pr*math.sin(rotangle*math.pi/180))*(pc-rs)/pc)
+    第5點: (((pr-rs)*math.cos(rotangle*math.pi/180), (pr-rs)*math.sin(rotangle*math.pi/180))
+    
+    
+    
+            # circle 作圖,必須給 diameter
+        roller1 = cobj(shapedefs.circle(self.rs*2), "PATH")
+        roller1.translate(pr, 0)
+        roller2 = cobj(shapedefs.circle(self.rs*2), "PATH")
+        roller2.translate(pr*math.cos(rotangle*math.pi/180), pr*math.sin(rotangle*math.pi/180))
+        circle1 = cobj(shapedefs.circle((self.pc-self.rs)*2), "PATH")
+        circle1.translate(pr*math.cos(rotangle*math.pi/180), pr*math.sin(rotangle*math.pi/180))
+        circle2 = cobj(shapedefs.circle((self.pc-self.rs)*2), "PATH")
+        circle2.translate(pr, 0)
+        tooth = roller1.dup()
+        tooth.appendPath(roller2)
+        tooth.appendPath(circle1)
+        tooth.appendPath(circle2)</t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
