@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-06-01T00:54:56+08:00</updated><entry><title>網際 2D 正齒輪協同繪圖規劃</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html" rel="alternate"></link><updated>2016-06-01T00:54:56+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html</id><summary type="html">&lt;p&gt;利用 Python 物件導向架構執行網際 2D 正齒輪傳動協同繪圖時, 各組員可以將各種不同繪圖元件, 建置在個人的網頁空間中, 讓其他參與協同的組員連結應用. 唯一必須注意的是, 就網際繪圖模式而言, 儘管 Brython 繪圖最終仍轉為 JavaScript, 以 Canvas 或 WebGL 完成繪圖, 但是 Python 程式碼在各自的 script 標註中屬於各自的命名空間 (此點與 Prototype based 的 JavaScript 有很大的差別), 因此以下的範例, 必須將各自在引用的 script 標註中, 以 id 命名, 然後根據 id 名稱, 在其他命名空間中以 import 引用.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-06-01T10:32:55+08:00</updated><entry><title>網際 2D 正齒輪協同繪圖規劃</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html" rel="alternate"></link><updated>2016-06-01T10:32:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html</id><summary type="html">&lt;p&gt;利用 Python 物件導向架構執行網際 2D 正齒輪傳動協同繪圖時, 各組員可以將各種不同繪圖元件, 建置在個人的網頁空間中, 讓其他參與協同的組員連結應用. 唯一必須注意的是, 就網際繪圖模式而言, 儘管 Brython 繪圖最終仍轉為 JavaScript, 以 Canvas 或 WebGL 完成繪圖, 但是 Python 程式碼在各自的 script 標註中屬於各自的命名空間 (此點與 Prototype based 的 JavaScript 有很大的差別), 因此以下的範例, 必須將各自在引用的 script 標註中, 以 id 命名, 然後根據 id 名稱, 在其他命名空間中以 import 引用.&lt;/p&gt;
 
 
 &lt;p&gt;以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖, 其中的漸開線正齒輪 2D 繪圖程式庫以類別建立, 並且存在 &lt;a href="http://cadlab.mde.tw/post/by/spur.js"&gt;http://cadlab.mde.tw/post/by/spur.js&lt;/a&gt;, 之所以採用 .js 命名, 主要在避開修改瀏覽器中的 MIME 對應, 可以直接在隨後的 Brython 程式中, 以 import 方式引用:&lt;/p&gt;
@@ -148,7 +148,7 @@ gear.spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 &lt;/pre&gt;
 
 &lt;p&gt;上面的 2D 齒輪繪圖, 雖然引用雲端上的繪圖程式庫, 可以統一控管各程式庫的版本, 但是若不同程式庫間的主機無法連結, 或者當程式庫更新後, 先前所採用的舊繪圖函式可能無法相容或無法完成繪圖, 因此在雲端建置電腦輔助機械設計架構時, 必須採用類似 Onshape 的作法, 雖然所有的程式庫統一更新, 但是各種零組件在建立時, 透過當時所使用的模型主體 (Context), 儲存了所使用的標準零件庫版本, 除非使用者刻意更新, 否則所有的雲端設計專案都將在各自原先的版本命名空間中獨立運作, 不會產生版本分歧或謬誤的問題.&lt;/p&gt;
-&lt;p&gt;以下則利用 Python 的物件導向, 另外建立一個畫布繪圖, 其中除了使用 Brython 程式方法, 即時建立 CANVAS 畫布外, 也同時採用物件繼承的方式, 引用遠端的 spur.js 繪圖程式庫, 並且加入鏈條與齒盤的繪圖元件:&lt;/p&gt;
+&lt;p&gt;以下則利用 Python 的物件導向, 另外建立一個畫布繪圖, 其中除了使用 Brython 程式方法, 即時建立 CANVAS 畫布外, 也同時採用物件繼承的方式, 引用遠端的 spur.js 繪圖程式庫, 並且加入鏈條與鏈輪的繪圖元件:&lt;/p&gt;
 &lt;div id="container1"&gt;&lt;/div&gt;
 
 &lt;script type="text/python"&gt;
@@ -644,6 +644,17 @@ for i in range(11):
 &amp;lt;/script&amp;gt;
 &lt;/pre&gt;
 
+&lt;p&gt;上述鏈輪繪圖中需要計算5個關鍵點, 如下圖所示:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;而此5個座標點將分別決定四段圓弧的繪製, 如下圖所示:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing_2.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;至於將鏈條第1節 (位於每一個鏈輪的水平軸最右側的節圓弧上), 設計者必須根據鏈輪齒數, 決定鏈條的逆時鐘旋轉與水平軸之間的偏角 (因為這裡原始的鏈條採水平方向建置), 而此依偏角可以根據下列示意圖求取.&lt;/p&gt;
+&lt;p&gt;計算第1節鏈條偏角的參考圖:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_2.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_3.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;計算鏈條四個關鍵點的參考圖:&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/chain_profile.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;以下則用來說明 3 個齒輪囓合時, 先兩兩依據基本的囓合對應完成囓合後, 再考慮中介齒輪的配合轉動, 就可以逐一完成各式減速齒輪組的 2D 繪圖, 一旦雲端零組件繪圖流程進入 Onshape 3D 零組件設計繪圖, 就可以援用相同的囓合原理, 完成 3D 減速機齒輪箱的組立與模擬:&lt;/p&gt;
 &lt;div id="container2"&gt;&lt;/div&gt;
 
