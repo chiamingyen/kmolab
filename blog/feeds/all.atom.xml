@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-06-01T17:16:15+08:00</updated><entry><title>網際 3D 正齒輪傳動模擬 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html" rel="alternate"></link><updated>2016-06-01T17:16:15+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html</id><summary type="html">&lt;p&gt;Onshape 的正齒輪設計繪圖與組立, 其基本原理與先前的 2D 網際繪圖類似, 只不過在以下的 3D 正齒輪傳動組立過程, 只有 Spur Gear 功能採用 Featurescript 編寫, 雖然在 Onshape Part Studio 中, 所有的零件可以透過統一的設計變數進行控管, 但若一旦設計流程的變化超出原先 Featurescript 的表單設定範圍 (例如: SG Featurescript 中的 Offset angle 只允許 0-360 的正值角度輸入), 設計者就必須介入調整不符合表單設計的 error.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-08-29T22:08:26+08:00</updated><entry><title>協同產品設計實習系列課程</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html" rel="alternate"></link><updated>2016-08-29T22:08:26+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-08-29:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html</id><summary type="html">&lt;p&gt;二十一世紀的科技發展, 拜網路普及與數位運算能力大幅提升之賜, 使得集合在不同地理位置與時區上的工程師, 執行同步或非同步協同產品開發專案的模式, 已然成為常態.&lt;/p&gt;
+
+
+&lt;p&gt;因此, 協同產品設計實習系列課程從大一的計算機程式開始, 即導入與網路相關的技術與分散式版次專案管理的概念, 並希望透過隨後的網際內容管理、電腦輔助設計實習與協同產品設計實習等課程之研習, 讓學員充分理解機械設計工程師在團隊間必須仰賴口語表達、文字表達、2D 靜態文件表達、3D 動態文件表達 (含影音多媒體文件表達)、理論分析表達與實體原型表達等六種表達方式進行溝通.&lt;/p&gt;
+&lt;p&gt;接下來, 我們列出學校已經購買, 且與本系列課程相關之電子書作為參考 (學員可以在電腦輔助設計室中下載 pdf 檔案):&lt;/p&gt;
+&lt;p&gt;計算機程式相關:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-0076-6"&gt;Pro Git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-2172-3"&gt;Learn to Program with Python&lt;/a&gt; (本書採用 Python 2.7, 上課時必須改為 Python3 格式)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-662-49887-3"&gt;A Primer on Scientific Programming with Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-32428-9"&gt;Programming for Computations - Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-0553-2"&gt;Numerical Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-0334-7"&gt;Pro Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;電腦輔助設計實習與協同產品設計實習相關:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-0076-6"&gt;Pro Git&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-1085-7"&gt;Beginning Windows 10&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4842-1173-1"&gt;3D Printing with Delta Printers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4302-6808-6"&gt;Maintaining and Troubleshooting Your 3D Printer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-662-46221-8"&gt;Handbook of Mathematics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/referencework/10.1007/0-387-21632-4"&gt;Handbook of Physics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4419-7719-9"&gt;Handbook of Open Source Tools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-19303-8"&gt;Handbook of Modern Sensors&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-32552-1"&gt;Springer Handbook of Robotics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-662-45373-5"&gt;Project Management Handbook&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-642-24458-2"&gt;Handbook of Manufacturing Control&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-662-46391-8"&gt;Handbook Factory Planning and Design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-8348-9789-3"&gt;Chassis Handbook&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4614-7450-0"&gt;Handbook of Food Factory Design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-1-4939-0755-7"&gt;Springer Handbook of Acoustics&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-27131-6"&gt;Computational Design of Rolling Bearings&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-29841-2"&gt;Heat Pipe Design and Technology&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-29155-0"&gt;Collaboration in Creative Design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://link.springer.com/book/10.1007/978-3-319-35155-1"&gt;The Philosophy of Science and Engineering Design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其次, 2016 Fall 的計算機程式課程的倉儲位於: &lt;a href="https://github.com/mdecourse/2016fallcp"&gt;https://github.com/mdecourse/2016fallcp&lt;/a&gt;, 我們將要採用兩個網際程式系統與一個可攜單機跨平台程式系統導引 Python3 計算機程式的學習, 網際程式系統分別是 &lt;a href="http://8888.kmol.info"&gt;http://8888.kmol.info&lt;/a&gt; 與 &lt;a href="https://mdecourse.github.io/reeborg2016/reeborg.html"&gt;https://mdecourse.github.io/reeborg2016/reeborg.html&lt;/a&gt;, 而單機可攜跨平台系統則將採用 &lt;a href="https://www.continuum.io/downloads"&gt;Anaconda&lt;/a&gt; 製作.&lt;/p&gt;
+&lt;p&gt;而 2016 Fall 的電腦輔助設計實習課程的倉儲位於: &lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;https://github.com/mdecourse/2016fallcadp&lt;/a&gt;, 3D 零組件繪圖套件將以 &lt;a href="https://www.onshape.com/"&gt;https://www.onshape.com/&lt;/a&gt; 為主, Solvespace 為輔, 當然,學員也可以採用 Creo Parametric 與 Solidworks 進行零組件繪圖.&lt;/p&gt;
+&lt;p&gt;原則上, 所有選修電腦輔助設計實習課程的學員應該都已經擁有 Github 帳號, 可以直接在登入 Github 後, git clone &lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;https://github.com/mdecourse/2016fallcadp&lt;/a&gt; 倉儲資料後, 將隨後每週上課筆記寫在 2016fallcadp 倉儲對應的 wiki 資料區中, 並且設法在此一倉儲中建立 gh-pages 分支, 並且著手架構學員各自的 pelican 網誌與 &lt;a href="http://lab.hakim.se/reveal-js/"&gt;reveal.js&lt;/a&gt; 網際投影片.&lt;/p&gt;
+&lt;p&gt;至於選修 2016 Fall 計算機程式的新生, 則必須利用學校交付的 gmail 帳號, 登記 github 帳號, 然後直接利用 &lt;a href="http://8888.kmol.info"&gt;http://8888.kmol.info&lt;/a&gt; 網站, 開始第1階段的 Python3 程式課程.&lt;/p&gt;
+&lt;p&gt;計算機程式課程一開始便透過&lt;a href="http://8888.kmol.info/?user=mdecourse&amp;repo=2016fallcp&amp;name=2016springgrouping.py"&gt;網際分組程式&lt;/a&gt;, 讓學員一窺利用瀏覽器上的 Python3 程式執行修課學員分組與編排座位的程式碼與分組結果. 其中牽涉 Python3 模組的導入, 函式定義與呼叫, 數列內容排序與重複迴圈的實際應用.&lt;/p&gt;
+&lt;p&gt;而電腦輔助設計實習課程一開始則透過一台 &lt;a href="http://reprap.org/wiki/Kossel"&gt;Kossel Delta 3D printer&lt;/a&gt; 的組立, 讓學員了解目前的所謂機械產品設計, 有很大的比例都包含機電資光等跨領域的整合設計內容, 並讓各分組學員可以利用此一 3D 零件列印機, 選擇性列印各組所完成的原型設計.&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category><category term="2016FallCADP"></category></entry><entry><title>網際 3D 正齒輪傳動模擬 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html" rel="alternate"></link><updated>2016-06-01T17:16:15+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html</id><summary type="html">&lt;p&gt;Onshape 的正齒輪設計繪圖與組立, 其基本原理與先前的 2D 網際繪圖類似, 只不過在以下的 3D 正齒輪傳動組立過程, 只有 Spur Gear 功能採用 Featurescript 編寫, 雖然在 Onshape Part Studio 中, 所有的零件可以透過統一的設計變數進行控管, 但若一旦設計流程的變化超出原先 Featurescript 的表單設定範圍 (例如: SG Featurescript 中的 Offset angle 只允許 0-360 的正值角度輸入), 設計者就必須介入調整不符合表單設計的 error.&lt;/p&gt;
 
 
 &lt;p&gt;因此, 以正齒輪減速機的協同設計為例, 可以了解全面透過程式流程掌握機械設計流程的重要性, 目前在無法利用 Onshape API 進行較完整的協同產品設計架構下, 只能利用部份的網際 2D 繪圖模組進行配置, 並將 3D 零組件的定製與組裝模擬, 透過客製化的網際程式 (Python+Brython+Javascript+Jupyter) 轉為 Onshape 的 Featurescript 程式.&lt;/p&gt;

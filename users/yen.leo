@@ -110,6 +110,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
+<v t="amd.20160829165735.1"><vh>before 201608</vh>
 <v t="amd.20160601163840.1" a="E"><vh>201601-05</vh>
 <v t="amd.20160106093510.1"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
@@ -188,6 +189,8 @@
 <v t="amd.20160601163821.1" a="E"><vh>201606</vh>
 <v t="amd.20160601163751.1"><vh>@edit yen_20160601.md</vh></v>
 </v>
+</v>
+<v t="amd.20160829165805.1"><vh>@edit yen_20160829.md</vh></v>
 </v>
 </v>
 <v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
@@ -2984,6 +2987,7 @@ pr = pc/2/math.sin(360*degree/n/2)
         tooth.appendPath(circle2)</t>
 <t tx="amd.20160601163821.1"></t>
 <t tx="amd.20160601163840.1"></t>
+<t tx="amd.20160829165735.1"></t>
 <t tx="leo.20151212173315.1"></t>
 <t tx="leo.20151212173315.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
