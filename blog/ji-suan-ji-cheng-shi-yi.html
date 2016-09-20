@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Ubuntu - Kmolab (虎尾科大MDE)</title>
+    <title>計算機程式 (一) - Kmolab (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,16 +166,22 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
+<link rel="canonical" href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html">
 
-    <meta name="author" content="kmol" />
-    <meta name="keywords" content="Ubuntu" />
+        <meta name="author" content="kmol" />
+        <meta name="keywords" content="2016 Fall,2016FallCP" />
+        <meta name="description" content="2016FallCP 課程倉儲: https://github.com/mdecourse/2016fallcp 2016FallCP 上課筆記: https://github.com/mdecourse/2016fallcp/wiki" />
 
-    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Kmolab (虎尾科大MDE)" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Kmolab (虎尾科大MDE)"/>
-        <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog"/>
-        <meta property="og:description" content="Kmolab (虎尾科大MDE)"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="計算機程式 (一)"/>
+        <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html"/>
+        <meta property="og:description" content="2016FallCP 課程倉儲: https://github.com/mdecourse/2016fallcp 2016FallCP 上課筆記: https://github.com/mdecourse/2016fallcp/wiki"/>
+        <meta property="article:published_time" content="2016-09-20" />
+            <meta property="article:section" content="Courses" />
+            <meta property="article:tag" content="2016 Fall" />
+            <meta property="article:tag" content="2016FallCP" />
+            <meta property="article:author" content="kmol" />
 
 
     <!-- Bootstrap -->
@@ -261,7 +267,7 @@ Kmolab (虎尾科大MDE)            </a>
                         <li >
                             <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">Cadlab</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="http://chiamingyen.github.io/kmolab/blog/category/courses.html">Courses</a>
                         </li>
                         <li >
@@ -270,7 +276,7 @@ Kmolab (虎尾科大MDE)            </a>
                         <li >
                             <a href="http://chiamingyen.github.io/kmolab/blog/category/python.html">Python</a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="http://chiamingyen.github.io/kmolab/blog/category/ubuntu.html">Ubuntu</a>
                         </li>
             </ul>
@@ -292,40 +298,105 @@ Kmolab (虎尾科大MDE)            </a>
     <div class="row">
         <div class="col-sm-9">
 
-            <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html">近端 Jupyterhub 電腦主機設定</a></h2>
-                <div class="summary"><p>利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub.</p>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html"
+                       rel="bookmark"
+                       title="Permalink to 計算機程式 (一)">
+                        計算機程式 (一)
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-09-20T12:00:00+08:00"> 二 20 九月 2016</time>
+    </span>
+            <span class="label label-default">By</span>
+            <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
 
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html">About 17.101 server</a></h2>
-                <div class="summary"><p>Ubuntu 伺服器 設定</p>
-<p>介紹 17.101 機器的設定與使用</p>
-<h2>ubuntu-desktop</h2>
-<p>這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:</p>
-<p>sudo apt-get install ubuntu-desktop</p>
-<h2>nginx 與 uwsgi</h2>
-<p>之後因為卸除 Python3 相關的所有套件, 導致單機桌面無法登入, 所有介面操作, 只能透過網路, 以 X Windows 連線.</p>
 
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html">Mechanical Designer and IPV6</a></h2>
-                <div class="summary"><p>機械設計工程師該如何執行 IPV6 網路設定</p>
-<p>隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:</p>
-<p>以下資料引用自 <a href="http://2014fall.kmol.info/?id=410">http://2014fall.kmol.info/?id=410</a>, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.</p>
-<h2>情境說明:</h2>
-<p>當中華電信的 ADSL 用戶升級成為 ADSL2 (光世代) 時, 負責實體進入用戶家中執行設定的工作人員會自帶一個”用戶帳號@wifi.hinet.net” 的撥接帳號, 而通常工作人員並不會告知用戶此一帳號的密碼(照理說用戶可以在安裝時向工作人員詢問此一 @wifi.hinet.net 帳號的對應密碼), 另外用戶在申請早期與特定家用電話號碼附掛的網路線時, 會從中華電信取到一個”用戶帳號”與密碼, 而此一帳號密碼可以附加成為”用戶帳號@hinet.net” 或 “用戶帳號@ip.hinet.net” 進行 Modem (這裡以 ZyXEL VDSL2 P883 為例) 的撥接, 若使用者完成 IPV6 試用申請後, 利用 @hinet.net 或 @ip.hinet.net 帳號撥接後, 若用戶為非固接光世代用戶, 就可以同時從中華電信的 DHCP 伺服器取得 IPV4 與 IPV6 等兩種協定的位址.</p>
 
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html">more ...</a>
+<span class="label label-default">Tags</span>
+	<a href="http://chiamingyen.github.io/kmolab/blog/tag/2016-fall.html">2016 Fall</a>
+        /
+	<a href="http://chiamingyen.github.io/kmolab/blog/tag/2016fallcp.html">2016FallCP</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 </div>
-            </article>
-            <hr/>
+                <p>2016FallCP 課程倉儲: <a href="https://github.com/mdecourse/2016fallcp">https://github.com/mdecourse/2016fallcp</a></p>
+<p>2016FallCP 上課筆記: <a href="https://github.com/mdecourse/2016fallcp/wiki">https://github.com/mdecourse/2016fallcp/wiki</a></p>
+
+
+<p>在 2016 Fall 的計算機程式課程中, 我們將導入 Github submodule 的功能, 各學員都必須在自己的帳號下, 建立 2016fallcp_hw 倉儲, 且將每週上課的筆記寫在 2016fallcp_hw 倉儲對應的 wiki 中,  而每一組的作業內容則集結在分組組長的 2016fallcp_ag1 (以甲班第1組為例), 最後在期中與期末評量階段時, 再分別將各組所完成的 2016fallcp_ag1 倉儲內容版本, 以 submodule 導入 mdecourse 帳號下的 2016fallcpa (以甲班為例), 待課程結束後, 再將 2016fallcpa 與 2016fallcpb 中的資料納入 2016fallcp 倉儲, 而以上為了讓所有資料都能在瀏覽器中呈現, 因此各倉儲資料的繳交都必須集中在 gh-pages 分支中.</p>
+<p>總結上述規劃, 分別列出各成員, 各組組長與各班課程評分模式下所必須進行的 github 對應倉儲:</p>
+<h2>組員</h2>
+<ol>
+<li>必須使用學校配發的 gmail 申請 github 帳號</li>
+<li>必須在自己的 github 帳號下建立 2016fallcp_hw 倉儲, 而個人的網頁將位於: https://s組員學號.github.io, 且個人的作業內容網頁將位於: https://s組員學號.github.io/2016fallcp_hw (根目錄與 blog 子目錄內容, 則根據下列評量格式設定)</li>
+<li>各組員必須透過 pull requests 機制, 協同維護各組的分組倉儲</li>
+</ol>
+<h2>組長</h2>
+<ol>
+<li>因為同時俱備組員身份, 因此必須先完成上述組員的各項工作後, 在組長的 github 帳號下建立 2016fallcp_ag1 (以甲班第一組為例)</li>
+<li>各組的網頁將是: https://s組長學號.github.io/2016fallcp_ag1 (以甲班第一組為例, 根目錄與 blog 子目錄內容, 則根據下列評量格式設定)</li>
+<li>各組組長必須審核並處理組員送出的協同 pull requests, 並將組員的作業倉儲設為分組倉儲的 submodule, 例如: https://s組長學號.github.io/2016fallcp_ag1/s組員學號, 即可檢視 s組員學號的各對應版本作業資料.</li>
+<li>各組組長將會成為 mdecourse/2016fallcp 倉儲的 collaborators, 俱備處理各組組員對此倉儲所送出 pull requests 的權限.</li>
+</ol>
+<h2>期中期末評量</h2>
+<ol>
+<li>github mdecourse 帳號下將建立 2016fallcpa 與 2016fallcpb 倉儲, 會將各班各組的分組倉儲納入, 作為 submodule, 並分別在第九週與第十八週進行各組資料的拉回與更新, 以作為組員評分參考, 以甲班為例, 第1組, s組員學號的資料將位於 https://mdecourse.github.io/2016fallcpa/g1/s組員學號/</li>
+<li>上述各種網頁, 除了必須以 gh-pages 的機制呈現外, 首頁必須採 <a href="http://lab.hakim.se/reveal-js/">reveal.js</a> 簡報格式, 而 blog 子目錄中則以 <a href="https://github.com/getpelican/pelican">pelican</a> 靜態網頁格式呈現.</li>
+<li>當課程結束後, 2016fallcpa 與 2016fallcpb 倉儲中的資料, 將會一併納入 mdecourse/2016fallcp 倉儲的 gh-pages 分支中, 因此甲班各分組的資料將位於 https://mdecourse.github.io/2016fallcp/a/g1 (以第一組為例), 而各學員的資料則希望設為 https://mdecourse.github.io/2016fallcp/a/s學員學號 (以甲班 s學員學號為例)</li>
+</ol>
+<h2>實作討論</h2>
+<ol>
+<li>由於各成員倉儲內的資料都希望採瀏覽器進行檢視, 因此都必須將資料納入 gh-pages 分支中, 各成員在提交推送資料時必須特別注意, 本課程建議各成員使用的 git 圖形化工具為: <a href="https://github.com/FredrikNoren/ungit">https://github.com/FredrikNoren/ungit</a></li>
+<li>各成員必須熟悉 git branch 與 git checkout 指令, 以便建立分支, 查驗目前所在分支, 並且將分支的內容簽出到近端工作目錄中.</li>
+<li>初期各組員獨立協同下的資料合併, 可以直接在 github 網站上操作, 但是有版本內容衝突的 pull requests, 就必須拉回近端的工作目錄中進行衝突處理與測試後, 才能合併資料後, 將內容提交推送回遠端倉儲.</li>
+<li>git submodule add repo_url local_path 執行之前, 不可自行建立倉儲中的 local_path 目錄, 而是讓 git 指令完成動作後, 以 git submodule init 起始 submodule 目錄中的資料結構, 並以 git submodule update 將子模組中對應版本的資料取回近端的工作目錄中.</li>
+<li>各成員網頁中的 <a href="http://lab.hakim.se/reveal-js/">reveal.js</a> 與 <a href="https://github.com/getpelican/pelican">pelican</a> 靜態網頁格式, 將另外以 mdecourse/reveal 與 mdecourse/pelican 倉儲提供範例樣板資料.</li>
+<li>期中與期末評量倉儲中, 有關各組 git submodule 更新版本對應與各學員資料的集結過程, 需要另外編寫指令或程式碼, 將一併放入 mdecourse/2016fallcp 倉儲中的 Leo Editor 專案中.</li>
+</ol>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'kmolab'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'ji-suan-ji-cheng-shi-yi';
+                var disqus_url = 'http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
 
         </div>
         <div class="col-sm-3" id="sidebar">
@@ -337,18 +408,28 @@ Kmolab (虎尾科大MDE)            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html">
-                            近端 Jupyterhub 電腦主機設定
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html">
+                            計算機程式 (一)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html">
-                            About 17.101 server
+                        <a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html">
+                            協同產品設計實習系列課程
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html">
-                            Mechanical Designer and IPV6
+                        <a href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html">
+                            網際 3D 正齒輪傳動模擬 (一)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html">
+                            網際 2D 正齒輪協同繪圖規劃
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html">
+                            網際 3D 正齒輪傳動模擬
                         </a>
                     </li>
                 </ul>

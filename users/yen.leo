@@ -110,7 +110,7 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160829165735.1"><vh>before 201608</vh>
+<v t="amd.20160829165735.1" a="E"><vh>before 201608</vh>
 <v t="amd.20160601163840.1" a="E"><vh>201601-05</vh>
 <v t="amd.20160106093510.1"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
@@ -144,7 +144,7 @@
 </v>
 </v>
 <v t="amd.20160213095053.1"><vh>201602</vh>
-<v t="amd.20160213095059.1"><vh>w2</vh>
+<v t="amd.20160213095059.1" a="E"><vh>w2</vh>
 <v t="amd.20160215225005.1"><vh>yen_20160215.md</vh></v>
 <v t="amd.20160221123826.1"><vh>@edit yen_20160221.md</vh></v>
 <v t="amd.20160221125630.1"><vh>@edit yen_20160221-1.md</vh></v>
@@ -191,6 +191,7 @@
 </v>
 </v>
 <v t="amd.20160829165805.1"><vh>@edit yen_20160829.md</vh></v>
+<v t="amd.20160920093855.1"><vh>@edit yen_20160920.md</vh></v>
 </v>
 </v>
 <v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
@@ -1989,6 +1990,7 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
 <t tx="amd.20160510095801.1"></t>
 <t tx="amd.20160529171317.1">@language md
 Title: 正齒輪零件 FeatureScript 程式碼
+Date: 2016-05-29 12:00
 Category: Courses
 Tags: 2016 Spring, 協同產品設計實習
 Author: kmol

@@ -293,6 +293,15 @@ Kmolab (虎尾科大MDE)            </a>
         <div class="col-sm-9">
 
             <article>
+                <h2><a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html">計算機程式 (一)</a></h2>
+                <div class="summary"><p>2016FallCP 課程倉儲: <a href="https://github.com/mdecourse/2016fallcp">https://github.com/mdecourse/2016fallcp</a></p>
+<p>2016FallCP 上課筆記: <a href="https://github.com/mdecourse/2016fallcp/wiki">https://github.com/mdecourse/2016fallcp/wiki</a></p>
+
+                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html">協同產品設計實習系列課程</a></h2>
                 <div class="summary"><p>二十一世紀的科技發展, 拜網路普及與數位運算能力大幅提升之賜, 使得集合在不同地理位置與時區上的工程師, 執行同步或非同步協同產品開發專案的模式, 已然成為常態.</p>
 
@@ -357,23 +366,6 @@ Kmolab (虎尾科大MDE)            </a>
             </article>
             <hr/>
             <article>
-                <h2><a href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">2015 Fall CADP W16</a></h2>
-                <div class="summary"><p>根據 <a href="http://chiamingyen.github.io/kmolab_data/files/ProEMechanism.pdf">Nutcracker 機構</a>的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_left_limit.png" width="600" /></p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_right_limit.png" width="600" /></p>
-<p>計算 Piston 不發生干涉的有效行程, 可採如下方法:</p>
-<ol>
-<li>實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)</li>
-<li>利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)</li>
-<li>利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, <a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb">計算出</a>的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)</li>
-<li>除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用<a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py">基因演算法解題</a>, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 <a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb">Jupyterhub 平台</a>上進行運算)</li>
-</ol>
-
-                    <a class="btn btn-default btn-xs" href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
                 <h2><a href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html">導入 Brython 與 Snap.svg 網際繪圖</a></h2>
                 <div class="summary"><p><a href="http://snapsvg.io/">http://snapsvg.io/</a> 是一套 SVG 繪圖程式庫, 結合 <a href="http://brython.info/">http://brython.info/</a> 之後, 使用者可以直接在網際環境中利用 Python3 與 SVG 進行靜態或動態模擬繪圖. 也能逐步將 <a href="http://rattlecad.sourceforge.net/">http://rattlecad.sourceforge.net/</a> 轉換到網際環境中. 其中, 2D 零組件繪圖可以採 SVG 完成, 而對應的 3D 零組件則可利用 <a href="https://www.onshape.com">https://www.onshape.com</a> 完成.</p>
 
@@ -413,6 +405,11 @@ Kmolab (虎尾科大MDE)            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html">
+                            計算機程式 (一)
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html">
                             協同產品設計實習系列課程
                         </a>
@@ -432,11 +429,6 @@ Kmolab (虎尾科大MDE)            </a>
                             網際 3D 正齒輪傳動模擬
                         </a>
                     </li>
-                    <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html">
-                            網際 2D 正齒輪傳動囓合繪圖
-                        </a>
-                    </li>
                 </ul>
             </li>
 
@@ -449,7 +441,7 @@ Kmolab (虎尾科大MDE)            </a>
                     </li>
                     <li class="list-group-item">
                         <a href="http://chiamingyen.github.io/kmolab/blog/category/cadlab.html">
-                            <i class="fa fa-folder-open fa-lg"></i> CADlab
+                            <i class="fa fa-folder-open fa-lg"></i> cadlab
                         </a>
                     </li>
                     <li class="list-group-item">

@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-08-29T22:08:26+08:00</updated><entry><title>協同產品設計實習系列課程</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html" rel="alternate"></link><updated>2016-08-29T22:08:26+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-08-29:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html</id><summary type="html">&lt;p&gt;二十一世紀的科技發展, 拜網路普及與數位運算能力大幅提升之賜, 使得集合在不同地理位置與時區上的工程師, 執行同步或非同步協同產品開發專案的模式, 已然成為常態.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/courses.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-20T12:00:00+08:00</updated><entry><title>計算機程式 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-yi.html" rel="alternate"></link><updated>2016-09-20T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-20:kmolab/blog/ji-suan-ji-cheng-shi-yi.html</id><summary type="html">&lt;p&gt;2016FallCP 課程倉儲: &lt;a href="https://github.com/mdecourse/2016fallcp"&gt;https://github.com/mdecourse/2016fallcp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2016FallCP 上課筆記: &lt;a href="https://github.com/mdecourse/2016fallcp/wiki"&gt;https://github.com/mdecourse/2016fallcp/wiki&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;p&gt;在 2016 Fall 的計算機程式課程中, 我們將導入 Github submodule 的功能, 各學員都必須在自己的帳號下, 建立 2016fallcp_hw 倉儲, 且將每週上課的筆記寫在 2016fallcp_hw 倉儲對應的 wiki 中,  而每一組的作業內容則集結在分組組長的 2016fallcp_ag1 (以甲班第1組為例), 最後在期中與期末評量階段時, 再分別將各組所完成的 2016fallcp_ag1 倉儲內容版本, 以 submodule 導入 mdecourse 帳號下的 2016fallcpa (以甲班為例), 待課程結束後, 再將 2016fallcpa 與 2016fallcpb 中的資料納入 2016fallcp 倉儲, 而以上為了讓所有資料都能在瀏覽器中呈現, 因此各倉儲資料的繳交都必須集中在 gh-pages 分支中.&lt;/p&gt;
+&lt;p&gt;總結上述規劃, 分別列出各成員, 各組組長與各班課程評分模式下所必須進行的 github 對應倉儲:&lt;/p&gt;
+&lt;h2&gt;組員&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;必須使用學校配發的 gmail 申請 github 帳號&lt;/li&gt;
+&lt;li&gt;必須在自己的 github 帳號下建立 2016fallcp_hw 倉儲, 而個人的網頁將位於: https://s組員學號.github.io, 且個人的作業內容網頁將位於: https://s組員學號.github.io/2016fallcp_hw (根目錄與 blog 子目錄內容, 則根據下列評量格式設定)&lt;/li&gt;
+&lt;li&gt;各組員必須透過 pull requests 機制, 協同維護各組的分組倉儲&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;組長&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;因為同時俱備組員身份, 因此必須先完成上述組員的各項工作後, 在組長的 github 帳號下建立 2016fallcp_ag1 (以甲班第一組為例)&lt;/li&gt;
+&lt;li&gt;各組的網頁將是: https://s組長學號.github.io/2016fallcp_ag1 (以甲班第一組為例, 根目錄與 blog 子目錄內容, 則根據下列評量格式設定)&lt;/li&gt;
+&lt;li&gt;各組組長必須審核並處理組員送出的協同 pull requests, 並將組員的作業倉儲設為分組倉儲的 submodule, 例如: https://s組長學號.github.io/2016fallcp_ag1/s組員學號, 即可檢視 s組員學號的各對應版本作業資料.&lt;/li&gt;
+&lt;li&gt;各組組長將會成為 mdecourse/2016fallcp 倉儲的 collaborators, 俱備處理各組組員對此倉儲所送出 pull requests 的權限.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;期中期末評量&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;github mdecourse 帳號下將建立 2016fallcpa 與 2016fallcpb 倉儲, 會將各班各組的分組倉儲納入, 作為 submodule, 並分別在第九週與第十八週進行各組資料的拉回與更新, 以作為組員評分參考, 以甲班為例, 第1組, s組員學號的資料將位於 https://mdecourse.github.io/2016fallcpa/g1/s組員學號/&lt;/li&gt;
+&lt;li&gt;上述各種網頁, 除了必須以 gh-pages 的機制呈現外, 首頁必須採 &lt;a href="http://lab.hakim.se/reveal-js/"&gt;reveal.js&lt;/a&gt; 簡報格式, 而 blog 子目錄中則以 &lt;a href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; 靜態網頁格式呈現.&lt;/li&gt;
+&lt;li&gt;當課程結束後, 2016fallcpa 與 2016fallcpb 倉儲中的資料, 將會一併納入 mdecourse/2016fallcp 倉儲的 gh-pages 分支中, 因此甲班各分組的資料將位於 https://mdecourse.github.io/2016fallcp/a/g1 (以第一組為例), 而各學員的資料則希望設為 https://mdecourse.github.io/2016fallcp/a/s學員學號 (以甲班 s學員學號為例)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;實作討論&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;由於各成員倉儲內的資料都希望採瀏覽器進行檢視, 因此都必須將資料納入 gh-pages 分支中, 各成員在提交推送資料時必須特別注意, 本課程建議各成員使用的 git 圖形化工具為: &lt;a href="https://github.com/FredrikNoren/ungit"&gt;https://github.com/FredrikNoren/ungit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;各成員必須熟悉 git branch 與 git checkout 指令, 以便建立分支, 查驗目前所在分支, 並且將分支的內容簽出到近端工作目錄中.&lt;/li&gt;
+&lt;li&gt;初期各組員獨立協同下的資料合併, 可以直接在 github 網站上操作, 但是有版本內容衝突的 pull requests, 就必須拉回近端的工作目錄中進行衝突處理與測試後, 才能合併資料後, 將內容提交推送回遠端倉儲.&lt;/li&gt;
+&lt;li&gt;git submodule add repo_url local_path 執行之前, 不可自行建立倉儲中的 local_path 目錄, 而是讓 git 指令完成動作後, 以 git submodule init 起始 submodule 目錄中的資料結構, 並以 git submodule update 將子模組中對應版本的資料取回近端的工作目錄中.&lt;/li&gt;
+&lt;li&gt;各成員網頁中的 &lt;a href="http://lab.hakim.se/reveal-js/"&gt;reveal.js&lt;/a&gt; 與 &lt;a href="https://github.com/getpelican/pelican"&gt;pelican&lt;/a&gt; 靜態網頁格式, 將另外以 mdecourse/reveal 與 mdecourse/pelican 倉儲提供範例樣板資料.&lt;/li&gt;
+&lt;li&gt;期中與期末評量倉儲中, 有關各組 git submodule 更新版本對應與各學員資料的集結過程, 需要另外編寫指令或程式碼, 將一併放入 mdecourse/2016fallcp 倉儲中的 Leo Editor 專案中.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category></entry><entry><title>協同產品設計實習系列課程</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html" rel="alternate"></link><updated>2016-08-29T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-08-29:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-xi-lie-ke-cheng.html</id><summary type="html">&lt;p&gt;二十一世紀的科技發展, 拜網路普及與數位運算能力大幅提升之賜, 使得集合在不同地理位置與時區上的工程師, 執行同步或非同步協同產品開發專案的模式, 已然成為常態.&lt;/p&gt;
 
 
 &lt;p&gt;因此, 協同產品設計實習系列課程從大一的計算機程式開始, 即導入與網路相關的技術與分散式版次專案管理的概念, 並希望透過隨後的網際內容管理、電腦輔助設計實習與協同產品設計實習等課程之研習, 讓學員充分理解機械設計工程師在團隊間必須仰賴口語表達、文字表達、2D 靜態文件表達、3D 動態文件表達 (含影音多媒體文件表達)、理論分析表達與實體原型表達等六種表達方式進行溝通.&lt;/p&gt;
@@ -36,7 +69,7 @@
 &lt;p&gt;原則上, 所有選修電腦輔助設計實習課程的學員應該都已經擁有 Github 帳號, 可以直接在登入 Github 後, git clone &lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;https://github.com/mdecourse/2016fallcadp&lt;/a&gt; 倉儲資料後, 將隨後每週上課筆記寫在 2016fallcadp 倉儲對應的 wiki 資料區中, 並且設法在此一倉儲中建立 gh-pages 分支, 並且著手架構學員各自的 pelican 網誌與 &lt;a href="http://lab.hakim.se/reveal-js/"&gt;reveal.js&lt;/a&gt; 網際投影片.&lt;/p&gt;
 &lt;p&gt;至於選修 2016 Fall 計算機程式的新生, 則必須利用學校交付的 gmail 帳號, 登記 github 帳號, 然後直接利用 &lt;a href="http://8888.kmol.info"&gt;http://8888.kmol.info&lt;/a&gt; 網站, 開始第1階段的 Python3 程式課程.&lt;/p&gt;
 &lt;p&gt;計算機程式課程一開始便透過&lt;a href="http://8888.kmol.info/?user=mdecourse&amp;repo=2016fallcp&amp;name=2016springgrouping.py"&gt;網際分組程式&lt;/a&gt;, 讓學員一窺利用瀏覽器上的 Python3 程式執行修課學員分組與編排座位的程式碼與分組結果. 其中牽涉 Python3 模組的導入, 函式定義與呼叫, 數列內容排序與重複迴圈的實際應用.&lt;/p&gt;
-&lt;p&gt;而電腦輔助設計實習課程一開始則透過一台 &lt;a href="http://reprap.org/wiki/Kossel"&gt;Kossel Delta 3D printer&lt;/a&gt; 的組立, 讓學員了解目前的所謂機械產品設計, 有很大的比例都包含機電資光等跨領域的整合設計內容, 並讓各分組學員可以利用此一 3D 零件列印機, 選擇性列印各組所完成的原型設計.&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category><category term="2016FallCADP"></category></entry><entry><title>網際 3D 正齒輪傳動模擬 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html" rel="alternate"></link><updated>2016-06-01T17:16:15+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html</id><summary type="html">&lt;p&gt;Onshape 的正齒輪設計繪圖與組立, 其基本原理與先前的 2D 網際繪圖類似, 只不過在以下的 3D 正齒輪傳動組立過程, 只有 Spur Gear 功能採用 Featurescript 編寫, 雖然在 Onshape Part Studio 中, 所有的零件可以透過統一的設計變數進行控管, 但若一旦設計流程的變化超出原先 Featurescript 的表單設定範圍 (例如: SG Featurescript 中的 Offset angle 只允許 0-360 的正值角度輸入), 設計者就必須介入調整不符合表單設計的 error.&lt;/p&gt;
+&lt;p&gt;而電腦輔助設計實習課程一開始則透過一台 &lt;a href="http://reprap.org/wiki/Kossel"&gt;Kossel Delta 3D printer&lt;/a&gt; 的組立, 讓學員了解目前的所謂機械產品設計, 有很大的比例都包含機電資光等跨領域的整合設計內容, 並讓各分組學員可以利用此一 3D 零件列印機, 選擇性列印各組所完成的原型設計.&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category><category term="2016FallCADP"></category></entry><entry><title>網際 3D 正齒輪傳動模擬 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html" rel="alternate"></link><updated>2016-06-01T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni-yi.html</id><summary type="html">&lt;p&gt;Onshape 的正齒輪設計繪圖與組立, 其基本原理與先前的 2D 網際繪圖類似, 只不過在以下的 3D 正齒輪傳動組立過程, 只有 Spur Gear 功能採用 Featurescript 編寫, 雖然在 Onshape Part Studio 中, 所有的零件可以透過統一的設計變數進行控管, 但若一旦設計流程的變化超出原先 Featurescript 的表單設定範圍 (例如: SG Featurescript 中的 Offset angle 只允許 0-360 的正值角度輸入), 設計者就必須介入調整不符合表單設計的 error.&lt;/p&gt;
 
 
 &lt;p&gt;因此, 以正齒輪減速機的協同設計為例, 可以了解全面透過程式流程掌握機械設計流程的重要性, 目前在無法利用 Onshape API 進行較完整的協同產品設計架構下, 只能利用部份的網際 2D 繪圖模組進行配置, 並將 3D 零組件的定製與組裝模擬, 透過客製化的網際程式 (Python+Brython+Javascript+Jupyter) 轉為 Onshape 的 Featurescript 程式.&lt;/p&gt;
@@ -53,7 +86,7 @@
 &lt;p&gt;以下為其他各齒輪組立時 x 軸的定位方向 (紅色軸).&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201606/onshape_four_spur_gears_5.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201606/onshape_four_spur_gears_6.png" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201606/onshape_four_spur_gears_7.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪協同繪圖規劃</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html" rel="alternate"></link><updated>2016-06-01T10:32:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-06-01:kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html</id><summary type="html">&lt;p&gt;利用 Python 物件導向架構執行網際 2D 正齒輪傳動協同繪圖時, 各組員可以將各種不同繪圖元件, 建置在個人的網頁空間中, 讓其他參與協同的組員連結應用. 唯一必須注意的是, 就網際繪圖模式而言, 儘管 Brython 繪圖最終仍轉為 JavaScript, 以 Canvas 或 WebGL 完成繪圖, 但是 Python 程式碼在各自的 script 標註中屬於各自的命名空間 (此點與 Prototype based 的 JavaScript 有很大的差別), 因此以下的範例, 必須將各自在引用的 script 標註中, 以 id 命名, 然後根據 id 名稱, 在其他命名空間中以 import 引用.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201606/onshape_four_spur_gears_7.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪協同繪圖規劃</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html" rel="alternate"></link><updated>2016-05-31T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-31:kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html</id><summary type="html">&lt;p&gt;利用 Python 物件導向架構執行網際 2D 正齒輪傳動協同繪圖時, 各組員可以將各種不同繪圖元件, 建置在個人的網頁空間中, 讓其他參與協同的組員連結應用. 唯一必須注意的是, 就網際繪圖模式而言, 儘管 Brython 繪圖最終仍轉為 JavaScript, 以 Canvas 或 WebGL 完成繪圖, 但是 Python 程式碼在各自的 script 標註中屬於各自的命名空間 (此點與 Prototype based 的 JavaScript 有很大的差別), 因此以下的範例, 必須將各自在引用的 script 標註中, 以 id 命名, 然後根據 id 名稱, 在其他命名空間中以 import 引用.&lt;/p&gt;
 
 
 &lt;p&gt;以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖, 其中的漸開線正齒輪 2D 繪圖程式庫以類別建立, 並且存在 &lt;a href="http://cadlab.mde.tw/post/by/spur.js"&gt;http://cadlab.mde.tw/post/by/spur.js&lt;/a&gt;, 之所以採用 .js 命名, 主要在避開修改瀏覽器中的 MIME 對應, 可以直接在隨後的 Brython 程式中, 以 import 方式引用:&lt;/p&gt;
@@ -805,7 +838,7 @@ gear = spurmain.Spur(id)
 
 gear.spur(cx+pr1+pr2, cy, m, n2, pa, 0)
 gear.spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3)
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 3D 正齒輪傳動模擬</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html" rel="alternate"></link><updated>2016-05-28T16:04:34+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-28:kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html</id><summary type="html">&lt;p&gt;Onshape 終於正式公開 &lt;a href="https://www.onshape.com/featurescript"&gt;FeatureScript&lt;/a&gt; 以及所有內建特徵功能的&lt;a href="https://cad.onshape.com/documents/5749364ce4b0f60f1b7940fe/w/925a5467b6e725168eb9c993/e/ff3b765aacc32576f893ed23"&gt;原始碼&lt;/a&gt;, 並且同時追加了許多新的功能, 包括機構的動態模擬.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 3D 正齒輪傳動模擬</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html" rel="alternate"></link><updated>2016-05-28T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-28:kmolab/blog/wang-ji-3d-zheng-chi-lun-chuan-dong-mo-ni.html</id><summary type="html">&lt;p&gt;Onshape 終於正式公開 &lt;a href="https://www.onshape.com/featurescript"&gt;FeatureScript&lt;/a&gt; 以及所有內建特徵功能的&lt;a href="https://cad.onshape.com/documents/5749364ce4b0f60f1b7940fe/w/925a5467b6e725168eb9c993/e/ff3b765aacc32576f893ed23"&gt;原始碼&lt;/a&gt;, 並且同時追加了許多新的功能, 包括機構的動態模擬.&lt;/p&gt;
 
 
 &lt;p&gt;其中, 正好與協同產品設計實習課程進度結合的為&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab"&gt;正齒輪組&lt;/a&gt;的網際 3D 零組件設計繪圖與傳動模擬.&lt;/p&gt;
@@ -813,7 +846,7 @@ gear.spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3)
 &lt;p&gt;&lt;image src="http://chiamingyen.github.io/kmolab_data/files/201605/onshape_spur_gear_demo.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;使用者可以直接在電腦瀏覽器或平版手機上的 Onshape App, 開啟漸開線&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/2923cd50930798d8999b2ef0"&gt;正齒輪零件的 Featurescript 繪圖程式碼&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;image src="http://chiamingyen.github.io/kmolab_data/files/201605/onshape_spur_gear_featurescript.png" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;此外, 使用者也可以開啟&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab"&gt;正齒輪組立&lt;/a&gt;連結後, 自行以滑鼠右鍵選擇主動旋轉的齒輪軸, 並按下 Animate, 就可以進行齒輪組的傳動模擬.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪傳動囓合繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html" rel="alternate"></link><updated>2016-05-24T09:31:29+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-24:kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html</id><summary type="html">&lt;p&gt;&lt;a href="http://cadlab.mde.tw/post/wang-ji-ji-jie-she-ji-2d-hui-tu.html"&gt;Brython 與 Cango Javascript 繪圖程式庫&lt;/a&gt;的結合, 可以讓參與協同的成員直接在網際環境中, 利用 Python3 語法進行產品開發流程中的設計運算與繪圖.&lt;/p&gt;
+&lt;p&gt;此外, 使用者也可以開啟&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab"&gt;正齒輪組立&lt;/a&gt;連結後, 自行以滑鼠右鍵選擇主動旋轉的齒輪軸, 並按下 Animate, 就可以進行齒輪組的傳動模擬.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪傳動囓合繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html" rel="alternate"></link><updated>2016-05-23T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-23:kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html</id><summary type="html">&lt;p&gt;&lt;a href="http://cadlab.mde.tw/post/wang-ji-ji-jie-she-ji-2d-hui-tu.html"&gt;Brython 與 Cango Javascript 繪圖程式庫&lt;/a&gt;的結合, 可以讓參與協同的成員直接在網際環境中, 利用 Python3 語法進行產品開發流程中的設計運算與繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖:&lt;/p&gt;
@@ -1103,7 +1136,7 @@ spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 &lt;p&gt;Gear Theory: Gear Manual: &lt;a href="http://cad-lab.github.io/cadlab_data/files/gear_theory.pdf"&gt;http://cad-lab.github.io/cadlab_data/files/gear_theory.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Gear Manual: &lt;a href="http://cad-lab.github.io/cadlab_data/files/gear_manual.pdf"&gt;http://cad-lab.github.io/cadlab_data/files/gear_manual.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Gearbox: &lt;a href="http://cad-lab.github.io/cadlab_data/files/Gearboxes.pdf"&gt;http://cad-lab.github.io/cadlab_data/files/Gearboxes.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Gearbox Design: &lt;a href="http://cad-lab.github.io/cadlab_data/files/design_basic_gear_boxes.pdf"&gt;http://cad-lab.github.io/cadlab_data/files/design_basic_gear_boxes.pdf&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>自行車傳動 2D 鏈條繪圖 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html" rel="alternate"></link><updated>2016-05-10T12:17:38+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-10:kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html</id><summary type="html">&lt;p&gt;免費不是重點, 自由與永續才是!&lt;/p&gt;
+&lt;p&gt;Gearbox Design: &lt;a href="http://cad-lab.github.io/cadlab_data/files/design_basic_gear_boxes.pdf"&gt;http://cad-lab.github.io/cadlab_data/files/design_basic_gear_boxes.pdf&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>自行車傳動 2D 鏈條繪圖 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html" rel="alternate"></link><updated>2016-05-10T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-10:kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html</id><summary type="html">&lt;p&gt;免費不是重點, 自由與永續才是!&lt;/p&gt;
 &lt;p&gt;設計結果不是重點, 能否協同與持續改進才是!&lt;/p&gt;
 &lt;p&gt;-- 協同產品設計實習課程&lt;/p&gt;
 &lt;p&gt;本課程因為使用 Jupyter, 而不必使用 Mathematica 或 Matlab.&lt;/p&gt;
@@ -3111,419 +3144,7 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html" rel="alternate"></link><updated>2016-05-08T01:48:30+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-05-08:kmolab/blog/2015-fall-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://chiamingyen.github.io/kmolab_data/files/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_left_limit.png" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_right_limit.png" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;計算 Piston 不發生干涉的有效行程, 可採如下方法:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)&lt;/li&gt;
-&lt;li&gt;利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)&lt;/li&gt;
-&lt;li&gt;利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;計算出&lt;/a&gt;的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)&lt;/li&gt;
-&lt;li&gt;除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用&lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py"&gt;基因演算法解題&lt;/a&gt;, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;Jupyterhub 平台&lt;/a&gt;上進行運算)&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_solvespace1.png" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖一: 利用 Solvespace 中的繪圖約束條件找出右邊的極限點距離 Onshape Piston 組立原點 0.5&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_solvespace2.png" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖二: 利用 Solvespace 中的繪圖約束條件找出左邊的極限點距離 Onshape Piston 組立原點 2.23&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_solvespace3.png" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖三: 當 piston 位於左邊極限點時, AB 轉角為 105.37 度&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_analysis1.png" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖四: Jupyter 計算分析時機構各點標示圖&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_jupyter_result1.png" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖五: 利用 Jupyter 符號式結合數值分析法所得結果&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_ga_result1.png" width=600 /&gt;&lt;/p&gt;
-&lt;p&gt;圖六: 利用基因演算解題, 所得到的結果, 當 piston 位於左邊極限點時, AB 轉角為 105.7 度&lt;/p&gt;
-&lt;p&gt;若採用 &lt;a href="https://github.com/deap/deap"&gt;deap&lt;/a&gt; 與 numpy 解題 (AB 轉角極限為 105.71 度):&lt;/p&gt;
-&lt;pre class="brush: python"&gt;
-# 這裡採用 numpy 與 deap 模組解題, 使用 Genetic Algorithm 模式
-# 解的問題為 Nutcracker 左邊 connect 轉角極限
-import random
-import array
-from deap import base
-from deap import creator
-from deap import tools
-import numpy
-# for evalIntersect 函式中的 sqrt, sin, cos, pi
-from math import *
-
-# 1/4 最小化題目 type of problem
-creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
-creator.create("Individual", array.array, typecode='d', \
-               fitness=creator.FitnessMin)
-# 2/4 initilization
-# 兩個變數題目
-NDIM = 2
-toolbox = base.Toolbox()
-toolbox.register("attr_float", random.uniform, 0, 5)
-toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_float, NDIM)
-toolbox.register("population", tools.initRepeat, list, toolbox.individual)
-
-# 3/4 選擇 operator step3/4
-toolbox.register("select", tools.selRandom, k=3)
-
-# 也可以採用下列設定
-#toolbox.register("mate", tools.cxTwoPoint)
-#toolbox.register("mutate", tools.mutGaussian, mu=0, sigma=1, indpb=0.1)
-#toolbox.register("select", tools.selTournament, tournsize=3, k=3)
-
-def evalIntersect(individual):
-    t = individual[0]
-    deg = pi/180
-    theta = individual[1]*deg
-    xtarget = 0.75/2
-    ytarget = 0.5
-    x = t*sqrt(-225*sin(theta)**2 + 529)/10 - sqrt(-225*sin(theta)**2 \
-        + 529)/92 + 3*cos(theta)/2
-    y = (-3*t/2 + 123/92)*sin(theta)
-    # 適應值
-    fitness_value = pow(x-xtarget, 8)+pow(y-ytarget, 8)
-
-    # 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰
-    if t &gt; 1:
-        fitness_value += 1000
-    if t &lt; 0:
-        fitness_value += 1000
-    # 指定 theta 的範圍, 小於 2pi 大於 0, 否則給予處罰
-    if theta &gt; 2*pi:
-        fitness_value += 1000
-    if theta &lt; 0:
-        fitness_value += 1000
-    return fitness_value,
-
-toolbox.register("evaluate", evalIntersect)
-# 以上到 evaluate 為止, 為定義 operators
-
-# 4/4 以下則為 Algorithms
-def main():
-    # Differential evolution parameters
-    CR = 0.25
-    F = 1 
-    MU = 300
-    NGEN = 200   
-
-    pop = toolbox.population(n=MU);
-    hof = tools.HallOfFame(1)
-    stats = tools.Statistics(lambda ind: ind.fitness.values)
-    stats.register("avg", numpy.mean)
-    stats.register("std", numpy.std)
-    stats.register("min", numpy.min)
-    stats.register("max", numpy.max)
-
-    # Evaluate the individuals
-    fitnesses = toolbox.map(toolbox.evaluate, pop)
-    for ind, fit in zip(pop, fitnesses):
-        ind.fitness.values = fit
-
-    for g in range(1, NGEN):
-        for k, agent in enumerate(pop):
-            a,b,c = toolbox.select(pop)
-            y = toolbox.clone(agent)
-            index = random.randrange(NDIM)
-            for i, value in enumerate(agent):
-                if i == index or random.random() &lt; CR:
-                    y[i] = a[i] + F*(b[i]-c[i])
-            y.fitness.values = toolbox.evaluate(y)
-            if y.fitness &gt; agent.fitness:
-                pop[k] = y
-        hof.update(pop)
-
-
-    print("Best individual is ", hof[0], hof[0].fitness.values[0])
-
-if __name__ == "__main__":
-    main()
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;
-上述課程資料與 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=4584#more-4584"&gt;Wordpress 網頁&lt;/a&gt;上的資料內容相同, Ｗordpress 網站屬於動態的網誌, 而 &lt;a href="http://chiamingyen.github.io/kmolab/"&gt;http://chiamingyen.github.io/kmolab/&lt;/a&gt; 則是靜態網誌系統, 採用靜態網誌的優點如下:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;比較安全&lt;/li&gt;
-&lt;li&gt;比較不會過時&lt;/li&gt;
-&lt;li&gt;部署成本比較低&lt;/li&gt;
-&lt;li&gt;可在各種平台上使用&lt;/li&gt;
-&lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以下為參考用的 GA 解 Nutcracker 題目的程式碼:&lt;/p&gt;
-&lt;pre class="brush: python"&gt;
-#encoding=utf8
-# genetic.py
-#
-import random
-import operator
-# for Intersect
-from math import *
-MAXIMIZE, MINIMIZE = 11, 22
-class Individual:
-    chromosome = None
-    score = None
-    # Here the size of var depends on var_number
-    var = []
-    var_number = 2
-    for i in range(var_number):
-        var.append(0)
-    alleles = (0,1)
-    # 以下為參數可負數時的編碼考量
-    #前10為小數,後10為整數,第21則為正負號
-    #0~9表示小數,10~19表示整數,而指標第20則表示第一數的正號或負號,若為0則表示正,若為1表示負號.
-    #21~30表示第二數的小數部分,31~40則表示第二數的整數部分,第41指標則表示第二數的正號或負號
-    #42~51表示第三數的小數部分,52~61則表示第二數的整數部分,第62指標則表示第三數的正號或負號
-    # -1023 ~ 1023
-    #length = 21*var_number,若接受負數參數,則必須同步修改 20-&gt;21
-    length = 20*var_number
-    seperator = ''
-    optimization = MINIMIZE
-    def __init__(self, chromosome=None):
-        self.chromosome = chromosome or self._makechromosome()
-        self.score = None  # set during evaluation
-    def _getvar(self,chromosome=None):
-        x = 0
-        for i in range(0,self.var_number):
-            for j in range(i*20,i*20+10):
-                x +=self.chromosome[j]&lt;&lt;(j-(i*20))
-            if (x&gt;999):
-                x=999
-            x/=1000.
-            for j in range(i*20+10,i*20+20):
-                x +=self.chromosome[j]&lt;&lt;(j-(i*20+10))
-            self.var[i] = x
-        return self.var
-        ''' for -1023 ~ 1023,當設計變數可以接受負值時使用,每一變數使用21個 bit strings
-#for design variable -1023 ~1023
-        for i in range(self.var_number):
-            x = 0
-            for j in range(i*21,i*21+10):
-                x +=self.chromosome[j]&lt;&lt;(j-(i*21))
-            if (x&gt;999):
-                x=999
-            x/=1000.
-            for j in range(i*(21)+10,i*(21)+20):
-                x +=self.chromosome[j]&lt;&lt;(j-(i*21+10))
-            if(self.chromosome[i*(21)+20] == 1):
-                self.var[i] = -x
-            else:
-                self.var[i] = x
-            x = 0
-        return self.var
-        '''
-    def _makechromosome(self):
-        "makes a chromosome from randomly selected alleles."
-        return [random.choice(self.alleles) for gene in range(self.length)]
-    def evaluate(self, optimum=None):
-        "this method MUST be overridden to evaluate individual fitness score."
-        pass
-    def crossover(self, other):
-        "override this method to use your preferred crossover method."
-        return self._twopoint(other)
-    def mutate(self, gene):
-        "override this method to use your preferred mutation method."
-        self._pick(gene)
-    # sample mutation method
-    def _pick(self, gene):
-        "chooses a random allele to replace this gene's allele."
-        self.chromosome[gene] = random.choice(self.alleles)
-    # sample crossover method
-    def _twopoint(self, other):
-        "creates offspring via two-point crossover between mates."
-        left, right = self._pickpivots()
-        def mate(p0, p1):
-            chromosome = p0.chromosome[:] # 交配時,以p0的基因為基礎(複製整個 p0 的染色體內容
-            chromosome[left:right] = p1.chromosome[left:right] # 接續上一個 p0 的染色體內容,將索引 left 至 right 的內容,替換成 p1 的基因
-            #child = p1.__class__(chromosome) 這是原先的程式,但是應該子代要指向 p0 的內容才對
-            child = p0.__class__(chromosome)
-            child._repair(p0, p1)
-            return child
-        return mate(self, other), mate(other, self)
-    # some crossover helpers ...
-    def _repair(self, parent1, parent2):
-        "override this method, if necessary, to fix duplicated genes."
-        pass
-    def _pickpivots(self):
-        left = random.randrange(1, self.length-2)
-        right = random.randrange(left, self.length-1)
-        return left, right
-    #
-    # other methods
-    #
-    def __repr__(self):
-        "returns string representation of self"
-        '''
-        return '&lt;%s chromosome="%s" score=%s var=%s&gt;' % \
-               (self.__class__.__name__,
-                self.seperator.join(map(str,self.chromosome)), self.score,self._getvar(self.chromosome))
-        '''
-        return '&lt;%s score=%s var=%s&gt;' % \
-               (self.__class__.__name__,self.score,self._getvar(self.chromosome))
-    # since the __cmp__ special function is gone  use the __lt__ in stead
-    # use the expression (a &gt; b) - (a &lt; b) as the equivalent for cmp(a, b)
-    #def __cmp__(self, other):
-    # these are for python 3
-    def __cmp__(self, other):
-        if self.optimization == MINIMIZE:
-            #return cmp(self.score, other.score)
-            return (self.score &gt; other.score) - (self.score &lt; other.score)
-        else: # MAXIMIZE
-            #return cmp(other.score, self.score)
-            return (other.score &gt; self.score) - (other.score &lt; self.score)
-
-    def __lt__(self, other):
-        return self.__cmp__(other) &lt; 0
-    def __le__(self, other):
-        return self.__cmp__(other) &lt;= 0
-    def __gt__(self, other):
-        return self.__cmp__(other) &gt; 0
-    def __ge__(self, other):
-        return self.__cmp__(other) &gt;= 0 
-    def copy(self):
-        twin = self.__class__(self.chromosome[:])
-        twin.score = self.score
-        return twin
-class Environment(object):
-    x = [0]
-    y = [0]
-    def __init__(self, kind, population=None, size=100, maxgenerations=100,
-                 crossover_rate=0.90, mutation_rate=0.07, optimum=None):
-        self.kind = kind
-        self.size = size
-        self.optimum = optimum
-        self.population = population or self._makepopulation()
-        for individual in self.population:
-            individual.evaluate(self.optimum)
-        self.crossover_rate = crossover_rate
-        self.mutation_rate = mutation_rate
-        self.maxgenerations = maxgenerations
-        self.generation = 0
-        self.report()
-    def _makepopulation(self):
-        return [self.kind() for individual in range(self.size)]
-    def run(self):
-        while not self._goal():
-            self.step()
-    def _goal(self):
-        return self.generation &gt; self.maxgenerations or \
-               self.best.score == self.optimum
-    def step(self):
-        # this sort is not working with python 3.0, modification is needed
-        self.population.sort()
-        self._crossover()
-        self.generation += 1
-        self.report()
-        self.x.append(self.generation)
-        # 設定為只附加所選定範圍的值,這裡只取大於或等於 0 的 score 值
-        if self.best.score &lt;=5:
-            self.y.append(self.best.score)
-        else:
-            self.y.append(5)
-    def _crossover(self):
-        next_population = [self.best.copy()]
-        while len(next_population) &lt; self.size:
-            mate1 = self._select()
-            if random.random() &lt; self.crossover_rate:
-                mate2 = self._select()
-                offspring = mate1.crossover(mate2)
-            else:
-                offspring = [mate1.copy()]
-            for individual in offspring:
-                self._mutate(individual)
-                individual.evaluate(self.optimum)
-                next_population.append(individual)
-        self.population = next_population[:self.size]
-    def _select(self):
-        "override this to use your preferred selection method"
-        return self._tournament()
-    def _mutate(self, individual):
-        for gene in range(individual.length):
-            if random.random() &lt; self.mutation_rate:
-                individual.mutate(gene)
-    #
-    # sample selection method
-    #
-    def _tournament(self, size=8, choosebest=0.90):
-        competitors = [random.choice(self.population) for i in range(size)]
-        competitors.sort()
-        if random.random() &lt; choosebest:
-            return competitors[0]
-        else:
-            return random.choice(competitors[1:])
-    def best():
-        doc = "individual with best fitness score in population."
-        def fget(self):
-            return self.population[0]
-        return locals()
-    best = property(**best())
-    def report(self):
-        print ("="*70)
-        print ("generation: ", self.generation)
-        print ("best:       ", self.best)
-
-# 以上為 genetic.py 目前將兩者結合在一起
-#encoding=utf8
-# volume.py - useage example
-#
-# the fittest individual will have a chromosome consisting of 40 '1's
-#
-#
-#import genetic
-#此一加總函式在 volume 最大化中,並未使用
-def sum(seq):
-    def add(x,y): return x+y
-    return reduce(add, seq, 0)
-class Volume(Individual):
-    optimization = MAXIMIZE
-    def evaluate(self, optimum=None):
-        SURFACE = 80
-        # self.score is the fitness value
-        self._getvar(self.chromosome)
-
-        x = self.var[0]
-        y = self.var[1]
-        z=(SURFACE - x*y)/(2.*(x+y))
-        fitness_value = x*y*z
-
-        self.score = fitness_value
-
-    def mutate(self, gene):
-        self.chromosome[gene] = not self.chromosome[gene] # bit flip
-
-class Intersect(Individual):
-    optimization = MINIMIZE
-    def evaluate(self, optimum=None):
-        # self.score is the fitness value
-        self._getvar(self.chromosome)
-
-        t = self.var[0]
-        deg = pi/180
-        theta = self.var[1]*deg
-        xtarget = 0.75/2
-        ytarget = 0.5
-        x = t*sqrt(-225*sin(theta)**2 + 529)/10 - sqrt(-225*sin(theta)**2 + 529)/92 + 3*cos(theta)/2
-        y = (-3*t/2 + 123/92)*sin(theta)
-        # 適應值
-        fitness_value = pow(x-xtarget, 8)+pow(y-ytarget, 8)
-
-        # 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰
-        if t &gt; 1:
-            fitness_value += 1000
-        if t &lt; 0:
-            fitness_value += 1000
-        # 指定 theta 的範圍, 小於 2pi 大於 0, 否則給予處罰
-        if theta &gt; 2*pi:
-            fitness_value += 1000
-        if theta &lt; 0:
-            fitness_value += 1000
-
-        self.score = fitness_value
-
-    def mutate(self, gene):
-        self.chromosome[gene] = not self.chromosome[gene] # bit flip
-
-
-if __name__ == "__main__":
-    #env = Environment(Volume, size=500, maxgenerations=100)
-    env = Environment(Intersect, size=500, maxgenerations=100)
-    env.run()
-&lt;/pre&gt;</summary><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>導入 Brython 與 Snap.svg 網際繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html" rel="alternate"></link><updated>2016-05-03T21:46:47+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-03:kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html</id><summary type="html">&lt;p&gt;&lt;a href="http://snapsvg.io/"&gt;http://snapsvg.io/&lt;/a&gt; 是一套 SVG 繪圖程式庫, 結合 &lt;a href="http://brython.info/"&gt;http://brython.info/&lt;/a&gt; 之後, 使用者可以直接在網際環境中利用 Python3 與 SVG 進行靜態或動態模擬繪圖. 也能逐步將 &lt;a href="http://rattlecad.sourceforge.net/"&gt;http://rattlecad.sourceforge.net/&lt;/a&gt; 轉換到網際環境中. 其中, 2D 零組件繪圖可以採 SVG 完成, 而對應的 3D 零組件則可利用 &lt;a href="https://www.onshape.com"&gt;https://www.onshape.com&lt;/a&gt; 完成.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>導入 Brython 與 Snap.svg 網際繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html" rel="alternate"></link><updated>2016-05-03T21:46:47+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-03:kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html</id><summary type="html">&lt;p&gt;&lt;a href="http://snapsvg.io/"&gt;http://snapsvg.io/&lt;/a&gt; 是一套 SVG 繪圖程式庫, 結合 &lt;a href="http://brython.info/"&gt;http://brython.info/&lt;/a&gt; 之後, 使用者可以直接在網際環境中利用 Python3 與 SVG 進行靜態或動態模擬繪圖. 也能逐步將 &lt;a href="http://rattlecad.sourceforge.net/"&gt;http://rattlecad.sourceforge.net/&lt;/a&gt; 轉換到網際環境中. 其中, 2D 零組件繪圖可以採 SVG 完成, 而對應的 3D 零組件則可利用 &lt;a href="https://www.onshape.com"&gt;https://www.onshape.com&lt;/a&gt; 完成.&lt;/p&gt;
 
 
 &lt;p&gt;首先是典型的 Snap.svg 動態繪圖:&lt;/p&gt;
@@ -6564,7 +6185,7 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
 &lt;p&gt;將上述程式拆解成 scrum1 與 scrum2 兩人協同繪圖的結果:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://cdw2-ag100.rhcloud.com/ag100/scrum1_week8_abc"&gt;http://cdw2-ag100.rhcloud.com/ag100/scrum1_week8_abc&lt;/a&gt; 與 &lt;a href="http://cdw2-ladisai.rhcloud.com/ag100/scrum1_week8_abc"&gt;http://cdw2-ladisai.rhcloud.com/ag100/scrum1_week8_abc&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;版本程式的 scrum1_task1.py: &lt;a href="https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum1_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum1_task1.py&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;版本程式的 scrum2_task2.py: &lt;a href="https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖之二</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html" rel="alternate"></link><updated>2016-03-30T23:59:43+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html</id><summary type="html">&lt;p&gt;這裡要介紹的是 scrum-2 組員利用 forked cdw2 倉儲版本, git clone 到近端後, 以 git checkout gh-pages 轉到 Github Pages 對應的網頁資料上工作.&lt;/p&gt;
+&lt;p&gt;版本程式的 scrum2_task2.py: &lt;a href="https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py"&gt;https://github.com/2015fallhw/cdw2/blob/6622e2381ebb3c6f1116e5bf63096a8d74122ec7/users/s2a/g100/scrum2_task1.py&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖之二</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html" rel="alternate"></link><updated>2016-03-30T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu-zhi-er.html</id><summary type="html">&lt;p&gt;這裡要介紹的是 scrum-2 組員利用 forked cdw2 倉儲版本, git clone 到近端後, 以 git checkout gh-pages 轉到 Github Pages 對應的網頁資料上工作.&lt;/p&gt;
 
 
 &lt;p&gt;在 users/s2a/g100 目錄下建立 scrum2.leo 後, 就利用 Leo Editor 在 content 目錄中, 建立 .md 檔案, 完成後先在近端利用 local-pelican 測試結果, 若能夠正確轉換 Pelican post 目錄中的網誌, 就可以再用 gh-pages-pelican 按鈕, 將 post 目錄中轉成遠端網頁所需要的格式 (主要是讓 disqus 留言系統可以正常運作).&lt;/p&gt;
@@ -6611,7 +6232,7 @@ git push origin gh-pages
 &lt;p&gt;git add -A&lt;/p&gt;
 &lt;p&gt;git commit -m "提交訊息"&lt;/p&gt;
 &lt;p&gt;git push origin gh-pages&lt;/p&gt;
-&lt;p&gt;最後, 當組長 scrum-1 完成  scrum-2 pull request 的合併後, scrum-2 就可以利用反向 pull request 更新 scrum-2/cdw2 gh-pages 分支上的版本資料.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-30T00:44:15+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-30:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;假設 2a CD 課程中有第 100 組, 由四位組員: scrum-1, scrum-2,  scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 可以直接將本地端的 CDW2 倉儲版本資料提交推送到遠端, 其餘三人則必須透過 Pull Requests 進行協同.&lt;/p&gt;
+&lt;p&gt;最後, 當組長 scrum-1 完成  scrum-2 pull request 的合併後, scrum-2 就可以利用反向 pull request 更新 scrum-2/cdw2 gh-pages 分支上的版本資料.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>任務一 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-26T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-26:kmolab/blog/ren-wu-yi-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;假設 2a CD 課程中有第 100 組, 由四位組員: scrum-1, scrum-2,  scrum-3 與 scrum-4 所組成, 且 scrum-1 為組長. 在協同產品設計課程中, scrum-1 將會是 cdw2 倉儲的 collaborator, 可以直接將本地端的 CDW2 倉儲版本資料提交推送到遠端, 其餘三人則必須透過 Pull Requests 進行協同.&lt;/p&gt;
 
 
 &lt;p&gt;scrum-1 可以直接 git clone cdw2, 然後改版提交推送, 其他組員參與協同的方法都是先根據 &lt;a href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html"&gt;http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html&lt;/a&gt; 中的說明. 登入 Github 後, 以瀏覽器連結到 &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt; 後, 按一下右上方的  Fork 鍵後, 就可建立與原始倉儲互有關聯的"互刻"內容.&lt;/p&gt;
@@ -6639,7 +6260,7 @@ git push origin gh-pages
 &lt;p&gt;其次則是要在 Category: 中標示自己的組別, 這裡的標題為 ag100, 表示 scrum-1 組員為甲班 g100 的成員.&lt;/p&gt;
 &lt;p&gt;寫完文章後, 先將滑鼠停在 @button local pelican 節點, 然後按上方的 local-pelican 按鈕, 完成轉換為 html 後, 打開 cdw2 倉儲中 gh-pages 分支中的 index.html 檢查是否正確轉檔, 若是, 則再將滑鼠停在 @button gh-pages pelican 節點, 再按上方的 gh-pages-pelican 按鈕後, 將版本資料提交推送到 cdw2 的 gh-pages 分支中.&lt;/p&gt;
 &lt;p&gt;因為這裡要推送到 gh-pages 分支, 若以指令推送, 必須使用 git push origin gh-pages, 若是需要拉回 gh-pages 的分支版本, 則使用 git pull origin gh-pages 指令.&lt;/p&gt;
-&lt;p&gt;當 scrum-1 用戶完成 cdw2 gh-pages 分支版次資料後, 所新增的網誌文章為: &lt;a href="http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html"&gt;http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>協同流程的規劃與實踐</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html" rel="alternate"></link><updated>2016-03-23T21:24:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-23:kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html</id><summary type="html">&lt;p&gt;隨著分散式版次管理系統技術的不斷進展, 各種軟硬體協同開發流程的規劃也跟著日漸多元, 當然, 從機械設計的角度來看, &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 的推出, 或許可以讓過去許多無緣一窺大型制式 PDM 或 PLM 系統的學員, 透過免費帳號的使用, 稍微體會一個版本多方推升改版所帶來的便利.&lt;/p&gt;
+&lt;p&gt;當 scrum-1 用戶完成 cdw2 gh-pages 分支版次資料後, 所新增的網誌文章為: &lt;a href="http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html"&gt;http://2015fallhw.github.io/cdw2/post/scrum1-hui-bao-ag100-scrum1-chu-bu-hui-tu-zhu-ji-yu-lian-jie.html&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>協同流程的規劃與實踐</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html" rel="alternate"></link><updated>2016-03-23T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-23:kmolab/blog/xie-tong-liu-cheng-de-gui-hua-yu-shi-jian.html</id><summary type="html">&lt;p&gt;隨著分散式版次管理系統技術的不斷進展, 各種軟硬體協同開發流程的規劃也跟著日漸多元, 當然, 從機械設計的角度來看, &lt;a href="https://www.onshape.com"&gt;Onshape&lt;/a&gt; 的推出, 或許可以讓過去許多無緣一窺大型制式 PDM 或 PLM 系統的學員, 透過免費帳號的使用, 稍微體會一個版本多方推升改版所帶來的便利.&lt;/p&gt;
 
 
 &lt;p&gt;而在這個課程中, 我們則透過 &lt;a href="https://github.com/"&gt;Github&lt;/a&gt; 協同倉儲的運作, 從學員分組、指定組長、安排座位、各組組長設為倉儲直接協同者 (collaborator)、其他組員以 Pull Request 參與協同, 一直到本地端 &lt;a href="http://solvespace.com/"&gt;Solvespace&lt;/a&gt; 的零件輪廓繪製, 進而透過 SVG (Scalable Vector Graphics) 格式將零件斷面輪廓搬上全球資訊網, 然後以各組協同完成網際 2D 組件繪圖告一段落.&lt;/p&gt;
@@ -6865,7 +6486,7 @@ def optionaction():
     return out_string
     # 等運算或資料處理結束後, 再將相關值送到對應的 template 進行資料的展示
     #return render_template('optionaction.html', option_list1=option_list1, option_list2=option_list2)
-&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>SVG 檔案解讀</title><link href="http://chiamingyen.github.io/kmolab/blog/svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T22:06:23+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-21:kmolab/blog/svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>SVG 檔案解讀</title><link href="http://chiamingyen.github.io/kmolab/blog/svg-dang-an-jie-du.html" rel="alternate"></link><updated>2016-03-21T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-21:kmolab/blog/svg-dang-an-jie-du.html</id><summary type="html">&lt;p&gt;利用 Python 的 xml 模組, 可以讀出一個 SVG 檔案的尺寸與路徑字串.&lt;/p&gt;
 
 
 &lt;pre class="brush: python;"&gt;
@@ -6890,7 +6511,7 @@ path_strings = [path.getAttribute('d') for path
 doc.unlink()
 
 print("width:", width, "\nheight:", height, "\npath:", path_strings)
-&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="http://chiamingyen.github.io/kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T21:21:39+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-16:kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>Cango 全球資訊網繪圖程式庫</title><link href="http://chiamingyen.github.io/kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html" rel="alternate"></link><updated>2016-03-16T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-16:kmolab/blog/cango-quan-qiu-zi-xun-wang-hui-tu-cheng-shi-ku.html</id><summary type="html">&lt;p&gt;Cango 是一套 Canvas Graphics Library, 以 Javascript 編寫, 為了將它導入機械設計產品開發流程, 透過 Brython 程式呼叫.&lt;/p&gt;
 
 
 &lt;p&gt;以 Solvespace 繪製輪廓圖: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs&lt;/a&gt;&lt;/p&gt;
@@ -7061,7 +6682,7 @@ chain2(35, 0, 0, 0, 0, white, True, 4)
 chain3(70, 0, 0, 0, 0, white, True, 4)
 chain4(105, 0, 0, 0, 0, white, True, 4)
 solvespace(140, 0)
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>協同產品設計實習的網際 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-15T20:19:13+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;在這個範例中, 所有參與協同的機械設計課程學員, 透過 Github 的 pull request 機制進行協同繪圖程式開發, 而各組組長則以 collaborator 的角色負責審核各組員送出的 pull requests, 本繪圖任務中的基本單 2D 繪圖單元, 是由 4 個彼此相切的圓弧所組成, 各組必須根據幾何約束條件求出各相切點的座標後, 使用指定的網際繪圖程式庫, 著手結合各組員, 在一致的內容格式規劃下, 完成所要求的 2D 組件繪圖.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>協同產品設計實習的網際 2D 協同繪圖</title><link href="http://chiamingyen.github.io/kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html" rel="alternate"></link><updated>2016-03-15T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/xie-tong-chan-pin-she-ji-shi-xi-de-wang-ji-2d-xie-tong-hui-tu.html</id><summary type="html">&lt;p&gt;在這個範例中, 所有參與協同的機械設計課程學員, 透過 Github 的 pull request 機制進行協同繪圖程式開發, 而各組組長則以 collaborator 的角色負責審核各組員送出的 pull requests, 本繪圖任務中的基本單 2D 繪圖單元, 是由 4 個彼此相切的圓弧所組成, 各組必須根據幾何約束條件求出各相切點的座標後, 使用指定的網際繪圖程式庫, 著手結合各組員, 在一致的內容格式規劃下, 完成所要求的 2D 組件繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;任務倉儲: &lt;a href="https://github.com/2015fallhw/cdw2"&gt;https://github.com/2015fallhw/cdw2&lt;/a&gt;&lt;/p&gt;
@@ -7071,7 +6692,7 @@ solvespace(140, 0)
 &lt;p&gt;Task1 任務:&lt;/p&gt;
 &lt;p&gt;請各組利用上述協同繪圖所提供的鏈條元件輪廓, 完成下列字母排列方式中的 ABCD 4個字母繪圖, 且每一位組員在各字母中必須至少繪製一小截鏈條, 各組所完成的規劃過程與結果, 則必須在 cdw2 倉儲對應的 &lt;a href="http://2015fallhw.github.io/cdw2/"&gt;http://2015fallhw.github.io/cdw2/&lt;/a&gt; Github Pages 網頁中完成.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/bike_chain_1.jpg" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/bike_chain_2.jpg" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>WCM 電腦教室分組研究</title><link href="http://chiamingyen.github.io/kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html" rel="alternate"></link><updated>2016-03-13T12:24:53+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-13:kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html</id><summary type="html">&lt;p&gt;在網際內容管理的課程中, 有一個針對電腦教室實際的配置, 讓學員自行籌組, 然後再依據各組組員的學號排序選出組長後, 再根據各組長的學號排序決定組序, 這裡希望採用 Flask 網際框架, 並且將 Github 倉儲中的程式與 OpenShift 上的應用程式同步, 以便讓機械設計學員體會之後如何應用類似的網際流程來提升產品開發的效能.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/bike_chain_2.jpg" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>WCM 電腦教室分組研究</title><link href="http://chiamingyen.github.io/kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html" rel="alternate"></link><updated>2016-03-13T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-13:kmolab/blog/wcm-dian-nao-jiao-shi-fen-zu-yan-jiu.html</id><summary type="html">&lt;p&gt;在網際內容管理的課程中, 有一個針對電腦教室實際的配置, 讓學員自行籌組, 然後再依據各組組員的學號排序選出組長後, 再根據各組長的學號排序決定組序, 這裡希望採用 Flask 網際框架, 並且將 Github 倉儲中的程式與 OpenShift 上的應用程式同步, 以便讓機械設計學員體會之後如何應用類似的網際流程來提升產品開發的效能.&lt;/p&gt;
 
 
 &lt;p&gt;在網際內容管理的&lt;a href="https://github.com/2015fallhw/2016springwcm/wiki/%E7%B6%B2%E9%9A%9B%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%A0%94%E7%A9%B6%E4%B8%BB%E9%A1%8C"&gt;研究主題&lt;/a&gt;中, 列出與全球資訊網應用相關的軟體與硬體內容管理, 其中透過全球資訊網應用程式, 能夠讓使用者:&lt;/p&gt;
@@ -7095,7 +6716,7 @@ solvespace(140, 0)
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/simpleflask-2014openshift_2.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;上述這個基本的 Flask 程式配置流程, 請參考 &lt;a href="http://project.mde.tw/blog/yen-wang-ji-flask-cheng-shi-jia-gou.html"&gt;http://project.mde.tw/blog/yen-wang-ji-flask-cheng-shi-jia-gou.html&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;有了能夠接受網際表單的 Flask 程式後, 分別將程式與 Leo Editor 專案資料送到 Github 倉儲 &lt;a href="https://github.com/2015fallhw/simpleflask"&gt;https://github.com/2015fallhw/simpleflask&lt;/a&gt;, 然後再利用本地端的 git remote add 與 OpenShift 上的雲端程式同步 &lt;a href="http://simpleflask-2014openshift.rhcloud.com/option"&gt;http://simpleflask-2014openshift.rhcloud.com/option&lt;/a&gt;, 就能夠讓使用者直接在瀏覽器執行自動分組的流程.&lt;/p&gt;
-&lt;p&gt;有關這個版次的程式, 請參考 &lt;a href="https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45"&gt;https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>全球資訊網上的內容管理系統</title><link href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T23:16:49+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
+&lt;p&gt;有關這個版次的程式, 請參考 &lt;a href="https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45"&gt;https://github.com/2015fallhw/simpleflask/tree/c153e0a1d192138646be192c207541a527f91c45&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>全球資訊網上的內容管理系統</title><link href="http://chiamingyen.github.io/kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html" rel="alternate"></link><updated>2016-03-12T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/quan-qiu-zi-xun-wang-shang-de-nei-rong-guan-li-xi-tong.html</id><summary type="html">&lt;p&gt;這裡要舉的例子為架構在 OpenShift 平台上的 CMSimply, 目前採用 Python3 與 Cherrypy 編寫, 使用者只要建立帳號後, 將內容管理平台的原始碼, 架構在雲端平台, 馬上就能擁有一個可儲存機械設計相關內容的網站.&lt;/p&gt;
 
 
 &lt;p&gt;由於本課程的目的, 不僅要將機械設計的各式內容送到雲端上的 CMSimply, 而且還要修改 Python3 內容管理系統的程式碼, 因此必須在本地端建立 rsa 格式的 key pair.&lt;/p&gt;
@@ -7107,7 +6728,7 @@ solvespace(140, 0)
 &lt;li&gt;之後若需從 OpenShift git clone 與這把 key 對應的應用程式, OpenShift 端會利用 settings 上所登錄的 public key 與 .ssh 目錄中的 id_rsa 進行驗證, 必須通過驗證才能順利完成倉儲的 git clone.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;在 Ubuntu 平台上, 除了利用 ssh-keygen -t rsa 來建立 rsa 格式的 key pair 外, 其他步驟同 Windows.&lt;/p&gt;
-&lt;p&gt;至於在 Windows 配合 Filezilla 與 OpenShift 雲端應用程式相連時, 必須利用 pageant.exe 載入 private key 後才能通過認証, 而在 Ubuntu 則可以透過 ssh-add ~/.ssh/id_rsa, 載入對應的 private key.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>機械設計流程的內容與管理</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html" rel="alternate"></link><updated>2016-03-12T22:52:53+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-12:kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html</id><summary type="html">&lt;p&gt;機械設計流程中可能產生的內容, 可分為口語表達、文字表達、2D 圖像、3D 表達、解析表達與實體表達等六大類.&lt;/p&gt;
+&lt;p&gt;至於在 Windows 配合 Filezilla 與 OpenShift 雲端應用程式相連時, 必須利用 pageant.exe 載入 private key 後才能通過認証, 而在 Ubuntu 則可以透過 ssh-add ~/.ssh/id_rsa, 載入對應的 private key.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>機械設計流程的內容與管理</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html" rel="alternate"></link><updated>2016-03-11T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-11:kmolab/blog/ji-jie-she-ji-liu-cheng-de-nei-rong-yu-guan-li.html</id><summary type="html">&lt;p&gt;機械設計流程中可能產生的內容, 可分為口語表達、文字表達、2D 圖像、3D 表達、解析表達與實體表達等六大類.&lt;/p&gt;
 
 
 &lt;p&gt;所謂的口語表達即是在機械設計過程中採口頭方式呈現, 可以利用錄音方式將口語表達轉為 mp3, 或者採逐字稿, 轉為文字檔, 然後上傳到網際內容管理系統.&lt;/p&gt;
@@ -7225,7 +6846,7 @@ myfunction()
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>利用 Github 執行協同設計專案</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html" rel="alternate"></link><updated>2016-03-08T16:34:58+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-08:kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html</id><summary type="html">&lt;p&gt;Github 的分散式版次管理, 可以讓機械設計工程師體會非同步協同的團隊合作模式, 在眾目睽睽之下, 所有與設計相關的細節都能夠加以保留.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>利用 Github 執行協同設計專案</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html" rel="alternate"></link><updated>2016-03-09T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-09:kmolab/blog/li-yong-github-zhi-xing-xie-tong-she-ji-zhuan-an.html</id><summary type="html">&lt;p&gt;Github 的分散式版次管理, 可以讓機械設計工程師體會非同步協同的團隊合作模式, 在眾目睽睽之下, 所有與設計相關的細節都能夠加以保留.&lt;/p&gt;
 
 
 &lt;h2&gt;協同設計規劃&lt;/h2&gt;
@@ -7264,12 +6885,145 @@ myfunction()
 &lt;p&gt;course-mde-tw 用戶按下上一個畫面中的 Create pull request 按鈕後, 進入下一個畫面, 可以填寫 pull request 的標題與說明.&lt;/p&gt;
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/github_pull_request_reversing_10.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;course-mde-tw 填寫完 pull request 的請求後, 按下送出, 就可以在此一 pull request 中具備同意權, 因為版本資料是從父倉儲更新到子倉儲, 若兩端資料沒有衝突就可以直接在 Github 的畫面中, 按下 Merge pull request 自動完成合併, 畫面如下圖.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/github_pull_request_reversing_11.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>KMOL 可攜程式系統改版</title><link href="http://chiamingyen.github.io/kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html" rel="alternate"></link><updated>2016-03-03T20:54:35+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-03:kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html</id><summary type="html">&lt;p&gt;將原有的 nodejs 目錄刪除, 改用 NodeJSPortable, 位於 apps 目錄下, 仍以 start_ungit.bat 啟動&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/github_pull_request_reversing_11.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>KMOL 可攜程式系統改版</title><link href="http://chiamingyen.github.io/kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html" rel="alternate"></link><updated>2016-03-03T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-03:kmolab/blog/kmol-ke-xi-cheng-shi-xi-tong-gai-ban.html</id><summary type="html">&lt;p&gt;將原有的 nodejs 目錄刪除, 改用 NodeJSPortable, 位於 apps 目錄下, 仍以 start_ungit.bat 啟動&lt;/p&gt;
 
 
 &lt;p&gt;直接下載: 2016springkmol.7z &lt;a href="https://my.pcloud.com/publink/show?code=XZT4I4Ztpna2PMhDtVAOQKD7FI6CyfFf2H7"&gt;https://my.pcloud.com/publink/show?code=XZT4I4Ztpna2PMhDtVAOQKD7FI6CyfFf2H7&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;利用 git clone 下載: &lt;a href="https://github.com/chiamingyen/kmol2016.git"&gt;https://github.com/chiamingyen/kmol2016.git&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在電腦輔助設計室 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時 &lt;a href="http://140.130.17.17/public/fix2016.zip"&gt;下載 fix2016.zip&lt;/a&gt;.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>2016 Spring Collaborative Product Design Course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html" rel="alternate"></link><updated>2016-02-24T21:32:24+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/2016-spring-collaborative-product-design-course.html</id><summary type="html">&lt;p&gt;2016 Spring 產品設計實習課程 W1&lt;/p&gt;
+&lt;p&gt;在電腦輔助設計室 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時 &lt;a href="http://140.130.17.17/public/fix2016.zip"&gt;下載 fix2016.zip&lt;/a&gt;.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category><category term="協同產品設計實習"></category></entry><entry><title>About Lektor Content Management System</title><link href="http://chiamingyen.github.io/kmolab/blog/about-lektor-content-management-system.html" rel="alternate"></link><updated>2016-02-24T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/about-lektor-content-management-system.html</id><summary type="html">&lt;p&gt;初探 Lektor 內容管理系統, 假如它能在第1時間就支援 Python3, 應該會更棒&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="http://lucumr.pocoo.org/2015/12/21/introducing-lektor/"&gt;http://lucumr.pocoo.org/2015/12/21/introducing-lektor/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/lektor/lektor"&gt;https://github.com/lektor/lektor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/lektor"&gt;https://github.com/lektor&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lektor 的作者說, 我們與其他類似的工具都不相同: &lt;a href="https://www.getlektor.com/docs/what/"&gt;https://www.getlektor.com/docs/what/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lektor 是靜態文件網頁&lt;/p&gt;
+&lt;p&gt;也是內容管理系統&lt;/p&gt;
+&lt;p&gt;還能當作程式框架&lt;/p&gt;
+&lt;p&gt;可以協同, 也允許同步&lt;/p&gt;
+&lt;p&gt;有人說, Lektor 很像 &lt;a href="http://urubu.jandecaluwe.com/"&gt;http://urubu.jandecaluwe.com/&lt;/a&gt;, 但有更好的管理環境&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.getlektor.com/docs/what/"&gt;https://www.getlektor.com/docs/what/&lt;/a&gt; 網站的資料就放在 &lt;a href="https://github.com/lektor/lektor-website"&gt;https://github.com/lektor/lektor-website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只不過, 目前的 Desktop 應用程式只能用在 OsX 系統, 而 Python 也只支援 2.7 版, 真是可惜!&lt;/p&gt;
+&lt;p&gt;有關目前只能支援 Python 2.7 的情形, 幾乎就與當年 Flask 推出時的情況一樣, 也許作者對於 Python 2.7 版比較熟, 可能要再等一陣子, 才能在 Python3 的環境中使用了.&lt;/p&gt;
+&lt;p&gt;所以, 現階段, 想要靜態網頁系統, 而且自外於 Pelican: &lt;a href="https://github.com/getpelican/pelican"&gt;https://github.com/getpelican/pelican&lt;/a&gt;, 只能先從 &lt;a href="http://urubu.jandecaluwe.com/"&gt;http://urubu.jandecaluwe.com/&lt;/a&gt; 看起.&lt;/p&gt;
+&lt;p&gt;另外, 假如想要脫離 Python3 一些些, 可以從 &lt;a href="https://github.com/meteor/meteor"&gt;https://github.com/meteor/meteor&lt;/a&gt; 入手.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2016 Spring CD Task0</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-cd-task0.html" rel="alternate"></link><updated>2016-02-23T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-23:kmolab/blog/2016-spring-cd-task0.html</id><summary type="html">&lt;p&gt;這個實習任務的目的, 在讓學員根據分組與電腦教室座位編排的問題, 進行思考, 如何以協同方式或流程, 有效完成任務&lt;/p&gt;
+
+
+&lt;p&gt;學期伊始, 一如往常, 各班學員以每 6 人一組為原則, 在 Cadlab 電腦教室安排固定座位, 但是 2016 Spring 開始, 儘管允許學員自行編組, 但是同組學員卻希望故意錯開座位, 讓所有爾後各組的產品設計解題都能夠儘量透過資訊與通訊系統完成, 而且所有溝通流程與內容都能夠存在產品開發專案中.&lt;/p&gt;
+&lt;p&gt;首先採用 &lt;a href="https://ethercalc.tw/"&gt;https://ethercalc.tw/&lt;/a&gt; 讓所有上課學員, 以即時同步模式, 填入分組資料, 若以 2a 班級為例, 分組資料中只填入學員學號, 則可以直接從瀏覽器畫面中複製分組資料, 放入 SciTE 中, 存為 2016_cd_2a_1.txt, 若利用 ethercalc 的 clipboard 格式轉檔, 可以存為 csv 格式, 存為 2016_cd_2a_2.txt, 且從學校開課前學員選課資料, 可得選課學員學號名單, 存為 2016_cd_2a_3.txt.&lt;/p&gt;
+&lt;p&gt;Task0 的任務, 就是以各班協同分組後所取得的這 3 個檔案開始, 依據下列敘述, 完成各班的 Cadlab 電腦教室座位表, 讓每一位學員都能夠知道所被分配的學期固定座位, 並在爾後上課依序入座.&lt;/p&gt;
+&lt;p&gt;任務描述:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每組以 6 人為原則, 至少 4 人, 至多 7 人&lt;/li&gt;
+&lt;li&gt;各組學員, 以學號遞增排序後, 排序第1者為組長, 負責代表該組與其他組進行溝通&lt;/li&gt;
+&lt;li&gt;各組的班級分組序號, 則依據各組組長的學號, 再進行各組比序, 以遞增方式排列, 排序第1者為第1組, 其餘依序定下各組序號組別&lt;/li&gt;
+&lt;li&gt;Cadlab 電腦教室的配置為每列 9 排, 共有 7 列, 因此若每人一台電腦排座位, 可以容納 63 名學員&lt;/li&gt;
+&lt;li&gt;固定座位命名方式, 以面對講台的最右邊為第1排, 以最靠近講台者為第1列&lt;/li&gt;
+&lt;li&gt;一旦各組依照學員學號排序定組序後, 第1組的第1名同學, 從第1排第1列開始固定座位, 接著排第二組的第1位同學, 排在第1排的第2列座位, 然後將第三組的第1位同學, 排在第1排的第3列座位, 依此類推&lt;/li&gt;
+&lt;li&gt;座位安排中, 第1排排至第七列後, 則接著排在第2排的第1列座位上, 且各組若不及 7 位學員時, 則該座位由下一組的順位同學遞補&lt;/li&gt;
+&lt;li&gt;完成座位編排後, 必須能夠轉為網頁格式, 放入各組的協同倉儲所對應的 gh-pages 網頁或 OpenShift 網頁中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;可能的任務變化:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;與上述編排座位的問題類似, 在產品開發過程中, 許多設計參數可能因為特定協同團隊的意見而變更&lt;/li&gt;
+&lt;li&gt;上述座位編排問題, 可能從學號遞增排序, 改為遞減排序或亂數排序&lt;/li&gt;
+&lt;li&gt;可能從原先的以排 (column) 為主 (也就是先排第1排, 之後排第2排), 改為以列 (row) 為主 (也就是先排第1列, 之後排第2列)&lt;/li&gt;
+&lt;li&gt;假如電腦教室的配置更動, 從 9 排 7 列改為其他不同配置時, 整個座位安排流程, 就必須因應改變&lt;/li&gt;
+&lt;li&gt;換言之, 假如上述問題並非採用電腦運算的方法完成, 而以人工或類比的方式進行, 不僅耗費時間, 容易出錯, 而且一旦相關原則變更, 都將重新勞師動眾一番&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;技術回顧:&lt;/p&gt;
+&lt;p&gt;針對上述問題, 若希望利用 Python3 進行解題, 需要運用下列相關函式、方法或模組:&lt;/p&gt;
+&lt;p&gt;with open ... as&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://openhome.cc/Gossip/Python/WithAs.html"&gt;http://openhome.cc/Gossip/Python/WithAs.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;readlines&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/tutorial/inputoutput.html"&gt;https://docs.python.org/3.4/tutorial/inputoutput.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;for ... in range&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/tutorial/controlflow.html?highlight=loop#for-statements"&gt;https://docs.python.org/3.4/tutorial/controlflow.html?highlight=loop#for-statements&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;len&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html?#len"&gt;https://docs.python.org/3.4/library/functions.html?#len&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;append&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/tutorial/datastructures.html"&gt;https://docs.python.org/3.4/tutorial/datastructures.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;split&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/stdtypes.html#str.split"&gt;https://docs.python.org/3.4/library/stdtypes.html#str.split&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;list&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#func-list"&gt;https://docs.python.org/3.4/library/functions.html#func-list&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;sorted&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#sorted"&gt;https://docs.python.org/3.4/library/functions.html#sorted&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;filter&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#filter"&gt;https://docs.python.org/3.4/library/functions.html#filter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;None, True, not&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/c-api/none.html"&gt;https://docs.python.org/3.4/c-api/none.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/constants.html#True"&gt;https://docs.python.org/3.4/library/constants.html#True&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/reference/expressions.html#not"&gt;https://docs.python.org/3.4/reference/expressions.html#not&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;str&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#func-str"&gt;https://docs.python.org/3.4/library/functions.html#func-str&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;print&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#print"&gt;https://docs.python.org/3.4/library/functions.html#print&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;g.es&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://leoeditor.com/tutorial-scripting.html"&gt;http://leoeditor.com/tutorial-scripting.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;zip_longest&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest"&gt;https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>computational thinking and digitally literate</title><link href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
+
+
+&lt;p&gt;&lt;a href="https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study"&gt;https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;computational thinking and digitally literate&lt;/p&gt;
+&lt;p&gt;運算思維與數位化教育&lt;/p&gt;
+&lt;p&gt;Computing has deep links with mathematics, science and design and technology, and provides insights into both natural and artificial systems.&lt;/p&gt;
+&lt;p&gt;運算與數學、科學、設計及科技都有很緊密的關聯, 能讓我們充份了解自然或人造的系統.&lt;/p&gt;
+&lt;p&gt;Computing also ensures that pupils become digitally literate – able to use, and express themselves and develop their ideas through, information and communication technology – at a level suitable for the future workplace and as active participants in a digital world.&lt;/p&gt;
+&lt;p&gt;運算同時確保學習者俱備數位認知, 能夠運用、表達並透過資訊與通訊科技開展理念, 並在未來的數位世界職場中成為積極的參與者.&lt;/p&gt;
+&lt;p&gt;Aims:&lt;/p&gt;
+&lt;p&gt;運算教育的目標:&lt;/p&gt;
+&lt;p&gt;can understand and apply the fundamental principles and concepts of computer science, including abstraction, logic, algorithms and data representation&lt;/p&gt;
+&lt;p&gt;能夠了解並應用電腦科學的基本原理與概念, 包括抽象、邏輯, 演算法, 以及數據表達.&lt;/p&gt;
+&lt;p&gt;can analyse problems in computational terms, and have repeated practical experience of writing computer programs in order to solve such problems&lt;/p&gt;
+&lt;p&gt;能夠透過運算術語分析問題, 並且運用多重的程式編寫實務經驗, 來解決問題.&lt;/p&gt;
+&lt;p&gt;can evaluate and apply information technology, including new or unfamiliar technologies, analytically to solve problems&lt;/p&gt;
+&lt;p&gt;能夠應用資訊科技, 對全新或原本並不熟悉的科技進行評量, 能夠採解析方法解決各種問題.&lt;/p&gt;
+&lt;p&gt;are responsible, competent, confident and creative users of information and communication technology&lt;/p&gt;
+&lt;p&gt;成為肯負責、能勝任、具備信心與創意的資訊及通信科技使用者.&lt;/p&gt;</summary><category term="運算思維"></category><category term="數位化教育"></category></entry><entry><title>2016 Spring Web based Content Management</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html" rel="alternate"></link><updated>2016-02-21T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-web-based-content-management.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理 W1&lt;/p&gt;
+
+
+&lt;h2&gt;2016 Spring 網際內容管理:&lt;/h2&gt;
+&lt;h3&gt;可攜套件倉儲:&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/chiamingyen/kmol2016"&gt;https://github.com/chiamingyen/kmol2016&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;kmol2016 下載:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX"&gt;https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallhw/2016springwcm"&gt;https://github.com/2015fallhw/2016springwcm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/2016springwcm/"&gt;http://2015fallhw.github.io/2016springwcm/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;網際繪圖程式庫 (與 CD 課程共用): &lt;a href="https://github.com/2015fallhw/arcidau"&gt;https://github.com/2015fallhw/arcidau&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;http://2015fallhw.github.io/arcidau/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;結合 &lt;a href="http://reeborg.ca/"&gt;http://reeborg.ca/&lt;/a&gt; 與 &lt;a href="https://codemirror.net/"&gt;https://codemirror.net/&lt;/a&gt; 還有 &lt;a href="https://github.com/google/blockly"&gt;https://github.com/google/blockly&lt;/a&gt;,  我們能否自行打造類似 &lt;a href="https://studio.code.org/hoc/2"&gt;https://studio.code.org/hoc/2&lt;/a&gt; 的網站, 並且逐步建構泛用型網際 2D/3D 機械設計資源中心, 以探索、儲存與開發機械設計相關內容的網站邁進.&lt;/p&gt;
+&lt;p&gt;參考:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/josephg/Chipmunk-js"&gt;https://github.com/josephg/Chipmunk-js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/viblo/pymunk"&gt;https://github.com/viblo/pymunk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/user/thang010146/videos"&gt;https://www.youtube.com/user/thang010146/videos&lt;/a&gt; (使用 AutoDesk Inventor 建置)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZO2f4ZQTLgWWIyTiuLdB3vkcuutS65plv7"&gt;機構介紹 1&lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZI2f4ZdR1tblX7Tj0Wf6glOgW5fjSG6LYV"&gt;機構介紹 2&lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZa2f4Z1faO9LKQUlQJhJkCSeQQzmHanqfy"&gt;機構介紹 3 &lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZ32f4ZMrcoB5nWPC4coh9yQAaXSfbFuivk"&gt;機構介紹 4 &lt;/a&gt; (pdf)&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.algodoo.com/"&gt;http://www.algodoo.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linkage &lt;a href="http://chiamingyen.github.io/linkage/"&gt;http://chiamingyen.github.io/linkage/&lt;/a&gt; 操作步驟:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按下 c 刪除畫面所有內容&lt;/li&gt;
+&lt;li&gt;利用滑鼠左鍵, 在螢幕點出4個四連桿的4個關鍵點&lt;/li&gt;
+&lt;li&gt;利用滑鼠左鍵, 點選第一個點 ,令其變為藍色&lt;/li&gt;
+&lt;li&gt;再以滑鼠左鍵, 點選第1桿件的第二個點, 滑鼠按下後, 先不要放開, 等左手按下 Alt 後, 並讓 Alt 鍵與滑鼠左鍵同時放開, 就可以順利利用第1點與第2點建立一個連桿&lt;/li&gt;
+&lt;li&gt;利用相同方法 ,建立第2與第3可動桿&lt;/li&gt;
+&lt;li&gt;以滑鼠左鍵, 選擇第1點, 然後按下 f 鍵, 表示要固定這個點, 此時點的顏色轉為紅色, 並且釋出其對應的自由度&lt;/li&gt;
+&lt;li&gt;再用相同方法 ,固定第四點&lt;/li&gt;
+&lt;li&gt;選擇要追蹤的點, 然後按下 t (tracking)&lt;/li&gt;
+&lt;li&gt;機構的作動則依靠, 選追蹤點, 左手按住 Shift 鍵, 然後移動滑鼠位置, 讓追蹤點隨滑鼠移動, 即可留下特定點的運動軌跡.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;歷年課程回顧&lt;/h2&gt;
+&lt;h3&gt;2015 Spring 網際內容管理:&lt;/h3&gt;
+&lt;p&gt;Wordpress: &lt;a href="http://wordpress-2015course.rhcloud.com/?cat=2"&gt;http://wordpress-2015course.rhcloud.com/?cat=2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86"&gt;CMSimply 網站&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/coursemdetw/2015wcm"&gt;https://github.com/coursemdetw/2015wcm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gitbook: &lt;a href="https://www.gitbook.com/book/coursemde/2015wcm"&gt;https://www.gitbook.com/book/coursemde/2015wcm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vimeo 教學影片: &lt;a href="https://vimeo.com/tag:2015wcm"&gt;https://vimeo.com/tag:2015wcm&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2016 Spring Collaborative Product Design Course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-collaborative-product-design-course.html" rel="alternate"></link><updated>2016-02-21T10:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-collaborative-product-design-course.html</id><summary type="html">&lt;p&gt;2016 Spring 產品設計實習課程 W1&lt;/p&gt;
 
 
 &lt;h2&gt;2016 Spring 協同產品設計實習:&lt;/h2&gt;
@@ -7351,23 +7105,791 @@ myfunction()
 &lt;h3&gt;2012 Spring 協同產品設計實習:&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://blog.kmol.info/indexd06b.html?cat=8&amp;amp;paged=3"&gt;http://blog.kmol.info/indexd06b.html?cat=8&amp;amp;paged=3&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;2011 Spring 協同產品設計實習:&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4"&gt;http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>About Lektor Content Management System</title><link href="http://chiamingyen.github.io/kmolab/blog/about-lektor-content-management-system.html" rel="alternate"></link><updated>2016-02-24T15:30:43+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/about-lektor-content-management-system.html</id><summary type="html">&lt;p&gt;初探 Lektor 內容管理系統, 假如它能在第1時間就支援 Python3, 應該會更棒&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4"&gt;http://blog.kmol.info/index8040.html?cat=8&amp;amp;paged=4&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html" rel="alternate"></link><updated>2016-01-10T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/2015-fall-final-schedule.html</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
+&lt;p&gt;最後資料改版期限: 2016.01.20 (星期三) 24:00&lt;/p&gt;
+&lt;p&gt;評分流程:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;從各班個人連結頁面中 (&lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;2a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;2b&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1b&lt;/a&gt;), 進入各學員在各班倉儲中對應的&lt;strong&gt;個人 gh-pages 網頁&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;從上述頁面右下方的 Blogroll 中&lt;strong&gt;最下方&lt;/strong&gt;連結 (名稱為"學號 個人網頁"), 進入學員個人單獨的 gh-pages 網頁&lt;/li&gt;
+&lt;li&gt;根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
+&lt;li&gt;從各班的協同網頁中, 各組所公佈的分組報告中的 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
+&lt;li&gt;cadp 課程另外將參酌學員所完成的 &lt;strong&gt;Solvespace 零件檔案&lt;/strong&gt;, &lt;strong&gt;Creo Parametric 零組件檔案&lt;/strong&gt;, Onshape 零組件檔案評分.&lt;/li&gt;
+&lt;/ol&gt;
 
 
-&lt;p&gt;&lt;a href="http://lucumr.pocoo.org/2015/12/21/introducing-lektor/"&gt;http://lucumr.pocoo.org/2015/12/21/introducing-lektor/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/lektor/lektor"&gt;https://github.com/lektor/lektor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/lektor"&gt;https://github.com/lektor&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lektor 的作者說, 我們與其他類似的工具都不相同: &lt;a href="https://www.getlektor.com/docs/what/"&gt;https://www.getlektor.com/docs/what/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Lektor 是靜態文件網頁&lt;/p&gt;
-&lt;p&gt;也是內容管理系統&lt;/p&gt;
-&lt;p&gt;還能當作程式框架&lt;/p&gt;
-&lt;p&gt;可以協同, 也允許同步&lt;/p&gt;
-&lt;p&gt;有人說, Lektor 很像 &lt;a href="http://urubu.jandecaluwe.com/"&gt;http://urubu.jandecaluwe.com/&lt;/a&gt;, 但有更好的管理環境&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.getlektor.com/docs/what/"&gt;https://www.getlektor.com/docs/what/&lt;/a&gt; 網站的資料就放在 &lt;a href="https://github.com/lektor/lektor-website"&gt;https://github.com/lektor/lektor-website&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;只不過, 目前的 Desktop 應用程式只能用在 OsX 系統, 而 Python 也只支援 2.7 版, 真是可惜!&lt;/p&gt;
-&lt;p&gt;有關目前只能支援 Python 2.7 的情形, 幾乎就與當年 Flask 推出時的情況一樣, 也許作者對於 Python 2.7 版比較熟, 可能要再等一陣子, 才能在 Python3 的環境中使用了.&lt;/p&gt;
-&lt;p&gt;所以, 現階段, 想要靜態網頁系統, 而且自外於 Pelican: &lt;a href="https://github.com/getpelican/pelican"&gt;https://github.com/getpelican/pelican&lt;/a&gt;, 只能先從 &lt;a href="http://urubu.jandecaluwe.com/"&gt;http://urubu.jandecaluwe.com/&lt;/a&gt; 看起.&lt;/p&gt;
-&lt;p&gt;另外, 假如想要脫離 Python3 一些些, 可以從 &lt;a href="https://github.com/meteor/meteor"&gt;https://github.com/meteor/meteor&lt;/a&gt; 入手.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cd-course.html" rel="alternate"></link><updated>2016-02-24T10:43:59+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/2016-cd-course.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
+&lt;p&gt;2015 Fall 電腦輔助設計實習課程甲班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cadpa 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cadpa 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcadpa"&gt;http://2015fallhw.github.io/2015fallcadpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;https://github.com/2015fallhw/2015fallcadpa/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2015 Fall 電腦輔助設計實習課程乙班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cadpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cadpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcadpb"&gt;http://2015fallhw.github.io/2015fallcadpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;https://github.com/2015fallhw/2015fallcadpb/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2015 Fall 計算機程式課程甲班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpa 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cpa 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpa"&gt;http://2015fallhw.github.io/2015fallcpa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;https://github.com/2015fallhw/2015fallcpa/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2015 Fall 計算機程式課程乙班:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpb"&gt;http://2015fallhw.github.io/2015fallcpb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpb/wiki"&gt;https://github.com/2015fallhw/2015fallcpb/wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-01-10T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
+&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CP 課程 part2 影片摘要:&lt;/p&gt;
+&lt;h2&gt;CP W12&lt;/h2&gt;
+&lt;h3&gt;介紹從 fix.bat 的搭建到猜顏色遊戲程式的編寫&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/147818514" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147818514"&gt;2015fallcp_b_w12_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h2&gt;CP W15&lt;/h2&gt;
+&lt;h3&gt;介紹近端系統的建立與啟動, Python3 指令整理, 猜數字與猜顏色遊戲的流程圖, Brython 網頁繪圖&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/150000693" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150000693"&gt;2015cp_w15_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CP W17&lt;/h2&gt;
+&lt;h3&gt;說明如何使用 Python 函式, 以及如何進行 Brython 網頁動態繪圖&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/151096089" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151096089"&gt;2015fallcpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/151109576" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151109576"&gt;2015fallcp_w17b&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html" rel="alternate"></link><updated>2016-01-10T10:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/2015-fall-cp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part1&lt;/p&gt;
+&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CP 課程 part1 影片摘要:&lt;/p&gt;
+&lt;h2&gt;CP W2&lt;/h2&gt;
+&lt;h3&gt;2015 Fall 計算機程式可攜環境介紹&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140380091" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140380091"&gt;2015cp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h3&gt;說明如何利用 python -m http.server 分享近端檔案&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;介紹如何利用 fix.bat 修補 C 槽既有的可攜程式系統, 說明 SciTE 如何執行 Python3 程式, 如何利用 gh-pages 分支網頁繳交作業&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140383708" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140383708"&gt;2015cp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;介紹如何從可攜系統的修補與啟動, 到如何利用 Github Pages 的網頁來繳交各週作業&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140394246" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140394246"&gt;2015cp_b_w4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;2015 Fall 課程工作與環境介紹&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140874547" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140874547"&gt;2015Fall 使用環境與工具介紹&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;英文打字的指法練習介紹, 說明 Github 倉儲的建立使用與刪除.&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140876400" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140876400"&gt;Github 倉儲建立, 使用與刪除&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;介紹 Github 倉儲分支的建立與使用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140878456" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140878456"&gt;Github 倉儲分支建立與使用&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CP W3&lt;/h2&gt;
+&lt;h3&gt;隨身程式系統的應用再提醒 (fix.zip), Leo Editor, Pelican, Markdown 模組的安裝設定與啟動, notebook.py 中編碼的設定&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141129640" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141129640"&gt;2015fall_cp_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/141142727" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141142727"&gt;2015cp_w3_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/141145747" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141145747"&gt;2015cp_w3_b3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/141144113" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141144113"&gt;2015cp_w3_b2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明工程師的工作分類, 工程與科學的相輔相成, 解釋何以人文是工程師的養份, 了解科學在探究自然現況, 工程則需面對自然挑戰, 解決人文想像與需求&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141131417" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141131417"&gt;2015fall_cp_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何利用 Github 建立倉儲, 起始倉儲, git clone 倉儲, 建立分支, 切換 gh-pages 分支, 提交 gh-pages 分支版本, 推送分支版本&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141132740" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141132740"&gt;2015fall_cp_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明 Python 程式執行模式, 可以採互動式執行, SciTE 環境下執行, Jupyter 網頁 noteook 環境下執行, Brython 瀏覽器中執行等&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141134146" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141134146"&gt;2015fall_cp_w3_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CP W5&lt;/h2&gt;
+&lt;h3&gt;說明計算機程式作為電腦輔助與協同產品設計系列課程的先導課程, 必須在學習 Python3 程式語法的同時, 架構一個可以永續改進使用的系統&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/142582837" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142582837"&gt;2015cp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;fix.zip 內容的細步流程介紹, 從 markdown 透過 Pelican 指令的執行, 轉換為放上 Github Pages 網頁的 html 檔案資料, liquid_tags 延伸程式的應用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/142584067" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142584067"&gt;2015cp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CP W6&lt;/h2&gt;
+&lt;h3&gt;介紹英文教學影片的字幕所在位置, 說明如利用 VLC 在近端播放教學影片&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/143330980" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143330980"&gt;2015cp_w6_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何將各學員的作業整合到全班協同倉儲, 自行新增為全班倉儲的協同者&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/143337293" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337293"&gt;2015cp_w6_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/143345717" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143345717"&gt;2015cp_w6_b_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;示範如何修正內含 git 衝突標示的 Leo Editor 檔案&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/143337483" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337483"&gt;2015cp_w6_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CP W7&lt;/h2&gt;
+&lt;h3&gt;介紹如何建立有效率的機械設計工程師可攜程式環境 (Anaconda Python based), 學習計算機程式的概念, 認識程式設計與機械設計工程師角色間的關係&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/144078159" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144078159"&gt;2015_cp_w7_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明近端與 Jupyter 環境的 Python 程式執行, print 與 for 迴圈應用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/144080408" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144080408"&gt;2015_cp_w7_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何將計算機程式的內容放到 gh-pages 網頁&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/144081268" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144081268"&gt;2015_cp_w7_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何利用 git reset -- hard 版本編號, 回復舊版本資料&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何修補被弄亂的全班倉儲&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-2.html" rel="alternate"></link><updated>2016-01-10T09:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/2015-fall-cadp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
+&lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CADP 課程 part2 影片摘要:&lt;/p&gt;
+&lt;h2&gt;CADP W10&lt;/h2&gt;
+&lt;h3&gt;利用電腦解決機械設計工程師所面臨的各種問題&lt;/h3&gt;
+&lt;p&gt;電腦輔助設計主要探討工程師該如何利用電腦解決所面臨的各種問題, 這些問題存在於人的各種活動當中, 而人的活動可以從3個不同的軸向來加以探討, 也就是:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;人文的軸向, 其中包括與人類思想層面有關的各種活動, 也就是文學, 宗教, 音樂與藝術等活動.&lt;/li&gt;
+&lt;li&gt;科學的軸向, 其中牽涉到人所處的自然環境, 科學家主要在利用系統方法與工具, 探究存在自然界的各種原理原則, 而工程師在解決問題時, 必須面對自然界的各項挑戰, 依據各種已知的科學方法, 從人文的角度出發, 創造各種產品與服務, 來改善人的生存環境, 提升人的生活價值.&lt;/li&gt;
+&lt;li&gt;產品與服務的軸向, 此一軸向的活動, 即是工程師以人文想像層面的內容作為養份, 面對自然環境, 以科學認知及方法, 創造各種產品與服務的項目.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;電腦在工程解題所扮演的角色:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;提升資訊的傳輸效能, 利用網路, Git (2005 之後), Github (2008 之後) 讓數位資訊的傳輸更有效能.&lt;/li&gt;
+&lt;li&gt;強化文字、視覺與口語的溝通效率, 以隨選或即時媒體, 讓協同成員互通想法, 闡述設計, 激發創意.&lt;/li&gt;
+&lt;li&gt;簡化數據與資料的收集與儲存, 搜索引擎與資料庫的搭配使用.&lt;/li&gt;
+&lt;li&gt;支援各種設計與運算分析所需要的軟硬體配備, CAD, CAE, 虛擬實境, 擴增實境, 平行運算等技術的支援.&lt;/li&gt;
+&lt;li&gt;支援各種層面的製造規劃與管理, CAM, Computer Aided Process Planning 等.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe src="https://player.vimeo.com/video/145820006" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/145820006"&gt;2015cadp_w10_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h3&gt;介紹可攜程式系統的搭建流程與細節&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;首先下載與操作系統對應的 Miniconda (使用 Python3)&lt;/li&gt;
+&lt;li&gt;利用 conda install pip&lt;/li&gt;
+&lt;li&gt;利用 pip install pelican Markdown 安裝 pelican 與 Markdown 模組&lt;/li&gt;
+&lt;li&gt;可以利用 pip uninstall leo 移除先前所安裝的 Leo Editor 模組&lt;/li&gt;
+&lt;li&gt;利用 conda install pyqt (由 conda 自行選擇可以與既有系統相容的 pyqt 版本)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe src="https://player.vimeo.com/video/145825547" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/145825547"&gt;2015cadp_w10_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W11&lt;/h2&gt;
+&lt;h3&gt;fix.zip 修補流程再介紹, 說明電腦輔助機械設計的目標&lt;/h3&gt;
+&lt;p&gt;將隨身碟中的資料, 複製到電腦硬碟, 然後再利用 start.bat 啟動硬碟上的可攜程式系統.&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/146592105" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/146592105"&gt;2015fallcadpw11_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;啟動存放在全班倉儲網頁中的分組報告&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/146593944" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/146593944"&gt;2015fallcadpw11_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W12&lt;/h2&gt;
+&lt;h3&gt;fix.bat 的詳細介紹, Leo Editor 的近端 pip install 應用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/147276192" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147276192"&gt;2015cadpb_w12_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;利用各自 user 目錄下的 Leo Editor 檔案, 發表位於全班 gh-pages 網頁的分組報告, 以電腦輔助方法管理 reveal.js 投影片中的學員學號註記, 介紹網頁式正齒輪齒面寬輔助設計, 說明正齒輪囓合繪製與組合的靜態繪圖與動態繪圖原理&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/147279887" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147279887"&gt;2015cadpb_w12_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W13&lt;/h2&gt;
+&lt;h3&gt;fix.bat 環境修補複習&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/148455580" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/148455580"&gt;cadpaw13_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何利用各學員 user/學號 目錄下的 .leo 檔案發表分組報告, 介紹如何利用 Github pages 展示零組件的 .stl 檔案&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/148458668" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/148458668"&gt;cadpaw13_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W14&lt;/h2&gt;
+&lt;h3&gt;介紹Creo Parametric 零件轉檔方法, gh-pages 網頁上的零件展示, Binary 與 ASCII STL 檔案格式介紹&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/148825230" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/148825230"&gt;2015cadp_w14_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;Onshape 介紹, 開始利用 OnShape 繪製 Nutcracker 零組件&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/149359397" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/149359397"&gt;2015cadp_w14_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W15&lt;/h2&gt;
+&lt;h3&gt;說明如何利用 Onshape, 以雲端協同方式繪製 Nutcracker 零件, 組立 Nutcracker 零件&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/149940498" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/149940498"&gt;2015cadp_w15_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W16&lt;/h2&gt;
+&lt;h3&gt;介紹 Nutcracker 在 Onshape 環境中如何進行組立, 進行各種 Onshape 組立約束條件的細部特性討論&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/150140635" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150140635"&gt;2015fall_cadp_b_w16&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;說明如何利用 Solvespace 分析 Nutcraker 機構的 Piston 滑動行程極限&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/150401255" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150401255"&gt;2015fallcadp_a_w16_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W17&lt;/h2&gt;
+&lt;h3&gt;Nutcracker 機構滑動 Piston 零件的滑動行程範圍分析, 說明如何以 Solvespace 圖解法, 以 Sympy 符號及數值分析推導機構邊界直線方程式, 或採基因演算法進行分析&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/150636968" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150636968"&gt;2015fall_cadpb_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/150985277" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-1.html" rel="alternate"></link><updated>2016-01-10T08:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/2015-fall-cadp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
+&lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;與&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2015 Fall CADP 課程 part1 影片摘要:&lt;/p&gt;
+&lt;h2&gt;CADP W2&lt;/h2&gt;
+&lt;h3&gt;介紹可攜程式環境的下載與使用&lt;/h3&gt;
+&lt;p&gt;此一系統包括 Python3 程式環境, Leo Editor, Jupyter, 而每週作業則利用 reveal.js 製作網頁式投影片, 利用 Pelican 產生靜態網頁, 並且讓各學員可以在個人倉儲 gh-pages 與全班倉儲 gh-pages 網頁上來呈現各階段所完成的作業內容.&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/139886319" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139886319"&gt;2015fallcadp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+
+
+&lt;h3&gt;利用電腦輔助方法, 善用 USB 客製化資料與 C 槽的既有隨身系統, 設法修改 C 槽啟動的 start.bat 批次檔案, 建立符合需求的可攜程式環境.&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/139890840" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139890840"&gt;2015cadp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;介紹 reveal.js 網頁式投影片的使用方法, 介紹 Github pages 倉儲分支 gh-pages 的用法.&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/139892322" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139892322"&gt;2015cadp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;複習倉儲分支之間的切換方法 (git checkout master 或 git checkout gh-pages)&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/139893872" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139893872"&gt;2015cadp_w2_6&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;Github 倉儲中 Leo Editor 5.1 版 @clean 節點指令與 reveal.js 網頁式投影片的用法.&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/139913541" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139913541"&gt;2015cadp_w2_reveal&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;甲班 CADP W2&lt;/p&gt;
+&lt;h3&gt;可攜程式系統的建立與使用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140277094" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140277094"&gt;2015cadpa_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;avi 影片轉 flv 格式, 以可攜式 VLC 觀看 flv 影片, 利用 python -m http.server 執行近端檔案分享&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;git push origin gh-pages 系列指令的應用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/140281702" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140281702"&gt;2015cadpa_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W3&lt;/h2&gt;
+&lt;h3&gt;Pelican 靜態網頁系統建立與分組協同, Solvespace 零件繪圖&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141021392" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141021392"&gt;2015_cadpa_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;git rm 的使用, 以及 git 提交, 訊息註記與推送設定&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141024439" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141024439"&gt;2015_cadpa_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;Solvespace 零件電腦輔助繪圖&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141026116" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141026116"&gt;2015_cadpa_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W4&lt;/h2&gt;
+&lt;h3&gt;根據 What Engineers Do? 電子文件, 說明科學與工程, 自然與人文間的關係&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/141370058" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141370058"&gt;2015fall_cadp_w4_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W5&lt;/h2&gt;
+&lt;h3&gt;從 2008 年舊資料的回顧, 說明在地化與國際化的整合, 培養有專長, 能就業, 說明文化與教育對工程師的重要影響, 以及追求卓越的本意&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/142093273" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093273"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;zoomit.exe 在錄製電腦輔助設計說明流程上的應用, Leo Editor 與 Pelican 的使用&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/142473037" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142473037"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;電腦輔助設計系列課程的標準執行流程, 可攜, 永續與體貼的電腦輔助設計方法&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/142093479" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093479"&gt;2015cadp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;Creo2 primer 電子書的網頁化處理&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/142098889" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142098889"&gt;2015cadp_w5_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W6&lt;/h2&gt;
+&lt;h3&gt;啟動可攜系統, Waht Engineers Do? 與 Creo 2 Parametric Primer 資料摘要, Creo Parametric 零件繪製與組立, 開始建立全班協同 gh-pages 網頁, 自行新增為倉儲協同者, 從 git clone 開始參與全班資料協同&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/143225578" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143225578"&gt;2015cadp_a_w6_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h2&gt;CADP W7&lt;/h2&gt;
+&lt;h2&gt;學員自行新增為全班協同倉儲的協同者, 示範如何參與網頁協同資料管理&lt;/h2&gt;
+&lt;iframe src="https://player.vimeo.com/video/143572506" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143572506"&gt;2015fall_cadp_w7_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;start.bat 內容的修改, 設法透過 Jupyter 執行網頁式設計分析或協同網頁資料編輯&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/143574887" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143574887"&gt;2015fall_cadp_w7_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;h3&gt;期中報告內容說明, Creo 2 Parametric Primer 電子書閱讀與零件繪製與零件組操作練習&lt;/h3&gt;
+&lt;iframe src="https://player.vimeo.com/video/143963816" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP W16</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-w16.html" rel="alternate"></link><updated>2016-01-06T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/2015-fall-cadp-w16.html</id><summary type="html">&lt;p&gt;根據 &lt;a href="http://chiamingyen.github.io/kmolab_data/files/ProEMechanism.pdf"&gt;Nutcracker 機構&lt;/a&gt;的尺寸規格, 請設法算出 Piston 零件的有效運動範圍.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_left_limit.png" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_right_limit.png" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;計算 Piston 不發生干涉的有效行程, 可採如下方法:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;實際利用 Onshape 中的組立, 移動 piston 零件, 靠目測概略決定 piston 的有效行程. (目測法, 只能得到大概的行程範圍)&lt;/li&gt;
+&lt;li&gt;利用 Solvespace 繪製 2D 約束圖, 然後利用約束點在線或圓上的方式, 以圖解法解出有效行程, 如下圖一, 圖二與圖三所示. (圖解法, 利用 Solvespace 既有的約束條件設定完成計算)&lt;/li&gt;
+&lt;li&gt;利用 Jupyter 與 Python3 的 sympy 模組, 先進行符號式推導, 然後再利用數值分析解出 piston 的有效行程, 機構各點標示如下圖四所示, &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;計算出&lt;/a&gt;的 theta 轉角為 105.7, 如下圖五所示. (以自行編寫的 sympy 程式解題, 透過 Jupyterhub 可以有效進行協同設計運算)&lt;/li&gt;
+&lt;li&gt;除了上述的目測, 圖解與符號式結合數值分析法之外, 也可以採用&lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ga_nutcracker1.py"&gt;基因演算法解題&lt;/a&gt;, 計算出的 theta 轉角為 105.7, 如下圖六所示. (利用演化法解題, 可以在單機運算, 也可以在 &lt;a href="https://github.com/2015fallhw/cptocadp/blob/master/ref/cadp_nutcracker.ipynb"&gt;Jupyterhub 平台&lt;/a&gt;上進行運算)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_solvespace1.png" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖一: 利用 Solvespace 中的繪圖約束條件找出右邊的極限點距離 Onshape Piston 組立原點 0.5&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_solvespace2.png" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖二: 利用 Solvespace 中的繪圖約束條件找出左邊的極限點距離 Onshape Piston 組立原點 2.23&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_solvespace3.png" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖三: 當 piston 位於左邊極限點時, AB 轉角為 105.37 度&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_analysis1.png" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖四: Jupyter 計算分析時機構各點標示圖&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_jupyter_result1.png" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖五: 利用 Jupyter 符號式結合數值分析法所得結果&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/nutcracker_ga_result1.png" width=600 /&gt;&lt;/p&gt;
+&lt;p&gt;圖六: 利用基因演算解題, 所得到的結果, 當 piston 位於左邊極限點時, AB 轉角為 105.7 度&lt;/p&gt;
+&lt;p&gt;若採用 &lt;a href="https://github.com/deap/deap"&gt;deap&lt;/a&gt; 與 numpy 解題 (AB 轉角極限為 105.71 度):&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+# 這裡採用 numpy 與 deap 模組解題, 使用 Genetic Algorithm 模式
+# 解的問題為 Nutcracker 左邊 connect 轉角極限
+import random
+import array
+from deap import base
+from deap import creator
+from deap import tools
+import numpy
+# for evalIntersect 函式中的 sqrt, sin, cos, pi
+from math import *
+
+# 1/4 最小化題目 type of problem
+creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
+creator.create("Individual", array.array, typecode='d', \
+               fitness=creator.FitnessMin)
+# 2/4 initilization
+# 兩個變數題目
+NDIM = 2
+toolbox = base.Toolbox()
+toolbox.register("attr_float", random.uniform, 0, 5)
+toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.attr_float, NDIM)
+toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
+# 3/4 選擇 operator step3/4
+toolbox.register("select", tools.selRandom, k=3)
+
+# 也可以採用下列設定
+#toolbox.register("mate", tools.cxTwoPoint)
+#toolbox.register("mutate", tools.mutGaussian, mu=0, sigma=1, indpb=0.1)
+#toolbox.register("select", tools.selTournament, tournsize=3, k=3)
+
+def evalIntersect(individual):
+    t = individual[0]
+    deg = pi/180
+    theta = individual[1]*deg
+    xtarget = 0.75/2
+    ytarget = 0.5
+    x = t*sqrt(-225*sin(theta)**2 + 529)/10 - sqrt(-225*sin(theta)**2 \
+        + 529)/92 + 3*cos(theta)/2
+    y = (-3*t/2 + 123/92)*sin(theta)
+    # 適應值
+    fitness_value = pow(x-xtarget, 8)+pow(y-ytarget, 8)
+
+    # 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰
+    if t &gt; 1:
+        fitness_value += 1000
+    if t &lt; 0:
+        fitness_value += 1000
+    # 指定 theta 的範圍, 小於 2pi 大於 0, 否則給予處罰
+    if theta &gt; 2*pi:
+        fitness_value += 1000
+    if theta &lt; 0:
+        fitness_value += 1000
+    return fitness_value,
+
+toolbox.register("evaluate", evalIntersect)
+# 以上到 evaluate 為止, 為定義 operators
+
+# 4/4 以下則為 Algorithms
+def main():
+    # Differential evolution parameters
+    CR = 0.25
+    F = 1 
+    MU = 300
+    NGEN = 200   
+
+    pop = toolbox.population(n=MU);
+    hof = tools.HallOfFame(1)
+    stats = tools.Statistics(lambda ind: ind.fitness.values)
+    stats.register("avg", numpy.mean)
+    stats.register("std", numpy.std)
+    stats.register("min", numpy.min)
+    stats.register("max", numpy.max)
+
+    # Evaluate the individuals
+    fitnesses = toolbox.map(toolbox.evaluate, pop)
+    for ind, fit in zip(pop, fitnesses):
+        ind.fitness.values = fit
+
+    for g in range(1, NGEN):
+        for k, agent in enumerate(pop):
+            a,b,c = toolbox.select(pop)
+            y = toolbox.clone(agent)
+            index = random.randrange(NDIM)
+            for i, value in enumerate(agent):
+                if i == index or random.random() &lt; CR:
+                    y[i] = a[i] + F*(b[i]-c[i])
+            y.fitness.values = toolbox.evaluate(y)
+            if y.fitness &gt; agent.fitness:
+                pop[k] = y
+        hof.update(pop)
+
+
+    print("Best individual is ", hof[0], hof[0].fitness.values[0])
+
+if __name__ == "__main__":
+    main()
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;
+上述課程資料與 &lt;a href="http://wordpress-2015course.rhcloud.com/?p=4584#more-4584"&gt;Wordpress 網頁&lt;/a&gt;上的資料內容相同, Ｗordpress 網站屬於動態的網誌, 而 &lt;a href="http://chiamingyen.github.io/kmolab/"&gt;http://chiamingyen.github.io/kmolab/&lt;/a&gt; 則是靜態網誌系統, 採用靜態網誌的優點如下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比較安全&lt;/li&gt;
+&lt;li&gt;比較不會過時&lt;/li&gt;
+&lt;li&gt;部署成本比較低&lt;/li&gt;
+&lt;li&gt;可在各種平台上使用&lt;/li&gt;
+&lt;li&gt;各階段改版資料均有紀錄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下為參考用的 GA 解 Nutcracker 題目的程式碼:&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+#encoding=utf8
+# genetic.py
+#
+import random
+import operator
+# for Intersect
+from math import *
+MAXIMIZE, MINIMIZE = 11, 22
+class Individual:
+    chromosome = None
+    score = None
+    # Here the size of var depends on var_number
+    var = []
+    var_number = 2
+    for i in range(var_number):
+        var.append(0)
+    alleles = (0,1)
+    # 以下為參數可負數時的編碼考量
+    #前10為小數,後10為整數,第21則為正負號
+    #0~9表示小數,10~19表示整數,而指標第20則表示第一數的正號或負號,若為0則表示正,若為1表示負號.
+    #21~30表示第二數的小數部分,31~40則表示第二數的整數部分,第41指標則表示第二數的正號或負號
+    #42~51表示第三數的小數部分,52~61則表示第二數的整數部分,第62指標則表示第三數的正號或負號
+    # -1023 ~ 1023
+    #length = 21*var_number,若接受負數參數,則必須同步修改 20-&gt;21
+    length = 20*var_number
+    seperator = ''
+    optimization = MINIMIZE
+    def __init__(self, chromosome=None):
+        self.chromosome = chromosome or self._makechromosome()
+        self.score = None  # set during evaluation
+    def _getvar(self,chromosome=None):
+        x = 0
+        for i in range(0,self.var_number):
+            for j in range(i*20,i*20+10):
+                x +=self.chromosome[j]&lt;&lt;(j-(i*20))
+            if (x&gt;999):
+                x=999
+            x/=1000.
+            for j in range(i*20+10,i*20+20):
+                x +=self.chromosome[j]&lt;&lt;(j-(i*20+10))
+            self.var[i] = x
+        return self.var
+        ''' for -1023 ~ 1023,當設計變數可以接受負值時使用,每一變數使用21個 bit strings
+#for design variable -1023 ~1023
+        for i in range(self.var_number):
+            x = 0
+            for j in range(i*21,i*21+10):
+                x +=self.chromosome[j]&lt;&lt;(j-(i*21))
+            if (x&gt;999):
+                x=999
+            x/=1000.
+            for j in range(i*(21)+10,i*(21)+20):
+                x +=self.chromosome[j]&lt;&lt;(j-(i*21+10))
+            if(self.chromosome[i*(21)+20] == 1):
+                self.var[i] = -x
+            else:
+                self.var[i] = x
+            x = 0
+        return self.var
+        '''
+    def _makechromosome(self):
+        "makes a chromosome from randomly selected alleles."
+        return [random.choice(self.alleles) for gene in range(self.length)]
+    def evaluate(self, optimum=None):
+        "this method MUST be overridden to evaluate individual fitness score."
+        pass
+    def crossover(self, other):
+        "override this method to use your preferred crossover method."
+        return self._twopoint(other)
+    def mutate(self, gene):
+        "override this method to use your preferred mutation method."
+        self._pick(gene)
+    # sample mutation method
+    def _pick(self, gene):
+        "chooses a random allele to replace this gene's allele."
+        self.chromosome[gene] = random.choice(self.alleles)
+    # sample crossover method
+    def _twopoint(self, other):
+        "creates offspring via two-point crossover between mates."
+        left, right = self._pickpivots()
+        def mate(p0, p1):
+            chromosome = p0.chromosome[:] # 交配時,以p0的基因為基礎(複製整個 p0 的染色體內容
+            chromosome[left:right] = p1.chromosome[left:right] # 接續上一個 p0 的染色體內容,將索引 left 至 right 的內容,替換成 p1 的基因
+            #child = p1.__class__(chromosome) 這是原先的程式,但是應該子代要指向 p0 的內容才對
+            child = p0.__class__(chromosome)
+            child._repair(p0, p1)
+            return child
+        return mate(self, other), mate(other, self)
+    # some crossover helpers ...
+    def _repair(self, parent1, parent2):
+        "override this method, if necessary, to fix duplicated genes."
+        pass
+    def _pickpivots(self):
+        left = random.randrange(1, self.length-2)
+        right = random.randrange(left, self.length-1)
+        return left, right
+    #
+    # other methods
+    #
+    def __repr__(self):
+        "returns string representation of self"
+        '''
+        return '&lt;%s chromosome="%s" score=%s var=%s&gt;' % \
+               (self.__class__.__name__,
+                self.seperator.join(map(str,self.chromosome)), self.score,self._getvar(self.chromosome))
+        '''
+        return '&lt;%s score=%s var=%s&gt;' % \
+               (self.__class__.__name__,self.score,self._getvar(self.chromosome))
+    # since the __cmp__ special function is gone  use the __lt__ in stead
+    # use the expression (a &gt; b) - (a &lt; b) as the equivalent for cmp(a, b)
+    #def __cmp__(self, other):
+    # these are for python 3
+    def __cmp__(self, other):
+        if self.optimization == MINIMIZE:
+            #return cmp(self.score, other.score)
+            return (self.score &gt; other.score) - (self.score &lt; other.score)
+        else: # MAXIMIZE
+            #return cmp(other.score, self.score)
+            return (other.score &gt; self.score) - (other.score &lt; self.score)
+
+    def __lt__(self, other):
+        return self.__cmp__(other) &lt; 0
+    def __le__(self, other):
+        return self.__cmp__(other) &lt;= 0
+    def __gt__(self, other):
+        return self.__cmp__(other) &gt; 0
+    def __ge__(self, other):
+        return self.__cmp__(other) &gt;= 0 
+    def copy(self):
+        twin = self.__class__(self.chromosome[:])
+        twin.score = self.score
+        return twin
+class Environment(object):
+    x = [0]
+    y = [0]
+    def __init__(self, kind, population=None, size=100, maxgenerations=100,
+                 crossover_rate=0.90, mutation_rate=0.07, optimum=None):
+        self.kind = kind
+        self.size = size
+        self.optimum = optimum
+        self.population = population or self._makepopulation()
+        for individual in self.population:
+            individual.evaluate(self.optimum)
+        self.crossover_rate = crossover_rate
+        self.mutation_rate = mutation_rate
+        self.maxgenerations = maxgenerations
+        self.generation = 0
+        self.report()
+    def _makepopulation(self):
+        return [self.kind() for individual in range(self.size)]
+    def run(self):
+        while not self._goal():
+            self.step()
+    def _goal(self):
+        return self.generation &gt; self.maxgenerations or \
+               self.best.score == self.optimum
+    def step(self):
+        # this sort is not working with python 3.0, modification is needed
+        self.population.sort()
+        self._crossover()
+        self.generation += 1
+        self.report()
+        self.x.append(self.generation)
+        # 設定為只附加所選定範圍的值,這裡只取大於或等於 0 的 score 值
+        if self.best.score &lt;=5:
+            self.y.append(self.best.score)
+        else:
+            self.y.append(5)
+    def _crossover(self):
+        next_population = [self.best.copy()]
+        while len(next_population) &lt; self.size:
+            mate1 = self._select()
+            if random.random() &lt; self.crossover_rate:
+                mate2 = self._select()
+                offspring = mate1.crossover(mate2)
+            else:
+                offspring = [mate1.copy()]
+            for individual in offspring:
+                self._mutate(individual)
+                individual.evaluate(self.optimum)
+                next_population.append(individual)
+        self.population = next_population[:self.size]
+    def _select(self):
+        "override this to use your preferred selection method"
+        return self._tournament()
+    def _mutate(self, individual):
+        for gene in range(individual.length):
+            if random.random() &lt; self.mutation_rate:
+                individual.mutate(gene)
+    #
+    # sample selection method
+    #
+    def _tournament(self, size=8, choosebest=0.90):
+        competitors = [random.choice(self.population) for i in range(size)]
+        competitors.sort()
+        if random.random() &lt; choosebest:
+            return competitors[0]
+        else:
+            return random.choice(competitors[1:])
+    def best():
+        doc = "individual with best fitness score in population."
+        def fget(self):
+            return self.population[0]
+        return locals()
+    best = property(**best())
+    def report(self):
+        print ("="*70)
+        print ("generation: ", self.generation)
+        print ("best:       ", self.best)
+
+# 以上為 genetic.py 目前將兩者結合在一起
+#encoding=utf8
+# volume.py - useage example
+#
+# the fittest individual will have a chromosome consisting of 40 '1's
+#
+#
+#import genetic
+#此一加總函式在 volume 最大化中,並未使用
+def sum(seq):
+    def add(x,y): return x+y
+    return reduce(add, seq, 0)
+class Volume(Individual):
+    optimization = MAXIMIZE
+    def evaluate(self, optimum=None):
+        SURFACE = 80
+        # self.score is the fitness value
+        self._getvar(self.chromosome)
+
+        x = self.var[0]
+        y = self.var[1]
+        z=(SURFACE - x*y)/(2.*(x+y))
+        fitness_value = x*y*z
+
+        self.score = fitness_value
+
+    def mutate(self, gene):
+        self.chromosome[gene] = not self.chromosome[gene] # bit flip
+
+class Intersect(Individual):
+    optimization = MINIMIZE
+    def evaluate(self, optimum=None):
+        # self.score is the fitness value
+        self._getvar(self.chromosome)
+
+        t = self.var[0]
+        deg = pi/180
+        theta = self.var[1]*deg
+        xtarget = 0.75/2
+        ytarget = 0.5
+        x = t*sqrt(-225*sin(theta)**2 + 529)/10 - sqrt(-225*sin(theta)**2 + 529)/92 + 3*cos(theta)/2
+        y = (-3*t/2 + 123/92)*sin(theta)
+        # 適應值
+        fitness_value = pow(x-xtarget, 8)+pow(y-ytarget, 8)
+
+        # 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰
+        if t &gt; 1:
+            fitness_value += 1000
+        if t &lt; 0:
+            fitness_value += 1000
+        # 指定 theta 的範圍, 小於 2pi 大於 0, 否則給予處罰
+        if theta &gt; 2*pi:
+            fitness_value += 1000
+        if theta &lt; 0:
+            fitness_value += 1000
+
+        self.score = fitness_value
+
+    def mutate(self, gene):
+        self.chromosome[gene] = not self.chromosome[gene] # bit flip
+
+
+if __name__ == "__main__":
+    #env = Environment(Volume, size=500, maxgenerations=100)
+    env = Environment(Intersect, size=500, maxgenerations=100)
+    env.run()
+&lt;/pre&gt;</summary><category term="電腦輔助設計實習"></category><category term="2015 Fall cadp"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html" rel="alternate"></link><updated>2016-01-06T10:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/2016-wcm-course.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
+&lt;h2&gt;github pages 上的靜態網頁系統&lt;/h2&gt;
+&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
+&lt;h2&gt;html 與 Javascript (Brython based)&lt;/h2&gt;
+&lt;h2&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h2&gt;
+&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &lt;a href="http://flask.pocoo.org"&gt;http://flask.pocoo.org&lt;/a&gt; based 網站程式開發&lt;/p&gt;
+
+
+&lt;h2&gt;參考資料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/embik/bloks"&gt;https://github.com/embik/bloks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 Spring"></category></entry><entry><title>2016 CD course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-cd-course.html" rel="alternate"></link><updated>2016-01-06T09:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/2016-cd-course.html</id><summary type="html">&lt;p&gt;2016 Spring 協同產品設計實習課程規劃&lt;/p&gt;
 &lt;h2&gt;MCAD 套件&lt;/h2&gt;
 &lt;p&gt;Mechanical Computer Aided Design (MCAD) 套件將使用:&lt;/p&gt;
 &lt;p&gt;Onshape: &lt;a href="https://www.onshape.com/"&gt;https://www.onshape.com/&lt;/a&gt;&lt;/p&gt;
@@ -7524,493 +8046,4 @@ Back mirror 後照鏡
 Reflector 反光片
 Luggage Carrier 貨架
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 Spring"></category></entry><entry><title>2016 Spring CD Task0</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-cd-task0.html" rel="alternate"></link><updated>2016-02-23T18:18:27+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-23:kmolab/blog/2016-spring-cd-task0.html</id><summary type="html">&lt;p&gt;這個實習任務的目的, 在讓學員根據分組與電腦教室座位編排的問題, 進行思考, 如何以協同方式或流程, 有效完成任務&lt;/p&gt;
-
-
-&lt;p&gt;學期伊始, 一如往常, 各班學員以每 6 人一組為原則, 在 Cadlab 電腦教室安排固定座位, 但是 2016 Spring 開始, 儘管允許學員自行編組, 但是同組學員卻希望故意錯開座位, 讓所有爾後各組的產品設計解題都能夠儘量透過資訊與通訊系統完成, 而且所有溝通流程與內容都能夠存在產品開發專案中.&lt;/p&gt;
-&lt;p&gt;首先採用 &lt;a href="https://ethercalc.tw/"&gt;https://ethercalc.tw/&lt;/a&gt; 讓所有上課學員, 以即時同步模式, 填入分組資料, 若以 2a 班級為例, 分組資料中只填入學員學號, 則可以直接從瀏覽器畫面中複製分組資料, 放入 SciTE 中, 存為 2016_cd_2a_1.txt, 若利用 ethercalc 的 clipboard 格式轉檔, 可以存為 csv 格式, 存為 2016_cd_2a_2.txt, 且從學校開課前學員選課資料, 可得選課學員學號名單, 存為 2016_cd_2a_3.txt.&lt;/p&gt;
-&lt;p&gt;Task0 的任務, 就是以各班協同分組後所取得的這 3 個檔案開始, 依據下列敘述, 完成各班的 Cadlab 電腦教室座位表, 讓每一位學員都能夠知道所被分配的學期固定座位, 並在爾後上課依序入座.&lt;/p&gt;
-&lt;p&gt;任務描述:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;每組以 6 人為原則, 至少 4 人, 至多 7 人&lt;/li&gt;
-&lt;li&gt;各組學員, 以學號遞增排序後, 排序第1者為組長, 負責代表該組與其他組進行溝通&lt;/li&gt;
-&lt;li&gt;各組的班級分組序號, 則依據各組組長的學號, 再進行各組比序, 以遞增方式排列, 排序第1者為第1組, 其餘依序定下各組序號組別&lt;/li&gt;
-&lt;li&gt;Cadlab 電腦教室的配置為每列 9 排, 共有 7 列, 因此若每人一台電腦排座位, 可以容納 63 名學員&lt;/li&gt;
-&lt;li&gt;固定座位命名方式, 以面對講台的最右邊為第1排, 以最靠近講台者為第1列&lt;/li&gt;
-&lt;li&gt;一旦各組依照學員學號排序定組序後, 第1組的第1名同學, 從第1排第1列開始固定座位, 接著排第二組的第1位同學, 排在第1排的第2列座位, 然後將第三組的第1位同學, 排在第1排的第3列座位, 依此類推&lt;/li&gt;
-&lt;li&gt;座位安排中, 第1排排至第七列後, 則接著排在第2排的第1列座位上, 且各組若不及 7 位學員時, 則該座位由下一組的順位同學遞補&lt;/li&gt;
-&lt;li&gt;完成座位編排後, 必須能夠轉為網頁格式, 放入各組的協同倉儲所對應的 gh-pages 網頁或 OpenShift 網頁中&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;可能的任務變化:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;與上述編排座位的問題類似, 在產品開發過程中, 許多設計參數可能因為特定協同團隊的意見而變更&lt;/li&gt;
-&lt;li&gt;上述座位編排問題, 可能從學號遞增排序, 改為遞減排序或亂數排序&lt;/li&gt;
-&lt;li&gt;可能從原先的以排 (column) 為主 (也就是先排第1排, 之後排第2排), 改為以列 (row) 為主 (也就是先排第1列, 之後排第2列)&lt;/li&gt;
-&lt;li&gt;假如電腦教室的配置更動, 從 9 排 7 列改為其他不同配置時, 整個座位安排流程, 就必須因應改變&lt;/li&gt;
-&lt;li&gt;換言之, 假如上述問題並非採用電腦運算的方法完成, 而以人工或類比的方式進行, 不僅耗費時間, 容易出錯, 而且一旦相關原則變更, 都將重新勞師動眾一番&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;技術回顧:&lt;/p&gt;
-&lt;p&gt;針對上述問題, 若希望利用 Python3 進行解題, 需要運用下列相關函式、方法或模組:&lt;/p&gt;
-&lt;p&gt;with open ... as&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://openhome.cc/Gossip/Python/WithAs.html"&gt;http://openhome.cc/Gossip/Python/WithAs.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;readlines&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/tutorial/inputoutput.html"&gt;https://docs.python.org/3.4/tutorial/inputoutput.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;for ... in range&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/tutorial/controlflow.html?highlight=loop#for-statements"&gt;https://docs.python.org/3.4/tutorial/controlflow.html?highlight=loop#for-statements&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;len&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html?#len"&gt;https://docs.python.org/3.4/library/functions.html?#len&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;append&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/tutorial/datastructures.html"&gt;https://docs.python.org/3.4/tutorial/datastructures.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;split&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/stdtypes.html#str.split"&gt;https://docs.python.org/3.4/library/stdtypes.html#str.split&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;list&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#func-list"&gt;https://docs.python.org/3.4/library/functions.html#func-list&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;sorted&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#sorted"&gt;https://docs.python.org/3.4/library/functions.html#sorted&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;filter&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#filter"&gt;https://docs.python.org/3.4/library/functions.html#filter&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;None, True, not&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/c-api/none.html"&gt;https://docs.python.org/3.4/c-api/none.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/constants.html#True"&gt;https://docs.python.org/3.4/library/constants.html#True&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/reference/expressions.html#not"&gt;https://docs.python.org/3.4/reference/expressions.html#not&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;str&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#func-str"&gt;https://docs.python.org/3.4/library/functions.html#func-str&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;print&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/functions.html#print"&gt;https://docs.python.org/3.4/library/functions.html#print&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;g.es&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://leoeditor.com/tutorial-scripting.html"&gt;http://leoeditor.com/tutorial-scripting.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;zip_longest&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest"&gt;https://docs.python.org/3.4/library/itertools.html#itertools.zip_longest&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>computational thinking and digitally literate</title><link href="http://chiamingyen.github.io/kmolab/blog/computational-thinking-and-digitally-literate.html" rel="alternate"></link><updated>2016-02-21T21:47:57+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/computational-thinking-and-digitally-literate.html</id><summary type="html">&lt;p&gt;運算思維與數位化教育下的未來&lt;/p&gt;
-
-
-&lt;p&gt;&lt;a href="https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study"&gt;https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;computational thinking and digitally literate&lt;/p&gt;
-&lt;p&gt;運算思維與數位化教育&lt;/p&gt;
-&lt;p&gt;Computing has deep links with mathematics, science and design and technology, and provides insights into both natural and artificial systems.&lt;/p&gt;
-&lt;p&gt;運算與數學、科學、設計及科技都有很緊密的關聯, 能讓我們充份了解自然或人造的系統.&lt;/p&gt;
-&lt;p&gt;Computing also ensures that pupils become digitally literate – able to use, and express themselves and develop their ideas through, information and communication technology – at a level suitable for the future workplace and as active participants in a digital world.&lt;/p&gt;
-&lt;p&gt;運算同時確保學習者俱備數位認知, 能夠運用、表達並透過資訊與通訊科技開展理念, 並在未來的數位世界職場中成為積極的參與者.&lt;/p&gt;
-&lt;p&gt;Aims:&lt;/p&gt;
-&lt;p&gt;運算教育的目標:&lt;/p&gt;
-&lt;p&gt;can understand and apply the fundamental principles and concepts of computer science, including abstraction, logic, algorithms and data representation&lt;/p&gt;
-&lt;p&gt;能夠了解並應用電腦科學的基本原理與概念, 包括抽象、邏輯, 演算法, 以及數據表達.&lt;/p&gt;
-&lt;p&gt;can analyse problems in computational terms, and have repeated practical experience of writing computer programs in order to solve such problems&lt;/p&gt;
-&lt;p&gt;能夠透過運算術語分析問題, 並且運用多重的程式編寫實務經驗, 來解決問題.&lt;/p&gt;
-&lt;p&gt;can evaluate and apply information technology, including new or unfamiliar technologies, analytically to solve problems&lt;/p&gt;
-&lt;p&gt;能夠應用資訊科技, 對全新或原本並不熟悉的科技進行評量, 能夠採解析方法解決各種問題.&lt;/p&gt;
-&lt;p&gt;are responsible, competent, confident and creative users of information and communication technology&lt;/p&gt;
-&lt;p&gt;成為肯負責、能勝任、具備信心與創意的資訊及通信科技使用者.&lt;/p&gt;</summary><category term="運算思維"></category><category term="數位化教育"></category></entry><entry><title>2016 Spring Web based Content Management</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-spring-web-based-content-management.html" rel="alternate"></link><updated>2016-02-21T20:36:55+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-21:kmolab/blog/2016-spring-web-based-content-management.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理 W1&lt;/p&gt;
-
-
-&lt;h2&gt;2016 Spring 網際內容管理:&lt;/h2&gt;
-&lt;h3&gt;可攜套件倉儲:&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://github.com/chiamingyen/kmol2016"&gt;https://github.com/chiamingyen/kmol2016&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;kmol2016 下載:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX"&gt;https://my.pcloud.com/publink/show?code=XZH5J4ZOj9C9aomi5F1DtnuQNIHYLDO7EjX&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallhw/2016springwcm"&gt;https://github.com/2015fallhw/2016springwcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/2016springwcm/"&gt;http://2015fallhw.github.io/2016springwcm/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;網際繪圖程式庫 (與 CD 課程共用): &lt;a href="https://github.com/2015fallhw/arcidau"&gt;https://github.com/2015fallhw/arcidau&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github Pages 網站: &lt;a href="http://2015fallhw.github.io/arcidau/"&gt;http://2015fallhw.github.io/arcidau/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;結合 &lt;a href="http://reeborg.ca/"&gt;http://reeborg.ca/&lt;/a&gt; 與 &lt;a href="https://codemirror.net/"&gt;https://codemirror.net/&lt;/a&gt; 還有 &lt;a href="https://github.com/google/blockly"&gt;https://github.com/google/blockly&lt;/a&gt;,  我們能否自行打造類似 &lt;a href="https://studio.code.org/hoc/2"&gt;https://studio.code.org/hoc/2&lt;/a&gt; 的網站, 並且逐步建構泛用型網際 2D/3D 機械設計資源中心, 以探索、儲存與開發機械設計相關內容的網站邁進.&lt;/p&gt;
-&lt;p&gt;參考:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="https://github.com/josephg/Chipmunk-js"&gt;https://github.com/josephg/Chipmunk-js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/viblo/pymunk"&gt;https://github.com/viblo/pymunk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/user/thang010146/videos"&gt;https://www.youtube.com/user/thang010146/videos&lt;/a&gt; (使用 AutoDesk Inventor 建置)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZO2f4ZQTLgWWIyTiuLdB3vkcuutS65plv7"&gt;機構介紹 1&lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZI2f4ZdR1tblX7Tj0Wf6glOgW5fjSG6LYV"&gt;機構介紹 2&lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZa2f4Z1faO9LKQUlQJhJkCSeQQzmHanqfy"&gt;機構介紹 3 &lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://my.pcloud.com/publink/show?code=XZ32f4ZMrcoB5nWPC4coh9yQAaXSfbFuivk"&gt;機構介紹 4 &lt;/a&gt; (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.algodoo.com/"&gt;http://www.algodoo.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Linkage &lt;a href="http://chiamingyen.github.io/linkage/"&gt;http://chiamingyen.github.io/linkage/&lt;/a&gt; 操作步驟:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;按下 c 刪除畫面所有內容&lt;/li&gt;
-&lt;li&gt;利用滑鼠左鍵, 在螢幕點出4個四連桿的4個關鍵點&lt;/li&gt;
-&lt;li&gt;利用滑鼠左鍵, 點選第一個點 ,令其變為藍色&lt;/li&gt;
-&lt;li&gt;再以滑鼠左鍵, 點選第1桿件的第二個點, 滑鼠按下後, 先不要放開, 等左手按下 Alt 後, 並讓 Alt 鍵與滑鼠左鍵同時放開, 就可以順利利用第1點與第2點建立一個連桿&lt;/li&gt;
-&lt;li&gt;利用相同方法 ,建立第2與第3可動桿&lt;/li&gt;
-&lt;li&gt;以滑鼠左鍵, 選擇第1點, 然後按下 f 鍵, 表示要固定這個點, 此時點的顏色轉為紅色, 並且釋出其對應的自由度&lt;/li&gt;
-&lt;li&gt;再用相同方法 ,固定第四點&lt;/li&gt;
-&lt;li&gt;選擇要追蹤的點, 然後按下 t (tracking)&lt;/li&gt;
-&lt;li&gt;機構的作動則依靠, 選追蹤點, 左手按住 Shift 鍵, 然後移動滑鼠位置, 讓追蹤點隨滑鼠移動, 即可留下特定點的運動軌跡.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;歷年課程回顧&lt;/h2&gt;
-&lt;h3&gt;2015 Spring 網際內容管理:&lt;/h3&gt;
-&lt;p&gt;Wordpress: &lt;a href="http://wordpress-2015course.rhcloud.com/?cat=2"&gt;http://wordpress-2015course.rhcloud.com/?cat=2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://cd-cadp.rhcloud.com/get_page?heading=%E7%B6%B2%E9%9A%9B%E5%85%A7%E5%AE%B9%E7%AE%A1%E7%90%86"&gt;CMSimply 網站&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Github 倉儲: &lt;a href="https://github.com/coursemdetw/2015wcm"&gt;https://github.com/coursemdetw/2015wcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Gitbook: &lt;a href="https://www.gitbook.com/book/coursemde/2015wcm"&gt;https://www.gitbook.com/book/coursemde/2015wcm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Vimeo 教學影片: &lt;a href="https://vimeo.com/tag:2015wcm"&gt;https://vimeo.com/tag:2015wcm&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="網際內容管理"></category></entry><entry><title>2015 Fall CP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part2&lt;/p&gt;
-&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 Fall CP 課程 part2 影片摘要:&lt;/p&gt;
-&lt;h2&gt;CP W12&lt;/h2&gt;
-&lt;h3&gt;介紹從 fix.bat 的搭建到猜顏色遊戲程式的編寫&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/147818514" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147818514"&gt;2015fallcp_b_w12_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;h2&gt;CP W15&lt;/h2&gt;
-&lt;h3&gt;介紹近端系統的建立與啟動, Python3 指令整理, 猜數字與猜顏色遊戲的流程圖, Brython 網頁繪圖&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/150000693" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150000693"&gt;2015cp_w15_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CP W17&lt;/h2&gt;
-&lt;h3&gt;說明如何使用 Python 函式, 以及如何進行 Brython 網頁動態繪圖&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/151096089" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151096089"&gt;2015fallcpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/151109576" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/151109576"&gt;2015fallcp_w17b&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cp-part-1.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 計算機程式課程內容 part1&lt;/p&gt;
-&lt;p&gt;2015 Fall 計算機程式課程倉儲分別為&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 Fall CP 課程 part1 影片摘要:&lt;/p&gt;
-&lt;h2&gt;CP W2&lt;/h2&gt;
-&lt;h3&gt;2015 Fall 計算機程式可攜環境介紹&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140380091" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140380091"&gt;2015cp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;h3&gt;說明如何利用 python -m http.server 分享近端檔案&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;介紹如何利用 fix.bat 修補 C 槽既有的可攜程式系統, 說明 SciTE 如何執行 Python3 程式, 如何利用 gh-pages 分支網頁繳交作業&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140383708" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140383708"&gt;2015cp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;介紹如何從可攜系統的修補與啟動, 到如何利用 Github Pages 的網頁來繳交各週作業&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140394246" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140394246"&gt;2015cp_b_w4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;2015 Fall 課程工作與環境介紹&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140874547" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140874547"&gt;2015Fall 使用環境與工具介紹&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;英文打字的指法練習介紹, 說明 Github 倉儲的建立使用與刪除.&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140876400" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140876400"&gt;Github 倉儲建立, 使用與刪除&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;介紹 Github 倉儲分支的建立與使用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140878456" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140878456"&gt;Github 倉儲分支建立與使用&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CP W3&lt;/h2&gt;
-&lt;h3&gt;隨身程式系統的應用再提醒 (fix.zip), Leo Editor, Pelican, Markdown 模組的安裝設定與啟動, notebook.py 中編碼的設定&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141129640" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141129640"&gt;2015fall_cp_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/141142727" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141142727"&gt;2015cp_w3_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/141145747" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141145747"&gt;2015cp_w3_b3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/141144113" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141144113"&gt;2015cp_w3_b2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明工程師的工作分類, 工程與科學的相輔相成, 解釋何以人文是工程師的養份, 了解科學在探究自然現況, 工程則需面對自然挑戰, 解決人文想像與需求&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141131417" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141131417"&gt;2015fall_cp_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何利用 Github 建立倉儲, 起始倉儲, git clone 倉儲, 建立分支, 切換 gh-pages 分支, 提交 gh-pages 分支版本, 推送分支版本&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141132740" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141132740"&gt;2015fall_cp_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明 Python 程式執行模式, 可以採互動式執行, SciTE 環境下執行, Jupyter 網頁 noteook 環境下執行, Brython 瀏覽器中執行等&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141134146" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141134146"&gt;2015fall_cp_w3_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CP W5&lt;/h2&gt;
-&lt;h3&gt;說明計算機程式作為電腦輔助與協同產品設計系列課程的先導課程, 必須在學習 Python3 程式語法的同時, 架構一個可以永續改進使用的系統&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/142582837" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142582837"&gt;2015cp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;fix.zip 內容的細步流程介紹, 從 markdown 透過 Pelican 指令的執行, 轉換為放上 Github Pages 網頁的 html 檔案資料, liquid_tags 延伸程式的應用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/142584067" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142584067"&gt;2015cp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CP W6&lt;/h2&gt;
-&lt;h3&gt;介紹英文教學影片的字幕所在位置, 說明如利用 VLC 在近端播放教學影片&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/143330980" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143330980"&gt;2015cp_w6_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何將各學員的作業整合到全班協同倉儲, 自行新增為全班倉儲的協同者&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/143337293" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337293"&gt;2015cp_w6_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/143345717" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143345717"&gt;2015cp_w6_b_4&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;示範如何修正內含 git 衝突標示的 Leo Editor 檔案&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/143337483" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143337483"&gt;2015cp_w6_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CP W7&lt;/h2&gt;
-&lt;h3&gt;介紹如何建立有效率的機械設計工程師可攜程式環境 (Anaconda Python based), 學習計算機程式的概念, 認識程式設計與機械設計工程師角色間的關係&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/144078159" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144078159"&gt;2015_cp_w7_a_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明近端與 Jupyter 環境的 Python 程式執行, print 與 for 迴圈應用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/144080408" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144080408"&gt;2015_cp_w7_a_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何將計算機程式的內容放到 gh-pages 網頁&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/144081268" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144081268"&gt;2015_cp_w7_a_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何利用 git reset -- hard 版本編號, 回復舊版本資料&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何修補被弄亂的全班倉儲&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/144089423" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/144089423"&gt;2015fall_cp_w7_b1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 2</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-2.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cadp-part-2.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part2&lt;/p&gt;
-&lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 Fall CADP 課程 part2 影片摘要:&lt;/p&gt;
-&lt;h2&gt;CADP W10&lt;/h2&gt;
-&lt;h3&gt;利用電腦解決機械設計工程師所面臨的各種問題&lt;/h3&gt;
-&lt;p&gt;電腦輔助設計主要探討工程師該如何利用電腦解決所面臨的各種問題, 這些問題存在於人的各種活動當中, 而人的活動可以從3個不同的軸向來加以探討, 也就是:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;人文的軸向, 其中包括與人類思想層面有關的各種活動, 也就是文學, 宗教, 音樂與藝術等活動.&lt;/li&gt;
-&lt;li&gt;科學的軸向, 其中牽涉到人所處的自然環境, 科學家主要在利用系統方法與工具, 探究存在自然界的各種原理原則, 而工程師在解決問題時, 必須面對自然界的各項挑戰, 依據各種已知的科學方法, 從人文的角度出發, 創造各種產品與服務, 來改善人的生存環境, 提升人的生活價值.&lt;/li&gt;
-&lt;li&gt;產品與服務的軸向, 此一軸向的活動, 即是工程師以人文想像層面的內容作為養份, 面對自然環境, 以科學認知及方法, 創造各種產品與服務的項目.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;電腦在工程解題所扮演的角色:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;提升資訊的傳輸效能, 利用網路, Git (2005 之後), Github (2008 之後) 讓數位資訊的傳輸更有效能.&lt;/li&gt;
-&lt;li&gt;強化文字、視覺與口語的溝通效率, 以隨選或即時媒體, 讓協同成員互通想法, 闡述設計, 激發創意.&lt;/li&gt;
-&lt;li&gt;簡化數據與資料的收集與儲存, 搜索引擎與資料庫的搭配使用.&lt;/li&gt;
-&lt;li&gt;支援各種設計與運算分析所需要的軟硬體配備, CAD, CAE, 虛擬實境, 擴增實境, 平行運算等技術的支援.&lt;/li&gt;
-&lt;li&gt;支援各種層面的製造規劃與管理, CAM, Computer Aided Process Planning 等.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;iframe src="https://player.vimeo.com/video/145820006" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/145820006"&gt;2015cadp_w10_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;h3&gt;介紹可攜程式系統的搭建流程與細節&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;首先下載與操作系統對應的 Miniconda (使用 Python3)&lt;/li&gt;
-&lt;li&gt;利用 conda install pip&lt;/li&gt;
-&lt;li&gt;利用 pip install pelican Markdown 安裝 pelican 與 Markdown 模組&lt;/li&gt;
-&lt;li&gt;可以利用 pip uninstall leo 移除先前所安裝的 Leo Editor 模組&lt;/li&gt;
-&lt;li&gt;利用 conda install pyqt (由 conda 自行選擇可以與既有系統相容的 pyqt 版本)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;iframe src="https://player.vimeo.com/video/145825547" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/145825547"&gt;2015cadp_w10_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W11&lt;/h2&gt;
-&lt;h3&gt;fix.zip 修補流程再介紹, 說明電腦輔助機械設計的目標&lt;/h3&gt;
-&lt;p&gt;將隨身碟中的資料, 複製到電腦硬碟, 然後再利用 start.bat 啟動硬碟上的可攜程式系統.&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/146592105" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/146592105"&gt;2015fallcadpw11_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;啟動存放在全班倉儲網頁中的分組報告&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/146593944" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/146593944"&gt;2015fallcadpw11_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W12&lt;/h2&gt;
-&lt;h3&gt;fix.bat 的詳細介紹, Leo Editor 的近端 pip install 應用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/147276192" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147276192"&gt;2015cadpb_w12_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;利用各自 user 目錄下的 Leo Editor 檔案, 發表位於全班 gh-pages 網頁的分組報告, 以電腦輔助方法管理 reveal.js 投影片中的學員學號註記, 介紹網頁式正齒輪齒面寬輔助設計, 說明正齒輪囓合繪製與組合的靜態繪圖與動態繪圖原理&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/147279887" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/147279887"&gt;2015cadpb_w12_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W13&lt;/h2&gt;
-&lt;h3&gt;fix.bat 環境修補複習&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/148455580" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/148455580"&gt;cadpaw13_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何利用各學員 user/學號 目錄下的 .leo 檔案發表分組報告, 介紹如何利用 Github pages 展示零組件的 .stl 檔案&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/148458668" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/148458668"&gt;cadpaw13_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W14&lt;/h2&gt;
-&lt;h3&gt;介紹Creo Parametric 零件轉檔方法, gh-pages 網頁上的零件展示, Binary 與 ASCII STL 檔案格式介紹&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/148825230" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/148825230"&gt;2015cadp_w14_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;Onshape 介紹, 開始利用 OnShape 繪製 Nutcracker 零組件&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/149359397" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/149359397"&gt;2015cadp_w14_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W15&lt;/h2&gt;
-&lt;h3&gt;說明如何利用 Onshape, 以雲端協同方式繪製 Nutcracker 零件, 組立 Nutcracker 零件&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/149940498" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/149940498"&gt;2015cadp_w15_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W16&lt;/h2&gt;
-&lt;h3&gt;介紹 Nutcracker 在 Onshape 環境中如何進行組立, 進行各種 Onshape 組立約束條件的細部特性討論&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/150140635" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150140635"&gt;2015fall_cadp_b_w16&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;說明如何利用 Solvespace 分析 Nutcraker 機構的 Piston 滑動行程極限&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/150401255" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150401255"&gt;2015fallcadp_a_w16_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W17&lt;/h2&gt;
-&lt;h3&gt;Nutcracker 機構滑動 Piston 零件的滑動行程範圍分析, 說明如何以 Solvespace 圖解法, 以 Sympy 符號及數值分析推導機構邊界直線方程式, 或採基因演算法進行分析&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/150636968" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150636968"&gt;2015fall_cadpb_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/150985277" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/150985277"&gt;2015fallcadpa_w17&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2015 Fall CADP part 1</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-cadp-part-1.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2015-fall-cadp-part-1.html</id><summary type="html">&lt;p&gt;2015 Fall 電腦輔助設計實習課程內容 part1&lt;/p&gt;
-&lt;p&gt;電腦輔助設計實習課程倉儲分別為:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;與&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2015 Fall CADP 課程 part1 影片摘要:&lt;/p&gt;
-&lt;h2&gt;CADP W2&lt;/h2&gt;
-&lt;h3&gt;介紹可攜程式環境的下載與使用&lt;/h3&gt;
-&lt;p&gt;此一系統包括 Python3 程式環境, Leo Editor, Jupyter, 而每週作業則利用 reveal.js 製作網頁式投影片, 利用 Pelican 產生靜態網頁, 並且讓各學員可以在個人倉儲 gh-pages 與全班倉儲 gh-pages 網頁上來呈現各階段所完成的作業內容.&lt;/p&gt;
-&lt;iframe src="https://player.vimeo.com/video/139886319" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139886319"&gt;2015fallcadp_w2_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-
-
-&lt;h3&gt;利用電腦輔助方法, 善用 USB 客製化資料與 C 槽的既有隨身系統, 設法修改 C 槽啟動的 start.bat 批次檔案, 建立符合需求的可攜程式環境.&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/139890840" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139890840"&gt;2015cadp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;介紹 reveal.js 網頁式投影片的使用方法, 介紹 Github pages 倉儲分支 gh-pages 的用法.&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/139892322" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139892322"&gt;2015cadp_w2_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;複習倉儲分支之間的切換方法 (git checkout master 或 git checkout gh-pages)&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/139893872" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139893872"&gt;2015cadp_w2_6&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;Github 倉儲中 Leo Editor 5.1 版 @clean 節點指令與 reveal.js 網頁式投影片的用法.&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/139913541" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/139913541"&gt;2015cadp_w2_reveal&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;甲班 CADP W2&lt;/p&gt;
-&lt;h3&gt;可攜程式系統的建立與使用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140277094" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140277094"&gt;2015cadpa_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;avi 影片轉 flv 格式, 以可攜式 VLC 觀看 flv 影片, 利用 python -m http.server 執行近端檔案分享&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140381241" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140381241"&gt;2015cp_w2_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;git push origin gh-pages 系列指令的應用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/140281702" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/140281702"&gt;2015cadpa_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W3&lt;/h2&gt;
-&lt;h3&gt;Pelican 靜態網頁系統建立與分組協同, Solvespace 零件繪圖&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141021392" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141021392"&gt;2015_cadpa_w3_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;git rm 的使用, 以及 git 提交, 訊息註記與推送設定&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141024439" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141024439"&gt;2015_cadpa_w3_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;Solvespace 零件電腦輔助繪圖&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141026116" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141026116"&gt;2015_cadpa_w3_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W4&lt;/h2&gt;
-&lt;h3&gt;根據 What Engineers Do? 電子文件, 說明科學與工程, 自然與人文間的關係&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/141370058" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/141370058"&gt;2015fall_cadp_w4_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W5&lt;/h2&gt;
-&lt;h3&gt;從 2008 年舊資料的回顧, 說明在地化與國際化的整合, 培養有專長, 能就業, 說明文化與教育對工程師的重要影響, 以及追求卓越的本意&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/142093273" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093273"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;zoomit.exe 在錄製電腦輔助設計說明流程上的應用, Leo Editor 與 Pelican 的使用&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/142473037" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142473037"&gt;2015cadp_w5_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;電腦輔助設計系列課程的標準執行流程, 可攜, 永續與體貼的電腦輔助設計方法&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/142093479" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142093479"&gt;2015cadp_w5_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;Creo2 primer 電子書的網頁化處理&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/142098889" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/142098889"&gt;2015cadp_w5_3&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W6&lt;/h2&gt;
-&lt;h3&gt;啟動可攜系統, Waht Engineers Do? 與 Creo 2 Parametric Primer 資料摘要, Creo Parametric 零件繪製與組立, 開始建立全班協同 gh-pages 網頁, 自行新增為倉儲協同者, 從 git clone 開始參與全班資料協同&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/143225578" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143225578"&gt;2015cadp_a_w6_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h2&gt;CADP W7&lt;/h2&gt;
-&lt;h2&gt;學員自行新增為全班協同倉儲的協同者, 示範如何參與網頁協同資料管理&lt;/h2&gt;
-&lt;iframe src="https://player.vimeo.com/video/143572506" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143572506"&gt;2015fall_cadp_w7_1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;start.bat 內容的修改, 設法透過 Jupyter 執行網頁式設計分析或協同網頁資料編輯&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/143574887" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143574887"&gt;2015fall_cadp_w7_2&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;h3&gt;期中報告內容說明, Creo 2 Parametric Primer 電子書閱讀與零件繪製與零件組操作練習&lt;/h3&gt;
-&lt;iframe src="https://player.vimeo.com/video/143963816" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;p&gt;&lt;a href="https://vimeo.com/143963816"&gt;2015cadp_w7_a1&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;</summary><category term="2015 Fall cadp"></category><category term="2015 Fall"></category></entry><entry><title>2016 WCM course</title><link href="http://chiamingyen.github.io/kmolab/blog/2016-wcm-course.html" rel="alternate"></link><updated>2016-02-13T09:45:39+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-02-13:kmolab/blog/2016-wcm-course.html</id><summary type="html">&lt;p&gt;2016 Spring 網際內容管理課程規劃&lt;/p&gt;
-&lt;h2&gt;github pages 上的靜態網頁系統&lt;/h2&gt;
-&lt;p&gt;Github pages, Leo Editor 與 Pelican site builder&lt;/p&gt;
-&lt;h2&gt;html 與 Javascript (Brython based)&lt;/h2&gt;
-&lt;h2&gt;Python3 的動態網頁 (Flask 與 SQLite based)&lt;/h2&gt;
-&lt;p&gt;OpenShift Web Console: &lt;a href="https://www.openshift.com"&gt;https://www.openshift.com&lt;/a&gt; 與近端 Flask: &lt;a href="http://flask.pocoo.org"&gt;http://flask.pocoo.org&lt;/a&gt; based 網站程式開發&lt;/p&gt;
-
-
-&lt;h2&gt;參考資料&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="https://github.com/embik/bloks"&gt;https://github.com/embik/bloks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/peterhudec/authomatic"&gt;https://github.com/peterhudec/authomatic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/sigmavirus24/github3.py"&gt;https://github.com/sigmavirus24/github3.py&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="網際內容管理"></category><category term="2016 Spring"></category></entry><entry><title>2015 Fall Final Schedule</title><link href="http://chiamingyen.github.io/kmolab/blog/2015-fall-final-schedule.html" rel="alternate"></link><updated>2016-01-11T15:48:04+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-11:kmolab/blog/2015-fall-final-schedule.html</id><summary type="html">&lt;p&gt;2015 Fall 學期成績評分時程規劃&lt;/p&gt;
-&lt;p&gt;最後資料改版期限: 2016.01.20 (星期三) 24:00&lt;/p&gt;
-&lt;p&gt;評分流程:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;從各班個人連結頁面中 (&lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;2a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;2b&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1a&lt;/a&gt;, &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;1b&lt;/a&gt;), 進入各學員在各班倉儲中對應的&lt;strong&gt;個人 gh-pages 網頁&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;從上述頁面右下方的 Blogroll 中&lt;strong&gt;最下方&lt;/strong&gt;連結 (名稱為"學號 個人網頁"), 進入學員個人單獨的 gh-pages 網頁&lt;/li&gt;
-&lt;li&gt;根據上述兩個頁面中的資料, 配合各課程的講授內容, 依據 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
-&lt;li&gt;從各班的協同網頁中, 各組所公佈的分組報告中的 &lt;strong&gt;投影片&lt;/strong&gt;, &lt;strong&gt;操作影片&lt;/strong&gt;以及頁面上的其他&lt;strong&gt;相關檔案資料&lt;/strong&gt;評分.&lt;/li&gt;
-&lt;li&gt;cadp 課程另外將參酌學員所完成的 &lt;strong&gt;Solvespace 零件檔案&lt;/strong&gt;, &lt;strong&gt;Creo Parametric 零組件檔案&lt;/strong&gt;, Onshape 零組件檔案評分.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;p&gt;2015 Fall 電腦輔助設計實習課程甲班:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cadpa 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcadpa"&gt;https://github.com/2015fallhw/2015fallcadpa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cadpa 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcadpa"&gt;http://2015fallhw.github.io/2015fallcadpa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcadpa/wiki"&gt;https://github.com/2015fallhw/2015fallcadpa/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2015 Fall 電腦輔助設計實習課程乙班:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cadpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcadpb"&gt;https://github.com/2015fallhw/2015fallcadpb&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cadpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcadpb"&gt;http://2015fallhw.github.io/2015fallcadpb&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcadpb/wiki"&gt;https://github.com/2015fallhw/2015fallcadpb/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2015 Fall 計算機程式課程甲班:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cpa 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpa"&gt;https://github.com/2015fallhw/2015fallcpa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cpa 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpa"&gt;http://2015fallhw.github.io/2015fallcpa&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpa/wiki"&gt;https://github.com/2015fallhw/2015fallcpa/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2015 Fall 計算機程式課程乙班:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;cpb 倉儲: &lt;a href="https://github.com/2015fallhw/2015fallcpb"&gt;https://github.com/2015fallhw/2015fallcpb&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;cpb 網頁: &lt;a href="http://2015fallhw.github.io/2015fallcpb"&gt;http://2015fallhw.github.io/2015fallcpb&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;個人連結: &lt;a href="https://github.com/2015fallhw/2015fallcpb/wiki"&gt;https://github.com/2015fallhw/2015fallcpb/wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="2015 Fall"></category></entry></feed>
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="協同產品設計實習"></category><category term="2016 Spring"></category></entry></feed>
