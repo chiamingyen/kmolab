@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-24T12:00:00+08:00</updated><entry><title>電腦操作流程錄影工具</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html" rel="alternate"></link><updated>2016-09-24T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-24:kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html</id><summary type="html">&lt;p&gt;製作多媒體影音檔案是機械設計工程師在產品設計開發過程中六種表達中的重要技能之一, 因為其中融合口語表達、文字表達、2D 圖像表達與(3D) 動態資料表達、解析模型表達與實體原型表達等內容, 在 2016Fall 的&lt;a href="https://github.com/mdecourse/2016fallcp"&gt;計算機程式&lt;/a&gt;與&lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;電腦輔助設計實習&lt;/a&gt;課程中, 我們將採用 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; (建議&lt;a href="https://github.com/ShareX/ShareX/releases"&gt;下載 ShareX portable 版本&lt;/a&gt;) 與 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 等兩套用來錄製多媒體影片的工具, 其中 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 以 C# 編寫, 適用於 Windows, 而 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 則採用 Python3 編寫, 可用於 Ubuntu 操作系統環境中的螢幕操作錄影.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-24T13:00:00+08:00</updated><entry><title>電腦輔助設計實習 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html" rel="alternate"></link><updated>2016-09-24T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-24:kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html</id><summary type="html">&lt;p&gt;電腦輔助設計實習課程主要利用 Github 網際分散式數位檔案版次管理系統, 讓學員可以利用 Git 工具進行近端與遠端電腦輔助設計檔案的管理.&lt;/p&gt;
+
+
+&lt;p&gt;有關課程規劃與執行的初步說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183931708" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183931708"&gt;2016-09-23_about_cadp&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;有關 Github 帳號註冊與登入與建立 repositories 的簡要說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183950627"&gt;2016-09-23_cpb_github_intro&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;有關學員 Github Pages 網頁與其他倉儲 gh-pages 頁面的用法, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183933382" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183933382"&gt;2016-09-23_github_pages&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;有關 Github 倉儲 settings 中 collaborators 設定方法, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183935923" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183935923"&gt;2016-09-23_github_repo_collaborators&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;有關在 Github 環境中, 進行課程倉儲的 Fork 與 Pull Requests 基本用法說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183954581" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183954581"&gt;2016-09-23_fork_pull_requests&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCADP"></category></entry><entry><title>電腦操作流程錄影工具</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html" rel="alternate"></link><updated>2016-09-24T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-24:kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html</id><summary type="html">&lt;p&gt;製作多媒體影音檔案是機械設計工程師在產品設計開發過程中六種表達中的重要技能之一, 因為其中融合口語表達、文字表達、2D 圖像表達與(3D) 動態資料表達、解析模型表達與實體原型表達等內容, 在 2016Fall 的&lt;a href="https://github.com/mdecourse/2016fallcp"&gt;計算機程式&lt;/a&gt;與&lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;電腦輔助設計實習&lt;/a&gt;課程中, 我們將採用 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; (建議&lt;a href="https://github.com/ShareX/ShareX/releases"&gt;下載 ShareX portable 版本&lt;/a&gt;) 與 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 等兩套用來錄製多媒體影片的工具, 其中 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 以 C# 編寫, 適用於 Windows, 而 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 則採用 Python3 編寫, 可用於 Ubuntu 操作系統環境中的螢幕操作錄影.&lt;/p&gt;
 
 
 &lt;p&gt;有關 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 的基本設定與使用說明, 請參考:&lt;/p&gt;

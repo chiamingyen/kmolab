@@ -194,6 +194,7 @@
 <v t="amd.20160920093855.1"><vh>@edit yen_20160920.md</vh></v>
 <v t="amd.20160922094800.1"><vh>@edit yen_20160922.md</vh></v>
 <v t="amd.20160924085603.1"><vh>@edit yen_20160924.md</vh></v>
+<v t="amd.20160924095232.1"><vh>@edit yen_20160924-1.md</vh></v>
 </v>
 </v>
 <v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
