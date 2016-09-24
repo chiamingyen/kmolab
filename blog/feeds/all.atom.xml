@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-22T12:00:00+08:00</updated><entry><title>電腦輔助設計實習 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html" rel="alternate"></link><updated>2016-09-22T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-22:kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html</id><summary type="html">&lt;p&gt;2016FallCADP 課程倉儲: &lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;https://github.com/mdecourse/2016fallcadp&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-24T12:00:00+08:00</updated><entry><title>電腦操作流程錄影工具</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html" rel="alternate"></link><updated>2016-09-24T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-24:kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html</id><summary type="html">&lt;p&gt;製作多媒體影音檔案是機械設計工程師在產品設計開發過程中六種表達中的重要技能之一, 因為其中融合口語表達、文字表達、2D 圖像表達與(3D) 動態資料表達、解析模型表達與實體原型表達等內容, 在 2016Fall 的&lt;a href="https://github.com/mdecourse/2016fallcp"&gt;計算機程式&lt;/a&gt;與&lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;電腦輔助設計實習&lt;/a&gt;課程中, 我們將採用 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; (建議&lt;a href="https://github.com/ShareX/ShareX/releases"&gt;下載 ShareX portable 版本&lt;/a&gt;) 與 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 等兩套用來錄製多媒體影片的工具, 其中 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 以 C# 編寫, 適用於 Windows, 而 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 則採用 Python3 編寫, 可用於 Ubuntu 操作系統環境中的螢幕操作錄影.&lt;/p&gt;
+
+
+&lt;p&gt;有關 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 的基本設定與使用說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183929453" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183929453"&gt;2016-09-23_about_sharex&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;其中 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 的 Applications settings 主要在設定錄製後的 .mp4 檔案儲存的位置, 而 Task settings 的設定則用來指定影片檔與聲音檔錄製所採用的硬體配置. &lt;/p&gt;
+&lt;p&gt;而 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 在 Ubuntu 14.04 中的安裝, 可採用: &lt;/p&gt;
+&lt;p&gt;$ sudo apt-get install kazam&lt;/p&gt;
+&lt;p&gt;假如其他版本的 Debian 操作系統, 無法使用上述指令安裝者, 可以嘗試利用下列指令安裝:&lt;/p&gt;
+&lt;p&gt;$ sudo add-apt-repository ppa:kazam-team/stable-series
+$ sudo apt-get update
+$ sudo apt-get install kazam&lt;/p&gt;
+&lt;p&gt;安裝 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 後, 在 shell 指令中, 以 kazam&amp;amp; 令其在 background 模式下執行, 並利用 File-&amp;gt;Preferences 設定錄音硬體設備.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 與 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 最大的差別是 &lt;a href="https://github.com/aaae/kazam"&gt;Kazam&lt;/a&gt; 只能錄製電腦螢幕內的操作 (屬於 Screencast 工具), 而 &lt;a href="https://github.com/ShareX/ShareX"&gt;ShareX&lt;/a&gt; 除能錄製螢幕操作外, 還可以錄製 Web Cam 所拍攝的內容 (屬於 Video Recorder 工具).&lt;/p&gt;
+&lt;p&gt;至於上課所使用的 USB Web Cam 則為 Microsoft Lifecam 系列.&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCADP"></category><category term="2016FallCP"></category></entry><entry><title>電腦輔助設計實習 (一)</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html" rel="alternate"></link><updated>2016-09-22T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-22:kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html</id><summary type="html">&lt;p&gt;2016FallCADP 課程倉儲: &lt;a href="https://github.com/mdecourse/2016fallcadp"&gt;https://github.com/mdecourse/2016fallcadp&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2016FallCADP 上課筆記: &lt;a href="https://github.com/mdecourse/2016fallcadp/wiki"&gt;https://github.com/mdecourse/2016fallcadp/wiki&lt;/a&gt;&lt;/p&gt;
 
 
