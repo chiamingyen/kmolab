@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-24T13:00:00+08:00</updated><entry><title>電腦輔助設計實習 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html" rel="alternate"></link><updated>2016-09-24T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-24:kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html</id><summary type="html">&lt;p&gt;電腦輔助設計實習課程主要利用 Github 網際分散式數位檔案版次管理系統, 讓學員可以利用 Git 工具進行近端與遠端電腦輔助設計檔案的管理.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-25T13:00:00+08:00</updated><entry><title>計算機程式 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-er.html" rel="alternate"></link><updated>2016-09-25T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-25:kmolab/blog/ji-suan-ji-cheng-shi-er.html</id><summary type="html">&lt;p&gt;2016Fall 的計算機程式課程已經從 Github 的應用開始, 先讓學員利用 Git 分散式管理工具進行團隊間的數位資料管理, 然後再以線上的分組程式為例, 說明運用計算機程式, 如何將原本繁雜的資料排序流程, 導向能隨需求而快速因應變化的網際程式流程.&lt;/p&gt;
+
+
+&lt;p&gt;課程中有關 Github 的簡介, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183950627"&gt;2016-09-23_cpb_github_intro&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Github 倉儲的 fork 與 pull requests 操作說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183954581" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183954581"&gt;2016-09-23_fork_pull_requests&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;有關 git clone, git branch 與 git checkout 的用法說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183968919" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183968919"&gt;2016-09-23_git_clone_branch_checkout&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;至於與 git config, git add -A, git commit -m 與 git push 的使用說明, 請參考:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/183972313" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/183972313"&gt;2016-09-23_git_clone_add_commit_push&lt;/a&gt; from &lt;a href="https://vimeo.com/user24079973"&gt;虎尾科大機械設計工程&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;接下將要讓各組成員, 利用 Brython-Server 主機 &lt;a href="http://8888.kmol.info"&gt;http://8888.kmol.info&lt;/a&gt; (或 &lt;a href="http://runpython.com/"&gt;http://runpython.com/&lt;/a&gt;), 直接在瀏覽器中, 利用倉儲 collaborators 身份與 pull requests 流程, 在個人 github 帳號下的 2016fallcp_hw 倉儲中進行 &lt;a href="https://github.com/mdecourse/2016fallcp/blob/master/Python3Programs.txt"&gt;https://github.com/mdecourse/2016fallcp/blob/master/Python3Programs.txt&lt;/a&gt; 的練習.&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category></entry><entry><title>電腦輔助設計實習 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html" rel="alternate"></link><updated>2016-09-24T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-24:kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html</id><summary type="html">&lt;p&gt;電腦輔助設計實習課程主要利用 Github 網際分散式數位檔案版次管理系統, 讓學員可以利用 Git 工具進行近端與遠端電腦輔助設計檔案的管理.&lt;/p&gt;
 
 
 &lt;p&gt;有關課程規劃與執行的初步說明, 請參考:&lt;/p&gt;
