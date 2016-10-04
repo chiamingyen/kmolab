@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-09-25T13:00:00+08:00</updated><entry><title>計算機程式 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-er.html" rel="alternate"></link><updated>2016-09-25T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-25:kmolab/blog/ji-suan-ji-cheng-shi-er.html</id><summary type="html">&lt;p&gt;2016Fall 的計算機程式課程已經從 Github 的應用開始, 先讓學員利用 Git 分散式管理工具進行團隊間的數位資料管理, 然後再以線上的分組程式為例, 說明運用計算機程式, 如何將原本繁雜的資料排序流程, 導向能隨需求而快速因應變化的網際程式流程.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/all.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-10-04T13:00:00+08:00</updated><entry><title>Git 使用導引</title><link href="http://chiamingyen.github.io/kmolab/blog/git-shi-yong-dao-yin.html" rel="alternate"></link><updated>2016-10-04T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-10-04:kmolab/blog/git-shi-yong-dao-yin.html</id><summary type="html">&lt;p&gt;Git 是一套分散式數位資料版本控制系統, 而學習 Git 最好的參考資料就是 &lt;a href="https://git-scm.com/book/zh-tw/v2"&gt; Pro Git&lt;/a&gt; (&lt;a href="https://git-scm.com/book/zh-tw/v1"&gt;第1版&lt;/a&gt;).&lt;/p&gt;
+
+
+&lt;h2&gt;初次使用 Git&lt;/h2&gt;
+&lt;p&gt;首先是&lt;a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E9%97%9C%E6%96%BC%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"&gt;關於版本控制系統&lt;/a&gt;的說明. Git 屬於分散式版本控制系統, 各用戶可以在沒有網路連線與伺服器支援的情況下作業, 等工作告一段落, 再設法連上網路, 將近端的版本提交推送到遠端伺服器.&lt;/p&gt;
+&lt;p&gt;Git 是利用紀錄檔案快照的方式來保存版本, 而非儲存版本間的差異, 因此大部份的操作都可以在近端執行, 細節請參考 &lt;a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%9F%BA%E7%A4%8E%E8%A6%81%E9%BB%9E"&gt;Git 基礎要點說明&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;在 KMOL 相關課程中, Git 工具已經內建在可攜程式系統中, 只要啟動 start.bat, 就可以在對應的命令列中執行 Git 指令. 其中可攜 Git 工具下載自 &lt;a href="https://git-scm.com/download/win"&gt;https://git-scm.com/download/win&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;課程的進行, Git 倉儲都是在 github.com 中建立, 然後再 git clone 到近端進行改版, 但是也可以直接在近端起始 Git 倉儲, 相關說明請參考 &lt;a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E5%88%9D%E6%AC%A1%E8%A8%AD%E5%AE%9A-Git"&gt;如何起始倉儲&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;當使用者初次在 CADLAB 電腦輔助設計室使用可攜系統, 必須設定用戶的識別資料:&lt;/p&gt;
+&lt;p&gt;git config --global user.name "s學號"&lt;/p&gt;
+&lt;p&gt;git config --global user.email s學號@gm.nfu.edu.tw&lt;/p&gt;
+&lt;p&gt;設定後, .gitconfig 檔案會存放在 y:\home\ 目錄中, 使用者可以將完成設定的 .gitconfig 檔案存在自己的 USB 隨身碟或網路上, 以便備用.&lt;/p&gt;
+&lt;p&gt;另外, 若希望 Git 指令也使用系上的代理主機, 則可利用下列指令設定:&lt;/p&gt;
+&lt;p&gt;git config --global http.proxy http://proxy.mde.tw:3128&lt;/p&gt;
+&lt;p&gt;git config --global https.proxy http://proxy.mde.tw:3128&lt;/p&gt;
+&lt;p&gt;完成設定後, 代理主機資料也會存入 y:\home\.gitconfig 檔案中.&lt;/p&gt;
+&lt;h2&gt;Git 倉儲 clone 改版與提交推送&lt;/h2&gt;
+&lt;p&gt;在機械設計工程協同設計主題教學過程中, 使用者一般直接在 Github 建立倉儲後, 確定倉儲的連結為 repository_url 後, 利用:&lt;/p&gt;
+&lt;p&gt;git clone repository_url&lt;/p&gt;
+&lt;p&gt;將 Github 伺服器上的倉儲下載到近端.&lt;/p&gt;
+&lt;p&gt;git clone 到近端的版本稱為工作目錄, 使用者可以在近端的倉儲資料中進行改版.&lt;/p&gt;
+&lt;p&gt;一旦某倉儲改版告一段落, 使用者可以在確定 y:\home\.gitconfig 中已經設定了個人識別資料與 proxy 後, 利用:&lt;/p&gt;
+&lt;p&gt;git add -A&lt;/p&gt;
+&lt;p&gt;認列自 git clone 後所進行的所有變更, 然後以:&lt;/p&gt;
+&lt;p&gt;git commit -m "版本提交註記訊息"&lt;/p&gt;
+&lt;p&gt;完成近端版本提交的動作.&lt;/p&gt;
+&lt;p&gt;最後再利用 git push 將近端改版的內容, 推送到 Github 倉儲中. git push 時則需要輸入倉儲擁有者或協同者對應的 Github 帳號與密碼.&lt;/p&gt;
+&lt;h2&gt;Git 倉儲的分支&lt;/h2&gt;
+&lt;p&gt;有關 Git 分支的簡介資料在&lt;a href="https://git-scm.com/book/zh-tw/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E7%B0%A1%E4%BB%8B"&gt;這裡&lt;/a&gt; (第1版有&lt;a href="https://git-scm.com/book/zh-tw/v1/Git-%E5%88%86%E6%94%AF"&gt;中文的 Git 分支說明&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;在計算機程式課程中, 每一個 Github 倉儲都必須設定名稱為 gh-pages 的分支, 因為這個特殊的分支, 可以直接利用流覽器檢視其 html 與 Javascript 資料內容. 至於與 Github 帳號對應的 "帳號.github.io" 倉儲, 則可以將網頁內容放在 master 分支, Github 會讓用戶直接利用 https://帳號.github.io 擷取這個倉儲的 html 與 Javascript 資料, 因此我們將這個倉儲稱為個人的帳號對應網頁倉儲, 或簡稱為個人的 Github 帳號網頁.&lt;/p&gt;
+&lt;p&gt;當使用者將某一個倉儲 git clone 到近端後, 可以利用 git branch 檢查目前所在的分支, 也可以利用 git checkout gh-pages 將工作目錄的內容, 切換到 gh-pages 分支. 也可以直接在 Github 伺服器中, 利用各倉儲的 settings, 設定倉儲的 default 分支.&lt;/p&gt;
+&lt;p&gt;另外一個與倉儲分支有關, 必須特別注意的是, 當使用者從近端將改版資料推送到遠端時, 除非要推送到 master 分支可以省略外, 若要推送到 gh-pages 分支, 必須明確指名.&lt;/p&gt;
+&lt;p&gt;利用 git push origin gh-pages 指令, 就是利用 git push 以原來 git clone repository_url 將資料下載到近端的 repository_url 用 origin 代替, 指名將改版資料推送到遠端原倉儲的 gh-pages 分支.&lt;/p&gt;
+&lt;h2&gt;Git 倉儲中的 submodule&lt;/h2&gt;
+&lt;p&gt;因為自 2016 Fall 開始, 要將各班的評分用倉儲全部設定為 gh-pages 分支, 且希望從課程倉儲中, 以 submodule 功能, 納入各分組的倉儲, 然後再由各分組以 submodule, 納入各組員的作業倉儲, 且各倉儲的 gh-pages 分支中都包含一組 reveal.js 與 pelican blog 的資料架構, 因此各修課班級的課程網頁就可以由上往下, 依據各評分階段的 submodule 版本對應, 取得各組與各學員的時間註記版本資料.&lt;/p&gt;
+&lt;p&gt;而當課程結束後, 任何人也都能夠利用 git 指令, clone 各課程倉儲的所有資料, 並且直接在近端用瀏覽器檢視內容. (只有影片資料位於 Vimeo 或 Youtube, 其餘資料都存在倉儲中)&lt;/p&gt;
+&lt;p&gt;至於 git submodule 指令的應用, 包含子模組的設定, 倉儲的 clone, 子模組的起始與子模組的內容下載等:&lt;/p&gt;
+&lt;h3&gt;git submodule add&lt;/h3&gt;
+&lt;p&gt;當某一倉儲的管理者, 包含倉儲擁有者與協同者, 都可以將倉儲 git clone 到近端後, 利用 git submodule add 指令, 建立子模組.&lt;/p&gt;
+&lt;p&gt;例如:&lt;/p&gt;
+&lt;p&gt;ag1 組的組長 Github 帳號為 scrum-1, 其分組倉儲名稱為 2016fallcp_ag1, 且其中一名組員帳號為 s1234, 則組長利用:&lt;/p&gt;
+&lt;p&gt;git clone https://github.com/scrum-1/2016fallcp_ag1 &lt;/p&gt;
+&lt;p&gt;將分組倉儲從遠端下載到近端後, cd 2016fallcp_ag1 倉儲後, 就可以執行:&lt;/p&gt;
+&lt;p&gt;git submodule add -b gh-pages https://github.com/s1234/2016fallcp_hw s1234&lt;/p&gt;
+&lt;p&gt;表示 scrum-1 組長, 利用 git submodule add 指令, 在其 2016fallcp_ag1 倉儲下, 建立了一個子模組, 其名稱為 s1234, 而子模組的版本資料則對應到 s1234 學員的課程作業倉儲.&lt;/p&gt;
+&lt;p&gt;這時, 2016fallcp_ag1  倉儲下會產生一個名稱為 s1234 的目錄, 而其中存放的版本資料, 就是 s1234 組員的作業倉儲.&lt;/p&gt;
+&lt;p&gt;當使用者在執行 git submodule add 指令時, 有一點必須特別注意, 就是近端分組倉儲的工作目錄中, 不能先有 s1234 子目錄, 否則 git submodule add 指令無法正常運作.&lt;/p&gt;
+&lt;p&gt;另外, 當某一倉儲建立子模組之後, 倉儲中會產生 .gitmodules, 且 .git 目錄中, 會分別將子模組資料註記在 .git 目錄中的 config 檔案與 modules 目錄中.&lt;/p&gt;
+&lt;p&gt;最後, 當其他使用者 git clone 帶有 submodule 設定的倉儲時, 就必須在 git clone 資料下載完成後, 分別利用 git submodule init 與 git submodule update 起始並下載各子模組的對應版本資料.&lt;/p&gt;
+&lt;p&gt;這裡所謂下載各子模組的對應版本資料, 指的是 git submodule add 會將子模組當下最新版本, 設為父模組的對應版本, 因此當使用者 git clone 、git submodule init 並 git submodule update 時, 就是下載各子模組當時註記的版本.&lt;/p&gt;
+&lt;p&gt;換言之, 當課程進行到期中或期末評分階段時, 各組就必須在規定時效內處理好各組與各組員的子模組對應版本, 以便執行自評與互評的流程. 與子模組設定及更新維護的說明, 請參考 &lt;a href="https://github.com/mdecourse/2016fallcpa/wiki"&gt;https://github.com/mdecourse/2016fallcpa/wiki&lt;/a&gt;&lt;/p&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category><category term="2016FallCADP"></category></entry><entry><title>計算機程式 (二)</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-er.html" rel="alternate"></link><updated>2016-09-25T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-09-25:kmolab/blog/ji-suan-ji-cheng-shi-er.html</id><summary type="html">&lt;p&gt;2016Fall 的計算機程式課程已經從 Github 的應用開始, 先讓學員利用 Git 分散式管理工具進行團隊間的數位資料管理, 然後再以線上的分組程式為例, 說明運用計算機程式, 如何將原本繁雜的資料排序流程, 導向能隨需求而快速因應變化的網際程式流程.&lt;/p&gt;
 
 
 &lt;p&gt;課程中有關 Github 的簡介, 請參考:&lt;/p&gt;
