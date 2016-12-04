@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T22:59:14+08:00</updated><entry><title>近端 Jupyterhub 電腦主機設定</title><link href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html" rel="alternate"></link><updated>2016-01-17T22:59:14+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html</id><summary type="html">&lt;p&gt;利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-10-16T21:49:00+08:00</updated><entry><title>近端 Jupyterhub 電腦主機設定</title><link href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html</id><summary type="html">&lt;p&gt;利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="http://101.mde.tw"&gt;http://101.mde.tw&lt;/a&gt; 就是其中的一台 &lt;a href="http://www8.hp.com/tw/zh/products/proliant-servers/product-detail.html?oid=7796450"&gt;HP 小型伺服主機&lt;/a&gt;.&lt;/p&gt;
@@ -58,33 +58,33 @@
 41
 42
 43
-44&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# jupyterhub_config.py&lt;/span&gt;
-&lt;span class="c"&gt;# jupyterhub -f /path/to/jupyterhub_config.py&lt;/span&gt;
+44&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# jupyterhub_config.py&lt;/span&gt;
+&lt;span class="c1"&gt;# jupyterhub -f /path/to/jupyterhub_config.py&lt;/span&gt;
 &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_config&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="n"&gt;pjoin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;
 
-&lt;span class="n"&gt;runtime_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;/srv/jupyterhub&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;ssl_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;ssl&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;runtime_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/srv/jupyterhub&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ssl_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ssl&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;makedirs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c"&gt;# https on :9443&lt;/span&gt;
+&lt;span class="c1"&gt;# https on :9443&lt;/span&gt;
 &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;9443&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssl_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;nginx.key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssl_cert&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;nginx.crt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssl_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nginx.key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ssl_cert&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ssl_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nginx.crt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c"&gt;# put the JupyterHub cookie secret and state db&lt;/span&gt;
-&lt;span class="c"&gt;# in /var/run/jupyterhub&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookie_secret_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cookie_secret&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;jupyterhub.sqlite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c"&gt;# or `--db=/path/to/jupyterhub.sqlite` on the command-line&lt;/span&gt;
+&lt;span class="c1"&gt;# put the JupyterHub cookie secret and state db&lt;/span&gt;
+&lt;span class="c1"&gt;# in /var/run/jupyterhub&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookie_secret_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;cookie_secret&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pjoin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;runtime_dir&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;jupyterhub.sqlite&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# or `--db=/path/to/jupyterhub.sqlite` on the command-line&lt;/span&gt;
 
-&lt;span class="c"&gt;# put the log file in /var/log&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/var/log/jupyterhub.log&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# put the log file in /var/log&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;JupyterHub&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/var/log/jupyterhub.log&amp;#39;&lt;/span&gt;
 
-&lt;span class="c"&gt;# use GitHub OAuthenticator for local users&lt;/span&gt;
+&lt;span class="c1"&gt;# use GitHub OAuthenticator for local users&lt;/span&gt;
 &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
 
 &lt;span class="sd"&gt;c.JupyterHub.authenticator_class = &amp;#39;oauthenticator.LocalGitHubOAuthenticator&amp;#39;&lt;/span&gt;
@@ -92,16 +92,16 @@
 &lt;span class="sd"&gt;# create system users that don&amp;#39;t exist yet&lt;/span&gt;
 &lt;span class="sd"&gt;c.LocalAuthenticator.create_system_users = True&lt;/span&gt;
 &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span class="c"&gt;# specify users and admin&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Authenticator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;whitelist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;user1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;user2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Authenticator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;admin_users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;user1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;user2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c1"&gt;# specify users and admin&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Authenticator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;whitelist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;user1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;user2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Authenticator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;admin_users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;user1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;user2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="c"&gt;# start single-user notebook servers in ~/assignments,&lt;/span&gt;
-&lt;span class="c"&gt;# with ~/assignments/Welcome.ipynb as the default landing page&lt;/span&gt;
-&lt;span class="c"&gt;# this config could also be put in&lt;/span&gt;
-&lt;span class="c"&gt;# /etc/ipython/ipython_notebook_config.py&lt;/span&gt;
-&lt;span class="c"&gt;#c.Spawner.notebook_dir = &amp;#39;~/tmp&amp;#39;&lt;/span&gt;
-&lt;span class="c"&gt;#c.Spawner.args = [&amp;#39;--NotebookApp.default_url=/notebooks/Welcome.ipynb&amp;#39;]&lt;/span&gt;
+&lt;span class="c1"&gt;# start single-user notebook servers in ~/assignments,&lt;/span&gt;
+&lt;span class="c1"&gt;# with ~/assignments/Welcome.ipynb as the default landing page&lt;/span&gt;
+&lt;span class="c1"&gt;# this config could also be put in&lt;/span&gt;
+&lt;span class="c1"&gt;# /etc/ipython/ipython_notebook_config.py&lt;/span&gt;
+&lt;span class="c1"&gt;#c.Spawner.notebook_dir = &amp;#39;~/tmp&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;#c.Spawner.args = [&amp;#39;--NotebookApp.default_url=/notebooks/Welcome.ipynb&amp;#39;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -276,36 +276,36 @@
 166
 167
 168
-169&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;#! /bin/sh&lt;/span&gt;
-&lt;span class="c"&gt;### BEGIN INIT INFO&lt;/span&gt;
-&lt;span class="c"&gt;# Provides:          jupyterhub&lt;/span&gt;
-&lt;span class="c"&gt;# Required-Start:    $remote_fs $syslog&lt;/span&gt;
-&lt;span class="c"&gt;# Required-Stop:     $remote_fs $syslog&lt;/span&gt;
-&lt;span class="c"&gt;# Default-Start:     2 3 4 5&lt;/span&gt;
-&lt;span class="c"&gt;# Default-Stop:      0 1 6&lt;/span&gt;
-&lt;span class="c"&gt;# Short-Description: Start jupyterhub&lt;/span&gt;
-&lt;span class="c"&gt;# Description:       This file should be used to construct $ sudo chmod +x /etc/init.d/jupyterhub&lt;/span&gt;
-&lt;span class="c"&gt;# Create a default config to /etc/jupyterhub/jupyterhub_config.py&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
-&lt;span class="c"&gt;# Start jupyterhub&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub start
-&lt;span class="c"&gt;# Stop jupyterhub&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub stop
-&lt;span class="c"&gt;# Start jupyterhub on boot&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo update-rc.d jupyterhub defaults
-&lt;span class="c"&gt;# Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo rcconfscripts to be
-&lt;span class="c"&gt;#                    placed in /etc/init.d.&lt;/span&gt;
-&lt;span class="c"&gt;### END INIT INFO&lt;/span&gt;
+169&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#! /bin/sh&lt;/span&gt;
+&lt;span class="c1"&gt;### BEGIN INIT INFO&lt;/span&gt;
+&lt;span class="c1"&gt;# Provides:          jupyterhub&lt;/span&gt;
+&lt;span class="c1"&gt;# Required-Start:    $remote_fs $syslog&lt;/span&gt;
+&lt;span class="c1"&gt;# Required-Stop:     $remote_fs $syslog&lt;/span&gt;
+&lt;span class="c1"&gt;# Default-Start:     2 3 4 5&lt;/span&gt;
+&lt;span class="c1"&gt;# Default-Stop:      0 1 6&lt;/span&gt;
+&lt;span class="c1"&gt;# Short-Description: Start jupyterhub&lt;/span&gt;
+&lt;span class="c1"&gt;# Description:       This file should be used to construct $ sudo chmod +x /etc/init.d/jupyterhub&lt;/span&gt;
+&lt;span class="c1"&gt;# Create a default config to /etc/jupyterhub/jupyterhub_config.py&lt;/span&gt;
+$ sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+&lt;span class="c1"&gt;# Start jupyterhub&lt;/span&gt;
+$ sudo service jupyterhub start
+&lt;span class="c1"&gt;# Stop jupyterhub&lt;/span&gt;
+$ sudo service jupyterhub stop
+&lt;span class="c1"&gt;# Start jupyterhub on boot&lt;/span&gt;
+$ sudo update-rc.d jupyterhub defaults
+&lt;span class="c1"&gt;# Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html&lt;/span&gt;
+$ sudo rcconfscripts to be
+&lt;span class="c1"&gt;#                    placed in /etc/init.d.&lt;/span&gt;
+&lt;span class="c1"&gt;### END INIT INFO&lt;/span&gt;
 
-&lt;span class="c"&gt;# Author: Alisue &amp;lt;lambdalisue@hashnote.net&amp;gt;&lt;/span&gt;
-&lt;span class="c"&gt;#&lt;/span&gt;
-&lt;span class="c"&gt;# Please remove the &amp;quot;Author&amp;quot; lines above and replace them&lt;/span&gt;
-&lt;span class="c"&gt;# with your own name if you copy and modify this script.&lt;/span&gt;
+&lt;span class="c1"&gt;# Author: Alisue &amp;lt;lambdalisue@hashnote.net&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Please remove the &amp;quot;Author&amp;quot; lines above and replace them&lt;/span&gt;
+&lt;span class="c1"&gt;# with your own name if you copy and modify this script.&lt;/span&gt;
 
-&lt;span class="c"&gt;# Do NOT &amp;quot;set -e&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Do NOT &amp;quot;set -e&amp;quot;&lt;/span&gt;
 
-&lt;span class="c"&gt;# PATH should only include /usr/* if it runs after the mountnfs.sh script&lt;/span&gt;
+&lt;span class="c1"&gt;# PATH should only include /usr/* if it runs after the mountnfs.sh script&lt;/span&gt;
 &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 &lt;span class="nv"&gt;DESC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Multi-user server for Jupyter notebooks&amp;quot;&lt;/span&gt;
 &lt;span class="nv"&gt;NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;jupyterhub
@@ -314,74 +314,74 @@
 &lt;span class="nv"&gt;PIDFILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/var/run/&lt;span class="nv"&gt;$NAME&lt;/span&gt;.pid
 &lt;span class="nv"&gt;SCRIPTNAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/etc/init.d/&lt;span class="nv"&gt;$NAME&lt;/span&gt;
 
-&lt;span class="c"&gt;# Exit if the package is not installed&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt; -x &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DAEMON&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;exit &lt;/span&gt;0
+&lt;span class="c1"&gt;# Exit if the package is not installed&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt; -x &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DAEMON&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; 0
 
-&lt;span class="c"&gt;# Read configuration variable file if it is present&lt;/span&gt;
+&lt;span class="c1"&gt;# Read configuration variable file if it is present&lt;/span&gt;
 &lt;span class="o"&gt;[&lt;/span&gt; -r /etc/default/&lt;span class="nv"&gt;$NAME&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; . /etc/default/&lt;span class="nv"&gt;$NAME&lt;/span&gt;
 
-&lt;span class="c"&gt;# Load the VERBOSE setting and other rcS variables&lt;/span&gt;
+&lt;span class="c1"&gt;# Load the VERBOSE setting and other rcS variables&lt;/span&gt;
 . /lib/init/vars.sh
 
-&lt;span class="c"&gt;# Define LSB log_* functions.&lt;/span&gt;
-&lt;span class="c"&gt;# Depend on lsb-base (&amp;gt;= 3.2-14) to ensure that this file is present&lt;/span&gt;
-&lt;span class="c"&gt;# and status_of_proc is working.&lt;/span&gt;
+&lt;span class="c1"&gt;# Define LSB log_* functions.&lt;/span&gt;
+&lt;span class="c1"&gt;# Depend on lsb-base (&amp;gt;= 3.2-14) to ensure that this file is present&lt;/span&gt;
+&lt;span class="c1"&gt;# and status_of_proc is working.&lt;/span&gt;
 . /lib/lsb/init-functions
 
-&lt;span class="c"&gt;#&lt;/span&gt;
-&lt;span class="c"&gt;# Function that starts the daemon/service&lt;/span&gt;
-&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Function that starts the daemon/service&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
 do_start&lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="c"&gt;# Return&lt;/span&gt;
-    &lt;span class="c"&gt;#   0 if daemon has been started&lt;/span&gt;
-    &lt;span class="c"&gt;#   1 if daemon was already running&lt;/span&gt;
-    &lt;span class="c"&gt;#   2 if daemon could not be started&lt;/span&gt;
+    &lt;span class="c1"&gt;# Return&lt;/span&gt;
+    &lt;span class="c1"&gt;#   0 if daemon has been started&lt;/span&gt;
+    &lt;span class="c1"&gt;#   1 if daemon was already running&lt;/span&gt;
+    &lt;span class="c1"&gt;#   2 if daemon could not be started&lt;/span&gt;
     start-stop-daemon --start --quiet --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --exec &lt;span class="nv"&gt;$DAEMON&lt;/span&gt; --test &amp;gt; /dev/null &lt;span class="se"&gt;\&lt;/span&gt;
         &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 1
     start-stop-daemon --start --background --make-pidfile --quiet --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --exec &lt;span class="nv"&gt;$DAEMON&lt;/span&gt; -- &lt;span class="se"&gt;\&lt;/span&gt;
         &lt;span class="nv"&gt;$DAEMON_ARGS&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
         &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 2
-    &lt;span class="c"&gt;# Add code here, if necessary, that waits for the process to be ready&lt;/span&gt;
-    &lt;span class="c"&gt;# to handle requests from services started subsequently which depend&lt;/span&gt;
-    &lt;span class="c"&gt;# on this one.  As a last resort, sleep for some time.&lt;/span&gt;
+    &lt;span class="c1"&gt;# Add code here, if necessary, that waits for the process to be ready&lt;/span&gt;
+    &lt;span class="c1"&gt;# to handle requests from services started subsequently which depend&lt;/span&gt;
+    &lt;span class="c1"&gt;# on this one.  As a last resort, sleep for some time.&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 
-&lt;span class="c"&gt;#&lt;/span&gt;
-&lt;span class="c"&gt;# Function that stops the daemon/service&lt;/span&gt;
-&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Function that stops the daemon/service&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
 do_stop&lt;span class="o"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="c"&gt;# Return&lt;/span&gt;
-    &lt;span class="c"&gt;#   0 if daemon has been stopped&lt;/span&gt;
-    &lt;span class="c"&gt;#   1 if daemon was already stopped&lt;/span&gt;
-    &lt;span class="c"&gt;#   2 if daemon could not be stopped&lt;/span&gt;
-    &lt;span class="c"&gt;#   other if a failure occurred&lt;/span&gt;
+    &lt;span class="c1"&gt;# Return&lt;/span&gt;
+    &lt;span class="c1"&gt;#   0 if daemon has been stopped&lt;/span&gt;
+    &lt;span class="c1"&gt;#   1 if daemon was already stopped&lt;/span&gt;
+    &lt;span class="c1"&gt;#   2 if daemon could not be stopped&lt;/span&gt;
+    &lt;span class="c1"&gt;#   other if a failure occurred&lt;/span&gt;
     start-stop-daemon --stop --quiet --retry&lt;span class="o"&gt;=&lt;/span&gt;TERM/30/KILL/5 --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --name &lt;span class="nv"&gt;$NAME&lt;/span&gt;
     &lt;span class="nv"&gt;RETVAL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$RETVAL&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 2
-    &lt;span class="c"&gt;# Wait for children to finish too if this is a daemon that forks&lt;/span&gt;
-    &lt;span class="c"&gt;# and if the daemon is only ever run from this initscript.&lt;/span&gt;
-    &lt;span class="c"&gt;# If the above conditions are not satisfied then add some other code&lt;/span&gt;
-    &lt;span class="c"&gt;# that waits for the process to drop all resources that could be&lt;/span&gt;
-    &lt;span class="c"&gt;# needed by services started subsequently.  A last resort is to&lt;/span&gt;
-    &lt;span class="c"&gt;# sleep for some time.&lt;/span&gt;
+    &lt;span class="c1"&gt;# Wait for children to finish too if this is a daemon that forks&lt;/span&gt;
+    &lt;span class="c1"&gt;# and if the daemon is only ever run from this initscript.&lt;/span&gt;
+    &lt;span class="c1"&gt;# If the above conditions are not satisfied then add some other code&lt;/span&gt;
+    &lt;span class="c1"&gt;# that waits for the process to drop all resources that could be&lt;/span&gt;
+    &lt;span class="c1"&gt;# needed by services started subsequently.  A last resort is to&lt;/span&gt;
+    &lt;span class="c1"&gt;# sleep for some time.&lt;/span&gt;
     start-stop-daemon --stop --quiet --oknodo --retry&lt;span class="o"&gt;=&lt;/span&gt;0/30/KILL/5 --exec &lt;span class="nv"&gt;$DAEMON&lt;/span&gt;
     &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; 2
-    &lt;span class="c"&gt;# Many daemons don&amp;#39;t delete their pidfiles when they exit.&lt;/span&gt;
+    &lt;span class="c1"&gt;# Many daemons don&amp;#39;t delete their pidfiles when they exit.&lt;/span&gt;
     rm -f &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$RETVAL&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 
-&lt;span class="c"&gt;#&lt;/span&gt;
-&lt;span class="c"&gt;# Function that sends a SIGHUP to the daemon/service&lt;/span&gt;
-&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Function that sends a SIGHUP to the daemon/service&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
 do_reload&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="c"&gt;#&lt;/span&gt;
-    &lt;span class="c"&gt;# If the daemon can reload its configuration without&lt;/span&gt;
-    &lt;span class="c"&gt;# restarting (for example, when it is sent a SIGHUP),&lt;/span&gt;
-    &lt;span class="c"&gt;# then implement that here.&lt;/span&gt;
-    &lt;span class="c"&gt;#&lt;/span&gt;
+    &lt;span class="c1"&gt;#&lt;/span&gt;
+    &lt;span class="c1"&gt;# If the daemon can reload its configuration without&lt;/span&gt;
+    &lt;span class="c1"&gt;# restarting (for example, when it is sent a SIGHUP),&lt;/span&gt;
+    &lt;span class="c1"&gt;# then implement that here.&lt;/span&gt;
+    &lt;span class="c1"&gt;#&lt;/span&gt;
     start-stop-daemon --stop --signal &lt;span class="m"&gt;1&lt;/span&gt; --quiet --pidfile &lt;span class="nv"&gt;$PIDFILE&lt;/span&gt; --name &lt;span class="nv"&gt;$NAME&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; 0
 &lt;span class="o"&gt;}&lt;/span&gt;
@@ -404,22 +404,22 @@ do_reload&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&
     &lt;span class="k"&gt;esac&lt;/span&gt;
     &lt;span class="p"&gt;;;&lt;/span&gt;
   status&lt;span class="o"&gt;)&lt;/span&gt;
-    status_of_proc &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DAEMON&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;exit &lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt;
+    status_of_proc &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$DAEMON&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;exit&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt;
     &lt;span class="p"&gt;;;&lt;/span&gt;
-  &lt;span class="c"&gt;#reload|force-reload)&lt;/span&gt;
-    &lt;span class="c"&gt;#&lt;/span&gt;
-    &lt;span class="c"&gt;# If do_reload() is not implemented then leave this commented out&lt;/span&gt;
-    &lt;span class="c"&gt;# and leave &amp;#39;force-reload&amp;#39; as an alias for &amp;#39;restart&amp;#39;.&lt;/span&gt;
-    &lt;span class="c"&gt;#&lt;/span&gt;
-    &lt;span class="c"&gt;#log_daemon_msg &amp;quot;Reloading $DESC&amp;quot; &amp;quot;$NAME&amp;quot;&lt;/span&gt;
-    &lt;span class="c"&gt;#do_reload&lt;/span&gt;
-    &lt;span class="c"&gt;#log_end_msg $?&lt;/span&gt;
-    &lt;span class="c"&gt;#;;&lt;/span&gt;
+  &lt;span class="c1"&gt;#reload|force-reload)&lt;/span&gt;
+    &lt;span class="c1"&gt;#&lt;/span&gt;
+    &lt;span class="c1"&gt;# If do_reload() is not implemented then leave this commented out&lt;/span&gt;
+    &lt;span class="c1"&gt;# and leave &amp;#39;force-reload&amp;#39; as an alias for &amp;#39;restart&amp;#39;.&lt;/span&gt;
+    &lt;span class="c1"&gt;#&lt;/span&gt;
+    &lt;span class="c1"&gt;#log_daemon_msg &amp;quot;Reloading $DESC&amp;quot; &amp;quot;$NAME&amp;quot;&lt;/span&gt;
+    &lt;span class="c1"&gt;#do_reload&lt;/span&gt;
+    &lt;span class="c1"&gt;#log_end_msg $?&lt;/span&gt;
+    &lt;span class="c1"&gt;#;;&lt;/span&gt;
   restart&lt;span class="p"&gt;|&lt;/span&gt;force-reload&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="c"&gt;#&lt;/span&gt;
-    &lt;span class="c"&gt;# If the &amp;quot;reload&amp;quot; option is implemented then remove the&lt;/span&gt;
-    &lt;span class="c"&gt;# &amp;#39;force-reload&amp;#39; alias&lt;/span&gt;
-    &lt;span class="c"&gt;#&lt;/span&gt;
+    &lt;span class="c1"&gt;#&lt;/span&gt;
+    &lt;span class="c1"&gt;# If the &amp;quot;reload&amp;quot; option is implemented then remove the&lt;/span&gt;
+    &lt;span class="c1"&gt;# &amp;#39;force-reload&amp;#39; alias&lt;/span&gt;
+    &lt;span class="c1"&gt;#&lt;/span&gt;
     log_daemon_msg &lt;span class="s2"&gt;&amp;quot;Restarting &lt;/span&gt;&lt;span class="nv"&gt;$DESC&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     do_stop
     &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
@@ -427,20 +427,20 @@ do_reload&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&
         do_start
         &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; in
             0&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
-            1&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="c"&gt;# Old process is still running&lt;/span&gt;
-            *&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="c"&gt;# Failed to start&lt;/span&gt;
+            1&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="c1"&gt;# Old process is still running&lt;/span&gt;
+            *&lt;span class="o"&gt;)&lt;/span&gt; log_end_msg &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="c1"&gt;# Failed to start&lt;/span&gt;
         &lt;span class="k"&gt;esac&lt;/span&gt;
         &lt;span class="p"&gt;;;&lt;/span&gt;
       *&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="c"&gt;# Failed to stop&lt;/span&gt;
+        &lt;span class="c1"&gt;# Failed to stop&lt;/span&gt;
         log_end_msg 1
         &lt;span class="p"&gt;;;&lt;/span&gt;
     &lt;span class="k"&gt;esac&lt;/span&gt;
     &lt;span class="p"&gt;;;&lt;/span&gt;
   *&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="c"&gt;#echo &amp;quot;Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}&amp;quot; &amp;gt;&amp;amp;2&lt;/span&gt;
+    &lt;span class="c1"&gt;#echo &amp;quot;Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}&amp;quot; &amp;gt;&amp;amp;2&lt;/span&gt;
     &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class="nv"&gt;$SCRIPTNAME&lt;/span&gt;&lt;span class="s2"&gt; {start|stop|status|restart|force-reload}&amp;quot;&lt;/span&gt; &amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;2
-    &lt;span class="nb"&gt;exit &lt;/span&gt;3
+    &lt;span class="nb"&gt;exit&lt;/span&gt; 3
     &lt;span class="p"&gt;;;&lt;/span&gt;
 &lt;span class="k"&gt;esac&lt;/span&gt;
 
@@ -460,21 +460,21 @@ do_reload&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&
  8
  9
 10
-11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo chmod +x /etc/init.d/jupyterhub
-&lt;span class="c"&gt;# Create a default config to /etc/jupyterhub/jupyterhub_config.py&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
-&lt;span class="c"&gt;# Start jupyterhub&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub start
-&lt;span class="c"&gt;# Stop jupyterhub&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo service jupyterhub stop
-&lt;span class="c"&gt;# Start jupyterhub on boot&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo update-rc.d jupyterhub defaults
-&lt;span class="c"&gt;# Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html&lt;/span&gt;
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo rcconf
+11&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo chmod +x /etc/init.d/jupyterhub
+&lt;span class="c1"&gt;# Create a default config to /etc/jupyterhub/jupyterhub_config.py&lt;/span&gt;
+$ sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+&lt;span class="c1"&gt;# Start jupyterhub&lt;/span&gt;
+$ sudo service jupyterhub start
+&lt;span class="c1"&gt;# Stop jupyterhub&lt;/span&gt;
+$ sudo service jupyterhub stop
+&lt;span class="c1"&gt;# Start jupyterhub on boot&lt;/span&gt;
+$ sudo update-rc.d jupyterhub defaults
+&lt;span class="c1"&gt;# Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html&lt;/span&gt;
+$ sudo rcconf
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html" rel="alternate"></link><updated>2016-01-06T08:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/about-17101-server.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html" rel="alternate"></link><published>2016-01-06T08:00:00+08:00</published><updated>2016-01-06T08:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/about-17101-server.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
 &lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
 &lt;h2&gt;ubuntu-desktop&lt;/h2&gt;
 &lt;p&gt;這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:&lt;/p&gt;
@@ -502,7 +502,7 @@ do_reload&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&
 15
 16
 17
-18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;auto lo
+18&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;auto lo
 iface lo inet loopback
 
 auto em1
@@ -594,7 +594,7 @@ iface em1 inet6 static
 62
 63
 64
-65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
+65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;acl cad_lab src 140.130.17.0/24
 acl cad_lab src 2001:288:6004:17::/64
 
 acl SSL_ports port 443
@@ -669,7 +669,7 @@ refresh_pattern . 0 20% 4320
 &lt;p&gt;至於 python pip3 在純 IPV6 環境下,  也必須設定 proxy 才能正確運作:&lt;/p&gt;
 &lt;p&gt;~.pip/pip.conf 內容&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[global]&lt;/span&gt;
 &lt;span class="na"&gt;proxy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;http://your.proxy.domain.name:3128&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -677,10 +677,10 @@ refresh_pattern . 0 20% 4320
 &lt;p&gt;&lt;br /&gt;
 假如要解除 git proxy 設定:&lt;/p&gt;
 &lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;git config --global --unset http.proxy
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global --unset http.proxy
 git config --global --unset https.proxy
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html" rel="alternate"></link><updated>2016-01-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-01:kmolab/blog/mechanical-designer-and-ipv6.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html" rel="alternate"></link><published>2016-01-01T12:00:00+08:00</published><updated>2016-01-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-01:kmolab/blog/mechanical-designer-and-ipv6.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
 &lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
 &lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
 &lt;h2&gt;情境說明:&lt;/h2&gt;
@@ -704,7 +704,7 @@ git config --global --unset https.proxy
 3
 4
 5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# /etc/ppp/options
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# /etc/ppp/options
 #
 asyncmap 0
 crtscts
@@ -723,7 +723,7 @@ crtscts
 6
 7
 8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# The loopback network interface
 auto lo
 iface lo inet loopback
 auto dsl-provider
@@ -770,7 +770,7 @@ iface p10p1 inet manual
 30
 31
 32
-33&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
+33&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;lo        Link encap:Local Loopback 
           inet addr:127.0.0.1  Mask:255.0.0.0
           inet6 addr: ::1/128 Scope:Host
           UP LOOPBACK RUNNING  MTU:65536  Metric:1
@@ -819,7 +819,7 @@ ppp1      Link encap:Point-to-Point Protocol
  7
  8
  9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# The loopback network interface
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# The loopback network interface
 auto lo
 iface lo inet loopback
 # for sudo pon dsl-provider
@@ -860,7 +860,7 @@ iface p10p1 inet dhcp
 24
 25
 26
-27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;lo        Link encap:Local Loopback 
+27&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;lo        Link encap:Local Loopback 
           inet addr:127.0.0.1  Mask:255.0.0.0
           inet6 addr: ::1/128 Scope:Host
           UP LOOPBACK RUNNING  MTU:65536  Metric:1

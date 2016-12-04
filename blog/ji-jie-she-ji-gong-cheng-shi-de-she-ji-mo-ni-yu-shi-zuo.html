@@ -177,7 +177,7 @@ init_mathjax();
         <meta property="og:title" content="機械設計工程師的設計模擬與實作"/>
         <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html"/>
         <meta property="og:description" content="先利用 Brython 模擬重力啟動機械時鐘所需的齒輪組, 然後在 Onshape 進行零組件設計繪圖, 最後再用 3D 印表機將零件印出並組裝測試."/>
-        <meta property="article:published_time" content="2016-01-19" />
+        <meta property="article:published_time" content="2016-10-16" />
             <meta property="article:section" content="Project" />
             <meta property="article:tag" content="Javascript" />
             <meta property="article:tag" content="Python" />
@@ -316,7 +316,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-19T10:36:58.525197+08:00"> 二 19 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-10-16T21:49:00.414429+08:00"> Sun 16 October 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -556,18 +556,18 @@ browser.timer.set_interval(drawClock, 1000)
 103
 104
 105
-106</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">&lt;!-- 導入 Brython 函式庫 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://brython.info/src/brython_dist.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+106</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 導入 Brython 函式庫 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://brython.info/src/brython_dist.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- window 導入後, 啟動 brython() --&gt;</span>
-<span class="nt">&lt;script&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span>
 <span class="nx">brython</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- 建立畫布 --&gt;</span>
-<span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;plotarea&quot;</span> <span class="na">width=</span><span class="s">&quot;400&quot;</span> <span class="na">height=</span><span class="s">&quot;400&quot;</span> <span class="na">style=</span><span class="s">&quot;background-color:#333&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+<span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;plotarea&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:#333&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- 開始執行 Brython 繪圖 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/python3&quot;</span><span class="nt">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/python3&quot;</span><span class="p">&gt;</span>
 <span class="err">#</span> <span class="nx">導入</span> <span class="nx">browser</span> <span class="nx">模組中的</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">並設為</span> <span class="nx">doc</span> <span class="nx">變數</span>
 <span class="nx">from</span> <span class="nx">browser</span> <span class="kr">import</span> <span class="nb">document</span> <span class="nx">as</span> <span class="nx">doc</span>
 <span class="err">#</span> <span class="nx">導入數學模組</span>
@@ -661,7 +661,7 @@ browser.timer.set_interval(drawClock, 1000)
 
 <span class="err">#</span> <span class="nx">每</span> <span class="mi">1000</span> <span class="nx">個</span> <span class="nx">milliseconds</span> <span class="nx">呼叫執行一次</span> <span class="nx">drawClock</span> <span class="nx">函式</span> <span class="p">(</span><span class="nx">也就是每秒執行一次</span><span class="p">)</span>
 <span class="nx">browser</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">set_interval</span><span class="p">(</span><span class="nx">drawClock</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="nt">&lt;/script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table>
 
@@ -750,29 +750,29 @@ browser.timer.set_interval(drawClock, 1000)
 81
 82
 83
-84</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c"># source: https://gist.github.com/gever/8643175</span>
+84</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># source: https://gist.github.com/gever/8643175</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>
 <span class="kn">import</span> <span class="nn">svgwrite</span>
 
-<span class="c"># gear parameters</span>
+<span class="c1"># gear parameters</span>
 <span class="n">outer_d</span> <span class="o">=</span> <span class="mf">500.0</span>
-<span class="n">tooth_ht</span> <span class="o">=</span> <span class="mf">40.0</span>   <span class="c"># addendum + dedendum (aka, top land radius - root circle)</span>
+<span class="n">tooth_ht</span> <span class="o">=</span> <span class="mf">40.0</span>   <span class="c1"># addendum + dedendum (aka, top land radius - root circle)</span>
 <span class="n">tooth_ct</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="n">face_pct</span> <span class="o">=</span> <span class="mf">0.2</span>    <span class="c"># how much narrower the face pitch is than the circular thickness</span>
+<span class="n">face_pct</span> <span class="o">=</span> <span class="mf">0.2</span>    <span class="c1"># how much narrower the face pitch is than the circular thickness</span>
 <span class="n">axle_d</span> <span class="o">=</span> <span class="mi">50</span>
 
-<span class="c"># derived parameters</span>
+<span class="c1"># derived parameters</span>
 <span class="n">inner_d</span> <span class="o">=</span> <span class="n">outer_d</span> <span class="o">-</span> <span class="n">tooth_ht</span>
 
-<span class="c"># colors important to the laser cutter</span>
+<span class="c1"># colors important to the laser cutter</span>
 <span class="n">LC_CUT</span> <span class="o">=</span> <span class="n">svgwrite</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">LC_SCORE</span> <span class="o">=</span> <span class="n">svgwrite</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
 <span class="n">LC_ETCH</span> <span class="o">=</span> <span class="n">svgwrite</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">LC_NONE</span> <span class="o">=</span> <span class="n">svgwrite</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
 
-<span class="c"># derived constants</span>
+<span class="c1"># derived constants</span>
 <span class="n">outer_circ</span> <span class="o">=</span> <span class="n">outer_d</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
 <span class="n">outer_r</span> <span class="o">=</span> <span class="n">outer_d</span> <span class="o">/</span> <span class="mf">2.0</span>
 <span class="n">inner_r</span> <span class="o">=</span> <span class="n">outer_r</span> <span class="o">-</span> <span class="n">tooth_ht</span>
@@ -780,38 +780,38 @@ browser.timer.set_interval(drawClock, 1000)
 <span class="n">addendum_r</span> <span class="o">=</span> <span class="n">outer_r</span> <span class="o">-</span> <span class="n">addendum</span>
 <span class="n">circular_pitch</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">tooth_ct</span>
 <span class="n">circular_thickness</span> <span class="o">=</span> <span class="n">circular_pitch</span> <span class="o">/</span> <span class="mf">2.0</span>
-<span class="n">theta_face</span> <span class="o">=</span> <span class="n">circular_thickness</span> <span class="o">*</span> <span class="n">face_pct</span> <span class="c"># bevel pitch delta in radians</span>
+<span class="n">theta_face</span> <span class="o">=</span> <span class="n">circular_thickness</span> <span class="o">*</span> <span class="n">face_pct</span> <span class="c1"># bevel pitch delta in radians</span>
 
-<span class="c"># clear out the contents of the old file, get ready to make a new one</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s">&#39;gear_</span><span class="si">%d</span><span class="s">.svg&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tooth_ct</span><span class="p">)</span>
+<span class="c1"># clear out the contents of the old file, get ready to make a new one</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;gear_</span><span class="si">%d</span><span class="s1">.svg&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tooth_ct</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span> <span class="n">filename</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">R_OK</span> <span class="p">):</span>
     <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span> <span class="n">filename</span> <span class="p">)</span>
 
-<span class="c"># start the drawing</span>
-<span class="n">dwg</span> <span class="o">=</span> <span class="n">svgwrite</span><span class="o">.</span><span class="n">Drawing</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s">&#39;tiny&#39;</span><span class="p">)</span>
+<span class="c1"># start the drawing</span>
+<span class="n">dwg</span> <span class="o">=</span> <span class="n">svgwrite</span><span class="o">.</span><span class="n">Drawing</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="s1">&#39;tiny&#39;</span><span class="p">)</span>
 <span class="n">group</span> <span class="o">=</span> <span class="n">dwg</span><span class="o">.</span><span class="n">g</span><span class="p">()</span>
 
-<span class="c"># generate points that describe the gear profile</span>
+<span class="c1"># generate points that describe the gear profile</span>
 <span class="n">pts</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tooth_ct</span><span class="p">):</span>
-    <span class="n">theta_1</span> <span class="o">=</span> <span class="n">circular_pitch</span> <span class="o">*</span> <span class="n">t</span> <span class="c"># begining of tooth and gap</span>
-    <span class="n">theta_ct</span> <span class="o">=</span> <span class="n">theta_1</span> <span class="o">+</span> <span class="n">circular_thickness</span> <span class="c"># circular thickness (of tooth)</span>
-    <span class="n">theta_2</span> <span class="o">=</span> <span class="n">circular_pitch</span> <span class="o">*</span> <span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c"># begining of next tooth</span>
+    <span class="n">theta_1</span> <span class="o">=</span> <span class="n">circular_pitch</span> <span class="o">*</span> <span class="n">t</span> <span class="c1"># begining of tooth and gap</span>
+    <span class="n">theta_ct</span> <span class="o">=</span> <span class="n">theta_1</span> <span class="o">+</span> <span class="n">circular_thickness</span> <span class="c1"># circular thickness (of tooth)</span>
+    <span class="n">theta_2</span> <span class="o">=</span> <span class="n">circular_pitch</span> <span class="o">*</span> <span class="p">(</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># begining of next tooth</span>
 
     <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_1</span><span class="p">)</span> <span class="o">*</span> <span class="n">addendum_r</span><span class="p">,</span>
-                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_1</span><span class="p">)</span> <span class="o">*</span> <span class="n">addendum_r</span> <span class="p">)</span> <span class="p">)</span> <span class="c"># begining of face leading up to top land</span>
+                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_1</span><span class="p">)</span> <span class="o">*</span> <span class="n">addendum_r</span> <span class="p">)</span> <span class="p">)</span> <span class="c1"># begining of face leading up to top land</span>
     <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_1</span> <span class="o">+</span> <span class="n">theta_face</span><span class="p">)</span> <span class="o">*</span> <span class="n">outer_r</span><span class="p">,</span>
-                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_1</span> <span class="o">+</span> <span class="n">theta_face</span><span class="p">)</span> <span class="o">*</span> <span class="n">outer_r</span><span class="p">)</span> <span class="p">)</span>   <span class="c"># begining of top land</span>
+                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_1</span> <span class="o">+</span> <span class="n">theta_face</span><span class="p">)</span> <span class="o">*</span> <span class="n">outer_r</span><span class="p">)</span> <span class="p">)</span>   <span class="c1"># begining of top land</span>
     <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_ct</span> <span class="o">-</span> <span class="n">theta_face</span><span class="p">)</span> <span class="o">*</span> <span class="n">outer_r</span><span class="p">,</span>
-                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_ct</span> <span class="o">-</span> <span class="n">theta_face</span><span class="p">)</span> <span class="o">*</span> <span class="n">outer_r</span><span class="p">)</span> <span class="p">)</span> <span class="c"># end of top land    </span>
+                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_ct</span> <span class="o">-</span> <span class="n">theta_face</span><span class="p">)</span> <span class="o">*</span> <span class="n">outer_r</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># end of top land    </span>
     <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_ct</span><span class="p">)</span> <span class="o">*</span> <span class="n">addendum_r</span><span class="p">,</span>
-                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_ct</span><span class="p">)</span> <span class="o">*</span> <span class="n">addendum_r</span> <span class="p">)</span> <span class="p">)</span> <span class="c"># end of face coming down from top land</span>
+                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_ct</span><span class="p">)</span> <span class="o">*</span> <span class="n">addendum_r</span> <span class="p">)</span> <span class="p">)</span> <span class="c1"># end of face coming down from top land</span>
     <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_ct</span><span class="p">)</span> <span class="o">*</span> <span class="n">inner_r</span><span class="p">,</span>
-                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_ct</span><span class="p">)</span> <span class="o">*</span> <span class="n">inner_r</span><span class="p">)</span> <span class="p">)</span> <span class="c"># begining of bottom land</span>
+                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_ct</span><span class="p">)</span> <span class="o">*</span> <span class="n">inner_r</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># begining of bottom land</span>
     <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta_2</span><span class="p">)</span> <span class="o">*</span> <span class="n">inner_r</span><span class="p">,</span>
-                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_2</span><span class="p">)</span> <span class="o">*</span> <span class="n">inner_r</span><span class="p">)</span> <span class="p">)</span>   <span class="c"># end of bottom land</span>
+                 <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta_2</span><span class="p">)</span> <span class="o">*</span> <span class="n">inner_r</span><span class="p">)</span> <span class="p">)</span>   <span class="c1"># end of bottom land</span>
 
-    <span class="c"># mark the first tooth</span>
+    <span class="c1"># mark the first tooth</span>
     <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">circle</span> <span class="o">=</span> <span class="n">dwg</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span> <span class="n">center</span><span class="o">=</span><span class="n">pts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="n">tooth_ht</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="n">LC_SCORE</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">LC_NONE</span> <span class="p">)</span>
         <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">circle</span> <span class="p">)</span>
@@ -819,8 +819,8 @@ browser.timer.set_interval(drawClock, 1000)
 <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">dwg</span><span class="o">.</span><span class="n">polygon</span><span class="p">(</span> <span class="n">pts</span><span class="p">,</span> <span class="n">stroke</span><span class="o">=</span><span class="n">LC_CUT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">LC_NONE</span> <span class="p">)</span> <span class="p">)</span>
 <span class="n">group</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span> <span class="n">outer_d</span><span class="p">,</span> <span class="n">outer_d</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="p">)</span>
 
-<span class="c"># make a hole for the axle</span>
-<span class="c"># TODO: calculate the number of steps in axle polygon based on circumference of axle</span>
+<span class="c1"># make a hole for the axle</span>
+<span class="c1"># TODO: calculate the number of steps in axle polygon based on circumference of axle</span>
 <span class="n">a_pts</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">50</span> <span class="p">):</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="p">((</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">50</span><span class="p">)</span>
@@ -829,10 +829,10 @@ browser.timer.set_interval(drawClock, 1000)
 
 <span class="n">dwg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">group</span> <span class="p">)</span>
 
-<span class="c"># dwg.add(dwg.text(&#39;Test&#39;, insert=(0, 0.2), fill=&#39;red&#39;))</span>
-<span class="c"># dwg.save()</span>
+<span class="c1"># dwg.add(dwg.text(&#39;Test&#39;, insert=(0, 0.2), fill=&#39;red&#39;))</span>
+<span class="c1"># dwg.save()</span>
 
-<span class="c"># show it</span>
+<span class="c1"># show it</span>
 <span class="n">SVG</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dwg</span><span class="o">.</span><span class="n">tostring</span><span class="p">())</span>
 </pre></div>
 </td></tr></table>
@@ -1119,10 +1119,10 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 135
 136
 137
-138</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
-<span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;gear1&quot;</span> <span class="na">width=</span><span class="s">&quot;400&quot;</span> <span class="na">height=</span><span class="s">&quot;400&quot;</span> <span class="na">style=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+138</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;gear1&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- 開始執行 Brython 繪圖 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/python3&quot;</span><span class="nt">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/python3&quot;</span><span class="p">&gt;</span>
 <span class="err">#</span> <span class="nx">導入</span> <span class="nx">browser</span> <span class="nx">模組中的</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">並設為</span> <span class="nx">doc</span> <span class="nx">變數</span>
 <span class="nx">from</span> <span class="nx">browser</span> <span class="kr">import</span> <span class="nb">document</span> <span class="nx">as</span> <span class="nx">doc</span>
 <span class="kr">import</span> <span class="nx">math</span>
@@ -1212,8 +1212,8 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
                     <span class="nx">lfy</span><span class="o">=</span><span class="nx">midy</span><span class="o">-</span><span class="nx">ypt</span>
                 <span class="nx">last_x</span> <span class="o">=</span> <span class="nx">midx</span><span class="o">+</span><span class="nx">xpt</span>
                 <span class="nx">last_y</span> <span class="o">=</span> <span class="nx">midy</span><span class="o">-</span><span class="nx">ypt</span>
-            <span class="err">#</span> <span class="nx">the</span> <span class="nx">line</span> <span class="nx">from</span> <span class="nx">last</span> <span class="nx">end</span> <span class="nx">of</span> <span class="nx">dedendum</span> <span class="nx">point</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">recent</span>
-            <span class="err">#</span> <span class="nx">end</span> <span class="nx">of</span> <span class="nx">dedendum</span> <span class="nx">point</span>
+            <span class="err">#</span> <span class="nx">the</span> <span class="nx">line</span> <span class="nx">from</span> <span class="nx">last</span> <span class="nx">end</span> <span class="k">of</span> <span class="nx">dedendum</span> <span class="nx">point</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">recent</span>
+            <span class="err">#</span> <span class="nx">end</span> <span class="k">of</span> <span class="nx">dedendum</span> <span class="nx">point</span>
             <span class="err">#</span> <span class="nx">lxd</span> <span class="nx">為齒根圓上的左側</span> <span class="nx">x</span> <span class="nx">座標</span><span class="p">,</span> <span class="nx">lyd</span> <span class="nx">則為</span> <span class="nx">y</span> <span class="nx">座標</span>
             <span class="err">#</span> <span class="nx">下列為齒根圓上用來近似圓弧的直線</span>
             <span class="nx">self</span><span class="p">.</span><span class="nx">create_line</span><span class="p">((</span><span class="nx">lxd</span><span class="p">),(</span><span class="nx">lyd</span><span class="p">),(</span><span class="nx">midx</span><span class="o">+</span><span class="nx">xd</span><span class="p">),(</span><span class="nx">midy</span><span class="o">-</span><span class="nx">yd</span><span class="p">),</span><span class="nx">fill</span><span class="o">=</span><span class="nx">color</span><span class="p">)</span>
@@ -1256,7 +1256,7 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 <span class="err">#</span> <span class="nx">壓力角</span>
 <span class="nx">pa</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="nx">Spur</span><span class="p">(</span><span class="nx">ctx</span><span class="p">).</span><span class="nx">Gear</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">r</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">pa</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="nt">&lt;/script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1668,10 +1668,10 @@ ctx.restore()
 199
 200
 201
-202</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
-<span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">&quot;gear2&quot;</span> <span class="na">width=</span><span class="s">&quot;800&quot;</span> <span class="na">height=</span><span class="s">&quot;400&quot;</span> <span class="na">style=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+202</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;gear2&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- 開始執行 Brython 繪圖 --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/python3&quot;</span><span class="nt">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/python3&quot;</span><span class="p">&gt;</span>
 <span class="err">#</span> <span class="nx">導入</span> <span class="nx">browser</span> <span class="nx">模組中的</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">並設為</span> <span class="nx">doc</span> <span class="nx">變數</span>
 <span class="nx">from</span> <span class="nx">browser</span> <span class="kr">import</span> <span class="nb">document</span> <span class="nx">as</span> <span class="nx">doc</span>
 <span class="kr">import</span> <span class="nx">math</span>
@@ -1762,8 +1762,8 @@ ctx.restore()
                     <span class="nx">lfy</span><span class="o">=</span><span class="nx">midy</span><span class="o">-</span><span class="nx">ypt</span>
                 <span class="nx">last_x</span> <span class="o">=</span> <span class="nx">midx</span><span class="o">+</span><span class="nx">xpt</span>
                 <span class="nx">last_y</span> <span class="o">=</span> <span class="nx">midy</span><span class="o">-</span><span class="nx">ypt</span>
-            <span class="err">#</span> <span class="nx">the</span> <span class="nx">line</span> <span class="nx">from</span> <span class="nx">last</span> <span class="nx">end</span> <span class="nx">of</span> <span class="nx">dedendum</span> <span class="nx">point</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">recent</span>
-            <span class="err">#</span> <span class="nx">end</span> <span class="nx">of</span> <span class="nx">dedendum</span> <span class="nx">point</span>
+            <span class="err">#</span> <span class="nx">the</span> <span class="nx">line</span> <span class="nx">from</span> <span class="nx">last</span> <span class="nx">end</span> <span class="k">of</span> <span class="nx">dedendum</span> <span class="nx">point</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">recent</span>
+            <span class="err">#</span> <span class="nx">end</span> <span class="k">of</span> <span class="nx">dedendum</span> <span class="nx">point</span>
             <span class="err">#</span> <span class="nx">lxd</span> <span class="nx">為齒根圓上的左側</span> <span class="nx">x</span> <span class="nx">座標</span><span class="p">,</span> <span class="nx">lyd</span> <span class="nx">則為</span> <span class="nx">y</span> <span class="nx">座標</span>
             <span class="err">#</span> <span class="nx">下列為齒根圓上用來近似圓弧的直線</span>
             <span class="nx">self</span><span class="p">.</span><span class="nx">create_line</span><span class="p">((</span><span class="nx">lxd</span><span class="p">),(</span><span class="nx">lyd</span><span class="p">),(</span><span class="nx">midx</span><span class="o">+</span><span class="nx">xd</span><span class="p">),(</span><span class="nx">midy</span><span class="o">-</span><span class="nx">yd</span><span class="p">),</span><span class="nx">fill</span><span class="o">=</span><span class="nx">color</span><span class="p">)</span>
@@ -1831,7 +1831,7 @@ ctx.restore()
 <span class="err">#</span> <span class="nx">將第1齒輪順時鐘轉</span> <span class="mi">90</span> <span class="nx">度</span><span class="p">,</span> <span class="nx">也就是</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mi">2</span>
 <span class="err">#</span> <span class="nx">使用</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">()</span> <span class="nx">與</span> <span class="nx">ctx</span><span class="p">.</span><span class="nx">restore</span><span class="p">()</span> <span class="nx">以確保各齒輪以相對座標進行旋轉繪圖</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">()</span>
-<span class="err">#</span> <span class="nx">translate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">origin</span> <span class="nx">of</span> <span class="nx">second</span> <span class="nx">gear</span>
+<span class="err">#</span> <span class="nx">translate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">origin</span> <span class="k">of</span> <span class="nx">second</span> <span class="nx">gear</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="nx">x_g1</span><span class="p">,</span> <span class="nx">y_g1</span><span class="p">)</span>
 <span class="err">#</span> <span class="nx">rotate</span> <span class="nx">to</span> <span class="nx">engage</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
@@ -1843,7 +1843,7 @@ ctx.restore()
 
 <span class="err">#</span> <span class="nx">將第2齒輪逆時鐘轉</span> <span class="mi">90</span> <span class="nx">度之後</span><span class="p">,</span> <span class="nx">再多轉一齒</span><span class="p">,</span> <span class="nx">以便與第1齒輪進行囓合</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">()</span>
-<span class="err">#</span> <span class="nx">translate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">origin</span> <span class="nx">of</span> <span class="nx">second</span> <span class="nx">gear</span>
+<span class="err">#</span> <span class="nx">translate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">origin</span> <span class="k">of</span> <span class="nx">second</span> <span class="nx">gear</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="nx">x_g2</span><span class="p">,</span> <span class="nx">y_g2</span><span class="p">)</span>
 <span class="err">#</span> <span class="nx">rotate</span> <span class="nx">to</span> <span class="nx">engage</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n_g2</span><span class="p">)</span>
@@ -1854,7 +1854,7 @@ ctx.restore()
 
 <span class="err">#</span> <span class="nx">將第3齒輪逆時鐘轉</span> <span class="mi">90</span> <span class="nx">度之後</span><span class="p">,</span> <span class="nx">再往回轉第2齒輪定位帶動轉角</span><span class="p">,</span> <span class="nx">然後再逆時鐘多轉一齒</span><span class="p">,</span> <span class="nx">以便與第2齒輪進行囓合</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">save</span><span class="p">()</span>
-<span class="err">#</span> <span class="nx">translate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">origin</span> <span class="nx">of</span> <span class="nx">second</span> <span class="nx">gear</span>
+<span class="err">#</span> <span class="nx">translate</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">origin</span> <span class="k">of</span> <span class="nx">second</span> <span class="nx">gear</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="nx">x_g3</span><span class="p">,</span> <span class="nx">y_g3</span><span class="p">)</span>
 <span class="err">#</span> <span class="nx">rotate</span> <span class="nx">to</span> <span class="nx">engage</span>
 <span class="err">#</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">+</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n_g2</span> <span class="nx">為第2齒輪從順時鐘轉</span> <span class="mi">90</span> <span class="nx">度之後</span><span class="p">,</span> <span class="nx">必須配合目前的標記線所作的齒輪</span> <span class="mi">2</span> <span class="nx">轉動角度</span><span class="p">,</span> <span class="nx">要轉換到齒輪3</span> <span class="nx">的轉動角度</span>
@@ -1869,7 +1869,7 @@ ctx.restore()
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="o">-</span><span class="nx">x_g3</span><span class="p">,</span> <span class="o">-</span><span class="nx">y_g3</span><span class="p">)</span>
 <span class="nx">Spur</span><span class="p">(</span><span class="nx">ctx</span><span class="p">).</span><span class="nx">Gear</span><span class="p">(</span><span class="nx">x_g3</span><span class="p">,</span> <span class="nx">y_g3</span><span class="p">,</span> <span class="nx">rp_g3</span><span class="p">,</span> <span class="nx">n_g3</span><span class="p">,</span> <span class="nx">pa</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">restore</span><span class="p">()</span>
-<span class="nt">&lt;/script&gt;</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1932,28 +1932,28 @@ ctx.restore()
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/git-shi-yong-dao-yin.html">
-                            Git 使用導引
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-san.html">
+                            計算機程式 (三)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-er.html">
-                            計算機程式 (二)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html">
+                            導入 Brython 與 Snap.svg 網際繪圖
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html">
-                            電腦輔助設計實習 (二)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/li-nian-xie-tong-chan-pin-she-ji-shi-xi-ke-cheng-nei-rong-zheng-li.html">
+                            歷年協同產品設計實習課程內容整理
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html">
-                            電腦操作流程錄影工具
+                        <a href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html">
+                            使用 flask-cors 延伸模組
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html">
-                            電腦輔助設計實習 (一)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html">
+                            自行車傳動 2D 鏈條繪圖
                         </a>
                     </li>
                 </ul>

@@ -1,145 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-03-15T11:00:00+08:00</updated><entry><title>利用 Leo Editor 執行程式開發</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html" rel="alternate"></link><updated>2016-03-15T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html</id><summary type="html">&lt;p&gt;Leo Editor 是一套利用大綱模式與程式方法管理多元資料的 Python3 + PyQt 單機應用程式.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/project.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-10-16T21:49:00+08:00</updated><entry><title>Brython and Amber languages</title><link href="http://chiamingyen.github.io/kmolab/blog/brython-and-amber-languages.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/brython-and-amber-languages.html</id><summary type="html">&lt;p&gt;看到 Brython 與 Amber 等利用 Javascript 實作的網際程式系統, 就應該不難理解, 即便 Javascript 程式終究無可避免, 但是 Python 與 Smalltalk 的魅力依舊讓人難以忘懷.&lt;/p&gt;
 
 
-&lt;p&gt;所謂的大綱模式, 指的是 Leo Editor 將所有的內容分為大綱與內文, 而每一個大綱資料可以擁有下屬大綱, 使用者可以利用階層式的方法來管理各種文字資料. 至於所謂管理多元資料的程式方法, Leo Editor 發明了許多大綱標題上的指令, 以及大綱內文中的語法指令來協助使用者管理資料. 這裡我們先簡單介紹 @edit 與 @clean 在 Python3 程式開發上的應用.&lt;/p&gt;
-&lt;p&gt;Leo Editor 基本的使用模式如下:&lt;/p&gt;
+&lt;p&gt;Brython: &lt;a href="https://github.com/brython-dev/brython"&gt;https://github.com/brython-dev/brython&lt;/a&gt; 讓程式師可以直接在 html 網頁中以 Python3 的語法編寫程式, 然後轉為 Javascript 在網頁上運行, 而相同的原理, Amber: &lt;a href="https://github.com/amber-smalltalk/amber"&gt;https://github.com/amber-smalltalk/amber&lt;/a&gt; 則更進一步, 以 Amber 寫 Amber, 讓程式師可以在網頁上寫 Smalltalk 語法, 然後轉成網頁上能夠運行的程式片斷.&lt;/p&gt;
+&lt;p&gt;學 Python3 的資源很多, 但是想學 Smailtalk, 也有不少的免費資源:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;開啟 Leo Editor 後, 使用者可以新增一個 .leo 檔案, 並在其中加入大綱標題(或者稱為節點), 以及在大綱標題對應的內文中輸入資料.&lt;/li&gt;
-&lt;li&gt;當使用者決定 .leo 各大綱內文中所儲存的資料, 希望能夠單獨以一個檔案的格式存在, 就可以修改內文對應的標題, 放入 @edit myfile.txt, 當使用者儲存 .leo 檔案時, Leo Editor 就會根據 @edit 標題指令的指示, 將內文資料以 myfile.txt 存檔, 並在 Log 區註記檔案已經建立.&lt;/li&gt;
-&lt;li&gt;假如上述儲存在大綱對應內文的資料是 Python3 格式的程式碼, 那麼使用者只要將滑鼠停留在該程式內文中, 然後按下 Ctrl + b, 就可以執行這個程式, 並且通常使用者會使用 g.es() 來取代 print(), 直接在 Leo Editor 中進行程式碼的測試.&lt;/li&gt;
-&lt;li&gt;換言之, 假如使用者在步驟 2. 將檔案存為 myprog.py, 這個 Python 程式就可以與其他的程式套件結合, 成為各種應用套件, 整個 Leo Editor 就是在這樣的環境下開發, 而且是採用 PyQt 作為圖形介面程式庫, 使用者可以在 leo/core/LeoPyRef.leo 中的 Code 節點中看到這些程式碼.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;實際操作:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;開啟 Leo Editor, 利用 File-&amp;gt;New 新增一個 .leo 檔案, 按下 Ctrl + i, 以 insert 的方法加入一個大綱(節點), 在內文中放入:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="brush: python;"&gt;
-try:
-    g.es("hello")
-except:
-    print("hello")
-&lt;/pre&gt;
-
-&lt;p&gt;然後按下 Ctrl + b, 就可以在 Leo 中看到程式執行時, 以 g.es("hello"), 將字串送到 Log 視窗, 這裡的 g 是 Leo Editor 程式中的一個模組, 包含廣域函式與類別, 而 g.es 就是其中的一個 echo string 方法.&lt;/p&gt;
-&lt;p&gt;而且 g 是 Leo Editor 套件中一個很大的模組, 假如您真的想看看 g 在 5.1 版中的所有 439 個函式與類別, 可以利用 g.es(len(list(dir(g)))) 列出 g 的函式與類別個數 ,或者以 g.es(list(dir(g))) 列出這個大數列.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;假如我們希望將目前 .leo 檔中唯一的大綱內容存成 myprog.py, 只要將此內文程式的標題改為 "@edit myprog.py", 然後存 .leo 檔案即可. 此時, Leo Editor 的 Log pane 中將註記 myprog.py 已經建立的訊息, 而且使用者可以在操作系統的檔案架構中, 利用 python3 myprog.py 來執行這個 myprog.py 程式.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;最後一個例子是, Leo Editor 可以透過 @clean 節點指令, refresh 已經存在外部的 myclass.py 物件導向程式碼, 以階層架構的方式讀進 myclass.py 的內容, 之後, 使用者在 Leo Editor 修改 myclass.py 的程式內容, 將在存檔後存入 myclass.py, 若離開 Leo Editor 之後, myclass.py 內容修改, Leo Editor 將在打開對應 .leo 檔案時, 讀進 myclass.py 最新的內容.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;利用 Leo Editor 的節點指令, @clean 導入下列已經存在檔案系統中的 myclass.py 程式碼, 只要新增一個節點, 並且標題輸入 "@clean myclass.py", 而且確定 .leo 檔案與 myclass.py 位於相同目錄中, 然後點選 @clean myclass.py 節點, 以滑鼠右鍵拉出 refresh from disk, Leo Editor 就會以階層架構讀進 myclass.py.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;myclass.py 的程式碼如下:&lt;/p&gt;
-&lt;pre class="brush: python;"&gt;
-class 僱員:
-    '僱員物件'
-    人員總數 = 0
-
-    def __init__(self, 職稱, 薪水):
-        self.職稱 = 職稱
-        self.薪水 = 薪水
-        僱員.人員總數 += 1
-
-    def 列出個數(self):
-        try:
-            g.es("總共有人員 %d" % 僱員.人員總數)
-        except:
-            print("總共有人員 %d" % 僱員.人員總數)
-
-    def 列出基本資料(self):
-        try:
-            g.es("職稱 : ", self.職稱,  ", 薪水: ", self.薪水)
-        except:
-            print("職稱 : ", self.職稱,  ", 薪水: ", self.薪水)
-
-"開始利用僱員物件建立案例"
-僱員1 = 僱員("王一名", 55000)
-"建立另外一位僱員"
-僱員2 = 僱員("林人二", 65000)
-
-僱員1.列出基本資料()
-僱員2.列出基本資料()
-try:
-    g.es("目前為止, 有 %d 位僱員" % 僱員.人員總數)
-except:
-    print("目前為止, 有 %d 位僱員" % 僱員.人員總數)
-&lt;/pre&gt;
-
-&lt;p&gt;以上的 Leo Editor 導引教學內容,可以從 &lt;a href="https://github.com/chiamingyen/leoeditor_tutorial"&gt;https://github.com/chiamingyen/leoeditor_tutorial&lt;/a&gt; 中下載.&lt;/p&gt;</summary><category term="Leo Editor"></category><category term="Python"></category></entry><entry><title>Create an online Ethercalc site</title><link href="http://chiamingyen.github.io/kmolab/blog/create-an-online-ethercalc-site.html" rel="alternate"></link><updated>2016-02-24T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/create-an-online-ethercalc-site.html</id><summary type="html">&lt;p&gt;利用 OpenShift 與 Ethercalc, 自行建立一個雲端線上試算表&lt;/p&gt;
-
-
-&lt;p&gt;試算表的功能非常多元, 一旦將試算表以多人可即時更新內容的架構搬上雲端, 功能將會更加實用.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/audreyt/ethercalc"&gt;https://github.com/audreyt/ethercalc&lt;/a&gt; 可以說是目前最符合雲端使用的試算表程式, 試算表的引擎採用通用公共授權(&lt;a href="https://gist.github.com/audreyt/3985324"&gt;https://gist.github.com/audreyt/3985324&lt;/a&gt;, &lt;a href="https://www.socialtext.net/open/cpal"&gt;https://www.socialtext.net/open/cpal&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Ethercalc 的實際應用非常簡單, 只要在 &lt;a href="https://openshift.redhat.com/app/login"&gt;https://openshift.redhat.com/app/login&lt;/a&gt; 登記一個帳號, 然後登入後, 選擇 Add Application, 在應用程式類別選擇 Other Types 項下的 Node.js 0.10, 自行選擇可用的 Name Space 與應用程式名稱後, 在 Source&lt;/p&gt;
-&lt;p&gt;Code 的欄位中填入 Ethercalc 的原始碼倉儲: &lt;a href="https://github.com/audreyt/ethercalc.git"&gt;https://github.com/audreyt/ethercalc.git&lt;/a&gt; 後, 按下 Create Application, 就可以完成 Ethercalc 網站的建立, 例如: &lt;a href="http://ethercalc-2012c1.rhcloud.com/30wcwukfpmep"&gt;http://ethercalc-2012c1.rhcloud.com/30wcwukfpmep&lt;/a&gt; (以 2012c1_mde_tw 帳號控管).&lt;/p&gt;</summary><category term="Ethercalc"></category><category term="Node.js"></category></entry><entry><title>Leo Editor 安裝</title><link href="http://chiamingyen.github.io/kmolab/blog/leo-editor-an-zhuang.html" rel="alternate"></link><updated>2016-01-23T10:16:32+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-01-23:kmolab/blog/leo-editor-an-zhuang.html</id><summary type="html">&lt;p&gt;Leo Editor 的執行需要 Python3, PyQt 與 Leo Editor 程式碼&lt;/p&gt;
-
-
-&lt;h2&gt;Leo Editor 安裝&lt;/h2&gt;
-&lt;p&gt;Windows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;安裝 Python3: &lt;a href="https://www.python.org/downloads/"&gt;https://www.python.org/downloads/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;安裝 PyQt: &lt;a href="https://www.riverbankcomputing.com/software/pyqt/download"&gt;https://www.riverbankcomputing.com/software/pyqt/download&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;取得 Leo Editor 程式碼: &lt;a href="https://github.com/leo-editor/leo-editor"&gt;https://github.com/leo-editor/leo-editor&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;啟動程式 (launchLeo.py 檔案):&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6
-7
-8
-9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!Y:\IDE\Python33\python.exe&lt;/span&gt;
-&lt;span class="c"&gt;# launchLeo&lt;/span&gt;
-
-&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot; Leo launcher script&lt;/span&gt;
-&lt;span class="sd"&gt;A minimal script to launch leo.&lt;/span&gt;
-&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;leo.core.runLeo&lt;/span&gt;
-&lt;span class="n"&gt;leo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;core&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;runLeo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;python.exe launchLeo.py&lt;/p&gt;
-&lt;p&gt;Ubuntu:&lt;/p&gt;
-&lt;p&gt;先解除舊版的 Leo Editor:&lt;/p&gt;
-&lt;p&gt;sudo pip3 uninstall leo&lt;/p&gt;
-&lt;p&gt;再安裝最新版 Leo Editor:&lt;/p&gt;
-&lt;p&gt;sudo pip3 install https://github.com/leo-editor/leo-editor/archive/master.zip&lt;/p&gt;
-&lt;p&gt;啟動: leo&amp;amp;&lt;/p&gt;
-&lt;h2&gt;Leo 程式方法&lt;/h2&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;es&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;&lt;br /&gt;
-利用 Ctrl+b 執行&lt;/p&gt;
-&lt;p&gt;內建變數: c, g 與 p&lt;/p&gt;
-&lt;p&gt;c 是包含程式碼內容的命令變數 (commander)&lt;/p&gt;
-&lt;p&gt;c 命令變數是定義在 leoCommands.py 中的指令類別案例, 透過 c 可以擷取 Leo 的原始碼與所有大綱資料.&lt;/p&gt;
-&lt;p&gt;g 變數則是 Leo 的 leo.core.leoGlobals 模組.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;c: The commander of the present outline.&lt;/li&gt;
-&lt;li&gt;g: The leo.core.leoGlobals module.&lt;/li&gt;
-&lt;li&gt;p: The presently selected position, c.p.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;g.es 是 Leo 的列印函式 (echo string).&lt;/p&gt;
-&lt;p&gt;p 則是定義在 leoNodes.py 中表示目前所選擇節點的位置類別所建立的案例.&lt;/p&gt;
-&lt;p&gt;p.v 則是 vnode 物件, vnode 是在 Leo 大綱中包含所有永久資料.&lt;/p&gt;
-&lt;p&gt;vnodes 是定義在 leoNodes.py 中由 vnode 類別所建立的案例.&lt;/p&gt;
-&lt;p&gt;每一個 vnode 代表所在大綱節點的所有資料.&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all_positions&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;level&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Leo Editor"></category><category term="Python"></category></entry><entry><title>Brython 平面齒輪動態模擬</title><link href="http://chiamingyen.github.io/kmolab/blog/brython-ping-mian-chi-lun-dong-tai-mo-ni.html" rel="alternate"></link><updated>2016-01-19T23:14:34+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-19:kmolab/blog/brython-ping-mian-chi-lun-dong-tai-mo-ni.html</id><summary type="html">&lt;p&gt;利用 Brython 模擬平面齒輪旋轉.&lt;/p&gt;
+&lt;li&gt;&lt;a href="http://seaside.gemtalksystems.com/tutorial/chapter08.pdf"&gt;http://seaside.gemtalksystems.com/tutorial/chapter08.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ccrma.stanford.edu/workshops/cm2007/topics/smalltalk/ArtAndScienceOfSmalltalk.pdf"&gt;https://ccrma.stanford.edu/workshops/cm2007/topics/smalltalk/ArtAndScienceOfSmalltalk.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sdmeta.gforge.inria.fr/FreeBooks/WithStyle/SmalltalkWithStyle.pdf"&gt;http://sdmeta.gforge.inria.fr/FreeBooks/WithStyle/SmalltalkWithStyle.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://live.exept.de/doc/books/JoyOfST/JoyOfST.pdf"&gt;http://live.exept.de/doc/books/JoyOfST/JoyOfST.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.gnu.org/software/smalltalk/manual/html_node/"&gt;https://www.gnu.org/software/smalltalk/manual/html_node/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="Javascript"></category><category term="Python"></category><category term="Smalltalk"></category></entry><entry><title>Brython 平面齒輪動態模擬</title><link href="http://chiamingyen.github.io/kmolab/blog/brython-ping-mian-chi-lun-dong-tai-mo-ni.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/brython-ping-mian-chi-lun-dong-tai-mo-ni.html</id><summary type="html">&lt;p&gt;利用 Brython 模擬平面齒輪旋轉.&lt;/p&gt;
 
 
 &lt;!-- 導入 Brython 函式庫 --&gt;
@@ -799,7 +670,7 @@ context.scale(1,-1)
 #以間隔 10 micro seconds 重複呼叫 draw()
 #time.set_interval(draw,20)
 timer.set_interval(draw,10)
-&lt;/script&gt;</summary><category term="Javascript"></category><category term="Python"></category><category term="Brython"></category></entry><entry><title>機械設計工程師的設計模擬與實作</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html" rel="alternate"></link><updated>2016-01-19T10:36:58+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-19:kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html</id><summary type="html">&lt;p&gt;先利用 Brython 模擬重力啟動機械時鐘所需的齒輪組, 然後在 Onshape 進行零組件設計繪圖, 最後再用 3D 印表機將零件印出並組裝測試.&lt;/p&gt;
+&lt;/script&gt;</summary><category term="Javascript"></category><category term="Python"></category><category term="Brython"></category></entry><entry><title>機械設計工程師的設計模擬與實作</title><link href="http://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html</id><summary type="html">&lt;p&gt;先利用 Brython 模擬重力啟動機械時鐘所需的齒輪組, 然後在 Onshape 進行零組件設計繪圖, 最後再用 3D 印表機將零件印出並組裝測試.&lt;/p&gt;
 
 
 &lt;p&gt;先以 Brython 畫一個時鐘:&lt;/p&gt;
@@ -1023,18 +894,18 @@ browser.timer.set_interval(drawClock, 1000)
 103
 104
 105
-106&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!-- 導入 Brython 函式庫 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://brython.info/src/brython_dist.js&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+106&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- 導入 Brython 函式庫 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://brython.info/src/brython_dist.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="c"&gt;&amp;lt;!-- window 導入後, 啟動 brython() --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onload&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
 &lt;span class="nx"&gt;brython&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="c"&gt;&amp;lt;!-- 建立畫布 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;canvas&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;plotarea&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;background-color:#333&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/canvas&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;canvas&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;plotarea&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;background-color:#333&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;canvas&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="c"&gt;&amp;lt;!-- 開始執行 Brython 繪圖 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/python3&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/python3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;導入&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt; &lt;span class="nx"&gt;模組中的&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;並設為&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt; &lt;span class="nx"&gt;變數&lt;/span&gt;
 &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt; &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt; &lt;span class="nx"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;導入數學模組&lt;/span&gt;
@@ -1128,7 +999,7 @@ browser.timer.set_interval(drawClock, 1000)
 
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;每&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt; &lt;span class="nx"&gt;個&lt;/span&gt; &lt;span class="nx"&gt;milliseconds&lt;/span&gt; &lt;span class="nx"&gt;呼叫執行一次&lt;/span&gt; &lt;span class="nx"&gt;drawClock&lt;/span&gt; &lt;span class="nx"&gt;函式&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;也就是每秒執行一次&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nx"&gt;browser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;timer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;set_interval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;drawClock&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -1217,29 +1088,29 @@ browser.timer.set_interval(drawClock, 1000)
 81
 82
 83
-84&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;# source: https://gist.github.com/gever/8643175&lt;/span&gt;
+84&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# source: https://gist.github.com/gever/8643175&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SVG&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;svgwrite&lt;/span&gt;
 
-&lt;span class="c"&gt;# gear parameters&lt;/span&gt;
+&lt;span class="c1"&gt;# gear parameters&lt;/span&gt;
 &lt;span class="n"&gt;outer_d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;500.0&lt;/span&gt;
-&lt;span class="n"&gt;tooth_ht&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;40.0&lt;/span&gt;   &lt;span class="c"&gt;# addendum + dedendum (aka, top land radius - root circle)&lt;/span&gt;
+&lt;span class="n"&gt;tooth_ht&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;40.0&lt;/span&gt;   &lt;span class="c1"&gt;# addendum + dedendum (aka, top land radius - root circle)&lt;/span&gt;
 &lt;span class="n"&gt;tooth_ct&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
-&lt;span class="n"&gt;face_pct&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;    &lt;span class="c"&gt;# how much narrower the face pitch is than the circular thickness&lt;/span&gt;
+&lt;span class="n"&gt;face_pct&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;    &lt;span class="c1"&gt;# how much narrower the face pitch is than the circular thickness&lt;/span&gt;
 &lt;span class="n"&gt;axle_d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
 
-&lt;span class="c"&gt;# derived parameters&lt;/span&gt;
+&lt;span class="c1"&gt;# derived parameters&lt;/span&gt;
 &lt;span class="n"&gt;inner_d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;outer_d&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;tooth_ht&lt;/span&gt;
 
-&lt;span class="c"&gt;# colors important to the laser cutter&lt;/span&gt;
+&lt;span class="c1"&gt;# colors important to the laser cutter&lt;/span&gt;
 &lt;span class="n"&gt;LC_CUT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;svgwrite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rgb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;LC_SCORE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;svgwrite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rgb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;LC_ETCH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;svgwrite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rgb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;LC_NONE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;svgwrite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rgb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c"&gt;# derived constants&lt;/span&gt;
+&lt;span class="c1"&gt;# derived constants&lt;/span&gt;
 &lt;span class="n"&gt;outer_circ&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;outer_d&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;
 &lt;span class="n"&gt;outer_r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;outer_d&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;
 &lt;span class="n"&gt;inner_r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;tooth_ht&lt;/span&gt;
@@ -1247,38 +1118,38 @@ browser.timer.set_interval(drawClock, 1000)
 &lt;span class="n"&gt;addendum_r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;addendum&lt;/span&gt;
 &lt;span class="n"&gt;circular_pitch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;tooth_ct&lt;/span&gt;
 &lt;span class="n"&gt;circular_thickness&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_pitch&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt;
-&lt;span class="n"&gt;theta_face&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_thickness&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;face_pct&lt;/span&gt; &lt;span class="c"&gt;# bevel pitch delta in radians&lt;/span&gt;
+&lt;span class="n"&gt;theta_face&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_thickness&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;face_pct&lt;/span&gt; &lt;span class="c1"&gt;# bevel pitch delta in radians&lt;/span&gt;
 
-&lt;span class="c"&gt;# clear out the contents of the old file, get ready to make a new one&lt;/span&gt;
-&lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;gear_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;.svg&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tooth_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# clear out the contents of the old file, get ready to make a new one&lt;/span&gt;
+&lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;gear_&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;.svg&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tooth_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;access&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;R_OK&lt;/span&gt; &lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;filename&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c"&gt;# start the drawing&lt;/span&gt;
-&lt;span class="n"&gt;dwg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;svgwrite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Drawing&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;tiny&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# start the drawing&lt;/span&gt;
+&lt;span class="n"&gt;dwg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;svgwrite&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Drawing&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;profile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;tiny&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dwg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-&lt;span class="c"&gt;# generate points that describe the gear profile&lt;/span&gt;
+&lt;span class="c1"&gt;# generate points that describe the gear profile&lt;/span&gt;
 &lt;span class="n"&gt;pts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tooth_ct&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_pitch&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="c"&gt;# begining of tooth and gap&lt;/span&gt;
-    &lt;span class="n"&gt;theta_ct&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;circular_thickness&lt;/span&gt; &lt;span class="c"&gt;# circular thickness (of tooth)&lt;/span&gt;
-    &lt;span class="n"&gt;theta_2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_pitch&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# begining of next tooth&lt;/span&gt;
+    &lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_pitch&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="c1"&gt;# begining of tooth and gap&lt;/span&gt;
+    &lt;span class="n"&gt;theta_ct&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;circular_thickness&lt;/span&gt; &lt;span class="c1"&gt;# circular thickness (of tooth)&lt;/span&gt;
+    &lt;span class="n"&gt;theta_2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;circular_pitch&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# begining of next tooth&lt;/span&gt;
 
     &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;addendum_r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;addendum_r&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# begining of face leading up to top land&lt;/span&gt;
+                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;addendum_r&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# begining of face leading up to top land&lt;/span&gt;
     &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;theta_face&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;theta_face&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c"&gt;# begining of top land&lt;/span&gt;
+                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_1&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;theta_face&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# begining of top land&lt;/span&gt;
     &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;theta_face&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;theta_face&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# end of top land    &lt;/span&gt;
+                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;theta_face&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;outer_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# end of top land    &lt;/span&gt;
     &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;addendum_r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;addendum_r&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# end of face coming down from top land&lt;/span&gt;
+                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;addendum_r&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# end of face coming down from top land&lt;/span&gt;
     &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;inner_r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;inner_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# begining of bottom land&lt;/span&gt;
+                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_ct&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;inner_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# begining of bottom land&lt;/span&gt;
     &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;inner_r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;inner_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c"&gt;# end of bottom land&lt;/span&gt;
+                 &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;theta_2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;inner_r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# end of bottom land&lt;/span&gt;
 
-    &lt;span class="c"&gt;# mark the first tooth&lt;/span&gt;
+    &lt;span class="c1"&gt;# mark the first tooth&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;circle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dwg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;circle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;center&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tooth_ht&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stroke&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LC_SCORE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LC_NONE&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;circle&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
@@ -1286,8 +1157,8 @@ browser.timer.set_interval(drawClock, 1000)
 &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;dwg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;polygon&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;pts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stroke&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LC_CUT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LC_NONE&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;outer_d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;outer_d&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mf"&gt;2.0&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c"&gt;# make a hole for the axle&lt;/span&gt;
-&lt;span class="c"&gt;# TODO: calculate the number of steps in axle polygon based on circumference of axle&lt;/span&gt;
+&lt;span class="c1"&gt;# make a hole for the axle&lt;/span&gt;
+&lt;span class="c1"&gt;# TODO: calculate the number of steps in axle polygon based on circumference of axle&lt;/span&gt;
 &lt;span class="n"&gt;a_pts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt; &lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1296,10 +1167,10 @@ browser.timer.set_interval(drawClock, 1000)
 
 &lt;span class="n"&gt;dwg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="c"&gt;# dwg.add(dwg.text(&amp;#39;Test&amp;#39;, insert=(0, 0.2), fill=&amp;#39;red&amp;#39;))&lt;/span&gt;
-&lt;span class="c"&gt;# dwg.save()&lt;/span&gt;
+&lt;span class="c1"&gt;# dwg.add(dwg.text(&amp;#39;Test&amp;#39;, insert=(0, 0.2), fill=&amp;#39;red&amp;#39;))&lt;/span&gt;
+&lt;span class="c1"&gt;# dwg.save()&lt;/span&gt;
 
-&lt;span class="c"&gt;# show it&lt;/span&gt;
+&lt;span class="c1"&gt;# show it&lt;/span&gt;
 &lt;span class="n"&gt;SVG&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;dwg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tostring&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -1586,10 +1457,10 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 135
 136
 137
-138&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!-- 建立正齒輪畫布 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;canvas&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;gear1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;background-color:#FFF&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/canvas&amp;gt;&lt;/span&gt;
+138&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- 建立正齒輪畫布 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;canvas&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;gear1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;background-color:#FFF&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;canvas&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="c"&gt;&amp;lt;!-- 開始執行 Brython 繪圖 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/python3&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/python3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;導入&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt; &lt;span class="nx"&gt;模組中的&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;並設為&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt; &lt;span class="nx"&gt;變數&lt;/span&gt;
 &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt; &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt; &lt;span class="nx"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt;
 &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;math&lt;/span&gt;
@@ -1679,8 +1550,8 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
                     &lt;span class="nx"&gt;lfy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;midy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;ypt&lt;/span&gt;
                 &lt;span class="nx"&gt;last_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;midx&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;xpt&lt;/span&gt;
                 &lt;span class="nx"&gt;last_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;midy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;ypt&lt;/span&gt;
-            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;line&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;last&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;recent&lt;/span&gt;
-            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt;
+            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;line&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;last&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;recent&lt;/span&gt;
+            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt;
             &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;lxd&lt;/span&gt; &lt;span class="nx"&gt;為齒根圓上的左側&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="nx"&gt;座標&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;lyd&lt;/span&gt; &lt;span class="nx"&gt;則為&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt; &lt;span class="nx"&gt;座標&lt;/span&gt;
             &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;下列為齒根圓上用來近似圓弧的直線&lt;/span&gt;
             &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;create_line&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;lxd&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="nx"&gt;lyd&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="nx"&gt;midx&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;xd&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="nx"&gt;midy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;yd&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1723,7 +1594,7 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;壓力角&lt;/span&gt;
 &lt;span class="nx"&gt;pa&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
 &lt;span class="nx"&gt;Spur&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;Gear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;pa&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -2135,10 +2006,10 @@ ctx.restore()
 199
 200
 201
-202&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;lt;!-- 建立正齒輪畫布 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;canvas&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;gear2&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;800&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;background-color:#FFF&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/canvas&amp;gt;&lt;/span&gt;
+202&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- 建立正齒輪畫布 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;canvas&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;gear2&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;800&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;400&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;background-color:#FFF&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;canvas&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="c"&gt;&amp;lt;!-- 開始執行 Brython 繪圖 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/python3&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/python3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;導入&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt; &lt;span class="nx"&gt;模組中的&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;並設為&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt; &lt;span class="nx"&gt;變數&lt;/span&gt;
 &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;browser&lt;/span&gt; &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt; &lt;span class="nx"&gt;as&lt;/span&gt; &lt;span class="nx"&gt;doc&lt;/span&gt;
 &lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="nx"&gt;math&lt;/span&gt;
@@ -2229,8 +2100,8 @@ ctx.restore()
                     &lt;span class="nx"&gt;lfy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;midy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;ypt&lt;/span&gt;
                 &lt;span class="nx"&gt;last_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;midx&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;xpt&lt;/span&gt;
                 &lt;span class="nx"&gt;last_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;midy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;ypt&lt;/span&gt;
-            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;line&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;last&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;recent&lt;/span&gt;
-            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt;
+            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;line&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="nx"&gt;last&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;recent&lt;/span&gt;
+            &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;end&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;dedendum&lt;/span&gt; &lt;span class="nx"&gt;point&lt;/span&gt;
             &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;lxd&lt;/span&gt; &lt;span class="nx"&gt;為齒根圓上的左側&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="nx"&gt;座標&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;lyd&lt;/span&gt; &lt;span class="nx"&gt;則為&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt; &lt;span class="nx"&gt;座標&lt;/span&gt;
             &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;下列為齒根圓上用來近似圓弧的直線&lt;/span&gt;
             &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;create_line&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;lxd&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="nx"&gt;lyd&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="nx"&gt;midx&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;xd&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="nx"&gt;midy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;yd&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;color&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2298,7 +2169,7 @@ ctx.restore()
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;將第1齒輪順時鐘轉&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="nx"&gt;度&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;也就是&lt;/span&gt; &lt;span class="nx"&gt;math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;使用&lt;/span&gt; &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="nx"&gt;與&lt;/span&gt; &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;restore&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="nx"&gt;以確保各齒輪以相對座標進行旋轉繪圖&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;translate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;second&lt;/span&gt; &lt;span class="nx"&gt;gear&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;translate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;second&lt;/span&gt; &lt;span class="nx"&gt;gear&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x_g1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y_g1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;rotate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;engage&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rotate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2310,7 +2181,7 @@ ctx.restore()
 
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;將第2齒輪逆時鐘轉&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="nx"&gt;度之後&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;再多轉一齒&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;以便與第1齒輪進行囓合&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;translate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;second&lt;/span&gt; &lt;span class="nx"&gt;gear&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;translate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;second&lt;/span&gt; &lt;span class="nx"&gt;gear&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x_g2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y_g2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;rotate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;engage&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;rotate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;n_g2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -2321,7 +2192,7 @@ ctx.restore()
 
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;將第3齒輪逆時鐘轉&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="nx"&gt;度之後&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;再往回轉第2齒輪定位帶動轉角&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;然後再逆時鐘多轉一齒&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;以便與第2齒輪進行囓合&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;save&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;translate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="nx"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;second&lt;/span&gt; &lt;span class="nx"&gt;gear&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;translate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;the&lt;/span&gt; &lt;span class="nx"&gt;origin&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="nx"&gt;second&lt;/span&gt; &lt;span class="nx"&gt;gear&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x_g3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y_g3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;rotate&lt;/span&gt; &lt;span class="nx"&gt;to&lt;/span&gt; &lt;span class="nx"&gt;engage&lt;/span&gt;
 &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="nx"&gt;math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nx"&gt;math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nx"&gt;n_g2&lt;/span&gt; &lt;span class="nx"&gt;為第2齒輪從順時鐘轉&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt; &lt;span class="nx"&gt;度之後&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;必須配合目前的標記線所作的齒輪&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="nx"&gt;轉動角度&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;要轉換到齒輪3&lt;/span&gt; &lt;span class="nx"&gt;的轉動角度&lt;/span&gt;
@@ -2336,7 +2207,7 @@ ctx.restore()
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;x_g3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;y_g3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nx"&gt;Spur&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;Gear&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x_g3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;y_g3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;rp_g3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;n_g3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;pa&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;restore&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -2353,18 +2224,70 @@ ctx.restore()
 &lt;li&gt;Gear generator: &lt;a href="http://geargenerator.com/"&gt;http://geargenerator.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Optimal robot trajectory: &lt;a href="https://gist.github.com/pierre-haessig/9808480"&gt;https://gist.github.com/pierre-haessig/9808480&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Simple GP for aircraft optimization: &lt;a href="https://gist.github.com/bqpd/6845968"&gt;https://gist.github.com/bqpd/6845968&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Javascript"></category><category term="Python"></category><category term="Brython"></category></entry><entry><title>Brython and Amber languages</title><link href="http://chiamingyen.github.io/kmolab/blog/brython-and-amber-languages.html" rel="alternate"></link><updated>2016-01-18T01:23:50+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-18:kmolab/blog/brython-and-amber-languages.html</id><summary type="html">&lt;p&gt;看到 Brython 與 Amber 等利用 Javascript 實作的網際程式系統, 就應該不難理解, 即便 Javascript 程式終究無可避免, 但是 Python 與 Smalltalk 的魅力依舊讓人難以忘懷.&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="Javascript"></category><category term="Python"></category><category term="Brython"></category></entry><entry><title>Leo Editor 安裝</title><link href="http://chiamingyen.github.io/kmolab/blog/leo-editor-an-zhuang.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/leo-editor-an-zhuang.html</id><summary type="html">&lt;p&gt;Leo Editor 的執行需要 Python3, PyQt 與 Leo Editor 程式碼&lt;/p&gt;
 
 
-&lt;p&gt;Brython: &lt;a href="https://github.com/brython-dev/brython"&gt;https://github.com/brython-dev/brython&lt;/a&gt; 讓程式師可以直接在 html 網頁中以 Python3 的語法編寫程式, 然後轉為 Javascript 在網頁上運行, 而相同的原理, Amber: &lt;a href="https://github.com/amber-smalltalk/amber"&gt;https://github.com/amber-smalltalk/amber&lt;/a&gt; 則更進一步, 以 Amber 寫 Amber, 讓程式師可以在網頁上寫 Smalltalk 語法, 然後轉成網頁上能夠運行的程式片斷.&lt;/p&gt;
-&lt;p&gt;學 Python3 的資源很多, 但是想學 Smailtalk, 也有不少的免費資源:&lt;/p&gt;
+&lt;h2&gt;Leo Editor 安裝&lt;/h2&gt;
+&lt;p&gt;Windows:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="http://seaside.gemtalksystems.com/tutorial/chapter08.pdf"&gt;http://seaside.gemtalksystems.com/tutorial/chapter08.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://ccrma.stanford.edu/workshops/cm2007/topics/smalltalk/ArtAndScienceOfSmalltalk.pdf"&gt;https://ccrma.stanford.edu/workshops/cm2007/topics/smalltalk/ArtAndScienceOfSmalltalk.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://sdmeta.gforge.inria.fr/FreeBooks/WithStyle/SmalltalkWithStyle.pdf"&gt;http://sdmeta.gforge.inria.fr/FreeBooks/WithStyle/SmalltalkWithStyle.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://live.exept.de/doc/books/JoyOfST/JoyOfST.pdf"&gt;http://live.exept.de/doc/books/JoyOfST/JoyOfST.pdf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.gnu.org/software/smalltalk/manual/html_node/"&gt;https://www.gnu.org/software/smalltalk/manual/html_node/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="Javascript"></category><category term="Python"></category><category term="Smalltalk"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-user-wen-zhang-tao-gao.html" rel="alternate"></link><updated>2016-01-10T11:19:53+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-10:kmolab/blog/kmolab-user-wen-zhang-tao-gao.html</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
+&lt;li&gt;安裝 Python3: &lt;a href="https://www.python.org/downloads/"&gt;https://www.python.org/downloads/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安裝 PyQt: &lt;a href="https://www.riverbankcomputing.com/software/pyqt/download"&gt;https://www.riverbankcomputing.com/software/pyqt/download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;取得 Leo Editor 程式碼: &lt;a href="https://github.com/leo-editor/leo-editor"&gt;https://github.com/leo-editor/leo-editor&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;啟動程式 (launchLeo.py 檔案):&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8
+9&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!Y:\IDE\Python33\python.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# launchLeo&lt;/span&gt;
+
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot; Leo launcher script&lt;/span&gt;
+&lt;span class="sd"&gt;A minimal script to launch leo.&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;leo.core.runLeo&lt;/span&gt;
+&lt;span class="n"&gt;leo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;core&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;runLeo&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;python.exe launchLeo.py&lt;/p&gt;
+&lt;p&gt;Ubuntu:&lt;/p&gt;
+&lt;p&gt;先解除舊版的 Leo Editor:&lt;/p&gt;
+&lt;p&gt;sudo pip3 uninstall leo&lt;/p&gt;
+&lt;p&gt;再安裝最新版 Leo Editor:&lt;/p&gt;
+&lt;p&gt;sudo pip3 install https://github.com/leo-editor/leo-editor/archive/master.zip&lt;/p&gt;
+&lt;p&gt;啟動: leo&amp;amp;&lt;/p&gt;
+&lt;h2&gt;Leo 程式方法&lt;/h2&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;es&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+利用 Ctrl+b 執行&lt;/p&gt;
+&lt;p&gt;內建變數: c, g 與 p&lt;/p&gt;
+&lt;p&gt;c 是包含程式碼內容的命令變數 (commander)&lt;/p&gt;
+&lt;p&gt;c 命令變數是定義在 leoCommands.py 中的指令類別案例, 透過 c 可以擷取 Leo 的原始碼與所有大綱資料.&lt;/p&gt;
+&lt;p&gt;g 變數則是 Leo 的 leo.core.leoGlobals 模組.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;c: The commander of the present outline.&lt;/li&gt;
+&lt;li&gt;g: The leo.core.leoGlobals module.&lt;/li&gt;
+&lt;li&gt;p: The presently selected position, c.p.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;g.es 是 Leo 的列印函式 (echo string).&lt;/p&gt;
+&lt;p&gt;p 則是定義在 leoNodes.py 中表示目前所選擇節點的位置類別所建立的案例.&lt;/p&gt;
+&lt;p&gt;p.v 則是 vnode 物件, vnode 是在 Leo 大綱中包含所有永久資料.&lt;/p&gt;
+&lt;p&gt;vnodes 是定義在 leoNodes.py 中由 vnode 類別所建立的案例.&lt;/p&gt;
+&lt;p&gt;每一個 vnode 代表所在大綱節點的所有資料.&lt;/p&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all_positions&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;level&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Leo Editor"></category><category term="Python"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-user-wen-zhang-tao-gao.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/kmolab-user-wen-zhang-tao-gao.html</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
 
 
 &lt;h1&gt;文章標題&lt;/h1&gt;
@@ -2384,18 +2307,95 @@ ctx.restore()
  7
  8
  9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
 
-&lt;span class="c"&gt;# Pythagoras Theorem&lt;/span&gt;
+&lt;span class="c1"&gt;# Pythagoras Theorem&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
 &lt;span class="n"&gt;side1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;span class="n"&gt;side2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
 &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;, h)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, h)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-4032-projects.html" rel="alternate"></link><updated>2016-01-07T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/kmolab-4032-projects.html</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>利用 Leo Editor 執行程式開發</title><link href="http://chiamingyen.github.io/kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html" rel="alternate"></link><published>2016-03-15T11:00:00+08:00</published><updated>2016-03-15T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-03-15:kmolab/blog/li-yong-leo-editor-zhi-xing-cheng-shi-kai-fa.html</id><summary type="html">&lt;p&gt;Leo Editor 是一套利用大綱模式與程式方法管理多元資料的 Python3 + PyQt 單機應用程式.&lt;/p&gt;
+
+
+&lt;p&gt;所謂的大綱模式, 指的是 Leo Editor 將所有的內容分為大綱與內文, 而每一個大綱資料可以擁有下屬大綱, 使用者可以利用階層式的方法來管理各種文字資料. 至於所謂管理多元資料的程式方法, Leo Editor 發明了許多大綱標題上的指令, 以及大綱內文中的語法指令來協助使用者管理資料. 這裡我們先簡單介紹 @edit 與 @clean 在 Python3 程式開發上的應用.&lt;/p&gt;
+&lt;p&gt;Leo Editor 基本的使用模式如下:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開啟 Leo Editor 後, 使用者可以新增一個 .leo 檔案, 並在其中加入大綱標題(或者稱為節點), 以及在大綱標題對應的內文中輸入資料.&lt;/li&gt;
+&lt;li&gt;當使用者決定 .leo 各大綱內文中所儲存的資料, 希望能夠單獨以一個檔案的格式存在, 就可以修改內文對應的標題, 放入 @edit myfile.txt, 當使用者儲存 .leo 檔案時, Leo Editor 就會根據 @edit 標題指令的指示, 將內文資料以 myfile.txt 存檔, 並在 Log 區註記檔案已經建立.&lt;/li&gt;
+&lt;li&gt;假如上述儲存在大綱對應內文的資料是 Python3 格式的程式碼, 那麼使用者只要將滑鼠停留在該程式內文中, 然後按下 Ctrl + b, 就可以執行這個程式, 並且通常使用者會使用 g.es() 來取代 print(), 直接在 Leo Editor 中進行程式碼的測試.&lt;/li&gt;
+&lt;li&gt;換言之, 假如使用者在步驟 2. 將檔案存為 myprog.py, 這個 Python 程式就可以與其他的程式套件結合, 成為各種應用套件, 整個 Leo Editor 就是在這樣的環境下開發, 而且是採用 PyQt 作為圖形介面程式庫, 使用者可以在 leo/core/LeoPyRef.leo 中的 Code 節點中看到這些程式碼.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;實際操作:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;開啟 Leo Editor, 利用 File-&amp;gt;New 新增一個 .leo 檔案, 按下 Ctrl + i, 以 insert 的方法加入一個大綱(節點), 在內文中放入:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="brush: python;"&gt;
+try:
+    g.es("hello")
+except:
+    print("hello")
+&lt;/pre&gt;
+
+&lt;p&gt;然後按下 Ctrl + b, 就可以在 Leo 中看到程式執行時, 以 g.es("hello"), 將字串送到 Log 視窗, 這裡的 g 是 Leo Editor 程式中的一個模組, 包含廣域函式與類別, 而 g.es 就是其中的一個 echo string 方法.&lt;/p&gt;
+&lt;p&gt;而且 g 是 Leo Editor 套件中一個很大的模組, 假如您真的想看看 g 在 5.1 版中的所有 439 個函式與類別, 可以利用 g.es(len(list(dir(g)))) 列出 g 的函式與類別個數 ,或者以 g.es(list(dir(g))) 列出這個大數列.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;假如我們希望將目前 .leo 檔中唯一的大綱內容存成 myprog.py, 只要將此內文程式的標題改為 "@edit myprog.py", 然後存 .leo 檔案即可. 此時, Leo Editor 的 Log pane 中將註記 myprog.py 已經建立的訊息, 而且使用者可以在操作系統的檔案架構中, 利用 python3 myprog.py 來執行這個 myprog.py 程式.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最後一個例子是, Leo Editor 可以透過 @clean 節點指令, refresh 已經存在外部的 myclass.py 物件導向程式碼, 以階層架構的方式讀進 myclass.py 的內容, 之後, 使用者在 Leo Editor 修改 myclass.py 的程式內容, 將在存檔後存入 myclass.py, 若離開 Leo Editor 之後, myclass.py 內容修改, Leo Editor 將在打開對應 .leo 檔案時, 讀進 myclass.py 最新的內容.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;利用 Leo Editor 的節點指令, @clean 導入下列已經存在檔案系統中的 myclass.py 程式碼, 只要新增一個節點, 並且標題輸入 "@clean myclass.py", 而且確定 .leo 檔案與 myclass.py 位於相同目錄中, 然後點選 @clean myclass.py 節點, 以滑鼠右鍵拉出 refresh from disk, Leo Editor 就會以階層架構讀進 myclass.py.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;myclass.py 的程式碼如下:&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+class 僱員:
+    '僱員物件'
+    人員總數 = 0
+
+    def __init__(self, 職稱, 薪水):
+        self.職稱 = 職稱
+        self.薪水 = 薪水
+        僱員.人員總數 += 1
+
+    def 列出個數(self):
+        try:
+            g.es("總共有人員 %d" % 僱員.人員總數)
+        except:
+            print("總共有人員 %d" % 僱員.人員總數)
+
+    def 列出基本資料(self):
+        try:
+            g.es("職稱 : ", self.職稱,  ", 薪水: ", self.薪水)
+        except:
+            print("職稱 : ", self.職稱,  ", 薪水: ", self.薪水)
+
+"開始利用僱員物件建立案例"
+僱員1 = 僱員("王一名", 55000)
+"建立另外一位僱員"
+僱員2 = 僱員("林人二", 65000)
+
+僱員1.列出基本資料()
+僱員2.列出基本資料()
+try:
+    g.es("目前為止, 有 %d 位僱員" % 僱員.人員總數)
+except:
+    print("目前為止, 有 %d 位僱員" % 僱員.人員總數)
+&lt;/pre&gt;
+
+&lt;p&gt;以上的 Leo Editor 導引教學內容,可以從 &lt;a href="https://github.com/chiamingyen/leoeditor_tutorial"&gt;https://github.com/chiamingyen/leoeditor_tutorial&lt;/a&gt; 中下載.&lt;/p&gt;</summary><category term="Leo Editor"></category><category term="Python"></category></entry><entry><title>Create an online Ethercalc site</title><link href="http://chiamingyen.github.io/kmolab/blog/create-an-online-ethercalc-site.html" rel="alternate"></link><published>2016-02-24T11:00:00+08:00</published><updated>2016-02-24T11:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-02-24:kmolab/blog/create-an-online-ethercalc-site.html</id><summary type="html">&lt;p&gt;利用 OpenShift 與 Ethercalc, 自行建立一個雲端線上試算表&lt;/p&gt;
+
+
+&lt;p&gt;試算表的功能非常多元, 一旦將試算表以多人可即時更新內容的架構搬上雲端, 功能將會更加實用.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/audreyt/ethercalc"&gt;https://github.com/audreyt/ethercalc&lt;/a&gt; 可以說是目前最符合雲端使用的試算表程式, 試算表的引擎採用通用公共授權(&lt;a href="https://gist.github.com/audreyt/3985324"&gt;https://gist.github.com/audreyt/3985324&lt;/a&gt;, &lt;a href="https://www.socialtext.net/open/cpal"&gt;https://www.socialtext.net/open/cpal&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Ethercalc 的實際應用非常簡單, 只要在 &lt;a href="https://openshift.redhat.com/app/login"&gt;https://openshift.redhat.com/app/login&lt;/a&gt; 登記一個帳號, 然後登入後, 選擇 Add Application, 在應用程式類別選擇 Other Types 項下的 Node.js 0.10, 自行選擇可用的 Name Space 與應用程式名稱後, 在 Source&lt;/p&gt;
+&lt;p&gt;Code 的欄位中填入 Ethercalc 的原始碼倉儲: &lt;a href="https://github.com/audreyt/ethercalc.git"&gt;https://github.com/audreyt/ethercalc.git&lt;/a&gt; 後, 按下 Create Application, 就可以完成 Ethercalc 網站的建立, 例如: &lt;a href="http://ethercalc-2012c1.rhcloud.com/30wcwukfpmep"&gt;http://ethercalc-2012c1.rhcloud.com/30wcwukfpmep&lt;/a&gt; (以 2012c1_mde_tw 帳號控管).&lt;/p&gt;</summary><category term="Ethercalc"></category><category term="Node.js"></category></entry><entry><title>Kmolab 4032 projects</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-4032-projects.html" rel="alternate"></link><published>2016-01-07T12:00:00+08:00</published><updated>2016-01-07T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-07:kmolab/blog/kmolab-4032-projects.html</id><summary type="html">&lt;p&gt;KMOL Lab 4032 專題初步研究方向&lt;/p&gt;
 &lt;p&gt;Github 倉儲: &lt;a href="https://github.com/2015fallproject"&gt;https://github.com/2015fallproject&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;403231&lt;/h2&gt;
 &lt;ul&gt;
@@ -2461,7 +2461,7 @@ ctx.restore()
 &lt;li&gt;&lt;a href="http://www.debian.org/"&gt;http://www.debian.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.linuxmint.com/"&gt;http://www.linuxmint.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://distrowatch.com/"&gt;http://distrowatch.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-initialized.html" rel="alternate"></link><updated>2016-01-06T06:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/kmolab-initialized.html</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab initialized</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-initialized.html" rel="alternate"></link><published>2016-01-06T06:00:00+08:00</published><updated>2016-01-06T06:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/kmolab-initialized.html</id><summary type="html">&lt;p&gt;KMOL Lab 啟用 Github pages 靜態網頁&lt;/p&gt;
 &lt;p&gt;二十一世紀是電腦網路與人工智慧充分整合的世代, Kmolab 一直以來對於人才的培育, 始終強調必須充份了解電腦的基本運作, 實際應用網路架構提升設計效能, 並且採用演化分析方法來發揮電腦的高速運算能力.&lt;/p&gt;
 &lt;p&gt;然而這些理念的落實, 必須從電腦的操作系統安裝設定開始, 進而納入 IPV4 與 IPV6 網路協定架構整合, 並且每一成員都有能力運用近端、
 廣域主機與雲端主機上的各項軟硬體資源, 將知識管理與最佳化應用的精神納入產品的設計開發, 才能真正融入知識經濟與國際協同的趨勢.&lt;/p&gt;
@@ -2503,7 +2503,7 @@ ctx.restore()
 26
 27
 28
-29&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# This file describes the network interfaces available on your system
+29&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
 # The loopback network interface
@@ -2617,7 +2617,7 @@ iface eth1 inet dhcp
 62
 63
 64
-65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;acl cad_lab src 140.130.17.0/24
+65&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;acl cad_lab src 140.130.17.0/24
 acl cad_lab src 2001:288:6004:17::/64
 
 acl SSL_ports port 443
@@ -2709,12 +2709,12 @@ refresh_pattern . 0 20% 4320
 &lt;p&gt;安裝 pip3&lt;/p&gt;
 &lt;p&gt;sudo apt-get install python3-pip&lt;/p&gt;
 &lt;p&gt;安裝 pyqt4&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;sudo apt–get install python3–pyqt4
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt–get install python3–pyqt4
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;選擇 Leo Editor 版本程式進行安裝&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;sudo pip3 install https://github.com/leo-editor/leo-editor/archive/broke-abbrev.zip
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo pip3 install https://github.com/leo-editor/leo-editor/archive/broke-abbrev.zip
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
@@ -2805,14 +2805,14 @@ refresh_pattern . 0 20% 4320
 22
 23
 24
-25&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+25&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
-&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -2821,7 +2821,7 @@ refresh_pattern . 0 20% 4320
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 &lt;span class="nt"&gt;server_name&lt;/span&gt; &lt;span class="nt"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-&lt;span class="nf"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nn"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.crt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.key&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="nt"&gt;ssl_session_timeout&lt;/span&gt; &lt;span class="nt"&gt;5m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -2846,7 +2846,7 @@ refresh_pattern . 0 20% 4320
 10
 11
 12
-13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="x"&gt;uwsgi_param QUERY_STRING &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;query_string&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
+13&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;uwsgi_param QUERY_STRING &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;query_string&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
 &lt;span class="x"&gt;uwsgi_param REQUEST_METHOD &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;request_method&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
 &lt;span class="x"&gt;uwsgi_param CONTENT_TYPE &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;content_type&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
 &lt;span class="x"&gt;uwsgi_param CONTENT_LENGTH &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;content_length&lt;/span&gt;&lt;span class="x"&gt;;&lt;/span&gt;
@@ -2869,7 +2869,7 @@ refresh_pattern . 0 20% 4320
 4
 5
 6
-7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;description &amp;quot;uwsgi for cmsimply&amp;quot;
+7&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;description &amp;quot;uwsgi for cmsimply&amp;quot;
 start on runlevel [2345]
 stop on runlevel [06]
 
@@ -2900,7 +2900,7 @@ exec uwsgi --master --processes 4 --die-on-term --socket :8080 --chdir /home/yen
  9
 10
 11
-12&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;# Emperor uwsgi script
+12&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Emperor uwsgi script
 description &amp;quot;uwsgi Emperor&amp;quot;
 start on runlevel [2345]
 stop on runlevel [06]
@@ -2922,7 +2922,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 3
 4
 5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[uwsgi]&lt;/span&gt;
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[uwsgi]&lt;/span&gt;
 &lt;span class="na"&gt;socket&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;:8080&lt;/span&gt;
 &lt;span class="na"&gt;processes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;4&lt;/span&gt;
 &lt;span class="na"&gt;master&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;true&lt;/span&gt;
@@ -2937,7 +2937,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 3
 4
 5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="k"&gt;[uwsgi]&lt;/span&gt;
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[uwsgi]&lt;/span&gt;
 &lt;span class="na"&gt;socket&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;:8081&lt;/span&gt;
 &lt;span class="na"&gt;processes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;4&lt;/span&gt;
 &lt;span class="na"&gt;master&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;true&lt;/span&gt;
@@ -2999,15 +2999,15 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 50
 51
 52
-53&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+53&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
  &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
  &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;80&lt;/span&gt; &lt;span class="n"&gt;default_server&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
  &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
  &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
- &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
- &lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
  &lt;span class="p"&gt;}&lt;/span&gt;
 
  &lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -3016,7 +3016,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
  &lt;span class="p"&gt;}&lt;/span&gt;
 
  &lt;span class="nt"&gt;server_name&lt;/span&gt; &lt;span class="nt"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
- &lt;span class="nf"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nn"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
  &lt;span class="nt"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.crt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
  &lt;span class="nt"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.key&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
  &lt;span class="nt"&gt;ssl_session_timeout&lt;/span&gt; &lt;span class="nt"&gt;5m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -3033,8 +3033,8 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
  &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="m"&gt;8443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
  &lt;span class="n"&gt;listen&lt;/span&gt; &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;8443&lt;/span&gt; &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="n"&gt;ipv6only&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
- &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
- &lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;static&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+ &lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yen&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cmsimply2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;static&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
  &lt;span class="p"&gt;}&lt;/span&gt;
 
  &lt;span class="nt"&gt;location&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -3043,7 +3043,7 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
  &lt;span class="p"&gt;}&lt;/span&gt;
 
  &lt;span class="nt"&gt;server_name&lt;/span&gt; &lt;span class="nt"&gt;localhost&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
- &lt;span class="nf"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+ &lt;span class="nn"&gt;#ssl&lt;/span&gt; &lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
  &lt;span class="nt"&gt;ssl_certificate&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.crt&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
  &lt;span class="nt"&gt;ssl_certificate_key&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;ssl&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;nginx&lt;/span&gt;&lt;span class="nc"&gt;.key&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
  &lt;span class="nt"&gt;ssl_session_timeout&lt;/span&gt; &lt;span class="nt"&gt;5m&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;

@@ -177,7 +177,7 @@ init_mathjax();
         <meta property="og:title" content="近端 Jupyterhub 電腦主機設定"/>
         <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html"/>
         <meta property="og:description" content="利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub."/>
-        <meta property="article:published_time" content="2016-01-17" />
+        <meta property="article:published_time" content="2016-10-16" />
             <meta property="article:section" content="Ubuntu" />
             <meta property="article:tag" content="Python" />
             <meta property="article:tag" content="Jupyter" />
@@ -315,7 +315,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-17T22:59:14.919105+08:00"> 日 17 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-10-16T21:49:00.414429+08:00"> Sun 16 October 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -388,33 +388,33 @@ Kmolab (虎尾科大MDE)            </a>
 41
 42
 43
-44</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c"># jupyterhub_config.py</span>
-<span class="c"># jupyterhub -f /path/to/jupyterhub_config.py</span>
+44</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># jupyterhub_config.py</span>
+<span class="c1"># jupyterhub -f /path/to/jupyterhub_config.py</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">pjoin</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span>
 
-<span class="n">runtime_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;/srv/jupyterhub&#39;</span><span class="p">)</span>
-<span class="n">ssl_dir</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">runtime_dir</span><span class="p">,</span> <span class="s">&#39;ssl&#39;</span><span class="p">)</span>
+<span class="n">runtime_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;/srv/jupyterhub&#39;</span><span class="p">)</span>
+<span class="n">ssl_dir</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">runtime_dir</span><span class="p">,</span> <span class="s1">&#39;ssl&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ssl_dir</span><span class="p">):</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ssl_dir</span><span class="p">)</span>
 
-<span class="c"># https on :9443</span>
+<span class="c1"># https on :9443</span>
 <span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">9443</span>
-<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">ssl_key</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">ssl_dir</span><span class="p">,</span> <span class="s">&#39;nginx.key&#39;</span><span class="p">)</span>
-<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">ssl_cert</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">ssl_dir</span><span class="p">,</span> <span class="s">&#39;nginx.crt&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">ssl_key</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">ssl_dir</span><span class="p">,</span> <span class="s1">&#39;nginx.key&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">ssl_cert</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">ssl_dir</span><span class="p">,</span> <span class="s1">&#39;nginx.crt&#39;</span><span class="p">)</span>
 
-<span class="c"># put the JupyterHub cookie secret and state db</span>
-<span class="c"># in /var/run/jupyterhub</span>
-<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">cookie_secret_file</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">runtime_dir</span><span class="p">,</span> <span class="s">&#39;cookie_secret&#39;</span><span class="p">)</span>
-<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">db_url</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">runtime_dir</span><span class="p">,</span> <span class="s">&#39;jupyterhub.sqlite&#39;</span><span class="p">)</span>
-<span class="c"># or `--db=/path/to/jupyterhub.sqlite` on the command-line</span>
+<span class="c1"># put the JupyterHub cookie secret and state db</span>
+<span class="c1"># in /var/run/jupyterhub</span>
+<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">cookie_secret_file</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">runtime_dir</span><span class="p">,</span> <span class="s1">&#39;cookie_secret&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">db_url</span> <span class="o">=</span> <span class="n">pjoin</span><span class="p">(</span><span class="n">runtime_dir</span><span class="p">,</span> <span class="s1">&#39;jupyterhub.sqlite&#39;</span><span class="p">)</span>
+<span class="c1"># or `--db=/path/to/jupyterhub.sqlite` on the command-line</span>
 
-<span class="c"># put the log file in /var/log</span>
-<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">log_file</span> <span class="o">=</span> <span class="s">&#39;/var/log/jupyterhub.log&#39;</span>
+<span class="c1"># put the log file in /var/log</span>
+<span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">log_file</span> <span class="o">=</span> <span class="s1">&#39;/var/log/jupyterhub.log&#39;</span>
 
-<span class="c"># use GitHub OAuthenticator for local users</span>
+<span class="c1"># use GitHub OAuthenticator for local users</span>
 <span class="sd">&#39;&#39;&#39;</span>
 
 <span class="sd">c.JupyterHub.authenticator_class = &#39;oauthenticator.LocalGitHubOAuthenticator&#39;</span>
@@ -422,16 +422,16 @@ Kmolab (虎尾科大MDE)            </a>
 <span class="sd"># create system users that don&#39;t exist yet</span>
 <span class="sd">c.LocalAuthenticator.create_system_users = True</span>
 <span class="sd">&#39;&#39;&#39;</span>
-<span class="c"># specify users and admin</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Authenticator</span><span class="o">.</span><span class="n">whitelist</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;user1&#39;</span><span class="p">,</span> <span class="s">&#39;user2&#39;</span><span class="p">}</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Authenticator</span><span class="o">.</span><span class="n">admin_users</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;user1&#39;</span><span class="p">,</span> <span class="s">&#39;user2&#39;</span><span class="p">}</span>
+<span class="c1"># specify users and admin</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Authenticator</span><span class="o">.</span><span class="n">whitelist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user1&#39;</span><span class="p">,</span> <span class="s1">&#39;user2&#39;</span><span class="p">}</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Authenticator</span><span class="o">.</span><span class="n">admin_users</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;user1&#39;</span><span class="p">,</span> <span class="s1">&#39;user2&#39;</span><span class="p">}</span>
 
-<span class="c"># start single-user notebook servers in ~/assignments,</span>
-<span class="c"># with ~/assignments/Welcome.ipynb as the default landing page</span>
-<span class="c"># this config could also be put in</span>
-<span class="c"># /etc/ipython/ipython_notebook_config.py</span>
-<span class="c">#c.Spawner.notebook_dir = &#39;~/tmp&#39;</span>
-<span class="c">#c.Spawner.args = [&#39;--NotebookApp.default_url=/notebooks/Welcome.ipynb&#39;]</span>
+<span class="c1"># start single-user notebook servers in ~/assignments,</span>
+<span class="c1"># with ~/assignments/Welcome.ipynb as the default landing page</span>
+<span class="c1"># this config could also be put in</span>
+<span class="c1"># /etc/ipython/ipython_notebook_config.py</span>
+<span class="c1">#c.Spawner.notebook_dir = &#39;~/tmp&#39;</span>
+<span class="c1">#c.Spawner.args = [&#39;--NotebookApp.default_url=/notebooks/Welcome.ipynb&#39;]</span>
 </pre></div>
 </td></tr></table>
 
@@ -606,36 +606,36 @@ Kmolab (虎尾科大MDE)            </a>
 166
 167
 168
-169</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">#! /bin/sh</span>
-<span class="c">### BEGIN INIT INFO</span>
-<span class="c"># Provides:          jupyterhub</span>
-<span class="c"># Required-Start:    $remote_fs $syslog</span>
-<span class="c"># Required-Stop:     $remote_fs $syslog</span>
-<span class="c"># Default-Start:     2 3 4 5</span>
-<span class="c"># Default-Stop:      0 1 6</span>
-<span class="c"># Short-Description: Start jupyterhub</span>
-<span class="c"># Description:       This file should be used to construct $ sudo chmod +x /etc/init.d/jupyterhub</span>
-<span class="c"># Create a default config to /etc/jupyterhub/jupyterhub_config.py</span>
-<span class="nv">$ </span>sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
-<span class="c"># Start jupyterhub</span>
-<span class="nv">$ </span>sudo service jupyterhub start
-<span class="c"># Stop jupyterhub</span>
-<span class="nv">$ </span>sudo service jupyterhub stop
-<span class="c"># Start jupyterhub on boot</span>
-<span class="nv">$ </span>sudo update-rc.d jupyterhub defaults
-<span class="c"># Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html</span>
-<span class="nv">$ </span>sudo rcconfscripts to be
-<span class="c">#                    placed in /etc/init.d.</span>
-<span class="c">### END INIT INFO</span>
+169</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#! /bin/sh</span>
+<span class="c1">### BEGIN INIT INFO</span>
+<span class="c1"># Provides:          jupyterhub</span>
+<span class="c1"># Required-Start:    $remote_fs $syslog</span>
+<span class="c1"># Required-Stop:     $remote_fs $syslog</span>
+<span class="c1"># Default-Start:     2 3 4 5</span>
+<span class="c1"># Default-Stop:      0 1 6</span>
+<span class="c1"># Short-Description: Start jupyterhub</span>
+<span class="c1"># Description:       This file should be used to construct $ sudo chmod +x /etc/init.d/jupyterhub</span>
+<span class="c1"># Create a default config to /etc/jupyterhub/jupyterhub_config.py</span>
+$ sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+<span class="c1"># Start jupyterhub</span>
+$ sudo service jupyterhub start
+<span class="c1"># Stop jupyterhub</span>
+$ sudo service jupyterhub stop
+<span class="c1"># Start jupyterhub on boot</span>
+$ sudo update-rc.d jupyterhub defaults
+<span class="c1"># Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html</span>
+$ sudo rcconfscripts to be
+<span class="c1">#                    placed in /etc/init.d.</span>
+<span class="c1">### END INIT INFO</span>
 
-<span class="c"># Author: Alisue &lt;lambdalisue@hashnote.net&gt;</span>
-<span class="c">#</span>
-<span class="c"># Please remove the &quot;Author&quot; lines above and replace them</span>
-<span class="c"># with your own name if you copy and modify this script.</span>
+<span class="c1"># Author: Alisue &lt;lambdalisue@hashnote.net&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># Please remove the &quot;Author&quot; lines above and replace them</span>
+<span class="c1"># with your own name if you copy and modify this script.</span>
 
-<span class="c"># Do NOT &quot;set -e&quot;</span>
+<span class="c1"># Do NOT &quot;set -e&quot;</span>
 
-<span class="c"># PATH should only include /usr/* if it runs after the mountnfs.sh script</span>
+<span class="c1"># PATH should only include /usr/* if it runs after the mountnfs.sh script</span>
 <span class="nv">PATH</span><span class="o">=</span>/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
 <span class="nv">DESC</span><span class="o">=</span><span class="s2">&quot;Multi-user server for Jupyter notebooks&quot;</span>
 <span class="nv">NAME</span><span class="o">=</span>jupyterhub
@@ -644,74 +644,74 @@ Kmolab (虎尾科大MDE)            </a>
 <span class="nv">PIDFILE</span><span class="o">=</span>/var/run/<span class="nv">$NAME</span>.pid
 <span class="nv">SCRIPTNAME</span><span class="o">=</span>/etc/init.d/<span class="nv">$NAME</span>
 
-<span class="c"># Exit if the package is not installed</span>
-<span class="o">[</span> -x <span class="s2">&quot;</span><span class="nv">$DAEMON</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">exit </span>0
+<span class="c1"># Exit if the package is not installed</span>
+<span class="o">[</span> -x <span class="s2">&quot;</span><span class="nv">$DAEMON</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="nb">exit</span> 0
 
-<span class="c"># Read configuration variable file if it is present</span>
+<span class="c1"># Read configuration variable file if it is present</span>
 <span class="o">[</span> -r /etc/default/<span class="nv">$NAME</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> . /etc/default/<span class="nv">$NAME</span>
 
-<span class="c"># Load the VERBOSE setting and other rcS variables</span>
+<span class="c1"># Load the VERBOSE setting and other rcS variables</span>
 . /lib/init/vars.sh
 
-<span class="c"># Define LSB log_* functions.</span>
-<span class="c"># Depend on lsb-base (&gt;= 3.2-14) to ensure that this file is present</span>
-<span class="c"># and status_of_proc is working.</span>
+<span class="c1"># Define LSB log_* functions.</span>
+<span class="c1"># Depend on lsb-base (&gt;= 3.2-14) to ensure that this file is present</span>
+<span class="c1"># and status_of_proc is working.</span>
 . /lib/lsb/init-functions
 
-<span class="c">#</span>
-<span class="c"># Function that starts the daemon/service</span>
-<span class="c">#</span>
+<span class="c1">#</span>
+<span class="c1"># Function that starts the daemon/service</span>
+<span class="c1">#</span>
 do_start<span class="o">()</span>
 <span class="o">{</span>
-    <span class="c"># Return</span>
-    <span class="c">#   0 if daemon has been started</span>
-    <span class="c">#   1 if daemon was already running</span>
-    <span class="c">#   2 if daemon could not be started</span>
+    <span class="c1"># Return</span>
+    <span class="c1">#   0 if daemon has been started</span>
+    <span class="c1">#   1 if daemon was already running</span>
+    <span class="c1">#   2 if daemon could not be started</span>
     start-stop-daemon --start --quiet --pidfile <span class="nv">$PIDFILE</span> --exec <span class="nv">$DAEMON</span> --test &gt; /dev/null <span class="se">\</span>
         <span class="o">||</span> <span class="k">return</span> 1
     start-stop-daemon --start --background --make-pidfile --quiet --pidfile <span class="nv">$PIDFILE</span> --exec <span class="nv">$DAEMON</span> -- <span class="se">\</span>
         <span class="nv">$DAEMON_ARGS</span> <span class="se">\</span>
         <span class="o">||</span> <span class="k">return</span> 2
-    <span class="c"># Add code here, if necessary, that waits for the process to be ready</span>
-    <span class="c"># to handle requests from services started subsequently which depend</span>
-    <span class="c"># on this one.  As a last resort, sleep for some time.</span>
+    <span class="c1"># Add code here, if necessary, that waits for the process to be ready</span>
+    <span class="c1"># to handle requests from services started subsequently which depend</span>
+    <span class="c1"># on this one.  As a last resort, sleep for some time.</span>
 <span class="o">}</span>
 
-<span class="c">#</span>
-<span class="c"># Function that stops the daemon/service</span>
-<span class="c">#</span>
+<span class="c1">#</span>
+<span class="c1"># Function that stops the daemon/service</span>
+<span class="c1">#</span>
 do_stop<span class="o">()</span>
 <span class="o">{</span>
-    <span class="c"># Return</span>
-    <span class="c">#   0 if daemon has been stopped</span>
-    <span class="c">#   1 if daemon was already stopped</span>
-    <span class="c">#   2 if daemon could not be stopped</span>
-    <span class="c">#   other if a failure occurred</span>
+    <span class="c1"># Return</span>
+    <span class="c1">#   0 if daemon has been stopped</span>
+    <span class="c1">#   1 if daemon was already stopped</span>
+    <span class="c1">#   2 if daemon could not be stopped</span>
+    <span class="c1">#   other if a failure occurred</span>
     start-stop-daemon --stop --quiet --retry<span class="o">=</span>TERM/30/KILL/5 --pidfile <span class="nv">$PIDFILE</span> --name <span class="nv">$NAME</span>
     <span class="nv">RETVAL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$?</span><span class="s2">&quot;</span>
     <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$RETVAL</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="m">2</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">return</span> 2
-    <span class="c"># Wait for children to finish too if this is a daemon that forks</span>
-    <span class="c"># and if the daemon is only ever run from this initscript.</span>
-    <span class="c"># If the above conditions are not satisfied then add some other code</span>
-    <span class="c"># that waits for the process to drop all resources that could be</span>
-    <span class="c"># needed by services started subsequently.  A last resort is to</span>
-    <span class="c"># sleep for some time.</span>
+    <span class="c1"># Wait for children to finish too if this is a daemon that forks</span>
+    <span class="c1"># and if the daemon is only ever run from this initscript.</span>
+    <span class="c1"># If the above conditions are not satisfied then add some other code</span>
+    <span class="c1"># that waits for the process to drop all resources that could be</span>
+    <span class="c1"># needed by services started subsequently.  A last resort is to</span>
+    <span class="c1"># sleep for some time.</span>
     start-stop-daemon --stop --quiet --oknodo --retry<span class="o">=</span>0/30/KILL/5 --exec <span class="nv">$DAEMON</span>
     <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$?</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="m">2</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="k">return</span> 2
-    <span class="c"># Many daemons don&#39;t delete their pidfiles when they exit.</span>
+    <span class="c1"># Many daemons don&#39;t delete their pidfiles when they exit.</span>
     rm -f <span class="nv">$PIDFILE</span>
     <span class="k">return</span> <span class="s2">&quot;</span><span class="nv">$RETVAL</span><span class="s2">&quot;</span>
 <span class="o">}</span>
 
-<span class="c">#</span>
-<span class="c"># Function that sends a SIGHUP to the daemon/service</span>
-<span class="c">#</span>
+<span class="c1">#</span>
+<span class="c1"># Function that sends a SIGHUP to the daemon/service</span>
+<span class="c1">#</span>
 do_reload<span class="o">()</span> <span class="o">{</span>
-    <span class="c">#</span>
-    <span class="c"># If the daemon can reload its configuration without</span>
-    <span class="c"># restarting (for example, when it is sent a SIGHUP),</span>
-    <span class="c"># then implement that here.</span>
-    <span class="c">#</span>
+    <span class="c1">#</span>
+    <span class="c1"># If the daemon can reload its configuration without</span>
+    <span class="c1"># restarting (for example, when it is sent a SIGHUP),</span>
+    <span class="c1"># then implement that here.</span>
+    <span class="c1">#</span>
     start-stop-daemon --stop --signal <span class="m">1</span> --quiet --pidfile <span class="nv">$PIDFILE</span> --name <span class="nv">$NAME</span>
     <span class="k">return</span> 0
 <span class="o">}</span>
@@ -734,22 +734,22 @@ do_reload<span class="o">()</span> <span class="o">{</span>
     <span class="k">esac</span>
     <span class="p">;;</span>
   status<span class="o">)</span>
-    status_of_proc <span class="s2">&quot;</span><span class="nv">$DAEMON</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$NAME</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit </span><span class="m">0</span> <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
+    status_of_proc <span class="s2">&quot;</span><span class="nv">$DAEMON</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$NAME</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">0</span> <span class="o">||</span> <span class="nb">exit</span> <span class="nv">$?</span>
     <span class="p">;;</span>
-  <span class="c">#reload|force-reload)</span>
-    <span class="c">#</span>
-    <span class="c"># If do_reload() is not implemented then leave this commented out</span>
-    <span class="c"># and leave &#39;force-reload&#39; as an alias for &#39;restart&#39;.</span>
-    <span class="c">#</span>
-    <span class="c">#log_daemon_msg &quot;Reloading $DESC&quot; &quot;$NAME&quot;</span>
-    <span class="c">#do_reload</span>
-    <span class="c">#log_end_msg $?</span>
-    <span class="c">#;;</span>
+  <span class="c1">#reload|force-reload)</span>
+    <span class="c1">#</span>
+    <span class="c1"># If do_reload() is not implemented then leave this commented out</span>
+    <span class="c1"># and leave &#39;force-reload&#39; as an alias for &#39;restart&#39;.</span>
+    <span class="c1">#</span>
+    <span class="c1">#log_daemon_msg &quot;Reloading $DESC&quot; &quot;$NAME&quot;</span>
+    <span class="c1">#do_reload</span>
+    <span class="c1">#log_end_msg $?</span>
+    <span class="c1">#;;</span>
   restart<span class="p">|</span>force-reload<span class="o">)</span>
-    <span class="c">#</span>
-    <span class="c"># If the &quot;reload&quot; option is implemented then remove the</span>
-    <span class="c"># &#39;force-reload&#39; alias</span>
-    <span class="c">#</span>
+    <span class="c1">#</span>
+    <span class="c1"># If the &quot;reload&quot; option is implemented then remove the</span>
+    <span class="c1"># &#39;force-reload&#39; alias</span>
+    <span class="c1">#</span>
     log_daemon_msg <span class="s2">&quot;Restarting </span><span class="nv">$DESC</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$NAME</span><span class="s2">&quot;</span>
     do_stop
     <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$?</span><span class="s2">&quot;</span> in
@@ -757,20 +757,20 @@ do_reload<span class="o">()</span> <span class="o">{</span>
         do_start
         <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$?</span><span class="s2">&quot;</span> in
             0<span class="o">)</span> log_end_msg <span class="m">0</span> <span class="p">;;</span>
-            1<span class="o">)</span> log_end_msg <span class="m">1</span> <span class="p">;;</span> <span class="c"># Old process is still running</span>
-            *<span class="o">)</span> log_end_msg <span class="m">1</span> <span class="p">;;</span> <span class="c"># Failed to start</span>
+            1<span class="o">)</span> log_end_msg <span class="m">1</span> <span class="p">;;</span> <span class="c1"># Old process is still running</span>
+            *<span class="o">)</span> log_end_msg <span class="m">1</span> <span class="p">;;</span> <span class="c1"># Failed to start</span>
         <span class="k">esac</span>
         <span class="p">;;</span>
       *<span class="o">)</span>
-        <span class="c"># Failed to stop</span>
+        <span class="c1"># Failed to stop</span>
         log_end_msg 1
         <span class="p">;;</span>
     <span class="k">esac</span>
     <span class="p">;;</span>
   *<span class="o">)</span>
-    <span class="c">#echo &quot;Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}&quot; &gt;&amp;2</span>
+    <span class="c1">#echo &quot;Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}&quot; &gt;&amp;2</span>
     <span class="nb">echo</span> <span class="s2">&quot;Usage: </span><span class="nv">$SCRIPTNAME</span><span class="s2"> {start|stop|status|restart|force-reload}&quot;</span> &gt;<span class="p">&amp;</span>2
-    <span class="nb">exit </span>3
+    <span class="nb">exit</span> 3
     <span class="p">;;</span>
 <span class="k">esac</span>
 
@@ -790,17 +790,17 @@ do_reload<span class="o">()</span> <span class="o">{</span>
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nv">$ </span>sudo chmod +x /etc/init.d/jupyterhub
-<span class="c"># Create a default config to /etc/jupyterhub/jupyterhub_config.py</span>
-<span class="nv">$ </span>sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
-<span class="c"># Start jupyterhub</span>
-<span class="nv">$ </span>sudo service jupyterhub start
-<span class="c"># Stop jupyterhub</span>
-<span class="nv">$ </span>sudo service jupyterhub stop
-<span class="c"># Start jupyterhub on boot</span>
-<span class="nv">$ </span>sudo update-rc.d jupyterhub defaults
-<span class="c"># Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html</span>
-<span class="nv">$ </span>sudo rcconf
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ sudo chmod +x /etc/init.d/jupyterhub
+<span class="c1"># Create a default config to /etc/jupyterhub/jupyterhub_config.py</span>
+$ sudo jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+<span class="c1"># Start jupyterhub</span>
+$ sudo service jupyterhub start
+<span class="c1"># Stop jupyterhub</span>
+$ sudo service jupyterhub stop
+<span class="c1"># Start jupyterhub on boot</span>
+$ sudo update-rc.d jupyterhub defaults
+<span class="c1"># Or use rcconf to manage services http://manpages.ubuntu.com/manpages/natty/man8/rcconf.8.html</span>
+$ sudo rcconf
 </pre></div>
 </td></tr></table>
 
@@ -850,28 +850,28 @@ do_reload<span class="o">()</span> <span class="o">{</span>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/git-shi-yong-dao-yin.html">
-                            Git 使用導引
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-san.html">
+                            計算機程式 (三)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-er.html">
-                            計算機程式 (二)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html">
+                            導入 Brython 與 Snap.svg 網際繪圖
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html">
-                            電腦輔助設計實習 (二)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/li-nian-xie-tong-chan-pin-she-ji-shi-xi-ke-cheng-nei-rong-zheng-li.html">
+                            歷年協同產品設計實習課程內容整理
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html">
-                            電腦操作流程錄影工具
+                        <a href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html">
+                            使用 flask-cors 延伸模組
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html">
-                            電腦輔助設計實習 (一)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html">
+                            自行車傳動 2D 鏈條繪圖
                         </a>
                     </li>
                 </ul>

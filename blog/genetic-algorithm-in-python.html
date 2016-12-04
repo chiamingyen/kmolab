@@ -177,7 +177,7 @@ init_mathjax();
         <meta property="og:title" content="Genetic Algorithm in Python"/>
         <meta property="og:url" content="http://chiamingyen.github.io/kmolab/blog/genetic-algorithm-in-python.html"/>
         <meta property="og:description" content="利用 Python 實現基因演算"/>
-        <meta property="article:published_time" content="2016-01-26" />
+        <meta property="article:published_time" content="2016-10-16" />
             <meta property="article:section" content="Python" />
             <meta property="article:tag" content="GA" />
             <meta property="article:tag" content="基因演算" />
@@ -315,7 +315,7 @@ Kmolab (虎尾科大MDE)            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-01-26T20:22:47.674230+08:00"> 二 26 一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-10-16T21:49:00.414429+08:00"> Sun 16 October 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="http://chiamingyen.github.io/kmolab/blog/author/kmol.html"><i class="fa fa-user"></i> kmol</a>
@@ -357,9 +357,9 @@ Kmolab (虎尾科大MDE)            </a>
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <span class="k">def</span> <span class="nf">individual</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
-    <span class="s">&#39;Create a member of the population.&#39;</span>
+    <span class="s1">&#39;Create a member of the population.&#39;</span>
     <span class="k">return</span> <span class="p">[</span> <span class="n">randint</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">]</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">individual(5,0,100)</span>
@@ -385,7 +385,7 @@ The collection of all individuals is referred to as our population.</p>
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span class="k">def</span> <span class="nf">population</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">population</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a number of individuals (i.e. a population).</span>
 
@@ -419,7 +419,7 @@ Next we need a way to judge the how effective each solution is; to judge the fit
 12
 13
 14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 <span class="k">def</span> <span class="nf">fitness</span><span class="p">(</span><span class="n">individual</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Determine the fitness of an individual. Lower is better.</span>
@@ -449,8 +449,8 @@ Personally, I'd prefer to have a high fitness score correlate to a fit individua
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span class="k">def</span> <span class="nf">grade</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-    <span class="s">&#39;Find average fitness for a population.&#39;</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">grade</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+    <span class="s1">&#39;Find average fitness for a population.&#39;</span>
     <span class="n">summed</span> <span class="o">=</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="p">(</span><span class="n">fitness</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pop</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">summed</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span>
 <span class="sd">&#39;&#39;&#39;</span>
@@ -479,7 +479,7 @@ This is the secret sauce of genetic algorithms, where secret means fairly obviou
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span class="n">father</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">father</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="n">mother</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">]</span>
 <span class="n">child</span> <span class="o">=</span> <span class="n">father</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">mother</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
@@ -504,7 +504,7 @@ This is the secret sauce of genetic algorithms, where secret means fairly obviou
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span><span class="p">,</span> <span class="n">randint</span>
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span><span class="p">,</span> <span class="n">randint</span>
 <span class="n">chance_to_mutate</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">population</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">chance_to_mutate</span> <span class="o">&gt;</span> <span class="n">random</span><span class="p">():</span>
@@ -553,29 +553,29 @@ This--just like taking individuals who are not performing particularly well--is 
 35
 36
 37
-38</pre></div></td><td class="code"><div class="codehilite"><pre><span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">retain</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_select</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">mutate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+38</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">retain</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_select</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">mutate</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
     <span class="n">graded</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">fitness</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">target</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pop</span><span class="p">]</span>
     <span class="n">graded</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">graded</span><span class="p">)]</span>
     <span class="n">retain_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">graded</span><span class="p">)</span><span class="o">*</span><span class="n">retain</span><span class="p">)</span>
     <span class="n">parents</span> <span class="o">=</span> <span class="n">graded</span><span class="p">[:</span><span class="n">retain_length</span><span class="p">]</span>
 
-    <span class="c"># randomly add other individuals to promote genetic diversity</span>
+    <span class="c1"># randomly add other individuals to promote genetic diversity</span>
     <span class="k">for</span> <span class="n">individual</span> <span class="ow">in</span> <span class="n">graded</span><span class="p">[</span><span class="n">retain_length</span><span class="p">:]:</span>
         <span class="k">if</span> <span class="n">random_select</span> <span class="o">&gt;</span> <span class="n">random</span><span class="p">():</span>
             <span class="n">parents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">individual</span><span class="p">)</span>
 
-    <span class="c"># mutate some individuals</span>
+    <span class="c1"># mutate some individuals</span>
     <span class="k">for</span> <span class="n">individual</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">mutate</span> <span class="o">&gt;</span> <span class="n">random</span><span class="p">():</span>
             <span class="n">pos_to_mutate</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">individual</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c"># this mutation is not ideal, because it</span>
-            <span class="c"># restricts the range of possible values,</span>
-            <span class="c"># but the function is unaware of the min/max</span>
-            <span class="c"># values used to create the individuals,</span>
+            <span class="c1"># this mutation is not ideal, because it</span>
+            <span class="c1"># restricts the range of possible values,</span>
+            <span class="c1"># but the function is unaware of the min/max</span>
+            <span class="c1"># values used to create the individuals,</span>
             <span class="n">individual</span><span class="p">[</span><span class="n">pos_to_mutate</span><span class="p">]</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span>
                 <span class="nb">min</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">individual</span><span class="p">))</span>
 
-    <span class="c"># crossover parents to create children</span>
+    <span class="c1"># crossover parents to create children</span>
     <span class="n">parents_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">parents</span><span class="p">)</span>
     <span class="n">desired_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span> <span class="o">-</span> <span class="n">parents_length</span>
     <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
@@ -609,7 +609,7 @@ Now we've written all the pieces of a genetic algorithm, and we just have to try
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span class="n">target</span> <span class="o">=</span> <span class="mi">371</span>
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">target</span> <span class="o">=</span> <span class="mi">371</span>
 <span class="n">p_count</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">i_length</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">i_min</span> <span class="o">=</span> <span class="mi">0</span>
@@ -713,7 +713,7 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
 83
 84
 85
-86</pre></div></td><td class="code"><div class="codehilite"><pre><span class="sd">&quot;&quot;&quot;</span>
+86</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd"># Example usage</span>
 <span class="sd">from genetic import *</span>
 <span class="sd">target = 371</span>
@@ -734,7 +734,7 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
 <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">add</span>
 
 <span class="k">def</span> <span class="nf">individual</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
-    <span class="s">&#39;Create a member of the population.&#39;</span>
+    <span class="s1">&#39;Create a member of the population.&#39;</span>
     <span class="k">return</span> <span class="p">[</span> <span class="n">randint</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">population</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
@@ -760,7 +760,7 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
     <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">target</span><span class="o">-</span><span class="nb">sum</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">grade</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-    <span class="s">&#39;Find average fitness for a population.&#39;</span>
+    <span class="s1">&#39;Find average fitness for a population.&#39;</span>
     <span class="n">summed</span> <span class="o">=</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="p">(</span><span class="n">fitness</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pop</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">summed</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">)</span>
 
@@ -769,22 +769,22 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
     <span class="n">graded</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">graded</span><span class="p">)]</span>
     <span class="n">retain_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">graded</span><span class="p">)</span><span class="o">*</span><span class="n">retain</span><span class="p">)</span>
     <span class="n">parents</span> <span class="o">=</span> <span class="n">graded</span><span class="p">[:</span><span class="n">retain_length</span><span class="p">]</span>
-    <span class="c"># randomly add other individuals to</span>
-    <span class="c"># promote genetic diversity</span>
+    <span class="c1"># randomly add other individuals to</span>
+    <span class="c1"># promote genetic diversity</span>
     <span class="k">for</span> <span class="n">individual</span> <span class="ow">in</span> <span class="n">graded</span><span class="p">[</span><span class="n">retain_length</span><span class="p">:]:</span>
         <span class="k">if</span> <span class="n">random_select</span> <span class="o">&gt;</span> <span class="n">random</span><span class="p">():</span>
             <span class="n">parents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">individual</span><span class="p">)</span>
-    <span class="c"># mutate some individuals</span>
+    <span class="c1"># mutate some individuals</span>
     <span class="k">for</span> <span class="n">individual</span> <span class="ow">in</span> <span class="n">parents</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">mutate</span> <span class="o">&gt;</span> <span class="n">random</span><span class="p">():</span>
             <span class="n">pos_to_mutate</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">individual</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="c"># this mutation is not ideal, because it</span>
-            <span class="c"># restricts the range of possible values,</span>
-            <span class="c"># but the function is unaware of the min/max</span>
-            <span class="c"># values used to create the individuals,</span>
+            <span class="c1"># this mutation is not ideal, because it</span>
+            <span class="c1"># restricts the range of possible values,</span>
+            <span class="c1"># but the function is unaware of the min/max</span>
+            <span class="c1"># values used to create the individuals,</span>
             <span class="n">individual</span><span class="p">[</span><span class="n">pos_to_mutate</span><span class="p">]</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span>
                 <span class="nb">min</span><span class="p">(</span><span class="n">individual</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">individual</span><span class="p">))</span>
-    <span class="c"># crossover parents to create children</span>
+    <span class="c1"># crossover parents to create children</span>
     <span class="n">parents_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">parents</span><span class="p">)</span>
     <span class="n">desired_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span> <span class="o">-</span> <span class="n">parents_length</span>
     <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1136,67 +1136,67 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
 322
 323
 324
-325</pre></div></td><td class="code"><div class="codehilite"><pre><span class="c">#encoding=utf8</span>
-<span class="c"># genetic.py</span>
-<span class="c">#</span>
+325</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#encoding=utf8</span>
+<span class="c1"># genetic.py</span>
+<span class="c1">#</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">operator</span>
-<span class="c"># for Intersect</span>
+<span class="c1"># for Intersect</span>
 <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">MAXIMIZE</span><span class="p">,</span> <span class="n">MINIMIZE</span> <span class="o">=</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">22</span>
 <span class="k">class</span> <span class="nc">Individual</span><span class="p">:</span>
-    <span class="c"># 染色體先設為 None</span>
+    <span class="c1"># 染色體先設為 None</span>
     <span class="n">chromosome</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="c"># 得分也先設為 None</span>
+    <span class="c1"># 得分也先設為 None</span>
     <span class="n">score</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="c"># Here the size of var depends on var_number print</span>
-    <span class="c"># var 變數的元素個數取決於 var_number 的個數 (即變數個數)</span>
+    <span class="c1"># Here the size of var depends on var_number print</span>
+    <span class="c1"># var 變數的元素個數取決於 var_number 的個數 (即變數個數)</span>
     <span class="n">var</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c"># 表示適應值變數個數有兩個</span>
+    <span class="c1"># 表示適應值變數個數有兩個</span>
     <span class="n">var_number</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="c">#先將 var 數列中元素都設為 0</span>
+    <span class="c1">#先將 var 數列中元素都設為 0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">var_number</span><span class="p">):</span>
         <span class="n">var</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="c"># 等位基因表示各基因可選的內容, 這裡表示不是 0 就是 1</span>
+    <span class="c1"># 等位基因表示各基因可選的內容, 這裡表示不是 0 就是 1</span>
     <span class="n">alleles</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-    <span class="c"># 2**10 = 32*32 = 1024, 表示若用十個 binary 位數來表示整數, 可以表示從 0 到 1023 的數值大小</span>
-    <span class="c"># 若也用另外 十個 binary 位數來表示小數值, 則也是 0 到 1023 的數值表示能力, </span>
-    <span class="c"># 而再加一個表示正負的代表 binary 位數, 每一個變數需要 21 個 binary numbers </span>
-    <span class="c"># 以下為參數可負數時的編碼考量</span>
-    <span class="c">#前10為小數,後10為整數,第21則為正負號</span>
-    <span class="c">#0~9表示小數,10~19表示整數,而指標第20則表示第一數的正號或負號,若為0則表示正,若為1表示負號.</span>
-    <span class="c">#21~30表示第二數的小數部分,31~40則表示第二數的整數部分,第41指標則表示第二數的正號或負號</span>
-    <span class="c">#42~51表示第三數的小數部分,52~61則表示第二數的整數部分,第62指標則表示第三數的正號或負號</span>
-    <span class="c"># -1023 ~ 1023</span>
-    <span class="c">#length = 21*var_number,若接受負數參數,則必須同步修改 20-&gt;21</span>
-    <span class="c"># 因為這裡只接受正的變數值, 所以每一個變數需要 20 個 binary 位數</span>
+    <span class="c1"># 2**10 = 32*32 = 1024, 表示若用十個 binary 位數來表示整數, 可以表示從 0 到 1023 的數值大小</span>
+    <span class="c1"># 若也用另外 十個 binary 位數來表示小數值, 則也是 0 到 1023 的數值表示能力, </span>
+    <span class="c1"># 而再加一個表示正負的代表 binary 位數, 每一個變數需要 21 個 binary numbers </span>
+    <span class="c1"># 以下為參數可負數時的編碼考量</span>
+    <span class="c1">#前10為小數,後10為整數,第21則為正負號</span>
+    <span class="c1">#0~9表示小數,10~19表示整數,而指標第20則表示第一數的正號或負號,若為0則表示正,若為1表示負號.</span>
+    <span class="c1">#21~30表示第二數的小數部分,31~40則表示第二數的整數部分,第41指標則表示第二數的正號或負號</span>
+    <span class="c1">#42~51表示第三數的小數部分,52~61則表示第二數的整數部分,第62指標則表示第三數的正號或負號</span>
+    <span class="c1"># -1023 ~ 1023</span>
+    <span class="c1">#length = 21*var_number,若接受負數參數,則必須同步修改 20-&gt;21</span>
+    <span class="c1"># 因為這裡只接受正的變數值, 所以每一個變數需要 20 個 binary 位數</span>
     <span class="n">length</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">var_number</span>
-    <span class="n">seperator</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+    <span class="n">seperator</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">optimization</span> <span class="o">=</span> <span class="n">MINIMIZE</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chromosome</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span> <span class="o">=</span> <span class="n">chromosome</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_makechromosome</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># set during evaluation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c1"># set during evaluation</span>
 
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    bitwise operators (binary left shift): The left operands value is moved left by the number of bits specified by the right operand.</span>
 <span class="sd">    x &lt;&lt; y</span>
 <span class="sd">    Returns x with the bits shifted to the left by y places (and new bits on the right-hand-side are zeros). This is the same as multiplying x by 2**y.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="c"># 根據染色體各位元的值轉為 10 進位值</span>
+    <span class="c1"># 根據染色體各位元的值轉為 10 進位值</span>
     <span class="k">def</span> <span class="nf">_getvar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chromosome</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="c"># x 起始值設為 0</span>
+        <span class="c1"># x 起始值設為 0</span>
         <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_number</span><span class="p">):</span>
-            <span class="c"># 先根據前 20 個位元值, 透過 binary left shift 轉為 10 進位之後, 再轉為對應小數</span>
+            <span class="c1"># 先根據前 20 個位元值, 透過 binary left shift 轉為 10 進位之後, 再轉為對應小數</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="o">+</span><span class="mi">10</span><span class="p">):</span>
                 <span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="p">))</span>
-            <span class="c"># 因為前 20 個 binary 數, 負責 10 進位數的小數點後 3 個位數, 只要轉為 10 進位值之後, 若大於 999, 則僅取 999,</span>
-            <span class="c"># 再除以 1000, 可以得到 .999 表示 .999 為最大的小數表示數, 不要因為大於 1000 後若除以 1000 將進位到整數, 會與整數有交互影響</span>
+            <span class="c1"># 因為前 20 個 binary 數, 負責 10 進位數的小數點後 3 個位數, 只要轉為 10 進位值之後, 若大於 999, 則僅取 999,</span>
+            <span class="c1"># 再除以 1000, 可以得到 .999 表示 .999 為最大的小數表示數, 不要因為大於 1000 後若除以 1000 將進位到整數, 會與整數有交互影響</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">999</span><span class="p">):</span>
                 <span class="n">x</span> <span class="o">=</span> <span class="mi">999</span>
             <span class="n">x</span> <span class="o">/=</span> <span class="mf">1000.</span>
-            <span class="c"># 整數部份 0 ~ 1023 的表示範圍則沒有問題, 利用 bitwise 轉換後, 直接取整數值</span>
+            <span class="c1"># 整數部份 0 ~ 1023 的表示範圍則沒有問題, 利用 bitwise 轉換後, 直接取整數值</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="o">+</span><span class="mi">10</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="o">+</span><span class="mi">20</span><span class="p">):</span>
                 <span class="n">x</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="mi">20</span><span class="o">+</span><span class="mi">10</span><span class="p">))</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
@@ -1222,75 +1222,75 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
 <span class="sd">            x = 0</span>
 <span class="sd">        return self.var</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="c"># 建立染色體</span>
+    <span class="c1"># 建立染色體</span>
     <span class="k">def</span> <span class="nf">_makechromosome</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s">&quot;makes a chromosome from randomly selected alleles.&quot;</span>
+        <span class="s2">&quot;makes a chromosome from randomly selected alleles.&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alleles</span><span class="p">)</span> <span class="k">for</span> <span class="n">gene</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)]</span>
 
-    <span class="c"># 計算適應值</span>
+    <span class="c1"># 計算適應值</span>
     <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optimum</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="s">&quot;this method MUST be overridden to evaluate individual fitness score.&quot;</span>
+        <span class="s2">&quot;this method MUST be overridden to evaluate individual fitness score.&quot;</span>
         <span class="k">pass</span>
 
-    <span class="c"># 交配方法</span>
+    <span class="c1"># 交配方法</span>
     <span class="k">def</span> <span class="nf">crossover</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="s">&quot;override this method to use your preferred crossover method.&quot;</span>
+        <span class="s2">&quot;override this method to use your preferred crossover method.&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_twopoint</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
 
-    <span class="c"># 突變方法</span>
+    <span class="c1"># 突變方法</span>
     <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
-        <span class="s">&quot;override this method to use your preferred mutation method.&quot;</span>
+        <span class="s2">&quot;override this method to use your preferred mutation method.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pick</span><span class="p">(</span><span class="n">gene</span><span class="p">)</span>
 
-    <span class="c"># sample mutation method</span>
+    <span class="c1"># sample mutation method</span>
     <span class="k">def</span> <span class="nf">_pick</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
-        <span class="s">&quot;chooses a random allele to replace this gene&#39;s allele.&quot;</span>
+        <span class="s2">&quot;chooses a random allele to replace this gene&#39;s allele.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alleles</span><span class="p">)</span>
 
-    <span class="c"># sample crossover method</span>
+    <span class="c1"># sample crossover method</span>
     <span class="k">def</span> <span class="nf">_twopoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="s">&quot;creates offspring via two-point crossover between mates.&quot;</span>
+        <span class="s2">&quot;creates offspring via two-point crossover between mates.&quot;</span>
         <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pickpivots</span><span class="p">()</span>
 
         <span class="k">def</span> <span class="nf">mate</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">):</span>
-            <span class="n">chromosome</span> <span class="o">=</span> <span class="n">p0</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[:]</span> <span class="c"># 交配時,以p0的基因為基礎(複製整個 p0 的染色體內容</span>
-            <span class="n">chromosome</span><span class="p">[</span><span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">]</span> <span class="c"># 接續上一個 p0 的染色體內容,將索引 left 至 right 的內容,替換成 p1 的基因</span>
+            <span class="n">chromosome</span> <span class="o">=</span> <span class="n">p0</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[:]</span> <span class="c1"># 交配時,以p0的基因為基礎(複製整個 p0 的染色體內容</span>
+            <span class="n">chromosome</span><span class="p">[</span><span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">]</span> <span class="o">=</span> <span class="n">p1</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">left</span><span class="p">:</span><span class="n">right</span><span class="p">]</span> <span class="c1"># 接續上一個 p0 的染色體內容,將索引 left 至 right 的內容,替換成 p1 的基因</span>
             <span class="n">child</span> <span class="o">=</span> <span class="n">p0</span><span class="o">.</span><span class="n">__class__</span><span class="p">(</span><span class="n">chromosome</span><span class="p">)</span>
             <span class="n">child</span><span class="o">.</span><span class="n">_repair</span><span class="p">(</span><span class="n">p0</span><span class="p">,</span> <span class="n">p1</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">child</span>
         <span class="k">return</span> <span class="n">mate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">),</span> <span class="n">mate</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
 
-    <span class="c"># some crossover helpers ...</span>
+    <span class="c1"># some crossover helpers ...</span>
     <span class="k">def</span> <span class="nf">_repair</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent1</span><span class="p">,</span> <span class="n">parent2</span><span class="p">):</span>
-        <span class="s">&quot;override this method, if necessary, to fix duplicated genes.&quot;</span>
+        <span class="s2">&quot;override this method, if necessary, to fix duplicated genes.&quot;</span>
         <span class="k">pass</span>
 
     <span class="k">def</span> <span class="nf">_pickpivots</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">left</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">right</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span>
-    <span class="c">#</span>
-    <span class="c"># other methods</span>
-    <span class="c">#</span>
+    <span class="c1">#</span>
+    <span class="c1"># other methods</span>
+    <span class="c1">#</span>
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s">&quot;returns string representation of self&quot;</span>
+        <span class="s2">&quot;returns string representation of self&quot;</span>
         <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        return &#39;&lt;%s chromosome=&quot;%s&quot; score=%s var=%s&gt;&#39; % \</span>
 <span class="sd">               (self.__class__.__name__,</span>
 <span class="sd">                self.seperator.join(map(str,self.chromosome)), self.score,self._getvar(self.chromosome))</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="k">return</span> <span class="s">&#39;&lt;</span><span class="si">%s</span><span class="s"> score=</span><span class="si">%s</span><span class="s"> var=</span><span class="si">%s</span><span class="s">&gt;&#39;</span> <span class="o">%</span> \
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">%s</span><span class="s1"> score=</span><span class="si">%s</span><span class="s1"> var=</span><span class="si">%s</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> \
                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">score</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">_getvar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">))</span>
-    <span class="c"># since the __cmp__ special function is gone  use the __lt__ in stead</span>
-    <span class="c"># use the expression (a &gt; b) - (a &lt; b) as the equivalent for cmp(a, b)</span>
-    <span class="c">#def __cmp__(self, other):</span>
-    <span class="c"># these are for python 3</span>
+    <span class="c1"># since the __cmp__ special function is gone  use the __lt__ in stead</span>
+    <span class="c1"># use the expression (a &gt; b) - (a &lt; b) as the equivalent for cmp(a, b)</span>
+    <span class="c1">#def __cmp__(self, other):</span>
+    <span class="c1"># these are for python 3</span>
     <span class="k">def</span> <span class="nf">__cmp__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimization</span> <span class="o">==</span> <span class="n">MINIMIZE</span><span class="p">:</span>
-            <span class="c">#return cmp(self.score, other.score)</span>
+            <span class="c1">#return cmp(self.score, other.score)</span>
             <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span> <span class="c"># MAXIMIZE</span>
-            <span class="c">#return cmp(other.score, self.score)</span>
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># MAXIMIZE</span>
+            <span class="c1">#return cmp(other.score, self.score)</span>
             <span class="k">return</span> <span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">score</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">score</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
@@ -1335,13 +1335,13 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
                <span class="bp">self</span><span class="o">.</span><span class="n">best</span><span class="o">.</span><span class="n">score</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimum</span>
 
     <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c"># this sort is not working with python 3.0, modification is needed</span>
+        <span class="c1"># this sort is not working with python 3.0, modification is needed</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">population</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_crossover</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">generation</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">generation</span><span class="p">)</span>
-        <span class="c"># 設定為只附加所選定範圍的值,這裡只取大於或等於 0 的 score 值</span>
+        <span class="c1"># 設定為只附加所選定範圍的值,這裡只取大於或等於 0 的 score 值</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">best</span><span class="o">.</span><span class="n">score</span> <span class="o">&lt;=</span><span class="mi">5</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">best</span><span class="o">.</span><span class="n">score</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -1363,16 +1363,16 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
         <span class="bp">self</span><span class="o">.</span><span class="n">population</span> <span class="o">=</span> <span class="n">next_population</span><span class="p">[:</span><span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">_select</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s">&quot;override this to use your preferred selection method&quot;</span>
+        <span class="s2">&quot;override this to use your preferred selection method&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tournament</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">_mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">individual</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">gene</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">individual</span><span class="o">.</span><span class="n">length</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">mutation_rate</span><span class="p">:</span>
                 <span class="n">individual</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">gene</span><span class="p">)</span>
-    <span class="c">#</span>
-    <span class="c"># sample selection method</span>
-    <span class="c">#</span>
+    <span class="c1">#</span>
+    <span class="c1"># sample selection method</span>
+    <span class="c1">#</span>
     <span class="k">def</span> <span class="nf">_tournament</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">choosebest</span><span class="o">=</span><span class="mf">0.90</span><span class="p">):</span>
         <span class="n">competitors</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">population</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
         <span class="n">competitors</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
@@ -1382,7 +1382,7 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
             <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">competitors</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
 
     <span class="k">def</span> <span class="nf">best</span><span class="p">():</span>
-        <span class="n">doc</span> <span class="o">=</span> <span class="s">&quot;individual with best fitness score in population.&quot;</span>
+        <span class="n">doc</span> <span class="o">=</span> <span class="s2">&quot;individual with best fitness score in population.&quot;</span>
         <span class="k">def</span> <span class="nf">fget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">population</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="nb">locals</span><span class="p">()</span>
@@ -1394,23 +1394,23 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
 <span class="sd">        print (&quot;generation: &quot;, self.generation)</span>
 <span class="sd">        print (&quot;best:       &quot;, self.best)</span>
 <span class="sd">        &#39;&#39;&#39;</span>
-        <span class="n">g</span><span class="o">.</span><span class="n">es</span> <span class="p">(</span><span class="s">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
-        <span class="n">g</span><span class="o">.</span><span class="n">es</span> <span class="p">(</span><span class="s">&quot;generation: &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">generation</span><span class="p">)</span>
-        <span class="n">g</span><span class="o">.</span><span class="n">es</span> <span class="p">(</span><span class="s">&quot;best:       &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">best</span><span class="p">)</span>
+        <span class="n">g</span><span class="o">.</span><span class="n">es</span> <span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
+        <span class="n">g</span><span class="o">.</span><span class="n">es</span> <span class="p">(</span><span class="s2">&quot;generation: &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">generation</span><span class="p">)</span>
+        <span class="n">g</span><span class="o">.</span><span class="n">es</span> <span class="p">(</span><span class="s2">&quot;best:       &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">best</span><span class="p">)</span>
 
-<span class="c"># 以上為 genetic.py 目前將兩者結合在一起</span>
-<span class="c">#encoding=utf8</span>
-<span class="c"># volume.py - useage example</span>
-<span class="c">#</span>
-<span class="c"># the fittest individual will have a chromosome consisting of 40 &#39;1&#39;s</span>
-<span class="c">#</span>
-<span class="c">#</span>
-<span class="c">#import genetic</span>
+<span class="c1"># 以上為 genetic.py 目前將兩者結合在一起</span>
+<span class="c1">#encoding=utf8</span>
+<span class="c1"># volume.py - useage example</span>
+<span class="c1">#</span>
+<span class="c1"># the fittest individual will have a chromosome consisting of 40 &#39;1&#39;s</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#import genetic</span>
 <span class="k">class</span> <span class="nc">Volume</span><span class="p">(</span><span class="n">Individual</span><span class="p">):</span>
     <span class="n">optimization</span> <span class="o">=</span> <span class="n">MAXIMIZE</span>
     <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optimum</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="n">SURFACE</span> <span class="o">=</span> <span class="mi">80</span>
-        <span class="c"># self.score is the fitness value</span>
+        <span class="c1"># self.score is the fitness value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_getvar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">)</span>
 
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1421,12 +1421,12 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
         <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">fitness_value</span>
 
     <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="c"># bit flip</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="c1"># bit flip</span>
 
 <span class="k">class</span> <span class="nc">Intersect</span><span class="p">(</span><span class="n">Individual</span><span class="p">):</span>
     <span class="n">optimization</span> <span class="o">=</span> <span class="n">MINIMIZE</span>
     <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optimum</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="c"># self.score is the fitness value</span>
+        <span class="c1"># self.score is the fitness value</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_getvar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">)</span>
 
         <span class="n">t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1436,15 +1436,15 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
         <span class="n">ytarget</span> <span class="o">=</span> <span class="mf">0.5</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">t</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">225</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">529</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span> <span class="o">-</span> <span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="mi">225</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">529</span><span class="p">)</span><span class="o">/</span><span class="mi">92</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
         <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">123</span><span class="o">/</span><span class="mi">92</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-        <span class="c"># 適應值</span>
+        <span class="c1"># 適應值</span>
         <span class="n">fitness_value</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">xtarget</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span><span class="o">+</span><span class="nb">pow</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">ytarget</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 
-        <span class="c"># 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰</span>
+        <span class="c1"># 指定 t 的範圍, 小於 1 大於 0, 否則給予處罰</span>
         <span class="k">if</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
             <span class="n">fitness_value</span> <span class="o">+=</span> <span class="mi">1000</span>
         <span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">fitness_value</span> <span class="o">+=</span> <span class="mi">1000</span>
-        <span class="c"># 指定 theta 的範圍, 小於 2pi 大於 0, 否則給予處罰</span>
+        <span class="c1"># 指定 theta 的範圍, 小於 2pi 大於 0, 否則給予處罰</span>
         <span class="k">if</span> <span class="n">theta</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">:</span>
             <span class="n">fitness_value</span> <span class="o">+=</span> <span class="mi">1000</span>
         <span class="k">if</span> <span class="n">theta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -1454,11 +1454,11 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
         <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">fitness_value</span>
 
     <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="c"># bit flip</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">chromosome</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="c1"># bit flip</span>
 
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="c">#env = Environment(Volume, size=500, maxgenerations=100)</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1">#env = Environment(Volume, size=500, maxgenerations=100)</span>
     <span class="n">env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span><span class="n">Intersect</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">maxgenerations</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">env</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
@@ -1511,28 +1511,28 @@ Running that code, you'll get to watch as generations' fitness gradually (but no
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/git-shi-yong-dao-yin.html">
-                            Git 使用導引
+                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-san.html">
+                            計算機程式 (三)
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/ji-suan-ji-cheng-shi-er.html">
-                            計算機程式 (二)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/dao-ru-brython-yu-snapsvg-wang-ji-hui-tu.html">
+                            導入 Brython 與 Snap.svg 網際繪圖
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-er.html">
-                            電腦輔助設計實習 (二)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/li-nian-xie-tong-chan-pin-she-ji-shi-xi-ke-cheng-nei-rong-zheng-li.html">
+                            歷年協同產品設計實習課程內容整理
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-cao-zuo-liu-cheng-lu-ying-gong-ju.html">
-                            電腦操作流程錄影工具
+                        <a href="http://chiamingyen.github.io/kmolab/blog/shi-yong-flask-cors-yan-shen-mo-zu.html">
+                            使用 flask-cors 延伸模組
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://chiamingyen.github.io/kmolab/blog/dian-nao-fu-zhu-she-ji-shi-xi-yi.html">
-                            電腦輔助設計實習 (一)
+                        <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html">
+                            自行車傳動 2D 鏈條繪圖
                         </a>
                     </li>
                 </ul>
