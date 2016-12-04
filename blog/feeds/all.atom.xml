@@ -155,38 +155,7 @@ for point in bat_points:
 ctx.stroke()
 ctx.closePath()
 &lt;/script&gt;
-&lt;/pre&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-user-wen-zhang-tao-gao.html" rel="alternate"></link><published>2016-10-16T21:49:00+08:00</published><updated>2016-10-16T21:49:00+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-10-16:kmolab/blog/kmolab-user-wen-zhang-tao-gao.html</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
-
-
-&lt;h1&gt;文章標題&lt;/h1&gt;
-&lt;p&gt;這裡開始文章內容&lt;/p&gt;
-&lt;p&gt;文章內放入超文件的連結:&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://chiamingyen.github.io/kmolab"&gt;http://chiamingyen.github.io/kmolab&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;文章子標題&lt;/h2&gt;
-&lt;p&gt;文章內放入圖片:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://copy.com/hKlyUMrfKX8DuWxZ" width="300"&gt;&lt;/img&gt;&lt;/p&gt;
-&lt;h1&gt;引入程式碼&lt;/h1&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Pythagoras Theorem&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-
-&lt;span class="n"&gt;side1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
-&lt;span class="n"&gt;side2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
-&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, h)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>Git 使用導引</title><link href="http://chiamingyen.github.io/kmolab/blog/git-shi-yong-dao-yin.html" rel="alternate"></link><published>2016-10-04T13:00:00+08:00</published><updated>2016-10-04T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-10-04:kmolab/blog/git-shi-yong-dao-yin.html</id><summary type="html">&lt;p&gt;Git 是一套分散式數位資料版本控制系統, 而學習 Git 最好的參考資料就是 &lt;a href="https://git-scm.com/book/zh-tw/v2"&gt; Pro Git&lt;/a&gt; (&lt;a href="https://git-scm.com/book/zh-tw/v1"&gt;第1版&lt;/a&gt;).&lt;/p&gt;
+&lt;/pre&gt;</summary><category term="2016 Fall"></category><category term="2016FallCP"></category></entry><entry><title>Git 使用導引</title><link href="http://chiamingyen.github.io/kmolab/blog/git-shi-yong-dao-yin.html" rel="alternate"></link><published>2016-10-04T13:00:00+08:00</published><updated>2016-10-04T13:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-10-04:kmolab/blog/git-shi-yong-dao-yin.html</id><summary type="html">&lt;p&gt;Git 是一套分散式數位資料版本控制系統, 而學習 Git 最好的參考資料就是 &lt;a href="https://git-scm.com/book/zh-tw/v2"&gt; Pro Git&lt;/a&gt; (&lt;a href="https://git-scm.com/book/zh-tw/v1"&gt;第1版&lt;/a&gt;).&lt;/p&gt;
 
 
 &lt;h2&gt;初次使用 Git&lt;/h2&gt;
@@ -13548,7 +13517,38 @@ exec uwsgi --uid yen --gid yen --emperor /home/yen/uwsgi_ini
 &lt;h3&gt;Openshift  網站&lt;/h3&gt;
 &lt;p&gt;隨身裝置啟動後的 home/.ssh/id_rsa 中的 OpenSSH 私鑰與 OpenShift 帳號上 settings 中的公鑰對應, 如此方具備在近端複製程式碼的權限.&lt;/p&gt;
 &lt;h3&gt;安裝 Beautifulsoup4&lt;/h3&gt;
-&lt;p&gt;由於 kmolab 靜態網誌中的 tipue_search plugin 需要 bs4, 因此必須透過 sudo apt-get install python3-bs4 安裝.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html" rel="alternate"></link><published>2016-01-01T12:00:00+08:00</published><updated>2016-01-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-01:kmolab/blog/mechanical-designer-and-ipv6.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+&lt;p&gt;由於 kmolab 靜態網誌中的 tipue_search plugin 需要 bs4, 因此必須透過 sudo apt-get install python3-bs4 安裝.&lt;/p&gt;</summary><category term="研究室"></category><category term="4032專題"></category></entry><entry><title>Kmolab user 文章套稿</title><link href="http://chiamingyen.github.io/kmolab/blog/kmolab-user-wen-zhang-tao-gao.html" rel="alternate"></link><published>2016-01-04T13:00:00+08:00</published><updated>2016-01-04T13:00:00+08:00</updated><author><name>user</name></author><id>tag:chiamingyen.github.io,2016-01-04:kmolab/blog/kmolab-user-wen-zhang-tao-gao.html</id><summary type="html">&lt;p&gt;這裡可以放入文章的摘要內容&lt;/p&gt;
+
+
+&lt;h1&gt;文章標題&lt;/h1&gt;
+&lt;p&gt;這裡開始文章內容&lt;/p&gt;
+&lt;p&gt;文章內放入超文件的連結:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://chiamingyen.github.io/kmolab"&gt;http://chiamingyen.github.io/kmolab&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;文章子標題&lt;/h2&gt;
+&lt;p&gt;文章內放入圖片:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://copy.com/hKlyUMrfKX8DuWxZ" width="300"&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;h1&gt;引入程式碼&lt;/h1&gt;
+&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;math&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Pythagoras Theorem&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;side1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="n"&gt;side2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;right&lt;/span&gt; &lt;span class="n"&gt;triangle&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;side1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, side1, &amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;side2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, side2, &amp;quot;&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hypotenuse&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, h)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="研究室"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html" rel="alternate"></link><published>2016-01-01T12:00:00+08:00</published><updated>2016-01-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-01:kmolab/blog/mechanical-designer-and-ipv6.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
 &lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
 &lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
 &lt;h2&gt;情境說明:&lt;/h2&gt;
