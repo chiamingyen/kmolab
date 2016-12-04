@@ -109,8 +109,8 @@
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160829165735.1" a="E"><vh>before 201608</vh>
-<v t="amd.20160601163840.1" a="E"><vh>201601-05</vh>
+<v t="amd.20160829165735.1"><vh>before 201608</vh>
+<v t="amd.20160601163840.1"><vh>201601-05</vh>
 <v t="amd.20160106093510.1" a="E"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
@@ -189,6 +189,7 @@
 <v t="amd.20160601163751.1"><vh>@edit yen_20160601.md</vh></v>
 </v>
 </v>
+<v t="yen.20161204154256.1"><vh>201609</vh>
 <v t="amd.20160829165805.1"><vh>@edit yen_20160829.md</vh></v>
 <v t="amd.20160920093855.1"><vh>@edit yen_20160920.md</vh></v>
 <v t="amd.20160922094800.1"><vh>@edit yen_20160922.md</vh></v>
@@ -197,6 +198,7 @@
 <v t="amd.20160925235023.1"><vh>@edit yen_20150925.md</vh></v>
 <v t="amd.20161004203758.1"><vh>@edit yen_20161004.md</vh></v>
 <v t="yen.20161204131007.1"><vh>@edit yen_20161204.md</vh></v>
+</v>
 </v>
 </v>
 <v t="amd.20160106094754.1"><vh>@path ./../content/pages</vh>
@@ -3162,5 +3164,6 @@ def domake():
 # 利用執行緒執行 https 伺服器
 make = threading.Thread(target=domake)
 make.start()</t>
+<t tx="yen.20161204154256.1"></t>
 </tnodes>
 </leo_file>
