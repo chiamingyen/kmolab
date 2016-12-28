@@ -13,7 +13,7 @@ from pelicanconf import *
 # 因為 publishconf.py 在 pelicanconf.py 之後, 因此若兩處有相同變數的設定, 將以較後讀入的 publishconf.py 中的設定為主.
 
 # 將所有靜態 html 檔案移到 blog 子目錄
-SITEURL = 'http://chiamingyen.github.io/kmolab/blog'
+SITEURL = 'https://chiamingyen.github.io/kmolab/blog'
 # 此設定用於將資料送到 gh-pages, 因此使用絕對 URL 設定
 RELATIVE_URLS = False
 # 為了要讓 local 與 gh-pages 上都能夠使用 Tipue search, 可能要採用不同的 theme

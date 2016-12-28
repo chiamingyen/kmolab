@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="http://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="http://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>http://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T13:00:00+08:00</updated><entry><title>近端 Jupyterhub 電腦主機設定</title><link href="http://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html" rel="alternate"></link><published>2016-01-17T13:00:00+08:00</published><updated>2016-01-17T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html</id><summary type="html">&lt;p&gt;利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="https://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="https://chiamingyen.github.io/kmolab/blog/feeds/ubuntu.atom.xml" rel="self"></link><id>https://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T13:00:00+08:00</updated><entry><title>近端 Jupyterhub 電腦主機設定</title><link href="https://chiamingyen.github.io/kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html" rel="alternate"></link><published>2016-01-17T13:00:00+08:00</published><updated>2016-01-17T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/jin-duan-jupyterhub-dian-nao-zhu-ji-she-ding.html</id><summary type="html">&lt;p&gt;利用4台 HP 小型電腦練習近端伺服主機的設定與操作, 這裡安裝設定 Jupyterhub.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;a href="http://101.mde.tw"&gt;http://101.mde.tw&lt;/a&gt; 就是其中的一台 &lt;a href="http://www8.hp.com/tw/zh/products/proliant-servers/product-detail.html?oid=7796450"&gt;HP 小型伺服主機&lt;/a&gt;.&lt;/p&gt;
@@ -474,7 +474,7 @@ $ sudo rcconf
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>About 17.101 server</title><link href="http://chiamingyen.github.io/kmolab/blog/about-17101-server.html" rel="alternate"></link><published>2016-01-06T08:00:00+08:00</published><updated>2016-01-06T08:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/about-17101-server.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</summary><category term="Python"></category><category term="Jupyter"></category></entry><entry><title>About 17.101 server</title><link href="https://chiamingyen.github.io/kmolab/blog/about-17101-server.html" rel="alternate"></link><published>2016-01-06T08:00:00+08:00</published><updated>2016-01-06T08:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/about-17101-server.html</id><summary type="html">&lt;p&gt;Ubuntu 伺服器 設定&lt;/p&gt;
 &lt;p&gt;介紹 17.101 機器的設定與使用&lt;/p&gt;
 &lt;h2&gt;ubuntu-desktop&lt;/h2&gt;
 &lt;p&gt;這一台 HP 伺服器, 原本安裝 Ubuntu Server 操作系統, 然後再加裝 desktop gui 介面相關套件:&lt;/p&gt;
@@ -680,7 +680,7 @@ refresh_pattern . 0 20% 4320
 2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global --unset http.proxy
 git config --global --unset https.proxy
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="http://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html" rel="alternate"></link><published>2016-01-01T12:00:00+08:00</published><updated>2016-01-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-01:kmolab/blog/mechanical-designer-and-ipv6.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><category term="Linux"></category><category term="設定"></category></entry><entry><title>Mechanical Designer and IPV6</title><link href="https://chiamingyen.github.io/kmolab/blog/mechanical-designer-and-ipv6.html" rel="alternate"></link><published>2016-01-01T12:00:00+08:00</published><updated>2016-01-01T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-01:kmolab/blog/mechanical-designer-and-ipv6.html</id><summary type="html">&lt;p&gt;機械設計工程師該如何執行 IPV6 網路設定&lt;/p&gt;
 &lt;p&gt;隨著 IPV6 協定的逐步推展, 機械設計工程師只需要理解網路發展趨勢, 並逐步在未來幾年內將日常工作導向 IPV4 與 IPV6 共存的環境中, 期開發能夠同時支援雙協定的各式機電光資生 (機械、電子電機、光電、資訊、生物) 與人文科技整合軟硬體, 以下便是在中華電信光世代環境下, 使用雙協定並存的相關設定步驟:&lt;/p&gt;
 &lt;p&gt;以下資料引用自 &lt;a href="http://2014fall.kmol.info/?id=410"&gt;http://2014fall.kmol.info/?id=410&lt;/a&gt;, 說明在台灣的中華電信用戶該如何申請並設定 IPV6 連線環境.&lt;/p&gt;
 &lt;h2&gt;情境說明:&lt;/h2&gt;
