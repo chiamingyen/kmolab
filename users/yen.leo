@@ -58,6 +58,7 @@
 <v t="amd.20151215154950.4"><vh>@edit search.html</vh></v>
 <v t="amd.20151215162536.1" a="E"><vh>@path includes</vh>
 <v t="amd.20151215162510.1"><vh>@edit sidebar.html</vh></v>
+<v t="yen.20170114233107.1"><vh>@edit liquid_tags_nb_header.html</vh></v>
 </v>
 <v t="amd.20151215154950.5"><vh>@edit tags.html</vh></v>
 </v>
@@ -108,9 +109,9 @@
 <v t="amd.20160106093610.1"><vh>協同網誌編寫規範</vh></v>
 <v t="amd.20151216001126.1"><vh>md 檔案範例</vh></v>
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
-<v t="amd.20160106093454.1" a="E"><vh>yen 網誌文章</vh>
-<v t="amd.20160829165735.1"><vh>before 201608</vh>
-<v t="amd.20160601163840.1"><vh>201601-05</vh>
+<v t="amd.20160106093454.1"><vh>yen 網誌文章</vh>
+<v t="amd.20160829165735.1" a="E"><vh>before 201608</vh>
+<v t="amd.20160601163840.1" a="E"><vh>201601-05</vh>
 <v t="amd.20160106093510.1" a="E"><vh>201601</vh>
 <v t="amd.20160106093531.1" a="E"><vh>w1</vh>
 <v t="amd.20160106093542.1"><vh>@edit yen_20160106.md</vh></v>
