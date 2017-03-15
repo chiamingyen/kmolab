@@ -332,14 +332,14 @@ Kmolab (虎尾科大MDE)            </a>
                 <p>利用 Python 物件導向架構執行網際 2D 正齒輪傳動協同繪圖時, 各組員可以將各種不同繪圖元件, 建置在個人的網頁空間中, 讓其他參與協同的組員連結應用. 唯一必須注意的是, 就網際繪圖模式而言, 儘管 Brython 繪圖最終仍轉為 JavaScript, 以 Canvas 或 WebGL 完成繪圖, 但是 Python 程式碼在各自的 script 標註中屬於各自的命名空間 (此點與 Prototype based 的 JavaScript 有很大的差別), 因此以下的範例, 必須將各自在引用的 script 標註中, 以 id 命名, 然後根據 id 名稱, 在其他命名空間中以 import 引用.</p>
 
 
-<p>以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖, 其中的漸開線正齒輪 2D 繪圖程式庫以類別建立, 並且存在 <a href="http://cadlab.mde.tw/post/by/spur.js">http://cadlab.mde.tw/post/by/spur.js</a>, 之所以採用 .js 命名, 主要在避開修改瀏覽器中的 MIME 對應, 可以直接在隨後的 Brython 程式中, 以 import 方式引用:</p>
-<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
+<p>以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖, 其中的漸開線正齒輪 2D 繪圖程式庫以類別建立, 並且存在 <a href="https://cadlab.mde.tw/post/by/spur.js">https://cadlab.mde.tw/post/by/spur.js</a>, 之所以採用 .js 命名, 主要在避開修改瀏覽器中的 MIME 對應, 可以直接在隨後的 Brython 程式中, 以 import 方式引用:</p>
+<script type="text/javascript" src="./../data/brython_dist.js"></script>
 
-<script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"></script>
+<script type="text/javascript" src="./../data/Cango-8v05-min.js"></script>
 
-<script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"></script>
+<script type="text/javascript" src="./../data/Cango2D-7v04-min.js"></script>
 
-<script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"></script>
+<script type="text/javascript" src="./../data/gearUtils-05.js"></script>
 
 <script>
 window.onload=function(){
@@ -349,7 +349,7 @@ brython(1);
 
 <div id="container"></div>
 
-<script type="text/python" src="http://cadlab.mde.tw/post/by/spur.js" id="spurmain"></script>
+<script type="text/python" src="https://cadlab.mde.tw/post/by/spur.js" id="spurmain"></script>
 
 <script type="text/python">
 import spurmain
@@ -407,10 +407,10 @@ gear.spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 
 <p>上述繪圖的程式碼:</p>
 <pre class="brush: python">
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/Cango-8v05-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/Cango2D-7v04-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/gearUtils-05.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 window.onload=function(){
@@ -975,16 +975,16 @@ for i in range(11):
 </pre>
 
 <p>上述鏈輪繪圖中需要計算5個關鍵點, 如下圖所示:</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing.png" width="800" /></p>
 <p>而此5個座標點將分別決定四段圓弧的繪製, 如下圖所示:</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing_2.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing_2.png" width="800" /></p>
 <p>至於將鏈條第1節 (位於每一個鏈輪的水平軸最右側的節圓弧上), 設計者必須根據鏈輪齒數, 決定鏈條的逆時鐘旋轉與水平軸之間的偏角 (因為這裡原始的鏈條採水平方向建置), 而此依偏角可以根據下列示意圖求取.</p>
 <p>計算第1節鏈條偏角的參考圖:</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry.png" width="800" /></p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_2.png" width="800" /></p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_3.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_2.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_3.png" width="800" /></p>
 <p>計算鏈條四個關鍵點的參考圖:</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/201605/chain_profile.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/201605/chain_profile.png" width="800" /></p>
 <p>以下則用來說明 3 個齒輪囓合時, 先兩兩依據基本的囓合對應完成囓合後, 再考慮中介齒輪的配合轉動, 就可以逐一完成各式減速齒輪組的 2D 繪圖, 一旦雲端零組件繪圖流程進入 Onshape 3D 零組件設計繪圖, 就可以援用相同的囓合原理, 完成 3D 減速機齒輪箱的組立與模擬:</p>
 <div id="container2"></div>
 

@@ -338,13 +338,13 @@ Kmolab (虎尾科大MDE)            </a>
 <p>以 Solvespace 繪製輪廓圖: <a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs">http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs</a></p>
 <p>從 Solvespace 輪廓圖長出 3D 零件後, 以 export 2D section SVG 圖檔: <a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_ss.svg">http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_ss.svg</a></p>
 <p>從 cd_task1_chain_ss.svg 圖檔, 可以得知斷面圖檔寬度為 26.696mm, 而高度為 47.906mm, 且 SVG 各點的座標原點位於圖檔的左下角落點. 從此資訊就可以算出 svgToCgoSVG 函式中的座標 offset 值為 (26.696/2, 47.906/2+10) (因為上下兩個圓弧的圓心距離 20 mm), 而 Solvespace 轉出 SVG 時將上下圓弧分別截為三段表示. 下圖中綠色輪廓繪圖數據即來自 Solvespace.</p>
-<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
+<script type="text/javascript" src="./../data/brython_dist.js"></script>
 
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
+<script type="text/javascript" src="./../data/Cango-8v05-min.js"></script>
 
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
+<script type="text/javascript" src="./../data/Cango2D-7v04.js"></script>
 
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
+<script type="text/javascript" src="./../data/CangoAxes-1v34.js"></script>
 
 <script>
 window.onload=function(){

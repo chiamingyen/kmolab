@@ -379,14 +379,14 @@ $ sudo apt-get install kazam
 &lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201606/onshape_four_spur_gears_7.png" width="800" /&gt;&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪協同繪圖規劃</title><link href="https://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html" rel="alternate"></link><published>2016-05-31T12:00:00+08:00</published><updated>2016-05-31T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-31:kmolab/blog/wang-ji-2d-zheng-chi-lun-xie-tong-hui-tu-gui-hua.html</id><summary type="html">&lt;p&gt;利用 Python 物件導向架構執行網際 2D 正齒輪傳動協同繪圖時, 各組員可以將各種不同繪圖元件, 建置在個人的網頁空間中, 讓其他參與協同的組員連結應用. 唯一必須注意的是, 就網際繪圖模式而言, 儘管 Brython 繪圖最終仍轉為 JavaScript, 以 Canvas 或 WebGL 完成繪圖, 但是 Python 程式碼在各自的 script 標註中屬於各自的命名空間 (此點與 Prototype based 的 JavaScript 有很大的差別), 因此以下的範例, 必須將各自在引用的 script 標註中, 以 id 命名, 然後根據 id 名稱, 在其他命名空間中以 import 引用.&lt;/p&gt;
 
 
-&lt;p&gt;以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖, 其中的漸開線正齒輪 2D 繪圖程式庫以類別建立, 並且存在 &lt;a href="http://cadlab.mde.tw/post/by/spur.js"&gt;http://cadlab.mde.tw/post/by/spur.js&lt;/a&gt;, 之所以採用 .js 命名, 主要在避開修改瀏覽器中的 MIME 對應, 可以直接在隨後的 Brython 程式中, 以 import 方式引用:&lt;/p&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;p&gt;以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖, 其中的漸開線正齒輪 2D 繪圖程式庫以類別建立, 並且存在 &lt;a href="https://cadlab.mde.tw/post/by/spur.js"&gt;https://cadlab.mde.tw/post/by/spur.js&lt;/a&gt;, 之所以採用 .js 命名, 主要在避開修改瀏覽器中的 MIME 對應, 可以直接在隨後的 Brython 程式中, 以 import 方式引用:&lt;/p&gt;
+&lt;script type="text/javascript" src="./../data/brython_dist.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/Cango-8v05-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/Cango2D-7v04-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/gearUtils-05.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 window.onload=function(){
@@ -396,7 +396,7 @@ brython(1);
 
 &lt;div id="container"&gt;&lt;/div&gt;
 
-&lt;script type="text/python" src="http://cadlab.mde.tw/post/by/spur.js" id="spurmain"&gt;&lt;/script&gt;
+&lt;script type="text/python" src="https://cadlab.mde.tw/post/by/spur.js" id="spurmain"&gt;&lt;/script&gt;
 
 &lt;script type="text/python"&gt;
 import spurmain
@@ -454,10 +454,10 @@ gear.spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 
 &lt;p&gt;上述繪圖的程式碼:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
-&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="./../data/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="./../data/Cango-8v05-min.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="./../data/Cango2D-7v04-min.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="./../data/gearUtils-05.js"&amp;gt;&amp;lt;/script&amp;gt;
 
 &amp;lt;script&amp;gt;
 window.onload=function(){
@@ -1022,16 +1022,16 @@ for i in range(11):
 &lt;/pre&gt;
 
 &lt;p&gt;上述鏈輪繪圖中需要計算5個關鍵點, 如下圖所示:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;而此5個座標點將分別決定四段圓弧的繪製, 如下圖所示:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing_2.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_drawing_2.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;至於將鏈條第1節 (位於每一個鏈輪的水平軸最右側的節圓弧上), 設計者必須根據鏈輪齒數, 決定鏈條的逆時鐘旋轉與水平軸之間的偏角 (因為這裡原始的鏈條採水平方向建置), 而此依偏角可以根據下列示意圖求取.&lt;/p&gt;
 &lt;p&gt;計算第1節鏈條偏角的參考圖:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry.png" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_2.png" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_3.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_2.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/201605/sprocket_wheel_chain_geometry_3.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;計算鏈條四個關鍵點的參考圖:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/201605/chain_profile.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/201605/chain_profile.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;以下則用來說明 3 個齒輪囓合時, 先兩兩依據基本的囓合對應完成囓合後, 再考慮中介齒輪的配合轉動, 就可以逐一完成各式減速齒輪組的 2D 繪圖, 一旦雲端零組件繪圖流程進入 Onshape 3D 零組件設計繪圖, 就可以援用相同的囓合原理, 完成 3D 減速機齒輪箱的組立與模擬:&lt;/p&gt;
 &lt;div id="container2"&gt;&lt;/div&gt;
 
@@ -1136,17 +1136,17 @@ gear.spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3)
 &lt;p&gt;&lt;image src="http://chiamingyen.github.io/kmolab_data/files/201605/onshape_spur_gear_demo.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;使用者可以直接在電腦瀏覽器或平版手機上的 Onshape App, 開啟漸開線&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/2923cd50930798d8999b2ef0"&gt;正齒輪零件的 Featurescript 繪圖程式碼&lt;/a&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;image src="http://chiamingyen.github.io/kmolab_data/files/201605/onshape_spur_gear_featurescript.png" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;此外, 使用者也可以開啟&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab"&gt;正齒輪組立&lt;/a&gt;連結後, 自行以滑鼠右鍵選擇主動旋轉的齒輪軸, 並按下 Animate, 就可以進行齒輪組的傳動模擬.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪傳動囓合繪圖</title><link href="https://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html" rel="alternate"></link><published>2016-05-23T12:00:00+08:00</published><updated>2016-05-23T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-23:kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html</id><summary type="html">&lt;p&gt;&lt;a href="http://cadlab.mde.tw/post/wang-ji-ji-jie-she-ji-2d-hui-tu.html"&gt;Brython 與 Cango Javascript 繪圖程式庫&lt;/a&gt;的結合, 可以讓參與協同的成員直接在網際環境中, 利用 Python3 語法進行產品開發流程中的設計運算與繪圖.&lt;/p&gt;
+&lt;p&gt;此外, 使用者也可以開啟&lt;a href="https://cad.onshape.com/documents/57494152e4b05f50e871a72c/w/a4a3f09939bf1f43a8e4f133/e/8b09d1743dcc794c5c38e7ab"&gt;正齒輪組立&lt;/a&gt;連結後, 自行以滑鼠右鍵選擇主動旋轉的齒輪軸, 並按下 Animate, 就可以進行齒輪組的傳動模擬.&lt;/p&gt;</summary><category term="2016 Spring"></category><category term="協同產品設計實習"></category></entry><entry><title>網際 2D 正齒輪傳動囓合繪圖</title><link href="https://chiamingyen.github.io/kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html" rel="alternate"></link><published>2016-05-23T12:00:00+08:00</published><updated>2016-05-23T12:00:00+08:00</updated><author><name>kmol</name></author><id>tag:chiamingyen.github.io,2016-05-23:kmolab/blog/wang-ji-2d-zheng-chi-lun-chuan-dong-nie-he-hui-tu.html</id><summary type="html">&lt;p&gt;&lt;a href="https://cadlab.mde.tw/post/wang-ji-ji-jie-she-ji-2d-hui-tu.html"&gt;Brython 與 Cango Javascript 繪圖程式庫&lt;/a&gt;的結合, 可以讓參與協同的成員直接在網際環境中, 利用 Python3 語法進行產品開發流程中的設計運算與繪圖.&lt;/p&gt;
 
 
 &lt;p&gt;以下為 17 齒, 29 齒與 15 齒輪組的囓合繪圖:&lt;/p&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 window.onload=function(){
@@ -1276,10 +1276,10 @@ spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 
 &lt;p&gt;Brython 正齒輪傳動囓合繪圖程式碼:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
-&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/Cango2D-7v01-min.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://2015fallhw.github.io/cptocadp/static/gearUtils-05.js"&amp;gt;&amp;lt;/script&amp;gt;
 
 &amp;lt;script&amp;gt;
 window.onload=function(){
@@ -1409,12 +1409,12 @@ spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
 &lt;/pre&gt;
 
 &lt;p&gt;接下來學員將被要求以協同方式, 將繪圖模組放入 &lt;a href="http://flask.pocoo.org/"&gt;Flask 網際程式&lt;/a&gt;中, 根據下列參考資料, 完成 &lt;a href="https://github.com/2015fallhw/cdw11"&gt;CDW11 期末專案&lt;/a&gt;, 其中, 由&lt;a href="http://cdw11-ag100.rhcloud.com/static/blog/tags.html"&gt;學員靜態網誌&lt;/a&gt;呈現各協同人員的各週任務執行結果外, 也希望從&lt;a href="http://cdw11-ag100.rhcloud.com/"&gt;http://cdw11-ag100.rhcloud.com/&lt;/a&gt; 雲端網站中呈現各組專案成果(例如: a 班第1組的協同產品設計內容將位於 http://cdw11-ag100.rhcloud.com/ag1 連結, 各組依此類推):&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://cad-lab.github.io/cadlab_data/files/gearbox_1.gif" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://cad-lab.github.io/cadlab_data/files/gearbox_2.gif" width="800" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://cad-lab.github.io/cadlab_data/files/gears_tooth_engagement.gif" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://cad-lab.github.io/cadlab_data/files/gear_train.gif" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://cad-lab.github.io/cadlab_data/files/sprocket.gif" width="600" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://cad-lab.github.io/cadlab_data/files/chain_sprocket_drawing.jpg" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cad-lab.github.io/cadlab_data/files/gearbox_1.gif" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cad-lab.github.io/cadlab_data/files/gearbox_2.gif" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cad-lab.github.io/cadlab_data/files/gears_tooth_engagement.gif" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cad-lab.github.io/cadlab_data/files/gear_train.gif" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cad-lab.github.io/cadlab_data/files/sprocket.gif" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cad-lab.github.io/cadlab_data/files/chain_sprocket_drawing.jpg" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;Onshape Sprocket 零件繪製導引: &lt;a href="https://www.onshape.com/cad-blog/tech-tip-lets-build-a-sprocket"&gt;https://www.onshape.com/cad-blog/tech-tip-lets-build-a-sprocket&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2D 鏈條傳動繪圖: &lt;a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html"&gt;http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu-er.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Chain Guide: &lt;a href="http://cad-lab.github.io/cadlab_data/files/Complete_guide_to_chain.pdf"&gt;http://cad-lab.github.io/cadlab_data/files/Complete_guide_to_chain.pdf&lt;/a&gt;&lt;/p&gt;
@@ -1482,7 +1482,7 @@ for i in range(len(answer)):
         print(answer[i])
 &lt;/pre&gt;
 
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_sympy.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_sympy.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;上述符號式運算流程得到的結果:&lt;/p&gt;
 &lt;p&gt;(-251.966715968566, 0.0, 0.0, 0.0, -216.939755087825, -45.7105650721111, -58.1886285898711, 75.9367934509185)
 (-251.966715968566, 0.0, 0.0, 0.0, -216.939755087825, 45.7105650721111, -58.1886285898711, -75.9367934509185)
@@ -1501,17 +1501,17 @@ for i in range(len(answer)):
 &lt;li&gt;右側下切點座標: (-17.8936, -93.9794)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;以及與左側上方切點相連的節圓周上鏈條與水平線對應角度為 20.78 度, 上切線與水平線對應角度為 10.78 度, 而右側節圓周上與切點相連的鏈條, 與水平線的角度則為 4.78 度. &lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_1.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_1.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;同時, 以下利用 Solvespace 以綠色線條, 標示出符合兩圓相切線的所謂內切線 (internal tangents), 與對應左側圓心位置, 而此等內切線可應用在皮帶傳動的設計配置.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_2.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_2.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;根據上述的切點座標與相關角度條件, 就可以利用 &lt;a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html"&gt;自行車傳動 2D 鏈條繪圖&lt;/a&gt; 中的鏈條繪圖元件進行下列繪圖:&lt;/p&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/brython_dist.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/Cango-8v05-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/Cango2D-7v04-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/CangoAxes-1v34.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 window.onload=function(){
@@ -1697,10 +1697,10 @@ r10, s10=mychain.basic_rot(r9, s9, -10.78)
 
 &lt;p&gt;上述 2D 鏈條傳動的 Brython 繪圖程式碼:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 window.onload=function(){
@@ -1887,7 +1887,7 @@ r10, s10=mychain.basic_rot(r9, s9, -10.78)
 
 &lt;p&gt;從上述 2D 傳動鏈條的繪圖中, 可以發現, 由於整個設計配置以上方兩個切點的直線距離 200 mm 為準進行繪圖後, 下方的切點位置並無法精確與實際齒盤鏈條定位, 表示在上述鏈條傳動組立下, 精確繞行圓周的長度並無法得到整數的鏈條單元數, 在實務上通常會多加上一個鏈條單元.&lt;/p&gt;
 &lt;p&gt;而從下方的 2D 繪圖中可以發現, 依照上方取 10 個單元的鏈條長度, 比幾何運算的節圓鏈條線段長度長, 因此在實際鏈條組立時, 可以直接讓下方鏈條下垂的方式進行鏈條單元組立.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_assembly_1.png" width="800" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_assembly_1.png" width="800" /&gt;&lt;/p&gt;
 &lt;p&gt;此外, 上面所列出的 Brython 鏈條傳動繪圖, 是由下方的 flask 程式片斷, 採 Blueprint 的程式架構所建立, 當使用者透過 Python3 與 flask 網際框架, 將協同程式配置在 Github 與 OpenShift 平台上時, 將可以透過更高階的網際協同程式架構, 執行各種產品開發專案.&lt;/p&gt;
 &lt;p&gt;各學員參考下列 2D 鏈條傳動繪圖設計後, 可以自行練習 18 齒與 36 齒的傳動繪圖, 並配合後續的齒輪減速機與自行車設計, 完成各組的電動與人力兩用自行車期末專案.&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
@@ -1903,10 +1903,10 @@ head_str = '''
     &amp;lt;title&amp;gt;網際 2D 繪圖&amp;lt;/title&amp;gt;
     &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
     &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
-&amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&amp;gt;&amp;lt;/script&amp;gt;
 
 &amp;lt;/head&amp;gt;
 &amp;lt;body&amp;gt;
@@ -2459,7 +2459,7 @@ def snap():
     &amp;lt;title&amp;gt;網際 snap 繪圖&amp;lt;/title&amp;gt;
     &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
     &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
-    &amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
     &amp;lt;script type="text/javascript" src="/static/snap.svg-min.js"&amp;gt;&amp;lt;/script&amp;gt;
 
     &amp;lt;script&amp;gt;
@@ -2538,7 +2538,7 @@ def snap_link():
     &amp;lt;title&amp;gt;網際 snap 繪圖&amp;lt;/title&amp;gt;
     &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
     &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
-    &amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
     &amp;lt;script type="text/javascript" src="/static/snap.svg-min.js"&amp;gt;&amp;lt;/script&amp;gt;
 
     &amp;lt;script&amp;gt;
@@ -2619,7 +2619,7 @@ def snap_gear():
     &amp;lt;title&amp;gt;網際 snap 繪圖&amp;lt;/title&amp;gt;
     &amp;lt;!-- IE 9: display inline SVG --&amp;gt;
     &amp;lt;meta http-equiv="X-UA-Compatible" content="IE=9"&amp;gt;
-    &amp;lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&amp;gt;&amp;lt;/script&amp;gt;
     &amp;lt;script type="text/javascript" src="/static/snap.svg-min.js"&amp;gt;&amp;lt;/script&amp;gt;
 
     &amp;lt;script&amp;gt;
@@ -6807,13 +6807,13 @@ print("width:", width, "\nheight:", height, "\npath:", path_strings)
 &lt;p&gt;以 Solvespace 繪製輪廓圖: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_profile.slvs&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;從 Solvespace 輪廓圖長出 3D 零件後, 以 export 2D section SVG 圖檔: &lt;a href="http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_ss.svg"&gt;http://chiamingyen.github.io/kmolab_data/files/cd_task1_chain_ss.svg&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;從 cd_task1_chain_ss.svg 圖檔, 可以得知斷面圖檔寬度為 26.696mm, 而高度為 47.906mm, 且 SVG 各點的座標原點位於圖檔的左下角落點. 從此資訊就可以算出 svgToCgoSVG 函式中的座標 offset 值為 (26.696/2, 47.906/2+10) (因為上下兩個圓弧的圓心距離 20 mm), 而 Solvespace 轉出 SVG 時將上下圓弧分別截為三段表示. 下圖中綠色輪廓繪圖數據即來自 Solvespace.&lt;/p&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/brython_dist.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/Cango-8v05-min.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/Cango2D-7v04.js"&gt;&lt;/script&gt;
 
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./../data/CangoAxes-1v34.js"&gt;&lt;/script&gt;
 
 &lt;script&gt;
 window.onload=function(){

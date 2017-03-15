@@ -144,23 +144,23 @@ except:
 
 &lt;!-- 導入 Brython 函式庫 --&gt;
 
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
 
 &lt;!-- 導入 Cango2d 函式庫 --&gt;
 
-&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/Cango2D.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cadlab.mde.tw/post/js/Cango2D.js"&gt;&lt;/script&gt;
 
 &lt;!-- 導入 Cango 函式庫 --&gt;
 
-&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/Cango-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cadlab.mde.tw/post/js/Cango-min.js"&gt;&lt;/script&gt;
 
 &lt;!-- 導入 gearUtils 函式庫 --&gt;
 
-&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/gearUtils.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cadlab.mde.tw/post/js/gearUtils.js"&gt;&lt;/script&gt;
 
 &lt;!-- 導入 CangoAnimation.js 函式庫 --&gt;
 
-&lt;script type="text/javascript" src="http://cadlab.mde.tw/post/js/CangoAnimation.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cadlab.mde.tw/post/js/CangoAnimation.js"&gt;&lt;/script&gt;
 
 &lt;!-- window 導入後, 啟動 brython() --&gt;
 
@@ -177,11 +177,14 @@ brython(1);
 
 &lt;script type="text/python"&gt;
 from browser import window
-from javascript import JSConstructor
+#from javascript import JSConstructor
 
-cango = JSConstructor(window.Cango2D)
+# for version before 3.3.1
+#cango = JSConstructor(window.Cango2D)
+cango = window.Cango2D.new
 shapedefs = window.shapeDefs
-obj2d = JSConstructor(window.Obj2D)
+#obj2d = JSConstructor(window.Obj2D)
+obj2d = window.Obj2D.new
 cgo = cango("plotarea")
 
 x1, y1 = 40, 20
@@ -260,7 +263,7 @@ from browser import document as doc
 # 由於 Python3 與 Javascript 程式碼已經不再混用, 因此來自 Javascript 的變數, 必須居中透過 window 物件轉換
 from browser import window
 # 針對 Javascript 既有的物件, 則必須透過 JSConstructor 轉換
-from javascript import JSConstructor
+#from javascript import JSConstructor
 import math
 
 # 主要用來取得畫布大小
@@ -268,15 +271,18 @@ canvas = doc["gear1"]
 # 此程式採用 Cango Javascript 程式庫繪圖, 因此無需 ctx
 #ctx = canvas.getContext("2d")
 # 針對類別的轉換, 將 Cango.js 中的 Cango 物件轉為 Python cango 物件
-cango = JSConstructor(window.Cango)
+#cango = JSConstructor(window.Cango)
+cango = window.Cango.new
 # 針對變數的轉換, shapeDefs 在 Cango 中資料型別為變數, 可以透過 window 轉換
 shapedefs = window.shapeDefs
 # 目前 Cango 結合 Animation 在 Brython 尚無法運作, 此刻只能繪製靜態圖形
 # in CangoAnimation.js
 #interpolate1 = window.interpolate
 # Cobi 與 createGearTooth 都是 Cango Javascript 程式庫中的物件
-cobj = JSConstructor(window.Cobj)
-creategeartooth = JSConstructor(window.createGearTooth)
+#cobj = JSConstructor(window.Cobj)
+cobj = window.Cobj.new
+#creategeartooth = JSConstructor(window.createGearTooth)
+creategeartooth = window.createGearTooth.new
 
 # 經由 Cango 轉換成 Brython 的 cango, 指定將圖畫在 id="gear1" 的 canvas 上
 cgo = cango("gear1")

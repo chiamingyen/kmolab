@@ -385,7 +385,7 @@ for i in range(len(answer)):
         print(answer[i])
 </pre>
 
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_sympy.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_sympy.png" width="800" /></p>
 <p>上述符號式運算流程得到的結果:</p>
 <p>(-251.966715968566, 0.0, 0.0, 0.0, -216.939755087825, -45.7105650721111, -58.1886285898711, 75.9367934509185)
 (-251.966715968566, 0.0, 0.0, 0.0, -216.939755087825, 45.7105650721111, -58.1886285898711, -75.9367934509185)
@@ -404,17 +404,17 @@ for i in range(len(answer)):
 <li>右側下切點座標: (-17.8936, -93.9794)</li>
 </ol>
 <p>以及與左側上方切點相連的節圓周上鏈條與水平線對應角度為 20.78 度, 上切線與水平線對應角度為 10.78 度, 而右側節圓周上與切點相連的鏈條, 與水平線的角度則為 4.78 度. </p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_1.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_1.png" width="800" /></p>
 <p>同時, 以下利用 Solvespace 以綠色線條, 標示出符合兩圓相切線的所謂內切線 (internal tangents), 與對應左側圓心位置, 而此等內切線可應用在皮帶傳動的設計配置.</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_2.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_ss_2.png" width="800" /></p>
 <p>根據上述的切點座標與相關角度條件, 就可以利用 <a href="http://chiamingyen.github.io/kmolab/blog/zi-xing-che-chuan-dong-2d-lian-tiao-hui-tu.html">自行車傳動 2D 鏈條繪圖</a> 中的鏈條繪圖元件進行下列繪圖:</p>
-<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
+<script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/brython_dist.js"></script>
 
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
+<script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/Cango-8v05-min.js"></script>
 
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
+<script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/Cango2D-7v04-min.js"></script>
 
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
+<script type="text/javascript" src="https://mdecourse.github.io/2017springcd/data/CangoAxes-1v34.js"></script>
 
 <script>
 window.onload=function(){
@@ -600,10 +600,10 @@ r10, s10=mychain.basic_rot(r9, s9, -10.78)
 
 <p>上述 2D 鏈條傳動的 Brython 繪圖程式碼:</p>
 <pre class="brush: python">
-<script type="text/javascript" src="http://brython.info/src/brython_dist.js"></script>
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
-<script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
+<script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/brython_dist.js"></script>
+<script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"></script>
+<script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"></script>
+<script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"></script>
 
 <script>
 window.onload=function(){
@@ -790,7 +790,7 @@ r10, s10=mychain.basic_rot(r9, s9, -10.78)
 
 <p>從上述 2D 傳動鏈條的繪圖中, 可以發現, 由於整個設計配置以上方兩個切點的直線距離 200 mm 為準進行繪圖後, 下方的切點位置並無法精確與實際齒盤鏈條定位, 表示在上述鏈條傳動組立下, 精確繞行圓周的長度並無法得到整數的鏈條單元數, 在實務上通常會多加上一個鏈條單元.</p>
 <p>而從下方的 2D 繪圖中可以發現, 依照上方取 10 個單元的鏈條長度, 比幾何運算的節圓鏈條線段長度長, 因此在實際鏈條組立時, 可以直接讓下方鏈條下垂的方式進行鏈條單元組立.</p>
-<p><img src="http://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_assembly_1.png" width="800" /></p>
+<p><img src="https://chiamingyen.github.io/kmolab_data/files/2016springcdw12_chain_assembly_1.png" width="800" /></p>
 <p>此外, 上面所列出的 Brython 鏈條傳動繪圖, 是由下方的 flask 程式片斷, 採 Blueprint 的程式架構所建立, 當使用者透過 Python3 與 flask 網際框架, 將協同程式配置在 Github 與 OpenShift 平台上時, 將可以透過更高階的網際協同程式架構, 執行各種產品開發專案.</p>
 <p>各學員參考下列 2D 鏈條傳動繪圖設計後, 可以自行練習 18 齒與 36 齒的傳動繪圖, 並配合後續的齒輪減速機與自行車設計, 完成各組的電動與人力兩用自行車期末專案.</p>
 <pre class="brush: python">
@@ -806,10 +806,10 @@ head_str = '''
     &lt;title&gt;網際 2D 繪圖&lt;/title&gt;
     &lt;!-- IE 9: display inline SVG --&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
-&lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="http://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/brython_dist.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango-8v03.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/Cango2D-6v13.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://cptocadp-2015fallhw.rhcloud.com/static/CangoAxes-1v33.js"&gt;&lt;/script&gt;
 
 &lt;/head&gt;
 &lt;body&gt;
@@ -1362,7 +1362,7 @@ def snap():
     &lt;title&gt;網際 snap 繪圖&lt;/title&gt;
     &lt;!-- IE 9: display inline SVG --&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
-    &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
     &lt;script type="text/javascript" src="/static/snap.svg-min.js"&gt;&lt;/script&gt;
 
     &lt;script&gt;
@@ -1441,7 +1441,7 @@ def snap_link():
     &lt;title&gt;網際 snap 繪圖&lt;/title&gt;
     &lt;!-- IE 9: display inline SVG --&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
-    &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
     &lt;script type="text/javascript" src="/static/snap.svg-min.js"&gt;&lt;/script&gt;
 
     &lt;script&gt;
@@ -1522,7 +1522,7 @@ def snap_gear():
     &lt;title&gt;網際 snap 繪圖&lt;/title&gt;
     &lt;!-- IE 9: display inline SVG --&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=9"&gt;
-    &lt;script type="text/javascript" src="http://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://brython.info/src/brython_dist.js"&gt;&lt;/script&gt;
     &lt;script type="text/javascript" src="/static/snap.svg-min.js"&gt;&lt;/script&gt;
 
     &lt;script&gt;
