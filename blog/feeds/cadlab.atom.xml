@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE)</title><link href="https://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="https://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>https://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T12:00:00+08:00</updated><entry><title>Custom domain for Github pages</title><link href="https://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html" rel="alternate"></link><published>2016-01-17T12:00:00+08:00</published><updated>2016-01-17T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:kmolab/blog/custom-domain-for-github-pages.html</id><summary type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kmolab (虎尾科大MDE) - cadlab</title><link href="https://chiamingyen.github.io/kmolab/blog/" rel="alternate"></link><link href="https://chiamingyen.github.io/kmolab/blog/feeds/cadlab.atom.xml" rel="self"></link><id>https://chiamingyen.github.io/kmolab/blog/</id><updated>2016-01-17T12:00:00+08:00</updated><entry><title>Custom domain for Github pages</title><link href="https://chiamingyen.github.io/kmolab/blog/custom-domain-for-github-pages.html" rel="alternate"></link><published>2016-01-17T12:00:00+08:00</published><updated>2016-01-17T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-17:/kmolab/blog/custom-domain-for-github-pages.html</id><summary type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;如何設定 Github pages 網頁符號名稱綁定&lt;/p&gt;
 
 
 &lt;p&gt;這裡要舉的例子為 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站的網址設定.&lt;/p&gt;
@@ -12,7 +13,11 @@
 &lt;li&gt;接著到 DNS 伺服器設定, 將 cad-lab.github.io 網址以 CNAME 類別, 設為與 cadlab.mde.tw 網址綁定, 這裡必須注意的是, Github 會自行將 cad-lab.github.io/blog 跳轉到 cadlab.mde.tw&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;完成設定後, Github 就會將 http://cadlab.mde.tw 的連結呼叫與設定 default 分支的 gh-pages http://cad-lab.github.io/blog 進行跳轉, 也就是當使用者以瀏覽器連到 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 時, 其實資料來自 &lt;a href="http://cad-lab.github.io/blog"&gt;http://cad-lab.github.io/blog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;由於 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站採用 Pelican 靜態網誌系統進行轉檔, 因此原先 SITEURL 設為 SITEURL = 'http://cad-lab.github.io/blog/post' 必須配合改為 SITEURL = 'http://cadlab.mde.tw/post'&lt;/p&gt;</summary><category term="Github"></category><category term="domain names"></category></entry><entry><title>2016 CAD Lab</title><link href="https://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><published>2016-01-06T11:00:00+08:00</published><updated>2016-01-06T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+&lt;p&gt;由於 &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt; 網站採用 Pelican 靜態網誌系統進行轉檔, 因此原先 SITEURL 設為 SITEURL = 'http://cad-lab.github.io/blog/post' 必須配合改為 SITEURL = 'http://cadlab.mde.tw/post'&lt;/p&gt;</content><category term="Github"></category><category term="domain names"></category></entry><entry><title>2016 CAD Lab</title><link href="https://chiamingyen.github.io/kmolab/blog/2016-cad-lab.html" rel="alternate"></link><published>2016-01-06T11:00:00+08:00</published><updated>2016-01-06T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:chiamingyen.github.io,2016-01-06:/kmolab/blog/2016-cad-lab.html</id><summary type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
+&lt;p&gt;CADLab 靜態網誌: &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CADLab 動態網誌: &lt;a href="http://wordpress-cadlab.rhcloud.com"&gt;http://wordpress-cadlab.rhcloud.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CMSimply 網站: &lt;a href="http://cmsimply-cadlab.rhcloud.com/"&gt;http://cmsimply-cadlab.rhcloud.com/&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2016 電腦輔助設計室規劃&lt;/p&gt;
 &lt;p&gt;CADLab 靜態網誌: &lt;a href="http://cadlab.mde.tw"&gt;http://cadlab.mde.tw&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;CADLab 動態網誌: &lt;a href="http://wordpress-cadlab.rhcloud.com"&gt;http://wordpress-cadlab.rhcloud.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;CMSimply 網站: &lt;a href="http://cmsimply-cadlab.rhcloud.com/"&gt;http://cmsimply-cadlab.rhcloud.com/&lt;/a&gt;&lt;/p&gt;
@@ -72,4 +77,4 @@
 &lt;li&gt;若系上 DNS 伺服器反應不正常則設學校的 DNS 伺服器: 2001:288:6004:1::2 (另外一台應為: 2001:288:6004:1::20)&lt;/li&gt;
 &lt;li&gt;若系上與學校 DSN 伺服器反應不正常, 則設中華電信 DNS 伺服器: 2001:b000:168::1 與 2001:b000:168::2&lt;/li&gt;
 &lt;li&gt;proxy server 設為: proxy.mde.tw:3128&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="電腦輔助設計室"></category><category term="lab"></category></entry></feed>
+&lt;/ol&gt;</content><category term="電腦輔助設計室"></category><category term="lab"></category></entry></feed>

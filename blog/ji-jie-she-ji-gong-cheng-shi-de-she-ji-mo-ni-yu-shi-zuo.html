@@ -10,162 +10,6 @@
 
 
 
-
-<style type="text/css">
-
-/*some stuff for output/input prompts*/
-div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.cell.selected{border-radius:4px;border:thin #ababab solid}
-div.cell.edit_mode{border-radius:4px;border:thin #008000 solid}
-div.cell{width:100%;padding:5px 5px 5px 0;margin:0;outline:none}
-div.prompt{min-width:11ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}
-@media (max-width:480px){div.prompt{text-align:left}}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;line-height:1.21429em}
-div.prompt:empty{padding-top:0;padding-bottom:0}
-div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}
-div.inner_cell{width:90%;}
-div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;}
-div.input_prompt{color:navy;border-top:1px solid transparent;}
-div.output_wrapper{margin-top:5px;position:relative;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
-div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);-moz-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);}
-div.output_collapsed{margin:0px;padding:0px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
-div.out_prompt_overlay{height:100%;padding:0px 0.4em;position:absolute;border-radius:4px;}
-div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000000;-moz-box-shadow:inset 0 0 1px #000000;box-shadow:inset 0 0 1px #000000;background:rgba(240, 240, 240, 0.5);}
-div.output_prompt{color:darkred;}
-
-a.anchor-link:link{text-decoration:none;padding:0px 20px;visibility:hidden;}
-h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible;}
-/* end stuff for output/input prompts*/
-
-
-.highlight-ipynb .hll { background-color: #ffffcc }
-.highlight-ipynb  { background: #f8f8f8; }
-.highlight-ipynb .c { color: #408080; font-style: italic } /* Comment */
-.highlight-ipynb .err { border: 1px solid #FF0000 } /* Error */
-.highlight-ipynb .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight-ipynb .o { color: #666666 } /* Operator */
-.highlight-ipynb .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight-ipynb .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight-ipynb .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight-ipynb .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight-ipynb .gd { color: #A00000 } /* Generic.Deleted */
-.highlight-ipynb .ge { font-style: italic } /* Generic.Emph */
-.highlight-ipynb .gr { color: #FF0000 } /* Generic.Error */
-.highlight-ipynb .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight-ipynb .gi { color: #00A000 } /* Generic.Inserted */
-.highlight-ipynb .go { color: #888888 } /* Generic.Output */
-.highlight-ipynb .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight-ipynb .gs { font-weight: bold } /* Generic.Strong */
-.highlight-ipynb .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight-ipynb .gt { color: #0044DD } /* Generic.Traceback */
-.highlight-ipynb .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight-ipynb .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight-ipynb .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight-ipynb .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight-ipynb .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight-ipynb .kt { color: #B00040 } /* Keyword.Type */
-.highlight-ipynb .m { color: #666666 } /* Literal.Number */
-.highlight-ipynb .s { color: #BA2121 } /* Literal.String */
-.highlight-ipynb .na { color: #7D9029 } /* Name.Attribute */
-.highlight-ipynb .nb { color: #008000 } /* Name.Builtin */
-.highlight-ipynb .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.highlight-ipynb .no { color: #880000 } /* Name.Constant */
-.highlight-ipynb .nd { color: #AA22FF } /* Name.Decorator */
-.highlight-ipynb .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight-ipynb .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.highlight-ipynb .nf { color: #0000FF } /* Name.Function */
-.highlight-ipynb .nl { color: #A0A000 } /* Name.Label */
-.highlight-ipynb .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.highlight-ipynb .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight-ipynb .nv { color: #19177C } /* Name.Variable */
-.highlight-ipynb .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.highlight-ipynb .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight-ipynb .mf { color: #666666 } /* Literal.Number.Float */
-.highlight-ipynb .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight-ipynb .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight-ipynb .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight-ipynb .sb { color: #BA2121 } /* Literal.String.Backtick */
-.highlight-ipynb .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight-ipynb .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.highlight-ipynb .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight-ipynb .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.highlight-ipynb .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight-ipynb .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.highlight-ipynb .sx { color: #008000 } /* Literal.String.Other */
-.highlight-ipynb .sr { color: #BB6688 } /* Literal.String.Regex */
-.highlight-ipynb .s1 { color: #BA2121 } /* Literal.String.Single */
-.highlight-ipynb .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight-ipynb .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight-ipynb .vc { color: #19177C } /* Name.Variable.Class */
-.highlight-ipynb .vg { color: #19177C } /* Name.Variable.Global */
-.highlight-ipynb .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight-ipynb .il { color: #666666 } /* Literal.Number.Integer.Long */
-</style>
-
-<style type="text/css">
-/* Overrides of notebook CSS for static HTML export */
-div.entry-content {
-  overflow: visible;
-  padding: 8px;
-}
-.input_area {
-  padding: 0.2em;
-}
-
-a.heading-anchor {
- white-space: normal;
-}
-
-.rendered_html
-code {
- font-size: .8em;
-}
-
-pre.ipynb {
-  color: black;
-  background: #f7f7f7;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 0;
-  padding: 0;
-  margin: 0px;
-  font-size: 13px;
-}
-
-/* remove the prompt div from text cells */
-div.text_cell .prompt {
-    display: none;
-}
-
-/* remove horizontal padding from text cells, */
-/* so it aligns with outer body text */
-div.text_cell_render {
-    padding: 0.5em 0em;
-}
-
-img.anim_icon{padding:0; border:0; vertical-align:middle; -webkit-box-shadow:none; -box-shadow:none}
-</style>
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-<script type="text/javascript">
-init_mathjax = function() {
-    if (window.MathJax) {
-        // MathJax loaded
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-            },
-            displayAlign: 'left', // Change this to 'center' to center equations.
-            "HTML-CSS": {
-                styles: {'.MathJax_Display': {"margin": 0}}
-            }
-        });
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-}
-init_mathjax();
-</script>
-
 <link rel="canonical" href="https://chiamingyen.github.io/kmolab/blog/ji-jie-she-ji-gong-cheng-shi-de-she-ji-mo-ni-yu-shi-zuo.html">
 
         <meta name="author" content="yen" />
@@ -259,9 +103,6 @@ Kmolab (虎尾科大MDE)            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="https://chiamingyen.github.io/kmolab/blog/pages/about/">
-                             About
-                          </a></li>
                         <li >
                             <a href="https://chiamingyen.github.io/kmolab/blog/category/alumni.html">Alumni</a>
                         </li>
@@ -451,112 +292,7 @@ browser.timer.set_interval(drawClock, 1000)
 </script>
 
 <p>以下為利用 Brython 畫時鐘的程式碼:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
- 40
- 41
- 42
- 43
- 44
- 45
- 46
- 47
- 48
- 49
- 50
- 51
- 52
- 53
- 54
- 55
- 56
- 57
- 58
- 59
- 60
- 61
- 62
- 63
- 64
- 65
- 66
- 67
- 68
- 69
- 70
- 71
- 72
- 73
- 74
- 75
- 76
- 77
- 78
- 79
- 80
- 81
- 82
- 83
- 84
- 85
- 86
- 87
- 88
- 89
- 90
- 91
- 92
- 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104
-105
-106</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 導入 Brython 函式庫 --&gt;</span>
+<div class="highlight"><pre><span></span><span class="c">&lt;!-- 導入 Brython 函式庫 --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://brython.info/src/brython_dist.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- window 導入後, 啟動 brython() --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -663,94 +399,11 @@ browser.timer.set_interval(drawClock, 1000)
 <span class="nx">browser</span><span class="p">.</span><span class="nx">timer</span><span class="p">.</span><span class="nx">set_interval</span><span class="p">(</span><span class="nx">drawClock</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
-</td></tr></table>
+
 
 <p><br /></p>
 <p>在 Jupyter 利用 SVG 繪製正齒輪輪廓:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># source: https://gist.github.com/gever/8643175</span>
+<div class="highlight"><pre><span></span><span class="c1"># source: https://gist.github.com/gever/8643175</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">SVG</span>
@@ -835,7 +488,7 @@ browser.timer.set_interval(drawClock, 1000)
 <span class="c1"># show it</span>
 <span class="n">SVG</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dwg</span><span class="o">.</span><span class="n">tostring</span><span class="p">())</span>
 </pre></div>
-</td></tr></table>
+
 
 <p><br />
 利用 Brython 繪製漸開線正齒輪輪廓圖:</p>
@@ -982,144 +635,7 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 </script>
 
 <p>以下為單一正齒輪輪廓繪圖程式碼:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
- 40
- 41
- 42
- 43
- 44
- 45
- 46
- 47
- 48
- 49
- 50
- 51
- 52
- 53
- 54
- 55
- 56
- 57
- 58
- 59
- 60
- 61
- 62
- 63
- 64
- 65
- 66
- 67
- 68
- 69
- 70
- 71
- 72
- 73
- 74
- 75
- 76
- 77
- 78
- 79
- 80
- 81
- 82
- 83
- 84
- 85
- 86
- 87
- 88
- 89
- 90
- 91
- 92
- 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
+<div class="highlight"><pre><span></span><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
 <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;gear1&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- 開始執行 Brython 繪圖 --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/python3&quot;</span><span class="p">&gt;</span>
@@ -1127,7 +643,7 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 <span class="nx">from</span> <span class="nx">browser</span> <span class="kr">import</span> <span class="nb">document</span> <span class="nx">as</span> <span class="nx">doc</span>
 <span class="kr">import</span> <span class="nx">math</span>
 <span class="err">#</span> <span class="nx">deg</span> <span class="nx">為角度轉為徑度的轉換因子</span>
-<span class="nx">deg</span> <span class="o">=</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">.</span>
+<span class="nx">deg</span> <span class="o">=</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mf">180.</span>
 <span class="err">#</span> <span class="nx">定義</span> <span class="nx">Spur</span> <span class="nx">類別</span>
 <span class="kr">class</span> <span class="nx">Spur</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
     <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">ctx</span><span class="p">)</span><span class="o">:</span>
@@ -1184,17 +700,17 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
         <span class="err">#</span> <span class="nx">tan</span><span class="p">(</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span><span class="p">)</span><span class="o">-</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span> <span class="nx">為漸開線函數</span>
         <span class="nx">sigma</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nx">n</span><span class="p">)</span><span class="o">+</span><span class="nx">math</span><span class="p">.</span><span class="nx">tan</span><span class="p">(</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span><span class="p">)</span><span class="o">-</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span>
         <span class="k">for</span> <span class="nx">j</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span>
-            <span class="nx">ang</span><span class="o">=-</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
-            <span class="nx">ang2</span><span class="o">=</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
-            <span class="nx">lxd</span><span class="o">=</span><span class="nx">midx</span><span class="o">+</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
-            <span class="nx">lyd</span><span class="o">=</span><span class="nx">midy</span><span class="o">-</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
+            <span class="nx">ang</span><span class="o">=-</span><span class="mf">2.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
+            <span class="nx">ang2</span><span class="o">=</span><span class="mf">2.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
+            <span class="nx">lxd</span><span class="o">=</span><span class="nx">midx</span><span class="o">+</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
+            <span class="nx">lyd</span><span class="o">=</span><span class="nx">midy</span><span class="o">-</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
             <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">imax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
                 <span class="err">#</span> <span class="nx">當</span> <span class="nx">rd</span> <span class="nx">大於</span> <span class="nx">rb</span> <span class="nx">時</span><span class="p">,</span> <span class="nx">漸開線並非畫至</span> <span class="nx">rb</span><span class="p">,</span> <span class="nx">而是</span> <span class="nx">rd</span>
                 <span class="k">if</span> <span class="nx">rd</span><span class="o">&gt;</span><span class="nx">rb</span><span class="o">:</span>
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rd</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
                 <span class="k">else</span><span class="o">:</span>
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rb</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
-                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">.)</span>
+                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
                 <span class="nx">alpha</span><span class="o">=</span><span class="nx">theta</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">atan</span><span class="p">(</span><span class="nx">theta</span><span class="p">)</span>
                 <span class="nx">xpt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">alpha</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
                 <span class="nx">ypt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">alpha</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
@@ -1223,7 +739,7 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rd</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
                 <span class="k">else</span><span class="o">:</span>
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rb</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
-                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">.)</span>
+                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
                 <span class="nx">alpha</span><span class="o">=</span><span class="nx">theta</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">atan</span><span class="p">(</span><span class="nx">theta</span><span class="p">)</span>
                 <span class="nx">xpt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="nx">alpha</span><span class="p">)</span>
                 <span class="nx">ypt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="nx">alpha</span><span class="p">)</span>
@@ -1258,7 +774,7 @@ Spur(ctx).Gear(x, y, r, n, pa, "blue")
 <span class="nx">Spur</span><span class="p">(</span><span class="nx">ctx</span><span class="p">).</span><span class="nx">Gear</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">r</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">pa</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
-</td></tr></table>
+
 
 <p><br />
 以下則繪製三個齒輪囓合圖:</p>
@@ -1467,208 +983,7 @@ ctx.restore()
 </script>
 
 <p>以下為3個齒輪囓合繪圖程式碼:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
- 40
- 41
- 42
- 43
- 44
- 45
- 46
- 47
- 48
- 49
- 50
- 51
- 52
- 53
- 54
- 55
- 56
- 57
- 58
- 59
- 60
- 61
- 62
- 63
- 64
- 65
- 66
- 67
- 68
- 69
- 70
- 71
- 72
- 73
- 74
- 75
- 76
- 77
- 78
- 79
- 80
- 81
- 82
- 83
- 84
- 85
- 86
- 87
- 88
- 89
- 90
- 91
- 92
- 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186
-187
-188
-189
-190
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
+<div class="highlight"><pre><span></span><span class="c">&lt;!-- 建立正齒輪畫布 --&gt;</span>
 <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;gear2&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:#FFF&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- 開始執行 Brython 繪圖 --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/python3&quot;</span><span class="p">&gt;</span>
@@ -1676,7 +991,7 @@ ctx.restore()
 <span class="nx">from</span> <span class="nx">browser</span> <span class="kr">import</span> <span class="nb">document</span> <span class="nx">as</span> <span class="nx">doc</span>
 <span class="kr">import</span> <span class="nx">math</span>
 <span class="err">#</span> <span class="nx">deg</span> <span class="nx">為角度轉為徑度的轉換因子</span>
-<span class="nx">deg</span> <span class="o">=</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">.</span>
+<span class="nx">deg</span> <span class="o">=</span> <span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="mf">180.</span>
 <span class="err">#</span> <span class="nx">定義</span> <span class="nx">Spur</span> <span class="nx">類別</span>
 <span class="kr">class</span> <span class="nx">Spur</span><span class="p">(</span><span class="nx">object</span><span class="p">)</span><span class="o">:</span>
     <span class="nx">def</span> <span class="nx">__init__</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">ctx</span><span class="p">)</span><span class="o">:</span>
@@ -1733,17 +1048,17 @@ ctx.restore()
         <span class="err">#</span> <span class="nx">tan</span><span class="p">(</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span><span class="p">)</span><span class="o">-</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span> <span class="nx">為漸開線函數</span>
         <span class="nx">sigma</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nx">n</span><span class="p">)</span><span class="o">+</span><span class="nx">math</span><span class="p">.</span><span class="nx">tan</span><span class="p">(</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span><span class="p">)</span><span class="o">-</span><span class="nx">pa</span><span class="o">*</span><span class="nx">deg</span>
         <span class="k">for</span> <span class="nx">j</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="o">:</span>
-            <span class="nx">ang</span><span class="o">=-</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
-            <span class="nx">ang2</span><span class="o">=</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
-            <span class="nx">lxd</span><span class="o">=</span><span class="nx">midx</span><span class="o">+</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
-            <span class="nx">lyd</span><span class="o">=</span><span class="nx">midy</span><span class="o">-</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
+            <span class="nx">ang</span><span class="o">=-</span><span class="mf">2.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
+            <span class="nx">ang2</span><span class="o">=</span><span class="mf">2.</span><span class="o">*</span><span class="nx">j</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="o">+</span><span class="nx">sigma</span>
+            <span class="nx">lxd</span><span class="o">=</span><span class="nx">midx</span><span class="o">+</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
+            <span class="nx">lyd</span><span class="o">=</span><span class="nx">midy</span><span class="o">-</span><span class="nx">rd</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="mf">2.</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">pi</span><span class="o">/</span><span class="nx">n</span><span class="p">)</span>
             <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">range</span><span class="p">(</span><span class="nx">imax</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
                 <span class="err">#</span> <span class="nx">當</span> <span class="nx">rd</span> <span class="nx">大於</span> <span class="nx">rb</span> <span class="nx">時</span><span class="p">,</span> <span class="nx">漸開線並非畫至</span> <span class="nx">rb</span><span class="p">,</span> <span class="nx">而是</span> <span class="nx">rd</span>
                 <span class="k">if</span> <span class="nx">rd</span><span class="o">&gt;</span><span class="nx">rb</span><span class="o">:</span>
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rd</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
                 <span class="k">else</span><span class="o">:</span>
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rb</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
-                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">.)</span>
+                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
                 <span class="nx">alpha</span><span class="o">=</span><span class="nx">theta</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">atan</span><span class="p">(</span><span class="nx">theta</span><span class="p">)</span>
                 <span class="nx">xpt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">alpha</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
                 <span class="nx">ypt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">alpha</span><span class="o">-</span><span class="nx">ang</span><span class="p">)</span>
@@ -1773,7 +1088,7 @@ ctx.restore()
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rd</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
                 <span class="k">else</span><span class="o">:</span>
                     <span class="nx">r</span><span class="o">=</span><span class="nx">rb</span><span class="o">+</span><span class="nx">i</span><span class="o">*</span><span class="nx">dr</span>
-                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">.)</span>
+                <span class="nx">theta</span><span class="o">=</span><span class="nx">math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">((</span><span class="nx">r</span><span class="o">*</span><span class="nx">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="nx">rb</span><span class="o">*</span><span class="nx">rb</span><span class="p">)</span><span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
                 <span class="nx">alpha</span><span class="o">=</span><span class="nx">theta</span><span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">atan</span><span class="p">(</span><span class="nx">theta</span><span class="p">)</span>
                 <span class="nx">xpt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="nx">alpha</span><span class="p">)</span>
                 <span class="nx">ypt</span><span class="o">=</span><span class="nx">r</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">ang2</span><span class="o">-</span><span class="nx">alpha</span><span class="p">)</span>
@@ -1871,7 +1186,7 @@ ctx.restore()
 <span class="nx">ctx</span><span class="p">.</span><span class="nx">restore</span><span class="p">()</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
-</td></tr></table>
+
 
 <p><br /></p>
 <p>參考資料:</p>

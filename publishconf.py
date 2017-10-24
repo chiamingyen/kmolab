@@ -40,7 +40,15 @@ DISQUS_SITENAME = "kmolab"
 DEFAULT_DATE = 'fs'
 
 # 遠端的 code hightlight
-MD_EXTENSIONS = ['fenced_code', 'extra', 'codehilite(linenums=True)']
+#MD_EXTENSIONS = ['fenced_code', 'extra', 'codehilite(linenums=True)']
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
 
 # 若要依照日期存檔呼叫
 #ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
